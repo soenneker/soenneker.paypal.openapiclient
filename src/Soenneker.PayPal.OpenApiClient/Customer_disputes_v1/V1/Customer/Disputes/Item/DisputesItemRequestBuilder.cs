@@ -108,58 +108,58 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <summary>
         /// Shows details for a dispute, by ID.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The fields that appear in the response depend on the access. For example, if the merchant requests shows dispute details, the customer&apos;s email ID does not appear.&lt;/blockquote&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Dispute"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Dispute_1"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_1?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_1> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Dispute>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Dispute.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Dispute_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Partially updates a dispute, by ID. Seller can update the `communication_detail` value or The partner can add the `partner action` information.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction"/></returns>
         /// <param name="body">An array of JSON patch objects to apply partial updates to resources.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Customer_disputes_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Customer_disputes_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Shows details for a dispute, by ID.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The fields that appear in the response depend on the access. For example, if the merchant requests shows dispute details, the customer&apos;s email ID does not appear.&lt;/blockquote&gt;
@@ -188,11 +188,11 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Customer_disputes_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Customer_disputes_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -39,8 +39,8 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,35 +53,35 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Shows details for a web experience profile, by ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Web_profile"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WebProfile"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Web_profile?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.WebProfile?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Web_profile> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.WebProfile> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Web_profile>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Web_profile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.WebProfile>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.WebProfile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Partially-updates a web experience profile, by ID. In the JSON request body, specify a patch object, the path of the profile location to update, and a new value.
@@ -90,23 +90,23 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <param name="body">An array of JSON patch objects to apply partial updates to resources.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -117,23 +117,23 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <param name="body">A payment web experience profile.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.Web_profile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.Web_profile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -183,11 +183,11 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Payment_experience_web_experience_profiles_v1_patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -205,11 +205,11 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Web_profile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Web_profile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

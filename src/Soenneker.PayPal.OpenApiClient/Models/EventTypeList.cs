@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of webhook events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event_type>? EventTypes { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType>? EventTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event_type> EventTypes { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType> EventTypes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.EventTypeList"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "event_types", n => { EventTypes = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event_type>(global::Soenneker.PayPal.OpenApiClient.Models.Event_type.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "event_types", n => { EventTypes = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType>(global::Soenneker.PayPal.OpenApiClient.Models.EventType.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event_type>("event_types", EventTypes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType>("event_types", EventTypes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

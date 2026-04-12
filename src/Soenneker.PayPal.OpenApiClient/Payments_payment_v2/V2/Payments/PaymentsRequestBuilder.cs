@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations;
 using Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures;
+using Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.FindEligibleMethods;
 using Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments
         public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures.CapturesRequestBuilder Captures
         {
             get => new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures.CapturesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The findEligibleMethods property</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.FindEligibleMethods.FindEligibleMethodsRequestBuilder FindEligibleMethods
+        {
+            get => new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.FindEligibleMethods.FindEligibleMethodsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The refunds property</summary>
         public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.RefundsRequestBuilder Refunds

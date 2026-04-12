@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Capture
     public partial class CapturesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.payments_payment_v2.v2.payments.captures.item collection</summary>
-        /// <param name="position">The PayPal-generated ID for the captured payment to refund.</param>
+        /// <param name="position">The PayPal-generated ID for the captured payment for which to show details.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures.Item.WithCapture_ItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures.Item.WithCapture_ItemRequestBuilder this[string position]
         {

@@ -49,27 +49,27 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <summary>
         /// Lists disputes with a summary set of details, which shows the &lt;code&gt;dispute_id&lt;/code&gt;, &lt;code&gt;reason&lt;/code&gt;, &lt;code&gt;status&lt;/code&gt;, &lt;code&gt;dispute_state&lt;/code&gt;, &lt;code&gt;dispute_life_cycle_stage&lt;/code&gt;, &lt;code&gt;dispute_channel&lt;/code&gt;, &lt;code&gt;dispute_amount&lt;/code&gt;, &lt;code&gt;create_time&lt;/code&gt; and &lt;code&gt;update_time&lt;/code&gt; fields.&lt;br/&gt;&lt;br/&gt;To filter the disputes in the response, specify one or more optional query parameters. To limit the number of disputes in the response, specify the &lt;code&gt;page_size&lt;/code&gt; query parameter.&lt;br/&gt;&lt;br/&gt;To list multiple disputes, set these query parameters in the request:&lt;ul&gt;&lt;li&gt;&lt;code&gt;page_size=2&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;start_time&lt;/code&gt; instead of &lt;code&gt;disputed_transaction_id&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;If the response contains more than two disputes, it lists two disputes and includes a HATEOAS link to the next page of results.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Dispute_search"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.DisputeSearch"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_search?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disputes.DisputesRequestBuilder.DisputesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.DisputeSearch?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disputes.DisputesRequestBuilder.DisputesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_search> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disputes.DisputesRequestBuilder.DisputesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.DisputeSearch> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disputes.DisputesRequestBuilder.DisputesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_search>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Dispute_search.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.DisputeSearch>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.DisputeSearch.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists disputes with a summary set of details, which shows the &lt;code&gt;dispute_id&lt;/code&gt;, &lt;code&gt;reason&lt;/code&gt;, &lt;code&gt;status&lt;/code&gt;, &lt;code&gt;dispute_state&lt;/code&gt;, &lt;code&gt;dispute_life_cycle_stage&lt;/code&gt;, &lt;code&gt;dispute_channel&lt;/code&gt;, &lt;code&gt;dispute_amount&lt;/code&gt;, &lt;code&gt;create_time&lt;/code&gt; and &lt;code&gt;update_time&lt;/code&gt; fields.&lt;br/&gt;&lt;br/&gt;To filter the disputes in the response, specify one or more optional query parameters. To limit the number of disputes in the response, specify the &lt;code&gt;page_size&lt;/code&gt; query parameter.&lt;br/&gt;&lt;br/&gt;To list multiple disputes, set these query parameters in the request:&lt;ul&gt;&lt;li&gt;&lt;code&gt;page_size=2&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;start_time&lt;/code&gt; instead of &lt;code&gt;disputed_transaction_id&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;If the response contains more than two disputes, it lists two disputes and includes a HATEOAS link to the next page of results.

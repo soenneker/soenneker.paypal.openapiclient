@@ -36,33 +36,33 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <summary>
         /// &lt;blockquote&gt;&lt;strong&gt;Important:&lt;/strong&gt; This method is for sandbox use only.&lt;/blockquote&gt; Updates the status of a dispute, by ID, from &lt;code&gt;UNDER_REVIEW&lt;/code&gt; to either:&lt;ul&gt;&lt;li&gt;&lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;This status change enables either the customer or merchant to submit evidence for the dispute. To make this call, the dispute &lt;code&gt;status&lt;/code&gt; must be &lt;code&gt;UNDER_REVIEW&lt;/code&gt; and &lt;code&gt;require-evidence&lt;/code&gt; link  should be available in the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get!c=200&amp;path=links&amp;t=response/&quot;&gt;HATEOAS links&lt;/a&gt; of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. Specify an &lt;code&gt;action&lt;/code&gt; value in the JSON request body to indicate whether the status change enables the customer or merchant to submit evidence:&lt;table&gt;&lt;thead&gt;&lt;tr align=&quot;left&quot;&gt;&lt;th&gt;If &lt;code&gt;action&lt;/code&gt; is&lt;/th&gt;&lt;th&gt;The &lt;code&gt;status&lt;/code&gt; updates to&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;BUYER_EVIDENCE&lt;/code&gt;&lt;/td&gt;&lt;td&gt; &lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;SELLER_EVIDENCE&lt;/code&gt;&lt;/td&gt;&lt;td&gt; &lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction"/></returns>
         /// <param name="body">Sandbox only. Updates the state of a dispute, by ID, to either &lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt; or &lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt;. This state change enables either the customer or merchant to submit evidence for the dispute. Specify an &lt;code&gt;action&lt;/code&gt; value in the JSON request body to indicate whether the state change enables the customer or merchant to submit evidence.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Require_evidence body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Require_evidence body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;blockquote&gt;&lt;strong&gt;Important:&lt;/strong&gt; This method is for sandbox use only.&lt;/blockquote&gt; Updates the status of a dispute, by ID, from &lt;code&gt;UNDER_REVIEW&lt;/code&gt; to either:&lt;ul&gt;&lt;li&gt;&lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;This status change enables either the customer or merchant to submit evidence for the dispute. To make this call, the dispute &lt;code&gt;status&lt;/code&gt; must be &lt;code&gt;UNDER_REVIEW&lt;/code&gt; and &lt;code&gt;require-evidence&lt;/code&gt; link  should be available in the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get!c=200&amp;path=links&amp;t=response/&quot;&gt;HATEOAS links&lt;/a&gt; of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. Specify an &lt;code&gt;action&lt;/code&gt; value in the JSON request body to indicate whether the status change enables the customer or merchant to submit evidence:&lt;table&gt;&lt;thead&gt;&lt;tr align=&quot;left&quot;&gt;&lt;th&gt;If &lt;code&gt;action&lt;/code&gt; is&lt;/th&gt;&lt;th&gt;The &lt;code&gt;status&lt;/code&gt; updates to&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;BUYER_EVIDENCE&lt;/code&gt;&lt;/td&gt;&lt;td&gt; &lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;SELLER_EVIDENCE&lt;/code&gt;&lt;/td&gt;&lt;td&gt; &lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;.
@@ -72,11 +72,11 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Require_evidence body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Require_evidence body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

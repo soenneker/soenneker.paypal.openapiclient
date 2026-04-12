@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
     public partial class AuthorizationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.payments_payment_v2.v2.payments.authorizations.item collection</summary>
-        /// <param name="position">The PayPal-generated ID for the authorized payment to void.</param>
+        /// <param name="position">The ID of the authorized payment for which to show details.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorization_ItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorization_ItemRequestBuilder this[string position]
         {

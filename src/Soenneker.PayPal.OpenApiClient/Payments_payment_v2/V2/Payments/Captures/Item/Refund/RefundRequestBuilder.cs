@@ -36,37 +36,41 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Capture
         /// <summary>
         /// Refunds a captured payment, by ID. For a full refund, include an empty payload in the JSON request body. For a partial refund, include an &lt;code&gt;amount&lt;/code&gt; object in the JSON request body.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_refund"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund"/></returns>
         /// <param name="body">Refunds a captured payment, by ID. For a full refund, include an empty request body. For a partial refund, include an &lt;code&gt;amount&lt;/code&gt; object in the request body.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_409">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_422">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_refund?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Refund_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_refund> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Refund_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_404.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_409.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_captures_refund_422.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_refund>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Payments_payment_v2_refund.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Refunds a captured payment, by ID. For a full refund, include an empty payload in the JSON request body. For a partial refund, include an &lt;code&gt;amount&lt;/code&gt; object in the JSON request body.
@@ -76,11 +80,11 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Capture
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Refund_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Refund_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

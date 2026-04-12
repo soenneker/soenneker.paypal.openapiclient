@@ -36,29 +36,29 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         /// <summary>
         /// List all balances. Specify date time to list balances for that time that appear in the response.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;It takes a maximum of three hours for balances to appear in the list balances call.&lt;/li&gt;&lt;li&gt;This call lists balances upto the previous three years.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Balances_response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Balances_response?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Balances_response> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_403.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Reporting_transactions_v1_error_500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error400.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Balances_response>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Balances_response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all balances. Specify date time to list balances for that time that appear in the response.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;It takes a maximum of three hours for balances to appear in the list balances call.&lt;/li&gt;&lt;li&gt;This call lists balances upto the previous three years.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;

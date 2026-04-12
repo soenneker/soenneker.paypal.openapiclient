@@ -49,33 +49,33 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payouts_batch_v1.V1.Payments.P
         /// <summary>
         /// Creates a batch payout. In the JSON request body, pass a `sender_batch_header` and an `items` array. The `sender_batch_header` defines how to handle the payout. The `items` array defines the payout items.&lt;br/&gt;You can make payouts to one or more recipients.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;&lt;p&gt;PayPal does not process duplicate payouts. If you specify a &lt;code&gt;sender_batch_id&lt;/code&gt; that was used in the last 30 days, the API rejects the request with an error message that shows the duplicate &lt;code&gt;sender_batch_id&lt;/code&gt; and includes a HATEOAS link to the original payout with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you receive an HTTP &lt;code&gt;5&lt;i&gt;nn&lt;/i&gt;&lt;/code&gt; status code, you can safely retry the request with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;The Payouts API does not support build notation (BN) codes. In a future Payouts release, you can optionally provide BN codes in the &lt;code&gt;PayPal-Partner-Attribution-Id&lt;/code&gt; request header.&lt;/p&gt;&lt;p&gt;For information about the &lt;code&gt;PayPal-Partner-Attribution-Id&lt;/code&gt; header, see &lt;a href=&quot;/api/rest/requests/#http-request-headers&quot;&gt;HTTP request headers&lt;/a&gt;. To learn about or request a BN code, contact your partner manager or see &lt;a href=&quot;https://www.paypal.com/us/webapps/mpp/partner-program&quot;&gt;PayPal Partner Program&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payout"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payout_1"/></returns>
         /// <param name="body">The create payout request.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payout?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Create_payout_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payout_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.CreatePayoutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payout> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Create_payout_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Payout_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.CreatePayoutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Payments_payouts_batch_v1_error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Payout>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Payout.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Payout_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Payout_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a batch payout. In the JSON request body, pass a `sender_batch_header` and an `items` array. The `sender_batch_header` defines how to handle the payout. The `items` array defines the payout items.&lt;br/&gt;You can make payouts to one or more recipients.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;&lt;p&gt;PayPal does not process duplicate payouts. If you specify a &lt;code&gt;sender_batch_id&lt;/code&gt; that was used in the last 30 days, the API rejects the request with an error message that shows the duplicate &lt;code&gt;sender_batch_id&lt;/code&gt; and includes a HATEOAS link to the original payout with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you receive an HTTP &lt;code&gt;5&lt;i&gt;nn&lt;/i&gt;&lt;/code&gt; status code, you can safely retry the request with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;The Payouts API does not support build notation (BN) codes. In a future Payouts release, you can optionally provide BN codes in the &lt;code&gt;PayPal-Partner-Attribution-Id&lt;/code&gt; request header.&lt;/p&gt;&lt;p&gt;For information about the &lt;code&gt;PayPal-Partner-Attribution-Id&lt;/code&gt; header, see &lt;a href=&quot;/api/rest/requests/#http-request-headers&quot;&gt;HTTP request headers&lt;/a&gt;. To learn about or request a BN code, contact your partner manager or see &lt;a href=&quot;https://www.paypal.com/us/webapps/mpp/partner-program&quot;&gt;PayPal Partner Program&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
@@ -85,11 +85,11 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payouts_batch_v1.V1.Payments.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Create_payout_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.CreatePayoutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Create_payout_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.CreatePayoutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

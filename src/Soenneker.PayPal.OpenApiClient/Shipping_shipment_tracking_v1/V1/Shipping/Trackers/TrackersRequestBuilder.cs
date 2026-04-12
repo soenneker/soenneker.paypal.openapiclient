@@ -49,50 +49,50 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         /// <summary>
         /// Lists tracking information that meet search criteria. The tracking ID is required but the tracking number is optional.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_tracker"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_tracker?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_tracker> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_tracker>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_tracker.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds tracking information for a PayPal transaction.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Tracker_identifier_collection"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifierCollection"/></returns>
         /// <param name="body">The add tracking information for one or more transactions response details.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_identifier_collection?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_collection body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifierCollection?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.TrackerCollection body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_identifier_collection> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_collection body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifierCollection> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.TrackerCollection body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Shipping_shipment_tracking_v1_error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_identifier_collection>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Tracker_identifier_collection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifierCollection>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifierCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists tracking information that meet search criteria. The tracking ID is required but the tracking number is optional.
@@ -121,11 +121,11 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_collection body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.TrackerCollection body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_collection body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.TrackerCollection body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

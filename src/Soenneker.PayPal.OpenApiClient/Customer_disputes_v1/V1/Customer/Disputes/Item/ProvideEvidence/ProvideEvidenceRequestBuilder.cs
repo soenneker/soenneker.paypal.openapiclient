@@ -36,29 +36,29 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_disputes_v1.V1.Customer.Disput
         /// <summary>
         /// Provides evidence for a dispute, by ID. A merchant can provide evidence for disputes with the &lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt; status while customers can provide evidence for disputes with the &lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt; status. Evidence can be a proof of delivery or proof of refund document or notes, which can include logs. A proof of delivery document includes a tracking number while a proof of refund document includes a refund ID. For other evidence type, notes and documents can be given. Evidences requested from you can be found by checking the type of evidence for the corresponding source under the evidence section of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. The source will be &lt;code&gt;REQUESTED_FROM_SELLER&lt;/code&gt; for evidences requested from the merchant while it will be &lt;code&gt;REQUESTED_FROM_BUYER&lt;/code&gt; for evidences requested from the customer. For constraints and rules regarding documents, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#documents&quot;&gt;documents&lt;/a&gt;.&lt;br/&gt;To make this request, specify the evidence in the JSON request body and use the &lt;code&gt;provide-evidence&lt;/code&gt; link in the &lt;a href=&quot;/docs/api/reference/api-responses/#hateoas-links/&quot;&gt;HATEOAS links&lt;/a&gt; of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. In case the link is not present in the response, you can&apos;t provide evidence for the dispute. For information about dispute reasons, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#dispute-reasons&quot;&gt;dispute reasons&lt;/a&gt;.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Subsequent_action.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SubsequentAction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Provides evidence for a dispute, by ID. A merchant can provide evidence for disputes with the &lt;code&gt;WAITING_FOR_SELLER_RESPONSE&lt;/code&gt; status while customers can provide evidence for disputes with the &lt;code&gt;WAITING_FOR_BUYER_RESPONSE&lt;/code&gt; status. Evidence can be a proof of delivery or proof of refund document or notes, which can include logs. A proof of delivery document includes a tracking number while a proof of refund document includes a refund ID. For other evidence type, notes and documents can be given. Evidences requested from you can be found by checking the type of evidence for the corresponding source under the evidence section of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. The source will be &lt;code&gt;REQUESTED_FROM_SELLER&lt;/code&gt; for evidences requested from the merchant while it will be &lt;code&gt;REQUESTED_FROM_BUYER&lt;/code&gt; for evidences requested from the customer. For constraints and rules regarding documents, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#documents&quot;&gt;documents&lt;/a&gt;.&lt;br/&gt;To make this request, specify the evidence in the JSON request body and use the &lt;code&gt;provide-evidence&lt;/code&gt; link in the &lt;a href=&quot;/docs/api/reference/api-responses/#hateoas-links/&quot;&gt;HATEOAS links&lt;/a&gt; of the &lt;a href=&quot;/docs/api/customer-disputes/v1/#disputes_get&quot;&gt;show dispute details&lt;/a&gt; response. In case the link is not present in the response, you can&apos;t provide evidence for the dispute. For information about dispute reasons, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#dispute-reasons&quot;&gt;dispute reasons&lt;/a&gt;.

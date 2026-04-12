@@ -36,35 +36,35 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <summary>
         /// Sends or schedules an invoice, by ID, to be sent to a customer. The action depends on the invoice issue date:&lt;ul&gt;&lt;li&gt;If the invoice issue date is current or in the past, sends the invoice immediately.&lt;/li&gt;&lt;li&gt;If the invoice issue date is in the future, schedules the invoice to be sent on that date.&lt;/li&gt;&lt;/ul&gt;To suppress the merchant&apos;s email notification, set the `send_to_invoicer` body parameter to `false`. To send the invoice through a share link and not through PayPal, set the &lt;code&gt;send_to_recipient&lt;/code&gt; parameter to &lt;code&gt;false&lt;/code&gt; in the &lt;code&gt;notification&lt;/code&gt; object. The &lt;code&gt;send_to_recipient&lt;/code&gt; parameter does not apply to a future issue date because the invoice is scheduled to be sent through PayPal on that date.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;After you send an invoice, resending it has no effect.&lt;/li&gt;&lt;li&gt;To send a notification for updates, &lt;a href=&quot;#invoices_update&quot;&gt;update the invoice&lt;/a&gt; and set the &lt;code&gt;send_to_recipient&lt;/code&gt; body parameter to &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_link_description"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription"/></returns>
         /// <param name="body">The email or SMS notification to send to the invoicer or payer on sending an invoice.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_422">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error422">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_link_description?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Notification body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Notification_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_link_description> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Notification body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Notification_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_404.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_422.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_error_500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error422.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_link_description>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoicing_v2_link_description.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Sends or schedules an invoice, by ID, to be sent to a customer. The action depends on the invoice issue date:&lt;ul&gt;&lt;li&gt;If the invoice issue date is current or in the past, sends the invoice immediately.&lt;/li&gt;&lt;li&gt;If the invoice issue date is in the future, schedules the invoice to be sent on that date.&lt;/li&gt;&lt;/ul&gt;To suppress the merchant&apos;s email notification, set the `send_to_invoicer` body parameter to `false`. To send the invoice through a share link and not through PayPal, set the &lt;code&gt;send_to_recipient&lt;/code&gt; parameter to &lt;code&gt;false&lt;/code&gt; in the &lt;code&gt;notification&lt;/code&gt; object. The &lt;code&gt;send_to_recipient&lt;/code&gt; parameter does not apply to a future issue date because the invoice is scheduled to be sent through PayPal on that date.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;After you send an invoice, resending it has no effect.&lt;/li&gt;&lt;li&gt;To send a notification for updates, &lt;a href=&quot;#invoices_update&quot;&gt;update the invoice&lt;/a&gt; and set the &lt;code&gt;send_to_recipient&lt;/code&gt; body parameter to &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
@@ -74,11 +74,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Notification body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Notification_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Notification body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Notification_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

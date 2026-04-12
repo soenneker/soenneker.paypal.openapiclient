@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of webhooks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhook>? Webhooks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhook_1>? Webhooks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhook> Webhooks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhook_1> Webhooks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WebhookList"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "webhooks", n => { Webhooks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhook>(global::Soenneker.PayPal.OpenApiClient.Models.Webhook.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "webhooks", n => { Webhooks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhook_1>(global::Soenneker.PayPal.OpenApiClient.Models.Webhook_1.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhook>("webhooks", Webhooks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhook_1>("webhooks", Webhooks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

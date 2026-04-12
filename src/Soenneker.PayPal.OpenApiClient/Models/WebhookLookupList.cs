@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of webhook lookups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhooks_lookup>? WebhooksLookups { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>? WebhooksLookups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Webhooks_lookup> WebhooksLookups { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup> WebhooksLookups { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WebhookLookupList"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "webhooks_lookups", n => { WebhooksLookups = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhooks_lookup>(global::Soenneker.PayPal.OpenApiClient.Models.Webhooks_lookup.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "webhooks_lookups", n => { WebhooksLookups = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>(global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Webhooks_lookup>("webhooks_lookups", WebhooksLookups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>("webhooks_lookups", WebhooksLookups);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
