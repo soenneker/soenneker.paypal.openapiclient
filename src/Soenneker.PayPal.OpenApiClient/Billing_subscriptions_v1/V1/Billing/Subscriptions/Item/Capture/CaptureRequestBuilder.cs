@@ -36,7 +36,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <summary>
         /// Captures an authorized payment from the subscriber on the subscription.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Transaction"/></returns>
         /// <param name="body">The charge amount from the subscriber.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,11 +48,11 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Transaction?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Transaction> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.BillingSubscriptionsV1SubscriptionsCapture422.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Transaction>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Captures an authorized payment from the subscriber on the subscription.

@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? FixedPrice { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? FixedPrice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 FixedPrice { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money FixedPrice { get; set; }
 #endif
         /// <summary>The pricing model for tiered plan. The `tiers` parameter is required.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme_pricing_model? PricingModel { get; set; }
@@ -77,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
-                { "fixed_price", n => { FixedPrice = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "fixed_price", n => { FixedPrice = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme_pricing_model>(); } },
                 { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>(global::Soenneker.PayPal.OpenApiClient.Models.PricingTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("create_time", CreateTime);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("fixed_price", FixedPrice);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("fixed_price", FixedPrice);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme_pricing_model>("pricing_model", PricingModel);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>("tiers", Tiers);
             writer.WriteStringValue("update_time", UpdateTime);

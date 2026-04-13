@@ -18,20 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get; set; }
 #endif
         /// <summary>The payouts status.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? BatchStatus { get; set; }
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? Fees { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Fees { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 Fees { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Fees { get; set; }
 #endif
         /// <summary>Identifies a funding source type.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.FundingSource? FundingSource { get; set; }
@@ -82,9 +82,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "batch_status", n => { BatchStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum>(); } },
-                { "fees", n => { Fees = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "fees", n => { Fees = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "funding_source", n => { FundingSource = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundingSource>(); } },
                 { "payout_batch_id", n => { PayoutBatchId = n.GetStringValue(); } },
                 { "sender_batch_header", n => { SenderBatchHeader = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader>(global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader.CreateFromDiscriminatorValue); } },
@@ -100,9 +100,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum>("batch_status", BatchStatus);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("fees", Fees);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("fees", Fees);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundingSource>("funding_source", FundingSource);
             writer.WriteStringValue("payout_batch_id", PayoutBatchId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader>("sender_batch_header", SenderBatchHeader);

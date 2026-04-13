@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The app_switch_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext? AppSwitchContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context? AppSwitchContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext AppSwitchContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context AppSwitchContext { get; set; }
 #endif
         /// <summary>The label that overrides the business name in the PayPal account on the PayPal site. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl? CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_cancel_url? CancelUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_cancel_url CancelUrl { get; set; }
 #endif
         /// <summary>The preference to display the contact information (buyer’s shipping email &amp; phone number) on PayPal&apos;s checkout for easy merchant-buyer communication.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_contact_preference? ContactPreference { get; set; }
@@ -46,28 +46,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLocale? Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_locale? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLocale Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_locale Locale { get; set; }
 #endif
         /// <summary>The order_update_callback_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig? OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config? OrderUpdateCallbackConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config OrderUpdateCallbackConfig { get; set; }
 #endif
         /// <summary>The merchant-preferred payment methods.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_payment_method_preference? PaymentMethodPreference { get; set; }
         /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl? ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_return_url? ReturnUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_return_url ReturnUrl { get; set; }
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_shipping_preference? ShippingPreference { get; set; }
@@ -103,15 +103,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "app_switch_context", n => { AppSwitchContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext.CreateFromDiscriminatorValue); } },
+                { "app_switch_context", n => { AppSwitchContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context.CreateFromDiscriminatorValue); } },
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl.CreateFromDiscriminatorValue); } },
+                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_cancel_url>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_cancel_url.CreateFromDiscriminatorValue); } },
                 { "contact_preference", n => { ContactPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_contact_preference>(); } },
                 { "landing_page", n => { LandingPage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_landing_page>(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLocale>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLocale.CreateFromDiscriminatorValue); } },
-                { "order_update_callback_config", n => { OrderUpdateCallbackConfig = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_locale>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_locale.CreateFromDiscriminatorValue); } },
+                { "order_update_callback_config", n => { OrderUpdateCallbackConfig = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config.CreateFromDiscriminatorValue); } },
                 { "payment_method_preference", n => { PaymentMethodPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_payment_method_preference>(); } },
-                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl.CreateFromDiscriminatorValue); } },
+                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_return_url>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_return_url.CreateFromDiscriminatorValue); } },
                 { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_shipping_preference>(); } },
                 { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_user_action>(); } },
             };
@@ -123,15 +123,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext>("app_switch_context", AppSwitchContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context>("app_switch_context", AppSwitchContext);
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl>("cancel_url", CancelUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_cancel_url>("cancel_url", CancelUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_contact_preference>("contact_preference", ContactPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_landing_page>("landing_page", LandingPage);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLocale>("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig>("order_update_callback_config", OrderUpdateCallbackConfig);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_locale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config>("order_update_callback_config", OrderUpdateCallbackConfig);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_payment_method_preference>("payment_method_preference", PaymentMethodPreference);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl>("return_url", ReturnUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_return_url>("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_shipping_preference>("shipping_preference", ShippingPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_user_action>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);

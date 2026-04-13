@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The customer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer? Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_customer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_customer Customer { get; set; }
 #endif
         /// <summary>The PayPal-generated ID for the saved payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_customer>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_customer.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_links>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_links.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_status>(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_customer>("customer", Customer);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoVaultResponse_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

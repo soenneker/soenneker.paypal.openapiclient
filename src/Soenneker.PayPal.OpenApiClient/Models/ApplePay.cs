@@ -15,29 +15,29 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Additional attributes associated with apple pay.</summary>
+        /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes? Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_attributes? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_attributes Attributes { get; set; }
 #endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_card? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_card Card { get; set; }
 #endif
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayEmailAddress? EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_email_address? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayEmailAddress EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_email_address EmailAddress { get; set; }
 #endif
         /// <summary>ApplePay transaction identifier, this will be the unique identifier for this transaction provided by Apple. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,18 +50,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_name Name { get; set; }
 #endif
         /// <summary>The phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPhoneNumber? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_phone_number? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPhoneNumber PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_phone_number PhoneNumber { get; set; }
 #endif
         /// <summary>Provides additional details to process a payment using a `card` that has been stored or is intended to be stored (also referred to as stored_credential or card-on-file).&lt;br/&gt;Parameter compatibility:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;`payment_type=ONE_TIME` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`usage=FIRST` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`previous_transaction_reference` or `previous_network_transaction_reference` is compatible only with `payment_initiator=MERCHANT`.&lt;/li&gt;&lt;li&gt;Only one of the parameters - `previous_transaction_reference` and `previous_network_transaction_reference` - can be present in the request.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,12 +104,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes.CreateFromDiscriminatorValue); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayEmailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayEmailAddress.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_attributes>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_attributes.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_card>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_card.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_email_address.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayName>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayName.CreateFromDiscriminatorValue); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPhoneNumber.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_name>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_name.CreateFromDiscriminatorValue); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_phone_number>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_phone_number.CreateFromDiscriminatorValue); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -121,12 +121,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes>("attributes", Attributes);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayEmailAddress>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_attributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_card>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_email_address>("email_address", EmailAddress);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayName>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPhoneNumber>("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay_phone_number>("phone_number", PhoneNumber);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>("stored_credential", StoredCredential);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

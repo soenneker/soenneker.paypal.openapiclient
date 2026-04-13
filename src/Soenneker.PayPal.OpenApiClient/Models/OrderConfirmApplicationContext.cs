@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContextLocale? Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContextLocale Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale Locale { get; set; }
 #endif
         /// <summary>The URL where the customer is redirected after the customer approves the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContextLocale>(global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContextLocale.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale>(global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "stored_payment_source", n => { StoredPaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource.CreateFromDiscriminatorValue); } },
             };
@@ -96,7 +96,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
             writer.WriteStringValue("cancel_url", CancelUrl);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContextLocale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale>("locale", Locale);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource>("stored_payment_source", StoredPaymentSource);
             writer.WriteAdditionalData(AdditionalData);

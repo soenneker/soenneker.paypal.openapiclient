@@ -18,42 +18,42 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The exchange_rate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownExchangeRate? ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_exchange_rate? ExchangeRate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownExchangeRate ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_exchange_rate ExchangeRate { get; set; }
 #endif
         /// <summary>The gross_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownGrossAmount? GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_gross_amount? GrossAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownGrossAmount GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_gross_amount GrossAmount { get; set; }
 #endif
         /// <summary>The net_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownNetAmount? NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_net_amount? NetAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownNetAmount NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_net_amount NetAmount { get; set; }
 #endif
         /// <summary>The paypal_fee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFee? PaypalFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee? PaypalFee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFee PaypalFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee PaypalFee { get; set; }
 #endif
         /// <summary>The paypal_fee_in_receivable_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFeeInReceivableCurrency? PaypalFeeInReceivableCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee_in_receivable_currency? PaypalFeeInReceivableCurrency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFeeInReceivableCurrency PaypalFeeInReceivableCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee_in_receivable_currency PaypalFeeInReceivableCurrency { get; set; }
 #endif
         /// <summary>An array of platform or partner fees, commissions, or brokerage fees that associated with the captured payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The receivable_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownReceivableAmount? ReceivableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_receivable_amount? ReceivableAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownReceivableAmount ReceivableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_receivable_amount ReceivableAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown"/> and sets the default values.
@@ -96,13 +96,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "exchange_rate", n => { ExchangeRate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownExchangeRate>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownExchangeRate.CreateFromDiscriminatorValue); } },
-                { "gross_amount", n => { GrossAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownGrossAmount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownGrossAmount.CreateFromDiscriminatorValue); } },
-                { "net_amount", n => { NetAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownNetAmount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownNetAmount.CreateFromDiscriminatorValue); } },
-                { "paypal_fee", n => { PaypalFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFee>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFee.CreateFromDiscriminatorValue); } },
-                { "paypal_fee_in_receivable_currency", n => { PaypalFeeInReceivableCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFeeInReceivableCurrency>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFeeInReceivableCurrency.CreateFromDiscriminatorValue); } },
+                { "exchange_rate", n => { ExchangeRate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_exchange_rate>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_exchange_rate.CreateFromDiscriminatorValue); } },
+                { "gross_amount", n => { GrossAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_gross_amount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_gross_amount.CreateFromDiscriminatorValue); } },
+                { "net_amount", n => { NetAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_net_amount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_net_amount.CreateFromDiscriminatorValue); } },
+                { "paypal_fee", n => { PaypalFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee.CreateFromDiscriminatorValue); } },
+                { "paypal_fee_in_receivable_currency", n => { PaypalFeeInReceivableCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee_in_receivable_currency>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee_in_receivable_currency.CreateFromDiscriminatorValue); } },
                 { "platform_fees", n => { PlatformFees = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_platform_fees>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_platform_fees.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "receivable_amount", n => { ReceivableAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownReceivableAmount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownReceivableAmount.CreateFromDiscriminatorValue); } },
+                { "receivable_amount", n => { ReceivableAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_receivable_amount>(global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_receivable_amount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -112,13 +112,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownExchangeRate>("exchange_rate", ExchangeRate);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownGrossAmount>("gross_amount", GrossAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownNetAmount>("net_amount", NetAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFee>("paypal_fee", PaypalFee);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownPaypalFeeInReceivableCurrency>("paypal_fee_in_receivable_currency", PaypalFeeInReceivableCurrency);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_exchange_rate>("exchange_rate", ExchangeRate);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_gross_amount>("gross_amount", GrossAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_net_amount>("net_amount", NetAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee>("paypal_fee", PaypalFee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_paypal_fee_in_receivable_currency>("paypal_fee_in_receivable_currency", PaypalFeeInReceivableCurrency);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_platform_fees>("platform_fees", PlatformFees);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdownReceivableAmount>("receivable_amount", ReceivableAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SellerReceivableBreakdown_receivable_amount>("receivable_amount", ReceivableAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

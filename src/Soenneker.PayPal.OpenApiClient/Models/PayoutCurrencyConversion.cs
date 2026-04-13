@@ -26,18 +26,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? FromAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? FromAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 FromAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency FromAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? ToAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? ToAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 ToAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency ToAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutCurrencyConversion"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "exchange_rate", n => { ExchangeRate = n.GetStringValue(); } },
-                { "from_amount", n => { FromAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
-                { "to_amount", n => { ToAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "from_amount", n => { FromAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
+                { "to_amount", n => { ToAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("exchange_rate", ExchangeRate);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("from_amount", FromAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("to_amount", ToAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("from_amount", FromAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("to_amount", ToAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

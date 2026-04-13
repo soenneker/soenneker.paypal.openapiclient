@@ -36,18 +36,18 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         /// <summary>
         /// Simulates a webhook event. In the JSON request body, specify a sample payload.&lt;br&gt;You need to subscribe to the following webhook events for Pay upon Invoice:&lt;br&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Event&lt;/th&gt;&lt;th&gt;Trigger&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PAYMENT.CAPTURE.COMPLETED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;A payment capture completes.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PAYMENT.CAPTURE.DENIED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;A payment capture is denied.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;CHECKOUT.PAYMENT-APPROVAL.REVERSED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;PayPal reverses a payment capture.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Event_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Event"/></returns>
         /// <param name="body">Simulates a mock webhook event.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error2">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SimulateEvent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SimulateEvent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SimulateEvent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SimulateEvent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
             {
                 { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error2.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Event_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Event>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Event.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Simulates a webhook event. In the JSON request body, specify a sample payload.&lt;br&gt;You need to subscribe to the following webhook events for Pay upon Invoice:&lt;br&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Event&lt;/th&gt;&lt;th&gt;Trigger&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PAYMENT.CAPTURE.COMPLETED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;A payment capture completes.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PAYMENT.CAPTURE.DENIED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;A payment capture is denied.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;CHECKOUT.PAYMENT-APPROVAL.REVERSED&lt;/code&gt;&lt;/td&gt;&lt;td&gt;PayPal reverses a payment capture.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;

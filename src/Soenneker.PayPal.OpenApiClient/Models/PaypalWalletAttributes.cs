@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The vault property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault? Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes_vault? Vault { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes_vault Vault { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletCustomer.CreateFromDiscriminatorValue); } },
-                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault.CreateFromDiscriminatorValue); } },
+                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes_vault>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes_vault.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletCustomer>("customer", Customer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault>("vault", Vault);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes_vault>("vault", Vault);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

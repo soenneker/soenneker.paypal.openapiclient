@@ -26,28 +26,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData? PaymentData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data? PaymentData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData PaymentData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data PaymentData { get; set; }
 #endif
         /// <summary>Indicates the type of payment data passed, in case of Non China the payment data is 3DSECURE and for China it is EMV.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data_type? PaymentDataType { get; set; }
         /// <summary>The tokenized_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard? TokenizedCard { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_tokenized_card? TokenizedCard { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard TokenizedCard { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_tokenized_card TokenizedCard { get; set; }
 #endif
         /// <summary>The transaction_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount? TransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_transaction_amount? TransactionAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount TransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_transaction_amount TransactionAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData"/> and sets the default values.
@@ -75,10 +75,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "device_manufacturer_id", n => { DeviceManufacturerId = n.GetStringValue(); } },
-                { "payment_data", n => { PaymentData = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData.CreateFromDiscriminatorValue); } },
+                { "payment_data", n => { PaymentData = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data.CreateFromDiscriminatorValue); } },
                 { "payment_data_type", n => { PaymentDataType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data_type>(); } },
-                { "tokenized_card", n => { TokenizedCard = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard.CreateFromDiscriminatorValue); } },
-                { "transaction_amount", n => { TransactionAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount.CreateFromDiscriminatorValue); } },
+                { "tokenized_card", n => { TokenizedCard = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_tokenized_card>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_tokenized_card.CreateFromDiscriminatorValue); } },
+                { "transaction_amount", n => { TransactionAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_transaction_amount>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_transaction_amount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,10 +89,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("device_manufacturer_id", DeviceManufacturerId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData>("payment_data", PaymentData);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data>("payment_data", PaymentData);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_payment_data_type>("payment_data_type", PaymentDataType);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard>("tokenized_card", TokenizedCard);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount>("transaction_amount", TransactionAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_tokenized_card>("tokenized_card", TokenizedCard);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenData_transaction_amount>("transaction_amount", TransactionAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

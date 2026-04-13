@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of plans.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1>? Plans { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan>? Plans { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1> Plans { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan> Plans { get; set; }
 #endif
         /// <summary>The total number of items.</summary>
         public int? TotalItems { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "plans", n => { Plans = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1>(global::Soenneker.PayPal.OpenApiClient.Models.Plan_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "plans", n => { Plans = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Plan>(global::Soenneker.PayPal.OpenApiClient.Models.Plan.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_items", n => { TotalItems = n.GetIntValue(); } },
                 { "total_pages", n => { TotalPages = n.GetIntValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1>("plans", Plans);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Plan>("plans", Plans);
             writer.WriteIntValue("total_items", TotalItems);
             writer.WriteIntValue("total_pages", TotalPages);
             writer.WriteAdditionalData(AdditionalData);

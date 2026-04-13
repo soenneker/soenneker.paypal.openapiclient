@@ -18,58 +18,58 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownDiscount? Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_discount? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownDiscount Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_discount Discount { get; set; }
 #endif
         /// <summary>The handling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownHandling? Handling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_handling? Handling { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownHandling Handling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_handling Handling { get; set; }
 #endif
         /// <summary>The insurance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownInsurance? Insurance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_insurance? Insurance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownInsurance Insurance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_insurance Insurance { get; set; }
 #endif
         /// <summary>The item_total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownItemTotal? ItemTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_item_total? ItemTotal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownItemTotal ItemTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_item_total ItemTotal { get; set; }
 #endif
         /// <summary>The shipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShipping? Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping? Shipping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShipping Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping Shipping { get; set; }
 #endif
         /// <summary>The shipping_discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShippingDiscount? ShippingDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping_discount? ShippingDiscount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShippingDiscount ShippingDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping_discount ShippingDiscount { get; set; }
 #endif
         /// <summary>The tax_total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownTaxTotal? TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_tax_total? TaxTotal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownTaxTotal TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_tax_total TaxTotal { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown"/> and sets the default values.
@@ -96,13 +96,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownDiscount>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownDiscount.CreateFromDiscriminatorValue); } },
-                { "handling", n => { Handling = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownHandling>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownHandling.CreateFromDiscriminatorValue); } },
-                { "insurance", n => { Insurance = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownInsurance>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownInsurance.CreateFromDiscriminatorValue); } },
-                { "item_total", n => { ItemTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownItemTotal>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownItemTotal.CreateFromDiscriminatorValue); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShipping>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShipping.CreateFromDiscriminatorValue); } },
-                { "shipping_discount", n => { ShippingDiscount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShippingDiscount>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShippingDiscount.CreateFromDiscriminatorValue); } },
-                { "tax_total", n => { TaxTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownTaxTotal>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownTaxTotal.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_discount>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_discount.CreateFromDiscriminatorValue); } },
+                { "handling", n => { Handling = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_handling>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_handling.CreateFromDiscriminatorValue); } },
+                { "insurance", n => { Insurance = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_insurance>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_insurance.CreateFromDiscriminatorValue); } },
+                { "item_total", n => { ItemTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_item_total>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_item_total.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping.CreateFromDiscriminatorValue); } },
+                { "shipping_discount", n => { ShippingDiscount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping_discount>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping_discount.CreateFromDiscriminatorValue); } },
+                { "tax_total", n => { TaxTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_tax_total>(global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_tax_total.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -112,13 +112,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownDiscount>("discount", Discount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownHandling>("handling", Handling);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownInsurance>("insurance", Insurance);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownItemTotal>("item_total", ItemTotal);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShipping>("shipping", Shipping);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownShippingDiscount>("shipping_discount", ShippingDiscount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdownTaxTotal>("tax_total", TaxTotal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_discount>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_handling>("handling", Handling);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_insurance>("insurance", Insurance);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_item_total>("item_total", ItemTotal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_shipping_discount>("shipping_discount", ShippingDiscount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AmountBreakdown_tax_total>("tax_total", TaxTotal);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

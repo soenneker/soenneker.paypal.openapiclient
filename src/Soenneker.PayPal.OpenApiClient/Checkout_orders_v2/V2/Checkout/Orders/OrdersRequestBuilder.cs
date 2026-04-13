@@ -55,37 +55,37 @@ namespace Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders
         /// <summary>
         /// Creates an order. Merchants and partners can add Level 2 and 3 data to payments to reduce risk and payment processing costs. For more information about processing payments, see &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/processing/&quot;&gt;checkout&lt;/a&gt; or &lt;a href=&quot;https://developer.paypal.com/docs/multiparty/checkout/advanced/processing/&quot;&gt;multiparty checkout&lt;/a&gt;.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; For error handling and troubleshooting, see &lt;a href=&quot;https://developer.paypal.com/api/rest/reference/orders/v2/errors/#create-order&quot;&gt;Orders v2 errors&lt;/a&gt;.&lt;/blockquote&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Order_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Order"/></returns>
         /// <param name="body">The order request details.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Order_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Order?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Order_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Order> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Order_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Order_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Order>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Order.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates an order. Merchants and partners can add Level 2 and 3 data to payments to reduce risk and payment processing costs. For more information about processing payments, see &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/processing/&quot;&gt;checkout&lt;/a&gt; or &lt;a href=&quot;https://developer.paypal.com/docs/multiparty/checkout/advanced/processing/&quot;&gt;multiparty checkout&lt;/a&gt;.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; For error handling and troubleshooting, see &lt;a href=&quot;https://developer.paypal.com/api/rest/reference/orders/v2/errors/#create-order&quot;&gt;Orders v2 errors&lt;/a&gt;.&lt;/blockquote&gt;

@@ -22,10 +22,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? SetupFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? SetupFee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 SetupFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money SetupFee { get; set; }
 #endif
         /// <summary>The action to take on the subscription if the initial payment for the setup fails.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride_setup_fee_failure_action? SetupFeeFailureAction { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "auto_bill_outstanding", n => { AutoBillOutstanding = n.GetBoolValue(); } },
                 { "payment_failure_threshold", n => { PaymentFailureThreshold = n.GetIntValue(); } },
-                { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "setup_fee_failure_action", n => { SetupFeeFailureAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride_setup_fee_failure_action>(); } },
             };
         }
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("auto_bill_outstanding", AutoBillOutstanding);
             writer.WriteIntValue("payment_failure_threshold", PaymentFailureThreshold);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("setup_fee", SetupFee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("setup_fee", SetupFee);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride_setup_fee_failure_action>("setup_fee_failure_action", SetupFeeFailureAction);
             writer.WriteAdditionalData(AdditionalData);
         }

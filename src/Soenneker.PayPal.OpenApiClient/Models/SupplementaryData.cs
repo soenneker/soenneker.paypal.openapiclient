@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_card? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_card Card { get; set; }
 #endif
         /// <summary>The risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? Risk { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_risk? Risk { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk Risk { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_risk Risk { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard>(global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard.CreateFromDiscriminatorValue); } },
-                { "risk", n => { Risk = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk>(global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_card>(global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_card.CreateFromDiscriminatorValue); } },
+                { "risk", n => { Risk = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_risk>(global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_risk.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk>("risk", Risk);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_card>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryData_risk>("risk", Risk);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

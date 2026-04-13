@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get; set; }
 #endif
         /// <summary>The sender-specified note for notifications. Supports up to 4000 ASCII characters and 1000 non-ASCII characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum>(); } },
                 { "receiver", n => { Receiver = n.GetStringValue(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("amount", Amount);
             writer.WriteStringValue("note", Note);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum>("purpose", Purpose);
             writer.WriteStringValue("receiver", Receiver);

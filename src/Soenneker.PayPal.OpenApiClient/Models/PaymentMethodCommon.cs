@@ -20,19 +20,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon_country_code CountryCode { get; set; }
 #endif
-        /// <summary>The product_code property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode? ProductCode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode ProductCode { get; set; }
-#endif
+        /// <summary>The button code corresponding to a particular product or set of products. The values followed are defined by the SDK team.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CreditProductButtonCode? ProductCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon"/> and sets the default values.
         /// </summary>
@@ -59,8 +53,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_be_vaulted", n => { CanBeVaulted = n.GetBoolValue(); } },
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonCountryCode.CreateFromDiscriminatorValue); } },
-                { "product_code", n => { ProductCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon_country_code.CreateFromDiscriminatorValue); } },
+                { "product_code", n => { ProductCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditProductButtonCode>(); } },
             };
         }
         /// <summary>
@@ -71,8 +65,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("can_be_vaulted", CanBeVaulted);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>("product_code", ProductCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommon_country_code>("country_code", CountryCode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditProductButtonCode>("product_code", ProductCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

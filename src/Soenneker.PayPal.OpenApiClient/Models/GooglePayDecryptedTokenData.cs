@@ -20,10 +20,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Google Pay tokenized credit card used to pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataCard? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_card? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataCard Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_card Card { get; set; }
 #endif
         /// <summary>Base-64 cryptographic identifier used by card schemes to validate the token verification result. This is a conditionally required field if authentication_method is CRYPTOGRAM_3DS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authentication_method", n => { AuthenticationMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_authentication_method>(); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataCard>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataCard.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_card>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_card.CreateFromDiscriminatorValue); } },
                 { "cryptogram", n => { Cryptogram = n.GetStringValue(); } },
                 { "eci_indicator", n => { EciIndicator = n.GetStringValue(); } },
                 { "message_expiration", n => { MessageExpiration = n.GetStringValue(); } },
@@ -101,7 +101,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_authentication_method>("authentication_method", AuthenticationMethod);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataCard>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenData_card>("card", Card);
             writer.WriteStringValue("cryptogram", Cryptogram);
             writer.WriteStringValue("eci_indicator", EciIndicator);
             writer.WriteStringValue("message_expiration", MessageExpiration);

@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of connection-level details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1>? ConnectionStatus { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connections>? ConnectionStatus { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1> ConnectionStatus { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connections> ConnectionStatus { get; set; }
 #endif
         /// <summary>The ID of the invoice. This property supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "connection_status", n => { ConnectionStatus = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1>(global::Soenneker.PayPal.OpenApiClient.Models.Connections_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "connection_status", n => { ConnectionStatus = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Connections>(global::Soenneker.PayPal.OpenApiClient.Models.Connections.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1>("connection_status", ConnectionStatus);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Connections>("connection_status", ConnectionStatus);
             writer.WriteStringValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

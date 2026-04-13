@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The details about a customer in PayPal&apos;s system of record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Customer_1? Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Customer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Customer_1 Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Customer Customer { get; set; }
 #endif
         /// <summary>Basic vault instruction specification that can be extended by specific payment sources that supports vaulting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Customer_1>(global::Soenneker.PayPal.OpenApiClient.Models.Customer_1.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Customer>(global::Soenneker.PayPal.OpenApiClient.Models.Customer.CreateFromDiscriminatorValue); } },
                 { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstructionBase>(global::Soenneker.PayPal.OpenApiClient.Models.VaultInstructionBase.CreateFromDiscriminatorValue); } },
                 { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerification>(global::Soenneker.PayPal.OpenApiClient.Models.CardVerification.CreateFromDiscriminatorValue); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Customer_1>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Customer>("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstructionBase>("vault", Vault);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerification>("verification", Verification);
             writer.WriteAdditionalData(AdditionalData);

@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The details of the invoice. Includes invoice number, date, payment terms, and audit metadata.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class InvoiceDetail : global::Soenneker.PayPal.OpenApiClient.Models.Detail_1, IParsable
+    public partial class InvoiceDetail : global::Soenneker.PayPal.OpenApiClient.Models.Detail, IParsable
     {
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,10 +32,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The audit metadata. Captures all invoicing actions on create, send, update, and cancel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Metadata_1? Metadata { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Metadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Metadata_1 Metadata { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Metadata Metadata { get; set; }
 #endif
         /// <summary>The payment term of the invoice. Payment can be due upon receipt, a specified date, or in a set number of days.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "invoice_date", n => { InvoiceDate = n.GetStringValue(); } },
                 { "invoice_number", n => { InvoiceNumber = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata_1>(global::Soenneker.PayPal.OpenApiClient.Models.Metadata_1.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata>(global::Soenneker.PayPal.OpenApiClient.Models.Metadata.CreateFromDiscriminatorValue); } },
                 { "payment_term", n => { PaymentTerm = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm.CreateFromDiscriminatorValue); } },
             };
         }
@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             base.Serialize(writer);
             writer.WriteStringValue("invoice_date", InvoiceDate);
             writer.WriteStringValue("invoice_number", InvoiceNumber);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata_1>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm>("payment_term", PaymentTerm);
         }
     }

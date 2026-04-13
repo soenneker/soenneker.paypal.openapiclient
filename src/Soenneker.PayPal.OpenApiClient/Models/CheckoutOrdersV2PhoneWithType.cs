@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithTypePhoneNumber? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithType_phone_number? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithTypePhoneNumber PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithType_phone_number PhoneNumber { get; set; }
 #endif
         /// <summary>The phone type.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneType? PhoneType { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithTypePhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithTypePhoneNumber.CreateFromDiscriminatorValue); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithType_phone_number>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithType_phone_number.CreateFromDiscriminatorValue); } },
                 { "phone_type", n => { PhoneType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneType>(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithTypePhoneNumber>("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneWithType_phone_number>("phone_number", PhoneNumber);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PhoneType>("phone_type", PhoneType);
             writer.WriteAdditionalData(AdditionalData);
         }

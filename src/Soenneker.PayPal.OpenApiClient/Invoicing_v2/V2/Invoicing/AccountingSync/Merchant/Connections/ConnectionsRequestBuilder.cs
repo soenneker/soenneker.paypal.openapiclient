@@ -36,7 +36,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.AccountingSyn
         /// <summary>
         /// Lists connections to accounting platforms per merchant.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Connections_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Connections"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400">When receiving a 400 status code</exception>
@@ -45,11 +45,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.AccountingSyn
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Connections?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Connections> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -60,7 +60,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.AccountingSyn
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Connections_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Connections_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Connections>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Connections.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists connections to accounting platforms per merchant.

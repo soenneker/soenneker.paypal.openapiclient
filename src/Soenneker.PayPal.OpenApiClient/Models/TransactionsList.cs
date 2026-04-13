@@ -30,10 +30,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1>? Transactions { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Transaction>? Transactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1> Transactions { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Transaction> Transactions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TransactionsList"/> and sets the default values.
@@ -63,7 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_items", n => { TotalItems = n.GetIntValue(); } },
                 { "total_pages", n => { TotalPages = n.GetIntValue(); } },
-                { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1>(global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Transaction>(global::Soenneker.PayPal.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("total_items", TotalItems);
             writer.WriteIntValue("total_pages", TotalPages);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_1>("transactions", Transactions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Transaction>("transactions", Transactions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

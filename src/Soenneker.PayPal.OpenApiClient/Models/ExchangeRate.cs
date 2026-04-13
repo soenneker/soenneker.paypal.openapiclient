@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The source_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateSourceCurrency? SourceCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_source_currency? SourceCurrency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateSourceCurrency SourceCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_source_currency SourceCurrency { get; set; }
 #endif
         /// <summary>The target_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateTargetCurrency? TargetCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_target_currency? TargetCurrency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateTargetCurrency TargetCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_target_currency TargetCurrency { get; set; }
 #endif
         /// <summary>The target currency amount. Equivalent to one unit of the source currency. Formatted as integer or decimal value with one to 15 digits to the right of the decimal point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,8 +64,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "source_currency", n => { SourceCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateSourceCurrency>(global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateSourceCurrency.CreateFromDiscriminatorValue); } },
-                { "target_currency", n => { TargetCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateTargetCurrency>(global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateTargetCurrency.CreateFromDiscriminatorValue); } },
+                { "source_currency", n => { SourceCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_source_currency>(global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_source_currency.CreateFromDiscriminatorValue); } },
+                { "target_currency", n => { TargetCurrency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_target_currency>(global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_target_currency.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -76,8 +76,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateSourceCurrency>("source_currency", SourceCurrency);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRateTargetCurrency>("target_currency", TargetCurrency);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_source_currency>("source_currency", SourceCurrency);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExchangeRate_target_currency>("target_currency", TargetCurrency);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

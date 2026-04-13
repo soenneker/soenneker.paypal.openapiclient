@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestAmount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_amount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestAmount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_amount Amount { get; set; }
 #endif
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment_instruction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestPaymentInstruction? PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_payment_instruction? PaymentInstruction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestPaymentInstruction PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_payment_instruction PaymentInstruction { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest"/> and sets the default values.
@@ -80,11 +80,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestAmount>(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestAmount.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_amount>(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_amount.CreateFromDiscriminatorValue); } },
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
                 { "note_to_payer", n => { NoteToPayer = n.GetStringValue(); } },
-                { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestPaymentInstruction>(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestPaymentInstruction.CreateFromDiscriminatorValue); } },
+                { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_payment_instruction>(global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_payment_instruction.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestAmount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_amount>("amount", Amount);
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteStringValue("invoice_id", InvoiceId);
             writer.WriteStringValue("note_to_payer", NoteToPayer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequestPaymentInstruction>("payment_instruction", PaymentInstruction);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRequest_payment_instruction>("payment_instruction", PaymentInstruction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

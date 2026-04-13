@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource? PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest_payment_source? PaymentSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest_payment_source PaymentSource { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource.CreateFromDiscriminatorValue); } },
+                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest_payment_source>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest_payment_source.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource>("payment_source", PaymentSource);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequest_payment_source>("payment_source", PaymentSource);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

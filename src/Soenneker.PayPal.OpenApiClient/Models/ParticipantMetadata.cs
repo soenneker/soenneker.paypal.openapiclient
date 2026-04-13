@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The ip_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadataIpAddress? IpAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address? IpAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadataIpAddress IpAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address IpAddress { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ip_address", n => { IpAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadataIpAddress>(global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadataIpAddress.CreateFromDiscriminatorValue); } },
+                { "ip_address", n => { IpAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address>(global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadataIpAddress>("ip_address", IpAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address>("ip_address", IpAddress);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Common business information section.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BusinessEntity : global::Soenneker.PayPal.OpenApiClient.Models.Business_1, IParsable
+    public partial class BusinessEntity : global::Soenneker.PayPal.OpenApiClient.Models.Business, IParsable
     {
         /// <summary>The currency range, from the minimum inclusive amount to the maximum inclusive amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

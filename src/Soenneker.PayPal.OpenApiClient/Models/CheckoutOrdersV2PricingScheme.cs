@@ -18,20 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePrice? Price { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_price? Price { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePrice Price { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_price Price { get; set; }
 #endif
         /// <summary>The pricing model for the billing cycle.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_pricing_model? PricingModel { get; set; }
         /// <summary>The reload_threshold_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemeReloadThresholdAmount? ReloadThresholdAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_reload_threshold_amount? ReloadThresholdAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemeReloadThresholdAmount ReloadThresholdAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_reload_threshold_amount ReloadThresholdAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme"/> and sets the default values.
@@ -58,9 +58,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePrice>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePrice.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_price>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_price.CreateFromDiscriminatorValue); } },
                 { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_pricing_model>(); } },
-                { "reload_threshold_amount", n => { ReloadThresholdAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemeReloadThresholdAmount>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemeReloadThresholdAmount.CreateFromDiscriminatorValue); } },
+                { "reload_threshold_amount", n => { ReloadThresholdAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_reload_threshold_amount>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_reload_threshold_amount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,9 +70,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePrice>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_price>("price", Price);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_pricing_model>("pricing_model", PricingModel);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemeReloadThresholdAmount>("reload_threshold_amount", ReloadThresholdAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingScheme_reload_threshold_amount>("reload_threshold_amount", ReloadThresholdAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

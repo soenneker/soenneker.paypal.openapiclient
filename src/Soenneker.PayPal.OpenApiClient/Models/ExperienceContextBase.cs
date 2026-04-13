@@ -26,26 +26,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl? CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_cancel_url? CancelUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_cancel_url CancelUrl { get; set; }
 #endif
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseLocale? Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_locale? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseLocale Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_locale Locale { get; set; }
 #endif
         /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl? ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_return_url? ReturnUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_return_url ReturnUrl { get; set; }
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_shipping_preference? ShippingPreference { get; set; }
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl.CreateFromDiscriminatorValue); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseLocale>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseLocale.CreateFromDiscriminatorValue); } },
-                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl.CreateFromDiscriminatorValue); } },
+                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_cancel_url>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_cancel_url.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_locale>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_locale.CreateFromDiscriminatorValue); } },
+                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_return_url>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_return_url.CreateFromDiscriminatorValue); } },
                 { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_shipping_preference>(); } },
             };
         }
@@ -90,9 +90,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>("cancel_url", CancelUrl);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseLocale>("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>("return_url", ReturnUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_cancel_url>("cancel_url", CancelUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_locale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_return_url>("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase_shipping_preference>("shipping_preference", ShippingPreference);
             writer.WriteAdditionalData(AdditionalData);
         }

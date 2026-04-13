@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The discount_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount? DiscountAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_discount_amount? DiscountAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount DiscountAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_discount_amount DiscountAmount { get; set; }
 #endif
         /// <summary>The duty_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount? DutyAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_duty_amount? DutyAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount DutyAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_duty_amount DutyAmount { get; set; }
 #endif
         /// <summary>A list of the items that were purchased with this payment. If your merchant account has been configured for Level 3 processing this field will be passed to the processor on your behalf.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,18 +42,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The shipping_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_address? ShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_address ShippingAddress { get; set; }
 #endif
         /// <summary>The shipping_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount? ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_amount? ShippingAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_amount ShippingAmount { get; set; }
 #endif
         /// <summary>Use this field to specify the postal code of the shipping location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,11 +88,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount.CreateFromDiscriminatorValue); } },
-                { "duty_amount", n => { DutyAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount.CreateFromDiscriminatorValue); } },
+                { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_discount_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_discount_amount.CreateFromDiscriminatorValue); } },
+                { "duty_amount", n => { DutyAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_duty_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_duty_amount.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress.CreateFromDiscriminatorValue); } },
-                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_address>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_address.CreateFromDiscriminatorValue); } },
+                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_amount.CreateFromDiscriminatorValue); } },
                 { "ships_from_postal_code", n => { ShipsFromPostalCode = n.GetStringValue(); } },
             };
         }
@@ -103,11 +103,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount>("discount_amount", DiscountAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount>("duty_amount", DutyAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_discount_amount>("discount_amount", DiscountAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_duty_amount>("duty_amount", DutyAmount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items>("line_items", LineItems);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress>("shipping_address", ShippingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount>("shipping_amount", ShippingAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_address>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_shipping_amount>("shipping_amount", ShippingAmount);
             writer.WriteStringValue("ships_from_postal_code", ShipsFromPostalCode);
             writer.WriteAdditionalData(AdditionalData);
         }

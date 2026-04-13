@@ -20,10 +20,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatusStatusDetails? StatusDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status_details? StatusDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatusStatusDetails StatusDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status_details StatusDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus"/> and sets the default values.
@@ -51,7 +51,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status>(); } },
-                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatusStatusDetails>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatusStatusDetails.CreateFromDiscriminatorValue); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status_details>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status_details.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatusStatusDetails>("status_details", StatusDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureStatus_status_details>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The eligible_methods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods? EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods? EligibleMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods EligibleMethods { get; set; }
 #endif
         /// <summary>Payment tokens for vaulted instruments, if available. This object will be included only if include_vault_tokens is set to true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eligible_methods", n => { EligibleMethods = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods.CreateFromDiscriminatorValue); } },
+                { "eligible_methods", n => { EligibleMethods = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods.CreateFromDiscriminatorValue); } },
                 { "payment_tokens", n => { PaymentTokens = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods>("eligible_methods", EligibleMethods);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods>("eligible_methods", EligibleMethods);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens>("payment_tokens", PaymentTokens);
             writer.WriteAdditionalData(AdditionalData);
         }

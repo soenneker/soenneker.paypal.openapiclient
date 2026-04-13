@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAddress? Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_address? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAddress Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_address Address { get; set; }
 #endif
-        /// <summary>Additional attributes associated with the use of this PayPal Wallet.</summary>
+        /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes? Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_attributes? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_attributes Attributes { get; set; }
 #endif
         /// <summary>The PayPal billing agreement ID. References an approved recurring payment for goods or services.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,18 +42,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The birth_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletBirthDate? BirthDate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_birth_date? BirthDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletBirthDate BirthDate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_birth_date BirthDate { get; set; }
 #endif
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletEmailAddress? EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_email_address? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletEmailAddress EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_email_address EmailAddress { get; set; }
 #endif
         /// <summary>Customizes the payer experience during the approval process for payment with PayPal.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Partners and Marketplaces might configure &lt;code&gt;brand_name&lt;/code&gt; and &lt;code&gt;shipping_preference&lt;/code&gt; during partner account setup, which overrides the request values.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,18 +66,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_name Name { get; set; }
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletPhone? Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_phone? Phone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletPhone Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_phone Phone { get; set; }
 #endif
         /// <summary>Provides additional details to process a payment using the PayPal wallet billing agreement or a vaulted payment method that has been stored or is intended to be stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,18 +90,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The tax_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo? TaxInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_tax_info? TaxInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo TaxInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_tax_info TaxInfo { get; set; }
 #endif
         /// <summary>The vault_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultId? VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_vault_id? VaultId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultId VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_vault_id VaultId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet"/> and sets the default values.
@@ -128,17 +128,17 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAddress>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAddress.CreateFromDiscriminatorValue); } },
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_address>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_address.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_attributes>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_attributes.CreateFromDiscriminatorValue); } },
                 { "billing_agreement_id", n => { BillingAgreementId = n.GetStringValue(); } },
-                { "birth_date", n => { BirthDate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletBirthDate>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletBirthDate.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletEmailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletEmailAddress.CreateFromDiscriminatorValue); } },
+                { "birth_date", n => { BirthDate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_birth_date>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_birth_date.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_email_address.CreateFromDiscriminatorValue); } },
                 { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletName>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletName.CreateFromDiscriminatorValue); } },
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletPhone>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletPhone.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_name>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_name.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_phone>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_phone.CreateFromDiscriminatorValue); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential.CreateFromDiscriminatorValue); } },
-                { "tax_info", n => { TaxInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo.CreateFromDiscriminatorValue); } },
-                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultId>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultId.CreateFromDiscriminatorValue); } },
+                { "tax_info", n => { TaxInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_tax_info>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_tax_info.CreateFromDiscriminatorValue); } },
+                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_vault_id>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_vault_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -148,17 +148,17 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAddress>("address", Address);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_attributes>("attributes", Attributes);
             writer.WriteStringValue("billing_agreement_id", BillingAgreementId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletBirthDate>("birth_date", BirthDate);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletEmailAddress>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_birth_date>("birth_date", BirthDate);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_email_address>("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletName>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletPhone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_phone>("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential>("stored_credential", StoredCredential);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo>("tax_info", TaxInfo);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultId>("vault_id", VaultId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_tax_info>("tax_info", TaxInfo);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet_vault_id>("vault_id", VaultId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

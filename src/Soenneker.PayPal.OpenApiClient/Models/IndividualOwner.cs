@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The individual owner of the account.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class IndividualOwner : global::Soenneker.PayPal.OpenApiClient.Models.Person_1, IParsable
+    public partial class IndividualOwner : global::Soenneker.PayPal.OpenApiClient.Models.Person, IParsable
     {
         /// <summary>Role of the person party played in the account.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwnerType? Type { get; set; }

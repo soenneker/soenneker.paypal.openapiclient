@@ -16,10 +16,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of banks attached to this managed account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank_1>? Banks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank>? Banks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank_1> Banks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank> Banks { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "banks", n => { Banks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Bank_1>(global::Soenneker.PayPal.OpenApiClient.Models.Bank_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "banks", n => { Banks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Bank>(global::Soenneker.PayPal.OpenApiClient.Models.Bank.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Bank_1>("banks", Banks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Bank>("banks", Banks);
         }
     }
 }

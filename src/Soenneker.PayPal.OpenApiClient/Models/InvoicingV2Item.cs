@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The discount as a percent or amount at invoice level. The invoice discount amount is subtracted from the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount_1? Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount_1 Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount Discount { get; set; }
 #endif
         /// <summary>The ID of the invoice line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The tax information. Includes the tax name and tax rate of invoice items. The tax amount is added to the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tax_1? Tax { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Tax? Tax { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tax_1 Tax { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Tax Tax { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,12 +107,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount_1>(global::Soenneker.PayPal.OpenApiClient.Models.Discount_1.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount>(global::Soenneker.PayPal.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "item_date", n => { ItemDate = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
-                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tax_1>(global::Soenneker.PayPal.OpenApiClient.Models.Tax_1.CreateFromDiscriminatorValue); } },
+                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tax>(global::Soenneker.PayPal.OpenApiClient.Models.Tax.CreateFromDiscriminatorValue); } },
                 { "unit_amount", n => { UnitAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
                 { "unit_of_measure", n => { UnitOfMeasure = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure>(); } },
             };
@@ -125,11 +125,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount_1>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount>("discount", Discount);
             writer.WriteStringValue("item_date", ItemDate);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tax_1>("tax", Tax);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tax>("tax", Tax);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("unit_amount", UnitAmount);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure>("unit_of_measure", UnitOfMeasure);
             writer.WriteAdditionalData(AdditionalData);

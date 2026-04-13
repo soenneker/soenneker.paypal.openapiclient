@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The setup_fee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlanSetupFee? SetupFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan_setup_fee? SetupFee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlanSetupFee SetupFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan_setup_fee SetupFee { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "billing_cycles", n => { BillingCycles = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycle>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycle.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlanSetupFee>(global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlanSetupFee.CreateFromDiscriminatorValue); } },
+                { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan_setup_fee>(global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan_setup_fee.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycle>("billing_cycles", BillingCycles);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlanSetupFee>("setup_fee", SetupFee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan_setup_fee>("setup_fee", SetupFee);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

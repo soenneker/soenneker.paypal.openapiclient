@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal? Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSource_paypal? Paypal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSource_paypal Paypal { get; set; }
 #endif
         /// <summary>Payment Token info for Venmo payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal.CreateFromDiscriminatorValue); } },
+                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSource_paypal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSource_paypal.CreateFromDiscriminatorValue); } },
                 { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoPaymentTokenInfo>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoPaymentTokenInfo.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSource_paypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoPaymentTokenInfo>("venmo", Venmo);
             writer.WriteAdditionalData(AdditionalData);
         }

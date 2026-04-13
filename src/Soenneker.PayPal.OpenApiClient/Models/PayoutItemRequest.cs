@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get; set; }
 #endif
         /// <summary>Metadata for Venmo transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,7 +116,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alternate_notification_method", n => { AlternateNotificationMethod = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AlternateNotificationMethod>(global::Soenneker.PayPal.OpenApiClient.Models.AlternateNotificationMethod.CreateFromDiscriminatorValue); } },
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext.CreateFromDiscriminatorValue); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "notification_language", n => { NotificationLanguage = n.GetStringValue(); } },
@@ -135,7 +135,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AlternateNotificationMethod>("alternate_notification_method", AlternateNotificationMethod);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext>("application_context", ApplicationContext);
             writer.WriteStringValue("note", Note);
             writer.WriteStringValue("notification_language", NotificationLanguage);

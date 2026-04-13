@@ -18,26 +18,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_country_code CountryCode { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_experience_context? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_experience_context ExperienceContext { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_name Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestCountryCode.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestName.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_country_code.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_experience_context.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_name.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SofortRequest_name>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

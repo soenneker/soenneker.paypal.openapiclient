@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The style and presentation parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation_1? Presentation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation? Presentation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation_1 Presentation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation Presentation { get; set; }
 #endif
         /// <summary>Indicates whether the profile persists for three hours or permanently. To persist the profile permanently, set to `false`. To persist the profile for three hours, set to `true`.</summary>
         public bool? Temporary { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "input_fields", n => { InputFields = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InputFields>(global::Soenneker.PayPal.OpenApiClient.Models.InputFields.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "presentation", n => { Presentation = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Presentation_1>(global::Soenneker.PayPal.OpenApiClient.Models.Presentation_1.CreateFromDiscriminatorValue); } },
+                { "presentation", n => { Presentation = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Presentation>(global::Soenneker.PayPal.OpenApiClient.Models.Presentation.CreateFromDiscriminatorValue); } },
                 { "temporary", n => { Temporary = n.GetBoolValue(); } },
             };
         }
@@ -100,7 +100,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig>("flow_config", FlowConfig);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InputFields>("input_fields", InputFields);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Presentation_1>("presentation", Presentation);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Presentation>("presentation", Presentation);
             writer.WriteBoolValue("temporary", Temporary);
             writer.WriteAdditionalData(AdditionalData);
         }

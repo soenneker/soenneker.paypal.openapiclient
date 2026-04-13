@@ -18,7 +18,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Transactions status result identifier. The outcome of the issuer&apos;s authentication.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ParesStatus? AuthenticationStatus { get; set; }
         /// <summary>Status of Authentication eligibility.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Enrolled_1? EnrollmentStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Enrolled? EnrollmentStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse"/> and sets the default values.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authentication_status", n => { AuthenticationStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ParesStatus>(); } },
-                { "enrollment_status", n => { EnrollmentStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Enrolled_1>(); } },
+                { "enrollment_status", n => { EnrollmentStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Enrolled>(); } },
             };
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ParesStatus>("authentication_status", AuthenticationStatus);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Enrolled_1>("enrollment_status", EnrollmentStatus);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Enrolled>("enrollment_status", EnrollmentStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The authorization with additional payment details, such as risk assessment and processor response. These details are populated only for certain payment methods.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AuthorizationWithAdditionalData : global::Soenneker.PayPal.OpenApiClient.Models.Authorization_1, IParsable
+    public partial class AuthorizationWithAdditionalData : global::Soenneker.PayPal.OpenApiClient.Models.Authorization, IParsable
     {
         /// <summary>The processor_response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

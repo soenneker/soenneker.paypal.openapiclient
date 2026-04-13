@@ -60,10 +60,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? OutstandingBalance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? OutstandingBalance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 OutstandingBalance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money OutstandingBalance { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo"/> and sets the default values.
@@ -96,7 +96,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "last_failed_payment", n => { LastFailedPayment = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails>(global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails.CreateFromDiscriminatorValue); } },
                 { "last_payment", n => { LastPayment = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails>(global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails.CreateFromDiscriminatorValue); } },
                 { "next_billing_time", n => { NextBillingTime = n.GetStringValue(); } },
-                { "outstanding_balance", n => { OutstandingBalance = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "outstanding_balance", n => { OutstandingBalance = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails>("last_failed_payment", LastFailedPayment);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails>("last_payment", LastPayment);
             writer.WriteStringValue("next_billing_time", NextBillingTime);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("outstanding_balance", OutstandingBalance);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("outstanding_balance", OutstandingBalance);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

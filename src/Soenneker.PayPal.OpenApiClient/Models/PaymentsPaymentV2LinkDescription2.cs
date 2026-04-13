@@ -52,18 +52,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2Schema? Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_schema? Schema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2Schema Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_schema Schema { get; set; }
 #endif
         /// <summary>The targetSchema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2TargetSchema? TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_targetSchema? TargetSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2TargetSchema TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_targetSchema TargetSchema { get; set; }
 #endif
         /// <summary>The link title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,8 +104,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "mediaType", n => { MediaType = n.GetStringValue(); } },
                 { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_method>(); } },
                 { "rel", n => { Rel = n.GetStringValue(); } },
-                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2Schema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2Schema.CreateFromDiscriminatorValue); } },
-                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2TargetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2TargetSchema.CreateFromDiscriminatorValue); } },
+                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_schema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_schema.CreateFromDiscriminatorValue); } },
+                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_targetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_targetSchema.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -121,8 +121,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("mediaType", MediaType);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_method>("method", Method);
             writer.WriteStringValue("rel", Rel);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2Schema>("schema", Schema);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2TargetSchema>("targetSchema", TargetSchema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_schema>("schema", Schema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription2_targetSchema>("targetSchema", TargetSchema);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

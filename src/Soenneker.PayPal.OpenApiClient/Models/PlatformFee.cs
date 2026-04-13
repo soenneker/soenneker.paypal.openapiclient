@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeeAmount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_amount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeeAmount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_amount Amount { get; set; }
 #endif
         /// <summary>The payee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeePayee? Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_payee? Payee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeePayee Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_payee Payee { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeeAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeeAmount.CreateFromDiscriminatorValue); } },
-                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeePayee>(global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeePayee.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_amount>(global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_amount.CreateFromDiscriminatorValue); } },
+                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_payee>(global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_payee.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeeAmount>("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFeePayee>("payee", Payee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_amount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlatformFee_payee>("payee", Payee);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

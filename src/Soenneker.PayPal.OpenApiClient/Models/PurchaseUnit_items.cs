@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// An item.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PurchaseUnit_items : global::Soenneker.PayPal.OpenApiClient.Models.Item_1, IParsable
+    public partial class PurchaseUnit_items : global::Soenneker.PayPal.OpenApiClient.Models.Item, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

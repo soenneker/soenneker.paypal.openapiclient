@@ -41,11 +41,11 @@ namespace Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.O
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackErrorResponse">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackResponse?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,11 +60,11 @@ namespace Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.O
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error_1.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

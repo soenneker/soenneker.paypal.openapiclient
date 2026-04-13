@@ -18,26 +18,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_country_code CountryCode { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_experience_context? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_experience_context ExperienceContext { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_name Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestCountryCode.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestName.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_country_code.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_experience_context.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_name.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GiropayRequest_name>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

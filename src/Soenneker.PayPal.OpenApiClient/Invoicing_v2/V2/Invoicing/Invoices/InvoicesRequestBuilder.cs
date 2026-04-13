@@ -49,7 +49,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
         /// <summary>
         /// Lists invoices. To filter the invoices that appear in the response, you can specify one or more optional query parameters.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoices_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoices"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesList400">When receiving a 400 status code</exception>
@@ -57,11 +57,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoices_1?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoices?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoices_1> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoices> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -71,12 +71,12 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoices_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoices_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoices>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoices.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a draft invoice. To move the invoice from a draft to payable state, you must &lt;a href=&quot;#invoices_send&quot;&gt;send the invoice&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;In the JSON request body, include invoice details including merchant information. The &lt;code&gt;invoice&lt;/code&gt; object must include an &lt;code&gt;items&lt;/code&gt; array.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The merchant that you specify in an invoice must have a PayPal account in good standing.&lt;/blockquote&gt;.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Invoice"/></returns>
         /// <param name="body">The invoice details which includes all information of the invoice like items, billing information.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,11 +86,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoice?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Invoice body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Invoice> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Invoice body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -102,7 +102,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesCreate422.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoice>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoice.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists invoices. To filter the invoices that appear in the response, you can specify one or more optional query parameters.
@@ -131,11 +131,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Invoice body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Invoice_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.PayPal.OpenApiClient.Models.Invoice body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

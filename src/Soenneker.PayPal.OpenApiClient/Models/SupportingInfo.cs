@@ -20,10 +20,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of metadata for the documents which were uploaded as supporting information for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document_1>? Documents { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? Documents { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document_1> Documents { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get; private set; }
 #endif
         /// <summary>Any supporting notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
-                { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document_1>(global::Soenneker.PayPal.OpenApiClient.Models.Document_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>(global::Soenneker.PayPal.OpenApiClient.Models.Document.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "provided_time", n => { ProvidedTime = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo_source>(); } },

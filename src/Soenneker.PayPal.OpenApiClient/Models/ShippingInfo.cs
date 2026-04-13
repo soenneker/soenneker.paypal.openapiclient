@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1? Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1 Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address Address { get; set; }
 #endif
         /// <summary>The shipping method that is associated with this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1? SecondaryShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address? SecondaryShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1 SecondaryShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address SecondaryShippingAddress { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>(global::Soenneker.PayPal.OpenApiClient.Models.Address_1.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>(global::Soenneker.PayPal.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "secondary_shipping_address", n => { SecondaryShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>(global::Soenneker.PayPal.OpenApiClient.Models.Address_1.CreateFromDiscriminatorValue); } },
+                { "secondary_shipping_address", n => { SecondaryShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>(global::Soenneker.PayPal.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>("address", Address);
             writer.WriteStringValue("method", Method);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>("secondary_shipping_address", SecondaryShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>("secondary_shipping_address", SecondaryShippingAddress);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

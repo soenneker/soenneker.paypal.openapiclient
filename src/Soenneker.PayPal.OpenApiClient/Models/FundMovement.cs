@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1? Asset { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? Asset { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1 Asset { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency Asset { get; set; }
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
-                { "asset", n => { Asset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1.CreateFromDiscriminatorValue); } },
+                { "asset", n => { Asset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
                 { "initiated_time", n => { InitiatedTime = n.GetStringValue(); } },
                 { "party", n => { Party = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_party>(); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementReason>(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>("asset", Asset);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("asset", Asset);
             writer.WriteStringValue("initiated_time", InitiatedTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_party>("party", Party);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementReason>("reason", Reason);

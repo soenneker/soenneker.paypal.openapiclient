@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CheckoutOrdersV2CardResponse_available_networks : global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand_Wrapper_7, IParsable
+    public partial class CheckoutOrdersV2CardResponse_available_networks : global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand_Wrapper, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>

@@ -28,10 +28,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The expiry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequestExpiry? Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequest_expiry? Expiry { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequestExpiry Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequest_expiry Expiry { get; set; }
 #endif
         /// <summary>Third party network token number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "cryptogram", n => { Cryptogram = n.GetStringValue(); } },
                 { "eci_flag", n => { EciFlag = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EciFlag>(); } },
-                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequestExpiry>(global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequestExpiry.CreateFromDiscriminatorValue); } },
+                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequest_expiry>(global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequest_expiry.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "token_requestor_id", n => { TokenRequestorId = n.GetStringValue(); } },
             };
@@ -90,7 +90,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cryptogram", Cryptogram);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EciFlag>("eci_flag", EciFlag);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequestExpiry>("expiry", Expiry);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTokenRequest_expiry>("expiry", Expiry);
             writer.WriteStringValue("number", Number);
             writer.WriteStringValue("token_requestor_id", TokenRequestorId);
             writer.WriteAdditionalData(AdditionalData);

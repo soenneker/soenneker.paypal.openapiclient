@@ -18,50 +18,50 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? FeeAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? FeeAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 FeeAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money FeeAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? GrossAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money GrossAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? NetAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money NetAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? ShippingAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money ShippingAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? TaxAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? TaxAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 TaxAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money TaxAmount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? TotalItemAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? TotalItemAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 TotalItemAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money TotalItemAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown"/> and sets the default values.
@@ -88,12 +88,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fee_amount", n => { FeeAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
-                { "gross_amount", n => { GrossAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
-                { "net_amount", n => { NetAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
-                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
-                { "tax_amount", n => { TaxAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
-                { "total_item_amount", n => { TotalItemAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "fee_amount", n => { FeeAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
+                { "gross_amount", n => { GrossAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
+                { "net_amount", n => { NetAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
+                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
+                { "tax_amount", n => { TaxAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
+                { "total_item_amount", n => { TotalItemAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -103,12 +103,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("fee_amount", FeeAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("gross_amount", GrossAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("net_amount", NetAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("shipping_amount", ShippingAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("tax_amount", TaxAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("total_item_amount", TotalItemAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("fee_amount", FeeAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("gross_amount", GrossAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("net_amount", NetAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("shipping_amount", ShippingAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("tax_amount", TaxAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("total_item_amount", TotalItemAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

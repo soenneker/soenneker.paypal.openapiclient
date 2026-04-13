@@ -18,34 +18,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The bic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestBic? Bic { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_bic? Bic { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestBic Bic { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_bic Bic { get; set; }
 #endif
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_country_code CountryCode { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_experience_context? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_experience_context ExperienceContext { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_name Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bic", n => { Bic = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestBic>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestBic.CreateFromDiscriminatorValue); } },
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestCountryCode.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestName.CreateFromDiscriminatorValue); } },
+                { "bic", n => { Bic = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_bic>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_bic.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_country_code.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_experience_context.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_name.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestBic>("bic", Bic);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_bic>("bic", Bic);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest_name>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1? AssetRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? AssetRefunded { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1 AssetRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get; set; }
 #endif
         /// <summary>The outcome of a resolved dispute.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code? OutcomeCode { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
-                { "asset_refunded", n => { AssetRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1.CreateFromDiscriminatorValue); } },
+                { "asset_refunded", n => { AssetRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
                 { "outcome_code", n => { OutcomeCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code>(); } },
                 { "outcome_reason", n => { OutcomeReason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); } },
             };
@@ -74,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("amount_refunded", AmountRefunded);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>("asset_refunded", AssetRefunded);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("asset_refunded", AssetRefunded);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code>("outcome_code", OutcomeCode);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>("outcome_reason", OutcomeReason);
             writer.WriteAdditionalData(AdditionalData);

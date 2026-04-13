@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1? Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Address_1 Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Address Address { get; set; }
 #endif
         /// <summary>The address status of the payer. Value is either:&lt;ul&gt;&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;. Verified.&lt;/li&gt;&lt;li&gt;&lt;code&gt;N&lt;/code&gt;. Not verified.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>(global::Soenneker.PayPal.OpenApiClient.Models.Address_1.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>(global::Soenneker.PayPal.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "address_status", n => { AddressStatus = n.GetStringValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address_1>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Address>("address", Address);
             writer.WriteStringValue("address_status", AddressStatus);
             writer.WriteStringValue("country_code", CountryCode);
             writer.WriteStringValue("email_address", EmailAddress);

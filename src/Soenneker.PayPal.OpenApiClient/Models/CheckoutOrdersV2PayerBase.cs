@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBaseEmailAddress? EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_email_address? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBaseEmailAddress EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_email_address EmailAddress { get; set; }
 #endif
         /// <summary>The payer_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBasePayerId? PayerId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_payer_id? PayerId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBasePayerId PayerId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_payer_id PayerId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBaseEmailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBaseEmailAddress.CreateFromDiscriminatorValue); } },
-                { "payer_id", n => { PayerId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBasePayerId>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBasePayerId.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_email_address.CreateFromDiscriminatorValue); } },
+                { "payer_id", n => { PayerId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_payer_id>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_payer_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBaseEmailAddress>("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBasePayerId>("payer_id", PayerId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_email_address>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayerBase_payer_id>("payer_id", PayerId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

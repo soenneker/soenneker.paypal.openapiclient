@@ -52,10 +52,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Event_1? WebhookEvent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Event? WebhookEvent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Event_1 WebhookEvent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Event WebhookEvent { get; set; }
 #endif
         /// <summary>The ID of the webhook as configured in your Developer Portal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "transmission_id", n => { TransmissionId = n.GetStringValue(); } },
                 { "transmission_sig", n => { TransmissionSig = n.GetStringValue(); } },
                 { "transmission_time", n => { TransmissionTime = n.GetDateTimeOffsetValue(); } },
-                { "webhook_event", n => { WebhookEvent = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>(global::Soenneker.PayPal.OpenApiClient.Models.Event_1.CreateFromDiscriminatorValue); } },
+                { "webhook_event", n => { WebhookEvent = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Event>(global::Soenneker.PayPal.OpenApiClient.Models.Event.CreateFromDiscriminatorValue); } },
                 { "webhook_id", n => { WebhookId = n.GetStringValue(); } },
             };
         }
@@ -111,7 +111,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("transmission_id", TransmissionId);
             writer.WriteStringValue("transmission_sig", TransmissionSig);
             writer.WriteDateTimeOffsetValue("transmission_time", TransmissionTime);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>("webhook_event", WebhookEvent);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Event>("webhook_event", WebhookEvent);
             writer.WriteStringValue("webhook_id", WebhookId);
             writer.WriteAdditionalData(AdditionalData);
         }

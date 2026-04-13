@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// A refund for a purchase unit.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaymentCollection_refunds : global::Soenneker.PayPal.OpenApiClient.Models.Refund_1, IParsable
+    public partial class PaymentCollection_refunds : global::Soenneker.PayPal.OpenApiClient.Models.Refund, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

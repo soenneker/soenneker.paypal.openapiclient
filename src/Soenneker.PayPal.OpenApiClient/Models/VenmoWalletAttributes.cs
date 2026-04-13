@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The vault property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesVault? Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes_vault? Vault { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesVault Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes_vault Vault { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletCustomer.CreateFromDiscriminatorValue); } },
-                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesVault>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesVault.CreateFromDiscriminatorValue); } },
+                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes_vault>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes_vault.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletCustomer>("customer", Customer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesVault>("vault", Vault);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributes_vault>("vault", Vault);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money Amount { get; set; }
 #endif
         /// <summary>The type of capture.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type? CaptureType { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "capture_type", n => { CaptureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type>(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type>("capture_type", CaptureType);
             writer.WriteStringValue("note", Note);
             writer.WriteAdditionalData(AdditionalData);

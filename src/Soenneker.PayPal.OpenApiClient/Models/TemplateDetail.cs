@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The template-related details. Includes notes, terms and conditions, memo, and attachments.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TemplateDetail : global::Soenneker.PayPal.OpenApiClient.Models.Detail_1, IParsable
+    public partial class TemplateDetail : global::Soenneker.PayPal.OpenApiClient.Models.Detail, IParsable
     {
         /// <summary>The audit metadata. Captures all template actions on create and update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

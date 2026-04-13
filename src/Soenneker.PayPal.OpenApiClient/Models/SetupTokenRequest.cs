@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment method to vault with the instrument details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestPaymentSource? PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest_payment_source? PaymentSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestPaymentSource PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest_payment_source PaymentSource { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestCustomer.CreateFromDiscriminatorValue); } },
-                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestPaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestPaymentSource.CreateFromDiscriminatorValue); } },
+                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest_payment_source>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest_payment_source.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestCustomer>("customer", Customer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequestPaymentSource>("payment_source", PaymentSource);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenRequest_payment_source>("payment_source", PaymentSource);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

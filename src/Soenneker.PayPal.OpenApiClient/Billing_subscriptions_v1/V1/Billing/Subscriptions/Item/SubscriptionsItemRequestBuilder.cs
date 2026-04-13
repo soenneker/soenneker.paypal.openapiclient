@@ -72,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <summary>
         /// Shows details for a subscription, by ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Subscription_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Subscription"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingSubscriptionsV1SubscriptionsGet401">When receiving a 401 status code</exception>
@@ -81,11 +81,11 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_1?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Subscriptions.Item.SubscriptionsItemRequestBuilder.SubscriptionsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subscription?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Subscriptions.Item.SubscriptionsItemRequestBuilder.SubscriptionsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_1> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Subscriptions.Item.SubscriptionsItemRequestBuilder.SubscriptionsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Subscription> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Subscriptions.Item.SubscriptionsItemRequestBuilder.SubscriptionsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -96,7 +96,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.BillingSubscriptionsV1SubscriptionsGet404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Subscription_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Subscription>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Subscription.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a subscription which could be in &lt;code&gt;ACTIVE&lt;/code&gt; or &lt;code&gt;SUSPENDED&lt;/code&gt; status. You can override plan level default attributes by providing customised values for plan path in the patch request.&lt;br /&gt; &lt;ul&gt; &lt;li&gt;You cannot update attributes that have already completed (Example - trial cycles can’t be updated if completed).&lt;/li&gt; &lt;li&gt;Once overridden, changes to plan resource will not impact subscription.&lt;/li&gt; &lt;li&gt;Any price update will not impact billing cycles within next 10 days (Applicable only for subscriptions funded by PayPal account).&lt;/li&gt; &lt;/ul&gt; Following are the fields eligible for patch.&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Attribute or object&lt;/th&gt;&lt;th&gt;Operations&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;billing_info.outstanding_balance&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;custom_id&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.billing_cycles[@sequence==n].&lt;br/&gt;pricing_scheme.fixed_price&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.billing_cycles[@sequence==n].&lt;br/&gt;pricing_scheme.tiers&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.billing_cycles[@sequence==n].&lt;br/&gt;total_cycles&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.payment_preferences.&lt;br/&gt;auto_bill_outstanding&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.payment_preferences.&lt;br/&gt;payment_failure_threshold&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.taxes.inclusive&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;plan.taxes.percentage&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;shipping_amount&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;start_time&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;subscriber.shipping_address&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add,replace&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;subscriber.payment_source (for subscriptions funded&lt;br/&gt;by card payments)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;replace&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
@@ -113,11 +113,11 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch_1> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch_1> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -160,11 +160,11 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch_1> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch_1> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.PayPal.OpenApiClient.Models.Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

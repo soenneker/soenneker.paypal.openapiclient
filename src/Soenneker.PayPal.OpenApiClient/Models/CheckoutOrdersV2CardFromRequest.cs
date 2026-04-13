@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The expiry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequestExpiry? Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest_expiry? Expiry { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequestExpiry Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest_expiry Expiry { get; set; }
 #endif
         /// <summary>The last digits of the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequestExpiry>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequestExpiry.CreateFromDiscriminatorValue); } },
+                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest_expiry>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest_expiry.CreateFromDiscriminatorValue); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequestExpiry>("expiry", Expiry);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest_expiry>("expiry", Expiry);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

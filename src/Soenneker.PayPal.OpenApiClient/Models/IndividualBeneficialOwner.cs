@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The individual owner of the account.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class IndividualBeneficialOwner : global::Soenneker.PayPal.OpenApiClient.Models.Person_1, IParsable
+    public partial class IndividualBeneficialOwner : global::Soenneker.PayPal.OpenApiClient.Models.Person, IParsable
     {
         /// <summary>The percentage, as a fixed-point, signed decimal number. For example, define a 19.99% interest rate as `19.99`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

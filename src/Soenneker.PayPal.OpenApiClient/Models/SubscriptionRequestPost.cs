@@ -69,10 +69,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? ShippingAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money ShippingAmount { get; set; }
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>(global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride.CreateFromDiscriminatorValue); } },
                 { "plan_id", n => { PlanId = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
-                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
                 { "subscriber", n => { Subscriber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest.CreateFromDiscriminatorValue); } },
             };
@@ -141,7 +141,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>("plan", Plan);
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("shipping_amount", ShippingAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("shipping_amount", ShippingAmount);
             writer.WriteStringValue("start_time", StartTime);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest>("subscriber", Subscriber);
             writer.WriteAdditionalData(AdditionalData);

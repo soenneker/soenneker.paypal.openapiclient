@@ -18,26 +18,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The converted_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemConvertedAmount? ConvertedAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_converted_amount? ConvertedAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemConvertedAmount ConvertedAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_converted_amount ConvertedAmount { get; set; }
 #endif
         /// <summary>The exchange_rate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemExchangeRate? ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_exchange_rate? ExchangeRate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemExchangeRate ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_exchange_rate ExchangeRate { get; set; }
 #endif
         /// <summary>The payable_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemPayableAmount? PayableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_payable_amount? PayableAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemPayableAmount PayableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_payable_amount PayableAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "converted_amount", n => { ConvertedAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemConvertedAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemConvertedAmount.CreateFromDiscriminatorValue); } },
-                { "exchange_rate", n => { ExchangeRate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemExchangeRate>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemExchangeRate.CreateFromDiscriminatorValue); } },
-                { "payable_amount", n => { PayableAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemPayableAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemPayableAmount.CreateFromDiscriminatorValue); } },
+                { "converted_amount", n => { ConvertedAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_converted_amount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_converted_amount.CreateFromDiscriminatorValue); } },
+                { "exchange_rate", n => { ExchangeRate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_exchange_rate>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_exchange_rate.CreateFromDiscriminatorValue); } },
+                { "payable_amount", n => { PayableAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_payable_amount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_payable_amount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemConvertedAmount>("converted_amount", ConvertedAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemExchangeRate>("exchange_rate", ExchangeRate);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItemPayableAmount>("payable_amount", PayableAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_converted_amount>("converted_amount", ConvertedAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_exchange_rate>("exchange_rate", ExchangeRate);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetAmountBreakdownItem_payable_amount>("payable_amount", PayableAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

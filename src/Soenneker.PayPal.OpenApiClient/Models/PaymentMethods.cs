@@ -18,34 +18,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal? Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal? Paypal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal Paypal { get; set; }
 #endif
         /// <summary>The paypal_credit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit? PaypalCredit { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_credit? PaypalCredit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit PaypalCredit { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_credit PaypalCredit { get; set; }
 #endif
         /// <summary>The paypal_pay_later property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater? PaypalPayLater { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_pay_later? PaypalPayLater { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater PaypalPayLater { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_pay_later PaypalPayLater { get; set; }
 #endif
         /// <summary>The venmo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo? Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_venmo? Venmo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_venmo Venmo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal.CreateFromDiscriminatorValue); } },
-                { "paypal_credit", n => { PaypalCredit = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit.CreateFromDiscriminatorValue); } },
-                { "paypal_pay_later", n => { PaypalPayLater = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater.CreateFromDiscriminatorValue); } },
-                { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo.CreateFromDiscriminatorValue); } },
+                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal.CreateFromDiscriminatorValue); } },
+                { "paypal_credit", n => { PaypalCredit = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_credit>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_credit.CreateFromDiscriminatorValue); } },
+                { "paypal_pay_later", n => { PaypalPayLater = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_pay_later>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_pay_later.CreateFromDiscriminatorValue); } },
+                { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_venmo>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_venmo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit>("paypal_credit", PaypalCredit);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater>("paypal_pay_later", PaypalPayLater);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo>("venmo", Venmo);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_credit>("paypal_credit", PaypalCredit);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_paypal_pay_later>("paypal_pay_later", PaypalPayLater);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods_venmo>("venmo", Venmo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

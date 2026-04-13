@@ -58,10 +58,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1? PayoutItemFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? PayoutItemFee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency_1 PayoutItemFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency PayoutItemFee { get; set; }
 #endif
         /// <summary>The ID for the payout item. Visible when you show details for a payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,7 +129,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "payout_batch_id", n => { PayoutBatchId = n.GetStringValue(); } },
-                { "payout_item_fee", n => { PayoutItemFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Currency_1.CreateFromDiscriminatorValue); } },
+                { "payout_item_fee", n => { PayoutItemFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "payout_item_id", n => { PayoutItemId = n.GetStringValue(); } },
                 { "payout_item", n => { PayoutItemProp = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemDetail>(global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemDetail.CreateFromDiscriminatorValue); } },
                 { "sender_batch_id", n => { SenderBatchId = n.GetStringValue(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutCurrencyConversion>("currency_conversion", CurrencyConversion);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error>("errors", Errors);
             writer.WriteStringValue("payout_batch_id", PayoutBatchId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency_1>("payout_item_fee", PayoutItemFee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("payout_item_fee", PayoutItemFee);
             writer.WriteStringValue("payout_item_id", PayoutItemId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemDetail>("payout_item", PayoutItemProp);
             writer.WriteStringValue("sender_batch_id", SenderBatchId);

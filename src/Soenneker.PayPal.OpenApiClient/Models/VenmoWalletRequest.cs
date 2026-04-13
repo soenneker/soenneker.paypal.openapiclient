@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes? Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_attributes? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_attributes Attributes { get; set; }
 #endif
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestEmailAddress? EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_email_address? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestEmailAddress EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_email_address EmailAddress { get; set; }
 #endif
         /// <summary>Customizes the buyer experience during the approval process for payment with Venmo.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Partners and Marketplaces might configure &lt;code&gt;shipping_preference&lt;/code&gt; during partner account setup, which overrides the request values.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The vault_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestVaultId? VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_vault_id? VaultId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestVaultId VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_vault_id VaultId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestEmailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestEmailAddress.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_attributes>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_attributes.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_email_address.CreateFromDiscriminatorValue); } },
                 { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext.CreateFromDiscriminatorValue); } },
-                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestVaultId>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestVaultId.CreateFromDiscriminatorValue); } },
+                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_vault_id>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_vault_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes>("attributes", Attributes);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestEmailAddress>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_attributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_email_address>("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestVaultId>("vault_id", VaultId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequest_vault_id>("vault_id", VaultId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

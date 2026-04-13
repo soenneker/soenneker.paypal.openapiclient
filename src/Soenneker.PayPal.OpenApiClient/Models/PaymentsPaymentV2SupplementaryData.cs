@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The related_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds? RelatedIds { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData_related_ids? RelatedIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds RelatedIds { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData_related_ids RelatedIds { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "related_ids", n => { RelatedIds = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds.CreateFromDiscriminatorValue); } },
+                { "related_ids", n => { RelatedIds = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData_related_ids>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData_related_ids.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds>("related_ids", RelatedIds);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryData_related_ids>("related_ids", RelatedIds);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

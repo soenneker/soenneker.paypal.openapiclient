@@ -18,50 +18,50 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_country_code CountryCode { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestEmail? Email { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_email? Email { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestEmail Email { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_email Email { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_experience_context? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_experience_context ExperienceContext { get; set; }
 #endif
         /// <summary>The level_0 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestLevel0? Level0 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_level_0? Level0 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestLevel0 Level0 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_level_0 Level0 { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_name Name { get; set; }
 #endif
         /// <summary>The one_click property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestOneClick? OneClick { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_one_click? OneClick { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestOneClick OneClick { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_one_click OneClick { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest"/> and sets the default values.
@@ -88,12 +88,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestCountryCode.CreateFromDiscriminatorValue); } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestEmail>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestEmail.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestExperienceContext.CreateFromDiscriminatorValue); } },
-                { "level_0", n => { Level0 = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestLevel0>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestLevel0.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestName.CreateFromDiscriminatorValue); } },
-                { "one_click", n => { OneClick = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestOneClick>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestOneClick.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_country_code.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_email>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_email.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_experience_context.CreateFromDiscriminatorValue); } },
+                { "level_0", n => { Level0 = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_level_0>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_level_0.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_name.CreateFromDiscriminatorValue); } },
+                { "one_click", n => { OneClick = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_one_click>(global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_one_click.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -103,12 +103,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestEmail>("email", Email);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestLevel0>("level_0", Level0);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestName>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequestOneClick>("one_click", OneClick);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_email>("email", Email);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_level_0>("level_0", Level0);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikRequest_one_click>("one_click", OneClick);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

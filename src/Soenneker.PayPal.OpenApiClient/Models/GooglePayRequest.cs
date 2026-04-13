@@ -18,34 +18,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The assurance_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails? AssuranceDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_assurance_details? AssuranceDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails AssuranceDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_assurance_details AssuranceDetails { get; set; }
 #endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_card? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_card Card { get; set; }
 #endif
         /// <summary>The decrypted_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken? DecryptedToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_decrypted_token? DecryptedToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken DecryptedToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_decrypted_token DecryptedToken { get; set; }
 #endif
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestEmailAddress? EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_email_address? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestEmailAddress EmailAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_email_address EmailAddress { get; set; }
 #endif
         /// <summary>Customizes the payer experience during the approval process for the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,18 +58,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_name Name { get; set; }
 #endif
         /// <summary>The phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestPhoneNumber? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_phone_number? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestPhoneNumber PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_phone_number PhoneNumber { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest"/> and sets the default values.
@@ -96,13 +96,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assurance_details", n => { AssuranceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails.CreateFromDiscriminatorValue); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard.CreateFromDiscriminatorValue); } },
-                { "decrypted_token", n => { DecryptedToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestEmailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestEmailAddress.CreateFromDiscriminatorValue); } },
+                { "assurance_details", n => { AssuranceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_assurance_details>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_assurance_details.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_card>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_card.CreateFromDiscriminatorValue); } },
+                { "decrypted_token", n => { DecryptedToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_decrypted_token>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_decrypted_token.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_email_address.CreateFromDiscriminatorValue); } },
                 { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestName.CreateFromDiscriminatorValue); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestPhoneNumber.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_name.CreateFromDiscriminatorValue); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_phone_number>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_phone_number.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -112,13 +112,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails>("assurance_details", AssuranceDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken>("decrypted_token", DecryptedToken);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestEmailAddress>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_assurance_details>("assurance_details", AssuranceDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_card>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_decrypted_token>("decrypted_token", DecryptedToken);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_email_address>("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestName>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestPhoneNumber>("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequest_phone_number>("phone_number", PhoneNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

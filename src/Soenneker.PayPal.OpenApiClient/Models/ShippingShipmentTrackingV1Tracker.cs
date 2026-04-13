@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier for the shipment. Carrier information is required when tracking_number is provided. Some carriers have a global version as well as local subsidiaries. The subsidiaries are repeated over many countries and might also have an entry in the global list. Choose the carrier for your country. If the carrier is not available for your country, choose the global version of the carrier. If your carrier name is not in the list, set `carrier` to `OTHER` and set carrier name in `carrier_name_other`. For allowed values, see &lt;a href=&quot;/docs/tracking/reference/carriers/&quot;&gt;Carriers&lt;/a&gt;.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Carrier_1? Carrier { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Carrier? Carrier { get; set; }
         /// <summary>The name of the carrier for the shipment. Provide this value only if the carrier parameter is OTHER.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,7 +129,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Carrier_1>(); } },
+                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Carrier>(); } },
                 { "carrier_name_other", n => { CarrierNameOther = n.GetStringValue(); } },
                 { "last_updated_time", n => { LastUpdatedTime = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -154,7 +154,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Carrier_1>("carrier", Carrier);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Carrier>("carrier", Carrier);
             writer.WriteStringValue("carrier_name_other", CarrierNameOther);
             writer.WriteStringValue("last_updated_time", LastUpdatedTime);
             writer.WriteBoolValue("notify_buyer", NotifyBuyer);

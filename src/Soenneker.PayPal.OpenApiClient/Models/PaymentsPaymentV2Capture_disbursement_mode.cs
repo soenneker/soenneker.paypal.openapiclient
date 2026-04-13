@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaymentsPaymentV2Capture_disbursement_mode : global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2DisbursementMode_Wrapper_2, IParsable
+    public partial class PaymentsPaymentV2Capture_disbursement_mode : global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2DisbursementMode_Wrapper, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>

@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The discount as a percent or amount at invoice level. The invoice discount amount is subtracted from the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount_1? InvoiceDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? InvoiceDiscount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount_1 InvoiceDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount InvoiceDiscount { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "invoice_discount", n => { InvoiceDiscount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount_1>(global::Soenneker.PayPal.OpenApiClient.Models.Discount_1.CreateFromDiscriminatorValue); } },
+                { "invoice_discount", n => { InvoiceDiscount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount>(global::Soenneker.PayPal.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
                 { "item_discount", n => { ItemDiscount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount_1>("invoice_discount", InvoiceDiscount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Discount>("invoice_discount", InvoiceDiscount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("item_discount", ItemDiscount);
             writer.WriteAdditionalData(AdditionalData);
         }

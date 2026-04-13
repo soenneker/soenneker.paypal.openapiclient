@@ -58,10 +58,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1? ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? ShippingAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money_1 ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money ShippingAmount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseRequest"/> and sets the default values.
@@ -93,7 +93,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "plan_id", n => { PlanId = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail.CreateFromDiscriminatorValue); } },
-                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>(global::Soenneker.PayPal.OpenApiClient.Models.Money_1.CreateFromDiscriminatorValue); } },
+                { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail>("shipping_address", ShippingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money_1>("shipping_amount", ShippingAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("shipping_amount", ShippingAmount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

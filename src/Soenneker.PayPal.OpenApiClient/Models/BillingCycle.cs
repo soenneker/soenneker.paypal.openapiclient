@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The frequency of the billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Frequency_1? Frequency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Frequency? Frequency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Frequency_1 Frequency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Frequency Frequency { get; set; }
 #endif
         /// <summary>The pricing scheme details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Frequency_1.CreateFromDiscriminatorValue); } },
+                { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency>(global::Soenneker.PayPal.OpenApiClient.Models.Frequency.CreateFromDiscriminatorValue); } },
                 { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme.CreateFromDiscriminatorValue); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
                 { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycle_tenure_type>(); } },
@@ -76,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency_1>("frequency", Frequency);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency>("frequency", Frequency);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>("pricing_scheme", PricingScheme);
             writer.WriteIntValue("sequence", Sequence);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycle_tenure_type>("tenure_type", TenureType);

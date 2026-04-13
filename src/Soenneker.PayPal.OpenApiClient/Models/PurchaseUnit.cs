@@ -66,10 +66,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayee? Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payee? Payee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayee Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payee Payee { get; set; }
 #endif
         /// <summary>Any additional payment instructions to be consider during payment processing. This processing instruction is applicable for Capturing an order or Authorizing an Order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments? Payments { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payments? Payments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments Payments { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payments Payments { get; set; }
 #endif
         /// <summary>The API caller-provided external ID for the purchase unit. Required for multiple purchase units when you must update the order through `PATCH`. If you omit this value and the order contains only one purchase unit, PayPal sets this value to `default`. &lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; If there are multiple purchase units, &lt;code&gt;reference_id&lt;/code&gt; is required for each purchase unit.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,10 +98,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The shipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitShipping? Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_shipping? Shipping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitShipping Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_shipping Shipping { get; set; }
 #endif
         /// <summary>The payment descriptor on account transactions on the customer&apos;s credit card statement, that PayPal sends to processors. The maximum length of the soft descriptor information that you can pass in the API field is 22 characters, in the following format:&lt;code&gt;22 - len(PAYPAL * (8)) - len(&lt;var&gt;Descriptor in Payment Receiving Preferences of Merchant account&lt;/var&gt; + 1)&lt;/code&gt;The PAYPAL prefix uses 8 characters.&lt;br/&gt;&lt;br/&gt;The soft descriptor supports the following ASCII characters:&lt;ul&gt;&lt;li&gt;Alphanumeric characters&lt;/li&gt;&lt;li&gt;Dashes&lt;/li&gt;&lt;li&gt;Asterisks&lt;/li&gt;&lt;li&gt;Periods (.)&lt;/li&gt;&lt;li&gt;Spaces&lt;/li&gt;&lt;/ul&gt;For Wallet payments marketplace integrations:&lt;ul&gt;&lt;li&gt;The merchant descriptor in the Payment Receiving Preferences must be the marketplace name.&lt;/li&gt;&lt;li&gt;You can&apos;t use the remaining space to show the customer service number.&lt;/li&gt;&lt;li&gt;The remaining spaces can be a combination of seller name and country.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;For unbranded payments (Direct Card) marketplace integrations, use a combination of the seller name and phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,10 +114,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The supplementary_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitSupplementaryData? SupplementaryData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_supplementary_data? SupplementaryData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitSupplementaryData SupplementaryData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_supplementary_data SupplementaryData { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit"/> and sets the default values.
@@ -150,13 +150,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_items>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayee>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayee.CreateFromDiscriminatorValue); } },
+                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payee>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payee.CreateFromDiscriminatorValue); } },
                 { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction.CreateFromDiscriminatorValue); } },
-                { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments.CreateFromDiscriminatorValue); } },
+                { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payments>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payments.CreateFromDiscriminatorValue); } },
                 { "reference_id", n => { ReferenceId = n.GetStringValue(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitShipping>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_shipping>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_shipping.CreateFromDiscriminatorValue); } },
                 { "soft_descriptor", n => { SoftDescriptor = n.GetStringValue(); } },
-                { "supplementary_data", n => { SupplementaryData = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitSupplementaryData>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitSupplementaryData.CreateFromDiscriminatorValue); } },
+                { "supplementary_data", n => { SupplementaryData = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_supplementary_data>(global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_supplementary_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -172,13 +172,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice_id", InvoiceId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_items>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayee>("payee", Payee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payee>("payee", Payee);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction>("payment_instruction", PaymentInstruction);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments>("payments", Payments);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_payments>("payments", Payments);
             writer.WriteStringValue("reference_id", ReferenceId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_shipping>("shipping", Shipping);
             writer.WriteStringValue("soft_descriptor", SoftDescriptor);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitSupplementaryData>("supplementary_data", SupplementaryData);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnit_supplementary_data>("supplementary_data", SupplementaryData);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

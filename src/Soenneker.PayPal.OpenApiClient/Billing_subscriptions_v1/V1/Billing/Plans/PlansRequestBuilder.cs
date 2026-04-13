@@ -80,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
         /// <summary>
         /// Creates a plan that defines pricing and billing cycle details for subscriptions.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Plan_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Plan"/></returns>
         /// <param name="body">The create plan request details.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,11 +91,11 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Plan?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Plan> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -108,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.BillingSubscriptionsV1PlansCreate422.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Plan_1>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Plan_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Plan>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Plan.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists billing plans.

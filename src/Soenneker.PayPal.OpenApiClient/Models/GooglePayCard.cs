@@ -18,26 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The billing_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBillingAddress? BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_billing_address? BillingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBillingAddress BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_billing_address BillingAddress { get; set; }
 #endif
-        /// <summary>The brand property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBrand? Brand { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBrand Brand { get; set; }
-#endif
+        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand? Brand { get; set; }
         /// <summary>The expiry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardExpiry? Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_expiry? Expiry { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardExpiry Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_expiry Expiry { get; set; }
 #endif
         /// <summary>The last digits of the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,14 +57,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Number { get; set; }
 #endif
-        /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardType Type { get; set; }
-#endif
+        /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard"/> and sets the default values.
         /// </summary>
@@ -96,13 +84,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBillingAddress.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBrand>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBrand.CreateFromDiscriminatorValue); } },
-                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardExpiry>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardExpiry.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_billing_address>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_billing_address.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>(); } },
+                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_expiry>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_expiry.CreateFromDiscriminatorValue); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardType>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>(); } },
             };
         }
         /// <summary>
@@ -112,12 +100,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBillingAddress>("billing_address", BillingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardBrand>("brand", Brand);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardExpiry>("expiry", Expiry);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_billing_address>("billing_address", BillingAddress);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>("brand", Brand);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCard_expiry>("expiry", Expiry);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("number", Number);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

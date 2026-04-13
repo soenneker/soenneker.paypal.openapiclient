@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The upc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerItemUpc? Upc { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerItem_upc? Upc { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerItemUpc Upc { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerItem_upc Upc { get; set; }
 #endif
         /// <summary>The URL to the item being purchased. Visible to buyer and used in buyer experiences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "sku", n => { Sku = n.GetStringValue(); } },
-                { "upc", n => { Upc = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerItemUpc>(global::Soenneker.PayPal.OpenApiClient.Models.TrackerItemUpc.CreateFromDiscriminatorValue); } },
+                { "upc", n => { Upc = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerItem_upc>(global::Soenneker.PayPal.OpenApiClient.Models.TrackerItem_upc.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -107,7 +107,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteStringValue("sku", Sku);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerItemUpc>("upc", Upc);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerItem_upc>("upc", Upc);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

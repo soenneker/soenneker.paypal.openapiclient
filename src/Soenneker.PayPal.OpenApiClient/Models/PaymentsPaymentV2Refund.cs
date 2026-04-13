@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The create_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsCreateTime? CreateTime { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_create_time? CreateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsCreateTime CreateTime { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_create_time CreateTime { get; set; }
 #endif
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,18 +100,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundStatusStatusDetails? StatusDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status_details? StatusDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundStatusStatusDetails StatusDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status_details StatusDetails { get; set; }
 #endif
         /// <summary>The update_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsUpdateTime? UpdateTime { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_update_time? UpdateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsUpdateTime UpdateTime { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_update_time UpdateTime { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund"/> and sets the default values.
@@ -140,7 +140,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "acquirer_reference_number", n => { AcquirerReferenceNumber = n.GetStringValue(); } },
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_amount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_amount.CreateFromDiscriminatorValue); } },
-                { "create_time", n => { CreateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsCreateTime>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsCreateTime.CreateFromDiscriminatorValue); } },
+                { "create_time", n => { CreateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_create_time>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_create_time.CreateFromDiscriminatorValue); } },
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
@@ -149,8 +149,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer.CreateFromDiscriminatorValue); } },
                 { "seller_payable_breakdown", n => { SellerPayableBreakdown = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_seller_payable_breakdown>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_seller_payable_breakdown.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status>(); } },
-                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundStatusStatusDetails>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundStatusStatusDetails.CreateFromDiscriminatorValue); } },
-                { "update_time", n => { UpdateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsUpdateTime>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsUpdateTime.CreateFromDiscriminatorValue); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status_details>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status_details.CreateFromDiscriminatorValue); } },
+                { "update_time", n => { UpdateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_update_time>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_update_time.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -162,11 +162,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("acquirer_reference_number", AcquirerReferenceNumber);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_amount>("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsCreateTime>("create_time", CreateTime);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_create_time>("create_time", CreateTime);
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer>("payer", Payer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundStatusStatusDetails>("status_details", StatusDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ActivityTimestampsUpdateTime>("update_time", UpdateTime);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_status_details>("status_details", StatusDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_update_time>("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

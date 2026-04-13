@@ -34,18 +34,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The shipping_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_address? ShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_address ShippingAddress { get; set; }
 #endif
         /// <summary>The shipping_option property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption? ShippingOption { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option? ShippingOption { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption ShippingOption { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option ShippingOption { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest"/> and sets the default values.
@@ -74,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "purchase_units", n => { PurchaseUnits = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_purchase_units>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_purchase_units.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress.CreateFromDiscriminatorValue); } },
-                { "shipping_option", n => { ShippingOption = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_address>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_address.CreateFromDiscriminatorValue); } },
+                { "shipping_option", n => { ShippingOption = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -86,8 +86,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_purchase_units>("purchase_units", PurchaseUnits);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress>("shipping_address", ShippingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption>("shipping_option", ShippingOption);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_address>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option>("shipping_option", ShippingOption);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

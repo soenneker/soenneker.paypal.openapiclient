@@ -11,15 +11,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The customer&apos;s referral data that partners share with PayPal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ReferralData : global::Soenneker.PayPal.OpenApiClient.Models.Account_1, IParsable
+    public partial class ReferralData : global::Soenneker.PayPal.OpenApiClient.Models.Account, IParsable
     {
         /// <summary>An array of capabilities which the partner wants to enable for the selected products. Supported only when products are specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities_1?>? Capabilities { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?>? Capabilities { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities_1?> Capabilities { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?> Capabilities { get; set; }
 #endif
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,10 +56,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of operations to perform for the customer while they share their data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation_1>? Operations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation>? Operations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation_1> Operations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation> Operations { get; set; }
 #endif
         /// <summary>An array of dependent processes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,12 +127,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "capabilities", n => { Capabilities = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities_1>()?.AsList(); } },
+                { "capabilities", n => { Capabilities = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities>()?.AsList(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "financial_instruments", n => { FinancialInstruments = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments>(global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments.CreateFromDiscriminatorValue); } },
                 { "legal_consents", n => { LegalConsents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>(global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "legal_country_code", n => { LegalCountryCode = n.GetStringValue(); } },
-                { "operations", n => { Operations = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation_1>(global::Soenneker.PayPal.OpenApiClient.Models.Operation_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operations", n => { Operations = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation>(global::Soenneker.PayPal.OpenApiClient.Models.Operation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "outside_process_dependencies", n => { OutsideProcessDependencies = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals>(global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "partner_config_override", n => { PartnerConfigOverride = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride>(global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride.CreateFromDiscriminatorValue); } },
                 { "payout_attributes", n => { PayoutAttributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes.CreateFromDiscriminatorValue); } },
@@ -149,12 +149,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities_1>("capabilities", Capabilities);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities>("capabilities", Capabilities);
             writer.WriteStringValue("email", Email);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments>("financial_instruments", FinancialInstruments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>("legal_consents", LegalConsents);
             writer.WriteStringValue("legal_country_code", LegalCountryCode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation_1>("operations", Operations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation>("operations", Operations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals>("outside_process_dependencies", OutsideProcessDependencies);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride>("partner_config_override", PartnerConfigOverride);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes>("payout_attributes", PayoutAttributes);

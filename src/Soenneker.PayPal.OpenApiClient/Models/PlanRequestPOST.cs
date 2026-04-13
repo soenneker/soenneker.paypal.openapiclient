@@ -62,10 +62,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The tax details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Taxes_1? Taxes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Taxes? Taxes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Taxes_1 Taxes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Taxes Taxes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST"/> and sets the default values.
@@ -100,7 +100,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "product_id", n => { ProductId = n.GetStringValue(); } },
                 { "quantity_supported", n => { QuantitySupported = n.GetBoolValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST_status>(); } },
-                { "taxes", n => { Taxes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes_1>(global::Soenneker.PayPal.OpenApiClient.Models.Taxes_1.CreateFromDiscriminatorValue); } },
+                { "taxes", n => { Taxes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes>(global::Soenneker.PayPal.OpenApiClient.Models.Taxes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -117,7 +117,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("product_id", ProductId);
             writer.WriteBoolValue("quantity_supported", QuantitySupported);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanRequestPOST_status>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes_1>("taxes", Taxes);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes>("taxes", Taxes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionAmount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption_amount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionAmount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption_amount Amount { get; set; }
 #endif
         /// <summary>A unique ID that identifies a payer-selected shipping option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,20 +41,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>If the API request sets `selected = true`, it represents the shipping option that the payee or merchant expects to be pre-selected for the payer when they first view the `shipping.options` in the PayPal Checkout experience. As part of the response if a `shipping.option` contains `selected=true`, it represents the shipping option that the payer selected during the course of checkout with PayPal. Only one `shipping.option` can be set to `selected=true`.</summary>
         public bool? Selected { get; set; }
-        /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionType Type { get; set; }
-#endif
+        /// <summary>A classification for the method of purchase fulfillment.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption"/> and sets the default values.
         /// </summary>
         public CheckoutOrdersV2ShippingOption()
         {
             AdditionalData = new Dictionary<string, object>();
+            Type = global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType.SHIPPING;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -74,11 +69,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionAmount>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionAmount.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption_amount>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption_amount.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "selected", n => { Selected = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionType>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType>(); } },
             };
         }
         /// <summary>
@@ -88,11 +83,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionAmount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption_amount>("amount", Amount);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteBoolValue("selected", Selected);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOptionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

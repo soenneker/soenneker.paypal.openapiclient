@@ -20,10 +20,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of webhooks events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>? Events { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event>? Events { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event_1> Events { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Event> Events { get; set; }
 #endif
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>(global::Soenneker.PayPal.OpenApiClient.Models.Event_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event>(global::Soenneker.PayPal.OpenApiClient.Models.Event.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event_1>("events", Events);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Event>("events", Events);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

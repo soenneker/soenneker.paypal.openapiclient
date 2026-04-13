@@ -37,18 +37,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLocale? Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_locale? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLocale Locale { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_locale Locale { get; set; }
 #endif
         /// <summary>The payment_method property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_payment_method? PaymentMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_payment_method PaymentMethod { get; set; }
 #endif
         /// <summary>DEPRECATED. The URL where the customer is redirected after the customer approves the payment. The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.return_url`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,10 +64,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The stored_payment_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource? StoredPaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_stored_payment_source? StoredPaymentSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource StoredPaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_stored_payment_source StoredPaymentSource { get; set; }
 #endif
         /// <summary>DEPRECATED. Configures a &lt;strong&gt;Continue&lt;/strong&gt; or &lt;strong&gt;Pay Now&lt;/strong&gt; checkout flow.  The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.user_action`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_user_action? UserAction { get; set; }
@@ -102,11 +102,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "landing_page", n => { LandingPage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_landing_page>(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLocale>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLocale.CreateFromDiscriminatorValue); } },
-                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_locale>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_locale.CreateFromDiscriminatorValue); } },
+                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_payment_method>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_payment_method.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_shipping_preference>(); } },
-                { "stored_payment_source", n => { StoredPaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource.CreateFromDiscriminatorValue); } },
+                { "stored_payment_source", n => { StoredPaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_stored_payment_source>(global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_stored_payment_source.CreateFromDiscriminatorValue); } },
                 { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_user_action>(); } },
             };
         }
@@ -120,11 +120,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("brand_name", BrandName);
             writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_landing_page>("landing_page", LandingPage);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLocale>("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod>("payment_method", PaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_locale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_payment_method>("payment_method", PaymentMethod);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_shipping_preference>("shipping_preference", ShippingPreference);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource>("stored_payment_source", StoredPaymentSource);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_stored_payment_source>("stored_payment_source", StoredPaymentSource);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContext_user_action>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -16,10 +16,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of trackers for a transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_1>? Trackers { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker>? Trackers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_1> Trackers { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker> Trackers { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "trackers", n => { Trackers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_1>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "trackers", n => { Trackers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -50,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_1>("trackers", Trackers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker>("trackers", Trackers);
         }
     }
 }

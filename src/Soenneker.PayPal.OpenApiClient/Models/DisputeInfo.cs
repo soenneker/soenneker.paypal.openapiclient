@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1? DisputeAsset { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? DisputeAsset { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1 DisputeAsset { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency DisputeAsset { get; set; }
 #endif
         /// <summary>The channel where the customer created the dispute.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeChannel? DisputeChannel { get; private set; }
@@ -80,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string SellerResponseDueDate { get; set; }
 #endif
         /// <summary>The overall status of the dispute, constant for all the parties involved at anytime during the dispute lifecycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Status_1? Status { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Status? Status { get; private set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,7 +117,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "buyer_response_due_date", n => { BuyerResponseDueDate = n.GetStringValue(); } },
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "dispute_amount", n => { DisputeAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
-                { "dispute_asset", n => { DisputeAsset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1.CreateFromDiscriminatorValue); } },
+                { "dispute_asset", n => { DisputeAsset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
                 { "dispute_channel", n => { DisputeChannel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeChannel>(); } },
                 { "dispute_id", n => { DisputeId = n.GetStringValue(); } },
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
@@ -125,7 +125,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>(); } },
                 { "seller_response_due_date", n => { SellerResponseDueDate = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Status_1>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Status>(); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
             };
         }
@@ -139,7 +139,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("buyer_response_due_date", BuyerResponseDueDate);
             writer.WriteStringValue("create_time", CreateTime);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("dispute_amount", DisputeAmount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency_1>("dispute_asset", DisputeAsset);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("dispute_asset", DisputeAsset);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeState>("dispute_state", DisputeState);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
             writer.WriteStringValue("seller_response_due_date", SellerResponseDueDate);

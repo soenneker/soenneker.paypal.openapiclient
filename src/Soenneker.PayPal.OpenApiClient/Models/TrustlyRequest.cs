@@ -18,34 +18,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestCountryCode? CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_country_code? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestCountryCode CountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_country_code CountryCode { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestEmail? Email { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_email? Email { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestEmail Email { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_email Email { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_experience_context? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_experience_context ExperienceContext { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_name Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestCountryCode.CreateFromDiscriminatorValue); } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestEmail>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestEmail.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestExperienceContext.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestName>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestName.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_country_code.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_email>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_email.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_experience_context.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_name.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestCountryCode>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestEmail>("email", Email);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestExperienceContext>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_email>("email", Email);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TrustlyRequest_name>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The bin_country_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetailsBinCountryCode? BinCountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetails_bin_country_code? BinCountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetailsBinCountryCode BinCountryCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetails_bin_country_code BinCountryCode { get; set; }
 #endif
         /// <summary>The issuer of the card instrument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bin", n => { Bin = n.GetStringValue(); } },
-                { "bin_country_code", n => { BinCountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetailsBinCountryCode>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetailsBinCountryCode.CreateFromDiscriminatorValue); } },
+                { "bin_country_code", n => { BinCountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetails_bin_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetails_bin_country_code.CreateFromDiscriminatorValue); } },
                 { "issuing_bank", n => { IssuingBank = n.GetStringValue(); } },
                 { "products", n => { Products = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -86,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bin", Bin);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetailsBinCountryCode>("bin_country_code", BinCountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BinDetails_bin_country_code>("bin_country_code", BinCountryCode);
             writer.WriteStringValue("issuing_bank", IssuingBank);
             writer.WriteCollectionOfPrimitiveValues<string>("products", Products);
             writer.WriteAdditionalData(AdditionalData);

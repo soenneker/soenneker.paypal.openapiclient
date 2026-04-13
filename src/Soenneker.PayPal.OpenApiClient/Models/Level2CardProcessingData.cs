@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The tax_total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal? TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData_tax_total? TaxTotal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData_tax_total TaxTotal { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
-                { "tax_total", n => { TaxTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal>(global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal.CreateFromDiscriminatorValue); } },
+                { "tax_total", n => { TaxTotal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData_tax_total>(global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData_tax_total.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("invoice_id", InvoiceId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal>("tax_total", TaxTotal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData_tax_total>("tax_total", TaxTotal);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,20 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The application_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext? ApplicationContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_application_context? ApplicationContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext ApplicationContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_application_context ApplicationContext { get; set; }
 #endif
         /// <summary>The intent to either capture payment immediately or authorize a payment for an order after order creation.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent? Intent { get; set; }
         /// <summary>The payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer? Payer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_payer? Payer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer Payer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_payer Payer { get; set; }
 #endif
         /// <summary>The payment source definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,9 +74,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext.CreateFromDiscriminatorValue); } },
+                { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_application_context>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_application_context.CreateFromDiscriminatorValue); } },
                 { "intent", n => { Intent = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent>(); } },
-                { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer.CreateFromDiscriminatorValue); } },
+                { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_payer>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_payer.CreateFromDiscriminatorValue); } },
                 { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource.CreateFromDiscriminatorValue); } },
                 { "purchase_units", n => { PurchaseUnits = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_purchase_units>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_purchase_units.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -88,9 +88,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext>("application_context", ApplicationContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_application_context>("application_context", ApplicationContext);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent>("intent", Intent);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer>("payer", Payer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_payer>("payer", Payer);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource>("payment_source", PaymentSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequest_purchase_units>("purchase_units", PurchaseUnits);
             writer.WriteAdditionalData(AdditionalData);
