@@ -58444,7 +58444,7 @@
         "description": "Simulates a mock webhook event."
       },
       "SwaggerLinkDescription": {
-        "type": "string"
+        "$ref": "#/components/schemas/NotificationsWebhooksV1LinkDescription"
       },
       "VerifyWebhookSignature": {
         "title": "Verify Webhook Signature",
