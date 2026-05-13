@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The batch header.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,6 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Error>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>("links", Links);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TrackerIdentifier>("tracker_identifiers", TrackerIdentifiers);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -11,8 +11,76 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// A captured payment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Capture2 : global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Capture, IParsable
+    public partial class Capture2 : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The amount property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_amount? Amount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_amount Amount { get; set; }
+#endif
+        /// <summary>The create_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_create_time? CreateTime { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_create_time CreateTime { get; set; }
+#endif
+        /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomId { get; set; }
+#nullable restore
+#else
+        public string CustomId { get; set; }
+#endif
+        /// <summary>The disbursement_mode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_disbursement_mode? DisbursementMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_disbursement_mode DisbursementMode { get; set; }
+#endif
+        /// <summary>Indicates whether you can make additional captures against the authorized payment. Set to `true` if you do not intend to capture additional payments against the authorization. Set to `false` if you intend to capture additional payments against the authorization.</summary>
+        public bool? FinalCapture { get; private set; }
+        /// <summary>The PayPal-generated ID for the captured payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; private set; }
+#nullable restore
+#else
+        public string Id { get; private set; }
+#endif
+        /// <summary>The API caller-provided external invoice number for this order. Appears in both the payer&apos;s transaction history and the emails that the payer receives.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InvoiceId { get; private set; }
+#nullable restore
+#else
+        public string InvoiceId { get; private set; }
+#endif
+        /// <summary>An array of related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_links>? Links { get; private set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_links> Links { get; private set; }
+#endif
+        /// <summary>The network_transaction_reference property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_network_transaction_reference? NetworkTransactionReference { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_network_transaction_reference NetworkTransactionReference { get; set; }
+#endif
         /// <summary>The payee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,6 +88,40 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_payee Payee { get; set; }
+#endif
+        /// <summary>The processor_response property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_processor_response? ProcessorResponse { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_processor_response ProcessorResponse { get; set; }
+#endif
+        /// <summary>The seller_protection property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_protection? SellerProtection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_protection SellerProtection { get; set; }
+#endif
+        /// <summary>The seller_receivable_breakdown property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_receivable_breakdown? SellerReceivableBreakdown { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_receivable_breakdown SellerReceivableBreakdown { get; set; }
+#endif
+        /// <summary>The status of the captured payment.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status? Status { get; private set; }
+        /// <summary>The status_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status_details? StatusDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status_details StatusDetails { get; set; }
 #endif
         /// <summary>The supplementary_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -29,12 +131,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_supplementary_data SupplementaryData { get; set; }
 #endif
+        /// <summary>The update_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_update_time? UpdateTime { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Capture2_update_time UpdateTime { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Capture2"/> and sets the default values.
+        /// </summary>
+        public Capture2()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Capture2"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Capture2 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Capture2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Capture2();
@@ -43,24 +160,49 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_amount.CreateFromDiscriminatorValue); } },
+                { "create_time", n => { CreateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_create_time>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_create_time.CreateFromDiscriminatorValue); } },
+                { "custom_id", n => { CustomId = n.GetStringValue(); } },
+                { "disbursement_mode", n => { DisbursementMode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_disbursement_mode>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_disbursement_mode.CreateFromDiscriminatorValue); } },
+                { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_links>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_links.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "network_transaction_reference", n => { NetworkTransactionReference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_network_transaction_reference>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_network_transaction_reference.CreateFromDiscriminatorValue); } },
                 { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_payee>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_payee.CreateFromDiscriminatorValue); } },
+                { "processor_response", n => { ProcessorResponse = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_processor_response>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_processor_response.CreateFromDiscriminatorValue); } },
+                { "seller_protection", n => { SellerProtection = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_protection>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_protection.CreateFromDiscriminatorValue); } },
+                { "seller_receivable_breakdown", n => { SellerReceivableBreakdown = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_receivable_breakdown>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_receivable_breakdown.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status>(); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status_details>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status_details.CreateFromDiscriminatorValue); } },
                 { "supplementary_data", n => { SupplementaryData = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_supplementary_data>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_supplementary_data.CreateFromDiscriminatorValue); } },
+                { "update_time", n => { UpdateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_update_time>(global::Soenneker.PayPal.OpenApiClient.Models.Capture2_update_time.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_amount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_create_time>("create_time", CreateTime);
+            writer.WriteStringValue("custom_id", CustomId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_disbursement_mode>("disbursement_mode", DisbursementMode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_network_transaction_reference>("network_transaction_reference", NetworkTransactionReference);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_payee>("payee", Payee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_processor_response>("processor_response", ProcessorResponse);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_protection>("seller_protection", SellerProtection);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_seller_receivable_breakdown>("seller_receivable_breakdown", SellerReceivableBreakdown);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_status_details>("status_details", StatusDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_supplementary_data>("supplementary_data", SupplementaryData);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Capture2_update_time>("update_time", UpdateTime);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

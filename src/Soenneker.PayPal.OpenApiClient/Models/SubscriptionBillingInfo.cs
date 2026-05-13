@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The trial and regular billing executions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution>? CycleExecutions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution>? CycleExecutions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution> CycleExecutions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution> CycleExecutions { get; set; }
 #endif
         /// <summary>The number of consecutive payment failures. Resets to `0` after a successful payment. If this reaches the `payment_failure_threshold` value, the subscription updates to the `SUSPENDED` state.</summary>
         public int? FailedPaymentsCount { get; private set; }
@@ -106,6 +106,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution>("cycle_executions", CycleExecutions);
             writer.WriteStringValue("final_payment_time", FinalPaymentTime);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails>("last_failed_payment", LastFailedPayment);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails>("last_payment", LastPayment);

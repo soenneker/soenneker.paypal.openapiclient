@@ -11,14 +11,52 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Buyer selected shipping option.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OrderUpdateCallbackRequest_shipping_option : global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingOption, IParsable
+    public partial class OrderUpdateCallbackRequest_shipping_option : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The amount property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option_amount? Amount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option_amount Amount { get; set; }
+#endif
+        /// <summary>A unique ID that identifies a payer-selected shipping option.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>A description that the payer sees, which helps them choose an appropriate shipping option. For example, `Free Shipping`, `USPS Priority Shipping`, `Expédition prioritaire USPS`, or `USPS yōuxiān fā huò`. Localize this description to the payer&apos;s locale.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Label { get; set; }
+#nullable restore
+#else
+        public string Label { get; set; }
+#endif
+        /// <summary>If the API request sets `selected = true`, it represents the shipping option that the payee or merchant expects to be pre-selected for the payer when they first view the `shipping.options` in the PayPal Checkout experience. As part of the response if a `shipping.option` contains `selected=true`, it represents the shipping option that the payer selected during the course of checkout with PayPal. Only one `shipping.option` can be set to `selected=true`.</summary>
+        public bool? Selected { get; set; }
+        /// <summary>A classification for the method of purchase fulfillment.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option"/> and sets the default values.
+        /// </summary>
+        public OrderUpdateCallbackRequest_shipping_option()
+        {
+            AdditionalData = new Dictionary<string, object>();
+            Type = global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType.SHIPPING;
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option();
@@ -27,20 +65,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option_amount>(global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option_amount.CreateFromDiscriminatorValue); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "label", n => { Label = n.GetStringValue(); } },
+                { "selected", n => { Selected = n.GetBoolValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequest_shipping_option_amount>("amount", Amount);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("label", Label);
+            writer.WriteBoolValue("selected", Selected);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

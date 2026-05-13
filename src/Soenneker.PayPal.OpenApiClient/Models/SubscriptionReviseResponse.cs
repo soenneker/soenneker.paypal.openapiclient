@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription> Links { get; set; }
 #endif
         /// <summary>An inline plan object to customise the subscription. You can override plan level default attributes by providing customised values for the subscription in this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,6 +106,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>("links", Links);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>("plan", Plan);
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);

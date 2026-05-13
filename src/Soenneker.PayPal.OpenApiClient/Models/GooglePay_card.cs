@@ -11,14 +11,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The Card from Google Pay Wallet used to fund the payment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GooglePay_card : global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardResponse, IParsable
+    public partial class GooglePay_card : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Results of Authentication such as 3D Secure.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse? AuthenticationResult { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse AuthenticationResult { get; set; }
+#endif
+        /// <summary>The billing_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card_billing_address? BillingAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card_billing_address BillingAddress { get; set; }
+#endif
+        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand? Brand { get; set; }
+        /// <summary>The last digits of the payment card.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastDigits { get; private set; }
+#nullable restore
+#else
+        public string LastDigits { get; private set; }
+#endif
+        /// <summary>The card holder&apos;s name as it appears on the card.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card"/> and sets the default values.
+        /// </summary>
+        public GooglePay_card()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card();
@@ -27,20 +72,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "authentication_result", n => { AuthenticationResult = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card_billing_address>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card_billing_address.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>(); } },
+                { "last_digits", n => { LastDigits = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>("authentication_result", AuthenticationResult);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card_billing_address>("billing_address", BillingAddress);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>("brand", Brand);
+            writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

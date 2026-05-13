@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup"/> and sets the default values.
@@ -76,6 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

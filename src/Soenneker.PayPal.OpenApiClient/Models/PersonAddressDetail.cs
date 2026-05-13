@@ -11,16 +11,105 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// A simple postal address with coarse-grained fields.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PersonAddressDetail : global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressPortable, IParsable
+    public partial class PersonAddressDetail : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The non-portable additional address details that are sometimes needed for compliance, risk, or other scenarios where fine-grain address information might be needed. Not portable with common third party and open source. Redundant with core fields.&lt;br/&gt;For example, `address_portable.address_line_1` is usually a combination of `address_details.street_number`, `street_name`, and `street_type`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressDetails? AddressDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressDetails AddressDetails { get; set; }
+#endif
+        /// <summary>The first line of the address. For example, number or street. For example, `173 Drury Lane`. Required for data entry and compliance and risk checks. Must contain the full address.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AddressLine1 { get; set; }
+#nullable restore
+#else
+        public string AddressLine1 { get; set; }
+#endif
+        /// <summary>The second line of the address. For example, suite or apartment number.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AddressLine2 { get; set; }
+#nullable restore
+#else
+        public string AddressLine2 { get; set; }
+#endif
+        /// <summary>The third line of the address, if needed. For example, a street complement for Brazil, direction text, such as `next to Walmart`, or a landmark in an Indian address.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AddressLine3 { get; set; }
+#nullable restore
+#else
+        public string AddressLine3 { get; set; }
+#endif
+        /// <summary>The highest level sub-division in a country, which is usually a province, state, or ISO-3166-2 subdivision. Format for postal delivery. For example, `CA` and not `California`. Value, by country, is:&lt;ul&gt;&lt;li&gt;UK. A county.&lt;/li&gt;&lt;li&gt;US. A state.&lt;/li&gt;&lt;li&gt;Canada. A province.&lt;/li&gt;&lt;li&gt;Japan. A prefecture.&lt;/li&gt;&lt;li&gt;Switzerland. A kanton.&lt;/li&gt;&lt;/ul&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdminArea1 { get; set; }
+#nullable restore
+#else
+        public string AdminArea1 { get; set; }
+#endif
+        /// <summary>A city, town, or village. Smaller than `admin_area_level_1`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdminArea2 { get; set; }
+#nullable restore
+#else
+        public string AdminArea2 { get; set; }
+#endif
+        /// <summary>A sub-locality, suburb, neighborhood, or district. Smaller than `admin_area_level_2`. Value is:&lt;ul&gt;&lt;li&gt;Brazil. Suburb, bairro, or neighborhood.&lt;/li&gt;&lt;li&gt;India. Sub-locality or district. Street name information is not always available but a sub-locality or district can be a very small area.&lt;/li&gt;&lt;/ul&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdminArea3 { get; set; }
+#nullable restore
+#else
+        public string AdminArea3 { get; set; }
+#endif
+        /// <summary>The neighborhood, ward, or district. Smaller than `admin_area_level_3` or `sub_locality`. Value is:&lt;ul&gt;&lt;li&gt;The postal sorting code for Guernsey and many French territories, such as French Guiana.&lt;/li&gt;&lt;li&gt;The fine-grained administrative levels in China.&lt;/li&gt;&lt;/ul&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdminArea4 { get; set; }
+#nullable restore
+#else
+        public string AdminArea4 { get; set; }
+#endif
+        /// <summary>The [two-character ISO 3166-1 code](/docs/api/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CountryCode { get; set; }
+#nullable restore
+#else
+        public string CountryCode { get; set; }
+#endif
+        /// <summary>The postal code, which is the zip code or equivalent. Typically required for countries with a postal code or an equivalent. See [postal code](https://en.wikipedia.org/wiki/Postal_code).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PostalCode { get; set; }
+#nullable restore
+#else
+        public string PostalCode { get; set; }
+#endif
         /// <summary>The address type under which the provided address is tagged.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail"/> and sets the default values.
+        /// </summary>
+        public PersonAddressDetail()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail();
@@ -29,10 +118,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "address_details", n => { AddressDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressDetails.CreateFromDiscriminatorValue); } },
+                { "address_line_1", n => { AddressLine1 = n.GetStringValue(); } },
+                { "address_line_2", n => { AddressLine2 = n.GetStringValue(); } },
+                { "address_line_3", n => { AddressLine3 = n.GetStringValue(); } },
+                { "admin_area_1", n => { AdminArea1 = n.GetStringValue(); } },
+                { "admin_area_2", n => { AdminArea2 = n.GetStringValue(); } },
+                { "admin_area_3", n => { AdminArea3 = n.GetStringValue(); } },
+                { "admin_area_4", n => { AdminArea4 = n.GetStringValue(); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
+                { "postal_code", n => { PostalCode = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressType>(); } },
             };
         }
@@ -40,11 +139,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2AddressDetails>("address_details", AddressDetails);
+            writer.WriteStringValue("address_line_1", AddressLine1);
+            writer.WriteStringValue("address_line_2", AddressLine2);
+            writer.WriteStringValue("address_line_3", AddressLine3);
+            writer.WriteStringValue("admin_area_1", AdminArea1);
+            writer.WriteStringValue("admin_area_2", AdminArea2);
+            writer.WriteStringValue("admin_area_3", AdminArea3);
+            writer.WriteStringValue("admin_area_4", AdminArea4);
+            writer.WriteStringValue("country_code", CountryCode);
+            writer.WriteStringValue("postal_code", PostalCode);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

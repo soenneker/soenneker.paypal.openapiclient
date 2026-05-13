@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The tracking details of an order.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OrderTrackerRequest : global::Soenneker.PayPal.OpenApiClient.Models.ShipmentTracker, IParsable
+    public partial class OrderTrackerRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PayPal capture ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,6 +22,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public string CaptureId { get; set; }
+#endif
+        /// <summary>The carrier for the shipment. Some carriers have a global version as well as local subsidiaries. The subsidiaries are repeated over many countries and might also have an entry in the global list. Choose the carrier for your country. If the carrier is not available for your country, choose the global version of the carrier. If your carrier name is not in the list, set `carrier` to `OTHER` and set carrier name in `carrier_name_other`. For allowed values, see &lt;a href=&quot;/docs/tracking/reference/carriers/&quot;&gt;Carriers&lt;/a&gt;.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier? Carrier { get; set; }
+        /// <summary>The name of the carrier for the shipment. Provide this value only if the carrier parameter is OTHER. This property supports Unicode.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CarrierNameOther { get; set; }
+#nullable restore
+#else
+        public string CarrierNameOther { get; set; }
 #endif
         /// <summary>An array of details of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,12 +43,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>If true, PayPal will send an email notification to the payer of the PayPal transaction. The email contains the tracking details provided through the Orders tracking API request. Independent of any value passed for `notify_payer`, the payer may receive tracking notifications within the PayPal app, based on the user&apos;s notification preferences.</summary>
         public bool? NotifyPayer { get; set; }
+        /// <summary>The tracking number for the shipment. This property supports Unicode.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TrackingNumber { get; set; }
+#nullable restore
+#else
+        public string TrackingNumber { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest"/> and sets the default values.
+        /// </summary>
+        public OrderTrackerRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest();
@@ -45,26 +72,32 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_id", n => { CaptureId = n.GetStringValue(); } },
+                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>(); } },
+                { "carrier_name_other", n => { CarrierNameOther = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items>(global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notify_payer", n => { NotifyPayer = n.GetBoolValue(); } },
+                { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("capture_id", CaptureId);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>("carrier", Carrier);
+            writer.WriteStringValue("carrier_name_other", CarrierNameOther);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items>("items", Items);
             writer.WriteBoolValue("notify_payer", NotifyPayer);
+            writer.WriteStringValue("tracking_number", TrackingNumber);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

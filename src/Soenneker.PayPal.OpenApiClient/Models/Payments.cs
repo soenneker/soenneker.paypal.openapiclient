@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of payment details for the invoice. The payment details of the invoice like payment type, method, date, discount and transaction type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentDetail>? Transactions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentDetail>? Transactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentDetail> Transactions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentDetail> Transactions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payments"/> and sets the default values.
@@ -68,6 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("paid_amount", PaidAmount);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentDetail>("transactions", Transactions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

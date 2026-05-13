@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// Previous network transaction reference including id and network.
+    /// Previous network transaction reference including id in response.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NetworkTransactionReferenceResponse : IAdditionalDataHolder, IParsable

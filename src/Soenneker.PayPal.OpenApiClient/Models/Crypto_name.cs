@@ -11,14 +11,55 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The name of the account holder associated with Crypto wallet.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Crypto_name : global::Soenneker.PayPal.OpenApiClient.Models.CryptoAccountHolderName, IParsable
+    public partial class Crypto_name : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>When the account holder is a person, the account holder&apos;s given, or first, name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GivenName { get; set; }
+#nullable restore
+#else
+        public string GivenName { get; set; }
+#endif
+        /// <summary>When the account holder is a person, the account holder&apos;s middle name. Use also to store multiple middle names including the patronymic, or father&apos;s, middle name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MiddleName { get; set; }
+#nullable restore
+#else
+        public string MiddleName { get; set; }
+#endif
+        /// <summary>The prefix, or title, to the account holder&apos;s name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Prefix { get; set; }
+#nullable restore
+#else
+        public string Prefix { get; set; }
+#endif
+        /// <summary>When the account holder is a person, the account holder&apos;s surname or family name. Also known as the last name. Required when the account holder is a person. Use also to store multiple surnames including the matronymic, or mother&apos;s, surname.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Surname { get; set; }
+#nullable restore
+#else
+        public string Surname { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name"/> and sets the default values.
+        /// </summary>
+        public Crypto_name()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name();
@@ -27,20 +68,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "given_name", n => { GivenName = n.GetStringValue(); } },
+                { "middle_name", n => { MiddleName = n.GetStringValue(); } },
+                { "prefix", n => { Prefix = n.GetStringValue(); } },
+                { "surname", n => { Surname = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("given_name", GivenName);
+            writer.WriteStringValue("middle_name", MiddleName);
+            writer.WriteStringValue("prefix", Prefix);
+            writer.WriteStringValue("surname", Surname);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

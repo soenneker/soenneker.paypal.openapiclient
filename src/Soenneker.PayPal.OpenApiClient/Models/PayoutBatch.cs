@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The total number of items in the full result list.</summary>
         public int? TotalItems { get; set; }
@@ -84,6 +84,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutBatchHeader>("batch_header", BatchHeader);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PayoutBatchItems>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>("links", Links);
             writer.WriteIntValue("total_items", TotalItems);
             writer.WriteIntValue("total_pages", TotalPages);
             writer.WriteAdditionalData(AdditionalData);

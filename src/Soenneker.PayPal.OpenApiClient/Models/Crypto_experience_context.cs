@@ -11,14 +11,58 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Customizes the payer experience during the approval process for the payment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Crypto_experience_context : global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBase, IParsable
+    public partial class Crypto_experience_context : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The label that overrides the business name in the PayPal account on the PayPal site. The pattern is defined by an external party and supports Unicode.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BrandName { get; set; }
+#nullable restore
+#else
+        public string BrandName { get; set; }
+#endif
+        /// <summary>The cancel_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_cancel_url? CancelUrl { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_cancel_url CancelUrl { get; set; }
+#endif
+        /// <summary>The locale property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_locale? Locale { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_locale Locale { get; set; }
+#endif
+        /// <summary>The return_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_return_url? ReturnUrl { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_return_url ReturnUrl { get; set; }
+#endif
+        /// <summary>The location from which the shipping address is derived.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_shipping_preference? ShippingPreference { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context"/> and sets the default values.
+        /// </summary>
+        public Crypto_experience_context()
+        {
+            AdditionalData = new Dictionary<string, object>();
+            ShippingPreference = global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_shipping_preference.GET_FROM_FILE;
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context();
@@ -27,20 +71,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "brand_name", n => { BrandName = n.GetStringValue(); } },
+                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_cancel_url>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_cancel_url.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_locale>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_locale.CreateFromDiscriminatorValue); } },
+                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_return_url>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_return_url.CreateFromDiscriminatorValue); } },
+                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_shipping_preference>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("brand_name", BrandName);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_cancel_url>("cancel_url", CancelUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_locale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_return_url>("return_url", ReturnUrl);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context_shipping_preference>("shipping_preference", ShippingPreference);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

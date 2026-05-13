@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The URL that is configured to listen on `localhost` for incoming `POST` notification messages that contain event information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,6 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType>("event_types", EventTypes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

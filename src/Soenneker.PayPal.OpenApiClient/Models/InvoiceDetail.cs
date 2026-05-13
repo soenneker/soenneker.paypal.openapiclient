@@ -11,8 +11,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The details of the invoice. Includes invoice number, date, payment terms, and audit metadata.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class InvoiceDetail : global::Soenneker.PayPal.OpenApiClient.Models.Detail, IParsable
+    public partial class InvoiceDetail : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>An array of PayPal IDs for the files that are attached to an invoice.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2FileReference>? Attachments { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2FileReference> Attachments { get; set; }
+#endif
+        /// <summary>The [three-character ISO-4217 currency code](/api/rest/reference/currency-codes/) that identifies the currency.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyCode { get; set; }
+#nullable restore
+#else
+        public string CurrencyCode { get; set; }
+#endif
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +47,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string InvoiceNumber { get; set; }
 #endif
+        /// <summary>A private bookkeeping memo for the user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Memo { get; set; }
+#nullable restore
+#else
+        public string Memo { get; set; }
+#endif
         /// <summary>The audit metadata. Captures all invoicing actions on create, send, update, and cancel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,6 +62,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.Metadata Metadata { get; set; }
+#endif
+        /// <summary>A note to the invoice recipient. Also appears on the invoice notification email.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Note { get; set; }
+#nullable restore
+#else
+        public string Note { get; set; }
 #endif
         /// <summary>The payment term of the invoice. Payment can be due upon receipt, a specified date, or in a set number of days.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,12 +79,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm PaymentTerm { get; set; }
 #endif
+        /// <summary>The reference data. Includes a Purchase Order (PO) number.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference { get; set; }
+#nullable restore
+#else
+        public string Reference { get; set; }
+#endif
+        /// <summary>The general terms of the invoice. Can include return or cancellation policy and other terms and conditions.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TermsAndConditions { get; set; }
+#nullable restore
+#else
+        public string TermsAndConditions { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoiceDetail"/> and sets the default values.
+        /// </summary>
+        public InvoiceDetail()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoiceDetail"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.InvoiceDetail CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.InvoiceDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.InvoiceDetail();
@@ -59,28 +116,40 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2FileReference>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2FileReference.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "invoice_date", n => { InvoiceDate = n.GetStringValue(); } },
                 { "invoice_number", n => { InvoiceNumber = n.GetStringValue(); } },
+                { "memo", n => { Memo = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata>(global::Soenneker.PayPal.OpenApiClient.Models.Metadata.CreateFromDiscriminatorValue); } },
+                { "note", n => { Note = n.GetStringValue(); } },
                 { "payment_term", n => { PaymentTerm = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm.CreateFromDiscriminatorValue); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
+                { "terms_and_conditions", n => { TermsAndConditions = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2FileReference>("attachments", Attachments);
+            writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteStringValue("invoice_date", InvoiceDate);
             writer.WriteStringValue("invoice_number", InvoiceNumber);
+            writer.WriteStringValue("memo", Memo);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Metadata>("metadata", Metadata);
+            writer.WriteStringValue("note", Note);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm>("payment_term", PaymentTerm);
+            writer.WriteStringValue("reference", Reference);
+            writer.WriteStringValue("terms_and_conditions", TermsAndConditions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

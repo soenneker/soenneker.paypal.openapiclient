@@ -20,10 +20,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of metadata for the documents which were uploaded as supporting information for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? Documents { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? Documents { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get; set; }
 #endif
         /// <summary>Any supporting notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>("documents", Documents);
             writer.WriteStringValue("provided_time", ProvidedTime);
             writer.WriteAdditionalData(AdditionalData);
         }

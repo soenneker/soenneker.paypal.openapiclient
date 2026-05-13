@@ -18,18 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The list of invoices that match the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Invoice>? Items { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Invoice>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Invoice> Items { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Invoice> Items { get; set; }
 #endif
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; set; }
 #endif
         /// <summary>The total number of invoices that match the search criteria.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Clients MUST NOT assume that the value of &lt;code&gt;total_items&lt;/code&gt; is constant. The value MAY change from one request to the next.&lt;/blockquote&gt;</summary>
         public int? TotalItems { get; private set; }
@@ -73,6 +73,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Invoice>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

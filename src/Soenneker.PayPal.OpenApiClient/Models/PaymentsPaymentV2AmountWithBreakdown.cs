@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The total order amount with an optional breakdown that provides details, such as the total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.&lt;br/&gt;If you specify `amount.breakdown`, the amount equals `item_total` plus `tax_total` plus `shipping` plus `handling` plus `insurance` minus `shipping_discount` minus discount.&lt;br/&gt;The amount must be a positive number. For listed of supported currencies and decimal precision, see the PayPal REST APIs &lt;a href=&quot;/docs/integration/direct/rest/currency-codes/&quot;&gt;Currency Codes&lt;/a&gt;.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaymentsPaymentV2AmountWithBreakdown : global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Money, IParsable
+    public partial class PaymentsPaymentV2AmountWithBreakdown : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breakdown of the amount. Breakdown provides details such as total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,12 +23,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown Breakdown { get; set; }
 #endif
+        /// <summary>The [three-character ISO-4217 currency code](/api/rest/reference/currency-codes/) that identifies the currency.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyCode { get; set; }
+#nullable restore
+#else
+        public string CurrencyCode { get; set; }
+#endif
+        /// <summary>The value, which might be:&lt;ul&gt;&lt;li&gt;An integer for currencies like `JPY` that are not typically fractional.&lt;/li&gt;&lt;li&gt;A decimal fraction for currencies like `TND` that are subdivided into thousandths.&lt;/li&gt;&lt;/ul&gt;For the required number of decimal places for a currency code, see [Currency Codes](/api/rest/reference/currency-codes/).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Value { get; set; }
+#nullable restore
+#else
+        public string Value { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown"/> and sets the default values.
+        /// </summary>
+        public PaymentsPaymentV2AmountWithBreakdown()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown();
@@ -35,22 +60,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "breakdown", n => { Breakdown = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown.CreateFromDiscriminatorValue); } },
+                { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
+                { "value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown>("breakdown", Breakdown);
+            writer.WriteStringValue("currency_code", CurrencyCode);
+            writer.WriteStringValue("value", Value);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

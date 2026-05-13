@@ -11,8 +11,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The invoice configuration details. Includes partial payment, tip, and tax calculated after discount.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Configuration : global::Soenneker.PayPal.OpenApiClient.Models.TemplateConfiguration, IParsable
+    public partial class Configuration : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Indicates whether the invoice enables the customer to enter a tip amount during payment. If `true`, the invoice shows a tip amount field so that the customer can enter a tip amount. If `false`, the invoice does not show a tip amount field.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature is not available for users in `Hong Kong`, `Taiwan`, `India`, or `Japan`.&lt;/blockquote&gt;</summary>
+        public bool? AllowTip { get; set; }
+        /// <summary>Indicates whether conditional pricing rules are applied to the invoice. If `true`, pricing rules (such as discounts or surcharges based on specific conditions) are applied. If `false`, no conditional pricing rules are applied.</summary>
+        public bool? HasConditionalRule { get; set; }
+        /// <summary>The partial payment details. Includes the minimum amount that the invoicer expects from the payer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment? PartialPayment { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment PartialPayment { get; set; }
+#endif
+        /// <summary>Indicates whether the tax is calculated before or after a discount. If `false`, the tax is calculated before a discount. If `true`, the tax is calculated after a discount.</summary>
+        public bool? TaxCalculatedAfterDiscount { get; set; }
+        /// <summary>Indicates whether the unit price includes tax.</summary>
+        public bool? TaxInclusive { get; set; }
         /// <summary>The template ID. The template determines the layout of the invoice. Includes which fields to show and hide.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is an optional field. If you wish to customize the invoice layout using a specific template, provide a valid template ID here. You can either use an existing template ID or create a new template via the create template API and then use the newly created template&apos;s ID.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,8 +42,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Configuration"/> and sets the default values.
         /// </summary>
-        public Configuration() : base()
+        public Configuration()
         {
+            AdditionalData = new Dictionary<string, object>();
             TemplateId = "PayPal system template";
         }
         /// <summary>
@@ -33,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Configuration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Configuration();
@@ -42,10 +61,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "allow_tip", n => { AllowTip = n.GetBoolValue(); } },
+                { "has_conditional_rule", n => { HasConditionalRule = n.GetBoolValue(); } },
+                { "partial_payment", n => { PartialPayment = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment>(global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment.CreateFromDiscriminatorValue); } },
+                { "tax_calculated_after_discount", n => { TaxCalculatedAfterDiscount = n.GetBoolValue(); } },
+                { "tax_inclusive", n => { TaxInclusive = n.GetBoolValue(); } },
                 { "template_id", n => { TemplateId = n.GetStringValue(); } },
             };
         }
@@ -53,11 +77,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("allow_tip", AllowTip);
+            writer.WriteBoolValue("has_conditional_rule", HasConditionalRule);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment>("partial_payment", PartialPayment);
+            writer.WriteBoolValue("tax_calculated_after_discount", TaxCalculatedAfterDiscount);
+            writer.WriteBoolValue("tax_inclusive", TaxInclusive);
             writer.WriteStringValue("template_id", TemplateId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

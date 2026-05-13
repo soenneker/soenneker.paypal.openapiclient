@@ -11,14 +11,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Merchant provided Order Update callback configuration for PayPal Wallet.PayPal will call back merchant when the specified event occurs.we recommend merchants to pass both the shipping_options and shipping_address callback events. Not supported when `shipping.type` is specified or when &apos;application_context.shipping_preference&apos; is set as &apos;NO_SHIPPING&apos; or &apos;SET_PROVIDED_ADDRESS&apos;.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaypalWalletExperienceContext_order_update_callback_config : global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfiguration, IParsable
+    public partial class PaypalWalletExperienceContext_order_update_callback_config : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>An array of callback events merchant can subscribe to for the corresponding callback url.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config_callback_events?>? CallbackEvents { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config_callback_events?> CallbackEvents { get; set; }
+#endif
+        /// <summary>Merchant provided CallBack url.PayPal/Venmo will use this url to call the merchant back when the events occur .PayPal/Venmo expects a secured url usually in the https format.merchant can append the cart id or other params part of the url as query or path params.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CallbackUrl { get; set; }
+#nullable restore
+#else
+        public string CallbackUrl { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config"/> and sets the default values.
+        /// </summary>
+        public PaypalWalletExperienceContext_order_update_callback_config()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config();
@@ -27,20 +52,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "callback_events", n => { CallbackEvents = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config_callback_events>()?.AsList(); } },
+                { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_order_update_callback_config_callback_events>("callback_events", CallbackEvents);
+            writer.WriteStringValue("callback_url", CallbackUrl);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -7,12 +7,21 @@ using System.IO;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
-    /// <summary>
-    /// The customer who approves and pays for the order. The customer is also known as the payer.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class SubscriberRequest : global::Soenneker.PayPal.OpenApiClient.Models.PayerBase, IParsable
+    #pragma warning disable CS1591
+    public partial class SubscriberRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmailAddress { get; set; }
+#nullable restore
+#else
+        public string EmailAddress { get; set; }
+#endif
         /// <summary>The name of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,6 +29,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest_name Name { get; set; }
+#endif
+        /// <summary>The account identifier for a PayPal account.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PayerId { get; set; }
+#nullable restore
+#else
+        public string PayerId { get; set; }
 #endif
         /// <summary>The payment source definition. To be eligible to create subscription using debit or credit card, you will need to sign up here (https://www.paypal.com/bizsignup/entry/product/ppcp). Please note, its available only for non-3DS cards and for merchants in US and AU regions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,11 +63,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail ShippingAddress { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest"/> and sets the default values.
+        /// </summary>
+        public SubscriberRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest();
@@ -59,11 +83,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest_name>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest_name.CreateFromDiscriminatorValue); } },
+                { "payer_id", n => { PayerId = n.GetStringValue(); } },
                 { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSource.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType>(global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType.CreateFromDiscriminatorValue); } },
                 { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail.CreateFromDiscriminatorValue); } },
@@ -73,14 +99,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberRequest_name>("name", Name);
+            writer.WriteStringValue("payer_id", PayerId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSource>("payment_source", PaymentSource);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType>("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail>("shipping_address", ShippingAddress);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

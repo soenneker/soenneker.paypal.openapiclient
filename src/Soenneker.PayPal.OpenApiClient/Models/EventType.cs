@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>&quot;Identifier for the event type example: 1.0/2.0 etc.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResourceVersions { get; private set; }
+        public List<string>? ResourceVersions { get; set; }
 #nullable restore
 #else
-        public List<string> ResourceVersions { get; private set; }
+        public List<string> ResourceVersions { get; set; }
 #endif
         /// <summary>The status of a webhook event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,6 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfPrimitiveValues<string>("resource_versions", ResourceVersions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The payment term of the invoice. Payment can be due upon receipt, a specified date, or in a set number of days.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class InvoicePaymentTerm : global::Soenneker.PayPal.OpenApiClient.Models.PaymentTerm, IParsable
+    public partial class InvoicePaymentTerm : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,12 +23,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string DueDate { get; set; }
 #endif
+        /// <summary>The payment term. Payment can be due upon receipt, a specified date, or in a set number of days.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType? TermType { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm"/> and sets the default values.
+        /// </summary>
+        public InvoicePaymentTerm()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.InvoicePaymentTerm();
@@ -35,22 +46,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "due_date", n => { DueDate = n.GetStringValue(); } },
+                { "term_type", n => { TermType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("due_date", DueDate);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType>("term_type", TermType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

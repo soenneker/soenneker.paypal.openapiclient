@@ -9,15 +9,136 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Level3CardProcessingData_line_items : global::Soenneker.PayPal.OpenApiClient.Models.LineItem, IParsable
+    public partial class Level3CardProcessingData_line_items : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Metadata for merchant-managed recurring billing plans. Valid only during the saved payment method token or billing agreement creation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan? BillingPlan { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan BillingPlan { get; set; }
+#endif
+        /// <summary>Code used to classify items purchased and track the total amount spent across various categories of products and services. Different corporate purchasing organizations may use different standards, but the United Nations Standard Products and Services Code (UNSPSC) is frequently used.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CommodityCode { get; set; }
+#nullable restore
+#else
+        public string CommodityCode { get; set; }
+#endif
+        /// <summary>The detailed item description.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The discount_amount property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_discount_amount? DiscountAmount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_discount_amount DiscountAmount { get; set; }
+#endif
+        /// <summary>The URL of the item&apos;s image. File type and size restrictions apply. An image that violates these restrictions will not be honored.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImageUrl { get; set; }
+#nullable restore
+#else
+        public string ImageUrl { get; set; }
+#endif
+        /// <summary>The item name or title.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The item quantity. Must be a whole number.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Quantity { get; set; }
+#nullable restore
+#else
+        public string Quantity { get; set; }
+#endif
+        /// <summary>The stock keeping unit (SKU) for the item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Sku { get; set; }
+#nullable restore
+#else
+        public string Sku { get; set; }
+#endif
+        /// <summary>The tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_tax? Tax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_tax Tax { get; set; }
+#endif
+        /// <summary>The total_amount property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_total_amount? TotalAmount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_total_amount TotalAmount { get; set; }
+#endif
+        /// <summary>The unit_amount property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_unit_amount? UnitAmount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_unit_amount UnitAmount { get; set; }
+#endif
+        /// <summary>&quot;Unit of measure is a standard used to express the magnitude of a quantity in international trade. Most commonly used (but not limited to) examples are: Acre (ACR), Ampere (AMP), Centigram (CGM), Centimetre (CMT), Cubic inch (INQ), Cubic metre (MTQ), Fluid ounce (OZA), Foot (FOT), Hour (HUR), Item (ITM), Kilogram (KGM), Kilometre (KMT), Kilowatt (KWT), Liquid gallon (GLL), Liter (LTR), Pounds (LBS), Square foot (FTK).&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UnitOfMeasure { get; set; }
+#nullable restore
+#else
+        public string UnitOfMeasure { get; set; }
+#endif
+        /// <summary>The upc property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_upc? Upc { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_upc Upc { get; set; }
+#endif
+        /// <summary>The URL to the item being purchased. Visible to buyer and used in buyer experiences.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items"/> and sets the default values.
+        /// </summary>
+        public Level3CardProcessingData_line_items()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items();
@@ -26,20 +147,48 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_plan", n => { BillingPlan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan>(global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan.CreateFromDiscriminatorValue); } },
+                { "commodity_code", n => { CommodityCode = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_discount_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_discount_amount.CreateFromDiscriminatorValue); } },
+                { "image_url", n => { ImageUrl = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "quantity", n => { Quantity = n.GetStringValue(); } },
+                { "sku", n => { Sku = n.GetStringValue(); } },
+                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_tax>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_tax.CreateFromDiscriminatorValue); } },
+                { "total_amount", n => { TotalAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_total_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_total_amount.CreateFromDiscriminatorValue); } },
+                { "unit_amount", n => { UnitAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_unit_amount>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_unit_amount.CreateFromDiscriminatorValue); } },
+                { "unit_of_measure", n => { UnitOfMeasure = n.GetStringValue(); } },
+                { "upc", n => { Upc = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_upc>(global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_upc.CreateFromDiscriminatorValue); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan>("billing_plan", BillingPlan);
+            writer.WriteStringValue("commodity_code", CommodityCode);
+            writer.WriteStringValue("description", Description);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_discount_amount>("discount_amount", DiscountAmount);
+            writer.WriteStringValue("image_url", ImageUrl);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("quantity", Quantity);
+            writer.WriteStringValue("sku", Sku);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_tax>("tax", Tax);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_total_amount>("total_amount", TotalAmount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_unit_amount>("unit_amount", UnitAmount);
+            writer.WriteStringValue("unit_of_measure", UnitOfMeasure);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData_line_items_upc>("upc", Upc);
+            writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

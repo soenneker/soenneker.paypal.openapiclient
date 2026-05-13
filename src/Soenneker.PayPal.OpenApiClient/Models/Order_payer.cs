@@ -11,14 +11,79 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// DEPRECATED. The customer is also known as the payer. The Payer object was intended to only be used with the `payment_source.paypal` object. In order to make this design more clear, the details in the `payer` object are now available under `payment_source.paypal`. Please use `payment_source.paypal`. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;th&gt;Since Version&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;payment_source.paypal&lt;/td&gt;&lt;td&gt;2.9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Order_payer : global::Soenneker.PayPal.OpenApiClient.Models.Payer, IParsable
+    public partial class Order_payer : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_address? Address { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_address Address { get; set; }
+#endif
+        /// <summary>The birth_date property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_birth_date? BirthDate { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_birth_date BirthDate { get; set; }
+#endif
+        /// <summary>The email_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_email_address? EmailAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_email_address EmailAddress { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_name? Name { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_name Name { get; set; }
+#endif
+        /// <summary>The payer_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_payer_id? PayerId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_payer_id PayerId { get; set; }
+#endif
+        /// <summary>The phone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_phone? Phone { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_phone Phone { get; set; }
+#endif
+        /// <summary>The tax_info property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_tax_info? TaxInfo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_tax_info TaxInfo { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Order_payer"/> and sets the default values.
+        /// </summary>
+        public Order_payer()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Order_payer"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Order_payer CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Order_payer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Order_payer();
@@ -27,20 +92,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_address>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_address.CreateFromDiscriminatorValue); } },
+                { "birth_date", n => { BirthDate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_birth_date>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_birth_date.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_email_address.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_name>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_name.CreateFromDiscriminatorValue); } },
+                { "payer_id", n => { PayerId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_payer_id>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_payer_id.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_phone>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_phone.CreateFromDiscriminatorValue); } },
+                { "tax_info", n => { TaxInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_tax_info>(global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_tax_info.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_birth_date>("birth_date", BirthDate);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_email_address>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_payer_id>("payer_id", PayerId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_phone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Order_payer_tax_info>("tax_info", TaxInfo);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

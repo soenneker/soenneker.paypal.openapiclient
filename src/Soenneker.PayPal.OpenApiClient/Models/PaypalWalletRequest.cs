@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// A resource representing a request to vault PayPal Wallet.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaypalWalletRequest : global::Soenneker.PayPal.OpenApiClient.Models.WalletBase, IParsable
+    public partial class PaypalWalletRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant level Recurring Billing plan metadata for the Billing Agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,6 +22,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan BillingPlan { get; set; }
+#endif
+        /// <summary>The customer type associated with a digital wallet payment token. This is to indicate whether the customer acting on the merchant / platform is either a business or a consumer.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type? CustomerType { get; set; }
+        /// <summary>&quot;The description displayed to the consumer on the approval flow for a digital wallet, as well as on the merchant view of the payment token management experience. exp: PayPal.com.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
 #endif
         /// <summary>Customizes the Vault creation flow experience for your customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -29,12 +41,33 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext ExperienceContext { get; set; }
 #endif
+        /// <summary>Create multiple payment tokens for the same payer, merchant/platform combination. Use this when the customer has not logged in at merchant/platform. The payment token thus generated, can then also be used to create the customer account at merchant/platform. Use this also when multiple payment tokens are required for the same payer, different customer at merchant/platform. This helps to identify customers distinctly even though they may share the same PayPal account. This only applies to PayPal payment source.</summary>
+        public bool? PermitMultiplePaymentTokens { get; set; }
+        /// <summary>The shipping details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping? Shipping { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping Shipping { get; set; }
+#endif
+        /// <summary>Expected business/charge model for the billing agreement.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern? UsagePattern { get; set; }
+        /// <summary>The usage type associated with a digital wallet payment token.</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type? UsageType { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest"/> and sets the default values.
+        /// </summary>
+        public PaypalWalletRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest();
@@ -43,24 +76,36 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_plan", n => { BillingPlan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan.CreateFromDiscriminatorValue); } },
+                { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type>(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext.CreateFromDiscriminatorValue); } },
+                { "permit_multiple_payment_tokens", n => { PermitMultiplePaymentTokens = n.GetBoolValue(); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping>(global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping.CreateFromDiscriminatorValue); } },
+                { "usage_pattern", n => { UsagePattern = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern>(); } },
+                { "usage_type", n => { UsageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan>("billing_plan", BillingPlan);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type>("customer_type", CustomerType);
+            writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext>("experience_context", ExperienceContext);
+            writer.WriteBoolValue("permit_multiple_payment_tokens", PermitMultiplePaymentTokens);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping>("shipping", Shipping);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern>("usage_pattern", UsagePattern);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type>("usage_type", UsageType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

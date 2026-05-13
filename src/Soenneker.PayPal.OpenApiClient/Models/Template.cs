@@ -28,10 +28,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; set; }
 #endif
         /// <summary>The template name.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The template name must be unique.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,6 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("default_template", DefaultTemplate);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>("links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo>("template_info", TemplateInfo);

@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The PayPal-generated ID for the payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,6 +139,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("activity_id", ActivityId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutCurrencyConversion>("currency_conversion", CurrencyConversion);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Error>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription>("links", Links);
             writer.WriteStringValue("payout_batch_id", PayoutBatchId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemDetail>("payout_item", PayoutItem);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>("payout_item_fee", PayoutItemFee);

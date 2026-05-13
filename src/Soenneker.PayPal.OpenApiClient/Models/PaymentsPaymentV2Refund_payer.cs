@@ -11,14 +11,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The details associated with the merchant for this transaction.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaymentsPaymentV2Refund_payer : global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PayeeBase, IParsable
+    public partial class PaymentsPaymentV2Refund_payer : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The email_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_email_address? EmailAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_email_address EmailAddress { get; set; }
+#endif
+        /// <summary>The merchant_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_merchant_id? MerchantId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_merchant_id MerchantId { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer"/> and sets the default values.
+        /// </summary>
+        public PaymentsPaymentV2Refund_payer()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer();
@@ -27,20 +52,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_email_address.CreateFromDiscriminatorValue); } },
+                { "merchant_id", n => { MerchantId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_merchant_id>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_merchant_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_email_address>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Refund_payer_merchant_id>("merchant_id", MerchantId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The audit metadata. Captures all invoicing actions on create, send, update, and cancel.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Metadata : global::Soenneker.PayPal.OpenApiClient.Models.TemplateMetadata, IParsable
+    public partial class Metadata : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The actor who canceled the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,8 +31,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string CancelTime { get; set; }
 #endif
+        /// <summary>The email address of the account that created the resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; private set; }
+#nullable restore
+#else
+        public string CreatedBy { get; private set; }
+#endif
         /// <summary>The frequency at which the invoice is sent:&lt;ul&gt;&lt;li&gt;Multiple recipient. Sent to multiple recipients.&lt;/li&gt;&lt;li&gt;Batch. Sent in a batch.&lt;/li&gt;&lt;li&gt;Regular single. Sent one time to a single recipient.&lt;/li&gt;&lt;/ul&gt;</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow? CreatedByFlow { get; set; }
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreateTime { get; set; }
+#nullable restore
+#else
+        public string CreateTime { get; set; }
+#endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +81,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string LastSentTime { get; set; }
 #endif
+        /// <summary>The email address of the account that last edited the resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastUpdatedBy { get; private set; }
+#nullable restore
+#else
+        public string LastUpdatedBy { get; private set; }
+#endif
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastUpdateTime { get; set; }
+#nullable restore
+#else
+        public string LastUpdateTime { get; set; }
+#endif
         /// <summary>The URL for the invoice payer view hosted on paypal.com.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,11 +106,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string RecipientViewUrl { get; private set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Metadata"/> and sets the default values.
+        /// </summary>
+        public Metadata()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Metadata"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.Metadata CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Metadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.Metadata();
@@ -85,17 +126,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "cancel_time", n => { CancelTime = n.GetStringValue(); } },
                 { "cancelled_by", n => { CancelledBy = n.GetStringValue(); } },
+                { "create_time", n => { CreateTime = n.GetStringValue(); } },
+                { "created_by", n => { CreatedBy = n.GetStringValue(); } },
                 { "created_by_flow", n => { CreatedByFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow>(); } },
                 { "first_sent_time", n => { FirstSentTime = n.GetStringValue(); } },
                 { "invoicer_view_url", n => { InvoicerViewUrl = n.GetStringValue(); } },
                 { "last_sent_by", n => { LastSentBy = n.GetStringValue(); } },
                 { "last_sent_time", n => { LastSentTime = n.GetStringValue(); } },
+                { "last_update_time", n => { LastUpdateTime = n.GetStringValue(); } },
+                { "last_updated_by", n => { LastUpdatedBy = n.GetStringValue(); } },
                 { "recipient_view_url", n => { RecipientViewUrl = n.GetStringValue(); } },
             };
         }
@@ -103,14 +148,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("cancel_time", CancelTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow>("created_by_flow", CreatedByFlow);
+            writer.WriteStringValue("create_time", CreateTime);
             writer.WriteStringValue("first_sent_time", FirstSentTime);
             writer.WriteStringValue("last_sent_time", LastSentTime);
+            writer.WriteStringValue("last_update_time", LastUpdateTime);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

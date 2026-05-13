@@ -7,12 +7,21 @@ using System.IO;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
-    /// <summary>
-    /// Common business information section.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BusinessEntity : global::Soenneker.PayPal.OpenApiClient.Models.Business, IParsable
+    #pragma warning disable CS1591
+    public partial class BusinessEntity : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>List of addresses associated with the business entity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>? Addresses { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail> Addresses { get; set; }
+#endif
         /// <summary>The currency range, from the minimum inclusive amount to the maximum inclusive amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,6 +54,62 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string BusinessDescription { get; set; }
 #endif
+        /// <summary>Business incorporation information.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation? BusinessIncorporation { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation BusinessIncorporation { get; set; }
+#endif
+        /// <summary>The category, subcategory and MCC code of the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry? BusinessIndustry { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry BusinessIndustry { get; set; }
+#endif
+        /// <summary>The type and subtype of the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo? BusinessType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo BusinessType { get; set; }
+#endif
+        /// <summary>Business Party related Document data collected from the customer.. For example SSN, ITIN, Business registration number that were collected from the user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>? Documents { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument> Documents { get; set; }
+#endif
+        /// <summary>Email addresses of the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? Emails { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> Emails { get; set; }
+#endif
+        /// <summary>Name of the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>? Names { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail> Names { get; set; }
+#endif
+        /// <summary>List of phone number associated with the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>? Phones { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail> Phones { get; set; }
+#endif
         /// <summary>The account&apos;s purpose code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,12 +118,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity_purpose_code PurposeCode { get; set; }
 #endif
+        /// <summary>Website of the business.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Website { get; set; }
+#nullable restore
+#else
+        public string Website { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity"/> and sets the default values.
+        /// </summary>
+        public BusinessEntity()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity();
@@ -67,30 +147,48 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "addresses", n => { Addresses = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "annual_sales_volume_range", n => { AnnualSalesVolumeRange = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange>(global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange.CreateFromDiscriminatorValue); } },
                 { "average_monthly_volume_range", n => { AverageMonthlyVolumeRange = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange>(global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange.CreateFromDiscriminatorValue); } },
                 { "beneficial_owners", n => { BeneficialOwners = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BeneficialOwners>(global::Soenneker.PayPal.OpenApiClient.Models.BeneficialOwners.CreateFromDiscriminatorValue); } },
                 { "business_description", n => { BusinessDescription = n.GetStringValue(); } },
+                { "business_incorporation", n => { BusinessIncorporation = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation.CreateFromDiscriminatorValue); } },
+                { "business_industry", n => { BusinessIndustry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry.CreateFromDiscriminatorValue); } },
+                { "business_type", n => { BusinessType = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo.CreateFromDiscriminatorValue); } },
+                { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "names", n => { Names = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "purpose_code", n => { PurposeCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity_purpose_code>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity_purpose_code.CreateFromDiscriminatorValue); } },
+                { "website", n => { Website = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>("addresses", Addresses);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange>("annual_sales_volume_range", AnnualSalesVolumeRange);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange>("average_monthly_volume_range", AverageMonthlyVolumeRange);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BeneficialOwners>("beneficial_owners", BeneficialOwners);
             writer.WriteStringValue("business_description", BusinessDescription);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation>("business_incorporation", BusinessIncorporation);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry>("business_industry", BusinessIndustry);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo>("business_type", BusinessType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>("documents", Documents);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>("emails", Emails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>("names", Names);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>("phones", Phones);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity_purpose_code>("purpose_code", PurposeCode);
+            writer.WriteStringValue("website", Website);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

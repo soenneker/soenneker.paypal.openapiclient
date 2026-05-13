@@ -44,10 +44,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>If true , sends an email notification to the buyer of the PayPal transaction. The email contains the tracking information that was uploaded through the API.</summary>
         public bool? NotifyBuyer { get; set; }
@@ -157,6 +157,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Carrier>("carrier", Carrier);
             writer.WriteStringValue("carrier_name_other", CarrierNameOther);
             writer.WriteStringValue("last_updated_time", LastUpdatedTime);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>("links", Links);
             writer.WriteBoolValue("notify_buyer", NotifyBuyer);
             writer.WriteStringValue("shipment_date", ShipmentDate);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker_shipment_direction>("shipment_direction", ShipmentDirection);

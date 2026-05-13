@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>A zero-relative index of transactions.</summary>
         public int? Page { get; set; }
@@ -115,6 +115,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("account_number", AccountNumber);
             writer.WriteStringValue("end_date", EndDate);
             writer.WriteStringValue("last_refreshed_datetime", LastRefreshedDatetime);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1LinkDescription>("links", Links);
             writer.WriteIntValue("page", Page);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteIntValue("total_items", TotalItems);

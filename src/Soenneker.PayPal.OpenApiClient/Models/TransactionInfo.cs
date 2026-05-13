@@ -74,10 +74,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of items that were purchased as part of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo>? Items { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo> Items { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo> Items { get; set; }
 #endif
         /// <summary>The payment_processor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -167,6 +167,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("gross_amount", GrossAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("gross_asset", GrossAsset);
             writer.WriteStringValue("invoice_number", InvoiceNumber);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo>("items", Items);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor>("payment_processor", PaymentProcessor);
             writer.WriteStringValue("reference_id", ReferenceId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Seller>("seller", Seller);

@@ -11,14 +11,111 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Indicates that PayPal Wallet is the payment source. Main use of this selection is to provide additional instructions associated with this choice like vaulting.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CheckoutOrdersV2PaymentSource_paypal : global::Soenneker.PayPal.OpenApiClient.Models.PaypalWallet, IParsable
+    public partial class CheckoutOrdersV2PaymentSource_paypal : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_address? Address { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_address Address { get; set; }
+#endif
+        /// <summary>The attributes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_attributes? Attributes { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_attributes Attributes { get; set; }
+#endif
+        /// <summary>The PayPal billing agreement ID. References an approved recurring payment for goods or services.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BillingAgreementId { get; set; }
+#nullable restore
+#else
+        public string BillingAgreementId { get; set; }
+#endif
+        /// <summary>The birth_date property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_birth_date? BirthDate { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_birth_date BirthDate { get; set; }
+#endif
+        /// <summary>The email_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_email_address? EmailAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_email_address EmailAddress { get; set; }
+#endif
+        /// <summary>Customizes the payer experience during the approval process for payment with PayPal.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Partners and Marketplaces might configure &lt;code&gt;brand_name&lt;/code&gt; and &lt;code&gt;shipping_preference&lt;/code&gt; during partner account setup, which overrides the request values.&lt;/blockquote&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext? ExperienceContext { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext ExperienceContext { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_name? Name { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_name Name { get; set; }
+#endif
+        /// <summary>The phone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_phone? Phone { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_phone Phone { get; set; }
+#endif
+        /// <summary>Provides additional details to process a payment using the PayPal wallet billing agreement or a vaulted payment method that has been stored or is intended to be stored.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential? StoredCredential { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential StoredCredential { get; set; }
+#endif
+        /// <summary>The tax_info property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_tax_info? TaxInfo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_tax_info TaxInfo { get; set; }
+#endif
+        /// <summary>The vault_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_vault_id? VaultId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_vault_id VaultId { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal"/> and sets the default values.
+        /// </summary>
+        public CheckoutOrdersV2PaymentSource_paypal()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal();
@@ -27,20 +124,42 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_address>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_address.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_attributes>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_attributes.CreateFromDiscriminatorValue); } },
+                { "billing_agreement_id", n => { BillingAgreementId = n.GetStringValue(); } },
+                { "birth_date", n => { BirthDate = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_birth_date>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_birth_date.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_email_address.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_name>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_name.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_phone>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_phone.CreateFromDiscriminatorValue); } },
+                { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential.CreateFromDiscriminatorValue); } },
+                { "tax_info", n => { TaxInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_tax_info>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_tax_info.CreateFromDiscriminatorValue); } },
+                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_vault_id>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_vault_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_attributes>("attributes", Attributes);
+            writer.WriteStringValue("billing_agreement_id", BillingAgreementId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_birth_date>("birth_date", BirthDate);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_email_address>("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_phone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential>("stored_credential", StoredCredential);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_tax_info>("tax_info", TaxInfo);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_paypal_vault_id>("vault_id", VaultId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

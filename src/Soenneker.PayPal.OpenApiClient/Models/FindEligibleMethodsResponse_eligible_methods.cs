@@ -11,14 +11,55 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// List of payment methods that are eligible.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class FindEligibleMethodsResponse_eligible_methods : global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethods, IParsable
+    public partial class FindEligibleMethodsResponse_eligible_methods : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The paypal property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal? Paypal { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal Paypal { get; set; }
+#endif
+        /// <summary>The paypal_credit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_credit? PaypalCredit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_credit PaypalCredit { get; set; }
+#endif
+        /// <summary>The paypal_pay_later property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_pay_later? PaypalPayLater { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_pay_later PaypalPayLater { get; set; }
+#endif
+        /// <summary>The venmo property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_venmo? Venmo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_venmo Venmo { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods"/> and sets the default values.
+        /// </summary>
+        public FindEligibleMethodsResponse_eligible_methods()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods();
@@ -27,20 +68,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal.CreateFromDiscriminatorValue); } },
+                { "paypal_credit", n => { PaypalCredit = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_credit>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_credit.CreateFromDiscriminatorValue); } },
+                { "paypal_pay_later", n => { PaypalPayLater = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_pay_later>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_pay_later.CreateFromDiscriminatorValue); } },
+                { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_venmo>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_venmo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_credit>("paypal_credit", PaypalCredit);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_paypal_pay_later>("paypal_pay_later", PaypalPayLater);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods_venmo>("venmo", Venmo);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

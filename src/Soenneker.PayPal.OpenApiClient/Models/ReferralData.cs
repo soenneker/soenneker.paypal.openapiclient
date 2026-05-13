@@ -11,8 +11,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The customer&apos;s referral data that partners share with PayPal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ReferralData : global::Soenneker.PayPal.OpenApiClient.Models.Account, IParsable
+    public partial class ReferralData : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The business_entity property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity? BusinessEntity { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity BusinessEntity { get; set; }
+#endif
         /// <summary>An array of capabilities which the partner wants to enable for the selected products. Supported only when products are specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,6 +46,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments FinancialInstruments { get; set; }
+#endif
+        /// <summary>List of owners in the account. There should be only one primary account owner which is mentioned in their role_type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>? IndividualOwners { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner> IndividualOwners { get; set; }
 #endif
         /// <summary>An array of all consents that the partner has received from this seller. If `SHARE_DATA_CONSENT` is not granted, PayPal does not store customer data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,10 +82,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of dependent processes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals>? OutsideProcessDependencies { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReferralData_outside_process_dependencies>? OutsideProcessDependencies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals> OutsideProcessDependencies { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ReferralData_outside_process_dependencies> OutsideProcessDependencies { get; set; }
 #endif
         /// <summary>The preference to customize the web experience of the customer by overriding that is set at the Partner&apos;s Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,11 +128,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string TrackingId { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReferralData"/> and sets the default values.
+        /// </summary>
+        public ReferralData()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReferralData"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.ReferralData CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.ReferralData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.ReferralData();
@@ -123,17 +148,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "business_entity", n => { BusinessEntity = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity.CreateFromDiscriminatorValue); } },
                 { "capabilities", n => { Capabilities = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities>()?.AsList(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "financial_instruments", n => { FinancialInstruments = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments>(global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments.CreateFromDiscriminatorValue); } },
+                { "individual_owners", n => { IndividualOwners = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>(global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "legal_consents", n => { LegalConsents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>(global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "legal_country_code", n => { LegalCountryCode = n.GetStringValue(); } },
                 { "operations", n => { Operations = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation>(global::Soenneker.PayPal.OpenApiClient.Models.Operation.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "outside_process_dependencies", n => { OutsideProcessDependencies = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals>(global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "outside_process_dependencies", n => { OutsideProcessDependencies = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReferralData_outside_process_dependencies>(global::Soenneker.PayPal.OpenApiClient.Models.ReferralData_outside_process_dependencies.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "partner_config_override", n => { PartnerConfigOverride = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride>(global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride.CreateFromDiscriminatorValue); } },
                 { "payout_attributes", n => { PayoutAttributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes.CreateFromDiscriminatorValue); } },
                 { "preferred_language_code", n => { PreferredLanguageCode = n.GetStringValue(); } },
@@ -145,22 +172,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity>("business_entity", BusinessEntity);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities>("capabilities", Capabilities);
             writer.WriteStringValue("email", Email);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments>("financial_instruments", FinancialInstruments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>("individual_owners", IndividualOwners);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>("legal_consents", LegalConsents);
             writer.WriteStringValue("legal_country_code", LegalCountryCode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Operation>("operations", Operations);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferrals>("outside_process_dependencies", OutsideProcessDependencies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReferralData_outside_process_dependencies>("outside_process_dependencies", OutsideProcessDependencies);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride>("partner_config_override", PartnerConfigOverride);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes>("payout_attributes", PayoutAttributes);
             writer.WriteStringValue("preferred_language_code", PreferredLanguageCode);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product>("products", Products);
             writer.WriteStringValue("tracking_id", TrackingId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

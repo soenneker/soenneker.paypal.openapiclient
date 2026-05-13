@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of related [HATEOAS links](/api/rest/responses/#hateoas).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription> Links { get; set; }
 #endif
         /// <summary>The vaulted payment method details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,6 +87,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Customer>("customer", Customer);
             writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>("links", Links);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaymentSource>("payment_source", PaymentSource);
             writer.WriteAdditionalData(AdditionalData);
         }

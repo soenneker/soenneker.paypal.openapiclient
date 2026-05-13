@@ -44,10 +44,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The resource that triggered the webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,6 +125,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("event_version", EventVersion);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Event_resource>("resource", Resource);
             writer.WriteStringValue("resource_version", ResourceVersion);
             writer.WriteAdditionalData(AdditionalData);

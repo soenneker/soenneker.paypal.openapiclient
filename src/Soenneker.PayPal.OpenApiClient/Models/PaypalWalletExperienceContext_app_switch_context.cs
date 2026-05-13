@@ -11,14 +11,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Merchants can use this to switch buyers from their website/application to the PayPal consumer app to review and approve the transaction.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaypalWalletExperienceContext_app_switch_context : global::Soenneker.PayPal.OpenApiClient.Models.AppSwitchContext, IParsable
+    public partial class PaypalWalletExperienceContext_app_switch_context : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Buyer&apos;s mobile web browser context to app switch to the PayPal consumer app.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? MobileWeb { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext MobileWeb { get; set; }
+#endif
+        /// <summary>Merchant provided, buyer&apos;s native app preferences to app switch to the PayPal consumer app.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? NativeApp { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext NativeApp { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context"/> and sets the default values.
+        /// </summary>
+        public PaypalWalletExperienceContext_app_switch_context()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContext_app_switch_context();
@@ -27,20 +52,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "mobile_web", n => { MobileWeb = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext>(global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext.CreateFromDiscriminatorValue); } },
+                { "native_app", n => { NativeApp = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext>(global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext>("mobile_web", MobileWeb);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext>("native_app", NativeApp);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

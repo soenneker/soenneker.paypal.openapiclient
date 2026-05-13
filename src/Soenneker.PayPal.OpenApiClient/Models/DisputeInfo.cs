@@ -64,10 +64,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription> Links { get; set; }
 #endif
         /// <summary>The reason for the item-level dispute. For information about the required information for each dispute reason and associated evidence type, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#dispute-reasons&quot;&gt;dispute reasons&lt;/a&gt;.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason? Reason { get; set; }
@@ -141,6 +141,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("dispute_amount", DisputeAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("dispute_asset", DisputeAsset);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeState>("dispute_state", DisputeState);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>("links", Links);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
             writer.WriteStringValue("seller_response_due_date", SellerResponseDueDate);
             writer.WriteStringValue("update_time", UpdateTime);

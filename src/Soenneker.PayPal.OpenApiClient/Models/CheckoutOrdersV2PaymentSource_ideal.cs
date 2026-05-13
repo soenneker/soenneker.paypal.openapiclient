@@ -11,14 +11,55 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The Dutch payment method iDEAL is an online payment method that enables consumers to pay online through their own bank. [More Details](https://www.ideal.nl/).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CheckoutOrdersV2PaymentSource_ideal : global::Soenneker.PayPal.OpenApiClient.Models.IdealRequest, IParsable
+    public partial class CheckoutOrdersV2PaymentSource_ideal : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The bic property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_bic? Bic { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_bic Bic { get; set; }
+#endif
+        /// <summary>The country_code property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_country_code? CountryCode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_country_code CountryCode { get; set; }
+#endif
+        /// <summary>The experience_context property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_experience_context? ExperienceContext { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_experience_context ExperienceContext { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_name? Name { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_name Name { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal"/> and sets the default values.
+        /// </summary>
+        public CheckoutOrdersV2PaymentSource_ideal()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal();
@@ -27,20 +68,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "bic", n => { Bic = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_bic>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_bic.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_country_code.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_experience_context.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_name>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_name.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_bic>("bic", Bic);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_experience_context>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource_ideal_name>("name", Name);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

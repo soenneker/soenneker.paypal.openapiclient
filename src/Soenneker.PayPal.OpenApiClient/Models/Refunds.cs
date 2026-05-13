@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of refund details for the invoice. Includes the refund type, date, amount, and method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetail>? Transactions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetail>? Transactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetail> Transactions { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetail> Transactions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Refunds"/> and sets the default values.
@@ -68,6 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("refund_amount", RefundAmount);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetail>("transactions", Transactions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
