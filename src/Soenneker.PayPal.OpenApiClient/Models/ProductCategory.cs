@@ -9,1787 +9,1787 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "AC_REFRIGERATION_REPAIR")]
         #pragma warning disable CS1591
-        AC_REFRIGERATION_REPAIR,
+        AcRefrigerationRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACADEMIC_SOFTWARE")]
         #pragma warning disable CS1591
-        ACADEMIC_SOFTWARE,
+        AcademicSoftware,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACCESSORIES")]
         #pragma warning disable CS1591
-        ACCESSORIES,
+        Accessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACCOUNTING")]
         #pragma warning disable CS1591
-        ACCOUNTING,
+        Accounting,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADULT")]
         #pragma warning disable CS1591
-        ADULT,
+        Adult,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADVERTISING")]
         #pragma warning disable CS1591
-        ADVERTISING,
+        Advertising,
         #pragma warning restore CS1591
         [EnumMember(Value = "AFFILIATED_AUTO_RENTAL")]
         #pragma warning disable CS1591
-        AFFILIATED_AUTO_RENTAL,
+        AffiliatedAutoRental,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGENCIES")]
         #pragma warning disable CS1591
-        AGENCIES,
+        Agencies,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGGREGATORS")]
         #pragma warning disable CS1591
-        AGGREGATORS,
+        Aggregators,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGRICULTURAL_COOPERATIVE_FOR_MAIL_ORDER")]
         #pragma warning disable CS1591
-        AGRICULTURAL_COOPERATIVE_FOR_MAIL_ORDER,
+        AgriculturalCooperativeForMailOrder,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIR_CARRIERS_AIRLINES")]
         #pragma warning disable CS1591
-        AIR_CARRIERS_AIRLINES,
+        AirCarriersAirlines,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIRLINES")]
         #pragma warning disable CS1591
-        AIRLINES,
+        Airlines,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIRPORTS_FLYING_FIELDS")]
         #pragma warning disable CS1591
-        AIRPORTS_FLYING_FIELDS,
+        AirportsFlyingFields,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALCOHOLIC_BEVERAGES")]
         #pragma warning disable CS1591
-        ALCOHOLIC_BEVERAGES,
+        AlcoholicBeverages,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMUSEMENT_PARKS_CARNIVALS")]
         #pragma warning disable CS1591
-        AMUSEMENT_PARKS_CARNIVALS,
+        AmusementParksCarnivals,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANIMATION")]
         #pragma warning disable CS1591
-        ANIMATION,
+        Animation,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANTIQUES")]
         #pragma warning disable CS1591
-        ANTIQUES,
+        Antiques,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPLIANCES")]
         #pragma warning disable CS1591
-        APPLIANCES,
+        Appliances,
         #pragma warning restore CS1591
         [EnumMember(Value = "AQUARIAMS_SEAQUARIUMS_DOLPHINARIUMS")]
         #pragma warning disable CS1591
-        AQUARIAMS_SEAQUARIUMS_DOLPHINARIUMS,
+        AquariamsSeaquariumsDolphinariums,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARCHITECTURAL_ENGINEERING_AND_SURVEYING_SERVICES")]
         #pragma warning disable CS1591
-        ARCHITECTURAL_ENGINEERING_AND_SURVEYING_SERVICES,
+        ArchitecturalEngineeringAndSurveyingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "ART_AND_CRAFT_SUPPLIES")]
         #pragma warning disable CS1591
-        ART_AND_CRAFT_SUPPLIES,
+        ArtAndCraftSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "ART_DEALERS_AND_GALLERIES")]
         #pragma warning disable CS1591
-        ART_DEALERS_AND_GALLERIES,
+        ArtDealersAndGalleries,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARTIFACTS_GRAVE_RELATED_AND_NATIVE_AMERICAN_CRAFTS")]
         #pragma warning disable CS1591
-        ARTIFACTS_GRAVE_RELATED_AND_NATIVE_AMERICAN_CRAFTS,
+        ArtifactsGraveRelatedAndNativeAmericanCrafts,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARTS_AND_CRAFTS")]
         #pragma warning disable CS1591
-        ARTS_AND_CRAFTS,
+        ArtsAndCrafts,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARTS_CRAFTS_AND_COLLECTIBLES")]
         #pragma warning disable CS1591
-        ARTS_CRAFTS_AND_COLLECTIBLES,
+        ArtsCraftsAndCollectibles,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUDIO_BOOKS")]
         #pragma warning disable CS1591
-        AUDIO_BOOKS,
+        AudioBooks,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTO_ASSOCIATIONS_CLUBS")]
         #pragma warning disable CS1591
-        AUTO_ASSOCIATIONS_CLUBS,
+        AutoAssociationsClubs,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTO_DEALER_USED_ONLY")]
         #pragma warning disable CS1591
-        AUTO_DEALER_USED_ONLY,
+        AutoDealerUsedOnly,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTO_RENTALS")]
         #pragma warning disable CS1591
-        AUTO_RENTALS,
+        AutoRentals,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTO_SERVICE")]
         #pragma warning disable CS1591
-        AUTO_SERVICE,
+        AutoService,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTOMATED_FUEL_DISPENSERS")]
         #pragma warning disable CS1591
-        AUTOMATED_FUEL_DISPENSERS,
+        AutomatedFuelDispensers,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTOMOBILE_ASSOCIATIONS")]
         #pragma warning disable CS1591
-        AUTOMOBILE_ASSOCIATIONS,
+        AutomobileAssociations,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTOMOTIVE")]
         #pragma warning disable CS1591
-        AUTOMOTIVE,
+        Automotive,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTOMOTIVE_REPAIR_SHOPS_NON_DEALER")]
         #pragma warning disable CS1591
-        AUTOMOTIVE_REPAIR_SHOPS_NON_DEALER,
+        AutomotiveRepairShopsNonDealer,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTOMOTIVE_TOP_AND_BODY_SHOPS")]
         #pragma warning disable CS1591
-        AUTOMOTIVE_TOP_AND_BODY_SHOPS,
+        AutomotiveTopAndBodyShops,
         #pragma warning restore CS1591
         [EnumMember(Value = "AVIATION")]
         #pragma warning disable CS1591
-        AVIATION,
+        Aviation,
         #pragma warning restore CS1591
         [EnumMember(Value = "BABIES_CLOTHING_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        BABIES_CLOTHING_AND_SUPPLIES,
+        BabiesClothingAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "BABY")]
         #pragma warning disable CS1591
-        BABY,
+        Baby,
         #pragma warning restore CS1591
         [EnumMember(Value = "BANDS_ORCHESTRAS_ENTERTAINERS")]
         #pragma warning disable CS1591
-        BANDS_ORCHESTRAS_ENTERTAINERS,
+        BandsOrchestrasEntertainers,
         #pragma warning restore CS1591
         [EnumMember(Value = "BARBIES")]
         #pragma warning disable CS1591
-        BARBIES,
+        Barbies,
         #pragma warning restore CS1591
         [EnumMember(Value = "BATH_AND_BODY")]
         #pragma warning disable CS1591
-        BATH_AND_BODY,
+        BathAndBody,
         #pragma warning restore CS1591
         [EnumMember(Value = "BATTERIES")]
         #pragma warning disable CS1591
-        BATTERIES,
+        Batteries,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEAN_BABIES")]
         #pragma warning disable CS1591
-        BEAN_BABIES,
+        BeanBabies,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEAUTY")]
         #pragma warning disable CS1591
-        BEAUTY,
+        Beauty,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEAUTY_AND_FRAGRANCES")]
         #pragma warning disable CS1591
-        BEAUTY_AND_FRAGRANCES,
+        BeautyAndFragrances,
         #pragma warning restore CS1591
         [EnumMember(Value = "BED_AND_BATH")]
         #pragma warning disable CS1591
-        BED_AND_BATH,
+        BedAndBath,
         #pragma warning restore CS1591
         [EnumMember(Value = "BICYCLE_SHOPS_SALES_AND_SERVICE")]
         #pragma warning disable CS1591
-        BICYCLE_SHOPS_SALES_AND_SERVICE,
+        BicycleShopsSalesAndService,
         #pragma warning restore CS1591
         [EnumMember(Value = "BICYCLES_AND_ACCESSORIES")]
         #pragma warning disable CS1591
-        BICYCLES_AND_ACCESSORIES,
+        BicyclesAndAccessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLIARD_POOL_ESTABLISHMENTS")]
         #pragma warning disable CS1591
-        BILLIARD_POOL_ESTABLISHMENTS,
+        BilliardPoolEstablishments,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOAT_DEALERS")]
         #pragma warning disable CS1591
-        BOAT_DEALERS,
+        BoatDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOAT_RENTALS_AND_LEASING")]
         #pragma warning disable CS1591
-        BOAT_RENTALS_AND_LEASING,
+        BoatRentalsAndLeasing,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOATING_SAILING_AND_ACCESSORIES")]
         #pragma warning disable CS1591
-        BOATING_SAILING_AND_ACCESSORIES,
+        BoatingSailingAndAccessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOOKS")]
         #pragma warning disable CS1591
-        BOOKS,
+        Books,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOOKS_AND_MAGAZINES")]
         #pragma warning disable CS1591
-        BOOKS_AND_MAGAZINES,
+        BooksAndMagazines,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOOKS_MANUSCRIPTS")]
         #pragma warning disable CS1591
-        BOOKS_MANUSCRIPTS,
+        BooksManuscripts,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOOKS_PERIODICALS_AND_NEWSPAPERS")]
         #pragma warning disable CS1591
-        BOOKS_PERIODICALS_AND_NEWSPAPERS,
+        BooksPeriodicalsAndNewspapers,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOWLING_ALLEYS")]
         #pragma warning disable CS1591
-        BOWLING_ALLEYS,
+        BowlingAlleys,
         #pragma warning restore CS1591
         [EnumMember(Value = "BULLETIN_BOARD")]
         #pragma warning disable CS1591
-        BULLETIN_BOARD,
+        BulletinBoard,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUS_LINE")]
         #pragma warning disable CS1591
-        BUS_LINE,
+        BusLine,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUS_LINES_CHARTERS_TOUR_BUSES")]
         #pragma warning disable CS1591
-        BUS_LINES_CHARTERS_TOUR_BUSES,
+        BusLinesChartersTourBuses,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUSINESS")]
         #pragma warning disable CS1591
-        BUSINESS,
+        Business,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUSINESS_AND_SECRETARIAL_SCHOOLS")]
         #pragma warning disable CS1591
-        BUSINESS_AND_SECRETARIAL_SCHOOLS,
+        BusinessAndSecretarialSchools,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYING_AND_SHOPPING_SERVICES_AND_CLUBS")]
         #pragma warning disable CS1591
-        BUYING_AND_SHOPPING_SERVICES_AND_CLUBS,
+        BuyingAndShoppingServicesAndClubs,
         #pragma warning restore CS1591
         [EnumMember(Value = "CABLE_SATELLITE_AND_OTHER_PAY_TELEVISION_AND_RADIO_SERVICES")]
         #pragma warning disable CS1591
-        CABLE_SATELLITE_AND_OTHER_PAY_TELEVISION_AND_RADIO_SERVICES,
+        CableSatelliteAndOtherPayTelevisionAndRadioServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "CABLE_SATELLITE_AND_OTHER_PAY_TV_AND_RADIO")]
         #pragma warning disable CS1591
-        CABLE_SATELLITE_AND_OTHER_PAY_TV_AND_RADIO,
+        CableSatelliteAndOtherPayTvAndRadio,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMERA_AND_PHOTOGRAPHIC_SUPPLIES")]
         #pragma warning disable CS1591
-        CAMERA_AND_PHOTOGRAPHIC_SUPPLIES,
+        CameraAndPhotographicSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMERAS")]
         #pragma warning disable CS1591
-        CAMERAS,
+        Cameras,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMERAS_AND_PHOTOGRAPHY")]
         #pragma warning disable CS1591
-        CAMERAS_AND_PHOTOGRAPHY,
+        CamerasAndPhotography,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMPER_RECREATIONAL_AND_UTILITY_TRAILER_DEALERS")]
         #pragma warning disable CS1591
-        CAMPER_RECREATIONAL_AND_UTILITY_TRAILER_DEALERS,
+        CamperRecreationalAndUtilityTrailerDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMPING_AND_OUTDOORS")]
         #pragma warning disable CS1591
-        CAMPING_AND_OUTDOORS,
+        CampingAndOutdoors,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMPING_AND_SURVIVAL")]
         #pragma warning disable CS1591
-        CAMPING_AND_SURVIVAL,
+        CampingAndSurvival,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAR_AND_TRUCK_DEALERS")]
         #pragma warning disable CS1591
-        CAR_AND_TRUCK_DEALERS,
+        CarAndTruckDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAR_AND_TRUCK_DEALERS_USED_ONLY")]
         #pragma warning disable CS1591
-        CAR_AND_TRUCK_DEALERS_USED_ONLY,
+        CarAndTruckDealersUsedOnly,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAR_AUDIO_AND_ELECTRONICS")]
         #pragma warning disable CS1591
-        CAR_AUDIO_AND_ELECTRONICS,
+        CarAudioAndElectronics,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAR_RENTAL_AGENCY")]
         #pragma warning disable CS1591
-        CAR_RENTAL_AGENCY,
+        CarRentalAgency,
         #pragma warning restore CS1591
         [EnumMember(Value = "CATALOG_MERCHANT")]
         #pragma warning disable CS1591
-        CATALOG_MERCHANT,
+        CatalogMerchant,
         #pragma warning restore CS1591
         [EnumMember(Value = "CATALOG_RETAIL_MERCHANT")]
         #pragma warning disable CS1591
-        CATALOG_RETAIL_MERCHANT,
+        CatalogRetailMerchant,
         #pragma warning restore CS1591
         [EnumMember(Value = "CATERING_SERVICES")]
         #pragma warning disable CS1591
-        CATERING_SERVICES,
+        CateringServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHARITY")]
         #pragma warning disable CS1591
-        CHARITY,
+        Charity,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHECK_CASHIER")]
         #pragma warning disable CS1591
-        CHECK_CASHIER,
+        CheckCashier,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHILD_CARE_SERVICES")]
         #pragma warning disable CS1591
-        CHILD_CARE_SERVICES,
+        ChildCareServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHILDREN_BOOKS")]
         #pragma warning disable CS1591
-        CHILDREN_BOOKS,
+        ChildrenBooks,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHIROPODISTS_PODIATRISTS")]
         #pragma warning disable CS1591
-        CHIROPODISTS_PODIATRISTS,
+        ChiropodistsPodiatrists,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHIROPRACTORS")]
         #pragma warning disable CS1591
-        CHIROPRACTORS,
+        Chiropractors,
         #pragma warning restore CS1591
         [EnumMember(Value = "CIGAR_STORES_AND_STANDS")]
         #pragma warning disable CS1591
-        CIGAR_STORES_AND_STANDS,
+        CigarStoresAndStands,
         #pragma warning restore CS1591
         [EnumMember(Value = "CIVIC_SOCIAL_FRATERNAL_ASSOCIATIONS")]
         #pragma warning disable CS1591
-        CIVIC_SOCIAL_FRATERNAL_ASSOCIATIONS,
+        CivicSocialFraternalAssociations,
         #pragma warning restore CS1591
         [EnumMember(Value = "CIVIL_SOCIAL_FRAT_ASSOCIATIONS")]
         #pragma warning disable CS1591
-        CIVIL_SOCIAL_FRAT_ASSOCIATIONS,
+        CivilSocialFratAssociations,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLOTHING")]
         #pragma warning disable CS1591
-        CLOTHING,
+        Clothing,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLOTHING_ACCESSORIES_AND_SHOES")]
         #pragma warning disable CS1591
-        CLOTHING_ACCESSORIES_AND_SHOES,
+        ClothingAccessoriesAndShoes,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLOTHING_RENTAL")]
         #pragma warning disable CS1591
-        CLOTHING_RENTAL,
+        ClothingRental,
         #pragma warning restore CS1591
         [EnumMember(Value = "COFFEE_AND_TEA")]
         #pragma warning disable CS1591
-        COFFEE_AND_TEA,
+        CoffeeAndTea,
         #pragma warning restore CS1591
         [EnumMember(Value = "COIN_OPERATED_BANKS_AND_CASINOS")]
         #pragma warning disable CS1591
-        COIN_OPERATED_BANKS_AND_CASINOS,
+        CoinOperatedBanksAndCasinos,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLECTIBLES")]
         #pragma warning disable CS1591
-        COLLECTIBLES,
+        Collectibles,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLECTION_AGENCY")]
         #pragma warning disable CS1591
-        COLLECTION_AGENCY,
+        CollectionAgency,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLEGES_AND_UNIVERSITIES")]
         #pragma warning disable CS1591
-        COLLEGES_AND_UNIVERSITIES,
+        CollegesAndUniversities,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMERCIAL_EQUIPMENT")]
         #pragma warning disable CS1591
-        COMMERCIAL_EQUIPMENT,
+        CommercialEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMERCIAL_FOOTWEAR")]
         #pragma warning disable CS1591
-        COMMERCIAL_FOOTWEAR,
+        CommercialFootwear,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMERCIAL_PHOTOGRAPHY")]
         #pragma warning disable CS1591
-        COMMERCIAL_PHOTOGRAPHY,
+        CommercialPhotography,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMERCIAL_PHOTOGRAPHY_ART_AND_GRAPHICS")]
         #pragma warning disable CS1591
-        COMMERCIAL_PHOTOGRAPHY_ART_AND_GRAPHICS,
+        CommercialPhotographyArtAndGraphics,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMERCIAL_SPORTS_PROFESSIONA")]
         #pragma warning disable CS1591
-        COMMERCIAL_SPORTS_PROFESSIONA,
+        CommercialSportsProfessiona,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMMODITIES_AND_FUTURES_EXCHANGE")]
         #pragma warning disable CS1591
-        COMMODITIES_AND_FUTURES_EXCHANGE,
+        CommoditiesAndFuturesExchange,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPUTER_AND_DATA_PROCESSING_SERVICES")]
         #pragma warning disable CS1591
-        COMPUTER_AND_DATA_PROCESSING_SERVICES,
+        ComputerAndDataProcessingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPUTER_HARDWARE_AND_SOFTWARE")]
         #pragma warning disable CS1591
-        COMPUTER_HARDWARE_AND_SOFTWARE,
+        ComputerHardwareAndSoftware,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPUTER_MAINTENANCE_REPAIR_AND_SERVICES_NOT_ELSEWHERE_CLAS")]
         #pragma warning disable CS1591
-        COMPUTER_MAINTENANCE_REPAIR_AND_SERVICES_NOT_ELSEWHERE_CLAS,
+        ComputerMaintenanceRepairAndServicesNotElsewhereClas,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONSTRUCTION")]
         #pragma warning disable CS1591
-        CONSTRUCTION,
+        Construction,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONSTRUCTION_MATERIALS_NOT_ELSEWHERE_CLASSIFIED")]
         #pragma warning disable CS1591
-        CONSTRUCTION_MATERIALS_NOT_ELSEWHERE_CLASSIFIED,
+        ConstructionMaterialsNotElsewhereClassified,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONSULTING_SERVICES")]
         #pragma warning disable CS1591
-        CONSULTING_SERVICES,
+        ConsultingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONSUMER_CREDIT_REPORTING_AGENCIES")]
         #pragma warning disable CS1591
-        CONSUMER_CREDIT_REPORTING_AGENCIES,
+        ConsumerCreditReportingAgencies,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONVALESCENT_HOMES")]
         #pragma warning disable CS1591
-        CONVALESCENT_HOMES,
+        ConvalescentHomes,
         #pragma warning restore CS1591
         [EnumMember(Value = "COSMETIC_STORES")]
         #pragma warning disable CS1591
-        COSMETIC_STORES,
+        CosmeticStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUNSELING_SERVICES_DEBT_MARRIAGE_PERSONAL")]
         #pragma warning disable CS1591
-        COUNSELING_SERVICES_DEBT_MARRIAGE_PERSONAL,
+        CounselingServicesDebtMarriagePersonal,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUNTERFEIT_CURRENCY_AND_STAMPS")]
         #pragma warning disable CS1591
-        COUNTERFEIT_CURRENCY_AND_STAMPS,
+        CounterfeitCurrencyAndStamps,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUNTERFEIT_ITEMS")]
         #pragma warning disable CS1591
-        COUNTERFEIT_ITEMS,
+        CounterfeitItems,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUNTRY_CLUBS")]
         #pragma warning disable CS1591
-        COUNTRY_CLUBS,
+        CountryClubs,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURIER_SERVICES")]
         #pragma warning disable CS1591
-        COURIER_SERVICES,
+        CourierServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURIER_SERVICES_AIR_AND_GROUND_AND_FREIGHT_FORWARDERS")]
         #pragma warning disable CS1591
-        COURIER_SERVICES_AIR_AND_GROUND_AND_FREIGHT_FORWARDERS,
+        CourierServicesAirAndGroundAndFreightForwarders,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURT_COSTS_ALIMNY_CHILD_SUPT")]
         #pragma warning disable CS1591
-        COURT_COSTS_ALIMNY_CHILD_SUPT,
+        CourtCostsAlimnyChildSupt,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURT_COSTS_INCLUDING_ALIMONY_AND_CHILD_SUPPORT_COURTS_OF_LAW")]
         #pragma warning disable CS1591
-        COURT_COSTS_INCLUDING_ALIMONY_AND_CHILD_SUPPORT_COURTS_OF_LAW,
+        CourtCostsIncludingAlimonyAndChildSupportCourtsOfLaw,
         #pragma warning restore CS1591
         [EnumMember(Value = "CREDIT_CARDS")]
         #pragma warning disable CS1591
-        CREDIT_CARDS,
+        CreditCards,
         #pragma warning restore CS1591
         [EnumMember(Value = "CREDIT_UNION")]
         #pragma warning disable CS1591
-        CREDIT_UNION,
+        CreditUnion,
         #pragma warning restore CS1591
         [EnumMember(Value = "CULTURE_AND_RELIGION")]
         #pragma warning disable CS1591
-        CULTURE_AND_RELIGION,
+        CultureAndReligion,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAIRY_PRODUCTS_STORES")]
         #pragma warning disable CS1591
-        DAIRY_PRODUCTS_STORES,
+        DairyProductsStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "DANCE_HALLS_STUDIOS_AND_SCHOOLS")]
         #pragma warning disable CS1591
-        DANCE_HALLS_STUDIOS_AND_SCHOOLS,
+        DanceHallsStudiosAndSchools,
         #pragma warning restore CS1591
         [EnumMember(Value = "DECORATIVE")]
         #pragma warning disable CS1591
-        DECORATIVE,
+        Decorative,
         #pragma warning restore CS1591
         [EnumMember(Value = "DENTAL")]
         #pragma warning disable CS1591
-        DENTAL,
+        Dental,
         #pragma warning restore CS1591
         [EnumMember(Value = "DENTISTS_AND_ORTHODONTISTS")]
         #pragma warning disable CS1591
-        DENTISTS_AND_ORTHODONTISTS,
+        DentistsAndOrthodontists,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEPARTMENT_STORES")]
         #pragma warning disable CS1591
-        DEPARTMENT_STORES,
+        DepartmentStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "DESKTOP_PCS")]
         #pragma warning disable CS1591
-        DESKTOP_PCS,
+        DesktopPcs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEVICES")]
         #pragma warning disable CS1591
-        DEVICES,
+        Devices,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIECAST_TOYS_VEHICLES")]
         #pragma warning disable CS1591
-        DIECAST_TOYS_VEHICLES,
+        DiecastToysVehicles,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIGITAL_GAMES")]
         #pragma warning disable CS1591
-        DIGITAL_GAMES,
+        DigitalGames,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIGITAL_MEDIA_BOOKS_MOVIES_MUSIC")]
         #pragma warning disable CS1591
-        DIGITAL_MEDIA_BOOKS_MOVIES_MUSIC,
+        DigitalMediaBooksMoviesMusic,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_MARKETING")]
         #pragma warning disable CS1591
-        DIRECT_MARKETING,
+        DirectMarketing,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_MARKETING_CATALOG_MERCHANT")]
         #pragma warning disable CS1591
-        DIRECT_MARKETING_CATALOG_MERCHANT,
+        DirectMarketingCatalogMerchant,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_MARKETING_INBOUND_TELE")]
         #pragma warning disable CS1591
-        DIRECT_MARKETING_INBOUND_TELE,
+        DirectMarketingInboundTele,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_MARKETING_OUTBOUND_TELE")]
         #pragma warning disable CS1591
-        DIRECT_MARKETING_OUTBOUND_TELE,
+        DirectMarketingOutboundTele,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_MARKETING_SUBSCRIPTION")]
         #pragma warning disable CS1591
-        DIRECT_MARKETING_SUBSCRIPTION,
+        DirectMarketingSubscription,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISCOUNT_STORES")]
         #pragma warning disable CS1591
-        DISCOUNT_STORES,
+        DiscountStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOOR_TO_DOOR_SALES")]
         #pragma warning disable CS1591
-        DOOR_TO_DOOR_SALES,
+        DoorToDoorSales,
         #pragma warning restore CS1591
         [EnumMember(Value = "DRAPERY_WINDOW_COVERING_AND_UPHOLSTERY")]
         #pragma warning disable CS1591
-        DRAPERY_WINDOW_COVERING_AND_UPHOLSTERY,
+        DraperyWindowCoveringAndUpholstery,
         #pragma warning restore CS1591
         [EnumMember(Value = "DRINKING_PLACES")]
         #pragma warning disable CS1591
-        DRINKING_PLACES,
+        DrinkingPlaces,
         #pragma warning restore CS1591
         [EnumMember(Value = "DRUGSTORE")]
         #pragma warning disable CS1591
-        DRUGSTORE,
+        Drugstore,
         #pragma warning restore CS1591
         [EnumMember(Value = "DURABLE_GOODS")]
         #pragma warning disable CS1591
-        DURABLE_GOODS,
+        DurableGoods,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOMMERCE_DEVELOPMENT")]
         #pragma warning disable CS1591
-        ECOMMERCE_DEVELOPMENT,
+        EcommerceDevelopment,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOMMERCE_SERVICES")]
         #pragma warning disable CS1591
-        ECOMMERCE_SERVICES,
+        EcommerceServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "EDUCATIONAL_AND_TEXTBOOKS")]
         #pragma warning disable CS1591
-        EDUCATIONAL_AND_TEXTBOOKS,
+        EducationalAndTextbooks,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRIC_RAZOR_STORES")]
         #pragma warning disable CS1591
-        ELECTRIC_RAZOR_STORES,
+        ElectricRazorStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRICAL_AND_SMALL_APPLIANCE_REPAIR")]
         #pragma warning disable CS1591
-        ELECTRICAL_AND_SMALL_APPLIANCE_REPAIR,
+        ElectricalAndSmallApplianceRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRICAL_CONTRACTORS")]
         #pragma warning disable CS1591
-        ELECTRICAL_CONTRACTORS,
+        ElectricalContractors,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRICAL_PARTS_AND_EQUIPMENT")]
         #pragma warning disable CS1591
-        ELECTRICAL_PARTS_AND_EQUIPMENT,
+        ElectricalPartsAndEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRONIC_CASH")]
         #pragma warning disable CS1591
-        ELECTRONIC_CASH,
+        ElectronicCash,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELEMENTARY_AND_SECONDARY_SCHOOLS")]
         #pragma warning disable CS1591
-        ELEMENTARY_AND_SECONDARY_SCHOOLS,
+        ElementaryAndSecondarySchools,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMPLOYMENT")]
         #pragma warning disable CS1591
-        EMPLOYMENT,
+        Employment,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENTERTAINERS")]
         #pragma warning disable CS1591
-        ENTERTAINERS,
+        Entertainers,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENTERTAINMENT_AND_MEDIA")]
         #pragma warning disable CS1591
-        ENTERTAINMENT_AND_MEDIA,
+        EntertainmentAndMedia,
         #pragma warning restore CS1591
         [EnumMember(Value = "EQUIP_TOOL_FURNITURE_AND_APPLIANCE_RENTAL_AND_LEASING")]
         #pragma warning disable CS1591
-        EQUIP_TOOL_FURNITURE_AND_APPLIANCE_RENTAL_AND_LEASING,
+        EquipToolFurnitureAndApplianceRentalAndLeasing,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESCROW")]
         #pragma warning disable CS1591
-        ESCROW,
+        Escrow,
         #pragma warning restore CS1591
         [EnumMember(Value = "EVENT_AND_WEDDING_PLANNING")]
         #pragma warning disable CS1591
-        EVENT_AND_WEDDING_PLANNING,
+        EventAndWeddingPlanning,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXERCISE_AND_FITNESS")]
         #pragma warning disable CS1591
-        EXERCISE_AND_FITNESS,
+        ExerciseAndFitness,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXERCISE_EQUIPMENT")]
         #pragma warning disable CS1591
-        EXERCISE_EQUIPMENT,
+        ExerciseEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXTERMINATING_AND_DISINFECTING_SERVICES")]
         #pragma warning disable CS1591
-        EXTERMINATING_AND_DISINFECTING_SERVICES,
+        ExterminatingAndDisinfectingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "FABRICS_AND_SEWING")]
         #pragma warning disable CS1591
-        FABRICS_AND_SEWING,
+        FabricsAndSewing,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAMILY_CLOTHING_STORES")]
         #pragma warning disable CS1591
-        FAMILY_CLOTHING_STORES,
+        FamilyClothingStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASHION_JEWELRY")]
         #pragma warning disable CS1591
-        FASHION_JEWELRY,
+        FashionJewelry,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAST_FOOD_RESTAURANTS")]
         #pragma warning disable CS1591
-        FAST_FOOD_RESTAURANTS,
+        FastFoodRestaurants,
         #pragma warning restore CS1591
         [EnumMember(Value = "FICTION_AND_NONFICTION")]
         #pragma warning disable CS1591
-        FICTION_AND_NONFICTION,
+        FictionAndNonfiction,
         #pragma warning restore CS1591
         [EnumMember(Value = "FINANCE_COMPANY")]
         #pragma warning disable CS1591
-        FINANCE_COMPANY,
+        FinanceCompany,
         #pragma warning restore CS1591
         [EnumMember(Value = "FINANCIAL_AND_INVESTMENT_ADVICE")]
         #pragma warning disable CS1591
-        FINANCIAL_AND_INVESTMENT_ADVICE,
+        FinancialAndInvestmentAdvice,
         #pragma warning restore CS1591
         [EnumMember(Value = "FINANCIAL_INSTITUTIONS_MERCHANDISE_AND_SERVICES")]
         #pragma warning disable CS1591
-        FINANCIAL_INSTITUTIONS_MERCHANDISE_AND_SERVICES,
+        FinancialInstitutionsMerchandiseAndServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIREARM_ACCESSORIES")]
         #pragma warning disable CS1591
-        FIREARM_ACCESSORIES,
+        FirearmAccessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIREARMS_WEAPONS_AND_KNIVES")]
         #pragma warning disable CS1591
-        FIREARMS_WEAPONS_AND_KNIVES,
+        FirearmsWeaponsAndKnives,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIREPLACE_AND_FIREPLACE_SCREENS")]
         #pragma warning disable CS1591
-        FIREPLACE_AND_FIREPLACE_SCREENS,
+        FireplaceAndFireplaceScreens,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIREWORKS")]
         #pragma warning disable CS1591
-        FIREWORKS,
+        Fireworks,
         #pragma warning restore CS1591
         [EnumMember(Value = "FISHING")]
         #pragma warning disable CS1591
-        FISHING,
+        Fishing,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLORISTS")]
         #pragma warning disable CS1591
-        FLORISTS,
+        Florists,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLOWERS")]
         #pragma warning disable CS1591
-        FLOWERS,
+        Flowers,
         #pragma warning restore CS1591
         [EnumMember(Value = "FOOD_DRINK_AND_NUTRITION")]
         #pragma warning disable CS1591
-        FOOD_DRINK_AND_NUTRITION,
+        FoodDrinkAndNutrition,
         #pragma warning restore CS1591
         [EnumMember(Value = "FOOD_PRODUCTS")]
         #pragma warning disable CS1591
-        FOOD_PRODUCTS,
+        FoodProducts,
         #pragma warning restore CS1591
         [EnumMember(Value = "FOOD_RETAIL_AND_SERVICE")]
         #pragma warning disable CS1591
-        FOOD_RETAIL_AND_SERVICE,
+        FoodRetailAndService,
         #pragma warning restore CS1591
         [EnumMember(Value = "FRAGRANCES_AND_PERFUMES")]
         #pragma warning disable CS1591
-        FRAGRANCES_AND_PERFUMES,
+        FragrancesAndPerfumes,
         #pragma warning restore CS1591
         [EnumMember(Value = "FREEZER_AND_LOCKER_MEAT_PROVISIONERS")]
         #pragma warning disable CS1591
-        FREEZER_AND_LOCKER_MEAT_PROVISIONERS,
+        FreezerAndLockerMeatProvisioners,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUEL_DEALERS_FUEL_OIL_WOOD_AND_COAL")]
         #pragma warning disable CS1591
-        FUEL_DEALERS_FUEL_OIL_WOOD_AND_COAL,
+        FuelDealersFuelOilWoodAndCoal,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUEL_DEALERS_NON_AUTOMOTIVE")]
         #pragma warning disable CS1591
-        FUEL_DEALERS_NON_AUTOMOTIVE,
+        FuelDealersNonAutomotive,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUNERAL_SERVICES_AND_CREMATORIES")]
         #pragma warning disable CS1591
-        FUNERAL_SERVICES_AND_CREMATORIES,
+        FuneralServicesAndCrematories,
         #pragma warning restore CS1591
         [EnumMember(Value = "FURNISHING_AND_DECORATING")]
         #pragma warning disable CS1591
-        FURNISHING_AND_DECORATING,
+        FurnishingAndDecorating,
         #pragma warning restore CS1591
         [EnumMember(Value = "FURNITURE")]
         #pragma warning disable CS1591
-        FURNITURE,
+        Furniture,
         #pragma warning restore CS1591
         [EnumMember(Value = "FURRIERS_AND_FUR_SHOPS")]
         #pragma warning disable CS1591
-        FURRIERS_AND_FUR_SHOPS,
+        FurriersAndFurShops,
         #pragma warning restore CS1591
         [EnumMember(Value = "GADGETS_AND_OTHER_ELECTRONICS")]
         #pragma warning disable CS1591
-        GADGETS_AND_OTHER_ELECTRONICS,
+        GadgetsAndOtherElectronics,
         #pragma warning restore CS1591
         [EnumMember(Value = "GAMBLING")]
         #pragma warning disable CS1591
-        GAMBLING,
+        Gambling,
         #pragma warning restore CS1591
         [EnumMember(Value = "GAME_SOFTWARE")]
         #pragma warning disable CS1591
-        GAME_SOFTWARE,
+        GameSoftware,
         #pragma warning restore CS1591
         [EnumMember(Value = "GAMES")]
         #pragma warning disable CS1591
-        GAMES,
+        Games,
         #pragma warning restore CS1591
         [EnumMember(Value = "GARDEN_SUPPLIES")]
         #pragma warning disable CS1591
-        GARDEN_SUPPLIES,
+        GardenSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL")]
         #pragma warning disable CS1591
-        GENERAL,
+        General,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_CONTRACTORS")]
         #pragma warning disable CS1591
-        GENERAL_CONTRACTORS,
+        GeneralContractors,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_GOVERNMENT")]
         #pragma warning disable CS1591
-        GENERAL_GOVERNMENT,
+        GeneralGovernment,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_SOFTWARE")]
         #pragma warning disable CS1591
-        GENERAL_SOFTWARE,
+        GeneralSoftware,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_TELECOM")]
         #pragma warning disable CS1591
-        GENERAL_TELECOM,
+        GeneralTelecom,
         #pragma warning restore CS1591
         [EnumMember(Value = "GIFTS_AND_FLOWERS")]
         #pragma warning disable CS1591
-        GIFTS_AND_FLOWERS,
+        GiftsAndFlowers,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLASS_PAINT_AND_WALLPAPER_STORES")]
         #pragma warning disable CS1591
-        GLASS_PAINT_AND_WALLPAPER_STORES,
+        GlassPaintAndWallpaperStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLASSWARE_CRYSTAL_STORES")]
         #pragma warning disable CS1591
-        GLASSWARE_CRYSTAL_STORES,
+        GlasswareCrystalStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT")]
         #pragma warning disable CS1591
-        GOVERNMENT,
+        Government,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT_IDS_AND_LICENSES")]
         #pragma warning disable CS1591
-        GOVERNMENT_IDS_AND_LICENSES,
+        GovernmentIdsAndLicenses,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT_LICENSED_ON_LINE_CASINOS_ON_LINE_GAMBLING")]
         #pragma warning disable CS1591
-        GOVERNMENT_LICENSED_ON_LINE_CASINOS_ON_LINE_GAMBLING,
+        GovernmentLicensedOnLineCasinosOnLineGambling,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT_OWNED_LOTTERIES")]
         #pragma warning disable CS1591
-        GOVERNMENT_OWNED_LOTTERIES,
+        GovernmentOwnedLotteries,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT_SERVICES")]
         #pragma warning disable CS1591
-        GOVERNMENT_SERVICES,
+        GovernmentServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "GRAPHIC_AND_COMMERCIAL_DESIGN")]
         #pragma warning disable CS1591
-        GRAPHIC_AND_COMMERCIAL_DESIGN,
+        GraphicAndCommercialDesign,
         #pragma warning restore CS1591
         [EnumMember(Value = "GREETING_CARDS")]
         #pragma warning disable CS1591
-        GREETING_CARDS,
+        GreetingCards,
         #pragma warning restore CS1591
         [EnumMember(Value = "GROCERY_STORES_AND_SUPERMARKETS")]
         #pragma warning disable CS1591
-        GROCERY_STORES_AND_SUPERMARKETS,
+        GroceryStoresAndSupermarkets,
         #pragma warning restore CS1591
         [EnumMember(Value = "HARDWARE_AND_TOOLS")]
         #pragma warning disable CS1591
-        HARDWARE_AND_TOOLS,
+        HardwareAndTools,
         #pragma warning restore CS1591
         [EnumMember(Value = "HARDWARE_EQUIPMENT_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        HARDWARE_EQUIPMENT_AND_SUPPLIES,
+        HardwareEquipmentAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "HAZARDOUS_RESTRICTED_AND_PERISHABLE_ITEMS")]
         #pragma warning disable CS1591
-        HAZARDOUS_RESTRICTED_AND_PERISHABLE_ITEMS,
+        HazardousRestrictedAndPerishableItems,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEALTH_AND_BEAUTY_SPAS")]
         #pragma warning disable CS1591
-        HEALTH_AND_BEAUTY_SPAS,
+        HealthAndBeautySpas,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEALTH_AND_NUTRITION")]
         #pragma warning disable CS1591
-        HEALTH_AND_NUTRITION,
+        HealthAndNutrition,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEALTH_AND_PERSONAL_CARE")]
         #pragma warning disable CS1591
-        HEALTH_AND_PERSONAL_CARE,
+        HealthAndPersonalCare,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEARING_AIDS_SALES_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        HEARING_AIDS_SALES_AND_SUPPLIES,
+        HearingAidsSalesAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEATING_PLUMBING_AC")]
         #pragma warning disable CS1591
-        HEATING_PLUMBING_AC,
+        HeatingPlumbingAc,
         #pragma warning restore CS1591
         [EnumMember(Value = "HIGH_RISK_MERCHANT")]
         #pragma warning disable CS1591
-        HIGH_RISK_MERCHANT,
+        HighRiskMerchant,
         #pragma warning restore CS1591
         [EnumMember(Value = "HIRING_SERVICES")]
         #pragma warning disable CS1591
-        HIRING_SERVICES,
+        HiringServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOBBIES_TOYS_AND_GAMES")]
         #pragma warning disable CS1591
-        HOBBIES_TOYS_AND_GAMES,
+        HobbiesToysAndGames,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME_AND_GARDEN")]
         #pragma warning disable CS1591
-        HOME_AND_GARDEN,
+        HomeAndGarden,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME_AUDIO")]
         #pragma warning disable CS1591
-        HOME_AUDIO,
+        HomeAudio,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME_DECOR")]
         #pragma warning disable CS1591
-        HOME_DECOR,
+        HomeDecor,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME_ELECTRONICS")]
         #pragma warning disable CS1591
-        HOME_ELECTRONICS,
+        HomeElectronics,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOSPITALS")]
         #pragma warning disable CS1591
-        HOSPITALS,
+        Hospitals,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOTELS_MOTELS_INNS_RESORTS")]
         #pragma warning disable CS1591
-        HOTELS_MOTELS_INNS_RESORTS,
+        HotelsMotelsInnsResorts,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOUSEWARES")]
         #pragma warning disable CS1591
-        HOUSEWARES,
+        Housewares,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUMAN_PARTS_AND_REMAINS")]
         #pragma warning disable CS1591
-        HUMAN_PARTS_AND_REMAINS,
+        HumanPartsAndRemains,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUMOROUS_GIFTS_AND_NOVELTIES")]
         #pragma warning disable CS1591
-        HUMOROUS_GIFTS_AND_NOVELTIES,
+        HumorousGiftsAndNovelties,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUNTING")]
         #pragma warning disable CS1591
-        HUNTING,
+        Hunting,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDS_LICENSES_AND_PASSPORTS")]
         #pragma warning disable CS1591
-        IDS_LICENSES_AND_PASSPORTS,
+        IdsLicensesAndPassports,
         #pragma warning restore CS1591
         [EnumMember(Value = "ILLEGAL_DRUGS_AND_PARAPHERNALIA")]
         #pragma warning disable CS1591
-        ILLEGAL_DRUGS_AND_PARAPHERNALIA,
+        IllegalDrugsAndParaphernalia,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDUSTRIAL")]
         #pragma warning disable CS1591
-        INDUSTRIAL,
+        Industrial,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDUSTRIAL_AND_MANUFACTURING_SUPPLIES")]
         #pragma warning disable CS1591
-        INDUSTRIAL_AND_MANUFACTURING_SUPPLIES,
+        IndustrialAndManufacturingSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSURANCE_AUTO_AND_HOME")]
         #pragma warning disable CS1591
-        INSURANCE_AUTO_AND_HOME,
+        InsuranceAutoAndHome,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSURANCE_DIRECT")]
         #pragma warning disable CS1591
-        INSURANCE_DIRECT,
+        InsuranceDirect,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSURANCE_LIFE_AND_ANNUITY")]
         #pragma warning disable CS1591
-        INSURANCE_LIFE_AND_ANNUITY,
+        InsuranceLifeAndAnnuity,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSURANCE_SALES_UNDERWRITING")]
         #pragma warning disable CS1591
-        INSURANCE_SALES_UNDERWRITING,
+        InsuranceSalesUnderwriting,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSURANCE_UNDERWRITING_PREMIUMS")]
         #pragma warning disable CS1591
-        INSURANCE_UNDERWRITING_PREMIUMS,
+        InsuranceUnderwritingPremiums,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERNET_AND_NETWORK_SERVICES")]
         #pragma warning disable CS1591
-        INTERNET_AND_NETWORK_SERVICES,
+        InternetAndNetworkServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTRA_COMPANY_PURCHASES")]
         #pragma warning disable CS1591
-        INTRA_COMPANY_PURCHASES,
+        IntraCompanyPurchases,
         #pragma warning restore CS1591
         [EnumMember(Value = "LABORATORIES_DENTAL_MEDICAL")]
         #pragma warning disable CS1591
-        LABORATORIES_DENTAL_MEDICAL,
+        LaboratoriesDentalMedical,
         #pragma warning restore CS1591
         [EnumMember(Value = "LANDSCAPING")]
         #pragma warning disable CS1591
-        LANDSCAPING,
+        Landscaping,
         #pragma warning restore CS1591
         [EnumMember(Value = "LANDSCAPING_AND_HORTICULTURAL_SERVICES")]
         #pragma warning disable CS1591
-        LANDSCAPING_AND_HORTICULTURAL_SERVICES,
+        LandscapingAndHorticulturalServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "LAUNDRY_CLEANING_SERVICES")]
         #pragma warning disable CS1591
-        LAUNDRY_CLEANING_SERVICES,
+        LaundryCleaningServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEGAL")]
         #pragma warning disable CS1591
-        LEGAL,
+        Legal,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEGAL_SERVICES_AND_ATTORNEYS")]
         #pragma warning disable CS1591
-        LEGAL_SERVICES_AND_ATTORNEYS,
+        LegalServicesAndAttorneys,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOCAL_DELIVERY_SERVICE")]
         #pragma warning disable CS1591
-        LOCAL_DELIVERY_SERVICE,
+        LocalDeliveryService,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOCKSMITH")]
         #pragma warning disable CS1591
-        LOCKSMITH,
+        Locksmith,
         #pragma warning restore CS1591
         [EnumMember(Value = "LODGING_AND_ACCOMMODATIONS")]
         #pragma warning disable CS1591
-        LODGING_AND_ACCOMMODATIONS,
+        LodgingAndAccommodations,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOTTERY_AND_CONTESTS")]
         #pragma warning disable CS1591
-        LOTTERY_AND_CONTESTS,
+        LotteryAndContests,
         #pragma warning restore CS1591
         [EnumMember(Value = "LUGGAGE_AND_LEATHER_GOODS")]
         #pragma warning disable CS1591
-        LUGGAGE_AND_LEATHER_GOODS,
+        LuggageAndLeatherGoods,
         #pragma warning restore CS1591
         [EnumMember(Value = "LUMBER_AND_BUILDING_MATERIALS")]
         #pragma warning disable CS1591
-        LUMBER_AND_BUILDING_MATERIALS,
+        LumberAndBuildingMaterials,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAGAZINES")]
         #pragma warning disable CS1591
-        MAGAZINES,
+        Magazines,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAINTENANCE_AND_REPAIR_SERVICES")]
         #pragma warning disable CS1591
-        MAINTENANCE_AND_REPAIR_SERVICES,
+        MaintenanceAndRepairServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAKEUP_AND_COSMETICS")]
         #pragma warning disable CS1591
-        MAKEUP_AND_COSMETICS,
+        MakeupAndCosmetics,
         #pragma warning restore CS1591
         [EnumMember(Value = "MANUAL_CASH_DISBURSEMENTS")]
         #pragma warning disable CS1591
-        MANUAL_CASH_DISBURSEMENTS,
+        ManualCashDisbursements,
         #pragma warning restore CS1591
         [EnumMember(Value = "MASSAGE_PARLORS")]
         #pragma warning disable CS1591
-        MASSAGE_PARLORS,
+        MassageParlors,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL")]
         #pragma warning disable CS1591
-        MEDICAL,
+        Medical,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL_AND_PHARMACEUTICAL")]
         #pragma warning disable CS1591
-        MEDICAL_AND_PHARMACEUTICAL,
+        MedicalAndPharmaceutical,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL_CARE")]
         #pragma warning disable CS1591
-        MEDICAL_CARE,
+        MedicalCare,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL_EQUIPMENT_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        MEDICAL_EQUIPMENT_AND_SUPPLIES,
+        MedicalEquipmentAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL_SERVICES")]
         #pragma warning disable CS1591
-        MEDICAL_SERVICES,
+        MedicalServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEETING_PLANNERS")]
         #pragma warning disable CS1591
-        MEETING_PLANNERS,
+        MeetingPlanners,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEMBERSHIP_CLUBS_AND_ORGANIZATIONS")]
         #pragma warning disable CS1591
-        MEMBERSHIP_CLUBS_AND_ORGANIZATIONS,
+        MembershipClubsAndOrganizations,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEMBERSHIP_COUNTRY_CLUBS_GOLF")]
         #pragma warning disable CS1591
-        MEMBERSHIP_COUNTRY_CLUBS_GOLF,
+        MembershipCountryClubsGolf,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEMORABILIA")]
         #pragma warning disable CS1591
-        MEMORABILIA,
+        Memorabilia,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEN_AND_BOY_CLOTHING_AND_ACCESSORY_STORES")]
         #pragma warning disable CS1591
-        MEN_AND_BOY_CLOTHING_AND_ACCESSORY_STORES,
+        MenAndBoyClothingAndAccessoryStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEN_CLOTHING")]
         #pragma warning disable CS1591
-        MEN_CLOTHING,
+        MenClothing,
         #pragma warning restore CS1591
         [EnumMember(Value = "MERCHANDISE")]
         #pragma warning disable CS1591
-        MERCHANDISE,
+        Merchandise,
         #pragma warning restore CS1591
         [EnumMember(Value = "METAPHYSICAL")]
         #pragma warning disable CS1591
-        METAPHYSICAL,
+        Metaphysical,
         #pragma warning restore CS1591
         [EnumMember(Value = "MILITARIA")]
         #pragma warning disable CS1591
-        MILITARIA,
+        Militaria,
         #pragma warning restore CS1591
         [EnumMember(Value = "MILITARY_AND_CIVIL_SERVICE_UNIFORMS")]
         #pragma warning disable CS1591
-        MILITARY_AND_CIVIL_SERVICE_UNIFORMS,
+        MilitaryAndCivilServiceUniforms,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISC._AUTOMOTIVE_AIRCRAFT_AND_FARM_EQUIPMENT_DEALERS")]
         #pragma warning disable CS1591
-        MISC_AUTOMOTIVE_AIRCRAFT_AND_FARM_EQUIPMENT_DEALERS,
+        MiscAutomotiveAircraftAndFarmEquipmentDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISC._GENERAL_MERCHANDISE")]
         #pragma warning disable CS1591
-        MISC_GENERAL_MERCHANDISE,
+        MiscGeneralMerchandise,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISCELLANEOUS_GENERAL_SERVICES")]
         #pragma warning disable CS1591
-        MISCELLANEOUS_GENERAL_SERVICES,
+        MiscellaneousGeneralServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISCELLANEOUS_REPAIR_SHOPS_AND_RELATED_SERVICES")]
         #pragma warning disable CS1591
-        MISCELLANEOUS_REPAIR_SHOPS_AND_RELATED_SERVICES,
+        MiscellaneousRepairShopsAndRelatedServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "MODEL_KITS")]
         #pragma warning disable CS1591
-        MODEL_KITS,
+        ModelKits,
         #pragma warning restore CS1591
         [EnumMember(Value = "MONEY_TRANSFER_MEMBER_FINANCIAL_INSTITUTION")]
         #pragma warning disable CS1591
-        MONEY_TRANSFER_MEMBER_FINANCIAL_INSTITUTION,
+        MoneyTransferMemberFinancialInstitution,
         #pragma warning restore CS1591
         [EnumMember(Value = "MONEY_TRANSFER_MERCHANT")]
         #pragma warning disable CS1591
-        MONEY_TRANSFER_MERCHANT,
+        MoneyTransferMerchant,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTION_PICTURE_THEATERS")]
         #pragma warning disable CS1591
-        MOTION_PICTURE_THEATERS,
+        MotionPictureTheaters,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTOR_FREIGHT_CARRIERS_AND_TRUCKING")]
         #pragma warning disable CS1591
-        MOTOR_FREIGHT_CARRIERS_AND_TRUCKING,
+        MotorFreightCarriersAndTrucking,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTOR_HOME_AND_RECREATIONAL_VEHICLE_RENTAL")]
         #pragma warning disable CS1591
-        MOTOR_HOME_AND_RECREATIONAL_VEHICLE_RENTAL,
+        MotorHomeAndRecreationalVehicleRental,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTOR_HOMES_DEALERS")]
         #pragma warning disable CS1591
-        MOTOR_HOMES_DEALERS,
+        MotorHomesDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTOR_VEHICLE_SUPPLIES_AND_NEW_PARTS")]
         #pragma warning disable CS1591
-        MOTOR_VEHICLE_SUPPLIES_AND_NEW_PARTS,
+        MotorVehicleSuppliesAndNewParts,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTORCYCLE_DEALERS")]
         #pragma warning disable CS1591
-        MOTORCYCLE_DEALERS,
+        MotorcycleDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTORCYCLES")]
         #pragma warning disable CS1591
-        MOTORCYCLES,
+        Motorcycles,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOVIE")]
         #pragma warning disable CS1591
-        MOVIE,
+        Movie,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOVIE_TICKETS")]
         #pragma warning disable CS1591
-        MOVIE_TICKETS,
+        MovieTickets,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOVING_AND_STORAGE")]
         #pragma warning disable CS1591
-        MOVING_AND_STORAGE,
+        MovingAndStorage,
         #pragma warning restore CS1591
         [EnumMember(Value = "MULTI_LEVEL_MARKETING")]
         #pragma warning disable CS1591
-        MULTI_LEVEL_MARKETING,
+        MultiLevelMarketing,
         #pragma warning restore CS1591
         [EnumMember(Value = "MUSIC_CDS_CASSETTES_AND_ALBUMS")]
         #pragma warning disable CS1591
-        MUSIC_CDS_CASSETTES_AND_ALBUMS,
+        MusicCdsCassettesAndAlbums,
         #pragma warning restore CS1591
         [EnumMember(Value = "MUSIC_STORE_INSTRUMENTS_AND_SHEET_MUSIC")]
         #pragma warning disable CS1591
-        MUSIC_STORE_INSTRUMENTS_AND_SHEET_MUSIC,
+        MusicStoreInstrumentsAndSheetMusic,
         #pragma warning restore CS1591
         [EnumMember(Value = "NETWORKING")]
         #pragma warning disable CS1591
-        NETWORKING,
+        Networking,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEW_AGE")]
         #pragma warning disable CS1591
-        NEW_AGE,
+        NewAge,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEW_PARTS_AND_SUPPLIES_MOTOR_VEHICLE")]
         #pragma warning disable CS1591
-        NEW_PARTS_AND_SUPPLIES_MOTOR_VEHICLE,
+        NewPartsAndSuppliesMotorVehicle,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWS_DEALERS_AND_NEWSTANDS")]
         #pragma warning disable CS1591
-        NEWS_DEALERS_AND_NEWSTANDS,
+        NewsDealersAndNewstands,
         #pragma warning restore CS1591
         [EnumMember(Value = "NON_DURABLE_GOODS")]
         #pragma warning disable CS1591
-        NON_DURABLE_GOODS,
+        NonDurableGoods,
         #pragma warning restore CS1591
         [EnumMember(Value = "NON_FICTION")]
         #pragma warning disable CS1591
-        NON_FICTION,
+        NonFiction,
         #pragma warning restore CS1591
         [EnumMember(Value = "NON_PROFIT_POLITICAL_AND_RELIGION")]
         #pragma warning disable CS1591
-        NON_PROFIT_POLITICAL_AND_RELIGION,
+        NonProfitPoliticalAndReligion,
         #pragma warning restore CS1591
         [EnumMember(Value = "NONPROFIT")]
         #pragma warning disable CS1591
-        NONPROFIT,
+        Nonprofit,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOVELTIES")]
         #pragma warning disable CS1591
-        NOVELTIES,
+        Novelties,
         #pragma warning restore CS1591
         [EnumMember(Value = "OEM_SOFTWARE")]
         #pragma warning disable CS1591
-        OEM_SOFTWARE,
+        OemSoftware,
         #pragma warning restore CS1591
         [EnumMember(Value = "OFFICE_SUPPLIES_AND_EQUIPMENT")]
         #pragma warning disable CS1591
-        OFFICE_SUPPLIES_AND_EQUIPMENT,
+        OfficeSuppliesAndEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE_DATING")]
         #pragma warning disable CS1591
-        ONLINE_DATING,
+        OnlineDating,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE_GAMING")]
         #pragma warning disable CS1591
-        ONLINE_GAMING,
+        OnlineGaming,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE_GAMING_CURRENCY")]
         #pragma warning disable CS1591
-        ONLINE_GAMING_CURRENCY,
+        OnlineGamingCurrency,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE_SERVICES")]
         #pragma warning disable CS1591
-        ONLINE_SERVICES,
+        OnlineServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "OOUTBOUND_TELEMARKETING_MERCH")]
         #pragma warning disable CS1591
-        OOUTBOUND_TELEMARKETING_MERCH,
+        OoutboundTelemarketingMerch,
         #pragma warning restore CS1591
         [EnumMember(Value = "OPHTHALMOLOGISTS_OPTOMETRIST")]
         #pragma warning disable CS1591
-        OPHTHALMOLOGISTS_OPTOMETRIST,
+        OphthalmologistsOptometrist,
         #pragma warning restore CS1591
         [EnumMember(Value = "OPTICIANS_AND_DISPENSING")]
         #pragma warning disable CS1591
-        OPTICIANS_AND_DISPENSING,
+        OpticiansAndDispensing,
         #pragma warning restore CS1591
         [EnumMember(Value = "ORTHOPEDIC_GOODS_PROSTHETICS")]
         #pragma warning disable CS1591
-        ORTHOPEDIC_GOODS_PROSTHETICS,
+        OrthopedicGoodsProsthetics,
         #pragma warning restore CS1591
         [EnumMember(Value = "OSTEOPATHS")]
         #pragma warning disable CS1591
-        OSTEOPATHS,
+        Osteopaths,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACKAGE_TOUR_OPERATORS")]
         #pragma warning disable CS1591
-        PACKAGE_TOUR_OPERATORS,
+        PackageTourOperators,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAINTBALL")]
         #pragma warning disable CS1591
-        PAINTBALL,
+        Paintball,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAINTS_VARNISHES_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        PAINTS_VARNISHES_AND_SUPPLIES,
+        PaintsVarnishesAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARKING_LOTS_AND_GARAGES")]
         #pragma warning disable CS1591
-        PARKING_LOTS_AND_GARAGES,
+        ParkingLotsAndGarages,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTS_AND_ACCESSORIES")]
         #pragma warning disable CS1591
-        PARTS_AND_ACCESSORIES,
+        PartsAndAccessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAWN_SHOPS")]
         #pragma warning disable CS1591
-        PAWN_SHOPS,
+        PawnShops,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYCHECK_LENDER_OR_CASH_ADVANCE")]
         #pragma warning disable CS1591
-        PAYCHECK_LENDER_OR_CASH_ADVANCE,
+        PaycheckLenderOrCashAdvance,
         #pragma warning restore CS1591
         [EnumMember(Value = "PERIPHERALS")]
         #pragma warning disable CS1591
-        PERIPHERALS,
+        Peripherals,
         #pragma warning restore CS1591
         [EnumMember(Value = "PERSONALIZED_GIFTS")]
         #pragma warning disable CS1591
-        PERSONALIZED_GIFTS,
+        PersonalizedGifts,
         #pragma warning restore CS1591
         [EnumMember(Value = "PET_SHOPS_PET_FOOD_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        PET_SHOPS_PET_FOOD_AND_SUPPLIES,
+        PetShopsPetFoodAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "PETROLEUM_AND_PETROLEUM_PRODUCTS")]
         #pragma warning disable CS1591
-        PETROLEUM_AND_PETROLEUM_PRODUCTS,
+        PetroleumAndPetroleumProducts,
         #pragma warning restore CS1591
         [EnumMember(Value = "PETS_AND_ANIMALS")]
         #pragma warning disable CS1591
-        PETS_AND_ANIMALS,
+        PetsAndAnimals,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHOTOFINISHING_LABORATORIES_PHOTO_DEVELOPING")]
         #pragma warning disable CS1591
-        PHOTOFINISHING_LABORATORIES_PHOTO_DEVELOPING,
+        PhotofinishingLaboratoriesPhotoDeveloping,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHOTOGRAPHIC_STUDIOS_PORTRAITS")]
         #pragma warning disable CS1591
-        PHOTOGRAPHIC_STUDIOS_PORTRAITS,
+        PhotographicStudiosPortraits,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHOTOGRAPHY")]
         #pragma warning disable CS1591
-        PHOTOGRAPHY,
+        Photography,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHYSICAL_GOOD")]
         #pragma warning disable CS1591
-        PHYSICAL_GOOD,
+        PhysicalGood,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICTURE_VIDEO_PRODUCTION")]
         #pragma warning disable CS1591
-        PICTURE_VIDEO_PRODUCTION,
+        PictureVideoProduction,
         #pragma warning restore CS1591
         [EnumMember(Value = "PIECE_GOODS_NOTIONS_AND_OTHER_DRY_GOODS")]
         #pragma warning disable CS1591
-        PIECE_GOODS_NOTIONS_AND_OTHER_DRY_GOODS,
+        PieceGoodsNotionsAndOtherDryGoods,
         #pragma warning restore CS1591
         [EnumMember(Value = "PLANTS_AND_SEEDS")]
         #pragma warning disable CS1591
-        PLANTS_AND_SEEDS,
+        PlantsAndSeeds,
         #pragma warning restore CS1591
         [EnumMember(Value = "PLUMBING_AND_HEATING_EQUIPMENTS_AND_SUPPLIES")]
         #pragma warning disable CS1591
-        PLUMBING_AND_HEATING_EQUIPMENTS_AND_SUPPLIES,
+        PlumbingAndHeatingEquipmentsAndSupplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "POLICE_RELATED_ITEMS")]
         #pragma warning disable CS1591
-        POLICE_RELATED_ITEMS,
+        PoliceRelatedItems,
         #pragma warning restore CS1591
         [EnumMember(Value = "POLITICAL_ORGANIZATIONS")]
         #pragma warning disable CS1591
-        POLITICAL_ORGANIZATIONS,
+        PoliticalOrganizations,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTAL_SERVICES_GOVERNMENT_ONLY")]
         #pragma warning disable CS1591
-        POSTAL_SERVICES_GOVERNMENT_ONLY,
+        PostalServicesGovernmentOnly,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTERS")]
         #pragma warning disable CS1591
-        POSTERS,
+        Posters,
         #pragma warning restore CS1591
         [EnumMember(Value = "PREPAID_AND_STORED_VALUE_CARDS")]
         #pragma warning disable CS1591
-        PREPAID_AND_STORED_VALUE_CARDS,
+        PrepaidAndStoredValueCards,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRESCRIPTION_DRUGS")]
         #pragma warning disable CS1591
-        PRESCRIPTION_DRUGS,
+        PrescriptionDrugs,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROMOTIONAL_ITEMS")]
         #pragma warning disable CS1591
-        PROMOTIONAL_ITEMS,
+        PromotionalItems,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLIC_WAREHOUSING_AND_STORAGE")]
         #pragma warning disable CS1591
-        PUBLIC_WAREHOUSING_AND_STORAGE,
+        PublicWarehousingAndStorage,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLISHING_AND_PRINTING")]
         #pragma warning disable CS1591
-        PUBLISHING_AND_PRINTING,
+        PublishingAndPrinting,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLISHING_SERVICES")]
         #pragma warning disable CS1591
-        PUBLISHING_SERVICES,
+        PublishingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "RADAR_DECTORS")]
         #pragma warning disable CS1591
-        RADAR_DECTORS,
+        RadarDectors,
         #pragma warning restore CS1591
         [EnumMember(Value = "RADIO_TELEVISION_AND_STEREO_REPAIR")]
         #pragma warning disable CS1591
-        RADIO_TELEVISION_AND_STEREO_REPAIR,
+        RadioTelevisionAndStereoRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "REAL_ESTATE")]
         #pragma warning disable CS1591
-        REAL_ESTATE,
+        RealEstate,
         #pragma warning restore CS1591
         [EnumMember(Value = "REAL_ESTATE_AGENT")]
         #pragma warning disable CS1591
-        REAL_ESTATE_AGENT,
+        RealEstateAgent,
         #pragma warning restore CS1591
         [EnumMember(Value = "REAL_ESTATE_AGENTS_AND_MANAGERS_RENTALS")]
         #pragma warning disable CS1591
-        REAL_ESTATE_AGENTS_AND_MANAGERS_RENTALS,
+        RealEstateAgentsAndManagersRentals,
         #pragma warning restore CS1591
         [EnumMember(Value = "RELIGION_AND_SPIRITUALITY_FOR_PROFIT")]
         #pragma warning disable CS1591
-        RELIGION_AND_SPIRITUALITY_FOR_PROFIT,
+        ReligionAndSpiritualityForProfit,
         #pragma warning restore CS1591
         [EnumMember(Value = "RELIGIOUS")]
         #pragma warning disable CS1591
-        RELIGIOUS,
+        Religious,
         #pragma warning restore CS1591
         [EnumMember(Value = "RELIGIOUS_ORGANIZATIONS")]
         #pragma warning disable CS1591
-        RELIGIOUS_ORGANIZATIONS,
+        ReligiousOrganizations,
         #pragma warning restore CS1591
         [EnumMember(Value = "REMITTANCE")]
         #pragma warning disable CS1591
-        REMITTANCE,
+        Remittance,
         #pragma warning restore CS1591
         [EnumMember(Value = "RENTAL_PROPERTY_MANAGEMENT")]
         #pragma warning disable CS1591
-        RENTAL_PROPERTY_MANAGEMENT,
+        RentalPropertyManagement,
         #pragma warning restore CS1591
         [EnumMember(Value = "RESIDENTIAL")]
         #pragma warning disable CS1591
-        RESIDENTIAL,
+        Residential,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETAIL")]
         #pragma warning disable CS1591
-        RETAIL,
+        Retail,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETAIL_FINE_JEWELRY_AND_WATCHES")]
         #pragma warning disable CS1591
-        RETAIL_FINE_JEWELRY_AND_WATCHES,
+        RetailFineJewelryAndWatches,
         #pragma warning restore CS1591
         [EnumMember(Value = "REUPHOLSTERY_AND_FURNITURE_REPAIR")]
         #pragma warning disable CS1591
-        REUPHOLSTERY_AND_FURNITURE_REPAIR,
+        ReupholsteryAndFurnitureRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "RINGS")]
         #pragma warning disable CS1591
-        RINGS,
+        Rings,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROOFING_SIDING_SHEET_METAL")]
         #pragma warning disable CS1591
-        ROOFING_SIDING_SHEET_METAL,
+        RoofingSidingSheetMetal,
         #pragma warning restore CS1591
         [EnumMember(Value = "RUGS_AND_CARPETS")]
         #pragma warning disable CS1591
-        RUGS_AND_CARPETS,
+        RugsAndCarpets,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCHOOLS_AND_COLLEGES")]
         #pragma warning disable CS1591
-        SCHOOLS_AND_COLLEGES,
+        SchoolsAndColleges,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCIENCE_FICTION")]
         #pragma warning disable CS1591
-        SCIENCE_FICTION,
+        ScienceFiction,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCRAPBOOKING")]
         #pragma warning disable CS1591
-        SCRAPBOOKING,
+        Scrapbooking,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCULPTURES")]
         #pragma warning disable CS1591
-        SCULPTURES,
+        Sculptures,
         #pragma warning restore CS1591
         [EnumMember(Value = "SECURITIES_BROKERS_AND_DEALERS")]
         #pragma warning disable CS1591
-        SECURITIES_BROKERS_AND_DEALERS,
+        SecuritiesBrokersAndDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "SECURITY_AND_SURVEILLANCE")]
         #pragma warning disable CS1591
-        SECURITY_AND_SURVEILLANCE,
+        SecurityAndSurveillance,
         #pragma warning restore CS1591
         [EnumMember(Value = "SECURITY_AND_SURVEILLANCE_EQUIPMENT")]
         #pragma warning disable CS1591
-        SECURITY_AND_SURVEILLANCE_EQUIPMENT,
+        SecurityAndSurveillanceEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "SECURITY_BROKERS_AND_DEALERS")]
         #pragma warning disable CS1591
-        SECURITY_BROKERS_AND_DEALERS,
+        SecurityBrokersAndDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEMINARS")]
         #pragma warning disable CS1591
-        SEMINARS,
+        Seminars,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVICE_STATIONS")]
         #pragma warning disable CS1591
-        SERVICE_STATIONS,
+        ServiceStations,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVICES")]
         #pragma warning disable CS1591
-        SERVICES,
+        Services,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEWING_NEEDLEWORK_FABRIC_AND_PIECE_GOODS_STORES")]
         #pragma warning disable CS1591
-        SEWING_NEEDLEWORK_FABRIC_AND_PIECE_GOODS_STORES,
+        SewingNeedleworkFabricAndPieceGoodsStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPING_AND_PACKING")]
         #pragma warning disable CS1591
-        SHIPPING_AND_PACKING,
+        ShippingAndPacking,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOE_REPAIR_HAT_CLEANING")]
         #pragma warning disable CS1591
-        SHOE_REPAIR_HAT_CLEANING,
+        ShoeRepairHatCleaning,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOE_STORES")]
         #pragma warning disable CS1591
-        SHOE_STORES,
+        ShoeStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOES")]
         #pragma warning disable CS1591
-        SHOES,
+        Shoes,
         #pragma warning restore CS1591
         [EnumMember(Value = "SNOWMOBILE_DEALERS")]
         #pragma warning disable CS1591
-        SNOWMOBILE_DEALERS,
+        SnowmobileDealers,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOFTWARE")]
         #pragma warning disable CS1591
-        SOFTWARE,
+        Software,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPECIALTY_AND_MISC._FOOD_STORES")]
         #pragma warning disable CS1591
-        SPECIALTY_AND_MISC_FOOD_STORES,
+        SpecialtyAndMiscFoodStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPECIALTY_CLEANING_POLISHING_AND_SANITATION_PREPARATIONS")]
         #pragma warning disable CS1591
-        SPECIALTY_CLEANING_POLISHING_AND_SANITATION_PREPARATIONS,
+        SpecialtyCleaningPolishingAndSanitationPreparations,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPECIALTY_OR_RARE_PETS")]
         #pragma warning disable CS1591
-        SPECIALTY_OR_RARE_PETS,
+        SpecialtyOrRarePets,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPORT_GAMES_AND_TOYS")]
         #pragma warning disable CS1591
-        SPORT_GAMES_AND_TOYS,
+        SportGamesAndToys,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPORTING_AND_RECREATIONAL_CAMPS")]
         #pragma warning disable CS1591
-        SPORTING_AND_RECREATIONAL_CAMPS,
+        SportingAndRecreationalCamps,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPORTING_GOODS")]
         #pragma warning disable CS1591
-        SPORTING_GOODS,
+        SportingGoods,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPORTS_AND_OUTDOORS")]
         #pragma warning disable CS1591
-        SPORTS_AND_OUTDOORS,
+        SportsAndOutdoors,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPORTS_AND_RECREATION")]
         #pragma warning disable CS1591
-        SPORTS_AND_RECREATION,
+        SportsAndRecreation,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAMP_AND_COIN")]
         #pragma warning disable CS1591
-        STAMP_AND_COIN,
+        StampAndCoin,
         #pragma warning restore CS1591
         [EnumMember(Value = "STATIONARY_PRINTING_AND_WRITING_PAPER")]
         #pragma warning disable CS1591
-        STATIONARY_PRINTING_AND_WRITING_PAPER,
+        StationaryPrintingAndWritingPaper,
         #pragma warning restore CS1591
         [EnumMember(Value = "STENOGRAPHIC_AND_SECRETARIAL_SUPPORT_SERVICES")]
         #pragma warning disable CS1591
-        STENOGRAPHIC_AND_SECRETARIAL_SUPPORT_SERVICES,
+        StenographicAndSecretarialSupportServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "STOCKS_BONDS_SECURITIES_AND_RELATED_CERTIFICATES")]
         #pragma warning disable CS1591
-        STOCKS_BONDS_SECURITIES_AND_RELATED_CERTIFICATES,
+        StocksBondsSecuritiesAndRelatedCertificates,
         #pragma warning restore CS1591
         [EnumMember(Value = "STORED_VALUE_CARDS")]
         #pragma warning disable CS1591
-        STORED_VALUE_CARDS,
+        StoredValueCards,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUPPLIES")]
         #pragma warning disable CS1591
-        SUPPLIES,
+        Supplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUPPLIES_AND_TOYS")]
         #pragma warning disable CS1591
-        SUPPLIES_AND_TOYS,
+        SuppliesAndToys,
         #pragma warning restore CS1591
         [EnumMember(Value = "SURVEILLANCE_EQUIPMENT")]
         #pragma warning disable CS1591
-        SURVEILLANCE_EQUIPMENT,
+        SurveillanceEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWIMMING_POOLS_AND_SPAS")]
         #pragma warning disable CS1591
-        SWIMMING_POOLS_AND_SPAS,
+        SwimmingPoolsAndSpas,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWIMMING_POOLS_SALES_SUPPLIES_SERVICES")]
         #pragma warning disable CS1591
-        SWIMMING_POOLS_SALES_SUPPLIES_SERVICES,
+        SwimmingPoolsSalesSuppliesServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAILORS_AND_ALTERATIONS")]
         #pragma warning disable CS1591
-        TAILORS_AND_ALTERATIONS,
+        TailorsAndAlterations,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAX_PAYMENTS")]
         #pragma warning disable CS1591
-        TAX_PAYMENTS,
+        TaxPayments,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAX_PAYMENTS_GOVERNMENT_AGENCIES")]
         #pragma warning disable CS1591
-        TAX_PAYMENTS_GOVERNMENT_AGENCIES,
+        TaxPaymentsGovernmentAgencies,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAXICABS_AND_LIMOUSINES")]
         #pragma warning disable CS1591
-        TAXICABS_AND_LIMOUSINES,
+        TaxicabsAndLimousines,
         #pragma warning restore CS1591
         [EnumMember(Value = "TELECOMMUNICATION_SERVICES")]
         #pragma warning disable CS1591
-        TELECOMMUNICATION_SERVICES,
+        TelecommunicationServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "TELEPHONE_CARDS")]
         #pragma warning disable CS1591
-        TELEPHONE_CARDS,
+        TelephoneCards,
         #pragma warning restore CS1591
         [EnumMember(Value = "TELEPHONE_EQUIPMENT")]
         #pragma warning disable CS1591
-        TELEPHONE_EQUIPMENT,
+        TelephoneEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "TELEPHONE_SERVICES")]
         #pragma warning disable CS1591
-        TELEPHONE_SERVICES,
+        TelephoneServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "THEATER")]
         #pragma warning disable CS1591
-        THEATER,
+        Theater,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIRE_RETREADING_AND_REPAIR")]
         #pragma warning disable CS1591
-        TIRE_RETREADING_AND_REPAIR,
+        TireRetreadingAndRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL_OR_BRIDGE_FEES")]
         #pragma warning disable CS1591
-        TOLL_OR_BRIDGE_FEES,
+        TollOrBridgeFees,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOOLS_AND_EQUIPMENT")]
         #pragma warning disable CS1591
-        TOOLS_AND_EQUIPMENT,
+        ToolsAndEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOURIST_ATTRACTIONS_AND_EXHIBITS")]
         #pragma warning disable CS1591
-        TOURIST_ATTRACTIONS_AND_EXHIBITS,
+        TouristAttractionsAndExhibits,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOWING_SERVICE")]
         #pragma warning disable CS1591
-        TOWING_SERVICE,
+        TowingService,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOYS_AND_GAMES")]
         #pragma warning disable CS1591
-        TOYS_AND_GAMES,
+        ToysAndGames,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRADE_AND_VOCATIONAL_SCHOOLS")]
         #pragma warning disable CS1591
-        TRADE_AND_VOCATIONAL_SCHOOLS,
+        TradeAndVocationalSchools,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRADEMARK_INFRINGEMENT")]
         #pragma warning disable CS1591
-        TRADEMARK_INFRINGEMENT,
+        TrademarkInfringement,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRAILER_PARKS_AND_CAMPGROUNDS")]
         #pragma warning disable CS1591
-        TRAILER_PARKS_AND_CAMPGROUNDS,
+        TrailerParksAndCampgrounds,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRAINING_SERVICES")]
         #pragma warning disable CS1591
-        TRAINING_SERVICES,
+        TrainingServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSPORTATION_SERVICES")]
         #pragma warning disable CS1591
-        TRANSPORTATION_SERVICES,
+        TransportationServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRAVEL")]
         #pragma warning disable CS1591
-        TRAVEL,
+        Travel,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUCK_AND_UTILITY_TRAILER_RENTALS")]
         #pragma warning disable CS1591
-        TRUCK_AND_UTILITY_TRAILER_RENTALS,
+        TruckAndUtilityTrailerRentals,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUCK_STOP")]
         #pragma warning disable CS1591
-        TRUCK_STOP,
+        TruckStop,
         #pragma warning restore CS1591
         [EnumMember(Value = "TYPESETTING_PLATE_MAKING_AND_RELATED_SERVICES")]
         #pragma warning disable CS1591
-        TYPESETTING_PLATE_MAKING_AND_RELATED_SERVICES,
+        TypesettingPlateMakingAndRelatedServices,
         #pragma warning restore CS1591
         [EnumMember(Value = "USED_MERCHANDISE_AND_SECONDHAND_STORES")]
         #pragma warning disable CS1591
-        USED_MERCHANDISE_AND_SECONDHAND_STORES,
+        UsedMerchandiseAndSecondhandStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "USED_PARTS_MOTOR_VEHICLE")]
         #pragma warning disable CS1591
-        USED_PARTS_MOTOR_VEHICLE,
+        UsedPartsMotorVehicle,
         #pragma warning restore CS1591
         [EnumMember(Value = "UTILITIES")]
         #pragma warning disable CS1591
-        UTILITIES,
+        Utilities,
         #pragma warning restore CS1591
         [EnumMember(Value = "UTILITIES_ELECTRIC_GAS_WATER_SANITARY")]
         #pragma warning disable CS1591
-        UTILITIES_ELECTRIC_GAS_WATER_SANITARY,
+        UtilitiesElectricGasWaterSanitary,
         #pragma warning restore CS1591
         [EnumMember(Value = "VARIETY_STORES")]
         #pragma warning disable CS1591
-        VARIETY_STORES,
+        VarietyStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "VEHICLE_SALES")]
         #pragma warning disable CS1591
-        VEHICLE_SALES,
+        VehicleSales,
         #pragma warning restore CS1591
         [EnumMember(Value = "VEHICLE_SERVICE_AND_ACCESSORIES")]
         #pragma warning disable CS1591
-        VEHICLE_SERVICE_AND_ACCESSORIES,
+        VehicleServiceAndAccessories,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIDEO_EQUIPMENT")]
         #pragma warning disable CS1591
-        VIDEO_EQUIPMENT,
+        VideoEquipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIDEO_GAME_ARCADES_ESTABLISH")]
         #pragma warning disable CS1591
-        VIDEO_GAME_ARCADES_ESTABLISH,
+        VideoGameArcadesEstablish,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIDEO_GAMES_AND_SYSTEMS")]
         #pragma warning disable CS1591
-        VIDEO_GAMES_AND_SYSTEMS,
+        VideoGamesAndSystems,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIDEO_TAPE_RENTAL_STORES")]
         #pragma warning disable CS1591
-        VIDEO_TAPE_RENTAL_STORES,
+        VideoTapeRentalStores,
         #pragma warning restore CS1591
         [EnumMember(Value = "VINTAGE_AND_COLLECTIBLE_VEHICLES")]
         #pragma warning disable CS1591
-        VINTAGE_AND_COLLECTIBLE_VEHICLES,
+        VintageAndCollectibleVehicles,
         #pragma warning restore CS1591
         [EnumMember(Value = "VINTAGE_AND_COLLECTIBLES")]
         #pragma warning disable CS1591
-        VINTAGE_AND_COLLECTIBLES,
+        VintageAndCollectibles,
         #pragma warning restore CS1591
         [EnumMember(Value = "VITAMINS_AND_SUPPLEMENTS")]
         #pragma warning disable CS1591
-        VITAMINS_AND_SUPPLEMENTS,
+        VitaminsAndSupplements,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOCATIONAL_AND_TRADE_SCHOOLS")]
         #pragma warning disable CS1591
-        VOCATIONAL_AND_TRADE_SCHOOLS,
+        VocationalAndTradeSchools,
         #pragma warning restore CS1591
         [EnumMember(Value = "WATCH_CLOCK_AND_JEWELRY_REPAIR")]
         #pragma warning disable CS1591
-        WATCH_CLOCK_AND_JEWELRY_REPAIR,
+        WatchClockAndJewelryRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEB_HOSTING_AND_DESIGN")]
         #pragma warning disable CS1591
-        WEB_HOSTING_AND_DESIGN,
+        WebHostingAndDesign,
         #pragma warning restore CS1591
         [EnumMember(Value = "WELDING_REPAIR")]
         #pragma warning disable CS1591
-        WELDING_REPAIR,
+        WeldingRepair,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHOLESALE_CLUBS")]
         #pragma warning disable CS1591
-        WHOLESALE_CLUBS,
+        WholesaleClubs,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHOLESALE_FLORIST_SUPPLIERS")]
         #pragma warning disable CS1591
-        WHOLESALE_FLORIST_SUPPLIERS,
+        WholesaleFloristSuppliers,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHOLESALE_PRESCRIPTION_DRUGS")]
         #pragma warning disable CS1591
-        WHOLESALE_PRESCRIPTION_DRUGS,
+        WholesalePrescriptionDrugs,
         #pragma warning restore CS1591
         [EnumMember(Value = "WILDLIFE_PRODUCTS")]
         #pragma warning disable CS1591
-        WILDLIFE_PRODUCTS,
+        WildlifeProducts,
         #pragma warning restore CS1591
         [EnumMember(Value = "WIRE_TRANSFER")]
         #pragma warning disable CS1591
-        WIRE_TRANSFER,
+        WireTransfer,
         #pragma warning restore CS1591
         [EnumMember(Value = "WIRE_TRANSFER_AND_MONEY_ORDER")]
         #pragma warning disable CS1591
-        WIRE_TRANSFER_AND_MONEY_ORDER,
+        WireTransferAndMoneyOrder,
         #pragma warning restore CS1591
         [EnumMember(Value = "WOMEN_ACCESSORY_SPECIALITY")]
         #pragma warning disable CS1591
-        WOMEN_ACCESSORY_SPECIALITY,
+        WomenAccessorySpeciality,
         #pragma warning restore CS1591
         [EnumMember(Value = "WOMEN_CLOTHING")]
         #pragma warning disable CS1591
-        WOMEN_CLOTHING,
+        WomenClothing,
         #pragma warning restore CS1591
     }
 }

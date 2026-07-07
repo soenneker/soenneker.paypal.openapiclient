@@ -16,14 +16,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method used for card verification.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerification_method? Method { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum? Method { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardVerification"/> and sets the default values.
         /// </summary>
         public CardVerification()
         {
             AdditionalData = new Dictionary<string, object>();
-            Method = global::Soenneker.PayPal.OpenApiClient.Models.CardVerification_method.SCA_WHEN_REQUIRED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerification_method>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum>(); } },
             };
         }
         /// <summary>
@@ -53,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerification_method>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum>("method", Method);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

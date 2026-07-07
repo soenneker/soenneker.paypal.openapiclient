@@ -9,39 +9,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DUE_ON_RECEIPT")]
         #pragma warning disable CS1591
-        DUE_ON_RECEIPT,
+        DueOnReceipt,
         #pragma warning restore CS1591
         [EnumMember(Value = "DUE_ON_DATE_SPECIFIED")]
         #pragma warning disable CS1591
-        DUE_ON_DATE_SPECIFIED,
+        DueOnDateSpecified,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_10")]
         #pragma warning disable CS1591
-        NET_10,
+        Net10,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_15")]
         #pragma warning disable CS1591
-        NET_15,
+        Net15,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_30")]
         #pragma warning disable CS1591
-        NET_30,
+        Net30,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_45")]
         #pragma warning disable CS1591
-        NET_45,
+        Net45,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_60")]
         #pragma warning disable CS1591
-        NET_60,
+        Net60,
         #pragma warning restore CS1591
         [EnumMember(Value = "NET_90")]
         #pragma warning disable CS1591
-        NET_90,
+        Net90,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_DUE_DATE")]
         #pragma warning disable CS1591
-        NO_DUE_DATE,
+        NoDueDate,
         #pragma warning restore CS1591
     }
 }

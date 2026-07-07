@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DAMAGED")]
         #pragma warning disable CS1591
-        DAMAGED,
+        Damaged,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIFFERENT")]
         #pragma warning disable CS1591
-        DIFFERENT,
+        Different,
         #pragma warning restore CS1591
         [EnumMember(Value = "INCOMPLETE")]
         #pragma warning disable CS1591
-        INCOMPLETE,
+        Incomplete,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
     }
 }

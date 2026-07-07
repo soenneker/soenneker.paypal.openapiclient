@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The create_time property</summary>
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tracker_create_time? CreateTime { get; set; }
+        public string? CreateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tracker_create_time CreateTime { get; set; }
+        public string CreateTime { get; set; }
 #endif
         /// <summary>The tracker id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,28 +34,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of details of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_items>? Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1ItemsItem>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_items> Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1ItemsItem> Items { get; set; }
 #endif
         /// <summary>An array of request-related HATEOAS links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_links>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1LinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_links> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1LinksItem> Links { get; private set; }
 #endif
         /// <summary>The status of the item shipment.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.TrackerStatus? Status { get; set; }
-        /// <summary>The update_time property</summary>
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tracker_update_time? UpdateTime { get; set; }
+        public string? UpdateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tracker_update_time UpdateTime { get; set; }
+        public string UpdateTime { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Tracker"/> and sets the default values.
@@ -82,12 +82,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "create_time", n => { CreateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_create_time>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_create_time.CreateFromDiscriminatorValue); } },
+                { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_items>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_links>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_links.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1ItemsItem>(global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1ItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1LinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1LinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerStatus>(); } },
-                { "update_time", n => { UpdateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_update_time>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker_update_time.CreateFromDiscriminatorValue); } },
+                { "update_time", n => { UpdateTime = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -97,10 +97,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_create_time>("create_time", CreateTime);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_items>("items", Items);
+            writer.WriteStringValue("create_time", CreateTime);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TrackerAllOf1ItemsItem>("items", Items);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tracker_update_time>("update_time", UpdateTime);
+            writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

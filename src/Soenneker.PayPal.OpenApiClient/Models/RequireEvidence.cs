@@ -14,7 +14,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     public partial class RequireEvidence : IAdditionalDataHolder, IParsable
     {
         /// <summary>The action. Indicates whether the state change enables the customer or merchant to submit evidence.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence_action? Action { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidenceAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidenceAction>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidence_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequireEvidenceAction>("action", Action);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

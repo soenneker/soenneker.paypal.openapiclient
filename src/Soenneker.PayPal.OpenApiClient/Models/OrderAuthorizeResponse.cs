@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The create_time property</summary>
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_create_time? CreateTime { get; set; }
+        public string? CreateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_create_time CreateTime { get; set; }
+        public string CreateTime { get; set; }
 #endif
         /// <summary>The ID of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,58 +34,58 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The intent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_intent? Intent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseIntent? Intent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_intent Intent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseIntent Intent { get; set; }
 #endif
         /// <summary>An array of request-related HATEOAS links. To complete payer approval, use the `approve` link to redirect the payer. The API caller has 6 hours (default setting, this which can be changed by your account manager to 24/48/72 hours to accommodate your use case) from the time the order is created, to redirect your payer. Once redirected, the API caller has 6 hours for the payer to approve the order and either authorize or capture the order. If you are not using the PayPal JavaScript SDK to initiate PayPal Checkout (in context) ensure that you include `application_context.return_url` is specified or you will get &quot;We&apos;re sorry, Things don&apos;t appear to be working at the moment&quot; after the payer approves the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_links>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseLinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_links> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseLinksItem> Links { get; private set; }
 #endif
         /// <summary>The payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payer? Payer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePayer? Payer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payer Payer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePayer Payer { get; set; }
 #endif
         /// <summary>The payment_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payment_source? PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePaymentSource? PaymentSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payment_source PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePaymentSource PaymentSource { get; set; }
 #endif
         /// <summary>An array of purchase units. Each purchase unit establishes a contract between a customer and merchant. Each purchase unit represents either a full or partial order that the customer intends to purchase from the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_purchase_units>? PurchaseUnits { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePurchaseUnitsItem>? PurchaseUnits { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_purchase_units> PurchaseUnits { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePurchaseUnitsItem> PurchaseUnits { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_status? Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseStatus? Status { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_status Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseStatus Status { get; private set; }
 #endif
-        /// <summary>The update_time property</summary>
+        /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_update_time? UpdateTime { get; set; }
+        public string? UpdateTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_update_time UpdateTime { get; set; }
+        public string UpdateTime { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse"/> and sets the default values.
@@ -112,15 +112,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "create_time", n => { CreateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_create_time>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_create_time.CreateFromDiscriminatorValue); } },
+                { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "intent", n => { Intent = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_intent>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_intent.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_links>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_links.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payer>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payer.CreateFromDiscriminatorValue); } },
-                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payment_source>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payment_source.CreateFromDiscriminatorValue); } },
-                { "purchase_units", n => { PurchaseUnits = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_purchase_units>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_purchase_units.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_status>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_status.CreateFromDiscriminatorValue); } },
-                { "update_time", n => { UpdateTime = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_update_time>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_update_time.CreateFromDiscriminatorValue); } },
+                { "intent", n => { Intent = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseIntent>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseIntent.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePayer>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePayer.CreateFromDiscriminatorValue); } },
+                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePaymentSource.CreateFromDiscriminatorValue); } },
+                { "purchase_units", n => { PurchaseUnits = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePurchaseUnitsItem>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePurchaseUnitsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseStatus>(global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseStatus.CreateFromDiscriminatorValue); } },
+                { "update_time", n => { UpdateTime = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -130,13 +130,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_create_time>("create_time", CreateTime);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_intent>("intent", Intent);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payer>("payer", Payer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_payment_source>("payment_source", PaymentSource);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_purchase_units>("purchase_units", PurchaseUnits);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_status>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponse_update_time>("update_time", UpdateTime);
+            writer.WriteStringValue("create_time", CreateTime);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponseIntent>("intent", Intent);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePayer>("payer", Payer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePaymentSource>("payment_source", PaymentSource);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeResponseOrderAuthorizeResponsePurchaseUnitsItem>("purchase_units", PurchaseUnits);
+            writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

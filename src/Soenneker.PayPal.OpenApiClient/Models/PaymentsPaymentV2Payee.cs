@@ -15,21 +15,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The email_address property</summary>
+        /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_email_address? EmailAddress { get; set; }
+        public string? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_email_address EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
 #endif
-        /// <summary>The merchant_id property</summary>
+        /// <summary>The account identifier for a PayPal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_merchant_id? MerchantId { get; set; }
+        public string? MerchantId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_merchant_id MerchantId { get; set; }
+        public string MerchantId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_email_address.CreateFromDiscriminatorValue); } },
-                { "merchant_id", n => { MerchantId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_merchant_id>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_merchant_id.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetStringValue(); } },
+                { "merchant_id", n => { MerchantId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_email_address>("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee_merchant_id>("merchant_id", MerchantId);
+            writer.WriteStringValue("email_address", EmailAddress);
+            writer.WriteStringValue("merchant_id", MerchantId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

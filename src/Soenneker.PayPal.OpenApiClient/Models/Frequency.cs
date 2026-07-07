@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The number of intervals after which a subscriber is billed. For example, if the `interval_unit` is `DAY` with an `interval_count` of  `2`, the subscription is billed once every two days. The following table lists the maximum allowed values for the `interval_count` for each `interval_unit`:&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;code&gt;Interval unit&lt;/code&gt;&lt;/th&gt;&lt;th&gt;Maximum interval count&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;DAY&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;365&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;WEEK&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;52&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;MONTH&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;YEAR&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</summary>
         public int? IntervalCount { get; set; }
         /// <summary>The interval at which the subscription is charged or billed.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Frequency_interval_unit? IntervalUnit { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit? IntervalUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Frequency"/> and sets the default values.
         /// </summary>
         public Frequency()
         {
             AdditionalData = new Dictionary<string, object>();
+            IntervalCount = 1;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +46,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
-                { "interval_unit", n => { IntervalUnit = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency_interval_unit>(); } },
+                { "interval_unit", n => { IntervalUnit = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit>(); } },
             };
         }
         /// <summary>
@@ -56,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("interval_count", IntervalCount);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency_interval_unit>("interval_unit", IntervalUnit);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit>("interval_unit", IntervalUnit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

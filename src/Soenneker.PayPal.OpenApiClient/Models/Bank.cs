@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string AccountNumber { get; set; }
 #endif
         /// <summary>The type of bank account.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bank_account_type? AccountType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType? AccountType { get; set; }
         /// <summary>&quot;The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_number", n => { AccountNumber = n.GetStringValue(); } },
-                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Bank_account_type>(); } },
+                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType>(); } },
                 { "branch_location", n => { BranchLocation = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation>(global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation.CreateFromDiscriminatorValue); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>(global::Soenneker.PayPal.OpenApiClient.Models.Identifier.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_number", AccountNumber);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Bank_account_type>("account_type", AccountType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType>("account_type", AccountType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation>("branch_location", BranchLocation);
             writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>("identifiers", Identifiers);

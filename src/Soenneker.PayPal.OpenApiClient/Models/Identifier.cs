@@ -14,7 +14,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     public partial class Identifier : IParsable
     {
         /// <summary>The bank account ID type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Identifier_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IdentifierType? Type { get; set; }
         /// <summary>The value of account identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Identifier_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.IdentifierType>(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Identifier_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.IdentifierType>("type", Type);
             writer.WriteStringValue("value", Value);
         }
     }

@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "REFUND")]
         #pragma warning disable CS1591
-        REFUND,
+        Refund,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUND_WITH_RETURN")]
         #pragma warning disable CS1591
-        REFUND_WITH_RETURN,
+        RefundWithReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUND_WITH_REPLACEMENT")]
         #pragma warning disable CS1591
-        REFUND_WITH_REPLACEMENT,
+        RefundWithReplacement,
         #pragma warning restore CS1591
         [EnumMember(Value = "REPLACEMENT_WITHOUT_REFUND")]
         #pragma warning disable CS1591
-        REPLACEMENT_WITHOUT_REFUND,
+        ReplacementWithoutRefund,
         #pragma warning restore CS1591
     }
 }

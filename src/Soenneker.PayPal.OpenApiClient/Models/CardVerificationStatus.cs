@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "VERIFIED")]
         #pragma warning disable CS1591
-        VERIFIED,
+        Verified,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAILED")]
         #pragma warning disable CS1591
-        FAILED,
+        Failed,
         #pragma warning restore CS1591
     }
 }

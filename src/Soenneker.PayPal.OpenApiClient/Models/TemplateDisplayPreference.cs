@@ -23,6 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public TemplateDisplayPreference()
         {
             AdditionalData = new Dictionary<string, object>();
+            Hidden = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

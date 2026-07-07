@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string Href { get; set; }
 #endif
         /// <summary>The HTTP method required to make the related call.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription_method? Method { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescriptionMethod? Method { get; set; }
         /// <summary>The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "href", n => { Href = n.GetStringValue(); } },
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription_method>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescriptionMethod>(); } },
                 { "rel", n => { Rel = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("href", Href);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescription_method>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1LinkDescriptionMethod>("method", Method);
             writer.WriteStringValue("rel", Rel);
             writer.WriteAdditionalData(AdditionalData);
         }

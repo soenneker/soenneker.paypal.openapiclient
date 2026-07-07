@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "LEGAL")]
         #pragma warning disable CS1591
-        LEGAL,
+        Legal,
         #pragma warning restore CS1591
     }
 }

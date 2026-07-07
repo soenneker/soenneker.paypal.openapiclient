@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.VoidNamespace
 {
     /// <summary>
-    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\authorizations\{authorization_id}\void
+    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\authorizations\{authorizationId}\void
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VoidRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VoidRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorization_id}/void", pathParameters)
+        public VoidRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorizationId}/void", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VoidRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorization_id}/void", rawUrl)
+        public VoidRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorizationId}/void", rawUrl)
         {
         }
         /// <summary>

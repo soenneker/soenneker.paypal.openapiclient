@@ -44,10 +44,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The network_transaction_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCard_network_transaction_reference? NetworkTransactionReference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardNetworkTransactionReference? NetworkTransactionReference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCard_network_transaction_reference NetworkTransactionReference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardNetworkTransactionReference NetworkTransactionReference { get; set; }
 #endif
         /// <summary>The primary account number (PAN) for the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>(); } },
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "network_transaction_reference", n => { NetworkTransactionReference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCard_network_transaction_reference>(global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCard_network_transaction_reference.CreateFromDiscriminatorValue); } },
+                { "network_transaction_reference", n => { NetworkTransactionReference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardNetworkTransactionReference>(global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardNetworkTransactionReference.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "security_code", n => { SecurityCode = n.GetStringValue(); } },
             };
@@ -110,7 +110,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>("brand", Brand);
             writer.WriteStringValue("expiry", Expiry);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCard_network_transaction_reference>("network_transaction_reference", NetworkTransactionReference);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardNetworkTransactionReference>("network_transaction_reference", NetworkTransactionReference);
             writer.WriteStringValue("number", Number);
             writer.WriteStringValue("security_code", SecurityCode);
             writer.WriteAdditionalData(AdditionalData);

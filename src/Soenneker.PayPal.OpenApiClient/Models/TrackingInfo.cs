@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the shipment carrier for the transaction for this dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo_carrier_name? CarrierName { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfoCarrierName? CarrierName { get; set; }
         /// <summary>The name of carrier in free-form text for unavailable carriers. This field is mandatory when &lt;code&gt;carrier_name&lt;/code&gt; is &lt;code&gt;OTHER&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carrier_name", n => { CarrierName = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo_carrier_name>(); } },
+                { "carrier_name", n => { CarrierName = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfoCarrierName>(); } },
                 { "carrier_name_other", n => { CarrierNameOther = n.GetStringValue(); } },
                 { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
                 { "tracking_url", n => { TrackingUrl = n.GetStringValue(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo_carrier_name>("carrier_name", CarrierName);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfoCarrierName>("carrier_name", CarrierName);
             writer.WriteStringValue("carrier_name_other", CarrierNameOther);
             writer.WriteStringValue("tracking_number", TrackingNumber);
             writer.WriteStringValue("tracking_url", TrackingUrl);

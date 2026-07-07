@@ -34,7 +34,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The order in which this cycle is to run among other billing cycles. For example, a trial billing cycle has a `sequence` of `1` while a regular billing cycle has a `sequence` of `2`, so that trial cycle runs before the regular cycle.</summary>
         public int? Sequence { get; set; }
         /// <summary>The tenure type of the billing cycle. In case of a plan having trial cycle, only 2 trial cycles are allowed per plan.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCycle_tenure_type? TenureType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleTenureType? TenureType { get; set; }
         /// <summary>The number of times this billing cycle gets executed. Trial billing cycles can only be executed a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;). Regular billing cycles can be executed infinite times (value of &lt;code&gt;0&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;) or a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;).</summary>
         public int? TotalCycles { get; set; }
         /// <summary>
@@ -43,6 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public BillingCycle()
         {
             AdditionalData = new Dictionary<string, object>();
+            TotalCycles = 1;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency>(global::Soenneker.PayPal.OpenApiClient.Models.Frequency.CreateFromDiscriminatorValue); } },
                 { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme.CreateFromDiscriminatorValue); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
-                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycle_tenure_type>(); } },
+                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleTenureType>(); } },
                 { "total_cycles", n => { TotalCycles = n.GetIntValue(); } },
             };
         }
@@ -79,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency>("frequency", Frequency);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>("pricing_scheme", PricingScheme);
             writer.WriteIntValue("sequence", Sequence);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycle_tenure_type>("tenure_type", TenureType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleTenureType>("tenure_type", TenureType);
             writer.WriteIntValue("total_cycles", TotalCycles);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -15,21 +15,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The channel property</summary>
+        /// <summary>Channel through which the request is being posted. This object intends to collect information such as browser, operating system, device of the buyer. If both channel and User-Agent header are passed, data passed in the channel object takes precedence and User-Agent header will be used for information not provided in channel object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_channel? Channel { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerChannelComposed? Channel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_channel Channel { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerChannelComposed Channel { get; set; }
 #endif
-        /// <summary>The country_code property</summary>
+        /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_country_code? CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_country_code CountryCode { get; set; }
+        public string CountryCode { get; set; }
 #endif
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_phone? Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerPhone? Phone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_phone Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerPhone Phone { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer"/> and sets the default values.
@@ -80,11 +80,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_channel>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_channel.CreateFromDiscriminatorValue); } },
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_country_code.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerChannelComposed>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerChannelComposed.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_phone>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_phone.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerPhone>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerPhone.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_channel>("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_country_code>("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerChannelComposed>("channel", Channel);
+            writer.WriteStringValue("country_code", CountryCode);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer_phone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomerPhone>("phone", Phone);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

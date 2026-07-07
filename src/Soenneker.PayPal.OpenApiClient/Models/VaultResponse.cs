@@ -41,7 +41,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>The vault status.</summary>
         [Obsolete("")]
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultResponse_status? Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultResponse"/> and sets the default values.
         /// </summary>
@@ -70,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseCustomer.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseCustomer>("customer", Customer);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -34,13 +34,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The preference details for offline onboarding without UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Operation_offline_onboarding_preference? OfflineOnboardingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreference? OfflineOnboardingPreference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Operation_offline_onboarding_preference OfflineOnboardingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreference OfflineOnboardingPreference { get; set; }
 #endif
         /// <summary>The operation to enable for the customer. To enable the collection of the API permissions that you require to integrate with the customer, specify `API_INTEGRATION`. `BANK_ADDITION` is supported only for the US.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Operation_operation? OperationProp { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation? OperationProp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Operation"/> and sets the default values.
         /// </summary>
@@ -68,8 +68,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "api_integration_preference", n => { ApiIntegrationPreference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails.CreateFromDiscriminatorValue); } },
                 { "billing_agreement", n => { BillingAgreement = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement>(global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement.CreateFromDiscriminatorValue); } },
-                { "offline_onboarding_preference", n => { OfflineOnboardingPreference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Operation_offline_onboarding_preference>(global::Soenneker.PayPal.OpenApiClient.Models.Operation_offline_onboarding_preference.CreateFromDiscriminatorValue); } },
-                { "operation", n => { OperationProp = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Operation_operation>(); } },
+                { "offline_onboarding_preference", n => { OfflineOnboardingPreference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreference>(global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreference.CreateFromDiscriminatorValue); } },
+                { "operation", n => { OperationProp = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation>(); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails>("api_integration_preference", ApiIntegrationPreference);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement>("billing_agreement", BillingAgreement);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Operation_offline_onboarding_preference>("offline_onboarding_preference", OfflineOnboardingPreference);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Operation_operation>("operation", OperationProp);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreference>("offline_onboarding_preference", OfflineOnboardingPreference);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation>("operation", OperationProp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

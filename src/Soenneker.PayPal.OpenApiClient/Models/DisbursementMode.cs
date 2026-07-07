@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "INSTANT")]
         #pragma warning disable CS1591
-        INSTANT,
+        Instant,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELAYED")]
         #pragma warning disable CS1591
-        DELAYED,
+        Delayed,
         #pragma warning restore CS1591
     }
 }

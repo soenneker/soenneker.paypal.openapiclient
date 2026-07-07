@@ -39,6 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public CartInfo()
         {
             AdditionalData = new Dictionary<string, object>();
+            TaxInclusive = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

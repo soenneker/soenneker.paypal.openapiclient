@@ -56,17 +56,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string ReturnUrl { get; set; }
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_shipping_preference? ShippingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextShippingPreference? ShippingPreference { get; set; }
         /// <summary>Configures the label name to `Continue` or `Subscribe Now` for subscription consent experience.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_user_action? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextUserAction? UserAction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext"/> and sets the default values.
         /// </summary>
         public ApplicationContext()
         {
             AdditionalData = new Dictionary<string, object>();
-            ShippingPreference = global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_shipping_preference.GET_FROM_FILE;
-            UserAction = global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_user_action.SUBSCRIBE_NOW;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -91,8 +89,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextPaymentMethod>(global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
-                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_shipping_preference>(); } },
-                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_user_action>(); } },
+                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextShippingPreference>(); } },
+                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextUserAction>(); } },
             };
         }
         /// <summary>
@@ -107,8 +105,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteStringValue("return_url", ReturnUrl);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_shipping_preference>("shipping_preference", ShippingPreference);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext_user_action>("user_action", UserAction);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextShippingPreference>("shipping_preference", ShippingPreference);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContextUserAction>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

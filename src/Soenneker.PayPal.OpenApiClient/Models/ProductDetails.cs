@@ -32,7 +32,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string ExpectedDeliveryDate { get; set; }
 #endif
         /// <summary>Indicates whether the product was, or was not, received or returned.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails_product_received? ProductReceived { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ProductDetailsProductReceived? ProductReceived { get; set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expected_delivery_date", n => { ExpectedDeliveryDate = n.GetStringValue(); } },
-                { "product_received", n => { ProductReceived = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails_product_received>(); } },
+                { "product_received", n => { ProductReceived = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetailsProductReceived>(); } },
                 { "product_received_time", n => { ProductReceivedTime = n.GetStringValue(); } },
                 { "purchase_url", n => { PurchaseUrl = n.GetStringValue(); } },
                 { "return_details", n => { ReturnDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails.CreateFromDiscriminatorValue); } },
@@ -108,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("expected_delivery_date", ExpectedDeliveryDate);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails_product_received>("product_received", ProductReceived);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetailsProductReceived>("product_received", ProductReceived);
             writer.WriteStringValue("product_received_time", ProductReceivedTime);
             writer.WriteStringValue("purchase_url", PurchaseUrl);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails>("return_details", ReturnDetails);

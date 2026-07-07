@@ -15,37 +15,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The country_code property</summary>
+        /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_country_code? CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_country_code CountryCode { get; set; }
+        public string CountryCode { get; set; }
 #endif
-        /// <summary>The email property</summary>
+        /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_email? Email { get; set; }
+        public string? Email { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_email Email { get; set; }
+        public string Email { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The full name representation like Mr J Smith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_name? Name { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_name Name { get; set; }
+        public string Name { get; set; }
 #endif
-        /// <summary>The one_click property</summary>
+        /// <summary>The one-click integration flow object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_one_click? OneClick { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikOneClickComposed? OneClick { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Blik_one_click OneClick { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BlikOneClickComposed OneClick { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Blik"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.Blik_country_code.CreateFromDiscriminatorValue); } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_email>(global::Soenneker.PayPal.OpenApiClient.Models.Blik_email.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_name>(global::Soenneker.PayPal.OpenApiClient.Models.Blik_name.CreateFromDiscriminatorValue); } },
-                { "one_click", n => { OneClick = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_one_click>(global::Soenneker.PayPal.OpenApiClient.Models.Blik_one_click.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
+                { "email", n => { Email = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "one_click", n => { OneClick = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikOneClickComposed>(global::Soenneker.PayPal.OpenApiClient.Models.BlikOneClickComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_country_code>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_email>("email", Email);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_name>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik_one_click>("one_click", OneClick);
+            writer.WriteStringValue("country_code", CountryCode);
+            writer.WriteStringValue("email", Email);
+            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BlikOneClickComposed>("one_click", OneClick);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

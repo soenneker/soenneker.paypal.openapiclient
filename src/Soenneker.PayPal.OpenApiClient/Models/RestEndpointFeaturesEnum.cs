@@ -9,99 +9,99 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "PAYOUTS")]
         #pragma warning disable CS1591
-        PAYOUTS,
+        Payouts,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYMENT")]
         #pragma warning disable CS1591
-        PAYMENT,
+        Payment,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUND")]
         #pragma warning disable CS1591
-        REFUND,
+        Refund,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUTURE_PAYMENT")]
         #pragma warning disable CS1591
-        FUTURE_PAYMENT,
+        FuturePayment,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECT_PAYMENT")]
         #pragma warning disable CS1591
-        DIRECT_PAYMENT,
+        DirectPayment,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTNER_FEE")]
         #pragma warning disable CS1591
-        PARTNER_FEE,
+        PartnerFee,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELAY_FUNDS_DISBURSEMENT")]
         #pragma warning disable CS1591
-        DELAY_FUNDS_DISBURSEMENT,
+        DelayFundsDisbursement,
         #pragma warning restore CS1591
         [EnumMember(Value = "READ_SELLER_DISPUTE")]
         #pragma warning disable CS1591
-        READ_SELLER_DISPUTE,
+        ReadSellerDispute,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPDATE_SELLER_DISPUTE")]
         #pragma warning disable CS1591
-        UPDATE_SELLER_DISPUTE,
+        UpdateSellerDispute,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADVANCED_TRANSACTIONS_SEARCH")]
         #pragma warning disable CS1591
-        ADVANCED_TRANSACTIONS_SEARCH,
+        AdvancedTransactionsSearch,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWEEP_FUNDS_EXTERNAL_SINK")]
         #pragma warning disable CS1591
-        SWEEP_FUNDS_EXTERNAL_SINK,
+        SweepFundsExternalSink,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACCESS_MERCHANT_INFORMATION")]
         #pragma warning disable CS1591
-        ACCESS_MERCHANT_INFORMATION,
+        AccessMerchantInformation,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRACKING_SHIPMENT_READWRITE")]
         #pragma warning disable CS1591
-        TRACKING_SHIPMENT_READWRITE,
+        TrackingShipmentReadwrite,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVOICE_READ_WRITE")]
         #pragma warning disable CS1591
-        INVOICE_READ_WRITE,
+        InvoiceReadWrite,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISPUTE_READ_BUYER")]
         #pragma warning disable CS1591
-        DISPUTE_READ_BUYER,
+        DisputeReadBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPDATE_CUSTOMER_DISPUTES")]
         #pragma warning disable CS1591
-        UPDATE_CUSTOMER_DISPUTES,
+        UpdateCustomerDisputes,
         #pragma warning restore CS1591
         [EnumMember(Value = "VAULT")]
         #pragma warning disable CS1591
-        VAULT,
+        Vault,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLING_AGREEMENT")]
         #pragma warning disable CS1591
-        BILLING_AGREEMENT,
+        BillingAgreement,
         #pragma warning restore CS1591
         [EnumMember(Value = "WITHDRAWALS")]
         #pragma warning disable CS1591
-        WITHDRAWALS,
+        Withdrawals,
         #pragma warning restore CS1591
         [EnumMember(Value = "LINKED_FINANCIAL_INSTRUMENTS")]
         #pragma warning disable CS1591
-        LINKED_FINANCIAL_INSTRUMENTS,
+        LinkedFinancialInstruments,
         #pragma warning restore CS1591
         [EnumMember(Value = "USER_PROFILE")]
         #pragma warning disable CS1591
-        USER_PROFILE,
+        UserProfile,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_RISK_DATA")]
         #pragma warning disable CS1591
-        TRANSACTION_RISK_DATA,
+        TransactionRiskData,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYPAL_BALANCE")]
         #pragma warning disable CS1591
-        PAYPAL_BALANCE,
+        PaypalBalance,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXCHANGE_CURRENCY")]
         #pragma warning disable CS1591
-        EXCHANGE_CURRENCY,
+        ExchangeCurrency,
         #pragma warning restore CS1591
     }
 }

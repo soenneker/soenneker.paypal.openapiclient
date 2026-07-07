@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "MULTIPLE_RECIPIENTS_GROUP")]
         #pragma warning disable CS1591
-        MULTIPLE_RECIPIENTS_GROUP,
+        MultipleRecipientsGroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "BATCH")]
         #pragma warning disable CS1591
-        BATCH,
+        Batch,
         #pragma warning restore CS1591
         [EnumMember(Value = "REGULAR_SINGLE")]
         #pragma warning disable CS1591
-        REGULAR_SINGLE,
+        RegularSingle,
         #pragma warning restore CS1591
     }
 }

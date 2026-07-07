@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "9CBBBA3F3FFCE804DB7CBEB5F0A4FF63ED87D4709F7A6261A2F1505B44D698D7D2141DD5739B7B131E09AE5BC48D669CAF13DAAB93074B41DD01A7272E32F75B",
+  "descriptionHash": "40762C30D110944E6AB26B71C992D6A2D977FB1998BBFED18CDCB76E0837AFC7569D51FD1AC6D27A4EB845912360B93910E36AA257AE3F52D84CE5995CDD490C",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.1",
+  "kiotaVersion": "1.33.0",
   "clientClassName": "PayPalOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.PayPal.OpenApiClient",
@@ -30,5 +30,6 @@
   ],
   "includePatterns": [],
   "excludePatterns": [],
-  "disabledValidationRules": []
+  "disabledValidationRules": [],
+  "allowedExternalOrigins": []
 }

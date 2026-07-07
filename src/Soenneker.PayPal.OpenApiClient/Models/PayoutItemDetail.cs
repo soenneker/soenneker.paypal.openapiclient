@@ -67,7 +67,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public PayoutItemDetail()
         {
             AdditionalData = new Dictionary<string, object>();
-            RecipientWallet = global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum.PAYPAL;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOption> Options { get; set; }
 #endif
         /// <summary>A classification for the method of purchase fulfillment (e.g shipping, in-store pickup, etc). Either `type` or `options` may be present, but not both.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail"/> and sets the default values.
         /// </summary>
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailAddress.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailName>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailName.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOption>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailType>(); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailName>("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOption>("options", Options);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetail_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,27 +9,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "OPEN_INQUIRIES")]
         #pragma warning disable CS1591
-        OPEN_INQUIRIES,
+        OpenInquiries,
         #pragma warning restore CS1591
         [EnumMember(Value = "REQUIRED_ACTION")]
         #pragma warning disable CS1591
-        REQUIRED_ACTION,
+        RequiredAction,
         #pragma warning restore CS1591
         [EnumMember(Value = "REQUIRED_OTHER_PARTY_ACTION")]
         #pragma warning disable CS1591
-        REQUIRED_OTHER_PARTY_ACTION,
+        RequiredOtherPartyAction,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNDER_PAYPAL_REVIEW")]
         #pragma warning disable CS1591
-        UNDER_PAYPAL_REVIEW,
+        UnderPaypalReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPEALABLE")]
         #pragma warning disable CS1591
-        APPEALABLE,
+        Appealable,
         #pragma warning restore CS1591
         [EnumMember(Value = "RESOLVED")]
         #pragma warning disable CS1591
-        RESOLVED,
+        Resolved,
         #pragma warning restore CS1591
     }
 }

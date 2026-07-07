@@ -35,7 +35,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public StoredPaymentSource()
         {
             AdditionalData = new Dictionary<string, object>();
-            Usage = global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType.DERIVED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

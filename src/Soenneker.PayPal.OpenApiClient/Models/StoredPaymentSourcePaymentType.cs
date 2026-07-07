@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ONE_TIME")]
         #pragma warning disable CS1591
-        ONE_TIME,
+        OneTime,
         #pragma warning restore CS1591
         [EnumMember(Value = "RECURRING")]
         #pragma warning disable CS1591
-        RECURRING,
+        Recurring,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNSCHEDULED")]
         #pragma warning disable CS1591
-        UNSCHEDULED,
+        Unscheduled,
         #pragma warning restore CS1591
     }
 }

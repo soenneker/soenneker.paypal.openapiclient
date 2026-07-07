@@ -32,7 +32,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get; set; }
 #endif
         /// <summary>The outcome of a resolved dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code? OutcomeCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? OutcomeCode { get; set; }
         /// <summary>The reason for the adjudication type.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? OutcomeReason { get; set; }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
                 { "asset_refunded", n => { AssetRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
-                { "outcome_code", n => { OutcomeCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code>(); } },
+                { "outcome_code", n => { OutcomeCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode>(); } },
                 { "outcome_reason", n => { OutcomeReason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); } },
             };
         }
@@ -75,7 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("amount_refunded", AmountRefunded);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("asset_refunded", AssetRefunded);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome_outcome_code>("outcome_code", OutcomeCode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode>("outcome_code", OutcomeCode);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>("outcome_reason", OutcomeReason);
             writer.WriteAdditionalData(AdditionalData);
         }

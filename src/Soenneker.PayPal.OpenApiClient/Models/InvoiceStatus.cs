@@ -9,67 +9,67 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DRAFT")]
         #pragma warning disable CS1591
-        DRAFT,
+        Draft,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENT")]
         #pragma warning disable CS1591
-        SENT,
+        Sent,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCHEDULED")]
         #pragma warning disable CS1591
-        SCHEDULED,
+        Scheduled,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAID")]
         #pragma warning disable CS1591
-        PAID,
+        Paid,
         #pragma warning restore CS1591
         [EnumMember(Value = "MARKED_AS_PAID")]
         #pragma warning disable CS1591
-        MARKED_AS_PAID,
+        MarkedAsPaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANCELLED")]
         #pragma warning disable CS1591
-        CANCELLED,
+        Cancelled,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDED")]
         #pragma warning disable CS1591
-        REFUNDED,
+        Refunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTIALLY_PAID")]
         #pragma warning disable CS1591
-        PARTIALLY_PAID,
+        PartiallyPaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTIALLY_REFUNDED")]
         #pragma warning disable CS1591
-        PARTIALLY_REFUNDED,
+        PartiallyRefunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "MARKED_AS_REFUNDED")]
         #pragma warning disable CS1591
-        MARKED_AS_REFUNDED,
+        MarkedAsRefunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNPAID")]
         #pragma warning disable CS1591
-        UNPAID,
+        Unpaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYMENT_PENDING")]
         #pragma warning disable CS1591
-        PAYMENT_PENDING,
+        PaymentPending,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTO_CANCELLED")]
         #pragma warning disable CS1591
-        AUTO_CANCELLED,
+        AutoCancelled,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAID_EXTERNAL")]
         #pragma warning disable CS1591
-        PAID_EXTERNAL,
+        PaidExternal,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDED_EXTERNAL")]
         #pragma warning disable CS1591
-        REFUNDED_EXTERNAL,
+        RefundedExternal,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHARED")]
         #pragma warning disable CS1591
-        SHARED,
+        Shared,
         #pragma warning restore CS1591
     }
 }

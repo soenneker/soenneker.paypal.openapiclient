@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "REVERSED_TRANSACTION_FEE")]
         #pragma warning disable CS1591
-        REVERSED_TRANSACTION_FEE,
+        ReversedTransactionFee,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISPUTE_SETTLEMENT")]
         #pragma warning disable CS1591
-        DISPUTE_SETTLEMENT,
+        DisputeSettlement,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISPUTE_FEE")]
         #pragma warning disable CS1591
-        DISPUTE_FEE,
+        DisputeFee,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHARGEBACK_FEE")]
         #pragma warning disable CS1591
-        CHARGEBACK_FEE,
+        ChargebackFee,
         #pragma warning restore CS1591
     }
 }

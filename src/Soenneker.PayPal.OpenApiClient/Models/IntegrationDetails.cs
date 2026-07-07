@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The integration details for PayPal CLASSIC endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails_classic_api_integration? ClassicApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration? ClassicApiIntegration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails_classic_api_integration ClassicApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration ClassicApiIntegration { get; set; }
 #endif
         /// <summary>The integration details for PayPal REST endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "classic_api_integration", n => { ClassicApiIntegration = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails_classic_api_integration>(global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails_classic_api_integration.CreateFromDiscriminatorValue); } },
+                { "classic_api_integration", n => { ClassicApiIntegration = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration>(global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration.CreateFromDiscriminatorValue); } },
                 { "rest_api_integration", n => { RestApiIntegration = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration>(global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails_classic_api_integration>("classic_api_integration", ClassicApiIntegration);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration>("classic_api_integration", ClassicApiIntegration);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration>("rest_api_integration", RestApiIntegration);
             writer.WriteAdditionalData(AdditionalData);
         }

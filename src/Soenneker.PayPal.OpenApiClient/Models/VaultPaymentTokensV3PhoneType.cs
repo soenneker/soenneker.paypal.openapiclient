@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "FAX")]
         #pragma warning disable CS1591
-        FAX,
+        Fax,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME")]
         #pragma warning disable CS1591
-        HOME,
+        Home,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBILE")]
         #pragma warning disable CS1591
-        MOBILE,
+        Mobile,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAGER")]
         #pragma warning disable CS1591
-        PAGER,
+        Pager,
         #pragma warning restore CS1591
     }
 }

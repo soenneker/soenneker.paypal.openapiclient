@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CAPTURE")]
         #pragma warning disable CS1591
-        CAPTURE,
+        Capture,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUTHORIZE")]
         #pragma warning disable CS1591
-        AUTHORIZE,
+        Authorize,
         #pragma warning restore CS1591
     }
 }

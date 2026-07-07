@@ -8,44 +8,78 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// An event type.
+    /// A webhook event notification.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventType : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A human-readable description of the event.</summary>
+        /// <summary>The date and time when the webhook event notification was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
+        public DateTimeOffset? CreateTime { get; private set; }
+        /// <summary>The event that triggered the webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; private set; }
+        public string? EventTypeProp { get; private set; }
 #nullable restore
 #else
-        public string Description { get; private set; }
+        public string EventTypeProp { get; private set; }
 #endif
-        /// <summary>The unique event name.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; To subscribe to all events, including events as they are added, specify an `*` as the value to represent a wildcard.&lt;/blockquote&gt;</summary>
+        /// <summary>The event version in the webhook notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? EventVersion { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string EventVersion { get; set; }
 #endif
-        /// <summary>&quot;Identifier for the event type example: 1.0/2.0 etc.&quot;</summary>
+        /// <summary>The ID of the webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResourceVersions { get; set; }
+        public string? Id { get; private set; }
 #nullable restore
 #else
-        public List<string> ResourceVersions { get; set; }
+        public string Id { get; private set; }
 #endif
-        /// <summary>The status of a webhook event.</summary>
+        /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; set; }
 #nullable restore
 #else
-        public string Status { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; set; }
+#endif
+        /// <summary>The resource that triggered the webhook event notification.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResource? Resource { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResource Resource { get; set; }
+#endif
+        /// <summary>The name of the resource related to the webhook notification event.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceType { get; private set; }
+#nullable restore
+#else
+        public string ResourceType { get; private set; }
+#endif
+        /// <summary>The resource version in the webhook notification.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceVersion { get; set; }
+#nullable restore
+#else
+        public string ResourceVersion { get; set; }
+#endif
+        /// <summary>A summary description for the event notification.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Summary { get; private set; }
+#nullable restore
+#else
+        public string Summary { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.EventType"/> and sets the default values.
@@ -72,10 +106,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "resource_versions", n => { ResourceVersions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "create_time", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
+                { "event_type", n => { EventTypeProp = n.GetStringValue(); } },
+                { "event_version", n => { EventVersion = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResource>(global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResource.CreateFromDiscriminatorValue); } },
+                { "resource_type", n => { ResourceType = n.GetStringValue(); } },
+                { "resource_version", n => { ResourceVersion = n.GetStringValue(); } },
+                { "summary", n => { Summary = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -85,8 +124,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfPrimitiveValues<string>("resource_versions", ResourceVersions);
+            writer.WriteStringValue("event_version", EventVersion);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResource>("resource", Resource);
+            writer.WriteStringValue("resource_version", ResourceVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CREDIT")]
         #pragma warning disable CS1591
-        CREDIT,
+        Credit,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYLATER")]
         #pragma warning disable CS1591
-        PAYLATER,
+        Paylater,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAY_IN_3")]
         #pragma warning disable CS1591
-        PAY_IN_3,
+        PayIn3,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAY_IN_4")]
         #pragma warning disable CS1591
-        PAY_IN_4,
+        PayIn4,
         #pragma warning restore CS1591
     }
 }

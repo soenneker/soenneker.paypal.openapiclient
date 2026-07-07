@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingPhoneNumber PhoneNumber { get; set; }
 #endif
         /// <summary>A classification for the method of purchase fulfillment (e.g shipping, in-store pickup, etc). Either `type` or `options` may be present, but not both.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping"/> and sets the default values.
         /// </summary>
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingAddress.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingName>(global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingName.CreateFromDiscriminatorValue); } },
                 { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingPhoneNumber.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingType>(); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingName>("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingPhoneNumber>("phone_number", PhoneNumber);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShippingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

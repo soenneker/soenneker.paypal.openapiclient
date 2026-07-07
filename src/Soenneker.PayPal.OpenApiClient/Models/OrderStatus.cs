@@ -9,27 +9,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CREATED")]
         #pragma warning disable CS1591
-        CREATED,
+        Created,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAVED")]
         #pragma warning disable CS1591
-        SAVED,
+        Saved,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPROVED")]
         #pragma warning disable CS1591
-        APPROVED,
+        Approved,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOIDED")]
         #pragma warning disable CS1591
-        VOIDED,
+        Voided,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPLETED")]
         #pragma warning disable CS1591
-        COMPLETED,
+        Completed,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYER_ACTION_REQUIRED")]
         #pragma warning disable CS1591
-        PAYER_ACTION_REQUIRED,
+        PayerActionRequired,
         #pragma warning restore CS1591
     }
 }

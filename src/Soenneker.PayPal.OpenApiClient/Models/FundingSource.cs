@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "BALANCE")]
         #pragma warning disable CS1591
-        BALANCE,
+        Balance,
         #pragma warning restore CS1591
     }
 }

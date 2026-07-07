@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.GenerateQrCode
 {
     /// <summary>
-    /// Builds and executes requests for operations under \invoicing_v2\v2\invoicing\invoices\{invoice_id}\generate-qr-code
+    /// Builds and executes requests for operations under \invoicing_v2\v2\invoicing\invoices\{invoiceId}\generate-qr-code
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GenerateQrCodeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GenerateQrCodeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoice_id}/generate-qr-code", pathParameters)
+        public GenerateQrCodeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoiceId}/generate-qr-code", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GenerateQrCodeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoice_id}/generate-qr-code", rawUrl)
+        public GenerateQrCodeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoiceId}/generate-qr-code", rawUrl)
         {
         }
         /// <summary>

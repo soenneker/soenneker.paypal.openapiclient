@@ -35,7 +35,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TrackersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers?transaction_id={transaction_id}{&account_id*,tracking_number*}", pathParameters)
+        public TrackersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers{?account_id*,tracking_number*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TrackersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers?transaction_id={transaction_id}{&account_id*,tracking_number*}", rawUrl)
+        public TrackersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers{?account_id*,tracking_number*}", rawUrl)
         {
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers?transaction_id={transaction_id}{&account_id*,tracking_number*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

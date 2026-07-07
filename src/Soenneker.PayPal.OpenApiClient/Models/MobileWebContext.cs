@@ -24,14 +24,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string BuyerUserAgent { get; set; }
 #endif
         /// <summary>Merchant preference on how the buyer can navigate back to merchant website post approving the transaction on the PayPal App.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext_return_flow? ReturnFlow { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContextReturnFlow? ReturnFlow { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext"/> and sets the default values.
         /// </summary>
         public MobileWebContext()
         {
             AdditionalData = new Dictionary<string, object>();
-            ReturnFlow = global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext_return_flow.AUTO;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +51,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buyer_user_agent", n => { BuyerUserAgent = n.GetStringValue(); } },
-                { "return_flow", n => { ReturnFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext_return_flow>(); } },
+                { "return_flow", n => { ReturnFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContextReturnFlow>(); } },
             };
         }
         /// <summary>

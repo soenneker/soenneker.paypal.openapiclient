@@ -15,29 +15,29 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The country_code property</summary>
+        /// <summary>The [2-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_country_code? CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_country_code CountryCode { get; set; }
+        public string CountryCode { get; set; }
 #endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CryptoExperienceContext? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CryptoExperienceContext ExperienceContext { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The name of the account holder associated with Crypto wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CryptoName? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CryptoName Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Crypto"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_country_code.CreateFromDiscriminatorValue); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptoExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.CryptoExperienceContext.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptoName>(global::Soenneker.PayPal.OpenApiClient.Models.CryptoName.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_country_code>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_experience_context>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto_name>("name", Name);
+            writer.WriteStringValue("country_code", CountryCode);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptoExperienceContext>("experience_context", ExperienceContext);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptoName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

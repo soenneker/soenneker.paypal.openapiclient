@@ -19,15 +19,15 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
     public partial class WebhooksLookupRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.notifications_webhooks_v1.v1.notifications.webhooksLookup.item collection</summary>
-        /// <param name="position">The ID of the webhook lookup to delete.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhook_lookup_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhook_lookup_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhookLookupItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhookLookupItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webhook_lookup_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhook_lookup_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webhookLookupId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhookLookupItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

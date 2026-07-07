@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds
 {
     /// <summary>
-    /// Builds and executes requests for operations under \invoicing_v2\v2\invoicing\invoices\{invoice_id}\refunds
+    /// Builds and executes requests for operations under \invoicing_v2\v2\invoicing\invoices\{invoiceId}\refunds
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RefundsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.invoicing_v2.v2.invoicing.invoices.item.refunds.item collection</summary>
-        /// <param name="position">The ID of the external refund transaction to delete.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransaction_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransaction_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransactionItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransactionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("transaction_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransaction_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("transactionId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Refunds.Item.WithTransactionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RefundsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoice_id}/refunds", pathParameters)
+        public RefundsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoiceId}/refunds", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RefundsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoice_id}/refunds", rawUrl)
+        public RefundsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoicing_v2/v2/invoicing/invoices/{invoiceId}/refunds", rawUrl)
         {
         }
         /// <summary>
@@ -53,10 +53,10 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="body">The refund details of the invoice. Includes the refund type, date, amount, and method.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds422">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,10 +71,10 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds403.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds400Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds422.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesRefunds422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.RefundReference>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.RefundReference.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

@@ -15,29 +15,29 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The bic property</summary>
+        /// <summary>The business identification code (BIC). In payments systems, a BIC is used to identify a specific business, most commonly a bank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_bic? Bic { get; set; }
+        public string? Bic { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_bic Bic { get; set; }
+        public string Bic { get; set; }
 #endif
-        /// <summary>The country_code property</summary>
+        /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_country_code? CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_country_code CountryCode { get; set; }
+        public string CountryCode { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The full name representation like Mr J Smith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_name? Name { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Eps_name Name { get; set; }
+        public string Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Eps"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bic", n => { Bic = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_bic>(global::Soenneker.PayPal.OpenApiClient.Models.Eps_bic.CreateFromDiscriminatorValue); } },
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.Eps_country_code.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_name>(global::Soenneker.PayPal.OpenApiClient.Models.Eps_name.CreateFromDiscriminatorValue); } },
+                { "bic", n => { Bic = n.GetStringValue(); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_bic>("bic", Bic);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_country_code>("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps_name>("name", Name);
+            writer.WriteStringValue("bic", Bic);
+            writer.WriteStringValue("country_code", CountryCode);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

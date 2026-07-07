@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "UNRESTRICTED")]
         #pragma warning disable CS1591
-        UNRESTRICTED,
+        Unrestricted,
         #pragma warning restore CS1591
         [EnumMember(Value = "IMMEDIATE_PAYMENT_REQUIRED")]
         #pragma warning disable CS1591
-        IMMEDIATE_PAYMENT_REQUIRED,
+        ImmediatePaymentRequired,
         #pragma warning restore CS1591
     }
 }

@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "HOME")]
         #pragma warning disable CS1591
-        HOME,
+        Home,
         #pragma warning restore CS1591
     }
 }

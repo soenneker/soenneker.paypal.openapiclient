@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CREDIT")]
         #pragma warning disable CS1591
-        CREDIT,
+        Credit,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEBIT")]
         #pragma warning disable CS1591
-        DEBIT,
+        Debit,
         #pragma warning restore CS1591
         [EnumMember(Value = "PREPAID")]
         #pragma warning disable CS1591
-        PREPAID,
+        Prepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "STORE")]
         #pragma warning disable CS1591
-        STORE,
+        Store,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
     }
 }

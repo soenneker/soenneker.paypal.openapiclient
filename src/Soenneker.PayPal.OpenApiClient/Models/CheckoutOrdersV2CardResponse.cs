@@ -34,28 +34,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Array of brands or networks associated with the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_available_networks>? AvailableNetworks { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem>? AvailableNetworks { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_available_networks> AvailableNetworks { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem> AvailableNetworks { get; private set; }
 #endif
-        /// <summary>The bin_details property</summary>
+        /// <summary>Bank Identification Number (BIN) details used to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_bin_details? BinDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails? BinDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_bin_details BinDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails BinDetails { get; set; }
 #endif
-        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand? Brand { get; set; }
-        /// <summary>The expiry property</summary>
+        /// <summary>The card brand or network. Typically used in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_expiry? Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand? Brand { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_expiry Expiry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand Brand { get; private set; }
+#endif
+        /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Expiry { get; set; }
+#nullable restore
+#else
+        public string Expiry { get; set; }
 #endif
         /// <summary>Representation of card details as received in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,8 +95,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get; set; }
 #endif
-        /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType? Type { get; set; }
+        /// <summary>The payment card type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse"/> and sets the default values.
         /// </summary>
@@ -118,15 +130,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse.CreateFromDiscriminatorValue); } },
                 { "authentication_result", n => { AuthenticationResult = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse.CreateFromDiscriminatorValue); } },
-                { "available_networks", n => { AvailableNetworks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_available_networks>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_available_networks.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "bin_details", n => { BinDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_bin_details>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_bin_details.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>(); } },
-                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_expiry>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_expiry.CreateFromDiscriminatorValue); } },
+                { "available_networks", n => { AvailableNetworks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "bin_details", n => { BinDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand.CreateFromDiscriminatorValue); } },
+                { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "from_request", n => { FromRequest = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest.CreateFromDiscriminatorValue); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -138,13 +150,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>("authentication_result", AuthenticationResult);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_bin_details>("bin_details", BinDetails);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>("brand", Brand);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse_expiry>("expiry", Expiry);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails>("bin_details", BinDetails);
+            writer.WriteStringValue("expiry", Expiry);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest>("from_request", FromRequest);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>("stored_credential", StoredCredential);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

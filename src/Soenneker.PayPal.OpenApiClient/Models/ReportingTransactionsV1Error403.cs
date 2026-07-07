@@ -43,9 +43,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_message? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Message? MessageEscaped { get; set; }
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Name? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403"/> and sets the default values.
         /// </summary>
@@ -74,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_message>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_name>(); } },
+                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Message>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Name>(); } },
             };
         }
         /// <summary>
@@ -88,8 +88,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("debug_id", DebugId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDetails>("details", Details);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorLinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_message>("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403_name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Message>("message", MessageEscaped);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403Name>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

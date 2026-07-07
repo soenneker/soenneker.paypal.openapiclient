@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money ExpectedRefund { get; set; }
 #endif
         /// <summary>The issue type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed_issue_type? IssueType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessedIssueType? IssueType { get; set; }
         /// <summary>The product information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "agreed_refund_details", n => { AgreedRefundDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails>(global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails.CreateFromDiscriminatorValue); } },
                 { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails.CreateFromDiscriminatorValue); } },
                 { "expected_refund", n => { ExpectedRefund = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
-                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed_issue_type>(); } },
+                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessedIssueType>(); } },
                 { "product_details", n => { ProductDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails.CreateFromDiscriminatorValue); } },
                 { "service_details", n => { ServiceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails.CreateFromDiscriminatorValue); } },
             };
@@ -100,7 +100,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails>("agreed_refund_details", AgreedRefundDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>("cancellation_details", CancellationDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("expected_refund", ExpectedRefund);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed_issue_type>("issue_type", IssueType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessedIssueType>("issue_type", IssueType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>("product_details", ProductDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>("service_details", ServiceDetails);
             writer.WriteAdditionalData(AdditionalData);

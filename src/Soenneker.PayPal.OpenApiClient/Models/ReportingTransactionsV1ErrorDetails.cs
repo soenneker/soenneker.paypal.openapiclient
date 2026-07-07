@@ -55,7 +55,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public ReportingTransactionsV1ErrorDetails()
         {
             AdditionalData = new Dictionary<string, object>();
-            Location = global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorLocation.Body;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

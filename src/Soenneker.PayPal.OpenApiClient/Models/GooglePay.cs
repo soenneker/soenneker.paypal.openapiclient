@@ -15,37 +15,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The card property</summary>
+        /// <summary>The Card from Google Pay Wallet used to fund the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardComposed? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardComposed Card { get; set; }
 #endif
-        /// <summary>The email_address property</summary>
+        /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_email_address? EmailAddress { get; set; }
+        public string? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_email_address EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The full name representation like Mr J Smith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_name? Name { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_name Name { get; set; }
+        public string Name { get; set; }
 #endif
-        /// <summary>The phone_number property</summary>
+        /// <summary>The phone number of account holder, in its canonical international [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164/en). Supports only the `national_number` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_phone_number? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayPhoneNumber? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_phone_number PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayPhoneNumber PhoneNumber { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePay"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_email_address.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_name>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_name.CreateFromDiscriminatorValue); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_phone_number>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_phone_number.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardComposed>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardComposed.CreateFromDiscriminatorValue); } },
+                { "email_address", n => { EmailAddress = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.GooglePayPhoneNumber.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_card>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_email_address>("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_name>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePay_phone_number>("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayCardComposed>("card", Card);
+            writer.WriteStringValue("email_address", EmailAddress);
+            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayPhoneNumber>("phone_number", PhoneNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

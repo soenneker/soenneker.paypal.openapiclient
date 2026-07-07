@@ -34,6 +34,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             Action = "pay";
+            Height = 500;
+            Width = 500;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

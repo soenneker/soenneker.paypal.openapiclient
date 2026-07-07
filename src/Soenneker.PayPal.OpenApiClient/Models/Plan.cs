@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Indicates whether you can subscribe to this plan by providing a quantity for the goods or service.</summary>
         public bool? QuantitySupported { get; set; }
         /// <summary>The plan status.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Plan_status? Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PlanStatus? Status { get; set; }
         /// <summary>The tax details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,6 +105,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public Plan()
         {
             AdditionalData = new Dictionary<string, object>();
+            QuantitySupported = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -133,7 +134,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "payment_preferences", n => { PaymentPreferences = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences.CreateFromDiscriminatorValue); } },
                 { "product_id", n => { ProductId = n.GetStringValue(); } },
                 { "quantity_supported", n => { QuantitySupported = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Plan_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanStatus>(); } },
                 { "taxes", n => { Taxes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes>(global::Soenneker.PayPal.OpenApiClient.Models.Taxes.CreateFromDiscriminatorValue); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
             };
@@ -153,7 +154,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences>("payment_preferences", PaymentPreferences);
             writer.WriteStringValue("product_id", ProductId);
             writer.WriteBoolValue("quantity_supported", QuantitySupported);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Plan_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Taxes>("taxes", Taxes);
             writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);

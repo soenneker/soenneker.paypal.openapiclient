@@ -15,10 +15,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Transactions status result identifier. The outcome of the issuer&apos;s authentication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ParesStatus? AuthenticationStatus { get; set; }
-        /// <summary>Status of Authentication eligibility.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2Enrolled? EnrollmentStatus { get; set; }
+        /// <summary>The outcome of the issuer&apos;s authentication.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseAuthenticationStatus? AuthenticationStatus { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseAuthenticationStatus AuthenticationStatus { get; set; }
+#endif
+        /// <summary>Status of authentication eligibility.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseEnrollmentStatus? EnrollmentStatus { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseEnrollmentStatus EnrollmentStatus { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse"/> and sets the default values.
         /// </summary>
@@ -44,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "authentication_status", n => { AuthenticationStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ParesStatus>(); } },
-                { "enrollment_status", n => { EnrollmentStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2Enrolled>(); } },
+                { "authentication_status", n => { AuthenticationStatus = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseAuthenticationStatus>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseAuthenticationStatus.CreateFromDiscriminatorValue); } },
+                { "enrollment_status", n => { EnrollmentStatus = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseEnrollmentStatus>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseEnrollmentStatus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -55,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ParesStatus>("authentication_status", AuthenticationStatus);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2Enrolled>("enrollment_status", EnrollmentStatus);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseAuthenticationStatus>("authentication_status", AuthenticationStatus);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponseEnrollmentStatus>("enrollment_status", EnrollmentStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

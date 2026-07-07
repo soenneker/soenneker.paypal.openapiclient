@@ -14,7 +14,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     public partial class ActionInfo : IAdditionalDataHolder, IParsable
     {
         /// <summary>The action for which the evidence was requested or submitted.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo_action? Action { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the evidence is mandatory for the corresponding action and response option.</summary>
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction>(); } },
                 { "mandatory", n => { Mandatory = n.GetBoolValue(); } },
                 { "response_option", n => { ResponseOption = n.GetStringValue(); } },
             };
@@ -64,7 +64,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction>("action", Action);
             writer.WriteBoolValue("mandatory", Mandatory);
             writer.WriteStringValue("response_option", ResponseOption);
             writer.WriteAdditionalData(AdditionalData);

@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Constraint type defines whether given payment sources needs to be included or excluded.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint_constraint_type? ConstraintType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType? ConstraintType { get; set; }
         /// <summary>Set of unique payment methods that will be included/excluded for eligibility assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "constraint_type", n => { ConstraintType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint_constraint_type>(); } },
+                { "constraint_type", n => { ConstraintType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType>(); } },
                 { "payment_sources", n => { PaymentSources = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod>()?.AsList(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint_constraint_type>("constraint_type", ConstraintType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType>("constraint_type", ConstraintType);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod>("payment_sources", PaymentSources);
             writer.WriteAdditionalData(AdditionalData);
         }

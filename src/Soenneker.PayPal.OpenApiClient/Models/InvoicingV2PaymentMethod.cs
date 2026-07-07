@@ -9,35 +9,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "BANK_TRANSFER")]
         #pragma warning disable CS1591
-        BANK_TRANSFER,
+        BankTransfer,
         #pragma warning restore CS1591
         [EnumMember(Value = "CASH")]
         #pragma warning disable CS1591
-        CASH,
+        Cash,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHECK")]
         #pragma warning disable CS1591
-        CHECK,
+        Check,
         #pragma warning restore CS1591
         [EnumMember(Value = "CREDIT_CARD")]
         #pragma warning disable CS1591
-        CREDIT_CARD,
+        CreditCard,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEBIT_CARD")]
         #pragma warning disable CS1591
-        DEBIT_CARD,
+        DebitCard,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYPAL")]
         #pragma warning disable CS1591
-        PAYPAL,
+        Paypal,
         #pragma warning restore CS1591
         [EnumMember(Value = "WIRE_TRANSFER")]
         #pragma warning disable CS1591
-        WIRE_TRANSFER,
+        WireTransfer,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
     }
 }

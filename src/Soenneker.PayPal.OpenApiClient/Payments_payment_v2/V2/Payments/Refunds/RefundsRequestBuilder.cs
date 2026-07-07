@@ -17,14 +17,14 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.payments_payment_v2.v2.payments.refunds.item collection</summary>
         /// <param name="position">The PayPal-generated ID for the refund for which to show details.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefund_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefund_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefundItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefundItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("refund_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefund_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("refundId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Refunds.Item.WithRefundItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

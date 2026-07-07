@@ -31,6 +31,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public Taxes()
         {
             AdditionalData = new Dictionary<string, object>();
+            Inclusive = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

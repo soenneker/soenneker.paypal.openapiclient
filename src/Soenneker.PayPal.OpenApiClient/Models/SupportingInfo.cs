@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string ProvidedTime { get; set; }
 #endif
         /// <summary>The source of the Information.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo_source? Source { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfoSource? Source { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo"/> and sets the default values.
         /// </summary>
@@ -72,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>(global::Soenneker.PayPal.OpenApiClient.Models.Document.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "provided_time", n => { ProvidedTime = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo_source>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfoSource>(); } },
             };
         }
         /// <summary>

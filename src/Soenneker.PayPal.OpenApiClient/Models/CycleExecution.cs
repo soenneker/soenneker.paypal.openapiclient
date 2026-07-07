@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The order in which to run this cycle among other billing cycles.</summary>
         public int? Sequence { get; set; }
         /// <summary>The type of the billing cycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution_tenure_type? TenureType { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CycleExecutionTenureType? TenureType { get; private set; }
         /// <summary>The number of times this billing cycle gets executed. Trial billing cycles can only be executed a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;). Regular billing cycles can be executed infinite times (value of &lt;code&gt;0&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;) or a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;).</summary>
         public int? TotalCycles { get; private set; }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "cycles_completed", n => { CyclesCompleted = n.GetIntValue(); } },
                 { "cycles_remaining", n => { CyclesRemaining = n.GetIntValue(); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
-                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution_tenure_type>(); } },
+                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecutionTenureType>(); } },
                 { "total_cycles", n => { TotalCycles = n.GetIntValue(); } },
             };
         }

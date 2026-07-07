@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string From { get; set; }
 #endif
         /// <summary>The operation.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_op? Op { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchOp? Op { get; set; }
         /// <summary>The &lt;a href=&quot;https://tools.ietf.org/html/rfc6901&quot;&gt;JSON Pointer&lt;/a&gt; to the target document location at which to complete the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,10 +36,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The value to apply. The &lt;code&gt;remove&lt;/code&gt;, &lt;code&gt;copy&lt;/code&gt;, and &lt;code&gt;move&lt;/code&gt; operations do not require a value. Since &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc69021&quot;&gt;JSON Patch&lt;/a&gt; allows any type for &lt;code&gt;value&lt;/code&gt;, the &lt;code&gt;type&lt;/code&gt; property is not specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_value? Value { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchValue? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_value Value { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchValue Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch"/> and sets the default values.
@@ -67,9 +67,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "from", n => { From = n.GetStringValue(); } },
-                { "op", n => { Op = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_op>(); } },
+                { "op", n => { Op = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchOp>(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_value>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchValue>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchValue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -80,9 +80,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("from", From);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_op>("op", Op);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchOp>("op", Op);
             writer.WriteStringValue("path", Path);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Patch_value>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1PatchValue>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

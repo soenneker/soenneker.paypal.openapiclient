@@ -26,7 +26,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string PaymentInstrumentSuffix { get; set; }
 #endif
         /// <summary>The payment method.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans_payment_method? PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod? PaymentMethod { get; set; }
         /// <summary>If `true`, indicates that a duplicate transaction was received.</summary>
         public bool? ReceivedDuplicate { get; set; }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "charge_different_from_original", n => { ChargeDifferentFromOriginal = n.GetBoolValue(); } },
                 { "payment_instrument_suffix", n => { PaymentInstrumentSuffix = n.GetStringValue(); } },
-                { "payment_method", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans_payment_method>(); } },
+                { "payment_method", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod>(); } },
                 { "received_duplicate", n => { ReceivedDuplicate = n.GetBoolValue(); } },
             };
         }
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("charge_different_from_original", ChargeDifferentFromOriginal);
             writer.WriteStringValue("payment_instrument_suffix", PaymentInstrumentSuffix);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans_payment_method>("payment_method", PaymentMethod);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteBoolValue("received_duplicate", ReceivedDuplicate);
             writer.WriteAdditionalData(AdditionalData);
         }

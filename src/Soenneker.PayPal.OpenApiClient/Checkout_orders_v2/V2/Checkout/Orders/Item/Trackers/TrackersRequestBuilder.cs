@@ -17,14 +17,14 @@ namespace Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.I
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.checkout_orders_v2.v2.checkout.orders.item.trackers.item collection</summary>
         /// <param name="position">The order tracking ID.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTracker_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTracker_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTrackerItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTrackerItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("tracker_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTracker_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("trackerId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Checkout_orders_v2.V2.Checkout.Orders.Item.Trackers.Item.WithTrackerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -32,7 +32,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get; set; }
 #endif
         /// <summary>Indicates whether the customer, merchant, or dispute arbiter posted the message.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Message_posted_by? PostedBy { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MessagePostedBy? PostedBy { get; private set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>(global::Soenneker.PayPal.OpenApiClient.Models.Document.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "posted_by", n => { PostedBy = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Message_posted_by>(); } },
+                { "posted_by", n => { PostedBy = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MessagePostedBy>(); } },
                 { "time_posted", n => { TimePosted = n.GetStringValue(); } },
             };
         }

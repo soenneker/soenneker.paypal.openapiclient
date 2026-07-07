@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CREATED")]
         #pragma warning disable CS1591
-        CREATED,
+        Created,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYER_ACTION_REQUIRED")]
         #pragma warning disable CS1591
-        PAYER_ACTION_REQUIRED,
+        PayerActionRequired,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPROVED")]
         #pragma warning disable CS1591
-        APPROVED,
+        Approved,
         #pragma warning restore CS1591
         [EnumMember(Value = "VAULTED")]
         #pragma warning disable CS1591
-        VAULTED,
+        Vaulted,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOKENIZED")]
         #pragma warning disable CS1591
-        TOKENIZED,
+        Tokenized,
         #pragma warning restore CS1591
     }
 }

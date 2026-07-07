@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan_product? Product { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PlanProduct? Product { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan_product Product { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PlanProduct Product { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan"/> and sets the default values.
@@ -75,7 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "billing_cycles", n => { BillingCycles = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "one_time_charges", n => { OneTimeCharges = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges>(global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges.CreateFromDiscriminatorValue); } },
-                { "product", n => { Product = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan_product>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan_product.CreateFromDiscriminatorValue); } },
+                { "product", n => { Product = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PlanProduct>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PlanProduct.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,7 +88,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle>("billing_cycles", BillingCycles);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges>("one_time_charges", OneTimeCharges);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan_product>("product", Product);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PlanProduct>("product", Product);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

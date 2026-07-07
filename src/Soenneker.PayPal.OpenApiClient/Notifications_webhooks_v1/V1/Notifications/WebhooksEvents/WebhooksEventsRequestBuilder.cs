@@ -19,15 +19,15 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
     public partial class WebhooksEventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.notifications_webhooks_v1.v1.notifications.webhooksEvents.item collection</summary>
-        /// <param name="position">The ID of the webhook event notification to resend.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEvent_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEvent_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEventItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEventItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("event_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEvent_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("eventId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.WithEventItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

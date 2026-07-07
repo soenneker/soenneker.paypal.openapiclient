@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksEvents.Item.Resend
 {
     /// <summary>
-    /// Builds and executes requests for operations under \notifications_webhooks_v1\v1\notifications\webhooks-events\{event_id}\resend
+    /// Builds and executes requests for operations under \notifications_webhooks_v1\v1\notifications\webhooks-events\{eventId}\resend
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResendRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResendRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks-events/{event_id}/resend", pathParameters)
+        public ResendRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks-events/{eventId}/resend", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResendRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks-events/{event_id}/resend", rawUrl)
+        public ResendRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks-events/{eventId}/resend", rawUrl)
         {
         }
         /// <summary>
         /// Resends a webhook event notification, by ID. Any pending notifications are not resent.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Event"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.EventType"/></returns>
         /// <param name="body">Resends a webhook event notification, by ID.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error2">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.EventResend body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.EventType?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.EventResend body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Event> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.EventResend body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.PayPal.OpenApiClient.Models.EventType> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.EventResend body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
             {
                 { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.Error2.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Event>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Event.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.EventType>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.EventType.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Resends a webhook event notification, by ID. Any pending notifications are not resent.

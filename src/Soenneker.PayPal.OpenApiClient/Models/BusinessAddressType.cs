@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "WORK")]
         #pragma warning disable CS1591
-        WORK,
+        Work,
         #pragma warning restore CS1591
     }
 }

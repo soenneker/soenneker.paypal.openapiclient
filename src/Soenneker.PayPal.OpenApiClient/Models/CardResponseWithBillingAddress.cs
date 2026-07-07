@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>&quot;The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddress_billing_address? BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress? BillingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddress_billing_address BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress BillingAddress { get; set; }
 #endif
         /// <summary>Bank Identification Number (BIN) details used to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesResponse.CreateFromDiscriminatorValue); } },
                 { "authentication_result", n => { AuthenticationResult = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AuthenticationResponse>(global::Soenneker.PayPal.OpenApiClient.Models.AuthenticationResponse.CreateFromDiscriminatorValue); } },
                 { "available_networks", n => { AvailableNetworks = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>()?.AsList(); } },
-                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddress_billing_address>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddress_billing_address.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress.CreateFromDiscriminatorValue); } },
                 { "bin_details", n => { BinDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BinDetails>(global::Soenneker.PayPal.OpenApiClient.Models.BinDetails.CreateFromDiscriminatorValue); } },
                 { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>(); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesResponse>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AuthenticationResponse>("authentication_result", AuthenticationResult);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>("available_networks", AvailableNetworks);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddress_billing_address>("billing_address", BillingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress>("billing_address", BillingAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BinDetails>("bin_details", BinDetails);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>("brand", Brand);
             writer.WriteStringValue("currency_code", CurrencyCode);

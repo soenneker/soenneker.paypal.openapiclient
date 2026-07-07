@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The customer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_customer? Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_customer Customer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer Customer { get; set; }
 #endif
         /// <summary>The PayPal-generated ID for the saved payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,13 +34,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related HATEOAS links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_links>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_links> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem> Links { get; private set; }
 #endif
         /// <summary>The vault status.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_status? Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse"/> and sets the default values.
         /// </summary>
@@ -66,10 +66,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_customer>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_links>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_links.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_status>(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -79,9 +79,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer>("customer", Customer);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

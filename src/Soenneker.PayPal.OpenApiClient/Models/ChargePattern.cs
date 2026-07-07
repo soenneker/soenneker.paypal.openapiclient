@@ -9,51 +9,51 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "IMMEDIATE")]
         #pragma warning disable CS1591
-        IMMEDIATE,
+        Immediate,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEFERRED")]
         #pragma warning disable CS1591
-        DEFERRED,
+        Deferred,
         #pragma warning restore CS1591
         [EnumMember(Value = "RECURRING_PREPAID")]
         #pragma warning disable CS1591
-        RECURRING_PREPAID,
+        RecurringPrepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "RECURRING_POSTPAID")]
         #pragma warning disable CS1591
-        RECURRING_POSTPAID,
+        RecurringPostpaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "THRESHOLD_PREPAID")]
         #pragma warning disable CS1591
-        THRESHOLD_PREPAID,
+        ThresholdPrepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "THRESHOLD_POSTPAID")]
         #pragma warning disable CS1591
-        THRESHOLD_POSTPAID,
+        ThresholdPostpaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUBSCRIPTION_PREPAID")]
         #pragma warning disable CS1591
-        SUBSCRIPTION_PREPAID,
+        SubscriptionPrepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUBSCRIPTION_POSTPAID")]
         #pragma warning disable CS1591
-        SUBSCRIPTION_POSTPAID,
+        SubscriptionPostpaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNSCHEDULED_PREPAID")]
         #pragma warning disable CS1591
-        UNSCHEDULED_PREPAID,
+        UnscheduledPrepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNSCHEDULED_POSTPAID")]
         #pragma warning disable CS1591
-        UNSCHEDULED_POSTPAID,
+        UnscheduledPostpaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSTALLMENT_PREPAID")]
         #pragma warning disable CS1591
-        INSTALLMENT_PREPAID,
+        InstallmentPrepaid,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSTALLMENT_POSTPAID")]
         #pragma warning disable CS1591
-        INSTALLMENT_POSTPAID,
+        InstallmentPostpaid,
         #pragma warning restore CS1591
     }
 }

@@ -15,49 +15,62 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The attributes property</summary>
+        /// <summary>Additional attributes associated with the use of this card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_attributes? Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_attributes Attributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed Attributes { get; set; }
 #endif
         /// <summary>The billing_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_billing_address? BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress? BillingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_billing_address BillingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress BillingAddress { get; set; }
 #endif
-        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand? Brand { get; set; }
-        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand? CardType { get; set; }
+        /// <summary>The card brand or network. Typically used in the response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed? Brand { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed Brand { get; set; }
+#endif
+        /// <summary>The card brand or network. Typically used in the response. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;type&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardCardType? CardType { get; private set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardCardType CardType { get; private set; }
+#endif
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_experience_context? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext? ExperienceContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_experience_context ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext ExperienceContext { get; set; }
 #endif
-        /// <summary>The expiry property</summary>
+        /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_expiry? Expiry { get; set; }
+        public string? Expiry { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_expiry Expiry { get; set; }
+        public string Expiry { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>The identifier of the instrument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_id? Id { get; set; }
+        public string? Id { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_id Id { get; set; }
+        public string Id { get; set; }
 #endif
         /// <summary>The last digits of the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,13 +88,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The network_token property</summary>
+        /// <summary>A 3rd party network token refers to a network token that the merchant provisions from and vaults with an external TSP (Token Service Provider) other than PayPal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_network_token? NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken? NetworkToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_network_token NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken NetworkToken { get; set; }
 #endif
         /// <summary>The primary account number (PAN) for the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,13 +112,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string SecurityCode { get; set; }
 #endif
-        /// <summary>The single_use_token property</summary>
+        /// <summary>The PayPal-generated, short-lived, one-time-use token, used to communicate payment information to PayPal for transaction processing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_single_use_token? SingleUseToken { get; set; }
+        public string? SingleUseToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_single_use_token SingleUseToken { get; set; }
+        public string SingleUseToken { get; set; }
 #endif
         /// <summary>Provides additional details to process a payment using a `card` that has been stored or is intended to be stored (also referred to as stored_credential or card-on-file).&lt;br/&gt;Parameter compatibility:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;`payment_type=ONE_TIME` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`usage=FIRST` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`previous_transaction_reference` or `previous_network_transaction_reference` is compatible only with `payment_initiator=MERCHANT`.&lt;/li&gt;&lt;li&gt;Only one of the parameters - `previous_transaction_reference` and `previous_network_transaction_reference` - can be present in the request.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,15 +128,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get; set; }
 #endif
-        /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType? Type { get; set; }
-        /// <summary>The vault_id property</summary>
+        /// <summary>The payment card type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_vault_id? VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_vault_id VaultId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed Type { get; set; }
+#endif
+        /// <summary>The PayPal-generated ID for the vaulted payment source. This ID should be stored on the merchant&apos;s server so the saved payment source can be used for future transactions.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VaultId { get; set; }
+#nullable restore
+#else
+        public string VaultId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardRequest"/> and sets the default values.
@@ -150,22 +169,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_attributes>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_attributes.CreateFromDiscriminatorValue); } },
-                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_billing_address>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_billing_address.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>(); } },
-                { "card_type", n => { CardType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>(); } },
-                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_experience_context>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_experience_context.CreateFromDiscriminatorValue); } },
-                { "expiry", n => { Expiry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_expiry>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_expiry.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_id>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_id.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed.CreateFromDiscriminatorValue); } },
+                { "card_type", n => { CardType = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardCardType>(global::Soenneker.PayPal.OpenApiClient.Models.CardCardType.CreateFromDiscriminatorValue); } },
+                { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext.CreateFromDiscriminatorValue); } },
+                { "expiry", n => { Expiry = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_network_token>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_network_token.CreateFromDiscriminatorValue); } },
+                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "security_code", n => { SecurityCode = n.GetStringValue(); } },
-                { "single_use_token", n => { SingleUseToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_single_use_token>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_single_use_token.CreateFromDiscriminatorValue); } },
+                { "single_use_token", n => { SingleUseToken = n.GetStringValue(); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>(); } },
-                { "vault_id", n => { VaultId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_vault_id>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_vault_id.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed.CreateFromDiscriminatorValue); } },
+                { "vault_id", n => { VaultId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -175,21 +194,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_attributes>("attributes", Attributes);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_billing_address>("billing_address", BillingAddress);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>("brand", Brand);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardBrand>("card_type", CardType);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_experience_context>("experience_context", ExperienceContext);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_expiry>("expiry", Expiry);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_id>("id", Id);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed>("attributes", Attributes);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress>("billing_address", BillingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>("brand", Brand);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext>("experience_context", ExperienceContext);
+            writer.WriteStringValue("expiry", Expiry);
+            writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_network_token>("network_token", NetworkToken);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken>("network_token", NetworkToken);
             writer.WriteStringValue("number", Number);
             writer.WriteStringValue("security_code", SecurityCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_single_use_token>("single_use_token", SingleUseToken);
+            writer.WriteStringValue("single_use_token", SingleUseToken);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>("stored_credential", StoredCredential);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest_vault_id>("vault_id", VaultId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>("type", Type);
+            writer.WriteStringValue("vault_id", VaultId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

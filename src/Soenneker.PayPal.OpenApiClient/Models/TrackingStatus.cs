@@ -9,95 +9,95 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CANCELLED")]
         #pragma warning disable CS1591
-        CANCELLED,
+        Cancelled,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERED")]
         #pragma warning disable CS1591
-        DELIVERED,
+        Delivered,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOCAL_PICKUP")]
         #pragma warning disable CS1591
-        LOCAL_PICKUP,
+        LocalPickup,
         #pragma warning restore CS1591
         [EnumMember(Value = "ON_HOLD")]
         #pragma warning disable CS1591
-        ON_HOLD,
+        OnHold,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPED")]
         #pragma warning disable CS1591
-        SHIPPED,
+        Shipped,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPMENT_CREATED")]
         #pragma warning disable CS1591
-        SHIPMENT_CREATED,
+        ShipmentCreated,
         #pragma warning restore CS1591
         [EnumMember(Value = "DROPPED_OFF")]
         #pragma warning disable CS1591
-        DROPPED_OFF,
+        DroppedOff,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_TRANSIT")]
         #pragma warning disable CS1591
-        IN_TRANSIT,
+        InTransit,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETURNED")]
         #pragma warning disable CS1591
-        RETURNED,
+        Returned,
         #pragma warning restore CS1591
         [EnumMember(Value = "LABEL_PRINTED")]
         #pragma warning disable CS1591
-        LABEL_PRINTED,
+        LabelPrinted,
         #pragma warning restore CS1591
         [EnumMember(Value = "ERROR")]
         #pragma warning disable CS1591
-        ERROR,
+        Error,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNCONFIRMED")]
         #pragma warning disable CS1591
-        UNCONFIRMED,
+        Unconfirmed,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUP_FAILED")]
         #pragma warning disable CS1591
-        PICKUP_FAILED,
+        PickupFailed,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_DELAYED")]
         #pragma warning disable CS1591
-        DELIVERY_DELAYED,
+        DeliveryDelayed,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_SCHEDULED")]
         #pragma warning disable CS1591
-        DELIVERY_SCHEDULED,
+        DeliveryScheduled,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_FAILED")]
         #pragma warning disable CS1591
-        DELIVERY_FAILED,
+        DeliveryFailed,
         #pragma warning restore CS1591
         [EnumMember(Value = "INRETURN")]
         #pragma warning disable CS1591
-        INRETURN,
+        Inreturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_PROCESS")]
         #pragma warning disable CS1591
-        IN_PROCESS,
+        InProcess,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEW")]
         #pragma warning disable CS1591
-        NEW,
+        NewValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOID")]
         #pragma warning disable CS1591
-        VOID,
+        VoidValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROCESSED")]
         #pragma warning disable CS1591
-        PROCESSED,
+        Processed,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_SHIPPED")]
         #pragma warning disable CS1591
-        NOT_SHIPPED,
+        NotShipped,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPLETED")]
         #pragma warning disable CS1591
-        COMPLETED,
+        Completed,
         #pragma warning restore CS1591
     }
 }

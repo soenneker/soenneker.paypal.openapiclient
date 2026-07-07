@@ -17,14 +17,14 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.payments_payment_v2.v2.payments.authorizations.item collection</summary>
         /// <param name="position">The ID of the authorized payment for which to show details.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorization_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorization_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorizationItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorizationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("authorization_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorization_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("authorizationId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.WithAuthorizationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

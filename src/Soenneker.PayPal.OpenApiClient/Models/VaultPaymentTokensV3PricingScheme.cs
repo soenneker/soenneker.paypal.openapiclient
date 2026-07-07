@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money Price { get; set; }
 #endif
         /// <summary>The pricing model for the billing cycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme_pricing_model? PricingModel { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingSchemePricingModel? PricingModel { get; set; }
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money.CreateFromDiscriminatorValue); } },
-                { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme_pricing_model>(); } },
+                { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingSchemePricingModel>(); } },
                 { "reload_threshold_amount", n => { ReloadThresholdAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money.CreateFromDiscriminatorValue); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money>("price", Price);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme_pricing_model>("pricing_model", PricingModel);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingSchemePricingModel>("pricing_model", PricingModel);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Money>("reload_threshold_amount", ReloadThresholdAmount);
             writer.WriteAdditionalData(AdditionalData);
         }

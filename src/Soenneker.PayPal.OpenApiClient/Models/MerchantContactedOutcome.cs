@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "NO_RESPONSE")]
         #pragma warning disable CS1591
-        NO_RESPONSE,
+        NoResponse,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIXED")]
         #pragma warning disable CS1591
-        FIXED,
+        FixedValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_FIXED")]
         #pragma warning disable CS1591
-        NOT_FIXED,
+        NotFixed,
         #pragma warning restore CS1591
     }
 }

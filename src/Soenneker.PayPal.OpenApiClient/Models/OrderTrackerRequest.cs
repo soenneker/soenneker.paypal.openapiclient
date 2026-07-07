@@ -36,10 +36,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of details of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items>? Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items> Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> Items { get; set; }
 #endif
         /// <summary>If true, PayPal will send an email notification to the payer of the PayPal transaction. The email contains the tracking details provided through the Orders tracking API request. Independent of any value passed for `notify_payer`, the payer may receive tracking notifications within the PayPal app, based on the user&apos;s notification preferences.</summary>
         public bool? NotifyPayer { get; set; }
@@ -57,6 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public OrderTrackerRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            NotifyPayer = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "capture_id", n => { CaptureId = n.GetStringValue(); } },
                 { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>(); } },
                 { "carrier_name_other", n => { CarrierNameOther = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items>(global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>(global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notify_payer", n => { NotifyPayer = n.GetBoolValue(); } },
                 { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
             };
@@ -94,7 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("capture_id", CaptureId);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>("carrier", Carrier);
             writer.WriteStringValue("carrier_name_other", CarrierNameOther);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest_items>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>("items", Items);
             writer.WriteBoolValue("notify_payer", NotifyPayer);
             writer.WriteStringValue("tracking_number", TrackingNumber);
             writer.WriteAdditionalData(AdditionalData);

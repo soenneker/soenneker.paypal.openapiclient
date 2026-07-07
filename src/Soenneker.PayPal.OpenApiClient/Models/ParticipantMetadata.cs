@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ip_address property</summary>
+        /// <summary>An Internet Protocol address (IP address). This address assigns a numerical label to each device that is connected to a computer network through the Internet Protocol. Supports IPv4 and IPv6 addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address? IpAddress { get; set; }
+        public string? IpAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address IpAddress { get; set; }
+        public string IpAddress { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ip_address", n => { IpAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address>(global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address.CreateFromDiscriminatorValue); } },
+                { "ip_address", n => { IpAddress = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ParticipantMetadata_ip_address>("ip_address", IpAddress);
+            writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

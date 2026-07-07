@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "WEBSITE")]
         #pragma warning disable CS1591
-        WEBSITE,
+        Website,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHONE")]
         #pragma warning disable CS1591
-        PHONE,
+        Phone,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL")]
         #pragma warning disable CS1591
-        EMAIL,
+        Email,
         #pragma warning restore CS1591
         [EnumMember(Value = "WRITTEN")]
         #pragma warning disable CS1591
-        WRITTEN,
+        Written,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_PERSON")]
         #pragma warning disable CS1591
-        IN_PERSON,
+        InPerson,
         #pragma warning restore CS1591
     }
 }

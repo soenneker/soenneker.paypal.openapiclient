@@ -31,13 +31,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string CancelUrl { get; set; }
 #endif
-        /// <summary>The locale property</summary>
+        /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/api/rest/reference/country-codes/) or [M49 region code](https://unstats.un.org/unsd/methodology/m49/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale? Locale { get; set; }
+        public string? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale Locale { get; set; }
+        public string Locale { get; set; }
 #endif
         /// <summary>The URL where the customer is redirected after the customer approves the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale>(global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetStringValue(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "stored_payment_source", n => { StoredPaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource.CreateFromDiscriminatorValue); } },
             };
@@ -96,7 +96,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
             writer.WriteStringValue("cancel_url", CancelUrl);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderConfirmApplicationContext_locale>("locale", Locale);
+            writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource>("stored_payment_source", StoredPaymentSource);
             writer.WriteAdditionalData(AdditionalData);

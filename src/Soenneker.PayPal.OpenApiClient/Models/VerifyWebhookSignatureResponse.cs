@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the signature verification.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponse_verification_status? VerificationStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponseVerificationStatus? VerificationStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponse"/> and sets the default values.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "verification_status", n => { VerificationStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponse_verification_status>(); } },
+                { "verification_status", n => { VerificationStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponseVerificationStatus>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponse_verification_status>("verification_status", VerificationStatus);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignatureResponseVerificationStatus>("verification_status", VerificationStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

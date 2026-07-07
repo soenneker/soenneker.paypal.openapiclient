@@ -9,27 +9,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "MASTERCARD_NON_3D_SECURE_TRANSACTION")]
         #pragma warning disable CS1591
-        MASTERCARD_NON_3D_SECURE_TRANSACTION,
+        MastercardNon3DSecureTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "MASTERCARD_ATTEMPTED_AUTHENTICATION_TRANSACTION")]
         #pragma warning disable CS1591
-        MASTERCARD_ATTEMPTED_AUTHENTICATION_TRANSACTION,
+        MastercardAttemptedAuthenticationTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "MASTERCARD_FULLY_AUTHENTICATED_TRANSACTION")]
         #pragma warning disable CS1591
-        MASTERCARD_FULLY_AUTHENTICATED_TRANSACTION,
+        MastercardFullyAuthenticatedTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "FULLY_AUTHENTICATED_TRANSACTION")]
         #pragma warning disable CS1591
-        FULLY_AUTHENTICATED_TRANSACTION,
+        FullyAuthenticatedTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "ATTEMPTED_AUTHENTICATION_TRANSACTION")]
         #pragma warning disable CS1591
-        ATTEMPTED_AUTHENTICATION_TRANSACTION,
+        AttemptedAuthenticationTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "NON_3D_SECURE_TRANSACTION")]
         #pragma warning disable CS1591
-        NON_3D_SECURE_TRANSACTION,
+        Non3DSecureTransaction,
         #pragma warning restore CS1591
     }
 }

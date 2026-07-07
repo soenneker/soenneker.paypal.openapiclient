@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The frequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_frequency? Frequency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleFrequency? Frequency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_frequency Frequency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleFrequency Frequency { get; set; }
 #endif
         /// <summary>The pricing scheme details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string StartDate { get; set; }
 #endif
         /// <summary>The tenure type of the billing cycle identifies if the billing cycle is a trial(free or discounted) or regular billing cycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_tenure_type? TenureType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleTenureType? TenureType { get; set; }
         /// <summary>The number of times this billing cycle gets executed. Trial billing cycles can only be executed a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;). Regular billing cycles can be executed infinite times (value of &lt;code&gt;0&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;) or a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;).</summary>
         public int? TotalCycles { get; set; }
         /// <summary>
@@ -51,6 +51,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public VaultPaymentTokensV3BillingCycle()
         {
             AdditionalData = new Dictionary<string, object>();
+            Sequence = 1;
+            TotalCycles = 1;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -70,11 +72,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_frequency>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_frequency.CreateFromDiscriminatorValue); } },
+                { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleFrequency>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleFrequency.CreateFromDiscriminatorValue); } },
                 { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme.CreateFromDiscriminatorValue); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
-                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_tenure_type>(); } },
+                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleTenureType>(); } },
                 { "total_cycles", n => { TotalCycles = n.GetIntValue(); } },
             };
         }
@@ -85,11 +87,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_frequency>("frequency", Frequency);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleFrequency>("frequency", Frequency);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PricingScheme>("pricing_scheme", PricingScheme);
             writer.WriteIntValue("sequence", Sequence);
             writer.WriteStringValue("start_date", StartDate);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle_tenure_type>("tenure_type", TenureType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycleTenureType>("tenure_type", TenureType);
             writer.WriteIntValue("total_cycles", TotalCycles);
             writer.WriteAdditionalData(AdditionalData);
         }

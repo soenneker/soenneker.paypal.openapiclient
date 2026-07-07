@@ -19,15 +19,15 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
     public partial class PartnerReferralsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.customer_partner_referrals_v2.v2.customer.partnerReferrals.item collection</summary>
-        /// <param name="position">The ID of the partner-referrals data for which to show details.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartner_referral_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartner_referral_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartnerReferralItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartnerReferralItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("partner_referral_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartner_referral_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("partnerReferralId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartnerReferralItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -53,10 +53,10 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
         /// <param name="body">The customer&apos;s referral data that partners share with PayPal.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate422">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,10 +71,10 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate403.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate422.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate403Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsCreate422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.CreateReferralDataResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.CreateReferralDataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

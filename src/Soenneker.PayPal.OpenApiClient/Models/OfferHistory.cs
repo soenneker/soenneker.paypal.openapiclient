@@ -14,13 +14,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     public partial class OfferHistory : IAdditionalDataHolder, IParsable
     {
         /// <summary>The event-related actor.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_actor? Actor { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor? Actor { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The stage in the dispute lifecycle.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage? DisputeLifeCycleStage { get; private set; }
         /// <summary>The type of the history event.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_event_type? EventType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType? EventType { get; set; }
         /// <summary>The user submitted notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,9 +72,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actor", n => { Actor = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_actor>(); } },
+                { "actor", n => { Actor = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor>(); } },
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
-                { "event_type", n => { EventType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_event_type>(); } },
+                { "event_type", n => { EventType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "offer_amount", n => { OfferAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
                 { "offer_time", n => { OfferTime = n.GetStringValue(); } },
@@ -88,8 +88,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_actor>("actor", Actor);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory_event_type>("event_type", EventType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor>("actor", Actor);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType>("event_type", EventType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("offer_amount", OfferAmount);
             writer.WriteStringValue("offer_time", OfferTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferType>("offer_type", OfferType);

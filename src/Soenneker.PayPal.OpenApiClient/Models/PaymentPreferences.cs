@@ -28,14 +28,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.Money SetupFee { get; set; }
 #endif
         /// <summary>The action to take on the subscription if the initial payment for the setup fails.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences_setup_fee_failure_action? SetupFeeFailureAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction? SetupFeeFailureAction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences"/> and sets the default values.
         /// </summary>
         public PaymentPreferences()
         {
             AdditionalData = new Dictionary<string, object>();
-            SetupFeeFailureAction = global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences_setup_fee_failure_action.CANCEL;
+            AutoBillOutstanding = true;
+            PaymentFailureThreshold = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "auto_bill_outstanding", n => { AutoBillOutstanding = n.GetBoolValue(); } },
                 { "payment_failure_threshold", n => { PaymentFailureThreshold = n.GetIntValue(); } },
                 { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
-                { "setup_fee_failure_action", n => { SetupFeeFailureAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences_setup_fee_failure_action>(); } },
+                { "setup_fee_failure_action", n => { SetupFeeFailureAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction>(); } },
             };
         }
         /// <summary>
@@ -71,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteBoolValue("auto_bill_outstanding", AutoBillOutstanding);
             writer.WriteIntValue("payment_failure_threshold", PaymentFailureThreshold);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("setup_fee", SetupFee);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences_setup_fee_failure_action>("setup_fee_failure_action", SetupFeeFailureAction);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction>("setup_fee_failure_action", SetupFeeFailureAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

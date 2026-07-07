@@ -9,43 +9,43 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "MERCHANDISE_OR_SERVICE_NOT_RECEIVED")]
         #pragma warning disable CS1591
-        MERCHANDISE_OR_SERVICE_NOT_RECEIVED,
+        MerchandiseOrServiceNotReceived,
         #pragma warning restore CS1591
         [EnumMember(Value = "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED")]
         #pragma warning disable CS1591
-        MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED,
+        MerchandiseOrServiceNotAsDescribed,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNAUTHORISED")]
         #pragma warning disable CS1591
-        UNAUTHORISED,
+        Unauthorised,
         #pragma warning restore CS1591
         [EnumMember(Value = "CREDIT_NOT_PROCESSED")]
         #pragma warning disable CS1591
-        CREDIT_NOT_PROCESSED,
+        CreditNotProcessed,
         #pragma warning restore CS1591
         [EnumMember(Value = "DUPLICATE_TRANSACTION")]
         #pragma warning disable CS1591
-        DUPLICATE_TRANSACTION,
+        DuplicateTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "INCORRECT_AMOUNT")]
         #pragma warning disable CS1591
-        INCORRECT_AMOUNT,
+        IncorrectAmount,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYMENT_BY_OTHER_MEANS")]
         #pragma warning disable CS1591
-        PAYMENT_BY_OTHER_MEANS,
+        PaymentByOtherMeans,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANCELED_RECURRING_BILLING")]
         #pragma warning disable CS1591
-        CANCELED_RECURRING_BILLING,
+        CanceledRecurringBilling,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROBLEM_WITH_REMITTANCE")]
         #pragma warning disable CS1591
-        PROBLEM_WITH_REMITTANCE,
+        ProblemWithRemittance,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
     }
 }

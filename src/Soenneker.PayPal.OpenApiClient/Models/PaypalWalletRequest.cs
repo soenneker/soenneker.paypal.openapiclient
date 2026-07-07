@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan BillingPlan { get; set; }
 #endif
         /// <summary>The customer type associated with a digital wallet payment token. This is to indicate whether the customer acting on the merchant / platform is either a business or a consumer.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type? CustomerType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? CustomerType { get; set; }
         /// <summary>&quot;The description displayed to the consumer on the approval flow for a digital wallet, as well as on the merchant view of the payment token management experience. exp: PayPal.com.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,15 +52,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping Shipping { get; set; }
 #endif
         /// <summary>Expected business/charge model for the billing agreement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern? UsagePattern { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern? UsagePattern { get; set; }
         /// <summary>The usage type associated with a digital wallet payment token.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type? UsageType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType? UsageType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest"/> and sets the default values.
         /// </summary>
         public PaypalWalletRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            PermitMultiplePaymentTokens = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -81,13 +82,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_plan", n => { BillingPlan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan.CreateFromDiscriminatorValue); } },
-                { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type>(); } },
+                { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "experience_context", n => { ExperienceContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext.CreateFromDiscriminatorValue); } },
                 { "permit_multiple_payment_tokens", n => { PermitMultiplePaymentTokens = n.GetBoolValue(); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping>(global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping.CreateFromDiscriminatorValue); } },
-                { "usage_pattern", n => { UsagePattern = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern>(); } },
-                { "usage_type", n => { UsageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type>(); } },
+                { "usage_pattern", n => { UsagePattern = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern>(); } },
+                { "usage_type", n => { UsageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType>(); } },
             };
         }
         /// <summary>
@@ -98,13 +99,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan>("billing_plan", BillingPlan);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_customer_type>("customer_type", CustomerType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType>("customer_type", CustomerType);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext>("experience_context", ExperienceContext);
             writer.WriteBoolValue("permit_multiple_payment_tokens", PermitMultiplePaymentTokens);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping>("shipping", Shipping);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_pattern>("usage_pattern", UsagePattern);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest_usage_type>("usage_type", UsageType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern>("usage_pattern", UsagePattern);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType>("usage_type", UsageType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,475 +9,475 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "AMOUNT_DIFFERENCE_EXPECTED_DUE_TO_FEES")]
         #pragma warning disable CS1591
-        AMOUNT_DIFFERENCE_EXPECTED_DUE_TO_FEES,
+        AmountDifferenceExpectedDueToFees,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLING_AGREEMENT_CHANGE_DISCLOSED")]
         #pragma warning disable CS1591
-        BILLING_AGREEMENT_CHANGE_DISCLOSED,
+        BillingAgreementChangeDisclosed,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLING_AGREEMENT_CHANGE_NOT_DISCLOSED")]
         #pragma warning disable CS1591
-        BILLING_AGREEMENT_CHANGE_NOT_DISCLOSED,
+        BillingAgreementChangeNotDisclosed,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLING_AGREEMENT_DATE_CHANGE_DISCLOSED")]
         #pragma warning disable CS1591
-        BILLING_AGREEMENT_DATE_CHANGE_DISCLOSED,
+        BillingAgreementDateChangeDisclosed,
         #pragma warning restore CS1591
         [EnumMember(Value = "BILLING_AGREEMENT_DATE_CHANGE_NOT_DISCLOSED")]
         #pragma warning disable CS1591
-        BILLING_AGREEMENT_DATE_CHANGE_NOT_DISCLOSED,
+        BillingAgreementDateChangeNotDisclosed,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_ATTEMPTED_RETURN")]
         #pragma warning disable CS1591
-        BUYER_ATTEMPTED_RETURN,
+        BuyerAttemptedReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_BILLED_ONLY_ONCE")]
         #pragma warning disable CS1591
-        BUYER_BILLED_ONLY_ONCE,
+        BuyerBilledOnlyOnce,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_CANCELLED_CASE")]
         #pragma warning disable CS1591
-        BUYER_CANCELLED_CASE,
+        BuyerCancelledCase,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_CANCELLED_SERVICE")]
         #pragma warning disable CS1591
-        BUYER_CANCELLED_SERVICE,
+        BuyerCancelledService,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_FAILED_TO_DESCRIBE_ISSUE")]
         #pragma warning disable CS1591
-        BUYER_FAILED_TO_DESCRIBE_ISSUE,
+        BuyerFailedToDescribeIssue,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_HAS_POSSESSION_OF_THE_MERCHANDISE_OR_SERVICE")]
         #pragma warning disable CS1591
-        BUYER_HAS_POSSESSION_OF_THE_MERCHANDISE_OR_SERVICE,
+        BuyerHasPossessionOfTheMerchandiseOrService,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_MADE_NO_ATTEMPT_TO_RESOLVE_WITH_SELLER")]
         #pragma warning disable CS1591
-        BUYER_MADE_NO_ATTEMPT_TO_RESOLVE_WITH_SELLER,
+        BuyerMadeNoAttemptToResolveWithSeller,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_NOT_IN_POSSESSION_OF_ITEM_TO_RETURN")]
         #pragma warning disable CS1591
-        BUYER_NOT_IN_POSSESSION_OF_ITEM_TO_RETURN,
+        BuyerNotInPossessionOfItemToReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_PROVIDED_CREDIT_RECEIPT")]
         #pragma warning disable CS1591
-        BUYER_PROVIDED_CREDIT_RECEIPT,
+        BuyerProvidedCreditReceipt,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYER_RECEIVED_DUPLICATE_REFUND")]
         #pragma warning disable CS1591
-        BUYER_RECEIVED_DUPLICATE_REFUND,
+        BuyerReceivedDuplicateRefund,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANCELLED_PER_TERMS_OF_BILLING_AGREEMENT")]
         #pragma warning disable CS1591
-        CANCELLED_PER_TERMS_OF_BILLING_AGREEMENT,
+        CancelledPerTermsOfBillingAgreement,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARD_NOT_STOLEN")]
         #pragma warning disable CS1591
-        CARD_NOT_STOLEN,
+        CardNotStolen,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARD_NOT_STOLEN_BEFORE_AUTH")]
         #pragma warning disable CS1591
-        CARD_NOT_STOLEN_BEFORE_AUTH,
+        CardNotStolenBeforeAuth,
         #pragma warning restore CS1591
         [EnumMember(Value = "CUSTOMER_RECOGNIZES_TRANSACTION")]
         #pragma warning disable CS1591
-        CUSTOMER_RECOGNIZES_TRANSACTION,
+        CustomerRecognizesTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "DECISION_BASED_ON_AVAILABLE_INFORMATION")]
         #pragma warning disable CS1591
-        DECISION_BASED_ON_AVAILABLE_INFORMATION,
+        DecisionBasedOnAvailableInformation,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_AFTER_EXPECTED_DELIVERY_DATE")]
         #pragma warning disable CS1591
-        DELIVERY_AFTER_EXPECTED_DELIVERY_DATE,
+        DeliveryAfterExpectedDeliveryDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_DUE_WITHIN_EXPECTED_DELIVERY_DATE")]
         #pragma warning disable CS1591
-        DELIVERY_DUE_WITHIN_EXPECTED_DELIVERY_DATE,
+        DeliveryDueWithinExpectedDeliveryDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERY_OR_SERVICE_REFUSED")]
         #pragma warning disable CS1591
-        DELIVERY_OR_SERVICE_REFUSED,
+        DeliveryOrServiceRefused,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOCUMENTATION_MATCHES_AMOUNT_CHARGED")]
         #pragma warning disable CS1591
-        DOCUMENTATION_MATCHES_AMOUNT_CHARGED,
+        DocumentationMatchesAmountCharged,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOCUMENTATION_MATCHES_AMOUNT_IN_PAYPAL_ACCOUNT")]
         #pragma warning disable CS1591
-        DOCUMENTATION_MATCHES_AMOUNT_IN_PAYPAL_ACCOUNT,
+        DocumentationMatchesAmountInPaypalAccount,
         #pragma warning restore CS1591
         [EnumMember(Value = "DUPLICATE_ADD_FUNDS")]
         #pragma warning disable CS1591
-        DUPLICATE_ADD_FUNDS,
+        DuplicateAddFunds,
         #pragma warning restore CS1591
         [EnumMember(Value = "EFFORTLESS_SELLER_PROTECTION")]
         #pragma warning disable CS1591
-        EFFORTLESS_SELLER_PROTECTION,
+        EffortlessSellerProtection,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_PERSON_DELIVERY")]
         #pragma warning disable CS1591
-        IN_PERSON_DELIVERY,
+        InPersonDelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "INELIGIBLE_BUYER_PROTECTION_POLICY")]
         #pragma warning disable CS1591
-        INELIGIBLE_BUYER_PROTECTION_POLICY,
+        IneligibleBuyerProtectionPolicy,
         #pragma warning restore CS1591
         [EnumMember(Value = "INELIGIBLE_SELLER_PROTECTION_POLICY")]
         #pragma warning disable CS1591
-        INELIGIBLE_SELLER_PROTECTION_POLICY,
+        IneligibleSellerProtectionPolicy,
         #pragma warning restore CS1591
         [EnumMember(Value = "INQUIRY_OFFER_ITEM_REPLACED")]
         #pragma warning disable CS1591
-        INQUIRY_OFFER_ITEM_REPLACED,
+        InquiryOfferItemReplaced,
         #pragma warning restore CS1591
         [EnumMember(Value = "INQUIRY_OFFER_PARTIAL_REFUND")]
         #pragma warning disable CS1591
-        INQUIRY_OFFER_PARTIAL_REFUND,
+        InquiryOfferPartialRefund,
         #pragma warning restore CS1591
         [EnumMember(Value = "INQUIRY_OFFER_REFUND_WITH_ITEM_RETURN")]
         #pragma warning disable CS1591
-        INQUIRY_OFFER_REFUND_WITH_ITEM_RETURN,
+        InquiryOfferRefundWithItemReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "INQUIRY_OFFER_REFUND_WITH_REPLACEMENT")]
         #pragma warning disable CS1591
-        INQUIRY_OFFER_REFUND_WITH_REPLACEMENT,
+        InquiryOfferRefundWithReplacement,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_APPEAL_REASON")]
         #pragma warning disable CS1591
-        INVALID_APPEAL_REASON,
+        InvalidAppealReason,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_CHARGEBACK_SELLER_FAVOUR")]
         #pragma warning disable CS1591
-        INVALID_CHARGEBACK_SELLER_FAVOUR,
+        InvalidChargebackSellerFavour,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_DELIVERY_PROOF")]
         #pragma warning disable CS1591
-        INVALID_DELIVERY_PROOF,
+        InvalidDeliveryProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_DELIVERY_PROOF_SIGNATURE")]
         #pragma warning disable CS1591
-        INVALID_DELIVERY_PROOF_SIGNATURE,
+        InvalidDeliveryProofSignature,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_DOCUMENTATION")]
         #pragma warning disable CS1591
-        INVALID_DOCUMENTATION,
+        InvalidDocumentation,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_PROOF_OF_SHIPMENT")]
         #pragma warning disable CS1591
-        INVALID_PROOF_OF_SHIPMENT,
+        InvalidProofOfShipment,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_REFUND_PROOF")]
         #pragma warning disable CS1591
-        INVALID_REFUND_PROOF,
+        InvalidRefundProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_RETURN_DELIVERY_NO_SIGNATURE_PROOF")]
         #pragma warning disable CS1591
-        INVALID_RETURN_DELIVERY_NO_SIGNATURE_PROOF,
+        InvalidReturnDeliveryNoSignatureProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_RETURN_DELIVERY_PROOF")]
         #pragma warning disable CS1591
-        INVALID_RETURN_DELIVERY_PROOF,
+        InvalidReturnDeliveryProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_TRACKING")]
         #pragma warning disable CS1591
-        INVALID_TRACKING,
+        InvalidTracking,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_ALTERED_REPAIRED")]
         #pragma warning disable CS1591
-        ITEM_ALTERED_REPAIRED,
+        ItemAlteredRepaired,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_AS_ADVERTISED")]
         #pragma warning disable CS1591
-        ITEM_NOT_AS_ADVERTISED,
+        ItemNotAsAdvertised,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_AS_DESCRIBED")]
         #pragma warning disable CS1591
-        ITEM_NOT_AS_DESCRIBED,
+        ItemNotAsDescribed,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_DAMAGED")]
         #pragma warning disable CS1591
-        ITEM_NOT_DAMAGED,
+        ItemNotDamaged,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_DELIVERED")]
         #pragma warning disable CS1591
-        ITEM_NOT_DELIVERED,
+        ItemNotDelivered,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_RETURNED_TO_SELLER")]
         #pragma warning disable CS1591
-        ITEM_NOT_RETURNED_TO_SELLER,
+        ItemNotReturnedToSeller,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_SHIPPED")]
         #pragma warning disable CS1591
-        ITEM_NOT_SHIPPED,
+        ItemNotShipped,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_OF_DIFFERENT_QUALITY_OR_QUANTITY")]
         #pragma warning disable CS1591
-        ITEM_OF_DIFFERENT_QUALITY_OR_QUANTITY,
+        ItemOfDifferentQualityOrQuantity,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_OUT_OF_STOCK_AND_NOT_DELIVERED")]
         #pragma warning disable CS1591
-        ITEM_OUT_OF_STOCK_AND_NOT_DELIVERED,
+        ItemOutOfStockAndNotDelivered,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_RETURNED_TO_SELLER")]
         #pragma warning disable CS1591
-        ITEM_RETURNED_TO_SELLER,
+        ItemReturnedToSeller,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_SERVICE_MISREPRESENTED")]
         #pragma warning disable CS1591
-        ITEM_SERVICE_MISREPRESENTED,
+        ItemServiceMisrepresented,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_SERVICE_NOT_MISREPRESENTED")]
         #pragma warning disable CS1591
-        ITEM_SERVICE_NOT_MISREPRESENTED,
+        ItemServiceNotMisrepresented,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_SERVICE_RECEIVED_BY_BUYER")]
         #pragma warning disable CS1591
-        ITEM_SERVICE_RECEIVED_BY_BUYER,
+        ItemServiceReceivedByBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_SOLD_AS_DESCRIBED")]
         #pragma warning disable CS1591
-        ITEM_SOLD_AS_DESCRIBED,
+        ItemSoldAsDescribed,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_VALUE_UNAFFECTED")]
         #pragma warning disable CS1591
-        ITEM_VALUE_UNAFFECTED,
+        ItemValueUnaffected,
         #pragma warning restore CS1591
         [EnumMember(Value = "MULTIPLE_APPEALS_WITH_SAME_REASON")]
         #pragma warning disable CS1591
-        MULTIPLE_APPEALS_WITH_SAME_REASON,
+        MultipleAppealsWithSameReason,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_DOCUMENTATION_FROM_BUYER")]
         #pragma warning disable CS1591
-        NO_DOCUMENTATION_FROM_BUYER,
+        NoDocumentationFromBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_DOCUMENTATION_SUPPORTING_DUE_OF_CREDIT")]
         #pragma warning disable CS1591
-        NO_DOCUMENTATION_SUPPORTING_DUE_OF_CREDIT,
+        NoDocumentationSupportingDueOfCredit,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_PROOF_OF_DELIVERY")]
         #pragma warning disable CS1591
-        NO_PROOF_OF_DELIVERY,
+        NoProofOfDelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_PROOF_OF_DELIVERY_INTANGIBLE")]
         #pragma warning disable CS1591
-        NO_PROOF_OF_DELIVERY_INTANGIBLE,
+        NoProofOfDeliveryIntangible,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_PROTECTION_FOR_DIGITAL_GOODS_SERVICE")]
         #pragma warning disable CS1591
-        NO_PROTECTION_FOR_DIGITAL_GOODS_SERVICE,
+        NoProtectionForDigitalGoodsService,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_RESPONSE_FROM_BUYER")]
         #pragma warning disable CS1591
-        NO_RESPONSE_FROM_BUYER,
+        NoResponseFromBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_RESPONSE_FROM_BUYER_FOR_ADDITIONAL_INFO_REQUEST")]
         #pragma warning disable CS1591
-        NO_RESPONSE_FROM_BUYER_FOR_ADDITIONAL_INFO_REQUEST,
+        NoResponseFromBuyerForAdditionalInfoRequest,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_SELLER_RESPONSE")]
         #pragma warning disable CS1591
-        NO_SELLER_RESPONSE,
+        NoSellerResponse,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_SELLER_RESPONSE_FOR_ADDITIONAL_INFO_REQUEST")]
         #pragma warning disable CS1591
-        NO_SELLER_RESPONSE_FOR_ADDITIONAL_INFO_REQUEST,
+        NoSellerResponseForAdditionalInfoRequest,
         #pragma warning restore CS1591
         [EnumMember(Value = "NO_VALID_SHIPMENT_PROOF")]
         #pragma warning disable CS1591
-        NO_VALID_SHIPMENT_PROOF,
+        NoValidShipmentProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_A_BILLING_ERROR")]
         #pragma warning disable CS1591
-        NOT_A_BILLING_ERROR,
+        NotABillingError,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_AN_UNAUTHORIZED_TRANSACTION")]
         #pragma warning disable CS1591
-        NOT_AN_UNAUTHORIZED_TRANSACTION,
+        NotAnUnauthorizedTransaction,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_DUPLICATE_FUNDS_ADDED_ONCE")]
         #pragma warning disable CS1591
-        NOT_DUPLICATE_FUNDS_ADDED_ONCE,
+        NotDuplicateFundsAddedOnce,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_DUPLICATE_FUNDS_WITHDRAWN_ONCE")]
         #pragma warning disable CS1591
-        NOT_DUPLICATE_FUNDS_WITHDRAWN_ONCE,
+        NotDuplicateFundsWithdrawnOnce,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_SHIPPED_TO_CORRECT_ADDRESS")]
         #pragma warning disable CS1591
-        NOT_SHIPPED_TO_CORRECT_ADDRESS,
+        NotShippedToCorrectAddress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTIAL_REFUND_ISSUED_FOR_MISSING_ITEMS")]
         #pragma warning disable CS1591
-        PARTIAL_REFUND_ISSUED_FOR_MISSING_ITEMS,
+        PartialRefundIssuedForMissingItems,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTIAL_REFUND_OFFER_ACCEPTED")]
         #pragma warning disable CS1591
-        PARTIAL_REFUND_OFFER_ACCEPTED,
+        PartialRefundOfferAccepted,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYMENT_REVERSED_ALREADY")]
         #pragma warning disable CS1591
-        PAYMENT_REVERSED_ALREADY,
+        PaymentReversedAlready,
         #pragma warning restore CS1591
         [EnumMember(Value = "POS_SUBMITTED_INSTEAD_OF_POD")]
         #pragma warning disable CS1591
-        POS_SUBMITTED_INSTEAD_OF_POD,
+        PosSubmittedInsteadOfPod,
         #pragma warning restore CS1591
         [EnumMember(Value = "PREAUTH_INSTALLMENT_DUE")]
         #pragma warning disable CS1591
-        PREAUTH_INSTALLMENT_DUE,
+        PreauthInstallmentDue,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROOF_OF_BILLING_AFTER_CANCELLATION_ACCEPTED")]
         #pragma warning disable CS1591
-        PROOF_OF_BILLING_AFTER_CANCELLATION_ACCEPTED,
+        ProofOfBillingAfterCancellationAccepted,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROOF_OF_DUPLICATE_DENIED_OR_INSUFFICIENT")]
         #pragma warning disable CS1591
-        PROOF_OF_DUPLICATE_DENIED_OR_INSUFFICIENT,
+        ProofOfDuplicateDeniedOrInsufficient,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROOF_OF_INCORRECT_TRANSACTION_AMOUNT_ACCEPTED")]
         #pragma warning disable CS1591
-        PROOF_OF_INCORRECT_TRANSACTION_AMOUNT_ACCEPTED,
+        ProofOfIncorrectTransactionAmountAccepted,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROOF_OF_PAID_BY_OTHER_MEANS_NOT_SUBMITTED")]
         #pragma warning disable CS1591
-        PROOF_OF_PAID_BY_OTHER_MEANS_NOT_SUBMITTED,
+        ProofOfPaidByOtherMeansNotSubmitted,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROOF_OF_TRACKING_NOT_SUBMITTED")]
         #pragma warning disable CS1591
-        PROOF_OF_TRACKING_NOT_SUBMITTED,
+        ProofOfTrackingNotSubmitted,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROTECTED_BY_PAYPAL")]
         #pragma warning disable CS1591
-        PROTECTED_BY_PAYPAL,
+        ProtectedByPaypal,
         #pragma warning restore CS1591
         [EnumMember(Value = "REPRESENTED_BY_PAYPAL")]
         #pragma warning disable CS1591
-        REPRESENTED_BY_PAYPAL,
+        RepresentedByPaypal,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_ACCEPTED_MULTIPLE_PAYMENTS")]
         #pragma warning disable CS1591
-        SELLER_ACCEPTED_MULTIPLE_PAYMENTS,
+        SellerAcceptedMultiplePayments,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_AGREED_REFUND_WITHOUT_RETURN")]
         #pragma warning disable CS1591
-        SELLER_AGREED_REFUND_WITHOUT_RETURN,
+        SellerAgreedRefundWithoutReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_AGREED_TO_ISSUE_CREDIT")]
         #pragma warning disable CS1591
-        SELLER_AGREED_TO_ISSUE_CREDIT,
+        SellerAgreedToIssueCredit,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_ISSUED_CREDIT_TO_BUYER")]
         #pragma warning disable CS1591
-        SELLER_ISSUED_CREDIT_TO_BUYER,
+        SellerIssuedCreditToBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_ISSUED_REFUND")]
         #pragma warning disable CS1591
-        SELLER_ISSUED_REFUND,
+        SellerIssuedRefund,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_NOT_REACHABLE")]
         #pragma warning disable CS1591
-        SELLER_NOT_REACHABLE,
+        SellerNotReachable,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_RECEIVED_PAYMENT_TWICE_OR_FOR_REPLACEMENT")]
         #pragma warning disable CS1591
-        SELLER_RECEIVED_PAYMENT_TWICE_OR_FOR_REPLACEMENT,
+        SellerReceivedPaymentTwiceOrForReplacement,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_REFUSED_REFUND")]
         #pragma warning disable CS1591
-        SELLER_REFUSED_REFUND,
+        SellerRefusedRefund,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_REFUSED_RETURN")]
         #pragma warning disable CS1591
-        SELLER_REFUSED_RETURN,
+        SellerRefusedReturn,
         #pragma warning restore CS1591
         [EnumMember(Value = "SELLER_SURCHARGED_BUYER")]
         #pragma warning disable CS1591
-        SELLER_SURCHARGED_BUYER,
+        SellerSurchargedBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVICE_NOT_COMPLETED_AS_AGREED")]
         #pragma warning disable CS1591
-        SERVICE_NOT_COMPLETED_AS_AGREED,
+        ServiceNotCompletedAsAgreed,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPING_COMPANY_WONT_SHIP")]
         #pragma warning disable CS1591
-        SHIPPING_COMPANY_WONT_SHIP,
+        ShippingCompanyWontShip,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRACKING_PROOF_NOT_ENOUGH")]
         #pragma warning disable CS1591
-        TRACKING_PROOF_NOT_ENOUGH,
+        TrackingProofNotEnough,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_AUTHORIZED_BY_CARDHOLDER")]
         #pragma warning disable CS1591
-        TRANSACTION_AUTHORIZED_BY_CARDHOLDER,
+        TransactionAuthorizedByCardholder,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_CANCELLED_AFTER_AUTHORIZATION_DATE")]
         #pragma warning disable CS1591
-        TRANSACTION_CANCELLED_AFTER_AUTHORIZATION_DATE,
+        TransactionCancelledAfterAuthorizationDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_CANCELLED_BEFORE_SHIPMENT_SERVICE_DATE")]
         #pragma warning disable CS1591
-        TRANSACTION_CANCELLED_BEFORE_SHIPMENT_SERVICE_DATE,
+        TransactionCancelledBeforeShipmentServiceDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_MATCHES_BUYER_SPENDING_PATTERN")]
         #pragma warning disable CS1591
-        TRANSACTION_MATCHES_BUYER_SPENDING_PATTERN,
+        TransactionMatchesBuyerSpendingPattern,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSACTION_PROCESSED_CORRECTLY")]
         #pragma warning disable CS1591
-        TRANSACTION_PROCESSED_CORRECTLY,
+        TransactionProcessedCorrectly,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUSTED_BUYER_PAYOUT")]
         #pragma warning disable CS1591
-        TRUSTED_BUYER_PAYOUT,
+        TrustedBuyerPayout,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNUSED_SHIPPING_LABEL")]
         #pragma warning disable CS1591
-        UNUSED_SHIPPING_LABEL,
+        UnusedShippingLabel,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_PROOF_OF_DELIVERY")]
         #pragma warning disable CS1591
-        VALID_PROOF_OF_DELIVERY,
+        ValidProofOfDelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_PROOF_OF_DELIVERY_WITH_SIGNATURE")]
         #pragma warning disable CS1591
-        VALID_PROOF_OF_DELIVERY_WITH_SIGNATURE,
+        ValidProofOfDeliveryWithSignature,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_PROOF_OF_REFUND")]
         #pragma warning disable CS1591
-        VALID_PROOF_OF_REFUND,
+        ValidProofOfRefund,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_PROOF_SUPPORTING_CLAIM")]
         #pragma warning disable CS1591
-        VALID_PROOF_SUPPORTING_CLAIM,
+        ValidProofSupportingClaim,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_RETURN_DELIVERY_PROOF")]
         #pragma warning disable CS1591
-        VALID_RETURN_DELIVERY_PROOF,
+        ValidReturnDeliveryProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_RETURN_DELIVERY_PROOF_WITH_SIGNATURE")]
         #pragma warning disable CS1591
-        VALID_RETURN_DELIVERY_PROOF_WITH_SIGNATURE,
+        ValidReturnDeliveryProofWithSignature,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALID_SHIPMENT_PROOF")]
         #pragma warning disable CS1591
-        VALID_SHIPMENT_PROOF,
+        ValidShipmentProof,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALUE_AFFECTED_SIGNIFICANTLY")]
         #pragma warning disable CS1591
-        VALUE_AFFECTED_SIGNIFICANTLY,
+        ValueAffectedSignificantly,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROTECTION_POLICY_APPLIES")]
         #pragma warning disable CS1591
-        PROTECTION_POLICY_APPLIES,
+        ProtectionPolicyApplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "SNAD_DELAYED_FILING")]
         #pragma warning disable CS1591
-        SNAD_DELAYED_FILING,
+        SnadDelayedFiling,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUNDS_TRANSFERRED_TO_INCORRECT_RECIPIENT")]
         #pragma warning disable CS1591
-        FUNDS_TRANSFERRED_TO_INCORRECT_RECIPIENT,
+        FundsTransferredToIncorrectRecipient,
         #pragma warning restore CS1591
     }
 }

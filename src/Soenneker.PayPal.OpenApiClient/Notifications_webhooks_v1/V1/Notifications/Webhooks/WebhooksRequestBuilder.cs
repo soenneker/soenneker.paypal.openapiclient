@@ -19,15 +19,15 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.notifications_webhooks_v1.v1.notifications.webhooks.item collection</summary>
-        /// <param name="position">The ID of the webhook for which to list subscriptions.</param>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhook_ItemRequestBuilder"/></returns>
-        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhook_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhookItemRequestBuilder"/></returns>
+        public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhookItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webhook_id", position);
-                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhook_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webhookId", position);
+                return new global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhookItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -152,7 +152,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         {
             /// <summary>Filters the webhooks in the response by an `anchor_id` entity type.</summary>
             [QueryParameter("anchor_type")]
-            public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.GetAnchor_typeQueryParameterType? AnchorType { get; set; }
+            public global::Soenneker.PayPal.OpenApiClient.Models.AnchorType? AnchorType { get; set; }
         }
     }
 }

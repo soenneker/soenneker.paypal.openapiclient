@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "PAYPAL_WALLET_VAULTING_ADVANCED")]
         #pragma warning disable CS1591
-        PAYPAL_WALLET_VAULTING_ADVANCED,
+        PaypalWalletVaultingAdvanced,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAY_UPON_INVOICE")]
         #pragma warning disable CS1591
-        PAY_UPON_INVOICE,
+        PayUponInvoice,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPLE_PAY")]
         #pragma warning disable CS1591
-        APPLE_PAY,
+        ApplePay,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOOGLE_PAY")]
         #pragma warning disable CS1591
-        GOOGLE_PAY,
+        GooglePay,
         #pragma warning restore CS1591
     }
 }

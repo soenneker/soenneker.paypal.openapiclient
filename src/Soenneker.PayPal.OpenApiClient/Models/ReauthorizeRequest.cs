@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The amount property</summary>
+        /// <summary>The amount to reauthorize for an authorized payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest_amount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequestAmount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest_amount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequestAmount Amount { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest_amount>(global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest_amount.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequestAmount>(global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequestAmount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequest_amount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReauthorizeRequestAmount>("amount", Amount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

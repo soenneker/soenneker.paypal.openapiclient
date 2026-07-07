@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Captures.Item.Refund
 {
     /// <summary>
-    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\captures\{capture_id}\refund
+    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\captures\{captureId}\refund
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RefundRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Capture
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RefundRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/captures/{capture_id}/refund", pathParameters)
+        public RefundRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/captures/{captureId}/refund", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Capture
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RefundRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/captures/{capture_id}/refund", rawUrl)
+        public RefundRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/captures/{captureId}/refund", rawUrl)
         {
         }
         /// <summary>

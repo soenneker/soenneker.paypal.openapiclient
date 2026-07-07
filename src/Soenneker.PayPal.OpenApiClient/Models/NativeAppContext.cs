@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Operating System type of the device that the buyer is using.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext_os_type? OsType { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContextOsType? OsType { get; private set; }
         /// <summary>Operating System version of the device that the buyer is using.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "os_type", n => { OsType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext_os_type>(); } },
+                { "os_type", n => { OsType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContextOsType>(); } },
                 { "os_version", n => { OsVersion = n.GetStringValue(); } },
             };
         }

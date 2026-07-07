@@ -9,39 +9,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "SUCCESS")]
         #pragma warning disable CS1591
-        SUCCESS,
+        Success,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAILED")]
         #pragma warning disable CS1591
-        FAILED,
+        Failed,
         #pragma warning restore CS1591
         [EnumMember(Value = "PENDING")]
         #pragma warning disable CS1591
-        PENDING,
+        Pending,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNCLAIMED")]
         #pragma warning disable CS1591
-        UNCLAIMED,
+        Unclaimed,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETURNED")]
         #pragma warning disable CS1591
-        RETURNED,
+        Returned,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONHOLD")]
         #pragma warning disable CS1591
-        ONHOLD,
+        Onhold,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLOCKED")]
         #pragma warning disable CS1591
-        BLOCKED,
+        Blocked,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDED")]
         #pragma warning disable CS1591
-        REFUNDED,
+        Refunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "REVERSED")]
         #pragma warning disable CS1591
-        REVERSED,
+        Reversed,
         #pragma warning restore CS1591
     }
 }

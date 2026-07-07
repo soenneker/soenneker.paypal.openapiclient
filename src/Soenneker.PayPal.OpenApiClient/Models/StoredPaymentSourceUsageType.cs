@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "FIRST")]
         #pragma warning disable CS1591
-        FIRST,
+        First,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUBSEQUENT")]
         #pragma warning disable CS1591
-        SUBSEQUENT,
+        Subsequent,
         #pragma warning restore CS1591
         [EnumMember(Value = "DERIVED")]
         #pragma warning disable CS1591
-        DERIVED,
+        Derived,
         #pragma warning restore CS1591
     }
 }

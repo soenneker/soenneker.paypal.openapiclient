@@ -23,7 +23,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public SubscriptionReviseRequestApplicationContextPaymentMethod()
         {
             AdditionalData = new Dictionary<string, object>();
-            PayeePreferred = global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference.UNRESTRICTED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

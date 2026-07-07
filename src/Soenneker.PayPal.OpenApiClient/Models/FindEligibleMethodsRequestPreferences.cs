@@ -20,7 +20,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>If this value is set to true, response will include vaulted token information if the eligible funding source has any instrument vaulted for the customer. Value defaults to false.</summary>
         public bool? IncludeVaultTokens { get; set; }
         /// <summary>This field specifies the payment flow, expected to provide a hint about which payment action the customer is intending to perform.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences_payment_flow? PaymentFlow { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow? PaymentFlow { get; set; }
         /// <summary>Payment source constraint defines the payment methods that needs to be included/excluded for eligibility assessment. If not passed, all payment methods will be assessed for eligibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,6 +35,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public FindEligibleMethodsRequestPreferences()
         {
             AdditionalData = new Dictionary<string, object>();
+            IncludeAccountDetails = false;
+            IncludeVaultTokens = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "include_account_details", n => { IncludeAccountDetails = n.GetBoolValue(); } },
                 { "include_vault_tokens", n => { IncludeVaultTokens = n.GetBoolValue(); } },
-                { "payment_flow", n => { PaymentFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences_payment_flow>(); } },
+                { "payment_flow", n => { PaymentFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow>(); } },
                 { "payment_source_constraint", n => { PaymentSourceConstraint = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint.CreateFromDiscriminatorValue); } },
             };
         }
@@ -69,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("include_account_details", IncludeAccountDetails);
             writer.WriteBoolValue("include_vault_tokens", IncludeVaultTokens);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences_payment_flow>("payment_flow", PaymentFlow);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow>("payment_flow", PaymentFlow);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint>("payment_source_constraint", PaymentSourceConstraint);
             writer.WriteAdditionalData(AdditionalData);
         }

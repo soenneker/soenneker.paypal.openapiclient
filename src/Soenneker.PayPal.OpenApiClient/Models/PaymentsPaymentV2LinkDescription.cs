@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string MediaType { get; set; }
 #endif
         /// <summary>The HTTP method required to make the related call.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_method? Method { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionMethod? Method { get; set; }
         /// <summary>The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,21 +49,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Rel { get; set; }
 #endif
-        /// <summary>The schema property</summary>
+        /// <summary>The schema that describes the request data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_schema? Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema? Schema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_schema Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema Schema { get; set; }
 #endif
-        /// <summary>The targetSchema property</summary>
+        /// <summary>The schema that describes the link target.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_targetSchema? TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionTargetSchema? TargetSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_targetSchema TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionTargetSchema TargetSchema { get; set; }
 #endif
         /// <summary>The link title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,10 +102,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "encType", n => { EncType = n.GetStringValue(); } },
                 { "href", n => { Href = n.GetStringValue(); } },
                 { "mediaType", n => { MediaType = n.GetStringValue(); } },
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_method>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionMethod>(); } },
                 { "rel", n => { Rel = n.GetStringValue(); } },
-                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_schema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_schema.CreateFromDiscriminatorValue); } },
-                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_targetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_targetSchema.CreateFromDiscriminatorValue); } },
+                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema.CreateFromDiscriminatorValue); } },
+                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionTargetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionTargetSchema.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -119,10 +119,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("encType", EncType);
             writer.WriteStringValue("href", Href);
             writer.WriteStringValue("mediaType", MediaType);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_method>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionMethod>("method", Method);
             writer.WriteStringValue("rel", Rel);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_schema>("schema", Schema);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescription_targetSchema>("targetSchema", TargetSchema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema>("schema", Schema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionTargetSchema>("targetSchema", TargetSchema);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

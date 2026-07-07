@@ -18,34 +18,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The agreed_refund_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_agreed_refund_details? AgreedRefundDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoAgreedRefundDetails? AgreedRefundDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_agreed_refund_details AgreedRefundDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoAgreedRefundDetails AgreedRefundDetails { get; set; }
 #endif
         /// <summary>The booking_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_booking_details? BookingDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoBookingDetails? BookingDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_booking_details BookingDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoBookingDetails BookingDetails { get; set; }
 #endif
         /// <summary>The cancellation_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_cancellation_details? CancellationDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoCancellationDetails? CancellationDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_cancellation_details CancellationDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoCancellationDetails CancellationDetails { get; set; }
 #endif
         /// <summary>The digital_download_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_digital_download_details? DigitalDownloadDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoDigitalDownloadDetails? DigitalDownloadDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_digital_download_details DigitalDownloadDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoDigitalDownloadDetails DigitalDownloadDetails { get; set; }
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,20 +108,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The product_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_product_details? ProductDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoProductDetails? ProductDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_product_details ProductDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoProductDetails ProductDetails { get; set; }
 #endif
         /// <summary>The reason for the item-level dispute. For information about the required information for each dispute reason and associated evidence type, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#dispute-reasons&quot;&gt;dispute reasons&lt;/a&gt;.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason? Reason { get; set; }
         /// <summary>The service_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_service_details? ServiceDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoServiceDetails? ServiceDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_service_details ServiceDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoServiceDetails ServiceDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo"/> and sets the default values.
@@ -148,10 +148,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agreed_refund_details", n => { AgreedRefundDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_agreed_refund_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_agreed_refund_details.CreateFromDiscriminatorValue); } },
-                { "booking_details", n => { BookingDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_booking_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_booking_details.CreateFromDiscriminatorValue); } },
-                { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_cancellation_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_cancellation_details.CreateFromDiscriminatorValue); } },
-                { "digital_download_details", n => { DigitalDownloadDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_digital_download_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_digital_download_details.CreateFromDiscriminatorValue); } },
+                { "agreed_refund_details", n => { AgreedRefundDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoAgreedRefundDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoAgreedRefundDetails.CreateFromDiscriminatorValue); } },
+                { "booking_details", n => { BookingDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoBookingDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoBookingDetails.CreateFromDiscriminatorValue); } },
+                { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoCancellationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoCancellationDetails.CreateFromDiscriminatorValue); } },
+                { "digital_download_details", n => { DigitalDownloadDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoDigitalDownloadDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoDigitalDownloadDetails.CreateFromDiscriminatorValue); } },
                 { "dispute_amount", n => { DisputeAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
                 { "item_description", n => { ItemDescription = n.GetStringValue(); } },
                 { "item_id", n => { ItemId = n.GetStringValue(); } },
@@ -160,9 +160,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "item_type", n => { ItemType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "partner_transaction_id", n => { PartnerTransactionId = n.GetStringValue(); } },
-                { "product_details", n => { ProductDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_product_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_product_details.CreateFromDiscriminatorValue); } },
+                { "product_details", n => { ProductDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoProductDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoProductDetails.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>(); } },
-                { "service_details", n => { ServiceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_service_details>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_service_details.CreateFromDiscriminatorValue); } },
+                { "service_details", n => { ServiceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoServiceDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoServiceDetails.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -172,10 +172,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_agreed_refund_details>("agreed_refund_details", AgreedRefundDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_booking_details>("booking_details", BookingDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_cancellation_details>("cancellation_details", CancellationDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_digital_download_details>("digital_download_details", DigitalDownloadDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoAgreedRefundDetails>("agreed_refund_details", AgreedRefundDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoBookingDetails>("booking_details", BookingDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoCancellationDetails>("cancellation_details", CancellationDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoDigitalDownloadDetails>("digital_download_details", DigitalDownloadDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("dispute_amount", DisputeAmount);
             writer.WriteStringValue("item_description", ItemDescription);
             writer.WriteStringValue("item_id", ItemId);
@@ -184,9 +184,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>("item_type", ItemType);
             writer.WriteStringValue("notes", Notes);
             writer.WriteStringValue("partner_transaction_id", PartnerTransactionId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_product_details>("product_details", ProductDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoProductDetails>("product_details", ProductDetails);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo_service_details>("service_details", ServiceDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfoServiceDetails>("service_details", ServiceDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

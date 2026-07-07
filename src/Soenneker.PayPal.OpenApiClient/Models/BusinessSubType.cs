@@ -9,31 +9,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ASSO_TYPE_INCORPORATED")]
         #pragma warning disable CS1591
-        ASSO_TYPE_INCORPORATED,
+        AssoTypeIncorporated,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASSO_TYPE_NON_INCORPORATED")]
         #pragma warning disable CS1591
-        ASSO_TYPE_NON_INCORPORATED,
+        AssoTypeNonIncorporated,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVT_TYPE_ENTITY")]
         #pragma warning disable CS1591
-        GOVT_TYPE_ENTITY,
+        GovtTypeEntity,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVT_TYPE_EMANATION")]
         #pragma warning disable CS1591
-        GOVT_TYPE_EMANATION,
+        GovtTypeEmanation,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVT_TYPE_ESTD_COMM")]
         #pragma warning disable CS1591
-        GOVT_TYPE_ESTD_COMM,
+        GovtTypeEstdComm,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVT_TYPE_ESTD_FC")]
         #pragma warning disable CS1591
-        GOVT_TYPE_ESTD_FC,
+        GovtTypeEstdFc,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVT_TYPE_ESTD_ST_TR")]
         #pragma warning disable CS1591
-        GOVT_TYPE_ESTD_ST_TR,
+        GovtTypeEstdStTr,
         #pragma warning restore CS1591
     }
 }

@@ -24,9 +24,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails FirstPartyDetails { get; set; }
 #endif
         /// <summary>The REST-credential integration method.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_method? IntegrationMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod? IntegrationMethod { get; set; }
         /// <summary>The type of REST-endpoint integration. To integrate with Braintree v.zero for PayPal REST endpoints, specify `third_party_details`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_type? IntegrationType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType? IntegrationType { get; set; }
         /// <summary>The integration details for PayPal REST endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public RestApiIntegration()
         {
             AdditionalData = new Dictionary<string, object>();
-            IntegrationMethod = global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_method.PAYPAL;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,8 +61,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "first_party_details", n => { FirstPartyDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails>(global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails.CreateFromDiscriminatorValue); } },
-                { "integration_method", n => { IntegrationMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_method>(); } },
-                { "integration_type", n => { IntegrationType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_type>(); } },
+                { "integration_method", n => { IntegrationMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod>(); } },
+                { "integration_type", n => { IntegrationType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType>(); } },
                 { "third_party_details", n => { ThirdPartyDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -75,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails>("first_party_details", FirstPartyDetails);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_method>("integration_method", IntegrationMethod);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration_integration_type>("integration_type", IntegrationType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod>("integration_method", IntegrationMethod);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType>("integration_type", IntegrationType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails>("third_party_details", ThirdPartyDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

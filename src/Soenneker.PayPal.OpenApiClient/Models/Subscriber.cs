@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
+    /// <summary>
+    /// The customer who approves and pays for the order. The customer is also known as the payer.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class Subscriber : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -25,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber_name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriberAllOf2Name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber_name Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriberAllOf2Name Name { get; set; }
 #endif
         /// <summary>The account identifier for a PayPal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +89,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscriber_name>(global::Soenneker.PayPal.OpenApiClient.Models.Subscriber_name.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberAllOf2Name>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriberAllOf2Name.CreateFromDiscriminatorValue); } },
                 { "payer_id", n => { PayerId = n.GetStringValue(); } },
                 { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceResponse>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceResponse.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType>(global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType.CreateFromDiscriminatorValue); } },
@@ -103,7 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscriber_name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriberAllOf2Name>("name", Name);
             writer.WriteStringValue("payer_id", PayerId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceResponse>("payment_source", PaymentSource);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PhoneWithType>("phone", Phone);

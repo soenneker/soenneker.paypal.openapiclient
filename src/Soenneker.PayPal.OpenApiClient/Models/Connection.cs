@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the last sync. This property supports Unicode.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Connection_last_sync_status? LastSyncStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? LastSyncStatus { get; set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "last_sync_status", n => { LastSyncStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Connection_last_sync_status>(); } },
+                { "last_sync_status", n => { LastSyncStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus>(); } },
                 { "last_sync_time", n => { LastSyncTime = n.GetStringValue(); } },
                 { "platform_name", n => { PlatformName = n.GetStringValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Connection_last_sync_status>("last_sync_status", LastSyncStatus);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus>("last_sync_status", LastSyncStatus);
             writer.WriteStringValue("last_sync_time", LastSyncTime);
             writer.WriteStringValue("platform_name", PlatformName);
             writer.WriteAdditionalData(AdditionalData);

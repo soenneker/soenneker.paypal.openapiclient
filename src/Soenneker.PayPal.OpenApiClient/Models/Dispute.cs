@@ -126,10 +126,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Policy that determines whether the fee needs to be charged, retained or returned while moving the money as part of dispute process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Dispute_fee_policy? FeePolicy { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy? FeePolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Dispute_fee_policy FeePolicy { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy FeePolicy { get; set; }
 #endif
         /// <summary>The movements of fund due to the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -155,13 +155,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public List<global::Soenneker.PayPal.OpenApiClient.Models.Message> Messages { get; set; }
 #endif
-        /// <summary>The money_movements property</summary>
+        /// <summary>DEPRECATED The Money movement details for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MoneyMovements { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement>? MoneyMovements { get; set; }
 #nullable restore
 #else
-        public string MoneyMovements { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement> MoneyMovements { get; set; }
 #endif
         /// <summary>The merchant-proposed offer for a dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,11 +247,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "evidences", n => { Evidences = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Evidence>(global::Soenneker.PayPal.OpenApiClient.Models.Evidence.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "extensions", n => { Extensions = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Extensions>(global::Soenneker.PayPal.OpenApiClient.Models.Extensions.CreateFromDiscriminatorValue); } },
                 { "external_reason_code", n => { ExternalReasonCode = n.GetStringValue(); } },
-                { "fee_policy", n => { FeePolicy = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_fee_policy>(global::Soenneker.PayPal.OpenApiClient.Models.Dispute_fee_policy.CreateFromDiscriminatorValue); } },
+                { "fee_policy", n => { FeePolicy = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy>(global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy.CreateFromDiscriminatorValue); } },
                 { "fund_movements", n => { FundMovements = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement>(global::Soenneker.PayPal.OpenApiClient.Models.FundMovement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Message>(global::Soenneker.PayPal.OpenApiClient.Models.Message.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "money_movements", n => { MoneyMovements = n.GetStringValue(); } },
+                { "money_movements", n => { MoneyMovements = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement>(global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "offer", n => { Offer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Offer>(global::Soenneker.PayPal.OpenApiClient.Models.Offer.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>(); } },
                 { "refund_details", n => { RefundDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetails>(global::Soenneker.PayPal.OpenApiClient.Models.RefundDetails.CreateFromDiscriminatorValue); } },
@@ -280,11 +280,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Evidence>("evidences", Evidences);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Extensions>("extensions", Extensions);
             writer.WriteStringValue("external_reason_code", ExternalReasonCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Dispute_fee_policy>("fee_policy", FeePolicy);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy>("fee_policy", FeePolicy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement>("fund_movements", FundMovements);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>("links", Links);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Message>("messages", Messages);
-            writer.WriteStringValue("money_movements", MoneyMovements);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement>("money_movements", MoneyMovements);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Offer>("offer", Offer);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetails>("refund_details", RefundDetails);

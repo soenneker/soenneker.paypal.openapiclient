@@ -9,35 +9,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "EMAIL")]
         #pragma warning disable CS1591
-        EMAIL,
+        Email,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEB")]
         #pragma warning disable CS1591
-        WEB,
+        Web,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHAT")]
         #pragma warning disable CS1591
-        CHAT,
+        Chat,
         #pragma warning restore CS1591
         [EnumMember(Value = "IVR")]
         #pragma warning disable CS1591
-        IVR,
+        Ivr,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHONE")]
         #pragma warning disable CS1591
-        PHONE,
+        Phone,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBILE_APP")]
         #pragma warning disable CS1591
-        MOBILE_APP,
+        MobileApp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBILE_WEB")]
         #pragma warning disable CS1591
-        MOBILE_WEB,
+        MobileWeb,
         #pragma warning restore CS1591
         [EnumMember(Value = "API")]
         #pragma warning disable CS1591
-        API,
+        Api,
         #pragma warning restore CS1591
     }
 }

@@ -9,5603 +9,5591 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DPD_RU")]
         #pragma warning disable CS1591
-        DPD_RU,
+        DpdRu,
         #pragma warning restore CS1591
         [EnumMember(Value = "BG_BULGARIAN_POST")]
         #pragma warning disable CS1591
-        BG_BULGARIAN_POST,
+        BgBulgarianPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "KR_KOREA_POST")]
         #pragma warning disable CS1591
-        KR_KOREA_POST,
+        KrKoreaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZA_COURIERIT")]
         #pragma warning disable CS1591
-        ZA_COURIERIT,
+        ZaCourierit,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR_EXAPAQ")]
         #pragma warning disable CS1591
-        FR_EXAPAQ,
+        FrExapaq,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARE_EMIRATES_POST")]
         #pragma warning disable CS1591
-        ARE_EMIRATES_POST,
+        AreEmiratesPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "GAC")]
         #pragma warning disable CS1591
-        GAC,
+        Gac,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEIS")]
         #pragma warning disable CS1591
-        GEIS,
+        Geis,
         #pragma warning restore CS1591
         [EnumMember(Value = "SF_EX")]
         #pragma warning disable CS1591
-        SF_EX,
+        SfEx,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAGO")]
         #pragma warning disable CS1591
-        PAGO,
+        Pago,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYHERMES")]
         #pragma warning disable CS1591
-        MYHERMES,
+        Myhermes,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIAMOND_EUROGISTICS")]
         #pragma warning disable CS1591
-        DIAMOND_EUROGISTICS,
+        DiamondEurogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORPORATECOURIERS_WEBHOOK")]
         #pragma warning disable CS1591
-        CORPORATECOURIERS_WEBHOOK,
+        CorporatecouriersWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOND")]
         #pragma warning disable CS1591
-        BOND,
+        Bond,
         #pragma warning restore CS1591
         [EnumMember(Value = "OMNIPARCEL")]
         #pragma warning disable CS1591
-        OMNIPARCEL,
+        Omniparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "SK_POSTA")]
         #pragma warning disable CS1591
-        SK_POSTA,
+        SkPosta,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUROLATOR")]
         #pragma warning disable CS1591
-        PUROLATOR,
+        Purolator,
         #pragma warning restore CS1591
         [EnumMember(Value = "FETCHR_WEBHOOK")]
         #pragma warning disable CS1591
-        FETCHR_WEBHOOK,
+        FetchrWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "THEDELIVERYGROUP")]
         #pragma warning disable CS1591
-        THEDELIVERYGROUP,
+        Thedeliverygroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "CELLO_SQUARE")]
         #pragma warning disable CS1591
-        CELLO_SQUARE,
+        CelloSquare,
         #pragma warning restore CS1591
         [EnumMember(Value = "TARRIVE")]
         #pragma warning disable CS1591
-        TARRIVE,
+        Tarrive,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLIVERY")]
         #pragma warning disable CS1591
-        COLLIVERY,
+        Collivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAINFREIGHT")]
         #pragma warning disable CS1591
-        MAINFREIGHT,
+        Mainfreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_FIRSTFLIGHT")]
         #pragma warning disable CS1591
-        IND_FIRSTFLIGHT,
+        IndFirstflight,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACSWORLDWIDE")]
         #pragma warning disable CS1591
-        ACSWORLDWIDE,
+        Acsworldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMSTAN")]
         #pragma warning disable CS1591
-        AMSTAN,
+        Amstan,
         #pragma warning restore CS1591
         [EnumMember(Value = "OKAYPARCEL")]
         #pragma warning disable CS1591
-        OKAYPARCEL,
+        Okayparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENVIALIA_REFERENCE")]
         #pragma warning disable CS1591
-        ENVIALIA_REFERENCE,
+        EnvialiaReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEUR_ES")]
         #pragma warning disable CS1591
-        SEUR_ES,
+        SeurEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONTINENTAL")]
         #pragma warning disable CS1591
-        CONTINENTAL,
+        Continental,
         #pragma warning restore CS1591
         [EnumMember(Value = "FDSEXPRESS")]
         #pragma warning disable CS1591
-        FDSEXPRESS,
+        Fdsexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_FBA_SWISHIP")]
         #pragma warning disable CS1591
-        AMAZON_FBA_SWISHIP,
+        AmazonFbaSwiship,
         #pragma warning restore CS1591
         [EnumMember(Value = "WYNGS")]
         #pragma warning disable CS1591
-        WYNGS,
+        Wyngs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_ACTIVE_TRACING")]
         #pragma warning disable CS1591
-        DHL_ACTIVE_TRACING,
+        DhlActiveTracing,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZYLLEM")]
         #pragma warning disable CS1591
-        ZYLLEM,
+        Zyllem,
         #pragma warning restore CS1591
         [EnumMember(Value = "RUSTON")]
         #pragma warning disable CS1591
-        RUSTON,
+        Ruston,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPOST")]
         #pragma warning disable CS1591
-        XPOST,
+        Xpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREOS_ES")]
         #pragma warning disable CS1591
-        CORREOS_ES,
+        CorreosEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_FR")]
         #pragma warning disable CS1591
-        DHL_FR,
+        DhlFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAN_ASIA")]
         #pragma warning disable CS1591
-        PAN_ASIA,
+        PanAsia,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRT_IT")]
         #pragma warning disable CS1591
-        BRT_IT,
+        BrtIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "SRE_KOREA")]
         #pragma warning disable CS1591
-        SRE_KOREA,
+        SreKorea,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDEE")]
         #pragma warning disable CS1591
-        SPEEDEE,
+        Speedee,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_UK")]
         #pragma warning disable CS1591
-        TNT_UK,
+        TntUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "VENIPAK")]
         #pragma warning disable CS1591
-        VENIPAK,
+        Venipak,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHREENANDANCOURIER")]
         #pragma warning disable CS1591
-        SHREENANDANCOURIER,
+        Shreenandancourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "CROSHOT")]
         #pragma warning disable CS1591
-        CROSHOT,
+        Croshot,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIPOST_NG")]
         #pragma warning disable CS1591
-        NIPOST_NG,
+        NipostNg,
         #pragma warning restore CS1591
         [EnumMember(Value = "EPST_GLBL")]
         #pragma warning disable CS1591
-        EPST_GLBL,
+        EpstGlbl,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWGISTICS")]
         #pragma warning disable CS1591
-        NEWGISTICS,
+        Newgistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "POST_SLOVENIA")]
         #pragma warning disable CS1591
-        POST_SLOVENIA,
+        PostSlovenia,
         #pragma warning restore CS1591
         [EnumMember(Value = "JERSEY_POST")]
         #pragma warning disable CS1591
-        JERSEY_POST,
+        JerseyPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOMBINOEXP")]
         #pragma warning disable CS1591
-        BOMBINOEXP,
+        Bombinoexp,
         #pragma warning restore CS1591
         [EnumMember(Value = "WMG")]
         #pragma warning disable CS1591
-        WMG,
+        Wmg,
         #pragma warning restore CS1591
         [EnumMember(Value = "XQ_EXPRESS")]
         #pragma warning disable CS1591
-        XQ_EXPRESS,
+        XqExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "FURDECO")]
         #pragma warning disable CS1591
-        FURDECO,
+        Furdeco,
         #pragma warning restore CS1591
         [EnumMember(Value = "LHT_EXPRESS")]
         #pragma warning disable CS1591
-        LHT_EXPRESS,
+        LhtExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOUTH_AFRICAN_POST_OFFICE")]
         #pragma warning disable CS1591
-        SOUTH_AFRICAN_POST_OFFICE,
+        SouthAfricanPostOffice,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPOTON")]
         #pragma warning disable CS1591
-        SPOTON,
+        Spoton,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIMERCO")]
         #pragma warning disable CS1591
-        DIMERCO,
+        Dimerco,
         #pragma warning restore CS1591
         [EnumMember(Value = "CYPRUS_POST_CYP")]
         #pragma warning disable CS1591
-        CYPRUS_POST_CYP,
+        CyprusPostCyp,
         #pragma warning restore CS1591
         [EnumMember(Value = "ABCUSTOM")]
         #pragma warning disable CS1591
-        ABCUSTOM,
+        Abcustom,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_DELIVREE")]
         #pragma warning disable CS1591
-        IND_DELIVREE,
+        IndDelivree,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_BESTEXPRESS")]
         #pragma warning disable CS1591
-        CN_BESTEXPRESS,
+        CnBestexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DX_SFTP")]
         #pragma warning disable CS1591
-        DX_SFTP,
+        DxSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUPP_MYS")]
         #pragma warning disable CS1591
-        PICKUPP_MYS,
+        PickuppMys,
         #pragma warning restore CS1591
         [EnumMember(Value = "FMX")]
         #pragma warning disable CS1591
-        FMX,
+        Fmx,
         #pragma warning restore CS1591
         [EnumMember(Value = "HELLMANN")]
         #pragma warning disable CS1591
-        HELLMANN,
+        Hellmann,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIP_IT_ASIA")]
         #pragma warning disable CS1591
-        SHIP_IT_ASIA,
+        ShipItAsia,
         #pragma warning restore CS1591
         [EnumMember(Value = "KERRY_ECOMMERCE")]
         #pragma warning disable CS1591
-        KERRY_ECOMMERCE,
+        KerryEcommerce,
         #pragma warning restore CS1591
         [EnumMember(Value = "FRETERAPIDO")]
         #pragma warning disable CS1591
-        FRETERAPIDO,
+        Freterapido,
         #pragma warning restore CS1591
         [EnumMember(Value = "PITNEY_BOWES")]
         #pragma warning disable CS1591
-        PITNEY_BOWES,
+        PitneyBowes,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPRESSEN_DK")]
         #pragma warning disable CS1591
-        XPRESSEN_DK,
+        XpressenDk,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEUR_SP_API")]
         #pragma warning disable CS1591
-        SEUR_SP_API,
+        SeurSpApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERYONTIME")]
         #pragma warning disable CS1591
-        DELIVERYONTIME,
+        Deliveryontime,
         #pragma warning restore CS1591
         [EnumMember(Value = "JINSUNG")]
         #pragma warning disable CS1591
-        JINSUNG,
+        Jinsung,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANS_KARGO")]
         #pragma warning disable CS1591
-        TRANS_KARGO,
+        TransKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISHIP_DE")]
         #pragma warning disable CS1591
-        SWISHIP_DE,
+        SwishipDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "IVOY_WEBHOOK")]
         #pragma warning disable CS1591
-        IVOY_WEBHOOK,
+        IvoyWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIRMEE_WEBHOOK")]
         #pragma warning disable CS1591
-        AIRMEE_WEBHOOK,
+        AirmeeWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_BENELUX")]
         #pragma warning disable CS1591
-        DHL_BENELUX,
+        DhlBenelux,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIRSTMILE")]
         #pragma warning disable CS1591
-        FIRSTMILE,
+        Firstmile,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_IR")]
         #pragma warning disable CS1591
-        FASTWAY_IR,
+        FastwayIr,
         #pragma warning restore CS1591
         [EnumMember(Value = "HH_EXP")]
         #pragma warning disable CS1591
-        HH_EXP,
+        HhExp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_MYPOST_ONLINE")]
         #pragma warning disable CS1591
-        MYS_MYPOST_ONLINE,
+        MysMypostOnline,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_NL")]
         #pragma warning disable CS1591
-        TNT_NL,
+        TntNl,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIPSA")]
         #pragma warning disable CS1591
-        TIPSA,
+        Tipsa,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAQBIN_MY")]
         #pragma warning disable CS1591
-        TAQBIN_MY,
+        TaqbinMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "KGMHUB")]
         #pragma warning disable CS1591
-        KGMHUB,
+        Kgmhub,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTEXPRESS")]
         #pragma warning disable CS1591
-        INTEXPRESS,
+        Intexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "OVERSE_EXP")]
         #pragma warning disable CS1591
-        OVERSE_EXP,
+        OverseExp,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONECLICK")]
         #pragma warning disable CS1591
-        ONECLICK,
+        Oneclick,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROADRUNNER_FREIGHT")]
         #pragma warning disable CS1591
-        ROADRUNNER_FREIGHT,
+        RoadrunnerFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_CROTIA")]
         #pragma warning disable CS1591
-        GLS_CROTIA,
+        GlsCrotia,
         #pragma warning restore CS1591
         [EnumMember(Value = "MRW_FTP")]
         #pragma warning disable CS1591
-        MRW_FTP,
+        MrwFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLUEX")]
         #pragma warning disable CS1591
-        BLUEX,
+        Bluex,
         #pragma warning restore CS1591
         [EnumMember(Value = "DYLT")]
         #pragma warning disable CS1591
-        DYLT,
+        Dylt,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_IR")]
         #pragma warning disable CS1591
-        DPD_IR,
+        DpdIr,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIN_GLBL")]
         #pragma warning disable CS1591
-        SIN_GLBL,
+        SinGlbl,
         #pragma warning restore CS1591
         [EnumMember(Value = "TUFFNELLS_REFERENCE")]
         #pragma warning disable CS1591
-        TUFFNELLS_REFERENCE,
+        TuffnellsReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJPACKET")]
         #pragma warning disable CS1591
-        CJPACKET,
+        Cjpacket,
         #pragma warning restore CS1591
         [EnumMember(Value = "MILKMAN")]
         #pragma warning disable CS1591
-        MILKMAN,
+        Milkman,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASIGNA")]
         #pragma warning disable CS1591
-        ASIGNA,
+        Asigna,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONEWORLDEXPRESS")]
         #pragma warning disable CS1591
-        ONEWORLDEXPRESS,
+        Oneworldexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROYAL_MAIL")]
         #pragma warning disable CS1591
-        ROYAL_MAIL,
+        RoyalMail,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIA_EXPRESS")]
         #pragma warning disable CS1591
-        VIA_EXPRESS,
+        ViaExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIGFREIGHT")]
         #pragma warning disable CS1591
-        TIGFREIGHT,
+        Tigfreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZTO_EXPRESS")]
         #pragma warning disable CS1591
-        ZTO_EXPRESS,
+        ZtoExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWO_GO")]
         #pragma warning disable CS1591
-        TWO_GO,
+        TwoGo,
         #pragma warning restore CS1591
         [EnumMember(Value = "IML")]
         #pragma warning disable CS1591
-        IML,
+        Iml,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTEL_VALLEY")]
         #pragma warning disable CS1591
-        INTEL_VALLEY,
+        IntelValley,
         #pragma warning restore CS1591
         [EnumMember(Value = "EFS")]
         #pragma warning disable CS1591
-        EFS,
+        Efs,
         #pragma warning restore CS1591
         [EnumMember(Value = "UK_UK_MAIL")]
         #pragma warning disable CS1591
-        UK_UK_MAIL,
+        UkUkMail,
         #pragma warning restore CS1591
         [EnumMember(Value = "RAM")]
         #pragma warning disable CS1591
-        RAM,
+        Ram,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALLIEDEXPRESS")]
         #pragma warning disable CS1591
-        ALLIEDEXPRESS,
+        Alliedexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "APC_OVERNIGHT")]
         #pragma warning disable CS1591
-        APC_OVERNIGHT,
+        ApcOvernight,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPIT")]
         #pragma warning disable CS1591
-        SHIPPIT,
+        Shippit,
         #pragma warning restore CS1591
         [EnumMember(Value = "TFM")]
         #pragma warning disable CS1591
-        TFM,
+        Tfm,
         #pragma warning restore CS1591
         [EnumMember(Value = "M_XPRESS")]
         #pragma warning disable CS1591
-        M_XPRESS,
+        MXpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "HDB_BOX")]
         #pragma warning disable CS1591
-        HDB_BOX,
+        HdbBox,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLEVY_LINKS")]
         #pragma warning disable CS1591
-        CLEVY_LINKS,
+        ClevyLinks,
         #pragma warning restore CS1591
         [EnumMember(Value = "IBEONE")]
         #pragma warning disable CS1591
-        IBEONE,
+        Ibeone,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIEGE_NL")]
         #pragma warning disable CS1591
-        FIEGE_NL,
+        FiegeNl,
         #pragma warning restore CS1591
         [EnumMember(Value = "KWE_GLOBAL")]
         #pragma warning disable CS1591
-        KWE_GLOBAL,
+        KweGlobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "CTC_EXPRESS")]
         #pragma warning disable CS1591
-        CTC_EXPRESS,
+        CtcExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON")]
         #pragma warning disable CS1591
-        AMAZON,
+        Amazon,
         #pragma warning restore CS1591
         [EnumMember(Value = "MORE_LINK")]
         #pragma warning disable CS1591
-        MORE_LINK,
+        MoreLink,
         #pragma warning restore CS1591
         [EnumMember(Value = "JX")]
         #pragma warning disable CS1591
-        JX,
+        Jx,
         #pragma warning restore CS1591
         [EnumMember(Value = "EASY_MAIL")]
         #pragma warning disable CS1591
-        EASY_MAIL,
+        EasyMail,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADUIEPYLE")]
         #pragma warning disable CS1591
-        ADUIEPYLE,
+        Aduiepyle,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB_PANTHER")]
         #pragma warning disable CS1591
-        GB_PANTHER,
+        GbPanther,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPRESSSALE")]
         #pragma warning disable CS1591
-        EXPRESSSALE,
+        Expresssale,
         #pragma warning restore CS1591
         [EnumMember(Value = "SG_DETRACK")]
         #pragma warning disable CS1591
-        SG_DETRACK,
+        SgDetrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUNKRS_WEBHOOK")]
         #pragma warning disable CS1591
-        TRUNKRS_WEBHOOK,
+        TrunkrsWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "MATDESPATCH")]
         #pragma warning disable CS1591
-        MATDESPATCH,
+        Matdespatch,
         #pragma warning restore CS1591
         [EnumMember(Value = "DICOM")]
         #pragma warning disable CS1591
-        DICOM,
+        Dicom,
         #pragma warning restore CS1591
         [EnumMember(Value = "MBW")]
         #pragma warning disable CS1591
-        MBW,
+        Mbw,
         #pragma warning restore CS1591
         [EnumMember(Value = "KHM_CAMBODIA_POST")]
         #pragma warning disable CS1591
-        KHM_CAMBODIA_POST,
+        KhmCambodiaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "SINOTRANS")]
         #pragma warning disable CS1591
-        SINOTRANS,
+        Sinotrans,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRT_IT_PARCELID")]
         #pragma warning disable CS1591
-        BRT_IT_PARCELID,
+        BrtItParcelid,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SUPPLY_CHAIN")]
         #pragma warning disable CS1591
-        DHL_SUPPLY_CHAIN,
+        DhlSupplyChain,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PL")]
         #pragma warning disable CS1591
-        DHL_PL,
+        DhlPl,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOPYOU")]
         #pragma warning disable CS1591
-        TOPYOU,
+        Topyou,
         #pragma warning restore CS1591
         [EnumMember(Value = "PALEXPRESS")]
         #pragma warning disable CS1591
-        PALEXPRESS,
+        Palexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SG")]
         #pragma warning disable CS1591
-        DHL_SG,
+        DhlSg,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_WEDO")]
         #pragma warning disable CS1591
-        CN_WEDO,
+        CnWedo,
         #pragma warning restore CS1591
         [EnumMember(Value = "FULFILLME")]
         #pragma warning disable CS1591
-        FULFILLME,
+        Fulfillme,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_DELISTRACK")]
         #pragma warning disable CS1591
-        DPD_DELISTRACK,
+        DpdDelistrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS_REFERENCE")]
         #pragma warning disable CS1591
-        UPS_REFERENCE,
+        UpsReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARIBOU")]
         #pragma warning disable CS1591
-        CARIBOU,
+        Caribou,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOCUS_WEBHOOK")]
         #pragma warning disable CS1591
-        LOCUS_WEBHOOK,
+        LocusWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DSV")]
         #pragma warning disable CS1591
-        DSV,
+        Dsv,
         #pragma warning restore CS1591
         [EnumMember(Value = "P2P_TRC")]
         #pragma warning disable CS1591
-        P2P_TRC,
+        P2PTrc,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECTPARCELS")]
         #pragma warning disable CS1591
-        DIRECTPARCELS,
+        Directparcels,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOVA_POSHTA_INT")]
         #pragma warning disable CS1591
-        NOVA_POSHTA_INT,
+        NovaPoshtaInt,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_POLAND")]
         #pragma warning disable CS1591
-        FEDEX_POLAND,
+        FedexPoland,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_JCEX")]
         #pragma warning disable CS1591
-        CN_JCEX,
+        CnJcex,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAR_INTERNATIONAL")]
         #pragma warning disable CS1591
-        FAR_INTERNATIONAL,
+        FarInternational,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDEXPRESS")]
         #pragma warning disable CS1591
-        IDEXPRESS,
+        Idexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GANGBAO")]
         #pragma warning disable CS1591
-        GANGBAO,
+        Gangbao,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWAY")]
         #pragma warning disable CS1591
-        NEWAY,
+        Neway,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTNL_INT_3_S")]
         #pragma warning disable CS1591
-        POSTNL_INT_3_S,
+        PostnlInt3S,
         #pragma warning restore CS1591
         [EnumMember(Value = "RPX_ID")]
         #pragma warning disable CS1591
-        RPX_ID,
+        RpxId,
         #pragma warning restore CS1591
         [EnumMember(Value = "DESIGNERTRANSPORT_WEBHOOK")]
         #pragma warning disable CS1591
-        DESIGNERTRANSPORT_WEBHOOK,
+        DesignertransportWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_SLOVEN")]
         #pragma warning disable CS1591
-        GLS_SLOVEN,
+        GlsSloven,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELLED_IN")]
         #pragma warning disable CS1591
-        PARCELLED_IN,
+        ParcelledIn,
         #pragma warning restore CS1591
         [EnumMember(Value = "GSI_EXPRESS")]
         #pragma warning disable CS1591
-        GSI_EXPRESS,
+        GsiExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CON_WAY")]
         #pragma warning disable CS1591
-        CON_WAY,
+        ConWay,
         #pragma warning restore CS1591
         [EnumMember(Value = "BROUWER_TRANSPORT")]
         #pragma warning disable CS1591
-        BROUWER_TRANSPORT,
+        BrouwerTransport,
         #pragma warning restore CS1591
         [EnumMember(Value = "CPEX")]
         #pragma warning disable CS1591
-        CPEX,
+        Cpex,
         #pragma warning restore CS1591
         [EnumMember(Value = "ISRAEL_POST")]
         #pragma warning disable CS1591
-        ISRAEL_POST,
+        IsraelPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DTDC_IN")]
         #pragma warning disable CS1591
-        DTDC_IN,
+        DtdcIn,
         #pragma warning restore CS1591
         [EnumMember(Value = "PTT_POST")]
         #pragma warning disable CS1591
-        PTT_POST,
+        PttPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "XDE_WEBHOOK")]
         #pragma warning disable CS1591
-        XDE_WEBHOOK,
+        XdeWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLOS")]
         #pragma warning disable CS1591
-        TOLOS,
+        Tolos,
         #pragma warning restore CS1591
         [EnumMember(Value = "GIAO_HANG")]
         #pragma warning disable CS1591
-        GIAO_HANG,
+        GiaoHang,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEODIS_ESPACE")]
         #pragma warning disable CS1591
-        GEODIS_ESPACE,
+        GeodisEspace,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAGYAR_HU")]
         #pragma warning disable CS1591
-        MAGYAR_HU,
+        MagyarHu,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOORDASH_WEBHOOK")]
         #pragma warning disable CS1591
-        DOORDASH_WEBHOOK,
+        DoordashWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIKI_ID")]
         #pragma warning disable CS1591
-        TIKI_ID,
+        TikiId,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_HK_INTERNATIONAL")]
         #pragma warning disable CS1591
-        CJ_HK_INTERNATIONAL,
+        CjHkInternational,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAR_TRACK_EXPRESS")]
         #pragma warning disable CS1591
-        STAR_TRACK_EXPRESS,
+        StarTrackExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "HELTHJEM")]
         #pragma warning disable CS1591
-        HELTHJEM,
+        Helthjem,
         #pragma warning restore CS1591
         [EnumMember(Value = "SFB2C")]
         #pragma warning disable CS1591
-        SFB2C,
+        Sfb2C,
         #pragma warning restore CS1591
         [EnumMember(Value = "FREIGHTQUOTE")]
         #pragma warning disable CS1591
-        FREIGHTQUOTE,
+        Freightquote,
         #pragma warning restore CS1591
         [EnumMember(Value = "LANDMARK_GLOBAL_REFERENCE")]
         #pragma warning disable CS1591
-        LANDMARK_GLOBAL_REFERENCE,
+        LandmarkGlobalReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCEL2GO")]
         #pragma warning disable CS1591
-        PARCEL2GO,
+        Parcel2Go,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELNEXT")]
         #pragma warning disable CS1591
-        DELNEXT,
+        Delnext,
         #pragma warning restore CS1591
         [EnumMember(Value = "RCL")]
         #pragma warning disable CS1591
-        RCL,
+        Rcl,
         #pragma warning restore CS1591
         [EnumMember(Value = "CGS_EXPRESS")]
         #pragma warning disable CS1591
-        CGS_EXPRESS,
+        CgsExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "HK_POST")]
         #pragma warning disable CS1591
-        HK_POST,
+        HkPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAP_EXPRESS")]
         #pragma warning disable CS1591
-        SAP_EXPRESS,
+        SapExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELPOST_SG")]
         #pragma warning disable CS1591
-        PARCELPOST_SG,
+        ParcelpostSg,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES")]
         #pragma warning disable CS1591
-        HERMES,
+        Hermes,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_SAFEEXPRESS")]
         #pragma warning disable CS1591
-        IND_SAFEEXPRESS,
+        IndSafeexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOPHATTEREXPRESS")]
         #pragma warning disable CS1591
-        TOPHATTEREXPRESS,
+        Tophatterexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "MGLOBAL")]
         #pragma warning disable CS1591
-        MGLOBAL,
+        Mglobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "AVERITT")]
         #pragma warning disable CS1591
-        AVERITT,
+        Averitt,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEADER")]
         #pragma warning disable CS1591
-        LEADER,
+        Leader,
         #pragma warning restore CS1591
         [EnumMember(Value = "_2EBOX")]
         #pragma warning disable CS1591
-        TwoEBOX,
+        Value2Ebox,
         #pragma warning restore CS1591
         [EnumMember(Value = "SG_SPEEDPOST")]
         #pragma warning disable CS1591
-        SG_SPEEDPOST,
+        SgSpeedpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DBSCHENKER_SE")]
         #pragma warning disable CS1591
-        DBSCHENKER_SE,
+        DbschenkerSe,
         #pragma warning restore CS1591
         [EnumMember(Value = "ISR_POST_DOMESTIC")]
         #pragma warning disable CS1591
-        ISR_POST_DOMESTIC,
+        IsrPostDomestic,
         #pragma warning restore CS1591
         [EnumMember(Value = "BESTWAYPARCEL")]
         #pragma warning disable CS1591
-        BESTWAYPARCEL,
+        Bestwayparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASENDIA_DE")]
         #pragma warning disable CS1591
-        ASENDIA_DE,
+        AsendiaDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIGHTLINE_UK")]
         #pragma warning disable CS1591
-        NIGHTLINE_UK,
+        NightlineUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAQBIN_SG")]
         #pragma warning disable CS1591
-        TAQBIN_SG,
+        TaqbinSg,
         #pragma warning restore CS1591
         [EnumMember(Value = "TCK_EXPRESS")]
         #pragma warning disable CS1591
-        TCK_EXPRESS,
+        TckExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENDEAVOUR_DELIVERY")]
         #pragma warning disable CS1591
-        ENDEAVOUR_DELIVERY,
+        EndeavourDelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "NANJINGWOYUAN")]
         #pragma warning disable CS1591
-        NANJINGWOYUAN,
+        Nanjingwoyuan,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEPPNER_FR")]
         #pragma warning disable CS1591
-        HEPPNER_FR,
+        HeppnerFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMPS_CN")]
         #pragma warning disable CS1591
-        EMPS_CN,
+        EmpsCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "FONSEN")]
         #pragma warning disable CS1591
-        FONSEN,
+        Fonsen,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKRR")]
         #pragma warning disable CS1591
-        PICKRR,
+        Pickrr,
         #pragma warning restore CS1591
         [EnumMember(Value = "APC_OVERNIGHT_CONNUM")]
         #pragma warning disable CS1591
-        APC_OVERNIGHT_CONNUM,
+        ApcOvernightConnum,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAR_TRACK_NEXT_FLIGHT")]
         #pragma warning disable CS1591
-        STAR_TRACK_NEXT_FLIGHT,
+        StarTrackNextFlight,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAJIN")]
         #pragma warning disable CS1591
-        DAJIN,
+        Dajin,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS_FREIGHT")]
         #pragma warning disable CS1591
-        UPS_FREIGHT,
+        UpsFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTA_PLUS")]
         #pragma warning disable CS1591
-        POSTA_PLUS,
+        PostaPlus,
         #pragma warning restore CS1591
         [EnumMember(Value = "CEVA")]
         #pragma warning disable CS1591
-        CEVA,
+        Ceva,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANSERX")]
         #pragma warning disable CS1591
-        ANSERX,
+        Anserx,
         #pragma warning restore CS1591
         [EnumMember(Value = "JS_EXPRESS")]
         #pragma warning disable CS1591
-        JS_EXPRESS,
+        JsExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PADTF")]
         #pragma warning disable CS1591
-        PADTF,
+        Padtf,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS_MAIL_INNOVATIONS")]
         #pragma warning disable CS1591
-        UPS_MAIL_INNOVATIONS,
+        UpsMailInnovations,
         #pragma warning restore CS1591
         [EnumMember(Value = "SYPOST")]
         #pragma warning disable CS1591
-        SYPOST,
+        Sypost,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_SHIP_MCF")]
         #pragma warning disable CS1591
-        AMAZON_SHIP_MCF,
+        AmazonShipMcf,
         #pragma warning restore CS1591
         [EnumMember(Value = "YUSEN")]
         #pragma warning disable CS1591
-        YUSEN,
+        Yusen,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRING")]
         #pragma warning disable CS1591
-        BRING,
+        Bring,
         #pragma warning restore CS1591
         [EnumMember(Value = "SDA_IT")]
         #pragma warning disable CS1591
-        SDA_IT,
+        SdaIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "GBA")]
         #pragma warning disable CS1591
-        GBA,
+        Gba,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWEGGEXPRESS")]
         #pragma warning disable CS1591
-        NEWEGGEXPRESS,
+        Neweggexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDCOURIERS_GR")]
         #pragma warning disable CS1591
-        SPEEDCOURIERS_GR,
+        SpeedcouriersGr,
         #pragma warning restore CS1591
         [EnumMember(Value = "FORRUN")]
         #pragma warning disable CS1591
-        FORRUN,
+        Forrun,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUP")]
         #pragma warning disable CS1591
-        PICKUP,
+        Pickup,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECMS")]
         #pragma warning disable CS1591
-        ECMS,
+        Ecms,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTELIPOST")]
         #pragma warning disable CS1591
-        INTELIPOST,
+        Intelipost,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLASHEXPRESS")]
         #pragma warning disable CS1591
-        FLASHEXPRESS,
+        Flashexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_STO")]
         #pragma warning disable CS1591
-        CN_STO,
+        CnSto,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEKO_SFTP")]
         #pragma warning disable CS1591
-        SEKO_SFTP,
+        SekoSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOME_DELIVERY_SOLUTIONS")]
         #pragma warning disable CS1591
-        HOME_DELIVERY_SOLUTIONS,
+        HomeDeliverySolutions,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_HGRY")]
         #pragma warning disable CS1591
-        DPD_HGRY,
+        DpdHgry,
         #pragma warning restore CS1591
         [EnumMember(Value = "KERRYTTC_VN")]
         #pragma warning disable CS1591
-        KERRYTTC_VN,
+        KerryttcVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "JOYING_BOX")]
         #pragma warning disable CS1591
-        JOYING_BOX,
+        JoyingBox,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOTAL_EXPRESS")]
         #pragma warning disable CS1591
-        TOTAL_EXPRESS,
+        TotalExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZJS_EXPRESS")]
         #pragma warning disable CS1591
-        ZJS_EXPRESS,
+        ZjsExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "STARKEN")]
         #pragma warning disable CS1591
-        STARKEN,
+        Starken,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEMANDSHIP")]
         #pragma warning disable CS1591
-        DEMANDSHIP,
+        Demandship,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_DPEX")]
         #pragma warning disable CS1591
-        CN_DPEX,
+        CnDpex,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUPOST_CN")]
         #pragma warning disable CS1591
-        AUPOST_CN,
+        AupostCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTERS")]
         #pragma warning disable CS1591
-        LOGISTERS,
+        Logisters,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOGLOBALPOST")]
         #pragma warning disable CS1591
-        GOGLOBALPOST,
+        Goglobalpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_CZ")]
         #pragma warning disable CS1591
-        GLS_CZ,
+        GlsCz,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAACK_WEBHOOK")]
         #pragma warning disable CS1591
-        PAACK_WEBHOOK,
+        PaackWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "GRAB_WEBHOOK")]
         #pragma warning disable CS1591
-        GRAB_WEBHOOK,
+        GrabWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELPOINT")]
         #pragma warning disable CS1591
-        PARCELPOINT,
+        Parcelpoint,
         #pragma warning restore CS1591
         [EnumMember(Value = "ICUMULUS")]
         #pragma warning disable CS1591
-        ICUMULUS,
+        Icumulus,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAIGLOBALTRACK")]
         #pragma warning disable CS1591
-        DAIGLOBALTRACK,
+        Daiglobaltrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAL_IPARCEL")]
         #pragma warning disable CS1591
-        GLOBAL_IPARCEL,
+        GlobalIparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "YURTICI_KARGO")]
         #pragma warning disable CS1591
-        YURTICI_KARGO,
+        YurticiKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_PAYPAL_PACKAGE")]
         #pragma warning disable CS1591
-        CN_PAYPAL_PACKAGE,
+        CnPaypalPackage,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCEL_2_POST")]
         #pragma warning disable CS1591
-        PARCEL_2_POST,
+        Parcel2Post,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_IT")]
         #pragma warning disable CS1591
-        GLS_IT,
+        GlsIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "PIL_LOGISTICS")]
         #pragma warning disable CS1591
-        PIL_LOGISTICS,
+        PilLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEPPNER")]
         #pragma warning disable CS1591
-        HEPPNER,
+        Heppner,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_OVERNIGHT")]
         #pragma warning disable CS1591
-        GENERAL_OVERNIGHT,
+        GeneralOvernight,
         #pragma warning restore CS1591
         [EnumMember(Value = "HAPPY2POINT")]
         #pragma warning disable CS1591
-        HAPPY2POINT,
+        Happy2Point,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHITCHATS")]
         #pragma warning disable CS1591
-        CHITCHATS,
+        Chitchats,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMOOTH")]
         #pragma warning disable CS1591
-        SMOOTH,
+        Smooth,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLE_LOGISTICS")]
         #pragma warning disable CS1591
-        CLE_LOGISTICS,
+        CleLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIEGE")]
         #pragma warning disable CS1591
-        FIEGE,
+        Fiege,
         #pragma warning restore CS1591
         [EnumMember(Value = "MX_CARGO")]
         #pragma warning disable CS1591
-        MX_CARGO,
+        MxCargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZIINGFINALMILE")]
         #pragma warning disable CS1591
-        ZIINGFINALMILE,
+        Ziingfinalmile,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAYTON_FREIGHT")]
         #pragma warning disable CS1591
-        DAYTON_FREIGHT,
+        DaytonFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "TCS")]
         #pragma warning disable CS1591
-        TCS,
+        Tcs,
         #pragma warning restore CS1591
         [EnumMember(Value = "AEX")]
         #pragma warning disable CS1591
-        AEX,
+        Aex,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES_DE")]
         #pragma warning disable CS1591
-        HERMES_DE,
+        HermesDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROUTIFIC_WEBHOOK")]
         #pragma warning disable CS1591
-        ROUTIFIC_WEBHOOK,
+        RoutificWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAVEND")]
         #pragma warning disable CS1591
-        GLOBAVEND,
+        Globavend,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_LOGISTICS")]
         #pragma warning disable CS1591
-        CJ_LOGISTICS,
+        CjLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "PALLET_NETWORK")]
         #pragma warning disable CS1591
-        PALLET_NETWORK,
+        PalletNetwork,
         #pragma warning restore CS1591
         [EnumMember(Value = "RAF_PH")]
         #pragma warning disable CS1591
-        RAF_PH,
+        RafPh,
         #pragma warning restore CS1591
         [EnumMember(Value = "UK_XDP")]
         #pragma warning disable CS1591
-        UK_XDP,
+        UkXdp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAPER_EXPRESS")]
         #pragma warning disable CS1591
-        PAPER_EXPRESS,
+        PaperExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "LA_POSTE_SUIVI")]
         #pragma warning disable CS1591
-        LA_POSTE_SUIVI,
+        LaPosteSuivi,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAQUETEXPRESS")]
         #pragma warning disable CS1591
-        PAQUETEXPRESS,
+        Paquetexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIEFERY")]
         #pragma warning disable CS1591
-        LIEFERY,
+        Liefery,
         #pragma warning restore CS1591
         [EnumMember(Value = "STRECK_TRANSPORT")]
         #pragma warning disable CS1591
-        STRECK_TRANSPORT,
+        StreckTransport,
         #pragma warning restore CS1591
         [EnumMember(Value = "PONY_EXPRESS")]
         #pragma warning disable CS1591
-        PONY_EXPRESS,
+        PonyExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALWAYS_EXPRESS")]
         #pragma warning disable CS1591
-        ALWAYS_EXPRESS,
+        AlwaysExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GBS_BROKER")]
         #pragma warning disable CS1591
-        GBS_BROKER,
+        GbsBroker,
         #pragma warning restore CS1591
         [EnumMember(Value = "CITYLINK_MY")]
         #pragma warning disable CS1591
-        CITYLINK_MY,
+        CitylinkMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALLJOY")]
         #pragma warning disable CS1591
-        ALLJOY,
+        Alljoy,
         #pragma warning restore CS1591
         [EnumMember(Value = "YODEL")]
         #pragma warning disable CS1591
-        YODEL,
+        Yodel,
         #pragma warning restore CS1591
         [EnumMember(Value = "YODEL_DIR")]
         #pragma warning disable CS1591
-        YODEL_DIR,
+        YodelDir,
         #pragma warning restore CS1591
         [EnumMember(Value = "STONE3PL")]
         #pragma warning disable CS1591
-        STONE3PL,
+        Stone3Pl,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELPAL_WEBHOOK")]
         #pragma warning disable CS1591
-        PARCELPAL_WEBHOOK,
+        ParcelpalWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_ECOMERCE_ASA")]
         #pragma warning disable CS1591
-        DHL_ECOMERCE_ASA,
+        DhlEcomerceAsa,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIMPLYPOST")]
         #pragma warning disable CS1591
-        SIMPLYPOST,
+        Simplypost,
         #pragma warning restore CS1591
         [EnumMember(Value = "KY_EXPRESS")]
         #pragma warning disable CS1591
-        KY_EXPRESS,
+        KyExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHENZHEN")]
         #pragma warning disable CS1591
-        SHENZHEN,
+        Shenzhen,
         #pragma warning restore CS1591
         [EnumMember(Value = "US_LASERSHIP")]
         #pragma warning disable CS1591
-        US_LASERSHIP,
+        UsLasership,
         #pragma warning restore CS1591
         [EnumMember(Value = "UC_EXPRE")]
         #pragma warning disable CS1591
-        UC_EXPRE,
+        UcExpre,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIDADI")]
         #pragma warning disable CS1591
-        DIDADI,
+        Didadi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_KR")]
         #pragma warning disable CS1591
-        CJ_KR,
+        CjKr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DBSCHENKER_B2B")]
         #pragma warning disable CS1591
-        DBSCHENKER_B2B,
+        DbschenkerB2B,
         #pragma warning restore CS1591
         [EnumMember(Value = "MXE")]
         #pragma warning disable CS1591
-        MXE,
+        Mxe,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAE_DELIVERS")]
         #pragma warning disable CS1591
-        CAE_DELIVERS,
+        CaeDelivers,
         #pragma warning restore CS1591
         [EnumMember(Value = "PFCEXPRESS")]
         #pragma warning disable CS1591
-        PFCEXPRESS,
+        Pfcexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHISTL")]
         #pragma warning disable CS1591
-        WHISTL,
+        Whistl,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEPOST")]
         #pragma warning disable CS1591
-        WEPOST,
+        Wepost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PARCEL_ES")]
         #pragma warning disable CS1591
-        DHL_PARCEL_ES,
+        DhlParcelEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DDEXPRESS")]
         #pragma warning disable CS1591
-        DDEXPRESS,
+        Ddexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARAMEX_AU")]
         #pragma warning disable CS1591
-        ARAMEX_AU,
+        AramexAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "BNEED")]
         #pragma warning disable CS1591
-        BNEED,
+        Bneed,
         #pragma warning restore CS1591
         [EnumMember(Value = "HK_TGX")]
         #pragma warning disable CS1591
-        HK_TGX,
+        HkTgx,
         #pragma warning restore CS1591
         [EnumMember(Value = "LATVIJAS_PASTS")]
         #pragma warning disable CS1591
-        LATVIJAS_PASTS,
+        LatvijasPasts,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIAEUROPE")]
         #pragma warning disable CS1591
-        VIAEUROPE,
+        Viaeurope,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREO_UY")]
         #pragma warning disable CS1591
-        CORREO_UY,
+        CorreoUy,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHRONOPOST_FR")]
         #pragma warning disable CS1591
-        CHRONOPOST_FR,
+        ChronopostFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "J_NET")]
         #pragma warning disable CS1591
-        J_NET,
+        JNet,
         #pragma warning restore CS1591
         [EnumMember(Value = "_6LS")]
         #pragma warning disable CS1591
-        SixLS,
+        Value6Ls,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLR_BELPOST")]
         #pragma warning disable CS1591
-        BLR_BELPOST,
+        BlrBelpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "BIRDSYSTEM")]
         #pragma warning disable CS1591
-        BIRDSYSTEM,
+        Birdsystem,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOBROPOST")]
         #pragma warning disable CS1591
-        DOBROPOST,
+        Dobropost,
         #pragma warning restore CS1591
         [EnumMember(Value = "WAHANA_ID")]
         #pragma warning disable CS1591
-        WAHANA_ID,
+        WahanaId,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEASHIP")]
         #pragma warning disable CS1591
-        WEASHIP,
+        Weaship,
         #pragma warning restore CS1591
         [EnumMember(Value = "SONICTL")]
         #pragma warning disable CS1591
-        SONICTL,
+        Sonictl,
         #pragma warning restore CS1591
         [EnumMember(Value = "KWT")]
         #pragma warning disable CS1591
-        KWT,
+        Kwt,
         #pragma warning restore CS1591
         [EnumMember(Value = "AFLLOG_FTP")]
         #pragma warning disable CS1591
-        AFLLOG_FTP,
+        AfllogFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYNET_WORLDWIDE")]
         #pragma warning disable CS1591
-        SKYNET_WORLDWIDE,
+        SkynetWorldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOVA_POSHTA")]
         #pragma warning disable CS1591
-        NOVA_POSHTA,
+        NovaPoshta,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEINO")]
         #pragma warning disable CS1591
-        SEINO,
+        Seino,
         #pragma warning restore CS1591
         [EnumMember(Value = "SZENDEX")]
         #pragma warning disable CS1591
-        SZENDEX,
+        Szendex,
         #pragma warning restore CS1591
         [EnumMember(Value = "BPOST_INT")]
         #pragma warning disable CS1591
-        BPOST_INT,
+        BpostInt,
         #pragma warning restore CS1591
         [EnumMember(Value = "DBSCHENKER_SV")]
         #pragma warning disable CS1591
-        DBSCHENKER_SV,
+        DbschenkerSv,
         #pragma warning restore CS1591
         [EnumMember(Value = "AO_DEUTSCHLAND")]
         #pragma warning disable CS1591
-        AO_DEUTSCHLAND,
+        AoDeutschland,
         #pragma warning restore CS1591
         [EnumMember(Value = "EU_FLEET_SOLUTIONS")]
         #pragma warning disable CS1591
-        EU_FLEET_SOLUTIONS,
+        EuFleetSolutions,
         #pragma warning restore CS1591
         [EnumMember(Value = "PCFCORP")]
         #pragma warning disable CS1591
-        PCFCORP,
+        Pcfcorp,
         #pragma warning restore CS1591
         [EnumMember(Value = "LINKBRIDGE")]
         #pragma warning disable CS1591
-        LINKBRIDGE,
+        Linkbridge,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRIMAMULTICIPTA")]
         #pragma warning disable CS1591
-        PRIMAMULTICIPTA,
+        Primamulticipta,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUREX")]
         #pragma warning disable CS1591
-        COUREX,
+        Courex,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZAJIL_EXPRESS")]
         #pragma warning disable CS1591
-        ZAJIL_EXPRESS,
+        ZajilExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLECTCO")]
         #pragma warning disable CS1591
-        COLLECTCO,
+        Collectco,
         #pragma warning restore CS1591
         [EnumMember(Value = "JTEXPRESS")]
         #pragma warning disable CS1591
-        JTEXPRESS,
+        Jtexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_UK")]
         #pragma warning disable CS1591
-        FEDEX_UK,
+        FedexUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "USHIP")]
         #pragma warning disable CS1591
-        USHIP,
+        Uship,
         #pragma warning restore CS1591
         [EnumMember(Value = "PIXSELL")]
         #pragma warning disable CS1591
-        PIXSELL,
+        Pixsell,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPTOR")]
         #pragma warning disable CS1591
-        SHIPTOR,
+        Shiptor,
         #pragma warning restore CS1591
         [EnumMember(Value = "CDEK")]
         #pragma warning disable CS1591
-        CDEK,
+        Cdek,
         #pragma warning restore CS1591
         [EnumMember(Value = "VNM_VIETTELPOST")]
         #pragma warning disable CS1591
-        VNM_VIETTELPOST,
+        VnmViettelpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_CENTURY")]
         #pragma warning disable CS1591
-        CJ_CENTURY,
+        CjCentury,
         #pragma warning restore CS1591
         [EnumMember(Value = "GSO")]
         #pragma warning disable CS1591
-        GSO,
+        Gso,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIWO")]
         #pragma warning disable CS1591
-        VIWO,
+        Viwo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYBOX")]
         #pragma warning disable CS1591
-        SKYBOX,
+        Skybox,
         #pragma warning restore CS1591
         [EnumMember(Value = "KERRYTJ")]
         #pragma warning disable CS1591
-        KERRYTJ,
+        Kerrytj,
         #pragma warning restore CS1591
         [EnumMember(Value = "NTLOGISTICS_VN")]
         #pragma warning disable CS1591
-        NTLOGISTICS_VN,
+        NtlogisticsVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "SDH_SCM")]
         #pragma warning disable CS1591
-        SDH_SCM,
+        SdhScm,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZINC")]
         #pragma warning disable CS1591
-        ZINC,
+        Zinc,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPE_SOUTH_AFRC")]
         #pragma warning disable CS1591
-        DPE_SOUTH_AFRC,
+        DpeSouthAfrc,
         #pragma warning restore CS1591
         [EnumMember(Value = "CESKA_CZ")]
         #pragma warning disable CS1591
-        CESKA_CZ,
+        CeskaCz,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACS_GR")]
         #pragma warning disable CS1591
-        ACS_GR,
+        AcsGr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEALERSEND")]
         #pragma warning disable CS1591
-        DEALERSEND,
+        Dealersend,
         #pragma warning restore CS1591
         [EnumMember(Value = "JOCOM")]
         #pragma warning disable CS1591
-        JOCOM,
+        Jocom,
         #pragma warning restore CS1591
         [EnumMember(Value = "CSE")]
         #pragma warning disable CS1591
-        CSE,
+        Cse,
         #pragma warning restore CS1591
         [EnumMember(Value = "TFORCE_FINALMILE")]
         #pragma warning disable CS1591
-        TFORCE_FINALMILE,
+        TforceFinalmile,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIP_GATE")]
         #pragma warning disable CS1591
-        SHIP_GATE,
+        ShipGate,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPTER")]
         #pragma warning disable CS1591
-        SHIPTER,
+        Shipter,
         #pragma warning restore CS1591
         [EnumMember(Value = "NATIONAL_SAMEDAY")]
         #pragma warning disable CS1591
-        NATIONAL_SAMEDAY,
+        NationalSameday,
         #pragma warning restore CS1591
         [EnumMember(Value = "YUNEXPRESS")]
         #pragma warning disable CS1591
-        YUNEXPRESS,
+        Yunexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAINIAO")]
         #pragma warning disable CS1591
-        CAINIAO,
+        Cainiao,
         #pragma warning restore CS1591
         [EnumMember(Value = "DMS_MATRIX")]
         #pragma warning disable CS1591
-        DMS_MATRIX,
+        DmsMatrix,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECTLOG")]
         #pragma warning disable CS1591
-        DIRECTLOG,
+        Directlog,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASENDIA_US")]
         #pragma warning disable CS1591
-        ASENDIA_US,
+        AsendiaUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "_3JMSLOGISTICS")]
         #pragma warning disable CS1591
-        ThreeJMSLOGISTICS,
+        Value3Jmslogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "LICCARDI_EXPRESS")]
         #pragma warning disable CS1591
-        LICCARDI_EXPRESS,
+        LiccardiExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKY_POSTAL")]
         #pragma warning disable CS1591
-        SKY_POSTAL,
+        SkyPostal,
         #pragma warning restore CS1591
         [EnumMember(Value = "CNWANGTONG")]
         #pragma warning disable CS1591
-        CNWANGTONG,
+        Cnwangtong,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTNORD_LOGISTICS_DK")]
         #pragma warning disable CS1591
-        POSTNORD_LOGISTICS_DK,
+        PostnordLogisticsDk,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTIKA")]
         #pragma warning disable CS1591
-        LOGISTIKA,
+        Logistika,
         #pragma warning restore CS1591
         [EnumMember(Value = "CELERITAS")]
         #pragma warning disable CS1591
-        CELERITAS,
+        Celeritas,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRESSIODE")]
         #pragma warning disable CS1591
-        PRESSIODE,
+        Pressiode,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHREE_MARUTI")]
         #pragma warning disable CS1591
-        SHREE_MARUTI,
+        ShreeMaruti,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTICSWORLDWIDE_HK")]
         #pragma warning disable CS1591
-        LOGISTICSWORLDWIDE_HK,
+        LogisticsworldwideHk,
         #pragma warning restore CS1591
         [EnumMember(Value = "EFEX")]
         #pragma warning disable CS1591
-        EFEX,
+        Efex,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOTTE")]
         #pragma warning disable CS1591
-        LOTTE,
+        Lotte,
         #pragma warning restore CS1591
         [EnumMember(Value = "LONESTAR")]
         #pragma warning disable CS1591
-        LONESTAR,
+        Lonestar,
         #pragma warning restore CS1591
         [EnumMember(Value = "APRISAEXPRESS")]
         #pragma warning disable CS1591
-        APRISAEXPRESS,
+        Aprisaexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEL_RS")]
         #pragma warning disable CS1591
-        BEL_RS,
+        BelRs,
         #pragma warning restore CS1591
         [EnumMember(Value = "OSM_WORLDWIDE")]
         #pragma warning disable CS1591
-        OSM_WORLDWIDE,
+        OsmWorldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "WESTGATE_GL")]
         #pragma warning disable CS1591
-        WESTGATE_GL,
+        WestgateGl,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTRACK")]
         #pragma warning disable CS1591
-        FASTRACK,
+        Fastrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "DTD_EXPR")]
         #pragma warning disable CS1591
-        DTD_EXPR,
+        DtdExpr,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALFATREX")]
         #pragma warning disable CS1591
-        ALFATREX,
+        Alfatrex,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROMEDDELIVERY")]
         #pragma warning disable CS1591
-        PROMEDDELIVERY,
+        Promeddelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "THABIT_LOGISTICS")]
         #pragma warning disable CS1591
-        THABIT_LOGISTICS,
+        ThabitLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "HCT_LOGISTICS")]
         #pragma warning disable CS1591
-        HCT_LOGISTICS,
+        HctLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARRY_FLAP")]
         #pragma warning disable CS1591
-        CARRY_FLAP,
+        CarryFlap,
         #pragma warning restore CS1591
         [EnumMember(Value = "US_OLD_DOMINION")]
         #pragma warning disable CS1591
-        US_OLD_DOMINION,
+        UsOldDominion,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANICAM_BOX")]
         #pragma warning disable CS1591
-        ANICAM_BOX,
+        AnicamBox,
         #pragma warning restore CS1591
         [EnumMember(Value = "WANBEXPRESS")]
         #pragma warning disable CS1591
-        WANBEXPRESS,
+        Wanbexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "AN_POST")]
         #pragma warning disable CS1591
-        AN_POST,
+        AnPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_LOCAL")]
         #pragma warning disable CS1591
-        DPD_LOCAL,
+        DpdLocal,
         #pragma warning restore CS1591
         [EnumMember(Value = "STALLIONEXPRESS")]
         #pragma warning disable CS1591
-        STALLIONEXPRESS,
+        Stallionexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "RAIDEREX")]
         #pragma warning disable CS1591
-        RAIDEREX,
+        Raiderex,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOPFANS")]
         #pragma warning disable CS1591
-        SHOPFANS,
+        Shopfans,
         #pragma warning restore CS1591
         [EnumMember(Value = "KYUNGDONG_PARCEL")]
         #pragma warning disable CS1591
-        KYUNGDONG_PARCEL,
+        KyungdongParcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHAMPION_LOGISTICS")]
         #pragma warning disable CS1591
-        CHAMPION_LOGISTICS,
+        ChampionLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUPP_SGP")]
         #pragma warning disable CS1591
-        PICKUPP_SGP,
+        PickuppSgp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MORNING_EXPRESS")]
         #pragma warning disable CS1591
-        MORNING_EXPRESS,
+        MorningExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "NACEX")]
         #pragma warning disable CS1591
-        NACEX,
+        Nacex,
         #pragma warning restore CS1591
         [EnumMember(Value = "THENILE_WEBHOOK")]
         #pragma warning disable CS1591
-        THENILE_WEBHOOK,
+        ThenileWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOLISOL")]
         #pragma warning disable CS1591
-        HOLISOL,
+        Holisol,
         #pragma warning restore CS1591
         [EnumMember(Value = "LBCEXPRESS_FTP")]
         #pragma warning disable CS1591
-        LBCEXPRESS_FTP,
+        LbcexpressFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "KURASI")]
         #pragma warning disable CS1591
-        KURASI,
+        Kurasi,
         #pragma warning restore CS1591
         [EnumMember(Value = "USF_REDDAWAY")]
         #pragma warning disable CS1591
-        USF_REDDAWAY,
+        UsfReddaway,
         #pragma warning restore CS1591
         [EnumMember(Value = "APG")]
         #pragma warning disable CS1591
-        APG,
+        Apg,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_BOXC")]
         #pragma warning disable CS1591
-        CN_BOXC,
+        CnBoxc,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOSCOOTING")]
         #pragma warning disable CS1591
-        ECOSCOOTING,
+        Ecoscooting,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAINWAY")]
         #pragma warning disable CS1591
-        MAINWAY,
+        Mainway,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAPERFLY")]
         #pragma warning disable CS1591
-        PAPERFLY,
+        Paperfly,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOUNDEXPRESS")]
         #pragma warning disable CS1591
-        HOUNDEXPRESS,
+        Houndexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOX_BERRY")]
         #pragma warning disable CS1591
-        BOX_BERRY,
+        BoxBerry,
         #pragma warning restore CS1591
         [EnumMember(Value = "EP_BOX")]
         #pragma warning disable CS1591
-        EP_BOX,
+        EpBox,
         #pragma warning restore CS1591
         [EnumMember(Value = "PLUS_LOG_UK")]
         #pragma warning disable CS1591
-        PLUS_LOG_UK,
+        PlusLogUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "FULFILLA")]
         #pragma warning disable CS1591
-        FULFILLA,
+        Fulfilla,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASE")]
         #pragma warning disable CS1591
-        ASE,
+        Ase,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAIL_PLUS")]
         #pragma warning disable CS1591
-        MAIL_PLUS,
+        MailPlus,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPO_LOGISTICS")]
         #pragma warning disable CS1591
-        XPO_LOGISTICS,
+        XpoLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "WNDIRECT")]
         #pragma warning disable CS1591
-        WNDIRECT,
+        Wndirect,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLOUDWISH_ASIA")]
         #pragma warning disable CS1591
-        CLOUDWISH_ASIA,
+        CloudwishAsia,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZELERIS")]
         #pragma warning disable CS1591
-        ZELERIS,
+        Zeleris,
         #pragma warning restore CS1591
         [EnumMember(Value = "GIO_EXPRESS")]
         #pragma warning disable CS1591
-        GIO_EXPRESS,
+        GioExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "OCS_WORLDWIDE")]
         #pragma warning disable CS1591
-        OCS_WORLDWIDE,
+        OcsWorldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARK_LOGISTICS")]
         #pragma warning disable CS1591
-        ARK_LOGISTICS,
+        ArkLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "AQUILINE")]
         #pragma warning disable CS1591
-        AQUILINE,
+        Aquiline,
         #pragma warning restore CS1591
         [EnumMember(Value = "PILOT_FREIGHT")]
         #pragma warning disable CS1591
-        PILOT_FREIGHT,
+        PilotFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "QWINTRY")]
         #pragma warning disable CS1591
-        QWINTRY,
+        Qwintry,
         #pragma warning restore CS1591
         [EnumMember(Value = "DANSKE_FRAGT")]
         #pragma warning disable CS1591
-        DANSKE_FRAGT,
+        DanskeFragt,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARRIERS")]
         #pragma warning disable CS1591
-        CARRIERS,
+        Carriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIR_CANADA_GLOBAL")]
         #pragma warning disable CS1591
-        AIR_CANADA_GLOBAL,
+        AirCanadaGlobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRESIDENT_TRANS")]
         #pragma warning disable CS1591
-        PRESIDENT_TRANS,
+        PresidentTrans,
         #pragma warning restore CS1591
         [EnumMember(Value = "STEPFORWARDFS")]
         #pragma warning disable CS1591
-        STEPFORWARDFS,
+        Stepforwardfs,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYNET_UK")]
         #pragma warning disable CS1591
-        SKYNET_UK,
+        SkynetUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "PITTOHIO")]
         #pragma warning disable CS1591
-        PITTOHIO,
+        Pittohio,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREOS_EXPRESS")]
         #pragma warning disable CS1591
-        CORREOS_EXPRESS,
+        CorreosExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "RL_US")]
         #pragma warning disable CS1591
-        RL_US,
+        RlUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DESTINY")]
         #pragma warning disable CS1591
-        DESTINY,
+        Destiny,
         #pragma warning restore CS1591
         [EnumMember(Value = "UK_YODEL")]
         #pragma warning disable CS1591
-        UK_YODEL,
+        UkYodel,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMET_TECH")]
         #pragma warning disable CS1591
-        COMET_TECH,
+        CometTech,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PARCEL_RU")]
         #pragma warning disable CS1591
-        DHL_PARCEL_RU,
+        DhlParcelRu,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_REFR")]
         #pragma warning disable CS1591
-        TNT_REFR,
+        TntRefr,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHREE_ANJANI_COURIER")]
         #pragma warning disable CS1591
-        SHREE_ANJANI_COURIER,
+        ShreeAnjaniCourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "MIKROPAKKET_BE")]
         #pragma warning disable CS1591
-        MIKROPAKKET_BE,
+        MikropakketBe,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETS_EXPRESS")]
         #pragma warning disable CS1591
-        ETS_EXPRESS,
+        EtsExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLIS_PRIVE")]
         #pragma warning disable CS1591
-        COLIS_PRIVE,
+        ColisPrive,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_YUNDA")]
         #pragma warning disable CS1591
-        CN_YUNDA,
+        CnYunda,
         #pragma warning restore CS1591
         [EnumMember(Value = "AAA_COOPER")]
         #pragma warning disable CS1591
-        AAA_COOPER,
+        AaaCooper,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROCKET_PARCEL")]
         #pragma warning disable CS1591
-        ROCKET_PARCEL,
+        RocketParcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "_360LION")]
         #pragma warning disable CS1591
-        ThreeSixZeroLION,
+        Value360Lion,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANDU")]
         #pragma warning disable CS1591
-        PANDU,
+        Pandu,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROFESSIONAL_COURIERS")]
         #pragma warning disable CS1591
-        PROFESSIONAL_COURIERS,
+        ProfessionalCouriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLYTEXPRESS")]
         #pragma warning disable CS1591
-        FLYTEXPRESS,
+        Flytexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTICSWORLDWIDE_MY")]
         #pragma warning disable CS1591
-        LOGISTICSWORLDWIDE_MY,
+        LogisticsworldwideMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREOS_DE_ESPANA")]
         #pragma warning disable CS1591
-        CORREOS_DE_ESPANA,
+        CorreosDeEspana,
         #pragma warning restore CS1591
         [EnumMember(Value = "IMX")]
         #pragma warning disable CS1591
-        IMX,
+        Imx,
         #pragma warning restore CS1591
         [EnumMember(Value = "FOUR_PX_EXPRESS")]
         #pragma warning disable CS1591
-        FOUR_PX_EXPRESS,
+        FourPxExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPRESSBEES")]
         #pragma warning disable CS1591
-        XPRESSBEES,
+        Xpressbees,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUPP_VNM")]
         #pragma warning disable CS1591
-        PICKUPP_VNM,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "STARTRACK_EXPRESS")]
-        #pragma warning disable CS1591
-        STARTRACK_EXPRESS,
+        PickuppVnm,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR_COLISSIMO")]
         #pragma warning disable CS1591
-        FR_COLISSIMO,
+        FrColissimo,
         #pragma warning restore CS1591
         [EnumMember(Value = "NACEX_SPAIN_REFERENCE")]
         #pragma warning disable CS1591
-        NACEX_SPAIN_REFERENCE,
+        NacexSpainReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SUPPLY_CHAIN_AU")]
         #pragma warning disable CS1591
-        DHL_SUPPLY_CHAIN_AU,
+        DhlSupplyChainAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESHIPPING")]
         #pragma warning disable CS1591
-        ESHIPPING,
+        Eshipping,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHREETIRUPATI")]
         #pragma warning disable CS1591
-        SHREETIRUPATI,
+        Shreetirupati,
         #pragma warning restore CS1591
         [EnumMember(Value = "HX_EXPRESS")]
         #pragma warning disable CS1591
-        HX_EXPRESS,
+        HxExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDOPAKET")]
         #pragma warning disable CS1591
-        INDOPAKET,
+        Indopaket,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_17POST")]
         #pragma warning disable CS1591
-        CN_17POST,
+        Cn17Post,
         #pragma warning restore CS1591
         [EnumMember(Value = "K1_EXPRESS")]
         #pragma warning disable CS1591
-        K1_EXPRESS,
+        K1Express,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_GLS")]
         #pragma warning disable CS1591
-        CJ_GLS,
+        CjGls,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_GDEX")]
         #pragma warning disable CS1591
-        MYS_GDEX,
+        MysGdex,
         #pragma warning restore CS1591
         [EnumMember(Value = "NATIONEX")]
         #pragma warning disable CS1591
-        NATIONEX,
+        Nationex,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANJUN")]
         #pragma warning disable CS1591
-        ANJUN,
+        Anjun,
         #pragma warning restore CS1591
         [EnumMember(Value = "FARGOOD")]
         #pragma warning disable CS1591
-        FARGOOD,
+        Fargood,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMG_EXPRESS")]
         #pragma warning disable CS1591
-        SMG_EXPRESS,
+        SmgExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "RZYEXPRESS")]
         #pragma warning disable CS1591
-        RZYEXPRESS,
+        Rzyexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEFL")]
         #pragma warning disable CS1591
-        SEFL,
+        Sefl,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_CLICK_IT")]
         #pragma warning disable CS1591
-        TNT_CLICK_IT,
+        TntClickIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "HDB")]
         #pragma warning disable CS1591
-        HDB,
+        Hdb,
         #pragma warning restore CS1591
         [EnumMember(Value = "HIPSHIPPER")]
         #pragma warning disable CS1591
-        HIPSHIPPER,
+        Hipshipper,
         #pragma warning restore CS1591
         [EnumMember(Value = "RPXLOGISTICS")]
         #pragma warning disable CS1591
-        RPXLOGISTICS,
+        Rpxlogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "KUEHNE")]
         #pragma warning disable CS1591
-        KUEHNE,
+        Kuehne,
         #pragma warning restore CS1591
         [EnumMember(Value = "IT_NEXIVE")]
         #pragma warning disable CS1591
-        IT_NEXIVE,
+        ItNexive,
         #pragma warning restore CS1591
         [EnumMember(Value = "PTS")]
         #pragma warning disable CS1591
-        PTS,
+        Pts,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISS_POST_FTP")]
         #pragma warning disable CS1591
-        SWISS_POST_FTP,
+        SwissPostFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTRK_SERV")]
         #pragma warning disable CS1591
-        FASTRK_SERV,
+        FastrkServ,
         #pragma warning restore CS1591
         [EnumMember(Value = "_4_72")]
         #pragma warning disable CS1591
-        Four_72,
+        Value472,
         #pragma warning restore CS1591
         [EnumMember(Value = "US_YRC")]
         #pragma warning disable CS1591
-        US_YRC,
+        UsYrc,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTNL_INTL_3S")]
         #pragma warning disable CS1591
-        POSTNL_INTL_3S,
+        PostnlIntl3S,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELIAN_POST")]
         #pragma warning disable CS1591
-        ELIAN_POST,
+        ElianPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "CUBYN")]
         #pragma warning disable CS1591
-        CUBYN,
+        Cubyn,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAU_SAUDI_POST")]
         #pragma warning disable CS1591
-        SAU_SAUDI_POST,
+        SauSaudiPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "ABXEXPRESS_MY")]
         #pragma warning disable CS1591
-        ABXEXPRESS_MY,
+        AbxexpressMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUAHAN_EXPRESS")]
         #pragma warning disable CS1591
-        HUAHAN_EXPRESS,
+        HuahanExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZES_EXPRESS")]
         #pragma warning disable CS1591
-        ZES_EXPRESS,
+        ZesExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZEPTO_EXPRESS")]
         #pragma warning disable CS1591
-        ZEPTO_EXPRESS,
+        ZeptoExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYNET_ZA")]
         #pragma warning disable CS1591
-        SKYNET_ZA,
+        SkynetZa,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZEEK_2_DOOR")]
         #pragma warning disable CS1591
-        ZEEK_2_DOOR,
+        Zeek2Door,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLINKLASTMILE")]
         #pragma warning disable CS1591
-        BLINKLASTMILE,
+        Blinklastmile,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTA_UKR")]
         #pragma warning disable CS1591
-        POSTA_UKR,
+        PostaUkr,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHROBINSON")]
         #pragma warning disable CS1591
-        CHROBINSON,
+        Chrobinson,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_POST56")]
         #pragma warning disable CS1591
-        CN_POST56,
+        CnPost56,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURANT_PLUS")]
         #pragma warning disable CS1591
-        COURANT_PLUS,
+        CourantPlus,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCUDEX_EXPRESS")]
         #pragma warning disable CS1591
-        SCUDEX_EXPRESS,
+        ScudexExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPENTEGRA")]
         #pragma warning disable CS1591
-        SHIPENTEGRA,
+        Shipentegra,
         #pragma warning restore CS1591
         [EnumMember(Value = "B_TWO_C_EUROPE")]
         #pragma warning disable CS1591
-        B_TWO_C_EUROPE,
+        BTwoCEurope,
         #pragma warning restore CS1591
         [EnumMember(Value = "COPE")]
         #pragma warning disable CS1591
-        COPE,
+        Cope,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_GATI")]
         #pragma warning disable CS1591
-        IND_GATI,
+        IndGati,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_WISHPOST")]
         #pragma warning disable CS1591
-        CN_WISHPOST,
+        CnWishpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "NACEX_ES")]
         #pragma warning disable CS1591
-        NACEX_ES,
+        NacexEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAQBIN_HK")]
         #pragma warning disable CS1591
-        TAQBIN_HK,
+        TaqbinHk,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBALTRANZ")]
         #pragma warning disable CS1591
-        GLOBALTRANZ,
+        Globaltranz,
         #pragma warning restore CS1591
         [EnumMember(Value = "HKD")]
         #pragma warning disable CS1591
-        HKD,
+        Hkd,
         #pragma warning restore CS1591
         [EnumMember(Value = "BJSHOMEDELIVERY")]
         #pragma warning disable CS1591
-        BJSHOMEDELIVERY,
+        Bjshomedelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "OMNIVA")]
         #pragma warning disable CS1591
-        OMNIVA,
+        Omniva,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUTTON")]
         #pragma warning disable CS1591
-        SUTTON,
+        Sutton,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANTHER_REFERENCE")]
         #pragma warning disable CS1591
-        PANTHER_REFERENCE,
+        PantherReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "SFCSERVICE")]
         #pragma warning disable CS1591
-        SFCSERVICE,
+        Sfcservice,
         #pragma warning restore CS1591
         [EnumMember(Value = "LTL")]
         #pragma warning disable CS1591
-        LTL,
+        Ltl,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARKNPARCEL")]
         #pragma warning disable CS1591
-        PARKNPARCEL,
+        Parknparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPRING_GDS")]
         #pragma warning disable CS1591
-        SPRING_GDS,
+        SpringGds,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECEXPRESS")]
         #pragma warning disable CS1591
-        ECEXPRESS,
+        Ecexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERPARCEL_AU")]
         #pragma warning disable CS1591
-        INTERPARCEL_AU,
+        InterparcelAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGILITY")]
         #pragma warning disable CS1591
-        AGILITY,
+        Agility,
         #pragma warning restore CS1591
         [EnumMember(Value = "XL_EXPRESS")]
         #pragma warning disable CS1591
-        XL_EXPRESS,
+        XlExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADERONLINE")]
         #pragma warning disable CS1591
-        ADERONLINE,
+        Aderonline,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECTCOURIERS")]
         #pragma warning disable CS1591
-        DIRECTCOURIERS,
+        Directcouriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "PLANZER")]
         #pragma warning disable CS1591
-        PLANZER,
+        Planzer,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDING")]
         #pragma warning disable CS1591
-        SENDING,
+        Sending,
         #pragma warning restore CS1591
         [EnumMember(Value = "NINJAVAN_WB")]
         #pragma warning disable CS1591
-        NINJAVAN_WB,
+        NinjavanWb,
         #pragma warning restore CS1591
         [EnumMember(Value = "NATIONWIDE_MY")]
         #pragma warning disable CS1591
-        NATIONWIDE_MY,
+        NationwideMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDIT")]
         #pragma warning disable CS1591
-        SENDIT,
+        Sendit,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB_ARROW")]
         #pragma warning disable CS1591
-        GB_ARROW,
+        GbArrow,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_GOJAVAS")]
         #pragma warning disable CS1591
-        IND_GOJAVAS,
+        IndGojavas,
         #pragma warning restore CS1591
         [EnumMember(Value = "KPOST")]
         #pragma warning disable CS1591
-        KPOST,
+        Kpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_FREIGHT")]
         #pragma warning disable CS1591
-        DHL_FREIGHT,
+        DhlFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLUECARE")]
         #pragma warning disable CS1591
-        BLUECARE,
+        Bluecare,
         #pragma warning restore CS1591
         [EnumMember(Value = "JINDOUYUN")]
         #pragma warning disable CS1591
-        JINDOUYUN,
+        Jindouyun,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRACKON")]
         #pragma warning disable CS1591
-        TRACKON,
+        Trackon,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB_TUFFNELLS")]
         #pragma warning disable CS1591
-        GB_TUFFNELLS,
+        GbTuffnells,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUMPCARD")]
         #pragma warning disable CS1591
-        TRUMPCARD,
+        Trumpcard,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETOTAL")]
         #pragma warning disable CS1591
-        ETOTAL,
+        Etotal,
         #pragma warning restore CS1591
         [EnumMember(Value = "SFPLUS_WEBHOOK")]
         #pragma warning disable CS1591
-        SFPLUS_WEBHOOK,
+        SfplusWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEKOLOGISTICS")]
         #pragma warning disable CS1591
-        SEKOLOGISTICS,
+        Sekologistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES_2MANN_HANDLING")]
         #pragma warning disable CS1591
-        HERMES_2MANN_HANDLING,
+        Hermes2MannHandling,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_LOCAL_REF")]
         #pragma warning disable CS1591
-        DPD_LOCAL_REF,
+        DpdLocalRef,
         #pragma warning restore CS1591
         [EnumMember(Value = "UDS")]
         #pragma warning disable CS1591
-        UDS,
+        Uds,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZA_SPECIALISED_FREIGHT")]
         #pragma warning disable CS1591
-        ZA_SPECIALISED_FREIGHT,
+        ZaSpecialisedFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "THA_KERRY")]
         #pragma warning disable CS1591
-        THA_KERRY,
+        ThaKerry,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRT_INT_SEUR")]
         #pragma warning disable CS1591
-        PRT_INT_SEUR,
+        PrtIntSeur,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRA_CORREIOS")]
         #pragma warning disable CS1591
-        BRA_CORREIOS,
+        BraCorreios,
         #pragma warning restore CS1591
         [EnumMember(Value = "NZ_NZ_POST")]
         #pragma warning disable CS1591
-        NZ_NZ_POST,
+        NzNzPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_EQUICK")]
         #pragma warning disable CS1591
-        CN_EQUICK,
+        CnEquick,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_EMS")]
         #pragma warning disable CS1591
-        MYS_EMS,
+        MysEms,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB_NORSK")]
         #pragma warning disable CS1591
-        GB_NORSK,
+        GbNorsk,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_MRW")]
         #pragma warning disable CS1591
-        ESP_MRW,
+        EspMrw,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_PACKLINK")]
         #pragma warning disable CS1591
-        ESP_PACKLINK,
+        EspPacklink,
         #pragma warning restore CS1591
         [EnumMember(Value = "KANGAROO_MY")]
         #pragma warning disable CS1591
-        KANGAROO_MY,
+        KangarooMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "RPX")]
         #pragma warning disable CS1591
-        RPX,
+        Rpx,
         #pragma warning restore CS1591
         [EnumMember(Value = "XDP_UK_REFERENCE")]
         #pragma warning disable CS1591
-        XDP_UK_REFERENCE,
+        XdpUkReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "NINJAVAN_MY")]
         #pragma warning disable CS1591
-        NINJAVAN_MY,
+        NinjavanMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADICIONAL")]
         #pragma warning disable CS1591
-        ADICIONAL,
+        Adicional,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROADBULL")]
         #pragma warning disable CS1591
-        ROADBULL,
+        Roadbull,
         #pragma warning restore CS1591
         [EnumMember(Value = "YAKIT")]
         #pragma warning disable CS1591
-        YAKIT,
+        Yakit,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAILAMERICAS")]
         #pragma warning disable CS1591
-        MAILAMERICAS,
+        Mailamericas,
         #pragma warning restore CS1591
         [EnumMember(Value = "MIKROPAKKET")]
         #pragma warning disable CS1591
-        MIKROPAKKET,
+        Mikropakket,
         #pragma warning restore CS1591
         [EnumMember(Value = "DYNALOGIC")]
         #pragma warning disable CS1591
-        DYNALOGIC,
+        Dynalogic,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_ES")]
         #pragma warning disable CS1591
-        DHL_ES,
+        DhlEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PARCEL_NL")]
         #pragma warning disable CS1591
-        DHL_PARCEL_NL,
+        DhlParcelNl,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_GLOBAL_MAIL_ASIA")]
         #pragma warning disable CS1591
-        DHL_GLOBAL_MAIL_ASIA,
+        DhlGlobalMailAsia,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAWN_WING")]
         #pragma warning disable CS1591
-        DAWN_WING,
+        DawnWing,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENIKI_GR")]
         #pragma warning disable CS1591
-        GENIKI_GR,
+        GenikiGr,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMESWORLD_UK")]
         #pragma warning disable CS1591
-        HERMESWORLD_UK,
+        HermesworldUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALPHAFAST")]
         #pragma warning disable CS1591
-        ALPHAFAST,
+        Alphafast,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUYLOGIC")]
         #pragma warning disable CS1591
-        BUYLOGIC,
+        Buylogic,
         #pragma warning restore CS1591
         [EnumMember(Value = "EKART")]
         #pragma warning disable CS1591
-        EKART,
+        Ekart,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEX_SENDA")]
         #pragma warning disable CS1591
-        MEX_SENDA,
+        MexSenda,
         #pragma warning restore CS1591
         [EnumMember(Value = "SFC_LOGISTICS")]
         #pragma warning disable CS1591
-        SFC_LOGISTICS,
+        SfcLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "POST_SERBIA")]
         #pragma warning disable CS1591
-        POST_SERBIA,
+        PostSerbia,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_DELHIVERY")]
         #pragma warning disable CS1591
-        IND_DELHIVERY,
+        IndDelhivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "DE_DPD_DELISTRACK")]
         #pragma warning disable CS1591
-        DE_DPD_DELISTRACK,
+        DeDpdDelistrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "RPD2MAN")]
         #pragma warning disable CS1591
-        RPD2MAN,
+        Rpd2Man,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_SF_EXPRESS")]
         #pragma warning disable CS1591
-        CN_SF_EXPRESS,
+        CnSfExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "YANWEN")]
         #pragma warning disable CS1591
-        YANWEN,
+        Yanwen,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_SKYNET")]
         #pragma warning disable CS1591
-        MYS_SKYNET,
+        MysSkynet,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREOS_DE_MEXICO")]
         #pragma warning disable CS1591
-        CORREOS_DE_MEXICO,
+        CorreosDeMexico,
         #pragma warning restore CS1591
         [EnumMember(Value = "CBL_LOGISTICA")]
         #pragma warning disable CS1591
-        CBL_LOGISTICA,
+        CblLogistica,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEX_ESTAFETA")]
         #pragma warning disable CS1591
-        MEX_ESTAFETA,
+        MexEstafeta,
         #pragma warning restore CS1591
         [EnumMember(Value = "AU_AUSTRIAN_POST")]
         #pragma warning disable CS1591
-        AU_AUSTRIAN_POST,
+        AuAustrianPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "RINCOS")]
         #pragma warning disable CS1591
-        RINCOS,
+        Rincos,
         #pragma warning restore CS1591
         [EnumMember(Value = "NLD_DHL")]
         #pragma warning disable CS1591
-        NLD_DHL,
+        NldDhl,
         #pragma warning restore CS1591
         [EnumMember(Value = "RUSSIAN_POST")]
         #pragma warning disable CS1591
-        RUSSIAN_POST,
+        RussianPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURIERS_PLEASE")]
         #pragma warning disable CS1591
-        COURIERS_PLEASE,
+        CouriersPlease,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTNORD_LOGISTICS")]
         #pragma warning disable CS1591
-        POSTNORD_LOGISTICS,
+        PostnordLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX")]
         #pragma warning disable CS1591
-        FEDEX,
+        Fedex,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPE_EXPRESS")]
         #pragma warning disable CS1591
-        DPE_EXPRESS,
+        DpeExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD")]
         #pragma warning disable CS1591
-        DPD,
+        Dpd,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADSONE")]
         #pragma warning disable CS1591
-        ADSONE,
+        Adsone,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDN_JNE")]
         #pragma warning disable CS1591
-        IDN_JNE,
+        IdnJne,
         #pragma warning restore CS1591
         [EnumMember(Value = "THECOURIERGUY")]
         #pragma warning disable CS1591
-        THECOURIERGUY,
+        Thecourierguy,
         #pragma warning restore CS1591
         [EnumMember(Value = "CNEXPS")]
         #pragma warning disable CS1591
-        CNEXPS,
+        Cnexps,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRT_CHRONOPOST")]
         #pragma warning disable CS1591
-        PRT_CHRONOPOST,
+        PrtChronopost,
         #pragma warning restore CS1591
         [EnumMember(Value = "LANDMARK_GLOBAL")]
         #pragma warning disable CS1591
-        LANDMARK_GLOBAL,
+        LandmarkGlobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "IT_DHL_ECOMMERCE")]
         #pragma warning disable CS1591
-        IT_DHL_ECOMMERCE,
+        ItDhlEcommerce,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_NACEX")]
         #pragma warning disable CS1591
-        ESP_NACEX,
+        EspNacex,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRT_CTT")]
         #pragma warning disable CS1591
-        PRT_CTT,
+        PrtCtt,
         #pragma warning restore CS1591
         [EnumMember(Value = "BE_KIALA")]
         #pragma warning disable CS1591
-        BE_KIALA,
+        BeKiala,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASENDIA_UK")]
         #pragma warning disable CS1591
-        ASENDIA_UK,
+        AsendiaUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAL_TNT")]
         #pragma warning disable CS1591
-        GLOBAL_TNT,
+        GlobalTnt,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTUR_IS")]
         #pragma warning disable CS1591
-        POSTUR_IS,
+        PosturIs,
         #pragma warning restore CS1591
         [EnumMember(Value = "EPARCEL_KR")]
         #pragma warning disable CS1591
-        EPARCEL_KR,
+        EparcelKr,
         #pragma warning restore CS1591
         [EnumMember(Value = "INPOST_PACZKOMATY")]
         #pragma warning disable CS1591
-        INPOST_PACZKOMATY,
+        InpostPaczkomaty,
         #pragma warning restore CS1591
         [EnumMember(Value = "IT_POSTE_ITALIA")]
         #pragma warning disable CS1591
-        IT_POSTE_ITALIA,
+        ItPosteItalia,
         #pragma warning restore CS1591
         [EnumMember(Value = "BE_BPOST")]
         #pragma warning disable CS1591
-        BE_BPOST,
+        BeBpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "PL_POCZTA_POLSKA")]
         #pragma warning disable CS1591
-        PL_POCZTA_POLSKA,
+        PlPocztaPolska,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_MYS_POST")]
         #pragma warning disable CS1591
-        MYS_MYS_POST,
+        MysMysPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "SG_SG_POST")]
         #pragma warning disable CS1591
-        SG_SG_POST,
+        SgSgPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "THA_THAILAND_POST")]
         #pragma warning disable CS1591
-        THA_THAILAND_POST,
+        ThaThailandPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEXSHIP")]
         #pragma warning disable CS1591
-        LEXSHIP,
+        Lexship,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_NZ")]
         #pragma warning disable CS1591
-        FASTWAY_NZ,
+        FastwayNz,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_AU")]
         #pragma warning disable CS1591
-        DHL_AU,
+        DhlAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "COSTMETICSNOW")]
         #pragma warning disable CS1591
-        COSTMETICSNOW,
+        Costmeticsnow,
         #pragma warning restore CS1591
         [EnumMember(Value = "PFLOGISTICS")]
         #pragma warning disable CS1591
-        PFLOGISTICS,
+        Pflogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOOMIS_EXPRESS")]
         #pragma warning disable CS1591
-        LOOMIS_EXPRESS,
+        LoomisExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_ITALY")]
         #pragma warning disable CS1591
-        GLS_ITALY,
+        GlsItaly,
         #pragma warning restore CS1591
         [EnumMember(Value = "LINE")]
         #pragma warning disable CS1591
-        LINE,
+        Line,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEL_EXPRESS")]
         #pragma warning disable CS1591
-        GEL_EXPRESS,
+        GelExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUODULL")]
         #pragma warning disable CS1591
-        HUODULL,
+        Huodull,
         #pragma warning restore CS1591
         [EnumMember(Value = "NINJAVAN_SG")]
         #pragma warning disable CS1591
-        NINJAVAN_SG,
+        NinjavanSg,
         #pragma warning restore CS1591
         [EnumMember(Value = "JANIO")]
         #pragma warning disable CS1591
-        JANIO,
+        Janio,
         #pragma warning restore CS1591
         [EnumMember(Value = "AO_COURIER")]
         #pragma warning disable CS1591
-        AO_COURIER,
+        AoCourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRT_IT_SENDER_REF")]
         #pragma warning disable CS1591
-        BRT_IT_SENDER_REF,
+        BrtItSenderRef,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAILPOST")]
         #pragma warning disable CS1591
-        SAILPOST,
+        Sailpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "LALAMOVE")]
         #pragma warning disable CS1591
-        LALAMOVE,
+        Lalamove,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWZEALAND_COURIERS")]
         #pragma warning disable CS1591
-        NEWZEALAND_COURIERS,
+        NewzealandCouriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETOMARS")]
         #pragma warning disable CS1591
-        ETOMARS,
+        Etomars,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIRTRANSPORT")]
         #pragma warning disable CS1591
-        VIRTRANSPORT,
+        Virtransport,
         #pragma warning restore CS1591
         [EnumMember(Value = "WIZMO")]
         #pragma warning disable CS1591
-        WIZMO,
+        Wizmo,
         #pragma warning restore CS1591
         [EnumMember(Value = "PALLETWAYS")]
         #pragma warning disable CS1591
-        PALLETWAYS,
+        Palletways,
         #pragma warning restore CS1591
         [EnumMember(Value = "I_DIKA")]
         #pragma warning disable CS1591
-        I_DIKA,
+        IDika,
         #pragma warning restore CS1591
         [EnumMember(Value = "CFL_LOGISTICS")]
         #pragma warning disable CS1591
-        CFL_LOGISTICS,
+        CflLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEMWORLDWIDE")]
         #pragma warning disable CS1591
-        GEMWORLDWIDE,
+        Gemworldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAL_EXPRESS")]
         #pragma warning disable CS1591
-        GLOBAL_EXPRESS,
+        GlobalExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTYX_TRANSGROUP")]
         #pragma warning disable CS1591
-        LOGISTYX_TRANSGROUP,
+        LogistyxTransgroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "WESTBANK_COURIER")]
         #pragma warning disable CS1591
-        WESTBANK_COURIER,
+        WestbankCourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARCO_SPEDIZIONI")]
         #pragma warning disable CS1591
-        ARCO_SPEDIZIONI,
+        ArcoSpedizioni,
         #pragma warning restore CS1591
         [EnumMember(Value = "YDH_EXPRESS")]
         #pragma warning disable CS1591
-        YDH_EXPRESS,
+        YdhExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELINKLOGISTICS")]
         #pragma warning disable CS1591
-        PARCELINKLOGISTICS,
+        Parcelinklogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "CNDEXPRESS")]
         #pragma warning disable CS1591
-        CNDEXPRESS,
+        Cndexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOX_NIGHT_TIME_EXPRESS")]
         #pragma warning disable CS1591
-        NOX_NIGHT_TIME_EXPRESS,
+        NoxNightTimeExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "AERONET")]
         #pragma warning disable CS1591
-        AERONET,
+        Aeronet,
         #pragma warning restore CS1591
         [EnumMember(Value = "LTIANEXP")]
         #pragma warning disable CS1591
-        LTIANEXP,
+        Ltianexp,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTEGRA2_FTP")]
         #pragma warning disable CS1591
-        INTEGRA2_FTP,
+        Integra2Ftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELONE")]
         #pragma warning disable CS1591
-        PARCELONE,
+        Parcelone,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOX_NACHTEXPRESS")]
         #pragma warning disable CS1591
-        NOX_NACHTEXPRESS,
+        NoxNachtexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_CHINA_POST_EMS")]
         #pragma warning disable CS1591
-        CN_CHINA_POST_EMS,
+        CnChinaPostEms,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHUKOU1")]
         #pragma warning disable CS1591
-        CHUKOU1,
+        Chukou1,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_SLOV")]
         #pragma warning disable CS1591
-        GLS_SLOV,
+        GlsSlov,
         #pragma warning restore CS1591
         [EnumMember(Value = "ORANGE_DS")]
         #pragma warning disable CS1591
-        ORANGE_DS,
+        OrangeDs,
         #pragma warning restore CS1591
         [EnumMember(Value = "JOOM_LOGIS")]
         #pragma warning disable CS1591
-        JOOM_LOGIS,
+        JoomLogis,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUS_STARTRACK")]
         #pragma warning disable CS1591
-        AUS_STARTRACK,
+        AusStartrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL")]
         #pragma warning disable CS1591
-        DHL,
+        Dhl,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB_APC")]
         #pragma warning disable CS1591
-        GB_APC,
+        GbApc,
         #pragma warning restore CS1591
         [EnumMember(Value = "BONDSCOURIERS")]
         #pragma warning disable CS1591
-        BONDSCOURIERS,
+        Bondscouriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "JPN_JAPAN_POST")]
         #pragma warning disable CS1591
-        JPN_JAPAN_POST,
+        JpnJapanPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "USPS")]
         #pragma warning disable CS1591
-        USPS,
+        Usps,
         #pragma warning restore CS1591
         [EnumMember(Value = "WINIT")]
         #pragma warning disable CS1591
-        WINIT,
+        Winit,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARG_OCA")]
         #pragma warning disable CS1591
-        ARG_OCA,
+        ArgOca,
         #pragma warning restore CS1591
         [EnumMember(Value = "TW_TAIWAN_POST")]
         #pragma warning disable CS1591
-        TW_TAIWAN_POST,
+        TwTaiwanPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DMM_NETWORK")]
         #pragma warning disable CS1591
-        DMM_NETWORK,
+        DmmNetwork,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT")]
         #pragma warning disable CS1591
-        TNT,
+        Tnt,
         #pragma warning restore CS1591
         [EnumMember(Value = "BH_POSTA")]
         #pragma warning disable CS1591
-        BH_POSTA,
+        BhPosta,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWE_POSTNORD")]
         #pragma warning disable CS1591
-        SWE_POSTNORD,
+        SwePostnord,
         #pragma warning restore CS1591
         [EnumMember(Value = "CA_CANADA_POST")]
         #pragma warning disable CS1591
-        CA_CANADA_POST,
+        CaCanadaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "WISELOADS")]
         #pragma warning disable CS1591
-        WISELOADS,
+        Wiseloads,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASENDIA_HK")]
         #pragma warning disable CS1591
-        ASENDIA_HK,
+        AsendiaHk,
         #pragma warning restore CS1591
         [EnumMember(Value = "NLD_GLS")]
         #pragma warning disable CS1591
-        NLD_GLS,
+        NldGls,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEX_REDPACK")]
         #pragma warning disable CS1591
-        MEX_REDPACK,
+        MexRedpack,
         #pragma warning restore CS1591
         [EnumMember(Value = "JET_SHIP")]
         #pragma warning disable CS1591
-        JET_SHIP,
+        JetShip,
         #pragma warning restore CS1591
         [EnumMember(Value = "DE_DHL_EXPRESS")]
         #pragma warning disable CS1591
-        DE_DHL_EXPRESS,
+        DeDhlExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "NINJAVAN_THAI")]
         #pragma warning disable CS1591
-        NINJAVAN_THAI,
+        NinjavanThai,
         #pragma warning restore CS1591
         [EnumMember(Value = "RABEN_GROUP")]
         #pragma warning disable CS1591
-        RABEN_GROUP,
+        RabenGroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_ASM")]
         #pragma warning disable CS1591
-        ESP_ASM,
+        EspAsm,
         #pragma warning restore CS1591
         [EnumMember(Value = "HRV_HRVATSKA")]
         #pragma warning disable CS1591
-        HRV_HRVATSKA,
+        HrvHrvatska,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAL_ESTES")]
         #pragma warning disable CS1591
-        GLOBAL_ESTES,
+        GlobalEstes,
         #pragma warning restore CS1591
         [EnumMember(Value = "LTU_LIETUVOS")]
         #pragma warning disable CS1591
-        LTU_LIETUVOS,
+        LtuLietuvos,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEL_DHL")]
         #pragma warning disable CS1591
-        BEL_DHL,
+        BelDhl,
         #pragma warning restore CS1591
         [EnumMember(Value = "AU_AU_POST")]
         #pragma warning disable CS1591
-        AU_AU_POST,
+        AuAuPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDEXCOURIER")]
         #pragma warning disable CS1591
-        SPEEDEXCOURIER,
+        Speedexcourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR_COLIS")]
         #pragma warning disable CS1591
-        FR_COLIS,
+        FrColis,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARAMEX")]
         #pragma warning disable CS1591
-        ARAMEX,
+        Aramex,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPEX")]
         #pragma warning disable CS1591
-        DPEX,
+        Dpex,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYS_AIRPAK")]
         #pragma warning disable CS1591
-        MYS_AIRPAK,
+        MysAirpak,
         #pragma warning restore CS1591
         [EnumMember(Value = "CUCKOOEXPRESS")]
         #pragma warning disable CS1591
-        CUCKOOEXPRESS,
+        Cuckooexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_POLAND")]
         #pragma warning disable CS1591
-        DPD_POLAND,
+        DpdPoland,
         #pragma warning restore CS1591
         [EnumMember(Value = "NLD_POSTNL")]
         #pragma warning disable CS1591
-        NLD_POSTNL,
+        NldPostnl,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIM_EXPRESS")]
         #pragma warning disable CS1591
-        NIM_EXPRESS,
+        NimExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "QUANTIUM")]
         #pragma warning disable CS1591
-        QUANTIUM,
+        Quantium,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDLE")]
         #pragma warning disable CS1591
-        SENDLE,
+        Sendle,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_REDUR")]
         #pragma warning disable CS1591
-        ESP_REDUR,
+        EspRedur,
         #pragma warning restore CS1591
         [EnumMember(Value = "MATKAHUOLTO")]
         #pragma warning disable CS1591
-        MATKAHUOLTO,
+        Matkahuolto,
         #pragma warning restore CS1591
         [EnumMember(Value = "CPACKET")]
         #pragma warning disable CS1591
-        CPACKET,
+        Cpacket,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTI")]
         #pragma warning disable CS1591
-        POSTI,
+        Posti,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUNTER_EXPRESS")]
         #pragma warning disable CS1591
-        HUNTER_EXPRESS,
+        HunterExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHOIR_EXP")]
         #pragma warning disable CS1591
-        CHOIR_EXP,
+        ChoirExp,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEGION_EXPRESS")]
         #pragma warning disable CS1591
-        LEGION_EXPRESS,
+        LegionExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUSTRIAN_POST_EXPRESS")]
         #pragma warning disable CS1591
-        AUSTRIAN_POST_EXPRESS,
+        AustrianPostExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GRUPO")]
         #pragma warning disable CS1591
-        GRUPO,
+        Grupo,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTA_RO")]
         #pragma warning disable CS1591
-        POSTA_RO,
+        PostaRo,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERPARCEL_UK")]
         #pragma warning disable CS1591
-        INTERPARCEL_UK,
+        InterparcelUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBAL_ABF")]
         #pragma warning disable CS1591
-        GLOBAL_ABF,
+        GlobalAbf,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTEN_NORGE")]
         #pragma warning disable CS1591
-        POSTEN_NORGE,
+        PostenNorge,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPERT_DELIVERY")]
         #pragma warning disable CS1591
-        XPERT_DELIVERY,
+        XpertDelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_REFR")]
         #pragma warning disable CS1591
-        DHL_REFR,
+        DhlRefr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_HK")]
         #pragma warning disable CS1591
-        DHL_HK,
+        DhlHk,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYNET_UAE")]
         #pragma warning disable CS1591
-        SKYNET_UAE,
+        SkynetUae,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOJEK")]
         #pragma warning disable CS1591
-        GOJEK,
+        Gojek,
         #pragma warning restore CS1591
         [EnumMember(Value = "YODEL_INTNL")]
         #pragma warning disable CS1591
-        YODEL_INTNL,
+        YodelIntnl,
         #pragma warning restore CS1591
         [EnumMember(Value = "JANCO")]
         #pragma warning disable CS1591
-        JANCO,
+        Janco,
         #pragma warning restore CS1591
         [EnumMember(Value = "YTO")]
         #pragma warning disable CS1591
-        YTO,
+        Yto,
         #pragma warning restore CS1591
         [EnumMember(Value = "WISE_EXPRESS")]
         #pragma warning disable CS1591
-        WISE_EXPRESS,
+        WiseExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "JTEXPRESS_VN")]
         #pragma warning disable CS1591
-        JTEXPRESS_VN,
+        JtexpressVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_INTL_MLSERV")]
         #pragma warning disable CS1591
-        FEDEX_INTL_MLSERV,
+        FedexIntlMlserv,
         #pragma warning restore CS1591
         [EnumMember(Value = "VAMOX")]
         #pragma warning disable CS1591
-        VAMOX,
+        Vamox,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMS_GRP")]
         #pragma warning disable CS1591
-        AMS_GRP,
+        AmsGrp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_JP")]
         #pragma warning disable CS1591
-        DHL_JP,
+        DhlJp,
         #pragma warning restore CS1591
         [EnumMember(Value = "HRPARCEL")]
         #pragma warning disable CS1591
-        HRPARCEL,
+        Hrparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "GESWL")]
         #pragma warning disable CS1591
-        GESWL,
+        Geswl,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLUESTAR")]
         #pragma warning disable CS1591
-        BLUESTAR,
+        Bluestar,
         #pragma warning restore CS1591
         [EnumMember(Value = "CDEK_TR")]
         #pragma warning disable CS1591
-        CDEK_TR,
+        CdekTr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DESCARTES")]
         #pragma warning disable CS1591
-        DESCARTES,
+        Descartes,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELTEC_UK")]
         #pragma warning disable CS1591
-        DELTEC_UK,
+        DeltecUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "DTDC_EXPRESS")]
         #pragma warning disable CS1591
-        DTDC_EXPRESS,
+        DtdcExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOURLINE")]
         #pragma warning disable CS1591
-        TOURLINE,
+        Tourline,
         #pragma warning restore CS1591
         [EnumMember(Value = "BH_WORLDWIDE")]
         #pragma warning disable CS1591
-        BH_WORLDWIDE,
+        BhWorldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "OCS")]
         #pragma warning disable CS1591
-        OCS,
+        Ocs,
         #pragma warning restore CS1591
         [EnumMember(Value = "YINGNUO_LOGISTICS")]
         #pragma warning disable CS1591
-        YINGNUO_LOGISTICS,
+        YingnuoLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS")]
         #pragma warning disable CS1591
-        UPS,
+        Ups,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL")]
         #pragma warning disable CS1591
-        TOLL,
+        Toll,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRT_SEUR")]
         #pragma warning disable CS1591
-        PRT_SEUR,
+        PrtSeur,
         #pragma warning restore CS1591
         [EnumMember(Value = "DTDC_AU")]
         #pragma warning disable CS1591
-        DTDC_AU,
+        DtdcAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "THA_DYNAMIC_LOGISTICS")]
         #pragma warning disable CS1591
-        THA_DYNAMIC_LOGISTICS,
+        ThaDynamicLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "UBI_LOGISTICS")]
         #pragma warning disable CS1591
-        UBI_LOGISTICS,
+        UbiLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_CROSSBORDER")]
         #pragma warning disable CS1591
-        FEDEX_CROSSBORDER,
+        FedexCrossborder,
         #pragma warning restore CS1591
         [EnumMember(Value = "A1POST")]
         #pragma warning disable CS1591
-        A1POST,
+        A1Post,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAZMANIAN_FREIGHT")]
         #pragma warning disable CS1591
-        TAZMANIAN_FREIGHT,
+        TazmanianFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_INT_MY")]
         #pragma warning disable CS1591
-        CJ_INT_MY,
+        CjIntMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAIA_FREIGHT")]
         #pragma warning disable CS1591
-        SAIA_FREIGHT,
+        SaiaFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "SG_QXPRESS")]
         #pragma warning disable CS1591
-        SG_QXPRESS,
+        SgQxpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "NHANS_SOLUTIONS")]
         #pragma warning disable CS1591
-        NHANS_SOLUTIONS,
+        NhansSolutions,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_FR")]
         #pragma warning disable CS1591
-        DPD_FR,
+        DpdFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "COORDINADORA")]
         #pragma warning disable CS1591
-        COORDINADORA,
+        Coordinadora,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANDREANI")]
         #pragma warning disable CS1591
-        ANDREANI,
+        Andreani,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOORA")]
         #pragma warning disable CS1591
-        DOORA,
+        Doora,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERPARCEL_NZ")]
         #pragma warning disable CS1591
-        INTERPARCEL_NZ,
+        InterparcelNz,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHL_JAMEXPRESS")]
         #pragma warning disable CS1591
-        PHL_JAMEXPRESS,
+        PhlJamexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "BEL_BELGIUM_POST")]
         #pragma warning disable CS1591
-        BEL_BELGIUM_POST,
+        BelBelgiumPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "US_APC")]
         #pragma warning disable CS1591
-        US_APC,
+        UsApc,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDN_POS")]
         #pragma warning disable CS1591
-        IDN_POS,
+        IdnPos,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR_MONDIAL")]
         #pragma warning disable CS1591
-        FR_MONDIAL,
+        FrMondial,
         #pragma warning restore CS1591
         [EnumMember(Value = "DE_DHL")]
         #pragma warning disable CS1591
-        DE_DHL,
+        DeDhl,
         #pragma warning restore CS1591
         [EnumMember(Value = "HK_RPX")]
         #pragma warning disable CS1591
-        HK_RPX,
+        HkRpx,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PIECEID")]
         #pragma warning disable CS1591
-        DHL_PIECEID,
+        DhlPieceid,
         #pragma warning restore CS1591
         [EnumMember(Value = "VNPOST_EMS")]
         #pragma warning disable CS1591
-        VNPOST_EMS,
+        VnpostEms,
         #pragma warning restore CS1591
         [EnumMember(Value = "RRDONNELLEY")]
         #pragma warning disable CS1591
-        RRDONNELLEY,
+        Rrdonnelley,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_DE")]
         #pragma warning disable CS1591
-        DPD_DE,
+        DpdDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELCART_IN")]
         #pragma warning disable CS1591
-        DELCART_IN,
+        DelcartIn,
         #pragma warning restore CS1591
         [EnumMember(Value = "IMEXGLOBALSOLUTIONS")]
         #pragma warning disable CS1591
-        IMEXGLOBALSOLUTIONS,
+        Imexglobalsolutions,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACOMMERCE")]
         #pragma warning disable CS1591
-        ACOMMERCE,
+        Acommerce,
         #pragma warning restore CS1591
         [EnumMember(Value = "EURODIS")]
         #pragma warning disable CS1591
-        EURODIS,
+        Eurodis,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANPAR")]
         #pragma warning disable CS1591
-        CANPAR,
+        Canpar,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS")]
         #pragma warning disable CS1591
-        GLS,
+        Gls,
         #pragma warning restore CS1591
         [EnumMember(Value = "IND_ECOM")]
         #pragma warning disable CS1591
-        IND_ECOM,
+        IndEcom,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESP_ENVIALIA")]
         #pragma warning disable CS1591
-        ESP_ENVIALIA,
+        EspEnvialia,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_UK")]
         #pragma warning disable CS1591
-        DHL_UK,
+        DhlUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMSA_EXPRESS")]
         #pragma warning disable CS1591
-        SMSA_EXPRESS,
+        SmsaExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_FR")]
         #pragma warning disable CS1591
-        TNT_FR,
+        TntFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEX_I")]
         #pragma warning disable CS1591
-        DEX_I,
+        DexI,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUDBEE_WEBHOOK")]
         #pragma warning disable CS1591
-        BUDBEE_WEBHOOK,
+        BudbeeWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "COPA_COURIER")]
         #pragma warning disable CS1591
-        COPA_COURIER,
+        CopaCourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "VNM_VIETNAM_POST")]
         #pragma warning disable CS1591
-        VNM_VIETNAM_POST,
+        VnmVietnamPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_HK")]
         #pragma warning disable CS1591
-        DPD_HK,
+        DpdHk,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL_NZ")]
         #pragma warning disable CS1591
-        TOLL_NZ,
+        TollNz,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECHO")]
         #pragma warning disable CS1591
-        ECHO,
+        Echo,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_FR")]
         #pragma warning disable CS1591
-        FEDEX_FR,
+        FedexFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "BORDEREXPRESS")]
         #pragma warning disable CS1591
-        BORDEREXPRESS,
+        Borderexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAILPLUS_JPN")]
         #pragma warning disable CS1591
-        MAILPLUS_JPN,
+        MailplusJpn,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_UK_REFR")]
         #pragma warning disable CS1591
-        TNT_UK_REFR,
+        TntUkRefr,
         #pragma warning restore CS1591
         [EnumMember(Value = "KEC")]
         #pragma warning disable CS1591
-        KEC,
+        Kec,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_RO")]
         #pragma warning disable CS1591
-        DPD_RO,
+        DpdRo,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_JP")]
         #pragma warning disable CS1591
-        TNT_JP,
+        TntJp,
         #pragma warning restore CS1591
         [EnumMember(Value = "TH_CJ")]
         #pragma warning disable CS1591
-        TH_CJ,
+        ThCj,
         #pragma warning restore CS1591
         [EnumMember(Value = "EC_CN")]
         #pragma warning disable CS1591
-        EC_CN,
+        EcCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_UK")]
         #pragma warning disable CS1591
-        FASTWAY_UK,
+        FastwayUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_US")]
         #pragma warning disable CS1591
-        FASTWAY_US,
+        FastwayUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_DE")]
         #pragma warning disable CS1591
-        GLS_DE,
+        GlsDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_ES")]
         #pragma warning disable CS1591
-        GLS_ES,
+        GlsEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_FR")]
         #pragma warning disable CS1591
-        GLS_FR,
+        GlsFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "MONDIAL_BE")]
         #pragma warning disable CS1591
-        MONDIAL_BE,
+        MondialBe,
         #pragma warning restore CS1591
         [EnumMember(Value = "SGT_IT")]
         #pragma warning disable CS1591
-        SGT_IT,
+        SgtIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_CN")]
         #pragma warning disable CS1591
-        TNT_CN,
+        TntCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_DE")]
         #pragma warning disable CS1591
-        TNT_DE,
+        TntDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_ES")]
         #pragma warning disable CS1591
-        TNT_ES,
+        TntEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_PL")]
         #pragma warning disable CS1591
-        TNT_PL,
+        TntPl,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELFORCE")]
         #pragma warning disable CS1591
-        PARCELFORCE,
+        Parcelforce,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISS_POST")]
         #pragma warning disable CS1591
-        SWISS_POST,
+        SwissPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL_IPEC")]
         #pragma warning disable CS1591
-        TOLL_IPEC,
+        TollIpec,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIR_21")]
         #pragma warning disable CS1591
-        AIR_21,
+        Air21,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIRSPEED")]
         #pragma warning disable CS1591
-        AIRSPEED,
+        Airspeed,
         #pragma warning restore CS1591
         [EnumMember(Value = "BERT")]
         #pragma warning disable CS1591
-        BERT,
+        Bert,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLUEDART")]
         #pragma warning disable CS1591
-        BLUEDART,
+        Bluedart,
         #pragma warning restore CS1591
         [EnumMember(Value = "COLLECTPLUS")]
         #pragma warning disable CS1591
-        COLLECTPLUS,
+        Collectplus,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURIERPLUS")]
         #pragma warning disable CS1591
-        COURIERPLUS,
+        Courierplus,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURIER_POST")]
         #pragma warning disable CS1591
-        COURIER_POST,
+        CourierPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_GLOBAL_MAIL")]
         #pragma warning disable CS1591
-        DHL_GLOBAL_MAIL,
+        DhlGlobalMail,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_UK")]
         #pragma warning disable CS1591
-        DPD_UK,
+        DpdUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELTEC_DE")]
         #pragma warning disable CS1591
-        DELTEC_DE,
+        DeltecDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEUTSCHE_DE")]
         #pragma warning disable CS1591
-        DEUTSCHE_DE,
+        DeutscheDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOTZOT")]
         #pragma warning disable CS1591
-        DOTZOT,
+        Dotzot,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELTA_GR")]
         #pragma warning disable CS1591
-        ELTA_GR,
+        EltaGr,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMS_CN")]
         #pragma warning disable CS1591
-        EMS_CN,
+        EmsCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECARGO")]
         #pragma warning disable CS1591
-        ECARGO,
+        Ecargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENSENDA")]
         #pragma warning disable CS1591
-        ENSENDA,
+        Ensenda,
         #pragma warning restore CS1591
         [EnumMember(Value = "FERCAM_IT")]
         #pragma warning disable CS1591
-        FERCAM_IT,
+        FercamIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_ZA")]
         #pragma warning disable CS1591
-        FASTWAY_ZA,
+        FastwayZa,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTWAY_AU")]
         #pragma warning disable CS1591
-        FASTWAY_AU,
+        FastwayAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIRST_LOGISITCS")]
         #pragma warning disable CS1591
-        FIRST_LOGISITCS,
+        FirstLogisitcs,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEODIS")]
         #pragma warning disable CS1591
-        GEODIS,
+        Geodis,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOBEGISTICS")]
         #pragma warning disable CS1591
-        GLOBEGISTICS,
+        Globegistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "GREYHOUND")]
         #pragma warning disable CS1591
-        GREYHOUND,
+        Greyhound,
         #pragma warning restore CS1591
         [EnumMember(Value = "JETSHIP_MY")]
         #pragma warning disable CS1591
-        JETSHIP_MY,
+        JetshipMy,
         #pragma warning restore CS1591
         [EnumMember(Value = "LION_PARCEL")]
         #pragma warning disable CS1591
-        LION_PARCEL,
+        LionParcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "AEROFLASH")]
         #pragma warning disable CS1591
-        AEROFLASH,
+        Aeroflash,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONTRAC")]
         #pragma warning disable CS1591
-        ONTRAC,
+        Ontrac,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAGAWA")]
         #pragma warning disable CS1591
-        SAGAWA,
+        Sagawa,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIODEMKA")]
         #pragma warning disable CS1591
-        SIODEMKA,
+        Siodemka,
         #pragma warning restore CS1591
         [EnumMember(Value = "STARTRACK")]
         #pragma warning disable CS1591
-        STARTRACK,
+        Startrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_AU")]
         #pragma warning disable CS1591
-        TNT_AU,
+        TntAu,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_IT")]
         #pragma warning disable CS1591
-        TNT_IT,
+        TntIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSMISSION")]
         #pragma warning disable CS1591
-        TRANSMISSION,
+        Transmission,
         #pragma warning restore CS1591
         [EnumMember(Value = "YAMATO")]
         #pragma warning disable CS1591
-        YAMATO,
+        Yamato,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_IT")]
         #pragma warning disable CS1591
-        DHL_IT,
+        DhlIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_AT")]
         #pragma warning disable CS1591
-        DHL_AT,
+        DhlAt,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISTICSWORLDWIDE_KR")]
         #pragma warning disable CS1591
-        LOGISTICSWORLDWIDE_KR,
+        LogisticsworldwideKr,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_SPAIN")]
         #pragma warning disable CS1591
-        GLS_SPAIN,
+        GlsSpain,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_UK_API")]
         #pragma warning disable CS1591
-        AMAZON_UK_API,
+        AmazonUkApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_FR_REFERENCE")]
         #pragma warning disable CS1591
-        DPD_FR_REFERENCE,
+        DpdFrReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHLPARCEL_UK")]
         #pragma warning disable CS1591
-        DHLPARCEL_UK,
+        DhlparcelUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEGASAVE")]
         #pragma warning disable CS1591
-        MEGASAVE,
+        Megasave,
         #pragma warning restore CS1591
         [EnumMember(Value = "QUALITYPOST")]
         #pragma warning disable CS1591
-        QUALITYPOST,
+        Qualitypost,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDS_LOGISTICS")]
         #pragma warning disable CS1591
-        IDS_LOGISTICS,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "JOYINGBOX")]
-        #pragma warning disable CS1591
-        JOYINGBOX,
+        IdsLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANTHER_ORDER_NUMBER")]
         #pragma warning disable CS1591
-        PANTHER_ORDER_NUMBER,
+        PantherOrderNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "WATKINS_SHEPARD")]
         #pragma warning disable CS1591
-        WATKINS_SHEPARD,
+        WatkinsShepard,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTTRACK")]
         #pragma warning disable CS1591
-        FASTTRACK,
+        Fasttrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "UP_EXPRESS")]
         #pragma warning disable CS1591
-        UP_EXPRESS,
+        UpExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELOGISTICA")]
         #pragma warning disable CS1591
-        ELOGISTICA,
+        Elogistica,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOURIER")]
         #pragma warning disable CS1591
-        ECOURIER,
+        Ecourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "CJ_PHILIPPINES")]
         #pragma warning disable CS1591
-        CJ_PHILIPPINES,
+        CjPhilippines,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDEX")]
         #pragma warning disable CS1591
-        SPEEDEX,
+        Speedex,
         #pragma warning restore CS1591
         [EnumMember(Value = "ORANGECONNEX")]
         #pragma warning disable CS1591
-        ORANGECONNEX,
+        Orangeconnex,
         #pragma warning restore CS1591
         [EnumMember(Value = "TECOR")]
         #pragma warning disable CS1591
-        TECOR,
+        Tecor,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAEE")]
         #pragma warning disable CS1591
-        SAEE,
+        Saee,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_ITALY_FTP")]
         #pragma warning disable CS1591
-        GLS_ITALY_FTP,
+        GlsItalyFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERE")]
         #pragma warning disable CS1591
-        DELIVERE,
+        Delivere,
         #pragma warning restore CS1591
         [EnumMember(Value = "YYCOM")]
         #pragma warning disable CS1591
-        YYCOM,
+        Yycom,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADICIONAL_PT")]
         #pragma warning disable CS1591
-        ADICIONAL_PT,
+        AdicionalPt,
         #pragma warning restore CS1591
         [EnumMember(Value = "DKSH")]
         #pragma warning disable CS1591
-        DKSH,
+        Dksh,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIPPON_EXPRESS_FTP")]
         #pragma warning disable CS1591
-        NIPPON_EXPRESS_FTP,
+        NipponExpressFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOLS")]
         #pragma warning disable CS1591
-        GOLS,
+        Gols,
         #pragma warning restore CS1591
         [EnumMember(Value = "FUJEXP")]
         #pragma warning disable CS1591
-        FUJEXP,
+        Fujexp,
         #pragma warning restore CS1591
         [EnumMember(Value = "QTRACK")]
         #pragma warning disable CS1591
-        QTRACK,
+        Qtrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "OMLOGISTICS_API")]
         #pragma warning disable CS1591
-        OMLOGISTICS_API,
+        OmlogisticsApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "GDPHARM")]
         #pragma warning disable CS1591
-        GDPHARM,
+        Gdpharm,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISUMI_CN")]
         #pragma warning disable CS1591
-        MISUMI_CN,
+        MisumiCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIR_CANADA")]
         #pragma warning disable CS1591
-        AIR_CANADA,
+        AirCanada,
         #pragma warning restore CS1591
         [EnumMember(Value = "CITY56_WEBHOOK")]
         #pragma warning disable CS1591
-        CITY56_WEBHOOK,
+        City56Webhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "SAGAWA_API")]
         #pragma warning disable CS1591
-        SAGAWA_API,
+        SagawaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "KEDAEX")]
         #pragma warning disable CS1591
-        KEDAEX,
+        Kedaex,
         #pragma warning restore CS1591
         [EnumMember(Value = "PGEON_API")]
         #pragma warning disable CS1591
-        PGEON_API,
+        PgeonApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEWORLDEXPRESS")]
         #pragma warning disable CS1591
-        WEWORLDEXPRESS,
+        Weworldexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "JT_LOGISTICS")]
         #pragma warning disable CS1591
-        JT_LOGISTICS,
+        JtLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUSK")]
         #pragma warning disable CS1591
-        TRUSK,
+        Trusk,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIAXPRESS")]
         #pragma warning disable CS1591
-        VIAXPRESS,
+        Viaxpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SUPPLYCHAIN_ID")]
         #pragma warning disable CS1591
-        DHL_SUPPLYCHAIN_ID,
+        DhlSupplychainId,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZUELLIGPHARMA_SFTP")]
         #pragma warning disable CS1591
-        ZUELLIGPHARMA_SFTP,
+        ZuelligpharmaSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEEST")]
         #pragma warning disable CS1591
-        MEEST,
+        Meest,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL_PRIORITY")]
         #pragma warning disable CS1591
-        TOLL_PRIORITY,
+        TollPriority,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOTHERSHIP_API")]
         #pragma warning disable CS1591
-        MOTHERSHIP_API,
+        MothershipApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAPITAL")]
         #pragma warning disable CS1591
-        CAPITAL,
+        Capital,
         #pragma warning restore CS1591
         [EnumMember(Value = "EUROPAKET_API")]
         #pragma warning disable CS1591
-        EUROPAKET_API,
+        EuropaketApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "HFD")]
         #pragma warning disable CS1591
-        HFD,
+        Hfd,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOURLINE_REFERENCE")]
         #pragma warning disable CS1591
-        TOURLINE_REFERENCE,
+        TourlineReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "GIO_ECOURIER")]
         #pragma warning disable CS1591
-        GIO_ECOURIER,
+        GioEcourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_LOGISTICS")]
         #pragma warning disable CS1591
-        CN_LOGISTICS,
+        CnLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANDION")]
         #pragma warning disable CS1591
-        PANDION,
+        Pandion,
         #pragma warning restore CS1591
         [EnumMember(Value = "BPOST_API")]
         #pragma warning disable CS1591
-        BPOST_API,
+        BpostApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "PASSPORTSHIPPING")]
         #pragma warning disable CS1591
-        PASSPORTSHIPPING,
+        Passportshipping,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAKAJO")]
         #pragma warning disable CS1591
-        PAKAJO,
+        Pakajo,
         #pragma warning restore CS1591
         [EnumMember(Value = "DACHSER")]
         #pragma warning disable CS1591
-        DACHSER,
+        Dachser,
         #pragma warning restore CS1591
         [EnumMember(Value = "YUSEN_SFTP")]
         #pragma warning disable CS1591
-        YUSEN_SFTP,
+        YusenSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHYPLITE")]
         #pragma warning disable CS1591
-        SHYPLITE,
+        Shyplite,
         #pragma warning restore CS1591
         [EnumMember(Value = "XYY")]
         #pragma warning disable CS1591
-        XYY,
+        Xyy,
         #pragma warning restore CS1591
         [EnumMember(Value = "MWD")]
         #pragma warning disable CS1591
-        MWD,
+        Mwd,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAXECARGO")]
         #pragma warning disable CS1591
-        FAXECARGO,
+        Faxecargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAZET")]
         #pragma warning disable CS1591
-        MAZET,
+        Mazet,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIRST_LOGISTICS_API")]
         #pragma warning disable CS1591
-        FIRST_LOGISTICS_API,
+        FirstLogisticsApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPRINT_PACK")]
         #pragma warning disable CS1591
-        SPRINT_PACK,
+        SprintPack,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES_DE_FTP")]
         #pragma warning disable CS1591
-        HERMES_DE_FTP,
+        HermesDeFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONCISE")]
         #pragma warning disable CS1591
-        CONCISE,
+        Concise,
         #pragma warning restore CS1591
         [EnumMember(Value = "KERRY_EXPRESS_TW_API")]
         #pragma warning disable CS1591
-        KERRY_EXPRESS_TW_API,
+        KerryExpressTwApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "EWE")]
         #pragma warning disable CS1591
-        EWE,
+        Ewe,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTDESPATCH")]
         #pragma warning disable CS1591
-        FASTDESPATCH,
+        Fastdespatch,
         #pragma warning restore CS1591
         [EnumMember(Value = "ABCUSTOM_SFTP")]
         #pragma warning disable CS1591
-        ABCUSTOM_SFTP,
+        AbcustomSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHAZKI")]
         #pragma warning disable CS1591
-        CHAZKI,
+        Chazki,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPIE")]
         #pragma warning disable CS1591
-        SHIPPIE,
+        Shippie,
         #pragma warning restore CS1591
         [EnumMember(Value = "GEODIS_API")]
         #pragma warning disable CS1591
-        GEODIS_API,
+        GeodisApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "NAQEL_EXPRESS")]
         #pragma warning disable CS1591
-        NAQEL_EXPRESS,
+        NaqelExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAPA_WEBHOOK")]
         #pragma warning disable CS1591
-        PAPA_WEBHOOK,
+        PapaWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "FORWARDAIR")]
         #pragma warning disable CS1591
-        FORWARDAIR,
+        Forwardair,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIALOGO_LOGISTICA_API")]
         #pragma warning disable CS1591
-        DIALOGO_LOGISTICA_API,
+        DialogoLogisticaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "LALAMOVE_API")]
         #pragma warning disable CS1591
-        LALAMOVE_API,
+        LalamoveApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOMYDOOR")]
         #pragma warning disable CS1591
-        TOMYDOOR,
+        Tomydoor,
         #pragma warning restore CS1591
         [EnumMember(Value = "KRONOS_WEBHOOK")]
         #pragma warning disable CS1591
-        KRONOS_WEBHOOK,
+        KronosWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "JTCARGO")]
         #pragma warning disable CS1591
-        JTCARGO,
+        Jtcargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "T_CAT")]
         #pragma warning disable CS1591
-        T_CAT,
+        TCat,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONCISE_WEBHOOK")]
         #pragma warning disable CS1591
-        CONCISE_WEBHOOK,
+        ConciseWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "TELEPORT_WEBHOOK")]
         #pragma warning disable CS1591
-        TELEPORT_WEBHOOK,
+        TeleportWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "CUSTOMCO_API")]
         #pragma warning disable CS1591
-        CUSTOMCO_API,
+        CustomcoApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPX_TH")]
         #pragma warning disable CS1591
-        SPX_TH,
+        SpxTh,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOLLORE_LOGISTICS")]
         #pragma warning disable CS1591
-        BOLLORE_LOGISTICS,
+        BolloreLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLICKLINK_SFTP")]
         #pragma warning disable CS1591
-        CLICKLINK_SFTP,
+        ClicklinkSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "M3LOGISTICS")]
         #pragma warning disable CS1591
-        M3LOGISTICS,
+        M3Logistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "VNPOST_API")]
         #pragma warning disable CS1591
-        VNPOST_API,
+        VnpostApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "AXLEHIRE_FTP")]
         #pragma warning disable CS1591
-        AXLEHIRE_FTP,
+        AxlehireFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHADOWFAX")]
         #pragma warning disable CS1591
-        SHADOWFAX,
+        Shadowfax,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYHERMES_UK_API")]
         #pragma warning disable CS1591
-        MYHERMES_UK_API,
+        MyhermesUkApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAIICHI")]
         #pragma warning disable CS1591
-        DAIICHI,
+        Daiichi,
         #pragma warning restore CS1591
         [EnumMember(Value = "MENSAJEROSURBANOS_API")]
         #pragma warning disable CS1591
-        MENSAJEROSURBANOS_API,
+        MensajerosurbanosApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "POLARSPEED")]
         #pragma warning disable CS1591
-        POLARSPEED,
+        Polarspeed,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDEXPRESS_ID")]
         #pragma warning disable CS1591
-        IDEXPRESS_ID,
+        IdexpressId,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYO")]
         #pragma warning disable CS1591
-        PAYO,
+        Payo,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHISTL_SFTP")]
         #pragma warning disable CS1591
-        WHISTL_SFTP,
+        WhistlSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTEX_DE")]
         #pragma warning disable CS1591
-        INTEX_DE,
+        IntexDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANS2U")]
         #pragma warning disable CS1591
-        TRANS2U,
+        Trans2U,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRODUCTCAREGROUP_SFTP")]
         #pragma warning disable CS1591
-        PRODUCTCAREGROUP_SFTP,
+        ProductcaregroupSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "BIGSMART")]
         #pragma warning disable CS1591
-        BIGSMART,
+        Bigsmart,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPEDITORS_API_REF")]
         #pragma warning disable CS1591
-        EXPEDITORS_API_REF,
+        ExpeditorsApiRef,
         #pragma warning restore CS1591
         [EnumMember(Value = "AITWORLDWIDE_API")]
         #pragma warning disable CS1591
-        AITWORLDWIDE_API,
+        AitworldwideApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WORLDCOURIER")]
         #pragma warning disable CS1591
-        WORLDCOURIER,
+        Worldcourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "QUIQUP")]
         #pragma warning disable CS1591
-        QUIQUP,
+        Quiqup,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGEDISS_SFTP")]
         #pragma warning disable CS1591
-        AGEDISS_SFTP,
+        AgedissSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANDREANI_API")]
         #pragma warning disable CS1591
-        ANDREANI_API,
+        AndreaniApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CRLEXPRESS")]
         #pragma warning disable CS1591
-        CRLEXPRESS,
+        Crlexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMARTCAT")]
         #pragma warning disable CS1591
-        SMARTCAT,
+        Smartcat,
         #pragma warning restore CS1591
         [EnumMember(Value = "CROSSFLIGHT")]
         #pragma warning disable CS1591
-        CROSSFLIGHT,
+        Crossflight,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROCARRIER")]
         #pragma warning disable CS1591
-        PROCARRIER,
+        Procarrier,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_REFERENCE_API")]
         #pragma warning disable CS1591
-        DHL_REFERENCE_API,
+        DhlReferenceApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEINO_API")]
         #pragma warning disable CS1591
-        SEINO_API,
+        SeinoApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WSPEXPRESS")]
         #pragma warning disable CS1591
-        WSPEXPRESS,
+        Wspexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "KRONOS")]
         #pragma warning disable CS1591
-        KRONOS,
+        Kronos,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOTAL_EXPRESS_API")]
         #pragma warning disable CS1591
-        TOTAL_EXPRESS_API,
+        TotalExpressApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCLL")]
         #pragma warning disable CS1591
-        PARCLL,
+        Parcll,
         #pragma warning restore CS1591
         [EnumMember(Value = "XPEDIGO")]
         #pragma warning disable CS1591
-        XPEDIGO,
+        Xpedigo,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAR_TRACK_WEBHOOK")]
         #pragma warning disable CS1591
-        STAR_TRACK_WEBHOOK,
+        StarTrackWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "GPOST")]
         #pragma warning disable CS1591
-        GPOST,
+        Gpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "UCS")]
         #pragma warning disable CS1591
-        UCS,
+        Ucs,
         #pragma warning restore CS1591
         [EnumMember(Value = "DMFGROUP")]
         #pragma warning disable CS1591
-        DMFGROUP,
+        Dmfgroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "COORDINADORA_API")]
         #pragma warning disable CS1591
-        COORDINADORA_API,
+        CoordinadoraApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "MARKEN")]
         #pragma warning disable CS1591
-        MARKEN,
+        Marken,
         #pragma warning restore CS1591
         [EnumMember(Value = "NTL")]
         #pragma warning disable CS1591
-        NTL,
+        Ntl,
         #pragma warning restore CS1591
         [EnumMember(Value = "REDJEPAKKETJE")]
         #pragma warning disable CS1591
-        REDJEPAKKETJE,
+        Redjepakketje,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALLIED_EXPRESS_FTP")]
         #pragma warning disable CS1591
-        ALLIED_EXPRESS_FTP,
+        AlliedExpressFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MONDIALRELAY_ES")]
         #pragma warning disable CS1591
-        MONDIALRELAY_ES,
+        MondialrelayEs,
         #pragma warning restore CS1591
         [EnumMember(Value = "NAEKO_FTP")]
         #pragma warning disable CS1591
-        NAEKO_FTP,
+        NaekoFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MHI")]
         #pragma warning disable CS1591
-        MHI,
+        Mhi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPIFY")]
         #pragma warning disable CS1591
-        SHIPPIFY,
+        Shippify,
         #pragma warning restore CS1591
         [EnumMember(Value = "MALCA_AMIT_API")]
         #pragma warning disable CS1591
-        MALCA_AMIT_API,
+        MalcaAmitApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "JTEXPRESS_SG_API")]
         #pragma warning disable CS1591
-        JTEXPRESS_SG_API,
+        JtexpressSgApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DACHSER_WEB")]
         #pragma warning disable CS1591
-        DACHSER_WEB,
+        DachserWeb,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLIGHTLG")]
         #pragma warning disable CS1591
-        FLIGHTLG,
+        Flightlg,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAGO")]
         #pragma warning disable CS1591
-        CAGO,
+        Cago,
         #pragma warning restore CS1591
         [EnumMember(Value = "COM1EXPRESS")]
         #pragma warning disable CS1591
-        COM1EXPRESS,
+        Com1Express,
         #pragma warning restore CS1591
         [EnumMember(Value = "TONAMI_FTP")]
         #pragma warning disable CS1591
-        TONAMI_FTP,
+        TonamiFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACKFLEET")]
         #pragma warning disable CS1591
-        PACKFLEET,
+        Packfleet,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUROLATOR_INTERNATIONAL")]
         #pragma warning disable CS1591
-        PUROLATOR_INTERNATIONAL,
+        PurolatorInternational,
         #pragma warning restore CS1591
         [EnumMember(Value = "WINESHIPPING_WEBHOOK")]
         #pragma warning disable CS1591
-        WINESHIPPING_WEBHOOK,
+        WineshippingWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_ES_SFTP")]
         #pragma warning disable CS1591
-        DHL_ES_SFTP,
+        DhlEsSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PCHOME_API")]
         #pragma warning disable CS1591
-        PCHOME_API,
+        PchomeApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CESKAPOSTA_API")]
         #pragma warning disable CS1591
-        CESKAPOSTA_API,
+        CeskapostaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "GORUSH")]
         #pragma warning disable CS1591
-        GORUSH,
+        Gorush,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOMERUNNER")]
         #pragma warning disable CS1591
-        HOMERUNNER,
+        Homerunner,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_ORDER")]
         #pragma warning disable CS1591
-        AMAZON_ORDER,
+        AmazonOrder,
         #pragma warning restore CS1591
         [EnumMember(Value = "EFWNOW_API")]
         #pragma warning disable CS1591
-        EFWNOW_API,
+        EfwnowApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CBL_LOGISTICA_API")]
         #pragma warning disable CS1591
-        CBL_LOGISTICA_API,
+        CblLogisticaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIMBUSPOST")]
         #pragma warning disable CS1591
-        NIMBUSPOST,
+        Nimbuspost,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGWIN_LOGISTICS")]
         #pragma warning disable CS1591
-        LOGWIN_LOGISTICS,
+        LogwinLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOWLOG_API")]
         #pragma warning disable CS1591
-        NOWLOG_API,
+        NowlogApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_NL")]
         #pragma warning disable CS1591
-        DPD_NL,
+        DpdNl,
         #pragma warning restore CS1591
         [EnumMember(Value = "GODEPENDABLE")]
         #pragma warning disable CS1591
-        GODEPENDABLE,
+        Godependable,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESDEX")]
         #pragma warning disable CS1591
-        ESDEX,
+        Esdex,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGISYSTEMS_SFTP")]
         #pragma warning disable CS1591
-        LOGISYSTEMS_SFTP,
+        LogisystemsSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPEDITORS")]
         #pragma warning disable CS1591
-        EXPEDITORS,
+        Expeditors,
         #pragma warning restore CS1591
         [EnumMember(Value = "SNTGLOBAL_API")]
         #pragma warning disable CS1591
-        SNTGLOBAL_API,
+        SntglobalApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPX")]
         #pragma warning disable CS1591
-        SHIPX,
+        Shipx,
         #pragma warning restore CS1591
         [EnumMember(Value = "QINTL_API")]
         #pragma warning disable CS1591
-        QINTL_API,
+        QintlApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACKS")]
         #pragma warning disable CS1591
-        PACKS,
+        Packs,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTNL_INTERNATIONAL")]
         #pragma warning disable CS1591
-        POSTNL_INTERNATIONAL,
+        PostnlInternational,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_EMAIL_PUSH")]
         #pragma warning disable CS1591
-        AMAZON_EMAIL_PUSH,
+        AmazonEmailPush,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_API")]
         #pragma warning disable CS1591
-        DHL_API,
+        DhlApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPX")]
         #pragma warning disable CS1591
-        SPX,
+        Spx,
         #pragma warning restore CS1591
         [EnumMember(Value = "AXLEHIRE")]
         #pragma warning disable CS1591
-        AXLEHIRE,
+        Axlehire,
         #pragma warning restore CS1591
         [EnumMember(Value = "ICSCOURIER")]
         #pragma warning disable CS1591
-        ICSCOURIER,
+        Icscourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIALOGO_LOGISTICA")]
         #pragma warning disable CS1591
-        DIALOGO_LOGISTICA,
+        DialogoLogistica,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHUNBANG_EXPRESS")]
         #pragma warning disable CS1591
-        SHUNBANG_EXPRESS,
+        ShunbangExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TCS_API")]
         #pragma warning disable CS1591
-        TCS_API,
+        TcsApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SF_EXPRESS_CN")]
         #pragma warning disable CS1591
-        SF_EXPRESS_CN,
+        SfExpressCn,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACKETA")]
         #pragma warning disable CS1591
-        PACKETA,
+        Packeta,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIC_TELIWAY")]
         #pragma warning disable CS1591
-        SIC_TELIWAY,
+        SicTeliway,
         #pragma warning restore CS1591
         [EnumMember(Value = "MONDIALRELAY_FR")]
         #pragma warning disable CS1591
-        MONDIALRELAY_FR,
+        MondialrelayFr,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTIME_FTP")]
         #pragma warning disable CS1591
-        INTIME_FTP,
+        IntimeFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "JD_EXPRESS")]
         #pragma warning disable CS1591
-        JD_EXPRESS,
+        JdExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTBOX")]
         #pragma warning disable CS1591
-        FASTBOX,
+        Fastbox,
         #pragma warning restore CS1591
         [EnumMember(Value = "PATHEON")]
         #pragma warning disable CS1591
-        PATHEON,
+        Patheon,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDIA_POST")]
         #pragma warning disable CS1591
-        INDIA_POST,
+        IndiaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIPSA_REF")]
         #pragma warning disable CS1591
-        TIPSA_REF,
+        TipsaRef,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOFREIGHT")]
         #pragma warning disable CS1591
-        ECOFREIGHT,
+        Ecofreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOX")]
         #pragma warning disable CS1591
-        VOX,
+        Vox,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRECTFREIGHT_AU_REF")]
         #pragma warning disable CS1591
-        DIRECTFREIGHT_AU_REF,
+        DirectfreightAuRef,
         #pragma warning restore CS1591
         [EnumMember(Value = "BESTTRANSPORT_SFTP")]
         #pragma warning disable CS1591
-        BESTTRANSPORT_SFTP,
+        BesttransportSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUSTRALIA_POST_API")]
         #pragma warning disable CS1591
-        AUSTRALIA_POST_API,
+        AustraliaPostApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "FRAGILEPAK_SFTP")]
         #pragma warning disable CS1591
-        FRAGILEPAK_SFTP,
+        FragilepakSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLIPXP")]
         #pragma warning disable CS1591
-        FLIPXP,
+        Flipxp,
         #pragma warning restore CS1591
         [EnumMember(Value = "VALUE_WEBHOOK")]
         #pragma warning disable CS1591
-        VALUE_WEBHOOK,
+        ValueWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAESHIN")]
         #pragma warning disable CS1591
-        DAESHIN,
+        Daeshin,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHERPA")]
         #pragma warning disable CS1591
-        SHERPA,
+        Sherpa,
         #pragma warning restore CS1591
         [EnumMember(Value = "MWD_API")]
         #pragma warning disable CS1591
-        MWD_API,
+        MwdApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMARTKARGO")]
         #pragma warning disable CS1591
-        SMARTKARGO,
+        Smartkargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "DNJ_EXPRESS")]
         #pragma warning disable CS1591
-        DNJ_EXPRESS,
+        DnjExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOPEOPLE")]
         #pragma warning disable CS1591
-        GOPEOPLE,
+        Gopeople,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYSENDLE_API")]
         #pragma warning disable CS1591
-        MYSENDLE_API,
+        MysendleApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARAMEX_API")]
         #pragma warning disable CS1591
-        ARAMEX_API,
+        AramexApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "PIDGE")]
         #pragma warning disable CS1591
-        PIDGE,
+        Pidge,
         #pragma warning restore CS1591
         [EnumMember(Value = "THAIPARCELS")]
         #pragma warning disable CS1591
-        THAIPARCELS,
+        Thaiparcels,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANTHER_REFERENCE_API")]
         #pragma warning disable CS1591
-        PANTHER_REFERENCE_API,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "POSTAPLUS")]
-        #pragma warning disable CS1591
-        POSTAPLUS,
+        PantherReferenceApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUFFALO")]
         #pragma warning disable CS1591
-        BUFFALO,
+        Buffalo,
         #pragma warning restore CS1591
         [EnumMember(Value = "U_ENVIOS")]
         #pragma warning disable CS1591
-        U_ENVIOS,
+        UEnvios,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELITE_CO")]
         #pragma warning disable CS1591
-        ELITE_CO,
+        EliteCo,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROCHE_INTERNAL_SFTP")]
         #pragma warning disable CS1591
-        ROCHE_INTERNAL_SFTP,
+        RocheInternalSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DBSCHENKER_ICELAND")]
         #pragma warning disable CS1591
-        DBSCHENKER_ICELAND,
+        DbschenkerIceland,
         #pragma warning restore CS1591
         [EnumMember(Value = "TNT_FR_REFERENCE")]
         #pragma warning disable CS1591
-        TNT_FR_REFERENCE,
+        TntFrReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "NEWGISTICSAPI")]
         #pragma warning disable CS1591
-        NEWGISTICSAPI,
+        Newgisticsapi,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLOVO")]
         #pragma warning disable CS1591
-        GLOVO,
+        Glovo,
         #pragma warning restore CS1591
         [EnumMember(Value = "GWLOGIS_API")]
         #pragma warning disable CS1591
-        GWLOGIS_API,
+        GwlogisApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPREETAIL_API")]
         #pragma warning disable CS1591
-        SPREETAIL_API,
+        SpreetailApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOOVA")]
         #pragma warning disable CS1591
-        MOOVA,
+        Moova,
         #pragma warning restore CS1591
         [EnumMember(Value = "PLYCONGROUP")]
         #pragma warning disable CS1591
-        PLYCONGROUP,
+        Plycongroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "USPS_WEBHOOK")]
         #pragma warning disable CS1591
-        USPS_WEBHOOK,
+        UspsWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "REIMAGINEDELIVERY")]
         #pragma warning disable CS1591
-        REIMAGINEDELIVERY,
+        Reimaginedelivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "EDF_FTP")]
         #pragma warning disable CS1591
-        EDF_FTP,
+        EdfFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAO365")]
         #pragma warning disable CS1591
-        DAO365,
+        Dao365,
         #pragma warning restore CS1591
         [EnumMember(Value = "BIOCAIR_FTP")]
         #pragma warning disable CS1591
-        BIOCAIR_FTP,
+        BiocairFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "RANSA_WEBHOOK")]
         #pragma warning disable CS1591
-        RANSA_WEBHOOK,
+        RansaWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPXPRES")]
         #pragma warning disable CS1591
-        SHIPXPRES,
+        Shipxpres,
         #pragma warning restore CS1591
         [EnumMember(Value = "COURANT_PLUS_API")]
         #pragma warning disable CS1591
-        COURANT_PLUS_API,
+        CourantPlusApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPA")]
         #pragma warning disable CS1591
-        SHIPA,
+        Shipa,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOMELOGISTICS")]
         #pragma warning disable CS1591
-        HOMELOGISTICS,
+        Homelogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "DX")]
         #pragma warning disable CS1591
-        DX,
+        Dx,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTE_ITALIANE_PACCOCELERE")]
         #pragma warning disable CS1591
-        POSTE_ITALIANE_PACCOCELERE,
+        PosteItalianePaccocelere,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL_WEBHOOK")]
         #pragma warning disable CS1591
-        TOLL_WEBHOOK,
+        TollWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "LCTBR_API")]
         #pragma warning disable CS1591
-        LCTBR_API,
+        LctbrApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DX_FREIGHT")]
         #pragma warning disable CS1591
-        DX_FREIGHT,
+        DxFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SFTP")]
         #pragma warning disable CS1591
-        DHL_SFTP,
+        DhlSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPROCKET")]
         #pragma warning disable CS1591
-        SHIPROCKET,
+        Shiprocket,
         #pragma warning restore CS1591
         [EnumMember(Value = "UBER_WEBHOOK")]
         #pragma warning disable CS1591
-        UBER_WEBHOOK,
+        UberWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "STATOVERNIGHT")]
         #pragma warning disable CS1591
-        STATOVERNIGHT,
+        Statovernight,
         #pragma warning restore CS1591
         [EnumMember(Value = "BURD")]
         #pragma warning disable CS1591
-        BURD,
+        Burd,
         #pragma warning restore CS1591
         [EnumMember(Value = "FASTSHIP")]
         #pragma warning disable CS1591
-        FASTSHIP,
+        Fastship,
         #pragma warning restore CS1591
         [EnumMember(Value = "IBVENTURE_WEBHOOK")]
         #pragma warning disable CS1591
-        IBVENTURE_WEBHOOK,
+        IbventureWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "GATI_KWE_API")]
         #pragma warning disable CS1591
-        GATI_KWE_API,
+        GatiKweApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CRYOPDP_FTP")]
         #pragma warning disable CS1591
-        CRYOPDP_FTP,
+        CryopdpFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUBBED")]
         #pragma warning disable CS1591
-        HUBBED,
+        Hubbed,
         #pragma warning restore CS1591
         [EnumMember(Value = "TIPSA_API")]
         #pragma warning disable CS1591
-        TIPSA_API,
+        TipsaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARASKARGO")]
         #pragma warning disable CS1591
-        ARASKARGO,
+        Araskargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "THIJS_NL")]
         #pragma warning disable CS1591
-        THIJS_NL,
+        ThijsNl,
         #pragma warning restore CS1591
         [EnumMember(Value = "ATSHEALTHCARE_REFERENCE")]
         #pragma warning disable CS1591
-        ATSHEALTHCARE_REFERENCE,
+        AtshealthcareReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "99MINUTOS")]
         #pragma warning disable CS1591
-        NineNineMINUTOS,
+        Value99Minutos,
         #pragma warning restore CS1591
         [EnumMember(Value = "HELLENIC_POST")]
         #pragma warning disable CS1591
-        HELLENIC_POST,
+        HellenicPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "HSM_GLOBAL")]
         #pragma warning disable CS1591
-        HSM_GLOBAL,
+        HsmGlobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "MNX")]
         #pragma warning disable CS1591
-        MNX,
+        Mnx,
         #pragma warning restore CS1591
         [EnumMember(Value = "NMTRANSFER")]
         #pragma warning disable CS1591
-        NMTRANSFER,
+        Nmtransfer,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGYSTO")]
         #pragma warning disable CS1591
-        LOGYSTO,
+        Logysto,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDIA_POST_INT")]
         #pragma warning disable CS1591
-        INDIA_POST_INT,
+        IndiaPostInt,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMAZON_FBA_SWISHIP_IN")]
         #pragma warning disable CS1591
-        AMAZON_FBA_SWISHIP_IN,
+        AmazonFbaSwishipIn,
         #pragma warning restore CS1591
         [EnumMember(Value = "SRT_TRANSPORT")]
         #pragma warning disable CS1591
-        SRT_TRANSPORT,
+        SrtTransport,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOMI")]
         #pragma warning disable CS1591
-        BOMI,
+        Bomi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERR_SFTP")]
         #pragma warning disable CS1591
-        DELIVERR_SFTP,
+        DeliverrSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "HSDEXPRESS")]
         #pragma warning disable CS1591
-        HSDEXPRESS,
+        Hsdexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIMPLETIRE_WEBHOOK")]
         #pragma warning disable CS1591
-        SIMPLETIRE_WEBHOOK,
+        SimpletireWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUNTER_EXPRESS_SFTP")]
         #pragma warning disable CS1591
-        HUNTER_EXPRESS_SFTP,
+        HunterExpressSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS_API")]
         #pragma warning disable CS1591
-        UPS_API,
+        UpsApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WOOYOUNG_LOGISTICS_SFTP")]
         #pragma warning disable CS1591
-        WOOYOUNG_LOGISTICS_SFTP,
+        WooyoungLogisticsSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHSE_API")]
         #pragma warning disable CS1591
-        PHSE_API,
+        PhseApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WISH_EMAIL_PUSH")]
         #pragma warning disable CS1591
-        WISH_EMAIL_PUSH,
+        WishEmailPush,
         #pragma warning restore CS1591
         [EnumMember(Value = "NORTHLINE")]
         #pragma warning disable CS1591
-        NORTHLINE,
+        Northline,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDAFRICA")]
         #pragma warning disable CS1591
-        MEDAFRICA,
+        Medafrica,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_AT_SFTP")]
         #pragma warning disable CS1591
-        DPD_AT_SFTP,
+        DpdAtSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "ANTERAJA")]
         #pragma warning disable CS1591
-        ANTERAJA,
+        Anteraja,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_GLOBAL_FORWARDING_API")]
         #pragma warning disable CS1591
-        DHL_GLOBAL_FORWARDING_API,
+        DhlGlobalForwardingApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "LBCEXPRESS_API")]
         #pragma warning disable CS1591
-        LBCEXPRESS_API,
+        LbcexpressApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIMSGLOBAL")]
         #pragma warning disable CS1591
-        SIMSGLOBAL,
+        Simsglobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "CDLDELIVERS")]
         #pragma warning disable CS1591
-        CDLDELIVERS,
+        Cdldelivers,
         #pragma warning restore CS1591
         [EnumMember(Value = "TYP")]
         #pragma warning disable CS1591
-        TYP,
+        Typ,
         #pragma warning restore CS1591
         [EnumMember(Value = "TESTING_COURIER_WEBHOOK")]
         #pragma warning disable CS1591
-        TESTING_COURIER_WEBHOOK,
+        TestingCourierWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "PANDAGO_API")]
         #pragma warning disable CS1591
-        PANDAGO_API,
+        PandagoApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ROYAL_MAIL_FTP")]
         #pragma warning disable CS1591
-        ROYAL_MAIL_FTP,
+        RoyalMailFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "THUNDEREXPRESS")]
         #pragma warning disable CS1591
-        THUNDEREXPRESS,
+        Thunderexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SECRETLAB_WEBHOOK")]
         #pragma warning disable CS1591
-        SECRETLAB_WEBHOOK,
+        SecretlabWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "SETEL")]
         #pragma warning disable CS1591
-        SETEL,
+        Setel,
         #pragma warning restore CS1591
         [EnumMember(Value = "JD_WORLDWIDE")]
         #pragma warning disable CS1591
-        JD_WORLDWIDE,
+        JdWorldwide,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_RU_API")]
         #pragma warning disable CS1591
-        DPD_RU_API,
+        DpdRuApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARGENTS_WEBHOOK")]
         #pragma warning disable CS1591
-        ARGENTS_WEBHOOK,
+        ArgentsWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTONE")]
         #pragma warning disable CS1591
-        POSTONE,
+        Postone,
         #pragma warning restore CS1591
         [EnumMember(Value = "TUSKLOGISTICS")]
         #pragma warning disable CS1591
-        TUSKLOGISTICS,
+        Tusklogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "RHENUS_UK_API")]
         #pragma warning disable CS1591
-        RHENUS_UK_API,
+        RhenusUkApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAQBIN_SG_API")]
         #pragma warning disable CS1591
-        TAQBIN_SG_API,
+        TaqbinSgApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "INNTRALOG_SFTP")]
         #pragma warning disable CS1591
-        INNTRALOG_SFTP,
+        InntralogSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAYROSS")]
         #pragma warning disable CS1591
-        DAYROSS,
+        Dayross,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORREOSEXPRESS_API")]
         #pragma warning disable CS1591
-        CORREOSEXPRESS_API,
+        CorreosexpressApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERNATIONAL_SEUR_API")]
         #pragma warning disable CS1591
-        INTERNATIONAL_SEUR_API,
+        InternationalSeurApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "YODEL_API")]
         #pragma warning disable CS1591
-        YODEL_API,
+        YodelApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEROEXPRESS")]
         #pragma warning disable CS1591
-        HEROEXPRESS,
+        Heroexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_SUPPLYCHAIN_IN")]
         #pragma warning disable CS1591
-        DHL_SUPPLYCHAIN_IN,
+        DhlSupplychainIn,
         #pragma warning restore CS1591
         [EnumMember(Value = "URGENT_CARGUS")]
         #pragma warning disable CS1591
-        URGENT_CARGUS,
+        UrgentCargus,
         #pragma warning restore CS1591
         [EnumMember(Value = "FRONTDOORCORP")]
         #pragma warning disable CS1591
-        FRONTDOORCORP,
+        Frontdoorcorp,
         #pragma warning restore CS1591
         [EnumMember(Value = "JTEXPRESS_PH")]
         #pragma warning disable CS1591
-        JTEXPRESS_PH,
+        JtexpressPh,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELSTARS_WEBHOOK")]
         #pragma warning disable CS1591
-        PARCELSTARS_WEBHOOK,
+        ParcelstarsWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_SK_SFTP")]
         #pragma warning disable CS1591
-        DPD_SK_SFTP,
+        DpdSkSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOVIANTO")]
         #pragma warning disable CS1591
-        MOVIANTO,
+        Movianto,
         #pragma warning restore CS1591
         [EnumMember(Value = "OZEPARTS_SHIPPING")]
         #pragma warning disable CS1591
-        OZEPARTS_SHIPPING,
+        OzepartsShipping,
         #pragma warning restore CS1591
         [EnumMember(Value = "KARGOMKOLAY")]
         #pragma warning disable CS1591
-        KARGOMKOLAY,
+        Kargomkolay,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUNKRS")]
         #pragma warning disable CS1591
-        TRUNKRS,
+        Trunkrs,
         #pragma warning restore CS1591
         [EnumMember(Value = "OMNIRPS_WEBHOOK")]
         #pragma warning disable CS1591
-        OMNIRPS_WEBHOOK,
+        OmnirpsWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHILEXPRESS")]
         #pragma warning disable CS1591
-        CHILEXPRESS,
+        Chilexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TESTING_COURIER")]
         #pragma warning disable CS1591
-        TESTING_COURIER,
+        TestingCourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "JNE_API")]
         #pragma warning disable CS1591
-        JNE_API,
+        JneApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "BJSHOMEDELIVERY_FTP")]
         #pragma warning disable CS1591
-        BJSHOMEDELIVERY_FTP,
+        BjshomedeliveryFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEXPRESS_WEBHOOK")]
         #pragma warning disable CS1591
-        DEXPRESS_WEBHOOK,
+        DexpressWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "USPS_API")]
         #pragma warning disable CS1591
-        USPS_API,
+        UspsApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSVIRTUAL")]
         #pragma warning disable CS1591
-        TRANSVIRTUAL,
+        Transvirtual,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOLISTICA_API")]
         #pragma warning disable CS1591
-        SOLISTICA_API,
+        SolisticaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHIENVENTURE_WEBHOOK")]
         #pragma warning disable CS1591
-        CHIENVENTURE_WEBHOOK,
+        ChienventureWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_UK_SFTP")]
         #pragma warning disable CS1591
-        DPD_UK_SFTP,
+        DpdUkSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "INPOST_UK")]
         #pragma warning disable CS1591
-        INPOST_UK,
+        InpostUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "JAVIT")]
         #pragma warning disable CS1591
-        JAVIT,
+        Javit,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZTO_DOMESTIC")]
         #pragma warning disable CS1591
-        ZTO_DOMESTIC,
+        ZtoDomestic,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_GT_API")]
         #pragma warning disable CS1591
-        DHL_GT_API,
+        DhlGtApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "CEVA_TRACKING")]
         #pragma warning disable CS1591
-        CEVA_TRACKING,
+        CevaTracking,
         #pragma warning restore CS1591
         [EnumMember(Value = "KOMON_EXPRESS")]
         #pragma warning disable CS1591
-        KOMON_EXPRESS,
+        KomonExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "EASTWESTCOURIER_FTP")]
         #pragma warning disable CS1591
-        EASTWESTCOURIER_FTP,
+        EastwestcourierFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DANNIAO")]
         #pragma warning disable CS1591
-        DANNIAO,
+        Danniao,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPECTRAN")]
         #pragma warning disable CS1591
-        SPECTRAN,
+        Spectran,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVER_IT")]
         #pragma warning disable CS1591
-        DELIVER_IT,
+        DeliverIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "RELAISCOLIS")]
         #pragma warning disable CS1591
-        RELAISCOLIS,
+        Relaiscolis,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_SPAIN_API")]
         #pragma warning disable CS1591
-        GLS_SPAIN_API,
+        GlsSpainApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTPLUS")]
         #pragma warning disable CS1591
-        POSTPLUS,
+        Postplus,
         #pragma warning restore CS1591
         [EnumMember(Value = "AIRTERRA")]
         #pragma warning disable CS1591
-        AIRTERRA,
+        Airterra,
         #pragma warning restore CS1591
         [EnumMember(Value = "GIO_ECOURIER_API")]
         #pragma warning disable CS1591
-        GIO_ECOURIER_API,
+        GioEcourierApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_CH_SFTP")]
         #pragma warning disable CS1591
-        DPD_CH_SFTP,
+        DpdChSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_API")]
         #pragma warning disable CS1591
-        FEDEX_API,
+        FedexApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTERSMARTTRANS")]
         #pragma warning disable CS1591
-        INTERSMARTTRANS,
+        Intersmarttrans,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES_UK_SFTP")]
         #pragma warning disable CS1591
-        HERMES_UK_SFTP,
+        HermesUkSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXELOT_FTP")]
         #pragma warning disable CS1591
-        EXELOT_FTP,
+        ExelotFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_PA_API")]
         #pragma warning disable CS1591
-        DHL_PA_API,
+        DhlPaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIRTRANSPORT_SFTP")]
         #pragma warning disable CS1591
-        VIRTRANSPORT_SFTP,
+        VirtransportSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "WORLDNET")]
         #pragma warning disable CS1591
-        WORLDNET,
+        Worldnet,
         #pragma warning restore CS1591
         [EnumMember(Value = "INSTABOX_WEBHOOK")]
         #pragma warning disable CS1591
-        INSTABOX_WEBHOOK,
+        InstaboxWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "KNG")]
         #pragma warning disable CS1591
-        KNG,
+        Kng,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLASHEXPRESS_WEBHOOK")]
         #pragma warning disable CS1591
-        FLASHEXPRESS_WEBHOOK,
+        FlashexpressWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAGYAR_POSTA_API")]
         #pragma warning disable CS1591
-        MAGYAR_POSTA_API,
+        MagyarPostaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "WESHIP_API")]
         #pragma warning disable CS1591
-        WESHIP_API,
+        WeshipApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "OHI_WEBHOOK")]
         #pragma warning disable CS1591
-        OHI_WEBHOOK,
+        OhiWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "MUDITA")]
         #pragma warning disable CS1591
-        MUDITA,
+        Mudita,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLUEDART_API")]
         #pragma warning disable CS1591
-        BLUEDART_API,
+        BluedartApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "T_CAT_API")]
         #pragma warning disable CS1591
-        T_CAT_API,
+        TCatApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADS")]
         #pragma warning disable CS1591
-        ADS,
+        Ads,
         #pragma warning restore CS1591
         [EnumMember(Value = "HERMES_IT")]
         #pragma warning disable CS1591
-        HERMES_IT,
+        HermesIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "FITZMARK_API")]
         #pragma warning disable CS1591
-        FITZMARK_API,
+        FitzmarkApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSTI_API")]
         #pragma warning disable CS1591
-        POSTI_API,
+        PostiApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMSA_EXPRESS_WEBHOOK")]
         #pragma warning disable CS1591
-        SMSA_EXPRESS_WEBHOOK,
+        SmsaExpressWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAMERGROUP_WEBHOOK")]
         #pragma warning disable CS1591
-        TAMERGROUP_WEBHOOK,
+        TamergroupWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIVRAPIDE")]
         #pragma warning disable CS1591
-        LIVRAPIDE,
+        Livrapide,
         #pragma warning restore CS1591
         [EnumMember(Value = "NIPPON_EXPRESS")]
         #pragma warning disable CS1591
-        NIPPON_EXPRESS,
+        NipponExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "BETTERTRUCKS")]
         #pragma warning disable CS1591
-        BETTERTRUCKS,
+        Bettertrucks,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAN")]
         #pragma warning disable CS1591
-        FAN,
+        Fan,
         #pragma warning restore CS1591
         [EnumMember(Value = "PB_USPSFLATS_FTP")]
         #pragma warning disable CS1591
-        PB_USPSFLATS_FTP,
+        PbUspsflatsFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELRIGHT")]
         #pragma warning disable CS1591
-        PARCELRIGHT,
+        Parcelright,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITHINKLOGISTICS")]
         #pragma warning disable CS1591
-        ITHINKLOGISTICS,
+        Ithinklogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "KERRY_EXPRESS_TH_WEBHOOK")]
         #pragma warning disable CS1591
-        KERRY_EXPRESS_TH_WEBHOOK,
+        KerryExpressThWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECOUTIER")]
         #pragma warning disable CS1591
-        ECOUTIER,
+        Ecoutier,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOWL")]
         #pragma warning disable CS1591
-        SHOWL,
+        Showl,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRT_IT_API")]
         #pragma warning disable CS1591
-        BRT_IT_API,
+        BrtItApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "RIXONHK_API")]
         #pragma warning disable CS1591
-        RIXONHK_API,
+        RixonhkApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "DBSCHENKER_API")]
         #pragma warning disable CS1591
-        DBSCHENKER_API,
+        DbschenkerApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ILYANGLOGIS")]
         #pragma warning disable CS1591
-        ILYANGLOGIS,
+        Ilyanglogis,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAIL_BOX_ETC")]
         #pragma warning disable CS1591
-        MAIL_BOX_ETC,
+        MailBoxEtc,
         #pragma warning restore CS1591
         [EnumMember(Value = "WESHIP")]
         #pragma warning disable CS1591
-        WESHIP,
+        Weship,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_GLOBAL_MAIL_API")]
         #pragma warning disable CS1591
-        DHL_GLOBAL_MAIL_API,
+        DhlGlobalMailApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACTIVOS24_API")]
         #pragma warning disable CS1591
-        ACTIVOS24_API,
+        Activos24Api,
         #pragma warning restore CS1591
         [EnumMember(Value = "ATSHEALTHCARE")]
         #pragma warning disable CS1591
-        ATSHEALTHCARE,
+        Atshealthcare,
         #pragma warning restore CS1591
         [EnumMember(Value = "LUWJISTIK")]
         #pragma warning disable CS1591
-        LUWJISTIK,
+        Luwjistik,
         #pragma warning restore CS1591
         [EnumMember(Value = "GW_WORLD")]
         #pragma warning disable CS1591
-        GW_WORLD,
+        GwWorld,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAIRSENDEN_API")]
         #pragma warning disable CS1591
-        FAIRSENDEN_API,
+        FairsendenApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVIP_WEBHOOK")]
         #pragma warning disable CS1591
-        SERVIP_WEBHOOK,
+        ServipWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISHIP")]
         #pragma warning disable CS1591
-        SWISHIP,
+        Swiship,
         #pragma warning restore CS1591
         [EnumMember(Value = "TANET")]
         #pragma warning disable CS1591
-        TANET,
+        Tanet,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOTSIN_CARGO")]
         #pragma warning disable CS1591
-        HOTSIN_CARGO,
+        HotsinCargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIREX")]
         #pragma warning disable CS1591
-        DIREX,
+        Direx,
         #pragma warning restore CS1591
         [EnumMember(Value = "HUANTONG")]
         #pragma warning disable CS1591
-        HUANTONG,
+        Huantong,
         #pragma warning restore CS1591
         [EnumMember(Value = "IMILE_API")]
         #pragma warning disable CS1591
-        IMILE_API,
+        ImileApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "AUEXPRESS")]
         #pragma warning disable CS1591
-        AUEXPRESS,
+        Auexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "NYTLOGISTICS")]
         #pragma warning disable CS1591
-        NYTLOGISTICS,
+        Nytlogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "DSV_REFERENCE")]
         #pragma warning disable CS1591
-        DSV_REFERENCE,
+        DsvReference,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOVOFARMA_WEBHOOK")]
         #pragma warning disable CS1591
-        NOVOFARMA_WEBHOOK,
+        NovofarmaWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "AITWORLDWIDE_SFTP")]
         #pragma warning disable CS1591
-        AITWORLDWIDE_SFTP,
+        AitworldwideSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOPOLIVE")]
         #pragma warning disable CS1591
-        SHOPOLIVE,
+        Shopolive,
         #pragma warning restore CS1591
         [EnumMember(Value = "FNF_ZA")]
         #pragma warning disable CS1591
-        FNF_ZA,
+        FnfZa,
         #pragma warning restore CS1591
         [EnumMember(Value = "DHL_ECOMMERCE_GC")]
         #pragma warning disable CS1591
-        DHL_ECOMMERCE_GC,
+        DhlEcommerceGc,
         #pragma warning restore CS1591
         [EnumMember(Value = "FETCHR")]
         #pragma warning disable CS1591
-        FETCHR,
+        Fetchr,
         #pragma warning restore CS1591
         [EnumMember(Value = "STARLINKS_API")]
         #pragma warning disable CS1591
-        STARLINKS_API,
+        StarlinksApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "YYEXPRESS")]
         #pragma warning disable CS1591
-        YYEXPRESS,
+        Yyexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVIENTREGA")]
         #pragma warning disable CS1591
-        SERVIENTREGA,
+        Servientrega,
         #pragma warning restore CS1591
         [EnumMember(Value = "HANJIN")]
         #pragma warning disable CS1591
-        HANJIN,
+        Hanjin,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPANISH_SEUR_FTP")]
         #pragma warning disable CS1591
-        SPANISH_SEUR_FTP,
+        SpanishSeurFtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "DX_B2B_CONNUM")]
         #pragma warning disable CS1591
-        DX_B2B_CONNUM,
+        DxB2BConnum,
         #pragma warning restore CS1591
         [EnumMember(Value = "HELTHJEM_API")]
         #pragma warning disable CS1591
-        HELTHJEM_API,
+        HelthjemApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "INEXPOST")]
         #pragma warning disable CS1591
-        INEXPOST,
+        Inexpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "A2B_BA")]
         #pragma warning disable CS1591
-        A2B_BA,
+        A2BBa,
         #pragma warning restore CS1591
         [EnumMember(Value = "RHENUS_GROUP")]
         #pragma warning disable CS1591
-        RHENUS_GROUP,
+        RhenusGroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "SBERLOGISTICS_RU")]
         #pragma warning disable CS1591
-        SBERLOGISTICS_RU,
+        SberlogisticsRu,
         #pragma warning restore CS1591
         [EnumMember(Value = "MALCA_AMIT")]
         #pragma warning disable CS1591
-        MALCA_AMIT,
+        MalcaAmit,
         #pragma warning restore CS1591
         [EnumMember(Value = "PPL")]
         #pragma warning disable CS1591
-        PPL,
+        Ppl,
         #pragma warning restore CS1591
         [EnumMember(Value = "OSM_WORLDWIDE_SFTP")]
         #pragma warning disable CS1591
-        OSM_WORLDWIDE_SFTP,
+        OsmWorldwideSftp,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACILOGISTIX")]
         #pragma warning disable CS1591
-        ACILOGISTIX,
+        Acilogistix,
         #pragma warning restore CS1591
         [EnumMember(Value = "OPTIMACOURIER")]
         #pragma warning disable CS1591
-        OPTIMACOURIER,
+        Optimacourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOVA_POSHTA_API")]
         #pragma warning disable CS1591
-        NOVA_POSHTA_API,
+        NovaPoshtaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGGI")]
         #pragma warning disable CS1591
-        LOGGI,
+        Loggi,
         #pragma warning restore CS1591
         [EnumMember(Value = "YIFAN")]
         #pragma warning disable CS1591
-        YIFAN,
+        Yifan,
         #pragma warning restore CS1591
         [EnumMember(Value = "MYDYNALOGIC")]
         #pragma warning disable CS1591
-        MYDYNALOGIC,
+        Mydynalogic,
         #pragma warning restore CS1591
         [EnumMember(Value = "MORNINGLOBAL")]
         #pragma warning disable CS1591
-        MORNINGLOBAL,
+        Morninglobal,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONCISE_API")]
         #pragma warning disable CS1591
-        CONCISE_API,
+        ConciseApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "FXTRAN")]
         #pragma warning disable CS1591
-        FXTRAN,
+        Fxtran,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERYOURPARCEL_ZA")]
         #pragma warning disable CS1591
-        DELIVERYOURPARCEL_ZA,
+        DeliveryourparcelZa,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPARCEL")]
         #pragma warning disable CS1591
-        UPARCEL,
+        Uparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBI_BR")]
         #pragma warning disable CS1591
-        MOBI_BR,
+        MobiBr,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGINEXT_WEBHOOK")]
         #pragma warning disable CS1591
-        LOGINEXT_WEBHOOK,
+        LoginextWebhook,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMS")]
         #pragma warning disable CS1591
-        EMS,
+        Ems,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDY")]
         #pragma warning disable CS1591
-        SPEEDY,
+        Speedy,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZOOM_RED")]
         #pragma warning disable CS1591
-        ZOOM_RED,
+        ZoomRed,
         #pragma warning restore CS1591
         [EnumMember(Value = "NAVLUNGO")]
         #pragma warning disable CS1591
-        NAVLUNGO,
+        Navlungo,
         #pragma warning restore CS1591
         [EnumMember(Value = "CASTLEPARCELS")]
         #pragma warning disable CS1591
-        CASTLEPARCELS,
+        Castleparcels,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEEE")]
         #pragma warning disable CS1591
-        WEEE,
+        Weee,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACKALY")]
         #pragma warning disable CS1591
-        PACKALY,
+        Packaly,
         #pragma warning restore CS1591
         [EnumMember(Value = "YUNHUIPOST")]
         #pragma warning disable CS1591
-        YUNHUIPOST,
+        Yunhuipost,
         #pragma warning restore CS1591
         [EnumMember(Value = "YOUPARCEL")]
         #pragma warning disable CS1591
-        YOUPARCEL,
+        Youparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "LEMAN")]
         #pragma warning disable CS1591
-        LEMAN,
+        Leman,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOOVIN")]
         #pragma warning disable CS1591
-        MOOVIN,
+        Moovin,
         #pragma warning restore CS1591
         [EnumMember(Value = "URB_IT")]
         #pragma warning disable CS1591
-        URB_IT,
+        UrbIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "MULTIENTREGAPANAMA")]
         #pragma warning disable CS1591
-        MULTIENTREGAPANAMA,
+        Multientregapanama,
         #pragma warning restore CS1591
         [EnumMember(Value = "JUSDASR")]
         #pragma warning disable CS1591
-        JUSDASR,
+        Jusdasr,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISCOUNTPOST")]
         #pragma warning disable CS1591
-        DISCOUNTPOST,
+        Discountpost,
         #pragma warning restore CS1591
         [EnumMember(Value = "RHENUS_UK")]
         #pragma warning disable CS1591
-        RHENUS_UK,
+        RhenusUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISHIP_JP")]
         #pragma warning disable CS1591
-        SWISHIP_JP,
+        SwishipJp,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_US")]
         #pragma warning disable CS1591
-        GLS_US,
+        GlsUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMTL")]
         #pragma warning disable CS1591
-        SMTL,
+        Smtl,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMEGA")]
         #pragma warning disable CS1591
-        EMEGA,
+        Emega,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPRESSONE_SV")]
         #pragma warning disable CS1591
-        EXPRESSONE_SV,
+        ExpressoneSv,
         #pragma warning restore CS1591
         [EnumMember(Value = "HEPSIJET")]
         #pragma warning disable CS1591
-        HEPSIJET,
+        Hepsijet,
         #pragma warning restore CS1591
         [EnumMember(Value = "WELIVERY")]
         #pragma warning disable CS1591
-        WELIVERY,
+        Welivery,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRINGER")]
         #pragma warning disable CS1591
-        BRINGER,
+        Bringer,
         #pragma warning restore CS1591
         [EnumMember(Value = "EASYROUTES")]
         #pragma warning disable CS1591
-        EASYROUTES,
+        Easyroutes,
         #pragma warning restore CS1591
         [EnumMember(Value = "MRW")]
         #pragma warning disable CS1591
-        MRW,
+        Mrw,
         #pragma warning restore CS1591
         [EnumMember(Value = "RPM")]
         #pragma warning disable CS1591
-        RPM,
+        Rpm,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_PRT")]
         #pragma warning disable CS1591
-        DPD_PRT,
+        DpdPrt,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_ROMANIA")]
         #pragma warning disable CS1591
-        GLS_ROMANIA,
+        GlsRomania,
         #pragma warning restore CS1591
         [EnumMember(Value = "LMPARCEL")]
         #pragma warning disable CS1591
-        LMPARCEL,
+        Lmparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "GTAGSM")]
         #pragma warning disable CS1591
-        GTAGSM,
+        Gtagsm,
         #pragma warning restore CS1591
         [EnumMember(Value = "DOMINO")]
         #pragma warning disable CS1591
-        DOMINO,
+        Domino,
         #pragma warning restore CS1591
         [EnumMember(Value = "ESHIPPER")]
         #pragma warning disable CS1591
-        ESHIPPER,
+        Eshipper,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSPAK")]
         #pragma warning disable CS1591
-        TRANSPAK,
+        Transpak,
         #pragma warning restore CS1591
         [EnumMember(Value = "XINDUS")]
         #pragma warning disable CS1591
-        XINDUS,
+        Xindus,
         #pragma warning restore CS1591
         [EnumMember(Value = "AOYUE")]
         #pragma warning disable CS1591
-        AOYUE,
+        Aoyue,
         #pragma warning restore CS1591
         [EnumMember(Value = "EASYPARCEL")]
         #pragma warning disable CS1591
-        EASYPARCEL,
+        Easyparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPRESSONE")]
         #pragma warning disable CS1591
-        EXPRESSONE,
+        Expressone,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDEO_KARGO")]
         #pragma warning disable CS1591
-        SENDEO_KARGO,
+        SendeoKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDAF")]
         #pragma warning disable CS1591
-        SPEEDAF,
+        Speedaf,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETOWER")]
         #pragma warning disable CS1591
-        ETOWER,
+        Etower,
         #pragma warning restore CS1591
         [EnumMember(Value = "GCX")]
         #pragma warning disable CS1591
-        GCX,
+        Gcx,
         #pragma warning restore CS1591
         [EnumMember(Value = "NINJAVAN_VN")]
         #pragma warning disable CS1591
-        NINJAVAN_VN,
+        NinjavanVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALLEGRO")]
         #pragma warning disable CS1591
-        ALLEGRO,
+        Allegro,
         #pragma warning restore CS1591
         [EnumMember(Value = "JUMPPOINT")]
         #pragma warning disable CS1591
-        JUMPPOINT,
+        Jumppoint,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPGLOBAL_US")]
         #pragma warning disable CS1591
-        SHIPGLOBAL_US,
+        ShipglobalUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "KINISI")]
         #pragma warning disable CS1591
-        KINISI,
+        Kinisi,
         #pragma warning restore CS1591
         [EnumMember(Value = "OAKH")]
         #pragma warning disable CS1591
-        OAKH,
+        Oakh,
         #pragma warning restore CS1591
         [EnumMember(Value = "AWEST")]
         #pragma warning disable CS1591
-        AWEST,
+        Awest,
         #pragma warning restore CS1591
         [EnumMember(Value = "BARSAN")]
         #pragma warning disable CS1591
-        BARSAN,
+        Barsan,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENERGOLOGISTIC")]
         #pragma warning disable CS1591
-        ENERGOLOGISTIC,
+        Energologistic,
         #pragma warning restore CS1591
         [EnumMember(Value = "MADROOEX")]
         #pragma warning disable CS1591
-        MADROOEX,
+        Madrooex,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOBOLT")]
         #pragma warning disable CS1591
-        GOBOLT,
+        Gobolt,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWISS_UNIVERSAL_EXPRESS")]
         #pragma warning disable CS1591
-        SWISS_UNIVERSAL_EXPRESS,
+        SwissUniversalExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "IORDIRECT")]
         #pragma warning disable CS1591
-        IORDIRECT,
+        Iordirect,
         #pragma warning restore CS1591
         [EnumMember(Value = "XMSZM")]
         #pragma warning disable CS1591
-        XMSZM,
+        Xmszm,
         #pragma warning restore CS1591
         [EnumMember(Value = "GLS_HUN")]
         #pragma warning disable CS1591
-        GLS_HUN,
+        GlsHun,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDY")]
         #pragma warning disable CS1591
-        SENDY,
+        Sendy,
         #pragma warning restore CS1591
         [EnumMember(Value = "BRAUNSEXPRESS")]
         #pragma warning disable CS1591
-        BRAUNSEXPRESS,
+        Braunsexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "GRANDSLAMEXPRESS")]
         #pragma warning disable CS1591
-        GRANDSLAMEXPRESS,
+        Grandslamexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "XGS")]
         #pragma warning disable CS1591
-        XGS,
+        Xgs,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTSCHILE")]
         #pragma warning disable CS1591
-        OTSCHILE,
+        Otschile,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACK_UP")]
         #pragma warning disable CS1591
-        PACK_UP,
+        PackUp,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELSTARS")]
         #pragma warning disable CS1591
-        PARCELSTARS,
+        Parcelstars,
         #pragma warning restore CS1591
         [EnumMember(Value = "TEAMEXPRESSLLC")]
         #pragma warning disable CS1591
-        TEAMEXPRESSLLC,
+        Teamexpressllc,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASYADEXPRESS")]
         #pragma warning disable CS1591
-        ASYADEXPRESS,
+        Asyadexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TDN")]
         #pragma warning disable CS1591
-        TDN,
+        Tdn,
         #pragma warning restore CS1591
         [EnumMember(Value = "EARLYBIRD")]
         #pragma warning disable CS1591
-        EARLYBIRD,
+        Earlybird,
         #pragma warning restore CS1591
         [EnumMember(Value = "CACESA")]
         #pragma warning disable CS1591
-        CACESA,
+        Cacesa,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARCELJET")]
         #pragma warning disable CS1591
-        PARCELJET,
+        Parceljet,
         #pragma warning restore CS1591
         [EnumMember(Value = "MNG_KARGO")]
         #pragma warning disable CS1591
-        MNG_KARGO,
+        MngKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUPERPACKLINE")]
         #pragma warning disable CS1591
-        SUPERPACKLINE,
+        Superpackline,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEEDX")]
         #pragma warning disable CS1591
-        SPEEDX,
+        Speedx,
         #pragma warning restore CS1591
         [EnumMember(Value = "VESYL")]
         #pragma warning disable CS1591
-        VESYL,
+        Vesyl,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYKING")]
         #pragma warning disable CS1591
-        SKYKING,
+        Skyking,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIRMENSAJERIA")]
         #pragma warning disable CS1591
-        DIRMENSAJERIA,
+        Dirmensajeria,
         #pragma warning restore CS1591
         [EnumMember(Value = "NETLOGIXGROUP")]
         #pragma warning disable CS1591
-        NETLOGIXGROUP,
+        Netlogixgroup,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZYOU")]
         #pragma warning disable CS1591
-        ZYOU,
+        Zyou,
         #pragma warning restore CS1591
         [EnumMember(Value = "JAWAR")]
         #pragma warning disable CS1591
-        JAWAR,
+        Jawar,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGSYSTEMS")]
         #pragma warning disable CS1591
-        AGSYSTEMS,
+        Agsystems,
         #pragma warning restore CS1591
         [EnumMember(Value = "GPS")]
         #pragma warning disable CS1591
-        GPS,
+        Gps,
         #pragma warning restore CS1591
         [EnumMember(Value = "PTT_KARGO")]
         #pragma warning disable CS1591
-        PTT_KARGO,
+        PttKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAERGO")]
         #pragma warning disable CS1591
-        MAERGO,
+        Maergo,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARIHANTCOURIER")]
         #pragma warning disable CS1591
-        ARIHANTCOURIER,
+        Arihantcourier,
         #pragma warning restore CS1591
         [EnumMember(Value = "VTFE")]
         #pragma warning disable CS1591
-        VTFE,
+        Vtfe,
         #pragma warning restore CS1591
         [EnumMember(Value = "YUNANT")]
         #pragma warning disable CS1591
-        YUNANT,
+        Yunant,
         #pragma warning restore CS1591
         [EnumMember(Value = "URBIFY")]
         #pragma warning disable CS1591
-        URBIFY,
+        Urbify,
         #pragma warning restore CS1591
         [EnumMember(Value = "PACK_MAN")]
         #pragma warning disable CS1591
-        PACK_MAN,
+        PackMan,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIEFERGRUN")]
         #pragma warning disable CS1591
-        LIEFERGRUN,
+        Liefergrun,
         #pragma warning restore CS1591
         [EnumMember(Value = "OBIBOX")]
         #pragma warning disable CS1591
-        OBIBOX,
+        Obibox,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAIKEDA")]
         #pragma warning disable CS1591
-        PAIKEDA,
+        Paikeda,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCOTTY")]
         #pragma warning disable CS1591
-        SCOTTY,
+        Scotty,
         #pragma warning restore CS1591
         [EnumMember(Value = "INTELCOM_CA")]
         #pragma warning disable CS1591
-        INTELCOM_CA,
+        IntelcomCa,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWE")]
         #pragma warning disable CS1591
-        SWE,
+        Swe,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASENDIA")]
         #pragma warning disable CS1591
-        ASENDIA,
+        Asendia,
         #pragma warning restore CS1591
         [EnumMember(Value = "DPD_AT")]
         #pragma warning disable CS1591
-        DPD_AT,
+        DpdAt,
         #pragma warning restore CS1591
         [EnumMember(Value = "RELAY")]
         #pragma warning disable CS1591
-        RELAY,
+        Relay,
         #pragma warning restore CS1591
         [EnumMember(Value = "ATA")]
         #pragma warning disable CS1591
-        ATA,
+        Ata,
         #pragma warning restore CS1591
         [EnumMember(Value = "SKYEXPRESS_INTERNATIONAL")]
         #pragma warning disable CS1591
-        SKYEXPRESS_INTERNATIONAL,
+        SkyexpressInternational,
         #pragma warning restore CS1591
         [EnumMember(Value = "SURAT_KARGO")]
         #pragma warning disable CS1591
-        SURAT_KARGO,
+        SuratKargo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SGLINK")]
         #pragma warning disable CS1591
-        SGLINK,
+        Sglink,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLEETOPTICSINC")]
         #pragma warning disable CS1591
-        FLEETOPTICSINC,
+        Fleetopticsinc,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHOPLINE")]
         #pragma warning disable CS1591
-        SHOPLINE,
+        Shopline,
         #pragma warning restore CS1591
         [EnumMember(Value = "PIGGYSHIP")]
         #pragma warning disable CS1591
-        PIGGYSHIP,
+        Piggyship,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOGOIX")]
         #pragma warning disable CS1591
-        LOGOIX,
+        Logoix,
         #pragma warning restore CS1591
         [EnumMember(Value = "KOLAY_GELSIN")]
         #pragma warning disable CS1591
-        KOLAY_GELSIN,
+        KolayGelsin,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASSOCIATED_COURIERS")]
         #pragma warning disable CS1591
-        ASSOCIATED_COURIERS,
+        AssociatedCouriers,
         #pragma warning restore CS1591
         [EnumMember(Value = "UPS_CHECKER")]
         #pragma warning disable CS1591
-        UPS_CHECKER,
+        UpsChecker,
         #pragma warning restore CS1591
         [EnumMember(Value = "WINESHIPPING")]
         #pragma warning disable CS1591
-        WINESHIPPING,
+        Wineshipping,
         #pragma warning restore CS1591
         [EnumMember(Value = "SPEDISCI")]
         #pragma warning disable CS1591
-        SPEDISCI,
+        Spedisci,
         #pragma warning restore CS1591
         [EnumMember(Value = "FOURKITES")]
         #pragma warning disable CS1591
-        FOURKITES,
+        Fourkites,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETONAS")]
         #pragma warning disable CS1591
-        ETONAS,
+        Etonas,
         #pragma warning restore CS1591
         [EnumMember(Value = "FINMILE")]
         #pragma warning disable CS1591
-        FINMILE,
+        Finmile,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNIUNI")]
         #pragma warning disable CS1591
-        UNIUNI,
+        Uniuni,
         #pragma warning restore CS1591
         [EnumMember(Value = "RODONAVES")]
         #pragma warning disable CS1591
-        RODONAVES,
+        Rodonaves,
         #pragma warning restore CS1591
         [EnumMember(Value = "INPOST_IT")]
         #pragma warning disable CS1591
-        INPOST_IT,
+        InpostIt,
         #pragma warning restore CS1591
         [EnumMember(Value = "TFORCE_FREIGHT")]
         #pragma warning disable CS1591
-        TFORCE_FREIGHT,
+        TforceFreight,
         #pragma warning restore CS1591
         [EnumMember(Value = "RICHMOM")]
         #pragma warning disable CS1591
-        RICHMOM,
+        Richmom,
         #pragma warning restore CS1591
         [EnumMember(Value = "FRANCO")]
         #pragma warning disable CS1591
-        FRANCO,
+        Franco,
         #pragma warning restore CS1591
         [EnumMember(Value = "ECPARCEL")]
         #pragma warning disable CS1591
-        ECPARCEL,
+        Ecparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "FEDEX_CHINA")]
         #pragma warning disable CS1591
-        FEDEX_CHINA,
+        FedexChina,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOFO_EXPRESS")]
         #pragma warning disable CS1591
-        GOFO_EXPRESS,
+        GofoExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPBOB")]
         #pragma warning disable CS1591
-        SHIPBOB,
+        Shipbob,
         #pragma warning restore CS1591
         [EnumMember(Value = "JERSEYPOST_ATLAS")]
         #pragma warning disable CS1591
-        JERSEYPOST_ATLAS,
+        JerseypostAtlas,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORETRAILS")]
         #pragma warning disable CS1591
-        CORETRAILS,
+        Coretrails,
         #pragma warning restore CS1591
         [EnumMember(Value = "RHENUS_ITALY")]
         #pragma warning disable CS1591
-        RHENUS_ITALY,
+        RhenusItaly,
         #pragma warning restore CS1591
         [EnumMember(Value = "JADLOG")]
         #pragma warning disable CS1591
-        JADLOG,
+        Jadlog,
         #pragma warning restore CS1591
         [EnumMember(Value = "JITSU")]
         #pragma warning disable CS1591
-        JITSU,
+        Jitsu,
         #pragma warning restore CS1591
         [EnumMember(Value = "YANWEN_EXPRESS")]
         #pragma warning disable CS1591
-        YANWEN_EXPRESS,
+        YanwenExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "DASHLINK")]
         #pragma warning disable CS1591
-        DASHLINK,
+        Dashlink,
         #pragma warning restore CS1591
         [EnumMember(Value = "SEINO_SUPER_EXPRESS")]
         #pragma warning disable CS1591
-        SEINO_SUPER_EXPRESS,
+        SeinoSuperExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLOSHIP")]
         #pragma warning disable CS1591
-        FLOSHIP,
+        Floship,
         #pragma warning restore CS1591
         [EnumMember(Value = "METROSCG")]
         #pragma warning disable CS1591
-        METROSCG,
+        Metroscg,
         #pragma warning restore CS1591
         [EnumMember(Value = "SENDPARCEL")]
         #pragma warning disable CS1591
-        SENDPARCEL,
+        Sendparcel,
         #pragma warning restore CS1591
         [EnumMember(Value = "P2P")]
         #pragma warning disable CS1591
@@ -5613,51 +5601,51 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "CN_EXPRESS")]
         #pragma warning disable CS1591
-        CN_EXPRESS,
+        CnExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "CIRROTRACK")]
         #pragma warning disable CS1591
-        CIRROTRACK,
+        Cirrotrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "LAND_LOGISTICS")]
         #pragma warning disable CS1591
-        LAND_LOGISTICS,
+        LandLogistics,
         #pragma warning restore CS1591
         [EnumMember(Value = "VEHO")]
         #pragma warning disable CS1591
-        VEHO,
+        Veho,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDLINE")]
         #pragma warning disable CS1591
-        MEDLINE,
+        Medline,
         #pragma warning restore CS1591
         [EnumMember(Value = "VDTRACK")]
         #pragma warning disable CS1591
-        VDTRACK,
+        Vdtrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "SINO_SCM")]
         #pragma warning disable CS1591
-        SINO_SCM,
+        SinoScm,
         #pragma warning restore CS1591
         [EnumMember(Value = "3PE_EXPRESS")]
         #pragma warning disable CS1591
-        ThreePE_EXPRESS,
+        Value3PeExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWIFTX")]
         #pragma warning disable CS1591
-        SWIFTX,
+        Swiftx,
         #pragma warning restore CS1591
         [EnumMember(Value = "SFYDEXPRESS")]
         #pragma warning disable CS1591
-        SFYDEXPRESS,
+        Sfydexpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOPTRANS")]
         #pragma warning disable CS1591
-        TOPTRANS,
+        Toptrans,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
     }
 }

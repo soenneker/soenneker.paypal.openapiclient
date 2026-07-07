@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The bic property</summary>
+        /// <summary>The business identification code (BIC). In payments systems, a BIC is used to identify a specific business, most commonly a bank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_bic? Bic { get; set; }
+        public string? Bic { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_bic Bic { get; set; }
+        public string Bic { get; set; }
 #endif
         /// <summary>The last digits of the card used to fund the Bancontact payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,13 +31,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string CardLastDigits { get; set; }
 #endif
-        /// <summary>The country_code property</summary>
+        /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_country_code? CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_country_code CountryCode { get; set; }
+        public string CountryCode { get; set; }
 #endif
         /// <summary>The last characters of the IBAN used to pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,13 +47,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string IbanLastChars { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The full name representation like Mr J Smith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_name? Name { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_name Name { get; set; }
+        public string Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Bancontact"/> and sets the default values.
@@ -80,11 +80,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bic", n => { Bic = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_bic>(global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_bic.CreateFromDiscriminatorValue); } },
+                { "bic", n => { Bic = n.GetStringValue(); } },
                 { "card_last_digits", n => { CardLastDigits = n.GetStringValue(); } },
-                { "country_code", n => { CountryCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_country_code>(global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_country_code.CreateFromDiscriminatorValue); } },
+                { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "iban_last_chars", n => { IbanLastChars = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_name>(global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_name.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_bic>("bic", Bic);
+            writer.WriteStringValue("bic", Bic);
             writer.WriteStringValue("card_last_digits", CardLastDigits);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_country_code>("country_code", CountryCode);
+            writer.WriteStringValue("country_code", CountryCode);
             writer.WriteStringValue("iban_last_chars", IbanLastChars);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact_name>("name", Name);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

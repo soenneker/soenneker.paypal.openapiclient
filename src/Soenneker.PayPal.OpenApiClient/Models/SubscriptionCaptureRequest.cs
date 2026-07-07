@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.Money Amount { get; set; }
 #endif
         /// <summary>The type of capture.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type? CaptureType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequestCaptureType? CaptureType { get; set; }
         /// <summary>The reason or note for the subscription charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
-                { "capture_type", n => { CaptureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type>(); } },
+                { "capture_type", n => { CaptureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequestCaptureType>(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequest_capture_type>("capture_type", CaptureType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionCaptureRequestCaptureType>("capture_type", CaptureType);
             writer.WriteStringValue("note", Note);
             writer.WriteAdditionalData(AdditionalData);
         }

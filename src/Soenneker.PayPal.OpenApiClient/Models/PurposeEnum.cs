@@ -9,39 +9,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "AWARDS")]
         #pragma warning disable CS1591
-        AWARDS,
+        Awards,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRIZES")]
         #pragma warning disable CS1591
-        PRIZES,
+        Prizes,
         #pragma warning restore CS1591
         [EnumMember(Value = "DONATIONS")]
         #pragma warning disable CS1591
-        DONATIONS,
+        Donations,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOODS")]
         #pragma warning disable CS1591
-        GOODS,
+        Goods,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVICES")]
         #pragma warning disable CS1591
-        SERVICES,
+        Services,
         #pragma warning restore CS1591
         [EnumMember(Value = "REBATES")]
         #pragma warning disable CS1591
-        REBATES,
+        Rebates,
         #pragma warning restore CS1591
         [EnumMember(Value = "CASHBACK")]
         #pragma warning disable CS1591
-        CASHBACK,
+        Cashback,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISCOUNTS")]
         #pragma warning disable CS1591
-        DISCOUNTS,
+        Discounts,
         #pragma warning restore CS1591
         [EnumMember(Value = "NON_GOODS_OR_SERVICES")]
         #pragma warning disable CS1591
-        NON_GOODS_OR_SERVICES,
+        NonGoodsOrServices,
         #pragma warning restore CS1591
     }
 }

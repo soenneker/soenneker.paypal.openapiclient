@@ -49,6 +49,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public Notification()
         {
             AdditionalData = new Dictionary<string, object>();
+            SendToInvoicer = false;
+            SendToRecipient = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -74,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The product type. Indicates whether the product is physical or digital goods, or a service.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Product_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ProductType? Type { get; set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +116,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Product_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductType>(); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
             };
         }
@@ -135,7 +135,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription>("links", Links);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Product_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductType>("type", Type);
             writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }

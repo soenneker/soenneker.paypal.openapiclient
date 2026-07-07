@@ -15,21 +15,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cancel_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_cancel_url? CancelUrl { get; set; }
+        public string? CancelUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_cancel_url CancelUrl { get; set; }
+        public string CancelUrl { get; set; }
 #endif
-        /// <summary>The return_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_return_url? ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_return_url ReturnUrl { get; set; }
+        public string ReturnUrl { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_cancel_url>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_cancel_url.CreateFromDiscriminatorValue); } },
-                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_return_url>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_return_url.CreateFromDiscriminatorValue); } },
+                { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
+                { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_cancel_url>("cancel_url", CancelUrl);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayExperienceContext_return_url>("return_url", ReturnUrl);
+            writer.WriteStringValue("cancel_url", CancelUrl);
+            writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

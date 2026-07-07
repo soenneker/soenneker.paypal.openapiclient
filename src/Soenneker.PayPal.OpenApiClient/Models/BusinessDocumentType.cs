@@ -9,43 +9,43 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "SOCIAL_SECURITY_NUMBER")]
         #pragma warning disable CS1591
-        SOCIAL_SECURITY_NUMBER,
+        SocialSecurityNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMPLOYMENT_IDENTIFICATION_NUMBER")]
         #pragma warning disable CS1591
-        EMPLOYMENT_IDENTIFICATION_NUMBER,
+        EmploymentIdentificationNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "TAX_IDENTIFICATION_NUMBER")]
         #pragma warning disable CS1591
-        TAX_IDENTIFICATION_NUMBER,
+        TaxIdentificationNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "PASSPORT_NUMBER")]
         #pragma warning disable CS1591
-        PASSPORT_NUMBER,
+        PassportNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "PENSION_FUND_ID")]
         #pragma warning disable CS1591
-        PENSION_FUND_ID,
+        PensionFundId,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEDICAL_INSURANCE_ID")]
         #pragma warning disable CS1591
-        MEDICAL_INSURANCE_ID,
+        MedicalInsuranceId,
         #pragma warning restore CS1591
         [EnumMember(Value = "CNPJ")]
         #pragma warning disable CS1591
-        CNPJ,
+        Cnpj,
         #pragma warning restore CS1591
         [EnumMember(Value = "CPF")]
         #pragma warning disable CS1591
-        CPF,
+        Cpf,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAN")]
         #pragma warning disable CS1591
-        PAN,
+        Pan,
         #pragma warning restore CS1591
         [EnumMember(Value = "BUSINESS_REGISTRATION")]
         #pragma warning disable CS1591
-        BUSINESS_REGISTRATION,
+        BusinessRegistration,
         #pragma warning restore CS1591
     }
 }

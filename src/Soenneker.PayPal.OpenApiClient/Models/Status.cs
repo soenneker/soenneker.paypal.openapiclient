@@ -9,27 +9,27 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "OPEN")]
         #pragma warning disable CS1591
-        OPEN,
+        Open,
         #pragma warning restore CS1591
         [EnumMember(Value = "WAITING_FOR_BUYER_RESPONSE")]
         #pragma warning disable CS1591
-        WAITING_FOR_BUYER_RESPONSE,
+        WaitingForBuyerResponse,
         #pragma warning restore CS1591
         [EnumMember(Value = "WAITING_FOR_SELLER_RESPONSE")]
         #pragma warning disable CS1591
-        WAITING_FOR_SELLER_RESPONSE,
+        WaitingForSellerResponse,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNDER_REVIEW")]
         #pragma warning disable CS1591
-        UNDER_REVIEW,
+        UnderReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "RESOLVED")]
         #pragma warning disable CS1591
-        RESOLVED,
+        Resolved,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER")]
         #pragma warning disable CS1591
-        OTHER,
+        Other,
         #pragma warning restore CS1591
     }
 }

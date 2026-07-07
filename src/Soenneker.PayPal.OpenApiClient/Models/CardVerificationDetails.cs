@@ -55,10 +55,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails_three_d_secure? ThreeDSecure { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsThreeDSecure? ThreeDSecure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails_three_d_secure ThreeDSecure { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsThreeDSecure ThreeDSecure { get; set; }
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "network", n => { Network = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>(); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
                 { "processor_response", n => { ProcessorResponse = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse.CreateFromDiscriminatorValue); } },
-                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails_three_d_secure>(global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails_three_d_secure.CreateFromDiscriminatorValue); } },
+                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsThreeDSecure>(global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsThreeDSecure.CreateFromDiscriminatorValue); } },
                 { "time", n => { Time = n.GetStringValue(); } },
             };
         }
@@ -114,7 +114,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>("network", Network);
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse>("processor_response", ProcessorResponse);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails_three_d_secure>("three_d_secure", ThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsThreeDSecure>("three_d_secure", ThreeDSecure);
             writer.WriteStringValue("time", Time);
             writer.WriteAdditionalData(AdditionalData);
         }

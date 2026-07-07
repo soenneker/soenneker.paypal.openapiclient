@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "SHIPPING")]
         #pragma warning disable CS1591
-        SHIPPING,
+        Shipping,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUP")]
         #pragma warning disable CS1591
-        PICKUP,
+        Pickup,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUP_IN_STORE")]
         #pragma warning disable CS1591
-        PICKUP_IN_STORE,
+        PickupInStore,
         #pragma warning restore CS1591
         [EnumMember(Value = "PICKUP_FROM_PERSON")]
         #pragma warning disable CS1591
-        PICKUP_FROM_PERSON,
+        PickupFromPerson,
         #pragma warning restore CS1591
     }
 }

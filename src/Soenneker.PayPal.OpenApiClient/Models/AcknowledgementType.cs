@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ITEM_RECEIVED")]
         #pragma warning disable CS1591
-        ITEM_RECEIVED,
+        ItemReceived,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_NOT_RECEIVED")]
         #pragma warning disable CS1591
-        ITEM_NOT_RECEIVED,
+        ItemNotReceived,
         #pragma warning restore CS1591
         [EnumMember(Value = "DAMAGED")]
         #pragma warning disable CS1591
-        DAMAGED,
+        Damaged,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMPTY_PACKAGE_OR_DIFFERENT")]
         #pragma warning disable CS1591
-        EMPTY_PACKAGE_OR_DIFFERENT,
+        EmptyPackageOrDifferent,
         #pragma warning restore CS1591
         [EnumMember(Value = "MISSING_ITEMS")]
         #pragma warning disable CS1591
-        MISSING_ITEMS,
+        MissingItems,
         #pragma warning restore CS1591
     }
 }

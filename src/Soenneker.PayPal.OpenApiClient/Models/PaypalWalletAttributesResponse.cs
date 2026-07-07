@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of merchant cobranded cards used by buyer to complete an order. This array will be present if a merchant has onboarded their cobranded card with PayPal and provided corresponding label(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponse_cobranded_cards>? CobrandedCards { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>? CobrandedCards { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponse_cobranded_cards> CobrandedCards { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem> CobrandedCards { get; set; }
 #endif
         /// <summary>The details about a saved PayPal Wallet payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cobranded_cards", n => { CobrandedCards = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponse_cobranded_cards>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponse_cobranded_cards.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cobranded_cards", n => { CobrandedCards = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponse_cobranded_cards>("cobranded_cards", CobrandedCards);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>("cobranded_cards", CobrandedCards);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse>("vault", Vault);
             writer.WriteAdditionalData(AdditionalData);
         }

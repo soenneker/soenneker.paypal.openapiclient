@@ -68,10 +68,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The network_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse_network_token? NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponseNetworkToken? NetworkToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse_network_token NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponseNetworkToken NetworkToken { get; set; }
 #endif
         /// <summary>Previous network transaction reference including id in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,7 +125,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse_network_token>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse_network_token.CreateFromDiscriminatorValue); } },
+                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponseNetworkToken>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponseNetworkToken.CreateFromDiscriminatorValue); } },
                 { "network_transaction_reference", n => { NetworkTransactionReference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReferenceResponse>(global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReferenceResponse.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardType>(); } },
                 { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails.CreateFromDiscriminatorValue); } },
@@ -145,7 +145,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>("brand", Brand);
             writer.WriteStringValue("expiry", Expiry);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse_network_token>("network_token", NetworkToken);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponseNetworkToken>("network_token", NetworkToken);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReferenceResponse>("network_transaction_reference", NetworkTransactionReference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetails>("verification", Verification);

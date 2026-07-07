@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
+    /// <summary>
+    /// The subscription details.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class Subscription : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -57,10 +58,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The plan details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscription_plan? Plan { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan? Plan { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscription_plan Plan { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan Plan { get; set; }
 #endif
         /// <summary>The ID of the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string StartTime { get; set; }
 #endif
         /// <summary>The status of the subscription.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscription_status? Status { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum? Status { get; set; }
         /// <summary>The reason or notes for the status of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,7 +115,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string StatusUpdateTime { get; set; }
 #endif
-        /// <summary>The subscriber property</summary>
+        /// <summary>The customer who approves and pays for the order. The customer is also known as the payer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber? Subscriber { get; set; }
@@ -160,13 +161,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_plan>(global::Soenneker.PayPal.OpenApiClient.Models.Subscription_plan.CreateFromDiscriminatorValue); } },
+                { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan.CreateFromDiscriminatorValue); } },
                 { "plan_id", n => { PlanId = n.GetStringValue(); } },
                 { "plan_overridden", n => { PlanOverridden = n.GetBoolValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum>(); } },
                 { "status_change_note", n => { StatusChangeNote = n.GetStringValue(); } },
                 { "status_update_time", n => { StatusUpdateTime = n.GetStringValue(); } },
                 { "subscriber", n => { Subscriber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscriber>(global::Soenneker.PayPal.OpenApiClient.Models.Subscriber.CreateFromDiscriminatorValue); } },
@@ -184,12 +185,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("create_time", CreateTime);
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_plan>("plan", Plan);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan>("plan", Plan);
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>("shipping_amount", ShippingAmount);
             writer.WriteStringValue("start_time", StartTime);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscription_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum>("status", Status);
             writer.WriteStringValue("status_change_note", StatusChangeNote);
             writer.WriteStringValue("status_update_time", StatusUpdateTime);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscriber>("subscriber", Subscriber);

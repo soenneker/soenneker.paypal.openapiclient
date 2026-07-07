@@ -9,123 +9,123 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "VISA")]
         #pragma warning disable CS1591
-        VISA,
+        Visa,
         #pragma warning restore CS1591
         [EnumMember(Value = "MASTERCARD")]
         #pragma warning disable CS1591
-        MASTERCARD,
+        Mastercard,
         #pragma warning restore CS1591
         [EnumMember(Value = "DISCOVER")]
         #pragma warning disable CS1591
-        DISCOVER,
+        Discover,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMEX")]
         #pragma warning disable CS1591
-        AMEX,
+        Amex,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOLO")]
         #pragma warning disable CS1591
-        SOLO,
+        Solo,
         #pragma warning restore CS1591
         [EnumMember(Value = "JCB")]
         #pragma warning disable CS1591
-        JCB,
+        Jcb,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAR")]
         #pragma warning disable CS1591
-        STAR,
+        Star,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELTA")]
         #pragma warning disable CS1591
-        DELTA,
+        Delta,
         #pragma warning restore CS1591
         [EnumMember(Value = "SWITCH")]
         #pragma warning disable CS1591
-        SWITCH,
+        SwitchValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "MAESTRO")]
         #pragma warning disable CS1591
-        MAESTRO,
+        Maestro,
         #pragma warning restore CS1591
         [EnumMember(Value = "CB_NATIONALE")]
         #pragma warning disable CS1591
-        CB_NATIONALE,
+        CbNationale,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONFIGOGA")]
         #pragma warning disable CS1591
-        CONFIGOGA,
+        Configoga,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONFIDIS")]
         #pragma warning disable CS1591
-        CONFIDIS,
+        Confidis,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELECTRON")]
         #pragma warning disable CS1591
-        ELECTRON,
+        Electron,
         #pragma warning restore CS1591
         [EnumMember(Value = "CETELEM")]
         #pragma warning disable CS1591
-        CETELEM,
+        Cetelem,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHINA_UNION_PAY")]
         #pragma warning disable CS1591
-        CHINA_UNION_PAY,
+        ChinaUnionPay,
         #pragma warning restore CS1591
         [EnumMember(Value = "DINERS")]
         #pragma warning disable CS1591
-        DINERS,
+        Diners,
         #pragma warning restore CS1591
         [EnumMember(Value = "ELO")]
         #pragma warning disable CS1591
-        ELO,
+        Elo,
         #pragma warning restore CS1591
         [EnumMember(Value = "HIPER")]
         #pragma warning disable CS1591
-        HIPER,
+        Hiper,
         #pragma warning restore CS1591
         [EnumMember(Value = "HIPERCARD")]
         #pragma warning disable CS1591
-        HIPERCARD,
+        Hipercard,
         #pragma warning restore CS1591
         [EnumMember(Value = "RUPAY")]
         #pragma warning disable CS1591
-        RUPAY,
+        Rupay,
         #pragma warning restore CS1591
         [EnumMember(Value = "GE")]
         #pragma warning disable CS1591
-        GE,
+        Ge,
         #pragma warning restore CS1591
         [EnumMember(Value = "SYNCHRONY")]
         #pragma warning disable CS1591
-        SYNCHRONY,
+        Synchrony,
         #pragma warning restore CS1591
         [EnumMember(Value = "EFTPOS")]
         #pragma warning disable CS1591
-        EFTPOS,
+        Eftpos,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARTE_BANCAIRE")]
         #pragma warning disable CS1591
-        CARTE_BANCAIRE,
+        CarteBancaire,
         #pragma warning restore CS1591
         [EnumMember(Value = "STAR_ACCESS")]
         #pragma warning disable CS1591
-        STAR_ACCESS,
+        StarAccess,
         #pragma warning restore CS1591
         [EnumMember(Value = "PULSE")]
         #pragma warning disable CS1591
-        PULSE,
+        Pulse,
         #pragma warning restore CS1591
         [EnumMember(Value = "NYCE")]
         #pragma warning disable CS1591
-        NYCE,
+        Nyce,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACCEL")]
         #pragma warning disable CS1591
-        ACCEL,
+        Accel,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
     }
 }

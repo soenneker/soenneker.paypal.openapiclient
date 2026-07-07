@@ -13,23 +13,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VenmoWalletResponse : IAdditionalDataHolder, IParsable
     {
-        /// <summary>The account_id property</summary>
+        /// <summary>The PayPal payer ID, which is a masked version of the PayPal account number intended for use with third parties. The account number is reversibly encrypted and a proprietary variant of Base32 is used to encode the result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_account_id? AccountId { get; set; }
+        public string? AccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_account_id AccountId { get; set; }
+        public string AccountId { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_address? Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseAddress? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_address Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseAddress Address { get; set; }
 #endif
         /// <summary>Additional attributes associated with the use of a Venmo Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,32 +39,32 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesResponse Attributes { get; set; }
 #endif
-        /// <summary>The email_address property</summary>
+        /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_email_address? EmailAddress { get; set; }
+        public string? EmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_email_address EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseName? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_name Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseName Name { get; set; }
 #endif
-        /// <summary>The phone_number property</summary>
+        /// <summary>The phone number associated with the Venmo account, in its canonical international [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164/en). Supports only the `national_number` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_phone_number? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponsePhoneNumber? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_phone_number PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponsePhoneNumber PhoneNumber { get; set; }
 #endif
         /// <summary>Merchant preference on how the buyer can navigate back to merchant website post approving the transaction on the Venmo App.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_return_flow? ReturnFlow { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseReturnFlow? ReturnFlow { get; private set; }
         /// <summary>The Venmo user name chosen by the user, also know as a Venmo handle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public VenmoWalletResponse()
         {
             AdditionalData = new Dictionary<string, object>();
-            ReturnFlow = global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_return_flow.AUTO;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -99,13 +98,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_id", n => { AccountId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_account_id>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_account_id.CreateFromDiscriminatorValue); } },
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_address>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_address.CreateFromDiscriminatorValue); } },
+                { "account_id", n => { AccountId = n.GetStringValue(); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseAddress>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseAddress.CreateFromDiscriminatorValue); } },
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesResponse>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesResponse.CreateFromDiscriminatorValue); } },
-                { "email_address", n => { EmailAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_email_address>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_email_address.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_name>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_name.CreateFromDiscriminatorValue); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_phone_number>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_phone_number.CreateFromDiscriminatorValue); } },
-                { "return_flow", n => { ReturnFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_return_flow>(); } },
+                { "email_address", n => { EmailAddress = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseName>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseName.CreateFromDiscriminatorValue); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponsePhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponsePhoneNumber.CreateFromDiscriminatorValue); } },
+                { "return_flow", n => { ReturnFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseReturnFlow>(); } },
                 { "user_name", n => { UserName = n.GetStringValue(); } },
             };
         }
@@ -116,12 +115,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_account_id>("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_address>("address", Address);
+            writer.WriteStringValue("account_id", AccountId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletAttributesResponse>("attributes", Attributes);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_email_address>("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_name>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponse_phone_number>("phone_number", PhoneNumber);
+            writer.WriteStringValue("email_address", EmailAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponseName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletResponsePhoneNumber>("phone_number", PhoneNumber);
             writer.WriteStringValue("user_name", UserName);
             writer.WriteAdditionalData(AdditionalData);
         }

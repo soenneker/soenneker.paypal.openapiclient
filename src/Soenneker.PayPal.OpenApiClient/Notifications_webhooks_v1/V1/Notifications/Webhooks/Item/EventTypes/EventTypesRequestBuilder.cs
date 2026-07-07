@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.EventTypes
 {
     /// <summary>
-    /// Builds and executes requests for operations under \notifications_webhooks_v1\v1\notifications\webhooks\{webhook_id}\event-types
+    /// Builds and executes requests for operations under \notifications_webhooks_v1\v1\notifications\webhooks\{webhookId}\event-types
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventTypesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventTypesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks/{webhook_id}/event-types", pathParameters)
+        public EventTypesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks/{webhookId}/event-types", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventTypesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks/{webhook_id}/event-types", rawUrl)
+        public EventTypesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/notifications_webhooks_v1/v1/notifications/webhooks/{webhookId}/event-types", rawUrl)
         {
         }
         /// <summary>

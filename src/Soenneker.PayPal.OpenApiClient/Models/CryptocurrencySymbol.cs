@@ -9,35 +9,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "BTC")]
         #pragma warning disable CS1591
-        BTC,
+        Btc,
         #pragma warning restore CS1591
         [EnumMember(Value = "ETH")]
         #pragma warning disable CS1591
-        ETH,
+        Eth,
         #pragma warning restore CS1591
         [EnumMember(Value = "BCH")]
         #pragma warning disable CS1591
-        BCH,
+        Bch,
         #pragma warning restore CS1591
         [EnumMember(Value = "LTC")]
         #pragma warning disable CS1591
-        LTC,
+        Ltc,
         #pragma warning restore CS1591
         [EnumMember(Value = "PYUSD")]
         #pragma warning disable CS1591
-        PYUSD,
+        Pyusd,
         #pragma warning restore CS1591
         [EnumMember(Value = "LINK")]
         #pragma warning disable CS1591
-        LINK,
+        Link,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOL")]
         #pragma warning disable CS1591
-        SOL,
+        Sol,
         #pragma warning restore CS1591
         [EnumMember(Value = "MATIC")]
         #pragma warning disable CS1591
-        MATIC,
+        Matic,
         #pragma warning restore CS1591
     }
 }

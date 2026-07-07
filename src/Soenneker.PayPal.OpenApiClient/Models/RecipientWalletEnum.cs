@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "PAYPAL")]
         #pragma warning disable CS1591
-        PAYPAL,
+        Paypal,
         #pragma warning restore CS1591
         [EnumMember(Value = "VENMO")]
         #pragma warning disable CS1591
-        VENMO,
+        Venmo,
         #pragma warning restore CS1591
     }
 }

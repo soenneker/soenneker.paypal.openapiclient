@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The outcome of the adjudication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Adjudicate_adjudication_outcome? AdjudicationOutcome { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome? AdjudicationOutcome { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Adjudicate"/> and sets the default values.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adjudication_outcome", n => { AdjudicationOutcome = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Adjudicate_adjudication_outcome>(); } },
+                { "adjudication_outcome", n => { AdjudicationOutcome = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Adjudicate_adjudication_outcome>("adjudication_outcome", AdjudicationOutcome);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome>("adjudication_outcome", AdjudicationOutcome);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

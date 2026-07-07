@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "VERIFY_WITH_PAYPAL")]
         #pragma warning disable CS1591
-        VERIFY_WITH_PAYPAL,
+        VerifyWithPaypal,
         #pragma warning restore CS1591
     }
 }

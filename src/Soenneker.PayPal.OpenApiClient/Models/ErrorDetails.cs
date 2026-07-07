@@ -55,7 +55,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public ErrorDetails()
         {
             AdditionalData = new Dictionary<string, object>();
-            Location = global::Soenneker.PayPal.OpenApiClient.Models.ErrorLocation.Body;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

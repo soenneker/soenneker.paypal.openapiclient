@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The amount property</summary>
+        /// <summary>The amount to capture. To capture a portion of the full authorized amount, specify an amount. If amount is not specified, the full authorized amount is captured. The amount must be a positive number and in the same currency as the authorization against which the payment is being captured.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_amount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_amount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount Amount { get; set; }
 #endif
         /// <summary>Indicates whether you can make additional captures against the authorized payment. Set to `true` if you do not intend to capture additional payments against the authorization. Set to `false` if you intend to capture additional payments against the authorization.</summary>
         public bool? FinalCapture { get; set; }
@@ -44,10 +44,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment_instruction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_payment_instruction? PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction? PaymentInstruction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_payment_instruction PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction PaymentInstruction { get; set; }
 #endif
         /// <summary>The payment descriptor on the payer&apos;s account statement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,6 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public CaptureRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            FinalCapture = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -82,11 +83,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_amount>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_amount.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount.CreateFromDiscriminatorValue); } },
                 { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
                 { "note_to_payer", n => { NoteToPayer = n.GetStringValue(); } },
-                { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_payment_instruction>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_payment_instruction.CreateFromDiscriminatorValue); } },
+                { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction.CreateFromDiscriminatorValue); } },
                 { "soft_descriptor", n => { SoftDescriptor = n.GetStringValue(); } },
             };
         }
@@ -97,11 +98,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_amount>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount>("amount", Amount);
             writer.WriteBoolValue("final_capture", FinalCapture);
             writer.WriteStringValue("invoice_id", InvoiceId);
             writer.WriteStringValue("note_to_payer", NoteToPayer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequest_payment_instruction>("payment_instruction", PaymentInstruction);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction>("payment_instruction", PaymentInstruction);
             writer.WriteStringValue("soft_descriptor", SoftDescriptor);
             writer.WriteAdditionalData(AdditionalData);
         }

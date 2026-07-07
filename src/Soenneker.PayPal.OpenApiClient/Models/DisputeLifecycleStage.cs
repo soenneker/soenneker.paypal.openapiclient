@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "INQUIRY")]
         #pragma warning disable CS1591
-        INQUIRY,
+        Inquiry,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHARGEBACK")]
         #pragma warning disable CS1591
-        CHARGEBACK,
+        Chargeback,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRE_ARBITRATION")]
         #pragma warning disable CS1591
-        PRE_ARBITRATION,
+        PreArbitration,
         #pragma warning restore CS1591
         [EnumMember(Value = "ARBITRATION")]
         #pragma warning disable CS1591
-        ARBITRATION,
+        Arbitration,
         #pragma warning restore CS1591
     }
 }

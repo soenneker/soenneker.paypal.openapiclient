@@ -35,7 +35,7 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PaymentTokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens?customer_id={customer_id}{&page*,page_size*,total_required*}", pathParameters)
+        public PaymentTokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens{?page*,page_size*,total_required*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PaymentTokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens?customer_id={customer_id}{&page*,page_size*,total_required*}", rawUrl)
+        public PaymentTokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens{?page*,page_size*,total_required*}", rawUrl)
         {
         }
         /// <summary>
@@ -120,7 +120,7 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.PaymentTokens.PaymentTokensRequestBuilder.PaymentTokensRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens?customer_id={customer_id}{&page*,page_size*,total_required*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -141,7 +141,7 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/vault_payment_tokens_v3/v3/vault/payment-tokens", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

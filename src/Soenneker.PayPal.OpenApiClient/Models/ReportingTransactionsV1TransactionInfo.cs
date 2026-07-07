@@ -168,7 +168,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string PaypalReferenceId { get; set; }
 #endif
         /// <summary>The PayPal reference ID type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo_paypal_reference_id_type? PaypalReferenceIdType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfoPaypalReferenceIdType? PaypalReferenceIdType { get; set; }
         /// <summary>Indicates whether the transaction is eligible for protection. Value is:&lt;ul&gt;&lt;li&gt;&lt;code&gt;01&lt;/code&gt;. Eligible.&lt;/li&gt;&lt;li&gt;&lt;code&gt;02&lt;/code&gt;. Not eligible&lt;/li&gt;&lt;li&gt;&lt;code&gt;03&lt;/code&gt;. Partially eligible.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -325,7 +325,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "payment_tracking_id", n => { PaymentTrackingId = n.GetStringValue(); } },
                 { "paypal_account_id", n => { PaypalAccountId = n.GetStringValue(); } },
                 { "paypal_reference_id", n => { PaypalReferenceId = n.GetStringValue(); } },
-                { "paypal_reference_id_type", n => { PaypalReferenceIdType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo_paypal_reference_id_type>(); } },
+                { "paypal_reference_id_type", n => { PaypalReferenceIdType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfoPaypalReferenceIdType>(); } },
                 { "protection_eligibility", n => { ProtectionEligibility = n.GetStringValue(); } },
                 { "sales_tax_amount", n => { SalesTaxAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money.CreateFromDiscriminatorValue); } },
                 { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money.CreateFromDiscriminatorValue); } },
@@ -368,7 +368,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("payment_tracking_id", PaymentTrackingId);
             writer.WriteStringValue("paypal_account_id", PaypalAccountId);
             writer.WriteStringValue("paypal_reference_id", PaypalReferenceId);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo_paypal_reference_id_type>("paypal_reference_id_type", PaypalReferenceIdType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfoPaypalReferenceIdType>("paypal_reference_id_type", PaypalReferenceIdType);
             writer.WriteStringValue("protection_eligibility", ProtectionEligibility);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money>("sales_tax_amount", SalesTaxAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money>("shipping_amount", ShippingAmount);

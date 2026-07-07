@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ON_CREATE_PAYMENT_TOKENS")]
         #pragma warning disable CS1591
-        ON_CREATE_PAYMENT_TOKENS,
+        OnCreatePaymentTokens,
         #pragma warning restore CS1591
         [EnumMember(Value = "ON_PAYER_APPROVAL")]
         #pragma warning disable CS1591
-        ON_PAYER_APPROVAL,
+        OnPayerApproval,
         #pragma warning restore CS1591
     }
 }

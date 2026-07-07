@@ -23,26 +23,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string BrandName { get; set; }
 #endif
-        /// <summary>The order_update_callback_config property</summary>
+        /// <summary>Merchant provided Order Update callback configuration for Venmo Wallet.Venmo will call back merchant when the specified event occurs.we recommend merchants to pass both the shipping_options and shipping_address callback events. Not supported when `shipping.type` is specified or when &apos;application_context.shipping_preference&apos; is set as &apos;NO_SHIPPING&apos; or &apos;SET_PROVIDED_ADDRESS&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_order_update_callback_config? OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig? OrderUpdateCallbackConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_order_update_callback_config OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig OrderUpdateCallbackConfig { get; set; }
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_shipping_preference? ShippingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference? ShippingPreference { get; set; }
         /// <summary>Configures a &lt;strong&gt;Continue&lt;/strong&gt; or &lt;strong&gt;Pay Now&lt;/strong&gt; checkout flow.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_user_action? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction? UserAction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext"/> and sets the default values.
         /// </summary>
         public VenmoWalletExperienceContext()
         {
             AdditionalData = new Dictionary<string, object>();
-            ShippingPreference = global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_shipping_preference.GET_FROM_FILE;
-            UserAction = global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_user_action.CONTINUE;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,9 +61,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "order_update_callback_config", n => { OrderUpdateCallbackConfig = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_order_update_callback_config>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_order_update_callback_config.CreateFromDiscriminatorValue); } },
-                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_shipping_preference>(); } },
-                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_user_action>(); } },
+                { "order_update_callback_config", n => { OrderUpdateCallbackConfig = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig>(global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig.CreateFromDiscriminatorValue); } },
+                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference>(); } },
+                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction>(); } },
             };
         }
         /// <summary>
@@ -76,9 +74,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_order_update_callback_config>("order_update_callback_config", OrderUpdateCallbackConfig);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_shipping_preference>("shipping_preference", ShippingPreference);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext_user_action>("user_action", UserAction);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig>("order_update_callback_config", OrderUpdateCallbackConfig);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference>("shipping_preference", ShippingPreference);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

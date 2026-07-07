@@ -15,21 +15,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The eligible_methods property</summary>
+        /// <summary>List of payment methods that are eligible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods? EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods? EligibleMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods EligibleMethods { get; set; }
 #endif
         /// <summary>Payment tokens for vaulted instruments, if available. This object will be included only if include_vault_tokens is set to true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens>? PaymentTokens { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>? PaymentTokens { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens> PaymentTokens { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem> PaymentTokens { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eligible_methods", n => { EligibleMethods = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods.CreateFromDiscriminatorValue); } },
-                { "payment_tokens", n => { PaymentTokens = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "eligible_methods", n => { EligibleMethods = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods.CreateFromDiscriminatorValue); } },
+                { "payment_tokens", n => { PaymentTokens = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>(global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_eligible_methods>("eligible_methods", EligibleMethods);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse_payment_tokens>("payment_tokens", PaymentTokens);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods>("eligible_methods", EligibleMethods);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>("payment_tokens", PaymentTokens);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails CancellationDetails { get; set; }
 #endif
         /// <summary>The issue type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties_issue_type? IssueType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputePropertiesIssueType? IssueType { get; set; }
         /// <summary>The product information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails.CreateFromDiscriminatorValue); } },
-                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties_issue_type>(); } },
+                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputePropertiesIssueType>(); } },
                 { "product_details", n => { ProductDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails.CreateFromDiscriminatorValue); } },
                 { "return_shipping_address", n => { ReturnShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable.CreateFromDiscriminatorValue); } },
                 { "service_details", n => { ServiceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails.CreateFromDiscriminatorValue); } },
@@ -89,7 +89,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>("cancellation_details", CancellationDetails);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties_issue_type>("issue_type", IssueType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputePropertiesIssueType>("issue_type", IssueType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>("product_details", ProductDetails);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable>("return_shipping_address", ReturnShippingAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>("service_details", ServiceDetails);

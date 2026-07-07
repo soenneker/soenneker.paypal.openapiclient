@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string CancellationDate { get; set; }
 #endif
         /// <summary>Indicates the mode used for order cancellation.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails_cancellation_mode? CancellationMode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode? CancellationMode { get; set; }
         /// <summary>The cancellation number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cancellation_date", n => { CancellationDate = n.GetStringValue(); } },
-                { "cancellation_mode", n => { CancellationMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails_cancellation_mode>(); } },
+                { "cancellation_mode", n => { CancellationMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode>(); } },
                 { "cancellation_number", n => { CancellationNumber = n.GetStringValue(); } },
                 { "cancelled", n => { Cancelled = n.GetBoolValue(); } },
             };
@@ -74,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cancellation_date", CancellationDate);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails_cancellation_mode>("cancellation_mode", CancellationMode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode>("cancellation_mode", CancellationMode);
             writer.WriteStringValue("cancellation_number", CancellationNumber);
             writer.WriteBoolValue("cancelled", Cancelled);
             writer.WriteAdditionalData(AdditionalData);

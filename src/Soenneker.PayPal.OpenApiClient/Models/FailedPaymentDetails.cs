@@ -32,7 +32,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string NextPaymentRetryTime { get; set; }
 #endif
         /// <summary>The reason code for the payment failure.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails_reason_code? ReasonCode { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetailsReasonCode? ReasonCode { get; private set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "next_payment_retry_time", n => { NextPaymentRetryTime = n.GetStringValue(); } },
-                { "reason_code", n => { ReasonCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails_reason_code>(); } },
+                { "reason_code", n => { ReasonCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetailsReasonCode>(); } },
                 { "time", n => { Time = n.GetStringValue(); } },
             };
         }

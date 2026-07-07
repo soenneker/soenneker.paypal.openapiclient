@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ON_SUCCESS")]
         #pragma warning disable CS1591
-        ON_SUCCESS,
+        OnSuccess,
         #pragma warning restore CS1591
     }
 }

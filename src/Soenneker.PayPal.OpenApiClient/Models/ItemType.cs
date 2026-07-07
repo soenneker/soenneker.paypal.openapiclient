@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "PRODUCT")]
         #pragma warning disable CS1591
-        PRODUCT,
+        Product,
         #pragma warning restore CS1591
         [EnumMember(Value = "SERVICE")]
         #pragma warning disable CS1591
-        SERVICE,
+        Service,
         #pragma warning restore CS1591
         [EnumMember(Value = "BOOKING")]
         #pragma warning disable CS1591
-        BOOKING,
+        Booking,
         #pragma warning restore CS1591
         [EnumMember(Value = "DIGITAL_DOWNLOAD")]
         #pragma warning disable CS1591
-        DIGITAL_DOWNLOAD,
+        DigitalDownload,
         #pragma warning restore CS1591
     }
 }

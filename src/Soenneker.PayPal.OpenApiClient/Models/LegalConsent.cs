@@ -18,7 +18,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Indicates whether the customer agreed to share this type of data. To give consent, specify `true`. To withhold consent, specify `false`.</summary>
         public bool? Granted { get; set; }
         /// <summary>The type of consent. `SHARE_DATA_CONSENT` gives consent to you to share your customer&apos;s data with PayPal.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LegalConsentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent"/> and sets the default values.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "granted", n => { Granted = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsentType>(); } },
             };
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("granted", Granted);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

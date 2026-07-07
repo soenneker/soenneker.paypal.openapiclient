@@ -27,18 +27,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of additional details about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_details>? Details { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorDetailsItem>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_details> Details { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorDetailsItem> Details { get; set; }
 #endif
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_links>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorLinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_links> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorLinksItem> Links { get; private set; }
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => MessageEscaped ?? string.Empty; }
@@ -84,8 +84,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_details>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_details.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_links>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_links.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorDetailsItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorDetailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
@@ -98,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("debug_id", DebugId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Error_details>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2ErrorDetailsItem>("details", Details);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);

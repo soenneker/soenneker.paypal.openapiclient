@@ -50,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo EvidenceInfo { get; set; }
 #endif
         /// <summary>The evidence type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Evidence_evidence_type? EvidenceType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType? EvidenceType { get; set; }
         /// <summary>The item ID. If the merchant provides multiple pieces of evidence and the transaction has multiple item IDs, the merchant can use this value to associate a piece of evidence with an item ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string Notes { get; set; }
 #endif
         /// <summary>The source of the evidence.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Evidence_source? Source { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceSource? Source { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Evidence"/> and sets the default values.
         /// </summary>
@@ -101,11 +101,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>(global::Soenneker.PayPal.OpenApiClient.Models.Document.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "evidence_info", n => { EvidenceInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo>(global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo.CreateFromDiscriminatorValue); } },
-                { "evidence_type", n => { EvidenceType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Evidence_evidence_type>(); } },
+                { "evidence_type", n => { EvidenceType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType>(); } },
                 { "item_id", n => { ItemId = n.GetStringValue(); } },
                 { "item_type", n => { ItemType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Evidence_source>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceSource>(); } },
             };
         }
         /// <summary>
@@ -119,7 +119,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("date", Date);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>("documents", Documents);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo>("evidence_info", EvidenceInfo);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Evidence_evidence_type>("evidence_type", EvidenceType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType>("evidence_type", EvidenceType);
             writer.WriteStringValue("item_id", ItemId);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>("item_type", ItemType);
             writer.WriteStringValue("notes", Notes);

@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DENIED")]
         #pragma warning disable CS1591
-        DENIED,
+        Denied,
         #pragma warning restore CS1591
         [EnumMember(Value = "PENDING")]
         #pragma warning disable CS1591
-        PENDING,
+        Pending,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROCESSING")]
         #pragma warning disable CS1591
-        PROCESSING,
+        Processing,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUCCESS")]
         #pragma warning disable CS1591
-        SUCCESS,
+        Success,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANCELED")]
         #pragma warning disable CS1591
-        CANCELED,
+        Canceled,
         #pragma warning restore CS1591
     }
 }

@@ -82,10 +82,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment_processor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor? PaymentProcessor { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoPaymentProcessor? PaymentProcessor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor PaymentProcessor { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoPaymentProcessor PaymentProcessor { get; set; }
 #endif
         /// <summary>The ID, as seen by the partner, for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string SellerTransactionId { get; set; }
 #endif
         /// <summary>The transaction status.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_transaction_status? TransactionStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoTransactionStatus? TransactionStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo"/> and sets the default values.
         /// </summary>
@@ -146,11 +146,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "gross_asset", n => { GrossAsset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
                 { "invoice_number", n => { InvoiceNumber = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo>(global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "payment_processor", n => { PaymentProcessor = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor>(global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor.CreateFromDiscriminatorValue); } },
+                { "payment_processor", n => { PaymentProcessor = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoPaymentProcessor>(global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoPaymentProcessor.CreateFromDiscriminatorValue); } },
                 { "reference_id", n => { ReferenceId = n.GetStringValue(); } },
                 { "seller", n => { Seller = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Seller>(global::Soenneker.PayPal.OpenApiClient.Models.Seller.CreateFromDiscriminatorValue); } },
                 { "seller_transaction_id", n => { SellerTransactionId = n.GetStringValue(); } },
-                { "transaction_status", n => { TransactionStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_transaction_status>(); } },
+                { "transaction_status", n => { TransactionStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoTransactionStatus>(); } },
             };
         }
         /// <summary>
@@ -168,11 +168,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("gross_asset", GrossAsset);
             writer.WriteStringValue("invoice_number", InvoiceNumber);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_payment_processor>("payment_processor", PaymentProcessor);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoPaymentProcessor>("payment_processor", PaymentProcessor);
             writer.WriteStringValue("reference_id", ReferenceId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Seller>("seller", Seller);
             writer.WriteStringValue("seller_transaction_id", SellerTransactionId);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo_transaction_status>("transaction_status", TransactionStatus);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfoTransactionStatus>("transaction_status", TransactionStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

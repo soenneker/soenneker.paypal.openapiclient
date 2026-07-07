@@ -31,6 +31,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public PartialPayment()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowPartialPayment = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

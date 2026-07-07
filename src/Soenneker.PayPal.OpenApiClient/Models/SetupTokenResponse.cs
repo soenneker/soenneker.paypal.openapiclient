@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The setup payment method details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponse_payment_source? PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource? PaymentSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponse_payment_source PaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource PaymentSource { get; set; }
 #endif
         /// <summary>The status of the payment token.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenStatus? Status { get; set; }
@@ -55,7 +55,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public SetupTokenResponse()
         {
             AdditionalData = new Dictionary<string, object>();
-            Status = global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenStatus.CREATED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -78,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponseCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponseCustomer.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponse_payment_source>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponse_payment_source.CreateFromDiscriminatorValue); } },
+                { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenStatus>(); } },
             };
         }
@@ -92,7 +91,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponseCustomer>("customer", Customer);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponse_payment_source>("payment_source", PaymentSource);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource>("payment_source", PaymentSource);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

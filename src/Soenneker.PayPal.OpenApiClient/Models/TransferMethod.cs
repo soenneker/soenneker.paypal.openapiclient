@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public List<string> Currencies { get; set; }
 #endif
         /// <summary>Transfer Method type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransferMethod_transfer_method_type? TransferMethodType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType? TransferMethodType { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "currencies", n => { Currencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "transfer_method_type", n => { TransferMethodType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethod_transfer_method_type>(); } },
+                { "transfer_method_type", n => { TransferMethodType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType>(); } },
             };
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("currencies", Currencies);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethod_transfer_method_type>("transfer_method_type", TransferMethodType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType>("transfer_method_type", TransferMethodType);
         }
     }
 }

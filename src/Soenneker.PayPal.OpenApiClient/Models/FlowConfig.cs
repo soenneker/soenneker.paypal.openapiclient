@@ -24,11 +24,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string BankTxnPendingUrl { get; set; }
 #endif
         /// <summary>The type of landing page to display on the PayPal site for user checkout. To use the non-PayPal account landing page, set to `Billing`. To use the PayPal account login landing page, set to `Login`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_landing_page_type? LandingPageType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType? LandingPageType { get; set; }
         /// <summary>The HTTP method to use to redirect the customer to a return URL. Value is `GET` or `POST`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_return_uri_http_method? ReturnUriHttpMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod? ReturnUriHttpMethod { get; set; }
         /// <summary>Presents either the **Continue** or **Pay Now** checkout flow to the customer.&lt;br/&gt;&lt;br/&gt;Default is **Continue**, or `user_action=continue`. When you do not know the final payment amount, accept this default flow, which redirects the customer to the PayPal payment page with the **Continue** button. When the customer clicks **Continue**, the customer can change the payment amount.&lt;br/&gt;&lt;br/&gt; When you know the final payment amount, set `user_action=commit` to choose the **Pay Now** flow, which redirects the customer to the PayPal payment page with the **Pay Now** button. When the customer clicks **Pay Now**, the payment is processed immediately.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_user_action? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction? UserAction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig"/> and sets the default values.
         /// </summary>
@@ -55,9 +55,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bank_txn_pending_url", n => { BankTxnPendingUrl = n.GetStringValue(); } },
-                { "landing_page_type", n => { LandingPageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_landing_page_type>(); } },
-                { "return_uri_http_method", n => { ReturnUriHttpMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_return_uri_http_method>(); } },
-                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_user_action>(); } },
+                { "landing_page_type", n => { LandingPageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>(); } },
+                { "return_uri_http_method", n => { ReturnUriHttpMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod>(); } },
+                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction>(); } },
             };
         }
         /// <summary>
@@ -68,9 +68,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bank_txn_pending_url", BankTxnPendingUrl);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_landing_page_type>("landing_page_type", LandingPageType);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_return_uri_http_method>("return_uri_http_method", ReturnUriHttpMethod);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig_user_action>("user_action", UserAction);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>("landing_page_type", LandingPageType);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod>("return_uri_http_method", ReturnUriHttpMethod);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

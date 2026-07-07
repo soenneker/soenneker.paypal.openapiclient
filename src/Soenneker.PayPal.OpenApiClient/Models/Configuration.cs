@@ -45,6 +45,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public Configuration()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowTip = false;
+            HasConditionalRule = false;
+            TaxCalculatedAfterDiscount = true;
+            TaxInclusive = false;
             TemplateId = "PayPal system template";
         }
         /// <summary>

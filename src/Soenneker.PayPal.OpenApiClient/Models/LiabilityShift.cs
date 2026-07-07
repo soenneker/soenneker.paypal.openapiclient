@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "NO")]
         #pragma warning disable CS1591
-        NO,
+        No,
         #pragma warning restore CS1591
         [EnumMember(Value = "POSSIBLE")]
         #pragma warning disable CS1591
-        POSSIBLE,
+        Possible,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
     }
 }

@@ -9,19 +9,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "DENY_BUYER")]
         #pragma warning disable CS1591
-        DENY_BUYER,
+        DenyBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYOUT_TO_BUYER")]
         #pragma warning disable CS1591
-        PAYOUT_TO_BUYER,
+        PayoutToBuyer,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYOUT_TO_SELLER")]
         #pragma warning disable CS1591
-        PAYOUT_TO_SELLER,
+        PayoutToSeller,
         #pragma warning restore CS1591
         [EnumMember(Value = "RECOVER_FROM_SELLER")]
         #pragma warning disable CS1591
-        RECOVER_FROM_SELLER,
+        RecoverFromSeller,
         #pragma warning restore CS1591
     }
 }

@@ -9,99 +9,99 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ANY_OTHER_BUSINESS_ENTITY")]
         #pragma warning disable CS1591
-        ANY_OTHER_BUSINESS_ENTITY,
+        AnyOtherBusinessEntity,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASSOCIATION")]
         #pragma warning disable CS1591
-        ASSOCIATION,
+        Association,
         #pragma warning restore CS1591
         [EnumMember(Value = "CORPORATION")]
         #pragma warning disable CS1591
-        CORPORATION,
+        Corporation,
         #pragma warning restore CS1591
         [EnumMember(Value = "GENERAL_PARTNERSHIP")]
         #pragma warning disable CS1591
-        GENERAL_PARTNERSHIP,
+        GeneralPartnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT")]
         #pragma warning disable CS1591
-        GOVERNMENT,
+        Government,
         #pragma warning restore CS1591
         [EnumMember(Value = "INDIVIDUAL")]
         #pragma warning disable CS1591
-        INDIVIDUAL,
+        Individual,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIMITED_LIABILITY_PARTNERSHIP")]
         #pragma warning disable CS1591
-        LIMITED_LIABILITY_PARTNERSHIP,
+        LimitedLiabilityPartnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIMITED_LIABILITY_PROPRIETORS")]
         #pragma warning disable CS1591
-        LIMITED_LIABILITY_PROPRIETORS,
+        LimitedLiabilityProprietors,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIMITED_LIABILITY_PRIVATE_CORPORATION")]
         #pragma warning disable CS1591
-        LIMITED_LIABILITY_PRIVATE_CORPORATION,
+        LimitedLiabilityPrivateCorporation,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIMITED_PARTNERSHIP")]
         #pragma warning disable CS1591
-        LIMITED_PARTNERSHIP,
+        LimitedPartnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIMITED_PARTNERSHIP_PRIVATE_CORPORATION")]
         #pragma warning disable CS1591
-        LIMITED_PARTNERSHIP_PRIVATE_CORPORATION,
+        LimitedPartnershipPrivateCorporation,
         #pragma warning restore CS1591
         [EnumMember(Value = "NONPROFIT")]
         #pragma warning disable CS1591
-        NONPROFIT,
+        Nonprofit,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLY_BUY_OR_SEND_MONEY")]
         #pragma warning disable CS1591
-        ONLY_BUY_OR_SEND_MONEY,
+        OnlyBuyOrSendMoney,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHER_CORPORATE_BODY")]
         #pragma warning disable CS1591
-        OTHER_CORPORATE_BODY,
+        OtherCorporateBody,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTNERSHIP")]
         #pragma warning disable CS1591
-        PARTNERSHIP,
+        Partnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRIVATE_PARTNERSHIP")]
         #pragma warning disable CS1591
-        PRIVATE_PARTNERSHIP,
+        PrivatePartnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROPRIETORSHIP")]
         #pragma warning disable CS1591
-        PROPRIETORSHIP,
+        Proprietorship,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROPRIETORSHIP_CRAFTSMAN")]
         #pragma warning disable CS1591
-        PROPRIETORSHIP_CRAFTSMAN,
+        ProprietorshipCraftsman,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROPRIETORY_COMPANY")]
         #pragma warning disable CS1591
-        PROPRIETORY_COMPANY,
+        ProprietoryCompany,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRIVATE_CORPORATION")]
         #pragma warning disable CS1591
-        PRIVATE_CORPORATION,
+        PrivateCorporation,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLIC_COMPANY")]
         #pragma warning disable CS1591
-        PUBLIC_COMPANY,
+        PublicCompany,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLIC_CORPORATION")]
         #pragma warning disable CS1591
-        PUBLIC_CORPORATION,
+        PublicCorporation,
         #pragma warning restore CS1591
         [EnumMember(Value = "PUBLIC_PARTNERSHIP")]
         #pragma warning disable CS1591
-        PUBLIC_PARTNERSHIP,
+        PublicPartnership,
         #pragma warning restore CS1591
         [EnumMember(Value = "REGISTERED_COOPERATIVE")]
         #pragma warning disable CS1591
-        REGISTERED_COOPERATIVE,
+        RegisteredCooperative,
         #pragma warning restore CS1591
     }
 }

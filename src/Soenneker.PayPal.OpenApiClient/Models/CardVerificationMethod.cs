@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "SCA_WHEN_REQUIRED")]
         #pragma warning disable CS1591
-        SCA_WHEN_REQUIRED,
+        ScaWhenRequired,
         #pragma warning restore CS1591
         [EnumMember(Value = "SCA_ALWAYS")]
         #pragma warning disable CS1591
-        SCA_ALWAYS,
+        ScaAlways,
         #pragma warning restore CS1591
     }
 }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authorizations.Item.Reauthorize
 {
     /// <summary>
-    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\authorizations\{authorization_id}\reauthorize
+    /// Builds and executes requests for operations under \payments_payment_v2\v2\payments\authorizations\{authorizationId}\reauthorize
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReauthorizeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReauthorizeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorization_id}/reauthorize", pathParameters)
+        public ReauthorizeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorizationId}/reauthorize", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payment_v2.V2.Payments.Authori
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReauthorizeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorization_id}/reauthorize", rawUrl)
+        public ReauthorizeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments_payment_v2/v2/payments/authorizations/{authorizationId}/reauthorize", rawUrl)
         {
         }
         /// <summary>

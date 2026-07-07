@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CANCELLED")]
         #pragma warning disable CS1591
-        CANCELLED,
+        Cancelled,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPED")]
         #pragma warning disable CS1591
-        SHIPPED,
+        Shipped,
         #pragma warning restore CS1591
     }
 }

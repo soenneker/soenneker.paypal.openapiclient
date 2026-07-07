@@ -40,11 +40,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string InitiatedTime { get; set; }
 #endif
         /// <summary>The affected party in the money movement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_party? Party { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FundMovementParty? Party { get; set; }
         /// <summary>The reason for the fund movement.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.FundMovementReason? Reason { get; set; }
         /// <summary>The type of the money movement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_type? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FundMovementType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FundMovement"/> and sets the default values.
         /// </summary>
@@ -73,9 +73,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
                 { "asset", n => { Asset = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
                 { "initiated_time", n => { InitiatedTime = n.GetStringValue(); } },
-                { "party", n => { Party = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_party>(); } },
+                { "party", n => { Party = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementParty>(); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementReason>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementType>(); } },
             };
         }
         /// <summary>
@@ -88,9 +88,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("asset", Asset);
             writer.WriteStringValue("initiated_time", InitiatedTime);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_party>("party", Party);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementParty>("party", Party);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementReason>("reason", Reason);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundMovementType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

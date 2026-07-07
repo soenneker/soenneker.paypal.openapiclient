@@ -9,23 +9,23 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ITEMS_QUANTITY")]
         #pragma warning disable CS1591
-        ITEMS_QUANTITY,
+        ItemsQuantity,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEMS_DESCRIPTION")]
         #pragma warning disable CS1591
-        ITEMS_DESCRIPTION,
+        ItemsDescription,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEMS_DATE")]
         #pragma warning disable CS1591
-        ITEMS_DATE,
+        ItemsDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEMS_DISCOUNT")]
         #pragma warning disable CS1591
-        ITEMS_DISCOUNT,
+        ItemsDiscount,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEMS_TAX")]
         #pragma warning disable CS1591
-        ITEMS_TAX,
+        ItemsTax,
         #pragma warning restore CS1591
     }
 }

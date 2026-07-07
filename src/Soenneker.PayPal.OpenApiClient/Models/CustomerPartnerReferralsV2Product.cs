@@ -9,83 +9,83 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "ALIPAY")]
         #pragma warning disable CS1591
-        ALIPAY,
+        Alipay,
         #pragma warning restore CS1591
         [EnumMember(Value = "BANCONTACT")]
         #pragma warning disable CS1591
-        BANCONTACT,
+        Bancontact,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLIK")]
         #pragma warning disable CS1591
-        BLIK,
+        Blik,
         #pragma warning restore CS1591
         [EnumMember(Value = "EPS")]
         #pragma warning disable CS1591
-        EPS,
+        Eps,
         #pragma warning restore CS1591
         [EnumMember(Value = "PPCP")]
         #pragma warning disable CS1591
-        PPCP,
+        Ppcp,
         #pragma warning restore CS1591
         [EnumMember(Value = "EXPRESS_CHECKOUT")]
         #pragma warning disable CS1591
-        EXPRESS_CHECKOUT,
+        ExpressCheckout,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYMENT_METHODS")]
         #pragma warning disable CS1591
-        PAYMENT_METHODS,
+        PaymentMethods,
         #pragma warning restore CS1591
         [EnumMember(Value = "ADVANCED_VAULTING")]
         #pragma warning disable CS1591
-        ADVANCED_VAULTING,
+        AdvancedVaulting,
         #pragma warning restore CS1591
         [EnumMember(Value = "IDEAL")]
         #pragma warning disable CS1591
-        IDEAL,
+        Ideal,
         #pragma warning restore CS1591
         [EnumMember(Value = "MB_WAY")]
         #pragma warning disable CS1591
-        MB_WAY,
+        MbWay,
         #pragma warning restore CS1591
         [EnumMember(Value = "MULTIBANCO")]
         #pragma warning disable CS1591
-        MULTIBANCO,
+        Multibanco,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAYPAL_COMMERCE_PLATFORM_BUSINESS")]
         #pragma warning disable CS1591
-        PAYPAL_COMMERCE_PLATFORM_BUSINESS,
+        PaypalCommercePlatformBusiness1,
         #pragma warning restore CS1591
         [EnumMember(Value = "PPPLUS")]
         #pragma warning disable CS1591
-        PPPLUS,
+        Ppplus,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRZELEWY24")]
         #pragma warning disable CS1591
-        PRZELEWY24,
+        Przelewy24,
         #pragma warning restore CS1591
         [EnumMember(Value = "SATISPAY")]
         #pragma warning disable CS1591
-        SATISPAY,
+        Satispay,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRUSTLY")]
         #pragma warning disable CS1591
-        TRUSTLY,
+        Trustly,
         #pragma warning restore CS1591
         [EnumMember(Value = "WECHAT_PAY")]
         #pragma warning disable CS1591
-        WECHAT_PAY,
+        WechatPay,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEBSITE_PAYMENT_PRO")]
         #pragma warning disable CS1591
-        WEBSITE_PAYMENT_PRO,
+        WebsitePaymentPro,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZETTLE")]
         #pragma warning disable CS1591
-        ZETTLE,
+        Zettle,
         #pragma warning restore CS1591
         [EnumMember(Value = "HYPERWALLET_PAYOUTS")]
         #pragma warning disable CS1591
-        HYPERWALLET_PAYOUTS,
+        HyperwalletPayouts,
         #pragma warning restore CS1591
     }
 }

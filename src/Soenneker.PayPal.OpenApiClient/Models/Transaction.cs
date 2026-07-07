@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.Name PayerName { get; set; }
 #endif
         /// <summary>The status of the captured payment.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Transaction_status? Status { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionStatus? Status { get; private set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "payer_email", n => { PayerEmail = n.GetStringValue(); } },
                 { "payer_name", n => { PayerName = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Name>(global::Soenneker.PayPal.OpenApiClient.Models.Name.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Transaction_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransactionStatus>(); } },
                 { "time", n => { Time = n.GetStringValue(); } },
             };
         }

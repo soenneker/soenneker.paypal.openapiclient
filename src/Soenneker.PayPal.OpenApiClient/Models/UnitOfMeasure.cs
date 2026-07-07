@@ -9,15 +9,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "QUANTITY")]
         #pragma warning disable CS1591
-        QUANTITY,
+        Quantity,
         #pragma warning restore CS1591
         [EnumMember(Value = "HOURS")]
         #pragma warning disable CS1591
-        HOURS,
+        Hours,
         #pragma warning restore CS1591
         [EnumMember(Value = "AMOUNT")]
         #pragma warning disable CS1591
-        AMOUNT,
+        Amount,
         #pragma warning restore CS1591
     }
 }

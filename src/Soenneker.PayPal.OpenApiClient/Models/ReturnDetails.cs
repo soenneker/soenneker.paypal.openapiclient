@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method that the customer used to return the product.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails_mode? Mode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? Mode { get; set; }
         /// <summary>Indicates whether customer has the return receipt.</summary>
         public bool? Receipt { get; set; }
         /// <summary>The confirmation number for the item return.</summary>
@@ -62,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails_mode>(); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode>(); } },
                 { "receipt", n => { Receipt = n.GetBoolValue(); } },
                 { "return_confirmation_number", n => { ReturnConfirmationNumber = n.GetStringValue(); } },
                 { "return_time", n => { ReturnTime = n.GetStringValue(); } },
@@ -76,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails_mode>("mode", Mode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode>("mode", Mode);
             writer.WriteBoolValue("receipt", Receipt);
             writer.WriteStringValue("return_confirmation_number", ReturnConfirmationNumber);
             writer.WriteBoolValue("returned", Returned);

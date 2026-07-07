@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of events to which to subscribe your webhook. To subscribe to all events, including events as they are added, specify the asterisk wild card. To replace the `event_types` array, specify the asterisk wild card. To list all supported events, &lt;a href=&quot;#event-type_list&quot;&gt;list available events&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType>? EventTypes { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType2>? EventTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType> EventTypes { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EventType2> EventTypes { get; set; }
 #endif
         /// <summary>The ID of the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "event_types", n => { EventTypes = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType>(global::Soenneker.PayPal.OpenApiClient.Models.EventType.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "event_types", n => { EventTypes = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType2>(global::Soenneker.PayPal.OpenApiClient.Models.EventType2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType>("event_types", EventTypes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.EventType2>("event_types", EventTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

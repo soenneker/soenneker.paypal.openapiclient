@@ -48,7 +48,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string ReturnUrl { get; set; }
 #endif
         /// <summary>The shipping preference. This only applies to PayPal payment source.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext_shipping_preference? ShippingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextShippingPreference? ShippingPreference { get; set; }
         /// <summary>Vault Instruction on action to be performed after a successful payer approval.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction? VaultInstruction { get; set; }
         /// <summary>
@@ -57,8 +57,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public ExperienceContext()
         {
             AdditionalData = new Dictionary<string, object>();
-            ShippingPreference = global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext_shipping_preference.GET_FROM_FILE;
-            VaultInstruction = global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction.ON_CREATE_PAYMENT_TOKENS;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -82,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
-                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext_shipping_preference>(); } },
+                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextShippingPreference>(); } },
                 { "vault_instruction", n => { VaultInstruction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction>(); } },
             };
         }
@@ -97,7 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("return_url", ReturnUrl);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext_shipping_preference>("shipping_preference", ShippingPreference);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextShippingPreference>("shipping_preference", ShippingPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction>("vault_instruction", VaultInstruction);
             writer.WriteAdditionalData(AdditionalData);
         }

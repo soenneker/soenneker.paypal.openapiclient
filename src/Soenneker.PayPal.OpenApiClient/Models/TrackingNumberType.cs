@@ -9,11 +9,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "CARRIER_PROVIDED")]
         #pragma warning disable CS1591
-        CARRIER_PROVIDED,
+        CarrierProvided,
         #pragma warning restore CS1591
         [EnumMember(Value = "E2E_PARTNER_PROVIDED")]
         #pragma warning disable CS1591
-        E2E_PARTNER_PROVIDED,
+        E2EPartnerProvided,
         #pragma warning restore CS1591
     }
 }

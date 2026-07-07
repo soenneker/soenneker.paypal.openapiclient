@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string PurchaseUrl { get; set; }
 #endif
         /// <summary>Indicates whether the service was started or cancelled.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails_service_started? ServiceStarted { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted? ServiceStarted { get; set; }
         /// <summary>An array of sub-reasons for the service issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "purchase_url", n => { PurchaseUrl = n.GetStringValue(); } },
-                { "service_started", n => { ServiceStarted = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails_service_started>(); } },
+                { "service_started", n => { ServiceStarted = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted>(); } },
                 { "sub_reasons", n => { SubReasons = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons>()?.AsList(); } },
             };
         }
@@ -91,7 +91,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("note", Note);
             writer.WriteStringValue("purchase_url", PurchaseUrl);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails_service_started>("service_started", ServiceStarted);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted>("service_started", ServiceStarted);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons>("sub_reasons", SubReasons);
             writer.WriteAdditionalData(AdditionalData);
         }

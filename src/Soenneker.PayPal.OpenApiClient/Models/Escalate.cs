@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The buyer_escalation_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Escalate_buyer_escalation_reason? BuyerEscalationReason { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EscalateBuyerEscalationReason? BuyerEscalationReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Escalate_buyer_escalation_reason BuyerEscalationReason { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EscalateBuyerEscalationReason BuyerEscalationReason { get; set; }
 #endif
         /// <summary>The notes about the escalation of the dispute to a claim.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "buyer_escalation_reason", n => { BuyerEscalationReason = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Escalate_buyer_escalation_reason>(global::Soenneker.PayPal.OpenApiClient.Models.Escalate_buyer_escalation_reason.CreateFromDiscriminatorValue); } },
+                { "buyer_escalation_reason", n => { BuyerEscalationReason = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EscalateBuyerEscalationReason>(global::Soenneker.PayPal.OpenApiClient.Models.EscalateBuyerEscalationReason.CreateFromDiscriminatorValue); } },
                 { "note", n => { Note = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Escalate_buyer_escalation_reason>("buyer_escalation_reason", BuyerEscalationReason);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EscalateBuyerEscalationReason>("buyer_escalation_reason", BuyerEscalationReason);
             writer.WriteStringValue("note", Note);
             writer.WriteAdditionalData(AdditionalData);
         }

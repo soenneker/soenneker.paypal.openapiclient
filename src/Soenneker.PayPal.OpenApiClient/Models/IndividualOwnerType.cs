@@ -9,7 +9,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         [EnumMember(Value = "PRIMARY")]
         #pragma warning disable CS1591
-        PRIMARY,
+        Primary,
         #pragma warning restore CS1591
     }
 }

@@ -16,9 +16,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address verification code for Visa, Discover, Mastercard, or American Express transactions.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse_avs_code? AvsCode { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponseAvsCode? AvsCode { get; private set; }
         /// <summary>The card verification value code for for Visa, Discover, Mastercard, or American Express.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse_cvv_code? CvvCode { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponseCvvCode? CvvCode { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse"/> and sets the default values.
         /// </summary>
@@ -44,8 +44,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "avs_code", n => { AvsCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse_avs_code>(); } },
-                { "cvv_code", n => { CvvCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponse_cvv_code>(); } },
+                { "avs_code", n => { AvsCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponseAvsCode>(); } },
+                { "cvv_code", n => { CvvCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationDetailsProcessorResponseCvvCode>(); } },
             };
         }
         /// <summary>
