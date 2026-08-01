@@ -7785,7 +7785,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesCreate400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesCreate400MixedResponse"
                 }
               }
             }
@@ -7815,7 +7815,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesCreate422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesCreate422MixedResponse"
                 }
               }
             }
@@ -7894,7 +7894,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesList400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesList400MixedResponse"
                 }
               }
             }
@@ -8118,7 +8118,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind400MixedResponse"
                 }
               }
             }
@@ -8133,7 +8133,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind403MixedResponse"
                 }
               }
             }
@@ -8163,7 +8163,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRemind422MixedResponse"
                 }
               }
             }
@@ -8332,7 +8332,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments400MixedResponse"
                 }
               }
             }
@@ -8347,7 +8347,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments403MixedResponse"
                 }
               }
             }
@@ -8377,7 +8377,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesPayments422MixedResponse"
                 }
               }
             }
@@ -8539,7 +8539,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds400MixedResponse"
                 }
               }
             }
@@ -8554,7 +8554,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds403MixedResponse"
                 }
               }
             }
@@ -8584,7 +8584,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefunds422MixedResponse"
                 }
               }
             }
@@ -8659,7 +8659,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefundsDelete403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesRefundsDelete403MixedResponse"
                 }
               }
             }
@@ -8736,7 +8736,7 @@
             "content": {
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesGenerateQrCode400Response"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesGenerateQrCode400MixedResponse"
                 }
               }
             }
@@ -8746,7 +8746,7 @@
             "content": {
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesGenerateQrCode403Response"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesGenerateQrCode403MixedResponse"
                 }
               }
             }
@@ -8986,7 +8986,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate400MixedResponse"
                 }
               }
             }
@@ -9001,7 +9001,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate403MixedResponse"
                 }
               }
             }
@@ -9031,7 +9031,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesUpdate422MixedResponse"
                 }
               }
             }
@@ -9184,7 +9184,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2InvoicesSearchInvoices400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2InvoicesSearchInvoices400MixedResponse"
                 }
               }
             }
@@ -9277,7 +9277,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2TemplatesList400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2TemplatesList400MixedResponse"
                 }
               }
             }
@@ -9366,7 +9366,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2TemplatesCreate400ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2TemplatesCreate400MixedResponse"
                 }
               }
             }
@@ -9396,7 +9396,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2TemplatesCreate422ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2TemplatesCreate422MixedResponse"
                 }
               }
             }
@@ -9468,7 +9468,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2TemplatesGet403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2TemplatesGet403MixedResponse"
                 }
               }
             }
@@ -9623,7 +9623,7 @@
               },
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoicingV2TemplatesDelete403ResponseResponseMixed"
+                  "$ref": "#/components/schemas/InvoicingV2TemplatesDelete403MixedResponse"
                 }
               }
             }
@@ -89162,7 +89162,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesCreate400ResponseResponseMixed": {
+      "InvoicingV2InvoicesCreate400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89222,7 +89222,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesCreate422ResponseResponseMixed": {
+      "InvoicingV2InvoicesCreate422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89282,7 +89282,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesList400ResponseResponseMixed": {
+      "InvoicingV2InvoicesList400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89342,7 +89342,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRemind400ResponseResponseMixed": {
+      "InvoicingV2InvoicesRemind400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89402,7 +89402,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRemind403ResponseResponseMixed": {
+      "InvoicingV2InvoicesRemind403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89462,7 +89462,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRemind422ResponseResponseMixed": {
+      "InvoicingV2InvoicesRemind422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89612,7 +89612,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesPayments400ResponseResponseMixed": {
+      "InvoicingV2InvoicesPayments400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89672,7 +89672,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesPayments403ResponseResponseMixed": {
+      "InvoicingV2InvoicesPayments403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89732,7 +89732,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesPayments422ResponseResponseMixed": {
+      "InvoicingV2InvoicesPayments422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89852,7 +89852,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRefunds400ResponseResponseMixed": {
+      "InvoicingV2InvoicesRefunds400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89912,7 +89912,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRefunds403ResponseResponseMixed": {
+      "InvoicingV2InvoicesRefunds403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -89972,7 +89972,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRefunds422ResponseResponseMixed": {
+      "InvoicingV2InvoicesRefunds422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90032,7 +90032,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesRefundsDelete403ResponseResponseMixed": {
+      "InvoicingV2InvoicesRefundsDelete403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90062,7 +90062,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesGenerateQrCode400Response": {
+      "InvoicingV2InvoicesGenerateQrCode400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90092,7 +90092,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesGenerateQrCode403Response": {
+      "InvoicingV2InvoicesGenerateQrCode403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90182,7 +90182,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesUpdate400ResponseResponseMixed": {
+      "InvoicingV2InvoicesUpdate400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90242,7 +90242,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesUpdate403ResponseResponseMixed": {
+      "InvoicingV2InvoicesUpdate403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90302,7 +90302,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesUpdate422ResponseResponseMixed": {
+      "InvoicingV2InvoicesUpdate422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90392,7 +90392,7 @@
           }
         }
       },
-      "InvoicingV2InvoicesSearchInvoices400ResponseResponseMixed": {
+      "InvoicingV2InvoicesSearchInvoices400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90452,7 +90452,7 @@
           }
         }
       },
-      "InvoicingV2TemplatesList400ResponseResponseMixed": {
+      "InvoicingV2TemplatesList400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90512,7 +90512,7 @@
           }
         }
       },
-      "InvoicingV2TemplatesCreate400ResponseResponseMixed": {
+      "InvoicingV2TemplatesCreate400MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90572,7 +90572,7 @@
           }
         }
       },
-      "InvoicingV2TemplatesCreate422ResponseResponseMixed": {
+      "InvoicingV2TemplatesCreate422MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90632,7 +90632,7 @@
           }
         }
       },
-      "InvoicingV2TemplatesGet403ResponseResponseMixed": {
+      "InvoicingV2TemplatesGet403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
@@ -90752,7 +90752,7 @@
           }
         }
       },
-      "InvoicingV2TemplatesDelete403ResponseResponseMixed": {
+      "InvoicingV2TemplatesDelete403MixedResponse": {
         "type": "object",
         "properties": {
           "name": {
