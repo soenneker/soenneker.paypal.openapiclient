@@ -58,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string MessageId { get; set; }
 #endif
         /// <summary>The type of the payment credential. Currently, only CARD is supported.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataPaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardPaymentMethod? PaymentMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestDecryptedToken"/> and sets the default values.
         /// </summary>
@@ -90,7 +90,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "eci_indicator", n => { EciIndicator = n.GetStringValue(); } },
                 { "message_expiration", n => { MessageExpiration = n.GetStringValue(); } },
                 { "message_id", n => { MessageId = n.GetStringValue(); } },
-                { "payment_method", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataPaymentMethod>(); } },
+                { "payment_method", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardPaymentMethod>(); } },
             };
         }
         /// <summary>
@@ -106,7 +106,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("eci_indicator", EciIndicator);
             writer.WriteStringValue("message_expiration", MessageExpiration);
             writer.WriteStringValue("message_id", MessageId);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.GooglePayDecryptedTokenDataPaymentMethod>("payment_method", PaymentMethod);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

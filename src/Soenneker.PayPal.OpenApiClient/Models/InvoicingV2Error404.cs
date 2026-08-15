@@ -43,9 +43,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Message? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TheSpecifiedResourceDoesNotExistMessage? MessageEscaped { get; set; }
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ResourceNotFoundName? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404"/> and sets the default values.
         /// </summary>
@@ -74,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Message>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Name>(); } },
+                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TheSpecifiedResourceDoesNotExistMessage>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ResourceNotFoundName>(); } },
             };
         }
         /// <summary>
@@ -88,8 +88,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("debug_id", DebugId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails>("details", Details);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Message>("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404Name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TheSpecifiedResourceDoesNotExistMessage>("message", MessageEscaped);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ResourceNotFoundName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

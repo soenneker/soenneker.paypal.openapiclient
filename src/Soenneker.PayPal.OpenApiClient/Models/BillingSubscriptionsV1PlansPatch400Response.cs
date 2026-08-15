@@ -42,9 +42,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Error400Message? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage? MessageEscaped { get; set; }
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.Error400Name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvalidRequestName? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingSubscriptionsV1PlansPatch400Response"/> and sets the default values.
         /// </summary>
@@ -73,8 +73,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ErrorDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Error400Message>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Error400Name>(); } },
+                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvalidRequestName>(); } },
             };
         }
         /// <summary>
@@ -87,8 +87,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("debug_id", DebugId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ErrorDetails>("details", Details);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ErrorLinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Error400Message>("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.Error400Name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage>("message", MessageEscaped);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvalidRequestName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

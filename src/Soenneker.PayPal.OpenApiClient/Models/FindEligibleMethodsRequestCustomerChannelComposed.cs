@@ -15,7 +15,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The browser used by the customer. Example: Safari, Chrome, etc.&quot;</summary>
+        /// <summary>The browser used by the customer. Example: Safari, Chrome, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BrowserType { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string BrowserType { get; set; }
 #endif
-        /// <summary>&quot;The operating system on the device used by the customer. Example: iOS 16.5, Android 30, etc.&quot;</summary>
+        /// <summary>The operating system on the device used by the customer. Example: iOS 16.5, Android 30, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientOs { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string ClientOs { get; set; }
 #endif
-        /// <summary>&quot;The type of device used by the customer. Example: Mobile, Desktop, Tablet, etc.&quot;</summary>
+        /// <summary>The type of device used by the customer. Example: Mobile, Desktop, Tablet, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeviceType { get; set; }

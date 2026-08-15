@@ -27,7 +27,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Quantity { get; set; }
 #endif
-        /// <summary>&quot;The quantity of a cryptocurrency asset in the currency&apos;s sub units.&lt;br/&gt;Amount is an integer in a string format.&lt;br/&gt;Floating point should be avoided to avoid precision errors. For example: &lt;li&gt;Bitcoin(BTC) has 8 decimals,&lt;/li&gt; so 1 BTC will be represented as 100000000 (1 followed by 8 zeroes). &lt;li&gt;Ethereum(ETH) has 18 decimals,&lt;/li&gt; so 1 ETH will be represented as 1000000000000000000 (1 followed by 18 zeroes).&quot;</summary>
+        /// <summary>The quantity of a cryptocurrency asset in the currency&apos;s sub units.&lt;br/&gt;Amount is an integer in a string format.&lt;br/&gt;Floating point should be avoided to avoid precision errors. For example: &lt;li&gt;Bitcoin(BTC) has 8 decimals,&lt;/li&gt; so 1 BTC will be represented as 100000000 (1 followed by 8 zeroes). &lt;li&gt;Ethereum(ETH) has 18 decimals,&lt;/li&gt; so 1 ETH will be represented as 1000000000000000000 (1 followed by 18 zeroes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? QuantityInSubunits { get; set; }

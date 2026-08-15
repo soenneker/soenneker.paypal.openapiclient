@@ -28,7 +28,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The HTTP method to use to redirect the customer to a return URL. Value is `GET` or `POST`.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod? ReturnUriHttpMethod { get; set; }
         /// <summary>Presents either the **Continue** or **Pay Now** checkout flow to the customer.&lt;br/&gt;&lt;br/&gt;Default is **Continue**, or `user_action=continue`. When you do not know the final payment amount, accept this default flow, which redirects the customer to the PayPal payment page with the **Continue** button. When the customer clicks **Continue**, the customer can change the payment amount.&lt;br/&gt;&lt;br/&gt; When you know the final payment amount, set `user_action=commit` to choose the **Pay Now** flow, which redirects the customer to the PayPal payment page with the **Pay Now** button. When the customer clicks **Pay Now**, the payment is processed immediately.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction? UserAction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig"/> and sets the default values.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "bank_txn_pending_url", n => { BankTxnPendingUrl = n.GetStringValue(); } },
                 { "landing_page_type", n => { LandingPageType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>(); } },
                 { "return_uri_http_method", n => { ReturnUriHttpMethod = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod>(); } },
-                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction>(); } },
+                { "user_action", n => { UserAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction>(); } },
             };
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("bank_txn_pending_url", BankTxnPendingUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>("landing_page_type", LandingPageType);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod>("return_uri_http_method", ReturnUriHttpMethod);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigUserAction>("user_action", UserAction);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction>("user_action", UserAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

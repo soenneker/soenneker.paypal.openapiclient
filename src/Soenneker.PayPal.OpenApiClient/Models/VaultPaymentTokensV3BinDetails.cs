@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string IssuingBank { get; set; }
 #endif
-        /// <summary>&quot;The type of card product assigned to the BIN by the issuer. These values are defined by the issuer and may change over time. Some examples include: PREPAID_GIFT, CONSUMER, CORPORATE.&quot;</summary>
+        /// <summary>The type of card product assigned to the BIN by the issuer. These values are defined by the issuer and may change over time. Some examples include: PREPAID_GIFT, CONSUMER, CORPORATE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Products { get; set; }

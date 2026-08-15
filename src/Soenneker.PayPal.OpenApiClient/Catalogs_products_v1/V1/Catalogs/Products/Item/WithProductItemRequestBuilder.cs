@@ -65,7 +65,6 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
         /// <summary>
         /// Updates a product, by ID. You can patch these attributes and objects:&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Attribute or object&lt;/th&gt;&lt;th&gt;Operations&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add, replace, remove&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add, replace, remove&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;image_url&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add, replace, remove&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;home_url&lt;/code&gt;&lt;/td&gt;&lt;td&gt;add, replace, remove&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">An array of JSON patch objects to apply partial updates to resources.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -77,11 +76,11 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -95,7 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsPatch422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Shows details for a product, by ID.

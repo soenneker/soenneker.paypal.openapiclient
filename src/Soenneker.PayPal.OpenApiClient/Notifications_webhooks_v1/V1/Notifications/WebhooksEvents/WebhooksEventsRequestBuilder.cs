@@ -103,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WebhooksEventsRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Filters the webhook event notifications in the response to those created on or after the `start_time` and on or before this date and time. Both values are in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6) format. Example: `end_time=2013-03-06T11:00:00Z`.&quot;</summary>
+            /// <summary>Filters the webhook event notifications in the response to those created on or after the `start_time` and on or before this date and time. Both values are in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6) format. Example: `end_time=2013-03-06T11:00:00Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("end_time")]
@@ -126,7 +126,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
             /// <summary>The number of webhook event notifications to return in the response.</summary>
             [QueryParameter("page_size")]
             public int? PageSize { get; set; }
-            /// <summary>&quot;Filters the webhook event notifications in the response to those created on or after this date and time and on or before the `end_time` value. Both values are in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6) format. Example: `start_time=2013-03-06T11:00:00Z`.&quot;</summary>
+            /// <summary>Filters the webhook event notifications in the response to those created on or after this date and time and on or before the `end_time` value. Both values are in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6) format. Example: `start_time=2013-03-06T11:00:00Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("start_time")]

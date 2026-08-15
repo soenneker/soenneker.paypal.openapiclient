@@ -17,7 +17,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customer type associated with a digital wallet payment token. This is to indicate whether the customer acting on the merchant / platform is either a business or a consumer.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? CustomerType { get; set; }
-        /// <summary>&quot;The description displayed to the consumer on the approval flow for a digital wallet, as well as on the merchant view of the payment token management experience. exp: PayPal.com.&quot;</summary>
+        /// <summary>The description displayed to the consumer on the approval flow for a digital wallet, as well as on the merchant view of the payment token management experience. exp: PayPal.com.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

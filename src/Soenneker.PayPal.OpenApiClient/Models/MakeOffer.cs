@@ -41,7 +41,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>The merchant-proposed offer type for the dispute.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.OfferType? OfferType { get; set; }
-        /// <summary>&quot;The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).&quot;</summary>
+        /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable? ReturnShippingAddress { get; set; }

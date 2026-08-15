@@ -23,7 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string EventType { get; set; }
 #endif
-        /// <summary>&quot;The identifier for event type ex: 1.0/2.0 etc.&quot;</summary>
+        /// <summary>The identifier for event type ex: 1.0/2.0 etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ResourceVersion { get; set; }

@@ -36,18 +36,17 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <summary>
         /// Deletes a web experience profile, by ID.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 500 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -56,7 +55,7 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Shows details for a web experience profile, by ID.
@@ -86,7 +85,6 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <summary>
         /// Partially-updates a web experience profile, by ID. In the JSON request body, specify a patch object, the path of the profile location to update, and a new value.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">An array of JSON patch objects to apply partial updates to resources.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,11 +92,11 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Patch> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -108,12 +106,11 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a web experience profile, by ID. In the JSON request body, specify the profile details. If your request omits any profile parameters, any previously set values for those parameters are removed.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">A payment web experience profile.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -121,11 +118,11 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PutAsync(global::Soenneker.PayPal.OpenApiClient.Models.WebProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -135,7 +132,7 @@ namespace Soenneker.PayPal.OpenApiClient.PaymentExperience_web_experience_profil
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a web experience profile, by ID.

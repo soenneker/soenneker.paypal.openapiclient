@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string HollerUrl { get; set; }
 #endif
-        /// <summary>&quot;Link to a logo that displays as the sender&apos;s profile image in the recipient&apos;s Venmo feed. Used to add or update the business profile image. Max image size: 1024 x 1024 pixels. The image should be square and maximum URL length is 2000.&quot;</summary>
+        /// <summary>Link to a logo that displays as the sender&apos;s profile image in the recipient&apos;s Venmo feed. Used to add or update the business profile image. Max image size: 1024 x 1024 pixels. The image should be square and maximum URL length is 2000.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogoUrl { get; set; }

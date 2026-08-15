@@ -72,7 +72,6 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <summary>
         /// Deletes a draft or scheduled invoice, by ID. Deletes invoices in the draft or scheduled state only. For invoices that have already been sent, you can &lt;a href=&quot;/docs/api/invoicing/v2/#invoices_cancel&quot;&gt;cancel the invoice&lt;/a&gt;. After you delete a draft or scheduled invoice, you can no longer use it or show its details. However, you can reuse its invoice number.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400">When receiving a 400 status code</exception>
@@ -81,11 +80,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -96,7 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Shows details for an invoice, by ID.

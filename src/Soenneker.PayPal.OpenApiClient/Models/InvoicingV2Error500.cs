@@ -35,9 +35,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Message? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AnInternalServerErrorOccurredMessage? MessageEscaped { get; set; }
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InternalServerErrorName? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500"/> and sets the default values.
         /// </summary>
@@ -65,8 +65,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Message>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Name>(); } },
+                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AnInternalServerErrorOccurredMessage>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InternalServerErrorName>(); } },
             };
         }
         /// <summary>
@@ -78,8 +78,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("debug_id", DebugId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Message>("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500Name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AnInternalServerErrorOccurredMessage>("message", MessageEscaped);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InternalServerErrorName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
