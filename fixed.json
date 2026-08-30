@@ -42900,7 +42900,11 @@
             "$ref": "#/components/schemas/CurrencyRange"
           },
           "purpose_code": {
-            "$ref": "#/components/schemas/BusinessEntityPurposeCode"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PurposeCodeEnum"
+            },
+            "description": "The account\u0027s purpose code."
           },
           "business_description": {
             "maxLength": 256,
@@ -74282,7 +74286,11 @@
             "$ref": "#/components/schemas/CurrencyRange"
           },
           "purpose_code": {
-            "$ref": "#/components/schemas/BusinessEntityAllOf3PurposeCode"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PurposeCodeEnum"
+            },
+            "description": "The account\u0027s purpose code."
           },
           "business_description": {
             "maxLength": 256,
@@ -90346,13 +90354,6 @@
       "TransactionInfoPaymentProcessor": {
         "type": "object"
       },
-      "BusinessEntityPurposeCode": {
-        "type": "object",
-        "items": {
-          "$ref": "#/components/schemas/PurposeCodeEnum"
-        },
-        "description": "The account\u0027s purpose code."
-      },
       "DependentProcessListItem": {
         "type": "object"
       },
@@ -90599,13 +90600,6 @@
         "title": "Patch Value",
         "type": "object",
         "description": "The value to apply. The \u003Ccode\u003Eremove\u003C/code\u003E, \u003Ccode\u003Ecopy\u003C/code\u003E, and \u003Ccode\u003Emove\u003C/code\u003E operations do not require a value. Since \u003Ca href=\u0022https://www.rfc-editor.org/rfc/rfc6902\u0022\u003EJSON Patch\u003C/a\u003E allows any type for \u003Ccode\u003Evalue\u003C/code\u003E, the \u003Ccode\u003Etype\u003C/code\u003E property is not specified."
-      },
-      "BusinessEntityAllOf3PurposeCode": {
-        "type": "object",
-        "items": {
-          "$ref": "#/components/schemas/PurposeCodeEnum"
-        },
-        "description": "The account\u0027s purpose code."
       },
       "ReferralDataAllOf2OutsideProcessDependenciesItem": {
         "type": "object"

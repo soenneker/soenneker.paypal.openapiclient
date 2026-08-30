@@ -114,10 +114,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The account&apos;s purpose code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntityPurposeCode? PurposeCode { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum?>? PurposeCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntityPurposeCode PurposeCode { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum?> PurposeCode { get; set; }
 #endif
         /// <summary>Website of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,7 +164,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "names", n => { Names = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "purpose_code", n => { PurposeCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntityPurposeCode>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntityPurposeCode.CreateFromDiscriminatorValue); } },
+                { "purpose_code", n => { PurposeCode = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum>()?.AsList(); } },
                 { "website", n => { Website = n.GetStringValue(); } },
             };
         }
@@ -187,7 +187,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>("emails", Emails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>("names", Names);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>("phones", Phones);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntityPurposeCode>("purpose_code", PurposeCode);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum>("purpose_code", PurposeCode);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }
