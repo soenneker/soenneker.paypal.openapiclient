@@ -2,7 +2,7 @@
   "descriptionHash": "8130A3380ECB172AA4513BE06D8ECE26750BB4BEB7390F7A970040613018AAE3D0538EC642DE6C02378DD5A07F6594C5690B48F11439BB1BBFF6B3914D92CA05",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "PayPalOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.PayPal.OpenApiClient",
