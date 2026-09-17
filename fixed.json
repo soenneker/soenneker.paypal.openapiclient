@@ -2248,7 +2248,12 @@
         "operationId": "CatalogsProductsV1ProductsGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/catalogs_products_v1_product_id"
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2323,7 +2328,12 @@
         "operationId": "CatalogsProductsV1ProductsPatch",
         "parameters": [
           {
-            "$ref": "#/components/parameters/catalogs_products_v1_product_id"
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -7453,7 +7463,12 @@
         "operationId": "CustomerPartnerReferralsV2PartnerReferralsRead",
         "parameters": [
           {
-            "$ref": "#/components/parameters/partner_referral_id"
+            "name": "partnerReferralId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8010,7 +8025,12 @@
         "operationId": "InvoicingV2InvoicesSend",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8152,7 +8172,12 @@
         "operationId": "InvoicingV2InvoicesRemind",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8267,7 +8292,12 @@
         "operationId": "InvoicingV2InvoicesCancel",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8358,7 +8388,12 @@
         "operationId": "InvoicingV2InvoicesPayments",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8486,10 +8521,20 @@
         "operationId": "InvoicingV2InvoicesPaymentsDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/transaction_id"
+            "name": "transactionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8569,7 +8614,12 @@
         "operationId": "InvoicingV2InvoicesRefunds",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8697,10 +8747,20 @@
         "operationId": "InvoicingV2InvoicesRefundsDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/transaction_id"
+            "name": "transactionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8790,7 +8850,12 @@
         "operationId": "InvoicingV2InvoicesGenerateQrCode",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -8942,7 +9007,12 @@
         "operationId": "InvoicingV2InvoicesGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -9017,13 +9087,18 @@
         "operationId": "InvoicingV2InvoicesUpdate",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
-          },
-          {
             "$ref": "#/components/parameters/send_to_recipient"
           },
           {
             "$ref": "#/components/parameters/send_to_invoicer"
+          },
+          {
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -9149,7 +9224,12 @@
         "operationId": "InvoicingV2InvoicesDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/invoice_id"
+            "name": "invoiceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -9520,7 +9600,12 @@
         "operationId": "InvoicingV2TemplatesGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/template_id"
+            "name": "templateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -9605,7 +9690,12 @@
         "operationId": "InvoicingV2TemplatesUpdate",
         "parameters": [
           {
-            "$ref": "#/components/parameters/template_id"
+            "name": "templateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -9691,7 +9781,12 @@
         "operationId": "InvoicingV2TemplatesDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/template_id"
+            "name": "templateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10024,7 +10119,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_id"
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10066,7 +10166,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksUpdate",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_id"
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -10117,7 +10222,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_id"
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10154,7 +10264,12 @@
         "operationId": "NotificationsWebhooksV1EventTypesList",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_id"
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10274,7 +10389,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksLookupGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_lookup_id"
+            "name": "webhookLookupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10316,7 +10436,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksLookupDelete",
         "parameters": [
           {
-            "$ref": "#/components/parameters/webhook_lookup_id"
+            "name": "webhookLookupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10546,7 +10671,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksEventsGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/event_id"
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10590,7 +10720,12 @@
         "operationId": "NotificationsWebhooksV1WebhooksEventsResend",
         "parameters": [
           {
-            "$ref": "#/components/parameters/event_id"
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -13783,7 +13918,12 @@
         "operationId": "PaymentsPayoutsBatchV1PayoutsItemGet",
         "parameters": [
           {
-            "$ref": "#/components/parameters/payout_item_id"
+            "name": "payoutItemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -13847,7 +13987,12 @@
         "operationId": "PaymentsPayoutsBatchV1PayoutsItemCancel",
         "parameters": [
           {
-            "$ref": "#/components/parameters/payout_item_id"
+            "name": "payoutItemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
