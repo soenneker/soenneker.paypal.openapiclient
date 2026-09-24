@@ -42,21 +42,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of shipping options that the payee or merchant offers to the payer to ship or pick up their items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailOptionsItem>? Options { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailOptionsItem> Options { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem> Options { get; set; }
 #endif
         /// <summary>The phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailPhoneNumber? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailPhoneNumber PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber PhoneNumber { get; set; }
 #endif
         /// <summary>A classification for the method of purchase fulfillment (e.g shipping, in-store pickup, etc). Either `type` or `options` may be present, but not both.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShippingType? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultPaypalWalletBaseAllOf2Shipping"/> and sets the default values.
         /// </summary>
@@ -85,9 +85,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailAddress>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailAddress.CreateFromDiscriminatorValue); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName.CreateFromDiscriminatorValue); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailOptionsItem>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailPhoneNumber.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShippingType>(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailType>(); } },
             };
         }
         /// <summary>
@@ -100,9 +100,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailAddress>("address", Address);
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName>("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailOptionsItem>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailPhoneNumber>("phone_number", PhoneNumber);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShippingType>("type", Type);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber>("phone_number", PhoneNumber);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

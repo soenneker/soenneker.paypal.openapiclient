@@ -43,9 +43,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationFailedDueToInsufficientPermissionsMessage? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AuthorizationFailedDueToInsufficientPermissionsMessage? MessageEscaped { get; set; }
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotAuthorizedName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2NotAuthorizedName? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403"/> and sets the default values.
         /// </summary>
@@ -74,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationFailedDueToInsufficientPermissionsMessage>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.NotAuthorizedName>(); } },
+                { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AuthorizationFailedDueToInsufficientPermissionsMessage>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2NotAuthorizedName>(); } },
             };
         }
         /// <summary>
@@ -88,8 +88,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("debug_id", DebugId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDetails>("details", Details);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorLinkDescription>("links", Links);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationFailedDueToInsufficientPermissionsMessage>("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.NotAuthorizedName>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AuthorizationFailedDueToInsufficientPermissionsMessage>("message", MessageEscaped);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2NotAuthorizedName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

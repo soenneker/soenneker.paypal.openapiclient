@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string Code { get; set; }
 #endif
         /// <summary>The Universal Product Code type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemWithoutCategoryTaxOrAmountUpcType? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.UniversalProductCodeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ItemWithoutCategoryTaxOrAmountUpc"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemWithoutCategoryTaxOrAmountUpcType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UniversalProductCodeType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemWithoutCategoryTaxOrAmountUpcType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UniversalProductCodeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

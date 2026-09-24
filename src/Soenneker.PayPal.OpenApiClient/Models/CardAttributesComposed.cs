@@ -26,18 +26,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Instruction to vault the card based on the specified strategy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVault? Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault? Vault { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVault Vault { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault Vault { get; set; }
 #endif
         /// <summary>Instruction to optionally verify the card based on the specified strategy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVerification? Verification { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVerification? Verification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVerification Verification { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVerification Verification { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.CardCustomer.CreateFromDiscriminatorValue); } },
-                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVault>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVault.CreateFromDiscriminatorValue); } },
-                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVerification>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVerification.CreateFromDiscriminatorValue); } },
+                { "vault", n => { Vault = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault>(global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault.CreateFromDiscriminatorValue); } },
+                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVerification>(global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVerification.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardCustomer>("customer", Customer);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVault>("vault", Vault);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesVerification>("verification", Verification);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault>("vault", Vault);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVerification>("verification", Verification);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

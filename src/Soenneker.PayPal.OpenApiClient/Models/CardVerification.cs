@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method used for card verification.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum? Method { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethod? Method { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardVerification"/> and sets the default values.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethod>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethodEnum>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardVerificationMethod>("method", Method);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

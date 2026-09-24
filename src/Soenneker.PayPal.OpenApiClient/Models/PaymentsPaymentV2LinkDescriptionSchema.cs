@@ -18,42 +18,42 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Any additional items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItems? AdditionalItems { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItemsProperty? AdditionalItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItems AdditionalItems { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItemsProperty AdditionalItems { get; set; }
 #endif
         /// <summary>An array of sub-schemas. The data must validate against all sub-schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAllOfItemProperty>? AllOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAllOfItem>? AllOf { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAllOfItemProperty> AllOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAllOfItem> AllOf { get; set; }
 #endif
         /// <summary>An array of sub-schemas. The data must validate against one or more sub-schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAnyOfItemProperty>? AnyOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAnyOfItem>? AnyOf { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAnyOfItemProperty> AnyOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAnyOfItem> AnyOf { get; set; }
 #endif
         /// <summary>Definitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitions? Definitions { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitionsProperty? Definitions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitions Definitions { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitionsProperty Definitions { get; set; }
 #endif
         /// <summary>The dependencies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependencies? Dependencies { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependenciesProperty? Dependencies { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependencies Dependencies { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependenciesProperty Dependencies { get; set; }
 #endif
         /// <summary>The fragment resolution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,18 +66,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItems? Items { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItemsProperty? Items { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItems Items { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItemsProperty Items { get; set; }
 #endif
         /// <summary>An array of links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaLinksItemProperty>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaLinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaLinksItemProperty> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaLinksItem> Links { get; private set; }
 #endif
         /// <summary>The media type and context-encoding scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,18 +90,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Not.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNot? Not { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNotProperty? Not { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNot Not { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNotProperty Not { get; set; }
 #endif
         /// <summary>An array of sub-schemas. The data must validate against one sub-schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaOneOfItemProperty>? OneOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaOneOfItem>? OneOf { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaOneOfItemProperty> OneOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaOneOfItem> OneOf { get; set; }
 #endif
         /// <summary>To apply this schema to the instances&apos; URIs, start the URIs with this value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,18 +114,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The pattern properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternProperties? PatternProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternPropertiesProperty? PatternProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternProperties PatternProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternPropertiesProperty PatternProperties { get; set; }
 #endif
         /// <summary>The properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaProperties? Properties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaProperties Properties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchema"/> and sets the default values.
@@ -152,20 +152,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additionalItems", n => { AdditionalItems = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItems>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItems.CreateFromDiscriminatorValue); } },
-                { "allOf", n => { AllOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAllOfItemProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAllOfItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "anyOf", n => { AnyOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAnyOfItemProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAnyOfItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "definitions", n => { Definitions = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitions>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitions.CreateFromDiscriminatorValue); } },
-                { "dependencies", n => { Dependencies = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependencies>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependencies.CreateFromDiscriminatorValue); } },
+                { "additionalItems", n => { AdditionalItems = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItemsProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItemsProperty.CreateFromDiscriminatorValue); } },
+                { "allOf", n => { AllOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAllOfItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAllOfItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "anyOf", n => { AnyOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAnyOfItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAnyOfItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "definitions", n => { Definitions = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitionsProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitionsProperty.CreateFromDiscriminatorValue); } },
+                { "dependencies", n => { Dependencies = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependenciesProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependenciesProperty.CreateFromDiscriminatorValue); } },
                 { "fragmentResolution", n => { FragmentResolution = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItems>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItems.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaLinksItemProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaLinksItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItemsProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItemsProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "media", n => { Media = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaMedia>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaMedia.CreateFromDiscriminatorValue); } },
-                { "not", n => { Not = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNot>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNot.CreateFromDiscriminatorValue); } },
-                { "oneOf", n => { OneOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaOneOfItemProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaOneOfItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "not", n => { Not = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNotProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNotProperty.CreateFromDiscriminatorValue); } },
+                { "oneOf", n => { OneOf = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaOneOfItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaOneOfItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pathStart", n => { PathStart = n.GetStringValue(); } },
-                { "patternProperties", n => { PatternProperties = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternProperties>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternProperties.CreateFromDiscriminatorValue); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaProperties>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaProperties.CreateFromDiscriminatorValue); } },
+                { "patternProperties", n => { PatternProperties = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternPropertiesProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPropertiesProperty>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -175,19 +175,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItems>("additionalItems", AdditionalItems);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAllOfItemProperty>("allOf", AllOf);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaAnyOfItemProperty>("anyOf", AnyOf);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitions>("definitions", Definitions);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependencies>("dependencies", Dependencies);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAdditionalItemsProperty>("additionalItems", AdditionalItems);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAllOfItem>("allOf", AllOf);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaAnyOfItem>("anyOf", AnyOf);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDefinitionsProperty>("definitions", Definitions);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaDependenciesProperty>("dependencies", Dependencies);
             writer.WriteStringValue("fragmentResolution", FragmentResolution);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItems>("items", Items);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaItemsProperty>("items", Items);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaMedia>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNot>("not", Not);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkSchemaOneOfItemProperty>("oneOf", OneOf);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaNotProperty>("not", Not);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaOneOfItem>("oneOf", OneOf);
             writer.WriteStringValue("pathStart", PathStart);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternProperties>("patternProperties", PatternProperties);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaProperties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPatternPropertiesProperty>("patternProperties", PatternProperties);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2LinkDescriptionSchemaPropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

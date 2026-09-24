@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// The merchant who receives the funds and fulfills the order. The merchant is also known as the payee.
+    /// The merchant who receives payment for this transaction.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PurchaseUnitRequestPayee : IAdditionalDataHolder, IParsable

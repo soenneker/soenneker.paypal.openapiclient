@@ -14,8 +14,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The funds that are held on behalf of the merchant.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisbursementMode? Value { get; set; }
+        /// <summary>The value property</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementModeValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "value", n => { Value = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisbursementMode>(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementModeValue>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisbursementMode>("value", Value);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementModeValue>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

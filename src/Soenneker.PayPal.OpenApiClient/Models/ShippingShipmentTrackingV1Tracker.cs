@@ -70,9 +70,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string ShipmentDate { get; set; }
 #endif
         /// <summary>To denote whether the shipment is sent forward to the receiver or returned back.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1TrackerShipmentDirection? ShipmentDirection { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerShipmentDirection? ShipmentDirection { get; set; }
         /// <summary>To denote which party uploaded the shipment tracking info.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1TrackerShipmentUploader? ShipmentUploader { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TrackerShipmentUploader? ShipmentUploader { get; private set; }
         /// <summary>The status of the item shipment. For allowed values, see &lt;a href=&quot;/docs/tracking/reference/shipping-status/&quot;&gt;Shipping Statuses&lt;/a&gt;.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.TrackingStatus? Status { get; set; }
         /// <summary>The tracking number for the shipment. Carrier information, `carrier` is required if tracking_number is provided.</summary>
@@ -138,8 +138,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "postage_payment_id", n => { PostagePaymentId = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
-                { "shipment_direction", n => { ShipmentDirection = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1TrackerShipmentDirection>(); } },
-                { "shipment_uploader", n => { ShipmentUploader = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1TrackerShipmentUploader>(); } },
+                { "shipment_direction", n => { ShipmentDirection = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerShipmentDirection>(); } },
+                { "shipment_uploader", n => { ShipmentUploader = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerShipmentUploader>(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingStatus>(); } },
                 { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
                 { "tracking_number_type", n => { TrackingNumberType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingNumberType>(); } },
@@ -161,7 +161,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1LinkDescription>("links", Links);
             writer.WriteBoolValue("notify_buyer", NotifyBuyer);
             writer.WriteStringValue("shipment_date", ShipmentDate);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1TrackerShipmentDirection>("shipment_direction", ShipmentDirection);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackerShipmentDirection>("shipment_direction", ShipmentDirection);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingStatus>("status", Status);
             writer.WriteStringValue("tracking_number", TrackingNumber);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TrackingNumberType>("tracking_number_type", TrackingNumberType);

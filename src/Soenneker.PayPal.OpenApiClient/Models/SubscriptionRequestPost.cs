@@ -37,10 +37,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The merchant_inventory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventory? MerchantInventory { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventoryProperty? MerchantInventory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventory MerchantInventory { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventoryProperty MerchantInventory { get; set; }
 #endif
         /// <summary>An inline plan object to customise the subscription. You can override plan level default attributes by providing customised values for the subscription in this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext>(global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext.CreateFromDiscriminatorValue); } },
                 { "auto_renewal", n => { AutoRenewal = n.GetBoolValue(); } },
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
-                { "merchant_inventory", n => { MerchantInventory = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventory>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventory.CreateFromDiscriminatorValue); } },
+                { "merchant_inventory", n => { MerchantInventory = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventoryProperty>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventoryProperty.CreateFromDiscriminatorValue); } },
                 { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>(global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride.CreateFromDiscriminatorValue); } },
                 { "plan_id", n => { PlanId = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplicationContext>("application_context", ApplicationContext);
             writer.WriteBoolValue("auto_renewal", AutoRenewal);
             writer.WriteStringValue("custom_id", CustomId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventory>("merchant_inventory", MerchantInventory);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionRequestPostMerchantInventoryProperty>("merchant_inventory", MerchantInventory);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>("plan", Plan);
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);

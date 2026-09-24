@@ -17,10 +17,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The related_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds? RelatedIds { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRelatedIds? RelatedIds { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds RelatedIds { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRelatedIds RelatedIds { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Authorization2AllOf2SupplementaryData"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "related_ids", n => { RelatedIds = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SupplementaryDataRelatedIds.CreateFromDiscriminatorValue); } },
+                { "related_ids", n => { RelatedIds = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRelatedIds>(global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRelatedIds.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

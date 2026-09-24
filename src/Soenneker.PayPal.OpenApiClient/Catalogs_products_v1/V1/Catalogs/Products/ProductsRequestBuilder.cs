@@ -52,9 +52,9 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList401Response">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsList400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsList401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsList403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,9 +68,9 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList401Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsList403Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.ProductsList400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.ProductsList401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.ProductsList403Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.ProductCollection>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.ProductCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -82,10 +82,10 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
         /// <param name="body">The create product request details.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate401Response">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate403Response">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate422Response">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,10 +100,10 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate401Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate403Response.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1ProductsCreate422Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate403Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.ProductsCreate422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Product>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Product.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

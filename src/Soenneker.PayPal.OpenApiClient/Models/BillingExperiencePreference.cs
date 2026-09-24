@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The preference that customizes the billing experience of the customer.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BillingExperiencePreference : IParsable
+    public partial class BillingExperiencePreference : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the partner has already displayed the billing context to the seller.</summary>
         public bool? BillingContextSet { get; set; }
         /// <summary>The ID of the payment web experience profile.</summary>
@@ -23,6 +25,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string ExperienceId { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference"/> and sets the default values.
+        /// </summary>
+        public BillingExperiencePreference()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("billing_context_set", BillingContextSet);
             writer.WriteStringValue("experience_id", ExperienceId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

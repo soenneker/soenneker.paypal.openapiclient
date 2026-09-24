@@ -16,8 +16,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Expected business/pricing model for the billing agreement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern? Value { get; set; }
+        /// <summary>The value property</summary>
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePatternValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern"/> and sets the default values.
         /// </summary>
@@ -43,7 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "value", n => { Value = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern>(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePatternValue>(); } },
             };
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern>("value", Value);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePatternValue>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

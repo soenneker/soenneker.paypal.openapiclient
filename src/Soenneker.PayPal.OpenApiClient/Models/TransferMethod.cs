@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Requested transfer method and currency for a country.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TransferMethod : IParsable
+    public partial class TransferMethod : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Requested Currencies for a Transfer Method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,6 +25,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>Transfer Method type.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType? TransferMethodType { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TransferMethod"/> and sets the default values.
+        /// </summary>
+        public TransferMethod()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("currencies", Currencies);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType>("transfer_method_type", TransferMethodType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -75,7 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesDelete403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesDelete403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesDelete403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesDelete403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
@@ -104,7 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesGet403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesGet403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,7 +120,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesGet403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesGet403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
@@ -133,10 +133,10 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="body">The invoice details which includes all information of the invoice like items, billing information.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate422Response">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,10 +151,10 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate400Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate403Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate400Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2InvoicesUpdate422Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesUpdate422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Invoice>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Invoice.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

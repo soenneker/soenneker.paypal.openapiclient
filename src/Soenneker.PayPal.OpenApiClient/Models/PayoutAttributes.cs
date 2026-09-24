@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Payout specific attributes.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PayoutAttributes : IParsable
+    public partial class PayoutAttributes : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Requested country, transfer method and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,6 +27,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public bool? KycRequired { get; set; }
         /// <summary>If `true`, specifies that the merchant or platform is offering goods or services on behalf of 3rd party sellers.</summary>
         public bool? Marketplace { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes"/> and sets the default values.
+        /// </summary>
+        public PayoutAttributes()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,6 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection>("country_transfer_method_currency_selection", CountryTransferMethodCurrencySelection);
             writer.WriteBoolValue("kyc_required", KycRequired);
             writer.WriteBoolValue("marketplace", Marketplace);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

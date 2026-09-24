@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related HATEOAS links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem>? Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseLinksItem>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem> Links { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseLinksItem> Links { get; private set; }
 #endif
         /// <summary>The vault status.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseStatus? Status { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseCustomer.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseLinksItem>(global::Soenneker.PayPal.OpenApiClient.Models.VaultResponseLinksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2VaultResponseStatus>(); } },
             };
         }

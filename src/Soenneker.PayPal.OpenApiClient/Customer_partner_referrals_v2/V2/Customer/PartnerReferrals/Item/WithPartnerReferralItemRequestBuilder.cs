@@ -39,8 +39,8 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsRead401Response">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsRead403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Error500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,8 +54,8 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsRead401Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2PartnerReferralsRead403Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead403Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Error500.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

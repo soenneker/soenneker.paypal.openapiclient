@@ -11,10 +11,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// Seller’s consent to operate on this financial instrument.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Mandate : IParsable
+    public partial class Mandate : IAdditionalDataHolder, IParsable
     {
         /// <summary>Whether mandate was accepted or not.</summary>
         public bool? Accepted { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Mandate"/> and sets the default values.
+        /// </summary>
+        public Mandate()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -44,6 +53,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("accepted", Accepted);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

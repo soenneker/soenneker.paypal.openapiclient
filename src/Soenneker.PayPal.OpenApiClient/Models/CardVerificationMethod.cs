@@ -3,17 +3,25 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
-    /// <summary>The verification method of the card.</summary>
+    /// <summary>The method used for card verification.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CardVerificationMethod
     {
+        [EnumMember(Value = "SCA_ALWAYS")]
+        #pragma warning disable CS1591
+        ScaAlways,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SCA_WHEN_REQUIRED")]
         #pragma warning disable CS1591
         ScaWhenRequired,
         #pragma warning restore CS1591
-        [EnumMember(Value = "SCA_ALWAYS")]
+        [EnumMember(Value = "3D_SECURE")]
         #pragma warning disable CS1591
-        ScaAlways,
+        Value3DSecure,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "AVS_CVV")]
+        #pragma warning disable CS1591
+        AvsCvv,
         #pragma warning restore CS1591
     }
 }

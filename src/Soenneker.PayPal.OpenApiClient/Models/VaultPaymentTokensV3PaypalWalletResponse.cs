@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Address? Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Address? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Address Address { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Address Address { get; set; }
 #endif
         /// <summary>The customer type associated with a digital wallet payment token. This is to indicate whether the customer acting on the merchant / platform is either a business or a consumer.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? CustomerType { get; set; }
@@ -52,10 +52,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Name? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Name Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Name Name { get; set; }
 #endif
         /// <summary>The account identifier for a PayPal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,11 +122,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Address>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Address.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Address>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Address.CreateFromDiscriminatorValue); } },
                 { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Name>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Name.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Name>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Name.CreateFromDiscriminatorValue); } },
                 { "payer_id", n => { PayerId = n.GetStringValue(); } },
                 { "permit_multiple_payment_tokens", n => { PermitMultiplePaymentTokens = n.GetBoolValue(); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithType>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithType.CreateFromDiscriminatorValue); } },
@@ -144,11 +144,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Address>("address", Address);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType>("customer_type", CustomerType);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponseAllOf5Name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletResponseAllOf5Name>("name", Name);
             writer.WriteStringValue("payer_id", PayerId);
             writer.WriteBoolValue("permit_multiple_payment_tokens", PermitMultiplePaymentTokens);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithType>("phone", Phone);

@@ -66,10 +66,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of invoice line-item information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Item>? Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Item> Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue> Items { get; set; }
 #endif
         /// <summary>The billing and shipping information. Includes name, email, address, phone, and language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,7 +110,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "detail", n => { Detail = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateDetail>(global::Soenneker.PayPal.OpenApiClient.Models.TemplateDetail.CreateFromDiscriminatorValue); } },
                 { "due_amount", n => { DueAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
                 { "invoicer", n => { Invoicer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo.CreateFromDiscriminatorValue); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Item>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "primary_recipients", n => { PrimaryRecipients = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RecipientInfo>(global::Soenneker.PayPal.OpenApiClient.Models.RecipientInfo.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -127,7 +127,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateDetail>("detail", Detail);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("due_amount", DueAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo>("invoicer", Invoicer);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Item>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>("items", Items);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RecipientInfo>("primary_recipients", PrimaryRecipients);
             writer.WriteAdditionalData(AdditionalData);
         }

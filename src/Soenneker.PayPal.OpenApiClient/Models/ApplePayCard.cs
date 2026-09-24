@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Array of brands or networks associated with the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem>? AvailableNetworks { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseAvailableNetworksItem>? AvailableNetworks { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem> AvailableNetworks { get; private set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseAvailableNetworksItem> AvailableNetworks { get; private set; }
 #endif
         /// <summary>The billing_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,18 +50,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Bank Identification Number (BIN) details used to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails? BinDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails? BinDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails BinDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails BinDetails { get; set; }
 #endif
         /// <summary>The card brand or network. Typically used in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand? Brand { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBrand? Brand { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand Brand { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBrand Brand { get; private set; }
 #endif
         /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,10 +114,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment card type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCard"/> and sets the default values.
@@ -146,17 +146,17 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse.CreateFromDiscriminatorValue); } },
                 { "authentication_result", n => { AuthenticationResult = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse.CreateFromDiscriminatorValue); } },
-                { "available_networks", n => { AvailableNetworks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseAvailableNetworksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "available_networks", n => { AvailableNetworks = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseAvailableNetworksItem>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseAvailableNetworksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCardResponseAllOf2BillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCardResponseAllOf2BillingAddress.CreateFromDiscriminatorValue); } },
-                { "bin_details", n => { BinDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBrand.CreateFromDiscriminatorValue); } },
+                { "bin_details", n => { BinDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBrand>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBrand.CreateFromDiscriminatorValue); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "from_request", n => { FromRequest = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest.CreateFromDiscriminatorValue); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -169,13 +169,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse>("authentication_result", AuthenticationResult);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCardResponseAllOf2BillingAddress>("billing_address", BillingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseBinDetails>("bin_details", BinDetails);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails>("bin_details", BinDetails);
             writer.WriteStringValue("country_code", CountryCode);
             writer.WriteStringValue("expiry", Expiry);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest>("from_request", FromRequest);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>("stored_credential", StoredCredential);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponseType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

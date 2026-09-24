@@ -17,26 +17,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>ApplePay payment source, allows buyer to pay using ApplePay, both on Web as well as on Native.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceApplePay? ApplePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay? ApplePay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceApplePay ApplePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay ApplePay { get; set; }
 #endif
         /// <summary>Bancontact is the most popular online payment in Belgium. [More Details](https://www.bancontact.com/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBancontact? Bancontact { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact? Bancontact { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBancontact Bancontact { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact Bancontact { get; set; }
 #endif
         /// <summary>BLIK is a mobile payment system, created by Polish Payment Standard in order to allow millions of users to pay in shops, payout cash in ATMs and make online purchases and payments. [More Details](https://blikmobile.pl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBlik? Blik { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik? Blik { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBlik Blik { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik Blik { get; set; }
 #endif
         /// <summary>The payment card to use to fund a payment. Can be a credit or debit card.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Passing card number, cvv and expiry directly via the API requires &lt;a href=&quot;https://www.pcisecuritystandards.org/pci_security/completing_self_assessment&quot;&gt; PCI SAQ D compliance&lt;/a&gt;. &lt;br&gt;*PayPal offers a mechanism by which you do not have to take on the &lt;strong&gt;PCI SAQ D&lt;/strong&gt; burden by using hosted fields - refer to &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/integrate/&quot;&gt;this Integration Guide&lt;/a&gt;*.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,74 +49,74 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Indicates that Crypto Wallet is the payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceCrypto? Crypto { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto? Crypto { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceCrypto Crypto { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto Crypto { get; set; }
 #endif
         /// <summary>The eps transfer is an online payment method developed by many Austrian banks. [More Details](https://www.eps-ueberweisung.at/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceEps? Eps { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps? Eps { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceEps Eps { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps Eps { get; set; }
 #endif
         /// <summary>Giropay is an Internet payment System in Germany, based on online banking. [More Details](https://giropay.de/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGiropay? Giropay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay? Giropay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGiropay Giropay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay Giropay { get; set; }
 #endif
         /// <summary>Google Pay payment source, allows buyer to pay using Google Pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGooglePay? GooglePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay? GooglePay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGooglePay GooglePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay GooglePay { get; set; }
 #endif
         /// <summary>The Dutch payment method iDEAL is an online payment method that enables consumers to pay online through their own bank. [More Details](https://www.ideal.nl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceIdeal? Ideal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal? Ideal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceIdeal Ideal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal Ideal { get; set; }
 #endif
         /// <summary>MyBank is an e-authorisation solution which enables safe digital payments and identity authentication through a consumer’s own online banking portal or mobile application. [More Details](https://www.mybank.eu/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceMybank? Mybank { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank? Mybank { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceMybank Mybank { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank Mybank { get; set; }
 #endif
         /// <summary>P24 (Przelewy24) is a secure and fast online bank transfer service linked to all the major banks in Poland. [More Details](https://www.przelewy24.pl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceP24? P24 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24? P24 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceP24 P24 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24 P24 { get; set; }
 #endif
         /// <summary>Indicates that PayPal Wallet is the payment source. Main use of this selection is to provide additional instructions associated with this choice like vaulting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourcePaypal? Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal? Paypal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourcePaypal Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal Paypal { get; set; }
 #endif
         /// <summary>SOFORT Banking is a real-time bank transfer payment method that buyers use to transfer funds directly to merchants from their bank accounts. [More Details](https://www.klarna.com/sofort/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceSofort? Sofort { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort? Sofort { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceSofort Sofort { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort Sofort { get; set; }
 #endif
         /// <summary>The tokenized payment source to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,18 +129,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Trustly is a payment method that allows customers to shop and pay from their bank account. [More Details](https://www.trustly.net/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceTrustly? Trustly { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly? Trustly { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceTrustly Trustly { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly Trustly { get; set; }
 #endif
         /// <summary>Information needed to indicate that Venmo is being used to fund the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceVenmo? Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo? Venmo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceVenmo Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo Venmo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderCaptureRequestPaymentSource"/> and sets the default values.
@@ -167,22 +167,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceApplePay>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceApplePay.CreateFromDiscriminatorValue); } },
-                { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBancontact>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBancontact.CreateFromDiscriminatorValue); } },
-                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBlik>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBlik.CreateFromDiscriminatorValue); } },
+                { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay.CreateFromDiscriminatorValue); } },
+                { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest>(global::Soenneker.PayPal.OpenApiClient.Models.CardRequest.CreateFromDiscriminatorValue); } },
-                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceCrypto>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceCrypto.CreateFromDiscriminatorValue); } },
-                { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceEps>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceEps.CreateFromDiscriminatorValue); } },
-                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGiropay>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGiropay.CreateFromDiscriminatorValue); } },
-                { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGooglePay>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGooglePay.CreateFromDiscriminatorValue); } },
-                { "ideal", n => { Ideal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceIdeal>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceIdeal.CreateFromDiscriminatorValue); } },
-                { "mybank", n => { Mybank = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceMybank>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceMybank.CreateFromDiscriminatorValue); } },
-                { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceP24>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceP24.CreateFromDiscriminatorValue); } },
-                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourcePaypal>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourcePaypal.CreateFromDiscriminatorValue); } },
-                { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceSofort>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceSofort.CreateFromDiscriminatorValue); } },
+                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto.CreateFromDiscriminatorValue); } },
+                { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps.CreateFromDiscriminatorValue); } },
+                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay.CreateFromDiscriminatorValue); } },
+                { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay.CreateFromDiscriminatorValue); } },
+                { "ideal", n => { Ideal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal.CreateFromDiscriminatorValue); } },
+                { "mybank", n => { Mybank = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank.CreateFromDiscriminatorValue); } },
+                { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24.CreateFromDiscriminatorValue); } },
+                { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal.CreateFromDiscriminatorValue); } },
+                { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Token>(global::Soenneker.PayPal.OpenApiClient.Models.Token.CreateFromDiscriminatorValue); } },
-                { "trustly", n => { Trustly = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceTrustly>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceTrustly.CreateFromDiscriminatorValue); } },
-                { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceVenmo>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceVenmo.CreateFromDiscriminatorValue); } },
+                { "trustly", n => { Trustly = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly.CreateFromDiscriminatorValue); } },
+                { "venmo", n => { Venmo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -192,22 +192,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceApplePay>("apple_pay", ApplePay);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBancontact>("bancontact", Bancontact);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceBlik>("blik", Blik);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay>("apple_pay", ApplePay);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact>("bancontact", Bancontact);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequest>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceCrypto>("crypto", Crypto);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceEps>("eps", Eps);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGiropay>("giropay", Giropay);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceGooglePay>("google_pay", GooglePay);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceIdeal>("ideal", Ideal);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceMybank>("mybank", Mybank);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceP24>("p24", P24);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourcePaypal>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceSofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto>("crypto", Crypto);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps>("eps", Eps);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay>("giropay", Giropay);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay>("google_pay", GooglePay);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal>("ideal", Ideal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank>("mybank", Mybank);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24>("p24", P24);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Token>("token", Token);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceTrustly>("trustly", Trustly);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSourceVenmo>("venmo", Venmo);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly>("trustly", Trustly);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo>("venmo", Venmo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

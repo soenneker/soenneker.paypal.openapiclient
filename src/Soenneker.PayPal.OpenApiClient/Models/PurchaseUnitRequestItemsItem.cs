@@ -24,7 +24,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan BillingPlan { get; set; }
 #endif
         /// <summary>The item category type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItemCategory? Category { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemRequestCategory? Category { get; set; }
         /// <summary>&lt;blockquote&gt;This field supports up to 4000 characters, but &lt;strong&gt;any content beyond 2048 characters (including spaces) will be truncated. The 2048 character limit is reflected in the response&lt;/strong&gt; representation of this field&lt;/blockquote&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,7 +123,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_plan", n => { BillingPlan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan>(global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan.CreateFromDiscriminatorValue); } },
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItemCategory>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemRequestCategory>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -143,7 +143,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderBillingPlan>("billing_plan", BillingPlan);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItemCategory>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemRequestCategory>("category", Category);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteStringValue("name", Name);

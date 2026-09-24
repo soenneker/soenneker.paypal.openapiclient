@@ -126,10 +126,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Policy that determines whether the fee needs to be charged, retained or returned while moving the money as part of dispute process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy? FeePolicy { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty? FeePolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy FeePolicy { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty FeePolicy { get; set; }
 #endif
         /// <summary>The movements of fund due to the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,7 +247,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "evidences", n => { Evidences = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Evidence>(global::Soenneker.PayPal.OpenApiClient.Models.Evidence.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "extensions", n => { Extensions = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Extensions>(global::Soenneker.PayPal.OpenApiClient.Models.Extensions.CreateFromDiscriminatorValue); } },
                 { "external_reason_code", n => { ExternalReasonCode = n.GetStringValue(); } },
-                { "fee_policy", n => { FeePolicy = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy>(global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy.CreateFromDiscriminatorValue); } },
+                { "fee_policy", n => { FeePolicy = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty>(global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty.CreateFromDiscriminatorValue); } },
                 { "fund_movements", n => { FundMovements = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement>(global::Soenneker.PayPal.OpenApiClient.Models.FundMovement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Message>(global::Soenneker.PayPal.OpenApiClient.Models.Message.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -280,7 +280,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Evidence>("evidences", Evidences);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Extensions>("extensions", Extensions);
             writer.WriteStringValue("external_reason_code", ExternalReasonCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicy>("fee_policy", FeePolicy);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty>("fee_policy", FeePolicy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement>("fund_movements", FundMovements);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>("links", Links);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Message>("messages", Messages);

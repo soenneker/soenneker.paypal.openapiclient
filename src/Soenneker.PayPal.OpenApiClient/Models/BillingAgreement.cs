@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The details of the billing agreement between the partner and a seller.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BillingAgreement : IParsable
+    public partial class BillingAgreement : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL to which to redirect seller to accept the billing agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,6 +56,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string MerchantCustomData { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement"/> and sets the default values.
+        /// </summary>
+        public BillingAgreement()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement"/></returns>
@@ -90,6 +99,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("ec_token", EcToken);
             writer.WriteStringValue("merchant_custom_data", MerchantCustomData);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -51,18 +51,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The schema that describes the request data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionSchema? Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionSchema? Schema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionSchema Schema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionSchema Schema { get; set; }
 #endif
         /// <summary>The schema that describes the link target.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionTargetSchema? TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionTargetSchema? TargetSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionTargetSchema TargetSchema { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionTargetSchema TargetSchema { get; set; }
 #endif
         /// <summary>The link title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,8 +103,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "mediaType", n => { MediaType = n.GetStringValue(); } },
                 { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionMethod>(); } },
                 { "rel", n => { Rel = n.GetStringValue(); } },
-                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionSchema>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionSchema.CreateFromDiscriminatorValue); } },
-                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionTargetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionTargetSchema.CreateFromDiscriminatorValue); } },
+                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionSchema>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionSchema.CreateFromDiscriminatorValue); } },
+                { "targetSchema", n => { TargetSchema = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionTargetSchema>(global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionTargetSchema.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -120,8 +120,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("mediaType", MediaType);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionMethod>("method", Method);
             writer.WriteStringValue("rel", Rel);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionSchema>("schema", Schema);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LinkDescriptionTargetSchema>("targetSchema", TargetSchema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionSchema>("schema", Schema);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescriptionTargetSchema>("targetSchema", TargetSchema);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

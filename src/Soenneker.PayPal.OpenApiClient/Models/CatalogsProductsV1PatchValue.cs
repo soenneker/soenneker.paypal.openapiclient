@@ -8,20 +8,67 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// The value to apply. The &lt;code&gt;remove&lt;/code&gt; operation does not require a value.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper2"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper3"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper4"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper5"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper6"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CatalogsProductsV1PatchValue : IAdditionalDataHolder, IParsable
+    public partial class CatalogsProductsV1PatchValue : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValue"/> and sets the default values.
-        /// </summary>
-        public CatalogsProductsV1PatchValue()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1? CatalogsProductsV1PatchValueMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1 CatalogsProductsV1PatchValueMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper? PatchValueWrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper PatchValueWrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper2? PatchValueWrapper2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper2 PatchValueWrapper2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper3? PatchValueWrapper3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper3 PatchValueWrapper3 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper4? PatchValueWrapper4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper4 PatchValueWrapper4 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper5? PatchValueWrapper5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper5 PatchValueWrapper5 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper6? PatchValueWrapper6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper6 PatchValueWrapper6 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +77,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValue();
+            var result = new global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValue();
+            result.CatalogsProductsV1PatchValueMember1 = new global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1();
+            result.PatchValueWrapper = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper();
+            result.PatchValueWrapper2 = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper2();
+            result.PatchValueWrapper3 = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper3();
+            result.PatchValueWrapper4 = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper4();
+            result.PatchValueWrapper5 = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper5();
+            result.PatchValueWrapper6 = new global::Soenneker.PayPal.OpenApiClient.Models.PatchValueWrapper6();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -38,9 +93,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(CatalogsProductsV1PatchValueMember1 != null || PatchValueWrapper != null || PatchValueWrapper2 != null || PatchValueWrapper3 != null || PatchValueWrapper4 != null || PatchValueWrapper5 != null || PatchValueWrapper6 != null)
             {
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CatalogsProductsV1PatchValueMember1, PatchValueWrapper, PatchValueWrapper2, PatchValueWrapper3, PatchValueWrapper4, PatchValueWrapper5, PatchValueWrapper6);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -49,7 +106,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1PatchValueMember1>(null, CatalogsProductsV1PatchValueMember1, PatchValueWrapper, PatchValueWrapper2, PatchValueWrapper3, PatchValueWrapper4, PatchValueWrapper5, PatchValueWrapper6);
         }
     }
 }

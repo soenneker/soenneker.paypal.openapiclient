@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The billing information of the invoice recipient. Includes name, address, email, phone, and language.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BillingInfo : global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress, IParsable
+    public partial class BillingInfo : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Any additional information about the recipient.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,6 +22,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public string AdditionalInfo { get; set; }
+#endif
+        /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressPortable? Address { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressPortable Address { get; set; }
+#endif
+        /// <summary>Required. The business name of the party.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
 #endif
         /// <summary>The internationalized email address with more restrictive rules. This version restricts the local-part to a dot-atom as defined in https://www.ietf.org/rfc/rfc5322.txt. It does not allow for a quoted-string or an obs-local-part. &lt;ul&gt;&lt;li&gt;Allows alphanumeric and RFC-allowed special characters, !#$%&amp;&apos;*+-/=?^_`{|}~&lt;/li&gt;&lt;li&gt;Ensures that the local part does not start with dot (.), have consecutive dots, or end with dot. Ensures that the domain part does not have consecutive dots.&lt;/li&gt;&lt;li&gt;Ensures that the local part does not exceed 64 characters.&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -37,6 +55,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Language { get; set; }
 #endif
+        /// <summary>The name of the party.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Name? Name { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Name Name { get; set; }
+#endif
         /// <summary>The invoice recipient&apos;s phone numbers. Extension number is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,11 +72,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail> Phones { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo"/> and sets the default values.
+        /// </summary>
+        public BillingInfo()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo();
@@ -59,13 +92,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_info", n => { AdditionalInfo = n.GetStringValue(); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressPortable>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressPortable.CreateFromDiscriminatorValue); } },
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Name>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Name.CreateFromDiscriminatorValue); } },
                 { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail>(global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -73,14 +109,17 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("additional_info", AdditionalInfo);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressPortable>("address", Address);
+            writer.WriteStringValue("business_name", BusinessName);
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("language", Language);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Name>("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail>("phones", Phones);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

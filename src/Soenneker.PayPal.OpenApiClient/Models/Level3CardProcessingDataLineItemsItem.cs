@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
-    /// <summary>
-    /// The line items for this purchase. If your merchant account has been configured for Level 3 processing this field will be passed to the processor on your behalf.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class Level3CardProcessingDataLineItemsItem : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

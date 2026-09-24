@@ -18,10 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The active pricing scheme for this billing cycle. A free trial billing cycle does not require a pricing scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCyclePricingScheme? PricingScheme { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme? PricingScheme { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCyclePricingScheme PricingScheme { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme PricingScheme { get; set; }
 #endif
         /// <summary>The order in which this cycle is to run among other billing cycles. For example, a trial billing cycle has a `sequence` of `1` while a regular billing cycle has a `sequence` of `2`, so that trial cycle runs before the regular cycle.</summary>
         public int? Sequence { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCyclePricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCyclePricingScheme.CreateFromDiscriminatorValue); } },
+                { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme.CreateFromDiscriminatorValue); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType>(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCyclePricingScheme>("pricing_scheme", PricingScheme);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme>("pricing_scheme", PricingScheme);
             writer.WriteIntValue("sequence", Sequence);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType>("tenure_type", TenureType);

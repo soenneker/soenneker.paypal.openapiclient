@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The bank account information.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Bank : IParsable
+    public partial class Bank : IAdditionalDataHolder, IParsable
     {
         /// <summary>The bank account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -23,6 +23,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>The type of bank account.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType? AccountType { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +66,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string NickName { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Bank"/> and sets the default values.
+        /// </summary>
+        public Bank()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Bank"/></returns>
@@ -104,6 +113,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>("identifiers", Identifiers);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Mandate>("mandate", Mandate);
             writer.WriteStringValue("nick_name", NickName);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

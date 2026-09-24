@@ -11,8 +11,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The preference to customize the web experience of the customer by overriding that is set at the Partner&apos;s Account.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PartnerConfigOverride : IParsable
+    public partial class PartnerConfigOverride : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL to which to redirect the customer upon completion of the onboarding process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,6 +33,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether to show an add credit card page.</summary>
         public bool? ShowAddCreditCard { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride"/> and sets the default values.
+        /// </summary>
+        public PartnerConfigOverride()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -64,6 +73,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteStringValue("return_url_description", ReturnUrlDescription);
             writer.WriteBoolValue("show_add_credit_card", ShowAddCreditCard);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

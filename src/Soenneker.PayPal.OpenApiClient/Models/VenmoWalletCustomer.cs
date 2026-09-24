@@ -34,18 +34,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerName? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerName Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerName Name { get; set; }
 #endif
         /// <summary>The phone number of the customer as provided to the merchant or on file with the merchant. The `phone.phone_number` supports only `national_number`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerPhone? Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPhone? Phone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerPhone Phone { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPhone Phone { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletCustomer"/> and sets the default values.
@@ -74,8 +74,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerName>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerName.CreateFromDiscriminatorValue); } },
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerPhone>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerPhone.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerName>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerName.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPhone>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPhone.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,8 +87,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerName>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CustomerPhone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPhone>("phone", Phone);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
