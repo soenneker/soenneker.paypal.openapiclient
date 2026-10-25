@@ -60,10 +60,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The product name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("home_url", HomeUrl);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("image_url", ImageUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CatalogsProductsV1LinkDescription>("links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductType>("type", Type);
             writer.WriteStringValue("update_time", UpdateTime);

@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The address property</summary>
+        /// <summary>The address of the payer. Supports only the `address_line_1`, `address_line_2`, `admin_area_1`, `admin_area_2`, `postal_code`, and `country_code` properties. Also referred to as the billing address of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.PayerAllOf2Address? Address { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string EmailAddress { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The name of the payer. Supports only the `given_name` and `surname` properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.PayerAllOf2Name? Name { get; set; }
@@ -51,10 +51,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The account identifier for a PayPal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerId { get; set; }
+        public string? PayerId { get; private set; }
 #nullable restore
 #else
-        public string PayerId { get; set; }
+        public string PayerId { get; private set; }
 #endif
         /// <summary>The phone number of the customer. Available only when you enable the **Contact Telephone Number** option in the &lt;a href=&quot;https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-website-payments&quot;&gt;**Profile &amp; Settings**&lt;/a&gt; for the merchant&apos;s PayPal account. The `phone.phone_number` supports only `national_number`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,7 +117,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("birth_date", BirthDate);
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayerAllOf2Name>("name", Name);
-            writer.WriteStringValue("payer_id", PayerId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayerAllOf2Phone>("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayerAllOf2TaxInfo>("tax_info", TaxInfo);
             writer.WriteAdditionalData(AdditionalData);

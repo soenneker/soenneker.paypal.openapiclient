@@ -27,14 +27,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>Flag that indicates if the customer is in the PayPal network. This value will be included in the response if the include_account_details flag is set to &quot;true&quot; in the API request.</summary>
         public bool? EligibleInPaypalNetwork { get; set; }
-        /// <summary>Returns a product code.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The button code corresponding to a particular product or set of products. The values followed are defined by the SDK team.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode? ProductCode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode ProductCode { get; set; }
-#endif
         /// <summary>Indicates if the payment method is recommended or not. A true value indicates the customer is payment ready and this payment method may be presented upfront.</summary>
         public bool? Recommended { get; set; }
         /// <summary>This value is included in the response when recommended is true for a payment method. It indicates the priority of recommendation for payment readiness of eligible payment methods with lowest number taking the highest precedence.</summary>
@@ -69,7 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "can_be_vaulted", n => { CanBeVaulted = n.GetBoolValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "eligible_in_paypal_network", n => { EligibleInPaypalNetwork = n.GetBoolValue(); } },
-                { "product_code", n => { ProductCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode.CreateFromDiscriminatorValue); } },
+                { "product_code", n => { ProductCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>(); } },
                 { "recommended", n => { Recommended = n.GetBoolValue(); } },
                 { "recommended_priority", n => { RecommendedPriority = n.GetIntValue(); } },
             };
@@ -84,7 +78,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteBoolValue("can_be_vaulted", CanBeVaulted);
             writer.WriteStringValue("country_code", CountryCode);
             writer.WriteBoolValue("eligible_in_paypal_network", EligibleInPaypalNetwork);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>("product_code", ProductCode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>("product_code", ProductCode);
             writer.WriteBoolValue("recommended", Recommended);
             writer.WriteIntValue("recommended_priority", RecommendedPriority);
             writer.WriteAdditionalData(AdditionalData);

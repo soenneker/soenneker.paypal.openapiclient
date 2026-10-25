@@ -15,15 +15,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>DEPRECATED. Expected business/pricing model for the billing agreement, Please use usage_pattern instead. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;usage_pattern&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
+        /// <summary>Expected business/pricing model for the billing agreement.</summary>
         [Obsolete("")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern? ChargePattern { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern ChargePattern { get; set; }
-#endif
         /// <summary>The person or party who initiated or triggered the payment.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? PaymentInitiator { get; set; }
         /// <summary>Indicates if this is a `first` or `subsequent` payment using a stored payment source (also referred to as stored credential or card on file).</summary>
@@ -55,7 +49,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "charge_pattern", n => { ChargePattern = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern.CreateFromDiscriminatorValue); } },
+                { "charge_pattern", n => { ChargePattern = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern>(); } },
                 { "payment_initiator", n => { PaymentInitiator = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator>(); } },
                 { "usage", n => { Usage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType>(); } },
                 { "usage_pattern", n => { UsagePattern = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern>(); } },
@@ -68,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern>("charge_pattern", ChargePattern);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern>("charge_pattern", ChargePattern);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator>("payment_initiator", PaymentInitiator);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType>("usage", Usage);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern>("usage_pattern", UsagePattern);

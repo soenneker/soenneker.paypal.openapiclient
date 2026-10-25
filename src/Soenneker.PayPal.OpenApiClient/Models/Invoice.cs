@@ -90,10 +90,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The parent ID to an invoice that defines the group invoice to which the invoice is related.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -186,7 +186,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("gratuity", Gratuity);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo>("invoicer", Invoicer);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>("items", Items);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>("links", Links);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Payments>("payments", Payments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RecipientInfo>("primary_recipients", PrimaryRecipients);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Refunds>("refunds", Refunds);

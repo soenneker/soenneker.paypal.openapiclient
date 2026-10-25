@@ -23,13 +23,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string BrandName { get; set; }
 #endif
-        /// <summary>Describes the URL.</summary>
+        /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl? CancelUrl { get; set; }
 #nullable restore
 #else
-        public string CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl CancelUrl { get; set; }
 #endif
         /// <summary>An Internet Protocol address (IP address). This address assigns a numerical label to each device that is connected to a computer network through the Internet Protocol. Supports IPv4 and IPv6 addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,13 +55,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>Describes the URL.</summary>
+        /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl? ReturnUrl { get; set; }
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl ReturnUrl { get; set; }
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference? ShippingPreference { get; set; }
@@ -91,11 +91,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
+                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl.CreateFromDiscriminatorValue); } },
                 { "consumer_ip", n => { ConsumerIp = n.GetStringValue(); } },
                 { "consumer_user_agent", n => { ConsumerUserAgent = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
+                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl.CreateFromDiscriminatorValue); } },
                 { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference>(); } },
             };
         }
@@ -107,11 +107,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteStringValue("cancel_url", CancelUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>("cancel_url", CancelUrl);
             writer.WriteStringValue("consumer_ip", ConsumerIp);
             writer.WriteStringValue("consumer_user_agent", ConsumerUserAgent);
             writer.WriteStringValue("locale", Locale);
-            writer.WriteStringValue("return_url", ReturnUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference>("shipping_preference", ShippingPreference);
             writer.WriteAdditionalData(AdditionalData);
         }

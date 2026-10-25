@@ -26,6 +26,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string EventTypeProp { get; private set; }
 #endif
         /// <summary>The event version in the webhook notification.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventVersion { get; set; }
@@ -44,18 +45,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The resource that triggered the webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResourceProperty? Resource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResourceProperty? Resource { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResourceProperty Resource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResourceProperty Resource { get; private set; }
 #endif
         /// <summary>The name of the resource related to the webhook notification event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,8 +126,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("event_version", EventVersion);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1LinkDescription>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EventTypeResourceProperty>("resource", Resource);
             writer.WriteStringValue("resource_version", ResourceVersion);
             writer.WriteAdditionalData(AdditionalData);
         }

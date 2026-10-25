@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
     public partial class PaymentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.invoicing_v2.v2.invoicing.invoices.item.payments.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the external refund transaction to delete.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Payments.Item.WithTransactionItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item.Payments.Item.WithTransactionItemRequestBuilder this[string position]
         {

@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get; set; }
+        public string? CreateTime { get; private set; }
 #nullable restore
 #else
-        public string CreateTime { get; set; }
+        public string CreateTime { get; private set; }
 #endif
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,14 +39,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string CustomId { get; set; }
 #endif
-        /// <summary>The disbursement_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The funds that are held on behalf of the merchant.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode? DisbursementMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode DisbursementMode { get; set; }
-#endif
         /// <summary>Indicates whether you can make additional captures against the authorized payment. Set to `true` if you do not intend to capture additional payments against the authorization. Set to `false` if you intend to capture additional payments against the authorization.</summary>
         public bool? FinalCapture { get; private set; }
         /// <summary>The PayPal-generated ID for the captured payment.</summary>
@@ -118,10 +112,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateTime { get; set; }
+        public string? UpdateTime { get; private set; }
 #nullable restore
 #else
-        public string UpdateTime { get; set; }
+        public string UpdateTime { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem"/> and sets the default values.
@@ -152,7 +146,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2Amount>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2Amount.CreateFromDiscriminatorValue); } },
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
-                { "disbursement_mode", n => { DisbursementMode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode.CreateFromDiscriminatorValue); } },
+                { "disbursement_mode", n => { DisbursementMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode>(); } },
                 { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
@@ -173,12 +167,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("create_time", CreateTime);
             writer.WriteStringValue("custom_id", CustomId);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode>("disbursement_mode", DisbursementMode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2DisbursementMode>("disbursement_mode", DisbursementMode);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2NetworkTransactionReference>("network_transaction_reference", NetworkTransactionReference);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureAllOf2ProcessorResponse>("processor_response", ProcessorResponse);
-            writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -25,10 +25,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The account identifier for a PayPal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerId { get; set; }
+        public string? PayerId { get; private set; }
 #nullable restore
 #else
-        public string PayerId { get; set; }
+        public string PayerId { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenPaymentSourcePaypal"/> and sets the default values.
@@ -67,7 +67,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteStringValue("payer_id", PayerId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

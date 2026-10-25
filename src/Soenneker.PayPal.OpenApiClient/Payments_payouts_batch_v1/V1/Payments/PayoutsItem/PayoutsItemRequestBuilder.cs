@@ -16,7 +16,7 @@ namespace Soenneker.PayPal.OpenApiClient.Payments_payouts_batch_v1.V1.Payments.P
     public partial class PayoutsItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.payments_payouts_batch_v1.v1.payments.payoutsItem.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the payout item to cancel.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Payments_payouts_batch_v1.V1.Payments.PayoutsItem.Item.WithPayoutItemItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Payments_payouts_batch_v1.V1.Payments.PayoutsItem.Item.WithPayoutItemItemRequestBuilder this[string position]
         {

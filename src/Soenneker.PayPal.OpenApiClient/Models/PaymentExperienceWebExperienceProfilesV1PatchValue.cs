@@ -8,11 +8,17 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember2"/>, <see cref="int"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentExperienceWebExperienceProfilesV1PatchValue : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
+        /// <summary>Composed type representation for type <see cref="int"/></summary>
+        public int? Integer { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,53 +27,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1 PaymentExperienceWebExperienceProfilesV1PatchValueMember1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember2? PaymentExperienceWebExperienceProfilesV1PatchValueMember2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper PaymentExperienceWebExperienceProfilesV1PatchValueWrapper { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember2 PaymentExperienceWebExperienceProfilesV1PatchValueMember2 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2 PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3 PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4 PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5 PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6? PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6 PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -78,13 +52,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValue();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueMember1 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5();
-            result.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else if(parseNode.GetDoubleValue() is double doubleValue)
+            {
+                result.Double = doubleValue;
+            }
+            else if(parseNode.GetIntValue() is int integerValue)
+            {
+                result.Integer = integerValue;
+            }
+            else if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PaymentExperienceWebExperienceProfilesV1PatchValueMember1 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1();
+                result.PaymentExperienceWebExperienceProfilesV1PatchValueMember2 = new global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember2();
+            }
             return result;
         }
         /// <summary>
@@ -93,9 +80,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PaymentExperienceWebExperienceProfilesV1PatchValueMember1 != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2 != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3 != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4 != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5 != null || PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6 != null)
+            if(PaymentExperienceWebExperienceProfilesV1PatchValueMember1 != null || PaymentExperienceWebExperienceProfilesV1PatchValueMember2 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentExperienceWebExperienceProfilesV1PatchValueMember1, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentExperienceWebExperienceProfilesV1PatchValueMember1, PaymentExperienceWebExperienceProfilesV1PatchValueMember2);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -106,7 +93,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1>(null, PaymentExperienceWebExperienceProfilesV1PatchValueMember1, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper2, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper3, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper4, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper5, PaymentExperienceWebExperienceProfilesV1PatchValueWrapper6);
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(Double != null)
+            {
+                writer.WriteDoubleValue(null, Double);
+            }
+            else if(Integer != null)
+            {
+                writer.WriteIntValue(null, Integer);
+            }
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentExperienceWebExperienceProfilesV1PatchValueMember1>(null, PaymentExperienceWebExperienceProfilesV1PatchValueMember1, PaymentExperienceWebExperienceProfilesV1PatchValueMember2);
+            }
         }
     }
 }

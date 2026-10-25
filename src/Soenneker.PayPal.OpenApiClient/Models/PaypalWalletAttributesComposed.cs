@@ -23,7 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletCustomer Customer { get; set; }
 #endif
-        /// <summary>The vault property</summary>
+        /// <summary>Attributes used to provide the instructions during vaulting of the PayPal Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesVault? Vault { get; set; }

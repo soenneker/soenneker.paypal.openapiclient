@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
     public partial class PartnerReferralsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.customer_partner_referrals_v2.v2.customer.partnerReferrals.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the partner-referrals data for which to show details.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartnerReferralItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Customer.PartnerReferrals.Item.WithPartnerReferralItemRequestBuilder this[string position]
         {

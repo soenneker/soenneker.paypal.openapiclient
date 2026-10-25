@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// The customer who approves and pays for the order. The customer is also known as the payer.
+    /// The subscriber response information.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Subscriber : IAdditionalDataHolder, IParsable

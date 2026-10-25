@@ -74,10 +74,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The HATEOAS links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The file name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,7 +139,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("issue_date", IssueDate);
             writer.WriteStringValue("issuing_country_code", IssuingCountryCode);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2LinkDescription>("links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PersonDocumentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

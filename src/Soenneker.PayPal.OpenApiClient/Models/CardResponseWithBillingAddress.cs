@@ -34,10 +34,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Array of brands or networks associated with the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand?>? AvailableNetworks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand?>? AvailableNetworks { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand?> AvailableNetworks { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand?> AvailableNetworks { get; private set; }
 #endif
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,13 +89,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string LastDigits { get; private set; }
 #endif
-        /// <summary>The card holder&apos;s name as it appears on the card.</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressName? Name { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressName Name { get; set; }
 #endif
         /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CardType? Type { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "from_request", n => { FromRequest = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardFromRequest>(global::Soenneker.PayPal.OpenApiClient.Models.CardFromRequest.CreateFromDiscriminatorValue); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressName>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressName.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardType>(); } },
             };
         }
@@ -147,14 +147,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesResponse>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AuthenticationResponse>("authentication_result", AuthenticationResult);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>("available_networks", AvailableNetworks);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressAllOf2BillingAddress>("billing_address", BillingAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BinDetails>("bin_details", BinDetails);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrand>("brand", Brand);
             writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteStringValue("expiry", Expiry);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardFromRequest>("from_request", FromRequest);
-            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseWithBillingAddressName>("name", Name);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

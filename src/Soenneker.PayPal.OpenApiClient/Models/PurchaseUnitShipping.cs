@@ -15,7 +15,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The address property</summary>
+        /// <summary>The address of the person to whom to ship the items. Supports only the `address_line_1`, `address_line_2`, `admin_area_1`, `admin_area_2`, `postal_code`, and `country_code` properties. `admin_area_1` is required for addresses located in Argentina, Brazil, China, Canada, India, Indonesia, Japan, Mexico, Thailand, and the United States.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailAddress? Address { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string EmailAddress { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The name of the person to whom to ship the items. Supports only the `full_name` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName? Name { get; set; }
@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber? PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingWithTrackingDetailsPhoneNumber? PhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber PhoneNumber { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingWithTrackingDetailsPhoneNumber PhoneNumber { get; set; }
 #endif
         /// <summary>An array of trackers for a transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber.CreateFromDiscriminatorValue); } },
+                { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingWithTrackingDetailsPhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingWithTrackingDetailsPhoneNumber.CreateFromDiscriminatorValue); } },
                 { "trackers", n => { Trackers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker>(global::Soenneker.PayPal.OpenApiClient.Models.Tracker.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailType>(); } },
             };
@@ -110,7 +110,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailName>("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailOptionsItem>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingDetailPhoneNumber>("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingWithTrackingDetailsPhoneNumber>("phone_number", PhoneNumber);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Tracker>("trackers", Trackers);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ShippingDetailType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

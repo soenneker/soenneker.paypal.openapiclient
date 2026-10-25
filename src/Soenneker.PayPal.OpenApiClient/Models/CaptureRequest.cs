@@ -25,21 +25,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether you can make additional captures against the authorized payment. Set to `true` if you do not intend to capture additional payments against the authorization. Set to `false` if you intend to capture additional payments against the authorization.</summary>
         public bool? FinalCapture { get; set; }
-        /// <summary>The API caller-provided external invoice number for this order. Appears in both the payer&apos;s transaction history and the emails that the payer receives.</summary>
+        /// <summary>The invoice_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestInvoiceId? InvoiceId { get; set; }
 #nullable restore
 #else
-        public string InvoiceId { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestInvoiceId InvoiceId { get; set; }
 #endif
-        /// <summary>An informational note about this settlement. Appears in both the payer&apos;s transaction history and the emails that the payer receives.</summary>
+        /// <summary>The note_to_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NoteToPayer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestNoteToPayer? NoteToPayer { get; set; }
 #nullable restore
 #else
-        public string NoteToPayer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestNoteToPayer NoteToPayer { get; set; }
 #endif
         /// <summary>The payment_instruction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,8 +85,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount.CreateFromDiscriminatorValue); } },
                 { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
-                { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
-                { "note_to_payer", n => { NoteToPayer = n.GetStringValue(); } },
+                { "invoice_id", n => { InvoiceId = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestInvoiceId>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestInvoiceId.CreateFromDiscriminatorValue); } },
+                { "note_to_payer", n => { NoteToPayer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestNoteToPayer>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestNoteToPayer.CreateFromDiscriminatorValue); } },
                 { "payment_instruction", n => { PaymentInstruction = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction>(global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction.CreateFromDiscriminatorValue); } },
                 { "soft_descriptor", n => { SoftDescriptor = n.GetStringValue(); } },
             };
@@ -100,8 +100,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2Amount>("amount", Amount);
             writer.WriteBoolValue("final_capture", FinalCapture);
-            writer.WriteStringValue("invoice_id", InvoiceId);
-            writer.WriteStringValue("note_to_payer", NoteToPayer);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestInvoiceId>("invoice_id", InvoiceId);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestNoteToPayer>("note_to_payer", NoteToPayer);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction>("payment_instruction", PaymentInstruction);
             writer.WriteStringValue("soft_descriptor", SoftDescriptor);
             writer.WriteAdditionalData(AdditionalData);

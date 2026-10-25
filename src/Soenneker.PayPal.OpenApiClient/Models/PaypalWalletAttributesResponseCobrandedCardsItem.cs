@@ -30,7 +30,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>The payee property</summary>
+        /// <summary>Merchant associated with the purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CobrandedCardPayee? Payee { get; set; }

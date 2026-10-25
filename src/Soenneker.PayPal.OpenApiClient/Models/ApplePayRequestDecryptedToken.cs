@@ -33,7 +33,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #endif
         /// <summary>Indicates the type of payment data passed, in case of Non China the payment data is 3DSECURE and for China it is EMV.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentDataType? PaymentDataType { get; set; }
-        /// <summary>The tokenized_card property</summary>
+        /// <summary>Apple Pay tokenized credit card used to pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard? TokenizedCard { get; set; }

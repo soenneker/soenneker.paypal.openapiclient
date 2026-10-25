@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
     public partial class WebhooksLookupRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.notifications_webhooks_v1.v1.notifications.webhooksLookup.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the webhook lookup to delete.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhookLookupItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.WebhooksLookup.Item.WithWebhookLookupItemRequestBuilder this[string position]
         {

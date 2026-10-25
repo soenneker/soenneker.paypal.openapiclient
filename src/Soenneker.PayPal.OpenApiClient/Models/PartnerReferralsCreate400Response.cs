@@ -26,10 +26,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorDetails>? Details { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorDetails> Details { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails Details { get; set; }
 #endif
         /// <summary>An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "debug_id", n => { DebugId = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorDetails.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails>(global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage>(); } },
                 { "name", n => { Name = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName>(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("debug_id", DebugId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorDetails>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails>("details", Details);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>("links", Links);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage>("message", MessageEscaped);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName>("name", Name);

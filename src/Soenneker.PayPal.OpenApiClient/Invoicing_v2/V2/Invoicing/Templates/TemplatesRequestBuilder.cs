@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
     public partial class TemplatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.invoicing_v2.v2.invoicing.templates.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the template to delete.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates.Item.WithTemplateItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates.Item.WithTemplateItemRequestBuilder this[string position]
         {

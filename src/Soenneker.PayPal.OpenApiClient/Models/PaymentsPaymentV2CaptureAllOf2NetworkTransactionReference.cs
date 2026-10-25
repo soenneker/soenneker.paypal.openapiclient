@@ -38,14 +38,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Name of the card network through which the transaction was routed.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork? Network { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork Network { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "acquirer_reference_number", n => { AcquirerReferenceNumber = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "network", n => { Network = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork.CreateFromDiscriminatorValue); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork>(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("acquirer_reference_number", AcquirerReferenceNumber);
             writer.WriteStringValue("date", Date);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2NetworkTransactionNetwork>("network", Network);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

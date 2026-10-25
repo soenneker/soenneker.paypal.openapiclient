@@ -50,10 +50,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The plan details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,7 +115,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string StatusUpdateTime { get; set; }
 #endif
-        /// <summary>The customer who approves and pays for the order. The customer is also known as the payer.</summary>
+        /// <summary>The subscriber response information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber? Subscriber { get; set; }
@@ -184,7 +184,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo>("billing_info", BillingInfo);
             writer.WriteStringValue("create_time", CreateTime);
             writer.WriteStringValue("custom_id", CustomId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription>("links", Links);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan>("plan", Plan);
             writer.WriteStringValue("plan_id", PlanId);
             writer.WriteStringValue("quantity", Quantity);

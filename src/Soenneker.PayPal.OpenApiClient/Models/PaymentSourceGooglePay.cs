@@ -23,7 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails AssuranceDetails { get; set; }
 #endif
-        /// <summary>The card property</summary>
+        /// <summary>The payment card information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestCard? Card { get; set; }

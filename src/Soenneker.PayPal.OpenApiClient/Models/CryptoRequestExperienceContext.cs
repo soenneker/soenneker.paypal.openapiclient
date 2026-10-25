@@ -15,13 +15,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Describes the URL.</summary>
+        /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl? CancelUrl { get; set; }
 #nullable restore
 #else
-        public string CancelUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl CancelUrl { get; set; }
 #endif
         /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/api/rest/reference/country-codes/) or [M49 region code](https://unstats.un.org/unsd/methodology/m49/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,13 +31,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>Describes the URL.</summary>
+        /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl? ReturnUrl { get; set; }
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl ReturnUrl { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CryptoRequestExperienceContext"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
+                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl.CreateFromDiscriminatorValue); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
+                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("cancel_url", CancelUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl>("cancel_url", CancelUrl);
             writer.WriteStringValue("locale", Locale);
-            writer.WriteStringValue("return_url", ReturnUrl);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl>("return_url", ReturnUrl);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

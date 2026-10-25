@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Produc
     public partial class ProductsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.catalogs_products_v1.v1.catalogs.products.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The product ID.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Products.Item.WithProductItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Catalogs_products_v1.V1.Catalogs.Products.Item.WithProductItemRequestBuilder this[string position]
         {

@@ -23,7 +23,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed Attributes { get; set; }
 #endif
-        /// <summary>The billing_address property</summary>
+        /// <summary>The billing address for this card. Supports only the `address_line_1`, `address_line_2`, `admin_area_1`, `admin_area_2`, `postal_code`, and `country_code` properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress? BillingAddress { get; set; }
@@ -31,23 +31,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress BillingAddress { get; set; }
 #endif
-        /// <summary>The card brand or network. Typically used in the response.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed? Brand { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed Brand { get; set; }
-#endif
-        /// <summary>The card brand or network. Typically used in the response. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;type&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
+        /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
         [Obsolete("")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CardCardType? CardType { get; private set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardCardType CardType { get; private set; }
-#endif
         /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,10 +47,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The identifier of the instrument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get; private set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get; private set; }
 #endif
         /// <summary>The last digits of the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,14 +84,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string SecurityCode { get; set; }
 #endif
-        /// <summary>The payment card type.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard"/> and sets the default values.
         /// </summary>
@@ -131,15 +113,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed.CreateFromDiscriminatorValue); } },
                 { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed.CreateFromDiscriminatorValue); } },
-                { "card_type", n => { CardType = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardCardType>(global::Soenneker.PayPal.OpenApiClient.Models.CardCardType.CreateFromDiscriminatorValue); } },
+                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>(); } },
+                { "card_type", n => { CardType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardCardType>(); } },
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "security_code", n => { SecurityCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>(global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>(); } },
             };
         }
         /// <summary>
@@ -151,13 +133,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesComposed>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBillingAddress>("billing_address", BillingAddress);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>("brand", Brand);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardBrandComposed>("brand", Brand);
             writer.WriteStringValue("expiry", Expiry);
-            writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("number", Number);
             writer.WriteStringValue("security_code", SecurityCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardTypeComposed>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

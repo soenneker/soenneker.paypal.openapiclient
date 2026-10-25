@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem> LineItems { get; set; }
 #endif
-        /// <summary>The shipping_address property</summary>
+        /// <summary>The address of the person to whom to ship the items. Supports only the `address_line_1`, `address_line_2`, `admin_area_1`, `admin_area_2`, `postal_code`, and `country_code` properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress? ShippingAddress { get; set; }

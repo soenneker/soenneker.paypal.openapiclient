@@ -19,7 +19,7 @@ namespace Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notificati
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.PayPal.OpenApiClient.notifications_webhooks_v1.v1.notifications.webhooks.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the webhook for which to list subscriptions.</param>
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhookItemRequestBuilder"/></returns>
         public global::Soenneker.PayPal.OpenApiClient.Notifications_webhooks_v1.V1.Notifications.Webhooks.Item.WithWebhookItemRequestBuilder this[string position]
         {

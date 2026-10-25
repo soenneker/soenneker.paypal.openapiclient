@@ -14,14 +14,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The funds that are held payee by the marketplace/platform. This field is only applicable to merchants that been enabled for PayPal Complete Payments Platform for Marketplaces and Platforms capability.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The funds that are held on behalf of the merchant.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode? DisbursementMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode DisbursementMode { get; set; }
-#endif
         /// <summary>This field is only enabled for selected merchants/partners to use and provides the ability to trigger a specific pricing rate/plan for a payment transaction. The list of eligible &apos;payee_pricing_tier_id&apos; would be provided to you by your Account Manager. Specifying values other than the one provided to you by your account manager would result in an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disbursement_mode", n => { DisbursementMode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode.CreateFromDiscriminatorValue); } },
+                { "disbursement_mode", n => { DisbursementMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode>(); } },
                 { "payee_pricing_tier_id", n => { PayeePricingTierId = n.GetStringValue(); } },
                 { "payee_receivable_fx_rate_id", n => { PayeeReceivableFxRateId = n.GetStringValue(); } },
                 { "platform_fees", n => { PlatformFees = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -84,7 +78,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode>("disbursement_mode", DisbursementMode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode>("disbursement_mode", DisbursementMode);
             writer.WriteStringValue("payee_pricing_tier_id", PayeePricingTierId);
             writer.WriteStringValue("payee_receivable_fx_rate_id", PayeeReceivableFxRateId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>("platform_fees", PlatformFees);

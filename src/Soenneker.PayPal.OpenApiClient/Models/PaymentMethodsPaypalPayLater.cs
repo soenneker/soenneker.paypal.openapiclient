@@ -25,14 +25,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string CountryCode { get; set; }
 #endif
-        /// <summary>Returns a product code.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The button code corresponding to a particular product or set of products. The values followed are defined by the SDK team.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode? ProductCode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode ProductCode { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater"/> and sets the default values.
         /// </summary>
@@ -61,7 +55,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "can_be_vaulted", n => { CanBeVaulted = n.GetBoolValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
-                { "product_code", n => { ProductCode = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode.CreateFromDiscriminatorValue); } },
+                { "product_code", n => { ProductCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>(); } },
             };
         }
         /// <summary>
@@ -73,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("can_be_vaulted", CanBeVaulted);
             writer.WriteStringValue("country_code", CountryCode);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>("product_code", ProductCode);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodCommonProductCode>("product_code", ProductCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

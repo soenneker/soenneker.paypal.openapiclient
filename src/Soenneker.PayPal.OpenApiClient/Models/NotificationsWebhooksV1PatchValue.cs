@@ -8,11 +8,17 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper2"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper3"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper4"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper5"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper6"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/>, <see cref="int"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NotificationsWebhooksV1PatchValue : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
+        /// <summary>Composed type representation for type <see cref="int"/></summary>
+        public int? Integer { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,53 +27,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1 NotificationsWebhooksV1PatchValueMember1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper? NotificationsWebhooksV1PatchValueWrapper { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2? NotificationsWebhooksV1PatchValueMember2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper NotificationsWebhooksV1PatchValueWrapper { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2 NotificationsWebhooksV1PatchValueMember2 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper2? NotificationsWebhooksV1PatchValueWrapper2 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper2 NotificationsWebhooksV1PatchValueWrapper2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper3? NotificationsWebhooksV1PatchValueWrapper3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper3 NotificationsWebhooksV1PatchValueWrapper3 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper4? NotificationsWebhooksV1PatchValueWrapper4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper4 NotificationsWebhooksV1PatchValueWrapper4 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper5"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper5? NotificationsWebhooksV1PatchValueWrapper5 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper5 NotificationsWebhooksV1PatchValueWrapper5 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper6"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper6? NotificationsWebhooksV1PatchValueWrapper6 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper6 NotificationsWebhooksV1PatchValueWrapper6 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -78,13 +52,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValue();
-            result.NotificationsWebhooksV1PatchValueMember1 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1();
-            result.NotificationsWebhooksV1PatchValueWrapper = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper();
-            result.NotificationsWebhooksV1PatchValueWrapper2 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper2();
-            result.NotificationsWebhooksV1PatchValueWrapper3 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper3();
-            result.NotificationsWebhooksV1PatchValueWrapper4 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper4();
-            result.NotificationsWebhooksV1PatchValueWrapper5 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper5();
-            result.NotificationsWebhooksV1PatchValueWrapper6 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueWrapper6();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else if(parseNode.GetDoubleValue() is double doubleValue)
+            {
+                result.Double = doubleValue;
+            }
+            else if(parseNode.GetIntValue() is int integerValue)
+            {
+                result.Integer = integerValue;
+            }
+            else if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.NotificationsWebhooksV1PatchValueMember1 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1();
+                result.NotificationsWebhooksV1PatchValueMember2 = new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2();
+            }
             return result;
         }
         /// <summary>
@@ -93,9 +80,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(NotificationsWebhooksV1PatchValueMember1 != null || NotificationsWebhooksV1PatchValueWrapper != null || NotificationsWebhooksV1PatchValueWrapper2 != null || NotificationsWebhooksV1PatchValueWrapper3 != null || NotificationsWebhooksV1PatchValueWrapper4 != null || NotificationsWebhooksV1PatchValueWrapper5 != null || NotificationsWebhooksV1PatchValueWrapper6 != null)
+            if(NotificationsWebhooksV1PatchValueMember1 != null || NotificationsWebhooksV1PatchValueMember2 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueWrapper, NotificationsWebhooksV1PatchValueWrapper2, NotificationsWebhooksV1PatchValueWrapper3, NotificationsWebhooksV1PatchValueWrapper4, NotificationsWebhooksV1PatchValueWrapper5, NotificationsWebhooksV1PatchValueWrapper6);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -106,7 +93,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1>(null, NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueWrapper, NotificationsWebhooksV1PatchValueWrapper2, NotificationsWebhooksV1PatchValueWrapper3, NotificationsWebhooksV1PatchValueWrapper4, NotificationsWebhooksV1PatchValueWrapper5, NotificationsWebhooksV1PatchValueWrapper6);
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(Double != null)
+            {
+                writer.WriteDoubleValue(null, Double);
+            }
+            else if(Integer != null)
+            {
+                writer.WriteIntValue(null, Integer);
+            }
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1>(null, NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2);
+            }
         }
     }
 }

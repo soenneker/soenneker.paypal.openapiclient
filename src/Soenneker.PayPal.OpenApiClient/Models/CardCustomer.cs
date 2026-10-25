@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public string MerchantCustomerId { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The full name of the customer as provided to the merchant or on file with the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.CustomerName? Name { get; set; }

@@ -31,7 +31,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem> PurchaseUnits { get; set; }
 #endif
-        /// <summary>The shipping_address property</summary>
+        /// <summary>Redacted shipping address to be used for shipping options and tax calculations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress? ShippingAddress { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress ShippingAddress { get; set; }
 #endif
-        /// <summary>The shipping_option property</summary>
+        /// <summary>Buyer selected shipping option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption? ShippingOption { get; set; }

@@ -42,13 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>If the API request sets `selected = true`, it represents the shipping option that the payee or merchant expects to be pre-selected for the payer when they first view the `shipping.options` in the PayPal Checkout experience. As part of the response if a `shipping.option` contains `selected=true`, it represents the shipping option that the payer selected during the course of checkout with PayPal. Only one `shipping.option` can be set to `selected=true`.</summary>
         public bool? Selected { get; set; }
         /// <summary>A classification for the method of purchase fulfillment.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption"/> and sets the default values.
         /// </summary>
@@ -78,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "selected", n => { Selected = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType>(global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType>(); } },
             };
         }
         /// <summary>
@@ -92,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteBoolValue("selected", Selected);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingOptionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

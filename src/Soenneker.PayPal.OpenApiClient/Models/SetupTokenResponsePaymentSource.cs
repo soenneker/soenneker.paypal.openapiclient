@@ -26,18 +26,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Resource consolidating common request and response attributes for vaulting a Digital Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse? Paypal { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse? Paypal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse Paypal { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse Paypal { get; set; }
 #endif
         /// <summary>Resource consolidating common request and response attributes for vaulting a Digital Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse? Venmo { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse? Venmo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse Venmo { get; private set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse Venmo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSource"/> and sets the default values.
@@ -77,6 +77,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SetupTokenResponsePaymentSourceCard>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse>("venmo", Venmo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

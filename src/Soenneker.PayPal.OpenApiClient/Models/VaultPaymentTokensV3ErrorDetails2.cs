@@ -42,10 +42,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links) that are either relevant to the issue by providing additional information or offering potential resolutions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription> Links { get; private set; }
 #endif
         /// <summary>The location of the field that caused the error. Value is `body`, `path`, or `query`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,7 +107,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("field", Field);
             writer.WriteStringValue("issue", Issue);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3LinkDescription>("links", Links);
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

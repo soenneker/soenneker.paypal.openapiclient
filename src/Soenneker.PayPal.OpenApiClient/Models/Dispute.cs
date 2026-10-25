@@ -142,10 +142,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>? Links { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription> Links { get; private set; }
 #endif
         /// <summary>An array of customer- or merchant-posted messages for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,6 +156,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public List<global::Soenneker.PayPal.OpenApiClient.Models.Message> Messages { get; set; }
 #endif
         /// <summary>DEPRECATED The Money movement details for the dispute.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement>? MoneyMovements { get; set; }
@@ -194,10 +195,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of all the supporting information that are associated to this dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo>? SupportingInfo { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo>? SupportingInfo { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo> SupportingInfo { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo> SupportingInfo { get; private set; }
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -282,14 +283,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("external_reason_code", ExternalReasonCode);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeFeePolicyProperty>("fee_policy", FeePolicy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FundMovement>("fund_movements", FundMovements);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescription>("links", Links);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Message>("messages", Messages);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovement>("money_movements", MoneyMovements);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Offer>("offer", Offer);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundDetails>("refund_details", RefundDetails);
             writer.WriteStringValue("seller_response_due_date", SellerResponseDueDate);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.SupportingInfo>("supporting_info", SupportingInfo);
             writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }
