@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancellation_date") is { } nullNodeCancellationDate && nullNodeCancellationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDate = null;
-            if (parseNode.GetChildNode("cancellation_mode") is { } nullNodeCancellationMode && nullNodeCancellationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationMode = null;
-            if (parseNode.GetChildNode("cancellation_number") is { } nullNodeCancellationNumber && nullNodeCancellationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationNumber = null;
-            if (parseNode.GetChildNode("cancelled") is { } nullNodeCancelled && nullNodeCancelled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cancelled = null;
+            if (parseNode.GetChildNode("cancellation_date") is null) { _explicitNullValueCancellationDate = default!; _explicitNullProperties?.Remove("cancellation_date"); }
+            else if (parseNode.GetChildNode("cancellation_date") is { } nullNodeCancellationDate && nullNodeCancellationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDate = null;
+            if (parseNode.GetChildNode("cancellation_mode") is null) { _explicitNullValueCancellationMode = default!; _explicitNullProperties?.Remove("cancellation_mode"); }
+            else if (parseNode.GetChildNode("cancellation_mode") is { } nullNodeCancellationMode && nullNodeCancellationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationMode = null;
+            if (parseNode.GetChildNode("cancellation_number") is null) { _explicitNullValueCancellationNumber = default!; _explicitNullProperties?.Remove("cancellation_number"); }
+            else if (parseNode.GetChildNode("cancellation_number") is { } nullNodeCancellationNumber && nullNodeCancellationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationNumber = null;
+            if (parseNode.GetChildNode("cancelled") is null) { _explicitNullValueCancelled = default!; _explicitNullProperties?.Remove("cancelled"); }
+            else if (parseNode.GetChildNode("cancelled") is { } nullNodeCancelled && nullNodeCancelled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cancelled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancellationDate { get => _explicitNullValueCancellationDate; set { _explicitNullValueCancellationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_date"); else _explicitNullProperties?.Remove("cancellation_date"); } }
+        public string? CancellationDate { get => _explicitNullValueCancellationDate; set { _explicitNullValueCancellationDate = value; AdditionalData?.Remove("cancellation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_date"); else _explicitNullProperties?.Remove("cancellation_date"); } }
         private string? _explicitNullValueCancellationDate = default!;
 #nullable restore
 #else
-        public string CancellationDate { get => _explicitNullValueCancellationDate; set { _explicitNullValueCancellationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_date"); else _explicitNullProperties?.Remove("cancellation_date"); } }
+        public string CancellationDate { get => _explicitNullValueCancellationDate; set { _explicitNullValueCancellationDate = value; AdditionalData?.Remove("cancellation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_date"); else _explicitNullProperties?.Remove("cancellation_date"); } }
         private string _explicitNullValueCancellationDate = default!;
 #endif
         /// <summary>Indicates the mode used for order cancellation.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode? CancellationMode { get => _explicitNullValueCancellationMode; set { _explicitNullValueCancellationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_mode"); else _explicitNullProperties?.Remove("cancellation_mode"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode? CancellationMode { get => _explicitNullValueCancellationMode; set { _explicitNullValueCancellationMode = value; AdditionalData?.Remove("cancellation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_mode"); else _explicitNullProperties?.Remove("cancellation_mode"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode? _explicitNullValueCancellationMode = default!;
         /// <summary>The cancellation number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancellationNumber { get => _explicitNullValueCancellationNumber; set { _explicitNullValueCancellationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_number"); else _explicitNullProperties?.Remove("cancellation_number"); } }
+        public string? CancellationNumber { get => _explicitNullValueCancellationNumber; set { _explicitNullValueCancellationNumber = value; AdditionalData?.Remove("cancellation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_number"); else _explicitNullProperties?.Remove("cancellation_number"); } }
         private string? _explicitNullValueCancellationNumber = default!;
 #nullable restore
 #else
-        public string CancellationNumber { get => _explicitNullValueCancellationNumber; set { _explicitNullValueCancellationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_number"); else _explicitNullProperties?.Remove("cancellation_number"); } }
+        public string CancellationNumber { get => _explicitNullValueCancellationNumber; set { _explicitNullValueCancellationNumber = value; AdditionalData?.Remove("cancellation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_number"); else _explicitNullProperties?.Remove("cancellation_number"); } }
         private string _explicitNullValueCancellationNumber = default!;
 #endif
         /// <summary>Indicates whether the dispute was canceled.</summary>
-        public bool? Cancelled { get => _explicitNullValueCancelled; set { _explicitNullValueCancelled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelled"); else _explicitNullProperties?.Remove("cancelled"); } }
+        public bool? Cancelled { get => _explicitNullValueCancelled; set { _explicitNullValueCancelled = value; AdditionalData?.Remove("cancelled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelled"); else _explicitNullProperties?.Remove("cancelled"); } }
         private bool? _explicitNullValueCancelled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails"/> and sets the default values.
@@ -78,7 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cancellation_date", n => { CancellationDate = n.GetStringValue(); } },
-                { "cancellation_mode", n => { CancellationMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode>(); } },
+                { "cancellation_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetailsCancellationMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancellationMode = default; _explicitNullProperties?.Remove("cancellation_mode"); AdditionalData["cancellation_mode"] = unknown; } else { CancellationMode = parsed; AdditionalData.Remove("cancellation_mode"); } } },
                 { "cancellation_number", n => { CancellationNumber = n.GetStringValue(); } },
                 { "cancelled", n => { Cancelled = n.GetBoolValue(); } },
             };

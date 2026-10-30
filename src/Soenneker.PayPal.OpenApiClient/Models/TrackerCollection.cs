@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trackers") is { } nullNodeTrackers && nullNodeTrackers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trackers = null;
+            if (parseNode.GetChildNode("trackers") is null) { _explicitNullValueTrackers = default!; _explicitNullProperties?.Remove("trackers"); }
+            else if (parseNode.GetChildNode("trackers") is { } nullNodeTrackers && nullNodeTrackers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trackers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,11 +35,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of tracking information for shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker>? Trackers { get => _explicitNullValueTrackers; set { _explicitNullValueTrackers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackers"); else _explicitNullProperties?.Remove("trackers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker>? Trackers { get => _explicitNullValueTrackers; set { _explicitNullValueTrackers = value; AdditionalData?.Remove("trackers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackers"); else _explicitNullProperties?.Remove("trackers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker>? _explicitNullValueTrackers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker> Trackers { get => _explicitNullValueTrackers; set { _explicitNullValueTrackers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackers"); else _explicitNullProperties?.Remove("trackers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker> Trackers { get => _explicitNullValueTrackers; set { _explicitNullValueTrackers = value; AdditionalData?.Remove("trackers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackers"); else _explicitNullProperties?.Remove("trackers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.ShippingShipmentTrackingV1Tracker> _explicitNullValueTrackers = default!;
 #endif
         /// <summary>

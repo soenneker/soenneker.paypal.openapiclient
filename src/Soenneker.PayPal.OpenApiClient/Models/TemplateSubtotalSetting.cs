@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display_preference") is { } nullNodeDisplayPreference && nullNodeDisplayPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayPreference = null;
-            if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("display_preference") is null) { _explicitNullValueDisplayPreference = default!; _explicitNullProperties?.Remove("display_preference"); }
+            else if (parseNode.GetChildNode("display_preference") is { } nullNodeDisplayPreference && nullNodeDisplayPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayPreference = null;
+            if (parseNode.GetChildNode("field_name") is null) { _explicitNullValueFieldName = default!; _explicitNullProperties?.Remove("field_name"); }
+            else if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The template display preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference? DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference? DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; AdditionalData?.Remove("display_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference? _explicitNullValueDisplayPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; AdditionalData?.Remove("display_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference _explicitNullValueDisplayPreference = default!;
 #endif
         /// <summary>The field names in the template for discount, shipping, and custom amounts.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalField? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalField? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; AdditionalData?.Remove("field_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalField? _explicitNullValueFieldName = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_preference", n => { DisplayPreference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference>(global::Soenneker.PayPal.OpenApiClient.Models.TemplateDisplayPreference.CreateFromDiscriminatorValue); } },
-                { "field_name", n => { FieldName = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalField>(); } },
+                { "field_name", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalField>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldName = default; _explicitNullProperties?.Remove("field_name"); AdditionalData["field_name"] = unknown; } else { FieldName = parsed; AdditionalData.Remove("field_name"); } } },
             };
         }
         /// <summary>

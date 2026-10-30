@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invoice_id") is { } nullNodeInvoiceId && nullNodeInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceId = null;
-            if (parseNode.GetChildNode("tax_total") is { } nullNodeTaxTotal && nullNodeTaxTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxTotal = null;
+            if (parseNode.GetChildNode("invoice_id") is null) { _explicitNullValueInvoiceId = default!; _explicitNullProperties?.Remove("invoice_id"); }
+            else if (parseNode.GetChildNode("invoice_id") is { } nullNodeInvoiceId && nullNodeInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceId = null;
+            if (parseNode.GetChildNode("tax_total") is null) { _explicitNullValueTaxTotal = default!; _explicitNullProperties?.Remove("tax_total"); }
+            else if (parseNode.GetChildNode("tax_total") is { } nullNodeTaxTotal && nullNodeTaxTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxTotal = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Use this field to pass a purchase identification value of up to 127 ASCII characters. The length of this field will be adjusted to meet network specifications (25chars for Visa and Mastercard, 17chars for Amex), and the original invoice ID will still be displayed in your existing reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        public string? InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; AdditionalData?.Remove("invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
         private string? _explicitNullValueInvoiceId = default!;
 #nullable restore
 #else
-        public string InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        public string InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; AdditionalData?.Remove("invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
         private string _explicitNullValueInvoiceId = default!;
 #endif
         /// <summary>Use this field to break down the amount of tax included in the total purchase amount. The value provided here will not add to the total purchase amount. The value can&apos;t be negative, and in most cases, it must be greater than zero in order to qualify for lower interchange rates.  Value, by country, is:    UK. A county.    US. A state.    Canada. A province.    Japan. A prefecture.    Switzerland. A kanton.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal? TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal? TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; AdditionalData?.Remove("tax_total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal? _explicitNullValueTaxTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; AdditionalData?.Remove("tax_total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingDataTaxTotal _explicitNullValueTaxTotal = default!;
 #endif
         /// <summary>

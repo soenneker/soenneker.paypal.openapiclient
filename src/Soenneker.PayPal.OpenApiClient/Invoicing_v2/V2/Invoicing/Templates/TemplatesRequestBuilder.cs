@@ -55,6 +55,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.TemplatesList400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Templates?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates.TemplatesRequestBuilder.TemplatesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -70,8 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.TemplatesList400Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Templates>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Templates.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,6 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.TemplatesCreate422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.Template?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.Template body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -103,8 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error403.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.TemplatesCreate422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Template>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Template.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -122,7 +122,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates.TemplatesRequestBuilder.TemplatesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/invoicing_v2/v2/invoicing/templates", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Templates
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/invoicing_v2/v2/invoicing/templates", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

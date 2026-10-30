@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currencies") is { } nullNodeCurrencies && nullNodeCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currencies = null;
-            if (parseNode.GetChildNode("transfer_method_type") is { } nullNodeTransferMethodType && nullNodeTransferMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferMethodType = null;
+            if (parseNode.GetChildNode("currencies") is null) { _explicitNullValueCurrencies = default!; _explicitNullProperties?.Remove("currencies"); }
+            else if (parseNode.GetChildNode("currencies") is { } nullNodeCurrencies && nullNodeCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currencies = null;
+            if (parseNode.GetChildNode("transfer_method_type") is null) { _explicitNullValueTransferMethodType = default!; _explicitNullProperties?.Remove("transfer_method_type"); }
+            else if (parseNode.GetChildNode("transfer_method_type") is { } nullNodeTransferMethodType && nullNodeTransferMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferMethodType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Requested Currencies for a Transfer Method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Currencies { get => _explicitNullValueCurrencies; set { _explicitNullValueCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencies"); else _explicitNullProperties?.Remove("currencies"); } }
+        public List<string>? Currencies { get => _explicitNullValueCurrencies; set { _explicitNullValueCurrencies = value; AdditionalData?.Remove("currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencies"); else _explicitNullProperties?.Remove("currencies"); } }
         private List<string>? _explicitNullValueCurrencies = default!;
 #nullable restore
 #else
-        public List<string> Currencies { get => _explicitNullValueCurrencies; set { _explicitNullValueCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencies"); else _explicitNullProperties?.Remove("currencies"); } }
+        public List<string> Currencies { get => _explicitNullValueCurrencies; set { _explicitNullValueCurrencies = value; AdditionalData?.Remove("currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencies"); else _explicitNullProperties?.Remove("currencies"); } }
         private List<string> _explicitNullValueCurrencies = default!;
 #endif
         /// <summary>Transfer Method type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType? TransferMethodType { get => _explicitNullValueTransferMethodType; set { _explicitNullValueTransferMethodType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_method_type"); else _explicitNullProperties?.Remove("transfer_method_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType? TransferMethodType { get => _explicitNullValueTransferMethodType; set { _explicitNullValueTransferMethodType = value; AdditionalData?.Remove("transfer_method_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_method_type"); else _explicitNullProperties?.Remove("transfer_method_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType? _explicitNullValueTransferMethodType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TransferMethod"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "currencies", n => { Currencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "transfer_method_type", n => { TransferMethodType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType>(); } },
+                { "transfer_method_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TransferMethodTransferMethodType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTransferMethodType = default; _explicitNullProperties?.Remove("transfer_method_type"); AdditionalData["transfer_method_type"] = unknown; } else { TransferMethodType = parsed; AdditionalData.Remove("transfer_method_type"); } } },
             };
         }
         /// <summary>

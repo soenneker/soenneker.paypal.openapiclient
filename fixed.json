@@ -276,7 +276,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -383,7 +390,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -476,7 +490,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -583,7 +604,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -679,7 +707,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -775,7 +810,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -934,7 +976,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1210,7 +1259,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1306,7 +1362,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1413,7 +1476,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1627,7 +1697,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1749,7 +1826,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1871,7 +1955,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1993,7 +2084,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2133,7 +2231,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2242,7 +2347,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2373,7 +2485,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/catalogs_products_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2464,7 +2583,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/catalogs_products_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2557,7 +2683,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/catalogs_products_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -2681,7 +2814,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/catalogs_products_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8538,7 +8678,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/customer_partner_referrals_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8904,7 +9051,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/customer_partner_referrals_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9027,7 +9181,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9131,7 +9292,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9292,7 +9460,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9426,7 +9601,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9536,7 +9718,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9683,7 +9872,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9794,7 +9990,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -9941,7 +10144,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10062,7 +10272,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10161,7 +10378,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10243,7 +10467,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10339,7 +10570,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10490,7 +10728,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10577,7 +10822,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10690,7 +10942,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10793,7 +11052,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -10908,7 +11174,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -11014,7 +11287,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -11119,7 +11399,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -11211,7 +11498,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -11293,7 +11587,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -11391,7 +11692,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/invoicing_v2_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicingV2ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -16107,7 +16415,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/reporting_transactions_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -16187,7 +16502,14 @@
             }
           },
           "default": {
-            "$ref": "#/components/responses/reporting_transactions_v1_default"
+            "description": "The default response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -29803,6 +30125,40 @@
           ]
         }
       },
+      "ErrorDefaultError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/ErrorDefaultErrorName"
+          },
+          "message": {
+            "$ref": "#/components/schemas/ErrorDefaultErrorMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "description": "The default error response.",
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ErrorDefault"
+        }
+      },
       "CatalogsProductsV1Value400": {
         "type": "object",
         "properties": {
@@ -30343,7 +30699,7 @@
             "description": "The \u003Ca href=\u0022https://tools.ietf.org/html/rfc6901\u0022\u003EJSON Pointer\u003C/a\u003E to the target document location at which to complete the operation."
           },
           "value": {
-            "$ref": "#/components/schemas/PatchValue"
+            "$ref": "#/components/schemas/NotificationsWebhooksV1PatchValue"
           },
           "from": {
             "type": "string",
@@ -34698,9 +35054,6 @@
             "type": "number"
           },
           {
-            "type": "integer"
-          },
-          {
             "type": "string"
           },
           {
@@ -36639,6 +36992,40 @@
               "name": "TheSpecifiedFieldCannotBePatched"
             }
           ]
+        }
+      },
+      "CatalogsProductsV1ErrorDefaultError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultErrorName"
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultErrorMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "description": "The default error response.",
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ErrorDefault"
         }
       },
       "Guid": {
@@ -88885,6 +89272,40 @@
           ]
         }
       },
+      "CustomerPartnerReferralsV2ErrorDefaultError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultErrorName"
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultErrorMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "description": "The default error response.",
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ErrorDefault"
+        }
+      },
       "InvoicingV2Value400": {
         "type": "object",
         "properties": {
@@ -99588,6 +100009,40 @@
           ]
         }
       },
+      "InvoicingV2ErrorDefaultError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultErrorName"
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultErrorMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "description": "The default error response.",
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ErrorDefault"
+        }
+      },
       "EventList": {
         "title": "Event List",
         "type": "object",
@@ -100570,9 +101025,6 @@
         "anyOf": [
           {
             "type": "number"
-          },
-          {
-            "type": "integer"
           },
           {
             "type": "string"
@@ -101664,7 +102116,7 @@
             "description": "The \u003Ca href=\u0022https://tools.ietf.org/html/rfc6901\u0022\u003EJSON Pointer\u003C/a\u003E to the target document location at which to complete the operation."
           },
           "value": {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1PatchValue"
+            "$ref": "#/components/schemas/NotificationsWebhooksV1PatchValue"
           },
           "from": {
             "type": "string",
@@ -101757,9 +102209,6 @@
         "anyOf": [
           {
             "type": "number"
-          },
-          {
-            "type": "integer"
           },
           {
             "type": "string"
@@ -112924,6 +113373,40 @@
               "name": "Pap"
             }
           ]
+        }
+      },
+      "ReportingTransactionsV1ErrorDefaultError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultErrorName"
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultErrorMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "description": "The default error response.",
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ErrorDefault"
         }
       },
       "BatchTrackerCollection": {
@@ -126944,6 +127427,566 @@
         "type": "object",
         "description": "A link.",
         "readOnly": true
+      },
+      "ErrorDefaultErrorName": {
+        "enum": [
+          "INVALID_REQUEST",
+          "AUTHENTICATION_FAILURE",
+          "NOT_AUTHORIZED",
+          "RESOURCE_NOT_FOUND",
+          "RESOURCE_CONFLICT",
+          "UNSUPPORTED_MEDIA_TYPE",
+          "UNPROCESSABLE_ENTITY",
+          "INTERNAL_SERVER_ERROR",
+          "SERVICE_UNAVAILABLE"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INVALID_REQUEST",
+              "name": "InvalidRequest"
+            },
+            {
+              "value": "AUTHENTICATION_FAILURE",
+              "name": "AuthenticationFailure"
+            },
+            {
+              "value": "NOT_AUTHORIZED",
+              "name": "NotAuthorized"
+            },
+            {
+              "value": "RESOURCE_NOT_FOUND",
+              "name": "ResourceNotFound"
+            },
+            {
+              "value": "RESOURCE_CONFLICT",
+              "name": "ResourceConflict"
+            },
+            {
+              "value": "UNSUPPORTED_MEDIA_TYPE",
+              "name": "UnsupportedMediaType"
+            },
+            {
+              "value": "UNPROCESSABLE_ENTITY",
+              "name": "UnprocessableEntity"
+            },
+            {
+              "value": "INTERNAL_SERVER_ERROR",
+              "name": "InternalServerError"
+            },
+            {
+              "value": "SERVICE_UNAVAILABLE",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "ErrorDefaultErrorMessage": {
+        "enum": [
+          "Request is not well-formed, syntactically incorrect, or violates schema.",
+          "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+          "Authorization failed due to insufficient permissions.",
+          "The specified resource does not exist.",
+          "The server has detected a conflict while processing this request.",
+          "The server does not support the request payload\u0027s media type.",
+          "The requested action could not be performed, semantically incorrect, or failed business validation.",
+          "An internal server error occurred.",
+          "Service Unavailable."
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Message",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Request is not well-formed, syntactically incorrect, or violates schema.",
+              "name": "RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDot"
+            },
+            {
+              "value": "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+              "name": "AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDot"
+            },
+            {
+              "value": "Authorization failed due to insufficient permissions.",
+              "name": "AuthorizationFailedDueToInsufficientPermissions"
+            },
+            {
+              "value": "The specified resource does not exist.",
+              "name": "TheSpecifiedResourceDoesNotExist"
+            },
+            {
+              "value": "The server has detected a conflict while processing this request.",
+              "name": "TheServerHasDetectedAConflictWhileProcessingThisRequest"
+            },
+            {
+              "value": "The server does not support the request payload\u0027s media type.",
+              "name": "TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDot"
+            },
+            {
+              "value": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+              "name": "TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDot"
+            },
+            {
+              "value": "An internal server error occurred.",
+              "name": "AnInternalServerErrorOccurred"
+            },
+            {
+              "value": "Service Unavailable.",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "CatalogsProductsV1ErrorDefaultErrorName": {
+        "enum": [
+          "INVALID_REQUEST",
+          "AUTHENTICATION_FAILURE",
+          "NOT_AUTHORIZED",
+          "RESOURCE_NOT_FOUND",
+          "RESOURCE_CONFLICT",
+          "UNSUPPORTED_MEDIA_TYPE",
+          "UNPROCESSABLE_ENTITY",
+          "INTERNAL_SERVER_ERROR",
+          "SERVICE_UNAVAILABLE"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INVALID_REQUEST",
+              "name": "InvalidRequest"
+            },
+            {
+              "value": "AUTHENTICATION_FAILURE",
+              "name": "AuthenticationFailure"
+            },
+            {
+              "value": "NOT_AUTHORIZED",
+              "name": "NotAuthorized"
+            },
+            {
+              "value": "RESOURCE_NOT_FOUND",
+              "name": "ResourceNotFound"
+            },
+            {
+              "value": "RESOURCE_CONFLICT",
+              "name": "ResourceConflict"
+            },
+            {
+              "value": "UNSUPPORTED_MEDIA_TYPE",
+              "name": "UnsupportedMediaType"
+            },
+            {
+              "value": "UNPROCESSABLE_ENTITY",
+              "name": "UnprocessableEntity"
+            },
+            {
+              "value": "INTERNAL_SERVER_ERROR",
+              "name": "InternalServerError"
+            },
+            {
+              "value": "SERVICE_UNAVAILABLE",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "CatalogsProductsV1ErrorDefaultErrorMessage": {
+        "enum": [
+          "Request is not well-formed, syntactically incorrect, or violates schema.",
+          "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+          "Authorization failed due to insufficient permissions.",
+          "The specified resource does not exist.",
+          "The server has detected a conflict while processing this request.",
+          "The server does not support the request payload\u0027s media type.",
+          "The requested action could not be performed, semantically incorrect, or failed business validation.",
+          "An internal server error occurred.",
+          "Service Unavailable."
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Message",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Request is not well-formed, syntactically incorrect, or violates schema.",
+              "name": "RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDot"
+            },
+            {
+              "value": "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+              "name": "AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDot"
+            },
+            {
+              "value": "Authorization failed due to insufficient permissions.",
+              "name": "AuthorizationFailedDueToInsufficientPermissions"
+            },
+            {
+              "value": "The specified resource does not exist.",
+              "name": "TheSpecifiedResourceDoesNotExist"
+            },
+            {
+              "value": "The server has detected a conflict while processing this request.",
+              "name": "TheServerHasDetectedAConflictWhileProcessingThisRequest"
+            },
+            {
+              "value": "The server does not support the request payload\u0027s media type.",
+              "name": "TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDot"
+            },
+            {
+              "value": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+              "name": "TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDot"
+            },
+            {
+              "value": "An internal server error occurred.",
+              "name": "AnInternalServerErrorOccurred"
+            },
+            {
+              "value": "Service Unavailable.",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultErrorName": {
+        "enum": [
+          "INVALID_REQUEST",
+          "AUTHENTICATION_FAILURE",
+          "NOT_AUTHORIZED",
+          "RESOURCE_NOT_FOUND",
+          "RESOURCE_CONFLICT",
+          "UNSUPPORTED_MEDIA_TYPE",
+          "UNPROCESSABLE_ENTITY",
+          "INTERNAL_SERVER_ERROR",
+          "SERVICE_UNAVAILABLE"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INVALID_REQUEST",
+              "name": "InvalidRequest"
+            },
+            {
+              "value": "AUTHENTICATION_FAILURE",
+              "name": "AuthenticationFailure"
+            },
+            {
+              "value": "NOT_AUTHORIZED",
+              "name": "NotAuthorized"
+            },
+            {
+              "value": "RESOURCE_NOT_FOUND",
+              "name": "ResourceNotFound"
+            },
+            {
+              "value": "RESOURCE_CONFLICT",
+              "name": "ResourceConflict"
+            },
+            {
+              "value": "UNSUPPORTED_MEDIA_TYPE",
+              "name": "UnsupportedMediaType"
+            },
+            {
+              "value": "UNPROCESSABLE_ENTITY",
+              "name": "UnprocessableEntity"
+            },
+            {
+              "value": "INTERNAL_SERVER_ERROR",
+              "name": "InternalServerError"
+            },
+            {
+              "value": "SERVICE_UNAVAILABLE",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultErrorMessage": {
+        "enum": [
+          "Request is not well-formed, syntactically incorrect, or violates schema.",
+          "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+          "Authorization failed due to insufficient permissions.",
+          "The specified resource does not exist.",
+          "The server has detected a conflict while processing this request.",
+          "The server does not support the request payload\u0027s media type.",
+          "The requested action could not be performed, semantically incorrect, or failed business validation.",
+          "An internal server error occurred.",
+          "Service Unavailable."
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Message",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Request is not well-formed, syntactically incorrect, or violates schema.",
+              "name": "RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDot"
+            },
+            {
+              "value": "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+              "name": "AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDot"
+            },
+            {
+              "value": "Authorization failed due to insufficient permissions.",
+              "name": "AuthorizationFailedDueToInsufficientPermissions"
+            },
+            {
+              "value": "The specified resource does not exist.",
+              "name": "TheSpecifiedResourceDoesNotExist"
+            },
+            {
+              "value": "The server has detected a conflict while processing this request.",
+              "name": "TheServerHasDetectedAConflictWhileProcessingThisRequest"
+            },
+            {
+              "value": "The server does not support the request payload\u0027s media type.",
+              "name": "TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDot"
+            },
+            {
+              "value": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+              "name": "TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDot"
+            },
+            {
+              "value": "An internal server error occurred.",
+              "name": "AnInternalServerErrorOccurred"
+            },
+            {
+              "value": "Service Unavailable.",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "InvoicingV2ErrorDefaultErrorName": {
+        "enum": [
+          "INVALID_REQUEST",
+          "AUTHENTICATION_FAILURE",
+          "NOT_AUTHORIZED",
+          "RESOURCE_NOT_FOUND",
+          "RESOURCE_CONFLICT",
+          "UNSUPPORTED_MEDIA_TYPE",
+          "UNPROCESSABLE_ENTITY",
+          "INTERNAL_SERVER_ERROR",
+          "SERVICE_UNAVAILABLE"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INVALID_REQUEST",
+              "name": "InvalidRequest"
+            },
+            {
+              "value": "AUTHENTICATION_FAILURE",
+              "name": "AuthenticationFailure"
+            },
+            {
+              "value": "NOT_AUTHORIZED",
+              "name": "NotAuthorized"
+            },
+            {
+              "value": "RESOURCE_NOT_FOUND",
+              "name": "ResourceNotFound"
+            },
+            {
+              "value": "RESOURCE_CONFLICT",
+              "name": "ResourceConflict"
+            },
+            {
+              "value": "UNSUPPORTED_MEDIA_TYPE",
+              "name": "UnsupportedMediaType"
+            },
+            {
+              "value": "UNPROCESSABLE_ENTITY",
+              "name": "UnprocessableEntity"
+            },
+            {
+              "value": "INTERNAL_SERVER_ERROR",
+              "name": "InternalServerError"
+            },
+            {
+              "value": "SERVICE_UNAVAILABLE",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "InvoicingV2ErrorDefaultErrorMessage": {
+        "enum": [
+          "Request is not well-formed, syntactically incorrect, or violates schema.",
+          "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+          "Authorization failed due to insufficient permissions.",
+          "The specified resource does not exist.",
+          "The server has detected a conflict while processing this request.",
+          "The server does not support the request payload\u0027s media type.",
+          "The requested action could not be performed, semantically incorrect, or failed business validation.",
+          "An internal server error occurred.",
+          "Service Unavailable."
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Message",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Request is not well-formed, syntactically incorrect, or violates schema.",
+              "name": "RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDot"
+            },
+            {
+              "value": "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+              "name": "AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDot"
+            },
+            {
+              "value": "Authorization failed due to insufficient permissions.",
+              "name": "AuthorizationFailedDueToInsufficientPermissions"
+            },
+            {
+              "value": "The specified resource does not exist.",
+              "name": "TheSpecifiedResourceDoesNotExist"
+            },
+            {
+              "value": "The server has detected a conflict while processing this request.",
+              "name": "TheServerHasDetectedAConflictWhileProcessingThisRequest"
+            },
+            {
+              "value": "The server does not support the request payload\u0027s media type.",
+              "name": "TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDot"
+            },
+            {
+              "value": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+              "name": "TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDot"
+            },
+            {
+              "value": "An internal server error occurred.",
+              "name": "AnInternalServerErrorOccurred"
+            },
+            {
+              "value": "Service Unavailable.",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "ReportingTransactionsV1ErrorDefaultErrorName": {
+        "enum": [
+          "INVALID_REQUEST",
+          "AUTHENTICATION_FAILURE",
+          "NOT_AUTHORIZED",
+          "RESOURCE_NOT_FOUND",
+          "RESOURCE_CONFLICT",
+          "UNSUPPORTED_MEDIA_TYPE",
+          "UNPROCESSABLE_ENTITY",
+          "INTERNAL_SERVER_ERROR",
+          "SERVICE_UNAVAILABLE"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INVALID_REQUEST",
+              "name": "InvalidRequest"
+            },
+            {
+              "value": "AUTHENTICATION_FAILURE",
+              "name": "AuthenticationFailure"
+            },
+            {
+              "value": "NOT_AUTHORIZED",
+              "name": "NotAuthorized"
+            },
+            {
+              "value": "RESOURCE_NOT_FOUND",
+              "name": "ResourceNotFound"
+            },
+            {
+              "value": "RESOURCE_CONFLICT",
+              "name": "ResourceConflict"
+            },
+            {
+              "value": "UNSUPPORTED_MEDIA_TYPE",
+              "name": "UnsupportedMediaType"
+            },
+            {
+              "value": "UNPROCESSABLE_ENTITY",
+              "name": "UnprocessableEntity"
+            },
+            {
+              "value": "INTERNAL_SERVER_ERROR",
+              "name": "InternalServerError"
+            },
+            {
+              "value": "SERVICE_UNAVAILABLE",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
+      },
+      "ReportingTransactionsV1ErrorDefaultErrorMessage": {
+        "enum": [
+          "Request is not well-formed, syntactically incorrect, or violates schema.",
+          "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+          "Authorization failed due to insufficient permissions.",
+          "The specified resource does not exist.",
+          "The server has detected a conflict while processing this request.",
+          "The server does not support the request payload\u0027s media type.",
+          "The requested action could not be performed, semantically incorrect, or failed business validation.",
+          "An internal server error occurred.",
+          "Service Unavailable."
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Message",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Request is not well-formed, syntactically incorrect, or violates schema.",
+              "name": "RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDot"
+            },
+            {
+              "value": "Authentication failed due to missing authorization header, or invalid authentication credentials.",
+              "name": "AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDot"
+            },
+            {
+              "value": "Authorization failed due to insufficient permissions.",
+              "name": "AuthorizationFailedDueToInsufficientPermissions"
+            },
+            {
+              "value": "The specified resource does not exist.",
+              "name": "TheSpecifiedResourceDoesNotExist"
+            },
+            {
+              "value": "The server has detected a conflict while processing this request.",
+              "name": "TheServerHasDetectedAConflictWhileProcessingThisRequest"
+            },
+            {
+              "value": "The server does not support the request payload\u0027s media type.",
+              "name": "TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDot"
+            },
+            {
+              "value": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+              "name": "TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDot"
+            },
+            {
+              "value": "An internal server error occurred.",
+              "name": "AnInternalServerErrorOccurred"
+            },
+            {
+              "value": "Service Unavailable.",
+              "name": "ServiceUnavailable"
+            }
+          ]
+        }
       },
       "ErrorDefaultOneOf1": {
         "type": "object",

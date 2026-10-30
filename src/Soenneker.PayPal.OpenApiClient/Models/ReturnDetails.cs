@@ -18,42 +18,47 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
-            if (parseNode.GetChildNode("receipt") is { } nullNodeReceipt && nullNodeReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receipt = null;
-            if (parseNode.GetChildNode("return_confirmation_number") is { } nullNodeReturnConfirmationNumber && nullNodeReturnConfirmationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnConfirmationNumber = null;
-            if (parseNode.GetChildNode("returned") is { } nullNodeReturned && nullNodeReturned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Returned = null;
-            if (parseNode.GetChildNode("return_time") is { } nullNodeReturnTime && nullNodeReturnTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnTime = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("receipt") is null) { _explicitNullValueReceipt = default!; _explicitNullProperties?.Remove("receipt"); }
+            else if (parseNode.GetChildNode("receipt") is { } nullNodeReceipt && nullNodeReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receipt = null;
+            if (parseNode.GetChildNode("return_confirmation_number") is null) { _explicitNullValueReturnConfirmationNumber = default!; _explicitNullProperties?.Remove("return_confirmation_number"); }
+            else if (parseNode.GetChildNode("return_confirmation_number") is { } nullNodeReturnConfirmationNumber && nullNodeReturnConfirmationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnConfirmationNumber = null;
+            if (parseNode.GetChildNode("returned") is null) { _explicitNullValueReturned = default!; _explicitNullProperties?.Remove("returned"); }
+            else if (parseNode.GetChildNode("returned") is { } nullNodeReturned && nullNodeReturned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Returned = null;
+            if (parseNode.GetChildNode("return_time") is null) { _explicitNullValueReturnTime = default!; _explicitNullProperties?.Remove("return_time"); }
+            else if (parseNode.GetChildNode("return_time") is { } nullNodeReturnTime && nullNodeReturnTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method that the customer used to return the product.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? _explicitNullValueMode = default!;
         /// <summary>Indicates whether customer has the return receipt.</summary>
-        public bool? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        public bool? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; AdditionalData?.Remove("receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
         private bool? _explicitNullValueReceipt = default!;
         /// <summary>The confirmation number for the item return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
+        public string? ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; AdditionalData?.Remove("return_confirmation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
         private string? _explicitNullValueReturnConfirmationNumber = default!;
 #nullable restore
 #else
-        public string ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
+        public string ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; AdditionalData?.Remove("return_confirmation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
         private string _explicitNullValueReturnConfirmationNumber = default!;
 #endif
         /// <summary>If `true`, indicates that the item was returned but the seller refused to accept the return and if `false`, indicates the item was not attempted to return.</summary>
-        public bool? Returned { get => _explicitNullValueReturned; set { _explicitNullValueReturned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned"); else _explicitNullProperties?.Remove("returned"); } }
+        public bool? Returned { get => _explicitNullValueReturned; set { _explicitNullValueReturned = value; AdditionalData?.Remove("returned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned"); else _explicitNullProperties?.Remove("returned"); } }
         private bool? _explicitNullValueReturned = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
+        public string? ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; AdditionalData?.Remove("return_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
         private string? _explicitNullValueReturnTime = default!;
 #nullable restore
 #else
-        public string ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
+        public string ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; AdditionalData?.Remove("return_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
         private string _explicitNullValueReturnTime = default!;
 #endif
         /// <summary>
@@ -81,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode>(); } },
+                { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
                 { "receipt", n => { Receipt = n.GetBoolValue(); } },
                 { "return_confirmation_number", n => { ReturnConfirmationNumber = n.GetStringValue(); } },
                 { "return_time", n => { ReturnTime = n.GetStringValue(); } },

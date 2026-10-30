@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyer_escalation_reason") is { } nullNodeBuyerEscalationReason && nullNodeBuyerEscalationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerEscalationReason = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("buyer_escalation_reason") is null) { _explicitNullValueBuyerEscalationReason = default!; _explicitNullProperties?.Remove("buyer_escalation_reason"); }
+            else if (parseNode.GetChildNode("buyer_escalation_reason") is { } nullNodeBuyerEscalationReason && nullNodeBuyerEscalationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerEscalationReason = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The buyer_escalation_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? BuyerEscalationReason { get => _explicitNullValueBuyerEscalationReason; set { _explicitNullValueBuyerEscalationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_escalation_reason"); else _explicitNullProperties?.Remove("buyer_escalation_reason"); } }
+        public UntypedNode? BuyerEscalationReason { get => _explicitNullValueBuyerEscalationReason; set { _explicitNullValueBuyerEscalationReason = value; AdditionalData?.Remove("buyer_escalation_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_escalation_reason"); else _explicitNullProperties?.Remove("buyer_escalation_reason"); } }
         private UntypedNode? _explicitNullValueBuyerEscalationReason = default!;
 #nullable restore
 #else
-        public UntypedNode BuyerEscalationReason { get => _explicitNullValueBuyerEscalationReason; set { _explicitNullValueBuyerEscalationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_escalation_reason"); else _explicitNullProperties?.Remove("buyer_escalation_reason"); } }
+        public UntypedNode BuyerEscalationReason { get => _explicitNullValueBuyerEscalationReason; set { _explicitNullValueBuyerEscalationReason = value; AdditionalData?.Remove("buyer_escalation_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_escalation_reason"); else _explicitNullProperties?.Remove("buyer_escalation_reason"); } }
         private UntypedNode _explicitNullValueBuyerEscalationReason = default!;
 #endif
         /// <summary>The notes about the escalation of the dispute to a claim.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_version") is { } nullNodeEventVersion && nullNodeEventVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventVersion = null;
-            if (parseNode.GetChildNode("resource_version") is { } nullNodeResourceVersion && nullNodeResourceVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceVersion = null;
+            if (parseNode.GetChildNode("event_version") is null) { _explicitNullValueEventVersion = default!; _explicitNullProperties?.Remove("event_version"); }
+            else if (parseNode.GetChildNode("event_version") is { } nullNodeEventVersion && nullNodeEventVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventVersion = null;
+            if (parseNode.GetChildNode("resource_version") is null) { _explicitNullValueResourceVersion = default!; _explicitNullProperties?.Remove("resource_version"); }
+            else if (parseNode.GetChildNode("resource_version") is { } nullNodeResourceVersion && nullNodeResourceVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,11 +40,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventVersion { get => _explicitNullValueEventVersion; set { _explicitNullValueEventVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_version"); else _explicitNullProperties?.Remove("event_version"); } }
+        public string? EventVersion { get => _explicitNullValueEventVersion; set { _explicitNullValueEventVersion = value; AdditionalData?.Remove("event_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_version"); else _explicitNullProperties?.Remove("event_version"); } }
         private string? _explicitNullValueEventVersion = default!;
 #nullable restore
 #else
-        public string EventVersion { get => _explicitNullValueEventVersion; set { _explicitNullValueEventVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_version"); else _explicitNullProperties?.Remove("event_version"); } }
+        public string EventVersion { get => _explicitNullValueEventVersion; set { _explicitNullValueEventVersion = value; AdditionalData?.Remove("event_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_version"); else _explicitNullProperties?.Remove("event_version"); } }
         private string _explicitNullValueEventVersion = default!;
 #endif
         /// <summary>The ID of the webhook event notification.</summary>
@@ -80,11 +82,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The resource version in the webhook notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceVersion { get => _explicitNullValueResourceVersion; set { _explicitNullValueResourceVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_version"); else _explicitNullProperties?.Remove("resource_version"); } }
+        public string? ResourceVersion { get => _explicitNullValueResourceVersion; set { _explicitNullValueResourceVersion = value; AdditionalData?.Remove("resource_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_version"); else _explicitNullProperties?.Remove("resource_version"); } }
         private string? _explicitNullValueResourceVersion = default!;
 #nullable restore
 #else
-        public string ResourceVersion { get => _explicitNullValueResourceVersion; set { _explicitNullValueResourceVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_version"); else _explicitNullProperties?.Remove("resource_version"); } }
+        public string ResourceVersion { get => _explicitNullValueResourceVersion; set { _explicitNullValueResourceVersion = value; AdditionalData?.Remove("resource_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_version"); else _explicitNullProperties?.Remove("resource_version"); } }
         private string _explicitNullValueResourceVersion = default!;
 #endif
         /// <summary>A summary description for the event notification.</summary>

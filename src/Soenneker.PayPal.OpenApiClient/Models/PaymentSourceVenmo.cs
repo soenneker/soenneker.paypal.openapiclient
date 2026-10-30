@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("experience_context") is { } nullNodeExperienceContext && nullNodeExperienceContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceContext = null;
-            if (parseNode.GetChildNode("vault_id") is { } nullNodeVaultId && nullNodeVaultId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VaultId = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("experience_context") is null) { _explicitNullValueExperienceContext = default!; _explicitNullProperties?.Remove("experience_context"); }
+            else if (parseNode.GetChildNode("experience_context") is { } nullNodeExperienceContext && nullNodeExperienceContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceContext = null;
+            if (parseNode.GetChildNode("vault_id") is null) { _explicitNullValueVaultId = default!; _explicitNullProperties?.Remove("vault_id"); }
+            else if (parseNode.GetChildNode("vault_id") is { } nullNodeVaultId && nullNodeVaultId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VaultId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Additional attributes associated with the use of this wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletRequestAttributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>Customizes the buyer experience during the approval process for payment with Venmo.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Partners and Marketplaces might configure &lt;code&gt;shipping_preference&lt;/code&gt; during partner account setup, which overrides the request values.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext? ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext? ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; AdditionalData?.Remove("experience_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext? _explicitNullValueExperienceContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; AdditionalData?.Remove("experience_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext _explicitNullValueExperienceContext = default!;
 #endif
         /// <summary>The PayPal-generated ID for the vaulted payment source. This ID should be stored on the merchant&apos;s server so the saved payment source can be used for future transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
+        public string? VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; AdditionalData?.Remove("vault_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
         private string? _explicitNullValueVaultId = default!;
 #nullable restore
 #else
-        public string VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
+        public string VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; AdditionalData?.Remove("vault_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
         private string _explicitNullValueVaultId = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_info") is { } nullNodeBillingInfo && nullNodeBillingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInfo = null;
-            if (parseNode.GetChildNode("shipping_info") is { } nullNodeShippingInfo && nullNodeShippingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingInfo = null;
+            if (parseNode.GetChildNode("billing_info") is null) { _explicitNullValueBillingInfo = default!; _explicitNullProperties?.Remove("billing_info"); }
+            else if (parseNode.GetChildNode("billing_info") is { } nullNodeBillingInfo && nullNodeBillingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInfo = null;
+            if (parseNode.GetChildNode("shipping_info") is null) { _explicitNullValueShippingInfo = default!; _explicitNullProperties?.Remove("shipping_info"); }
+            else if (parseNode.GetChildNode("shipping_info") is { } nullNodeShippingInfo && nullNodeShippingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The billing information of the invoice recipient. Includes name, address, email, phone, and language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo? BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo? BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; AdditionalData?.Remove("billing_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo? _explicitNullValueBillingInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; AdditionalData?.Remove("billing_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BillingInfo _explicitNullValueBillingInfo = default!;
 #endif
         /// <summary>The contact information of the user. Includes name and address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress? ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress? ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; AdditionalData?.Remove("shipping_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress? _explicitNullValueShippingInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; AdditionalData?.Remove("shipping_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ContactNameAddress _explicitNullValueShippingInfo = default!;
 #endif
         /// <summary>

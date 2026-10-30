@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
-            if (parseNode.GetChildNode("sender_batch_header") is { } nullNodeSenderBatchHeader && nullNodeSenderBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchHeader = null;
+            if (parseNode.GetChildNode("items") is null) { _explicitNullValueItems = default!; _explicitNullProperties?.Remove("items"); }
+            else if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("sender_batch_header") is null) { _explicitNullValueSenderBatchHeader = default!; _explicitNullProperties?.Remove("sender_batch_header"); }
+            else if (parseNode.GetChildNode("sender_batch_header") is { } nullNodeSenderBatchHeader && nullNodeSenderBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchHeader = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of individual payout items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PayoutItemRequest> _explicitNullValueItems = default!;
 #endif
         /// <summary>The sender-provided payout header for a payout request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader? SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader? SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; AdditionalData?.Remove("sender_batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader? _explicitNullValueSenderBatchHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; AdditionalData?.Remove("sender_batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SenderBatchHeader _explicitNullValueSenderBatchHeader = default!;
 #endif
         /// <summary>

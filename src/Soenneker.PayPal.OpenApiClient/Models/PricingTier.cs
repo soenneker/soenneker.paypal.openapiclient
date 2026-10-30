@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("ending_quantity") is { } nullNodeEndingQuantity && nullNodeEndingQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingQuantity = null;
-            if (parseNode.GetChildNode("starting_quantity") is { } nullNodeStartingQuantity && nullNodeStartingQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingQuantity = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("ending_quantity") is null) { _explicitNullValueEndingQuantity = default!; _explicitNullProperties?.Remove("ending_quantity"); }
+            else if (parseNode.GetChildNode("ending_quantity") is { } nullNodeEndingQuantity && nullNodeEndingQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingQuantity = null;
+            if (parseNode.GetChildNode("starting_quantity") is null) { _explicitNullValueStartingQuantity = default!; _explicitNullProperties?.Remove("starting_quantity"); }
+            else if (parseNode.GetChildNode("starting_quantity") is { } nullNodeStartingQuantity && nullNodeStartingQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingQuantity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money _explicitNullValueAmount = default!;
 #endif
         /// <summary>The ending quantity for the tier. Optional for the last tier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndingQuantity { get => _explicitNullValueEndingQuantity; set { _explicitNullValueEndingQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_quantity"); else _explicitNullProperties?.Remove("ending_quantity"); } }
+        public string? EndingQuantity { get => _explicitNullValueEndingQuantity; set { _explicitNullValueEndingQuantity = value; AdditionalData?.Remove("ending_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_quantity"); else _explicitNullProperties?.Remove("ending_quantity"); } }
         private string? _explicitNullValueEndingQuantity = default!;
 #nullable restore
 #else
-        public string EndingQuantity { get => _explicitNullValueEndingQuantity; set { _explicitNullValueEndingQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_quantity"); else _explicitNullProperties?.Remove("ending_quantity"); } }
+        public string EndingQuantity { get => _explicitNullValueEndingQuantity; set { _explicitNullValueEndingQuantity = value; AdditionalData?.Remove("ending_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_quantity"); else _explicitNullProperties?.Remove("ending_quantity"); } }
         private string _explicitNullValueEndingQuantity = default!;
 #endif
         /// <summary>The starting quantity for the tier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartingQuantity { get => _explicitNullValueStartingQuantity; set { _explicitNullValueStartingQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_quantity"); else _explicitNullProperties?.Remove("starting_quantity"); } }
+        public string? StartingQuantity { get => _explicitNullValueStartingQuantity; set { _explicitNullValueStartingQuantity = value; AdditionalData?.Remove("starting_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_quantity"); else _explicitNullProperties?.Remove("starting_quantity"); } }
         private string? _explicitNullValueStartingQuantity = default!;
 #nullable restore
 #else
-        public string StartingQuantity { get => _explicitNullValueStartingQuantity; set { _explicitNullValueStartingQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_quantity"); else _explicitNullProperties?.Remove("starting_quantity"); } }
+        public string StartingQuantity { get => _explicitNullValueStartingQuantity; set { _explicitNullValueStartingQuantity = value; AdditionalData?.Remove("starting_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_quantity"); else _explicitNullProperties?.Remove("starting_quantity"); } }
         private string _explicitNullValueStartingQuantity = default!;
 #endif
         /// <summary>

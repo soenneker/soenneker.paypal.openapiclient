@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_message") is { } nullNodeEmailMessage && nullNodeEmailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessage = null;
-            if (parseNode.GetChildNode("email_subject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
-            if (parseNode.GetChildNode("sender_batch_id") is { } nullNodeSenderBatchId && nullNodeSenderBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchId = null;
+            if (parseNode.GetChildNode("email_message") is null) { _explicitNullValueEmailMessage = default!; _explicitNullProperties?.Remove("email_message"); }
+            else if (parseNode.GetChildNode("email_message") is { } nullNodeEmailMessage && nullNodeEmailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessage = null;
+            if (parseNode.GetChildNode("email_subject") is null) { _explicitNullValueEmailSubject = default!; _explicitNullProperties?.Remove("email_subject"); }
+            else if (parseNode.GetChildNode("email_subject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("recipient_type") is null) { _explicitNullValueRecipientType = default!; _explicitNullProperties?.Remove("recipient_type"); }
+            else if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
+            if (parseNode.GetChildNode("sender_batch_id") is null) { _explicitNullValueSenderBatchId = default!; _explicitNullProperties?.Remove("sender_batch_id"); }
+            else if (parseNode.GetChildNode("sender_batch_id") is { } nullNodeSenderBatchId && nullNodeSenderBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The email message that PayPal sends when the payout item completes. The message is the same for all recipients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        public string? EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; AdditionalData?.Remove("email_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
         private string? _explicitNullValueEmailMessage = default!;
 #nullable restore
 #else
-        public string EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        public string EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; AdditionalData?.Remove("email_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
         private string _explicitNullValueEmailMessage = default!;
 #endif
         /// <summary>The subject line for the email that PayPal sends when payment for a payout item completes. The subject line is the same for all recipients. Value is an alphanumeric string of up to 255 single-byte characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; AdditionalData?.Remove("email_subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
         private string? _explicitNullValueEmailSubject = default!;
 #nullable restore
 #else
-        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; AdditionalData?.Remove("email_subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
         private string _explicitNullValueEmailSubject = default!;
 #endif
         /// <summary>The payouts and item-level notes are concatenated in the email. The maximum combined length of the notes is 1000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The ID type that identifies the recipient of the payment. For example, &lt;code&gt;EMAIL&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
+        public string? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; AdditionalData?.Remove("recipient_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
         private string? _explicitNullValueRecipientType = default!;
 #nullable restore
 #else
-        public string RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
+        public string RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; AdditionalData?.Remove("recipient_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
         private string _explicitNullValueRecipientType = default!;
 #endif
         /// <summary>A sender-specified ID number. Tracks the payout in an accounting system.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;p&gt;PayPal does not process duplicate payouts. If you specify a &lt;code&gt;sender_batch_id&lt;/code&gt; that was used in the last 30 days, the API rejects the request with an error message that shows the duplicate &lt;code&gt;sender_batch_id&lt;/code&gt; and includes a HATEOAS link to the original payout with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you receive an HTTP &lt;code&gt;5&lt;i&gt;nn&lt;/i&gt;&lt;/code&gt; status code, you can safely retry the request with the same &lt;code&gt;sender_batch_id&lt;/code&gt;. The API completes a payment only once for a &lt;code&gt;sender_batch_id&lt;/code&gt; that is used within 30 days.&lt;/p&gt;&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
+        public string? SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; AdditionalData?.Remove("sender_batch_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
         private string? _explicitNullValueSenderBatchId = default!;
 #nullable restore
 #else
-        public string SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
+        public string SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; AdditionalData?.Remove("sender_batch_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
         private string _explicitNullValueSenderBatchId = default!;
 #endif
         /// <summary>

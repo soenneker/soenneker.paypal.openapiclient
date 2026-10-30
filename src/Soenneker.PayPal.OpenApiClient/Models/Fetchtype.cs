@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fetch_id") is { } nullNodeFetchId && nullNodeFetchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FetchId = null;
+            if (parseNode.GetChildNode("fetch_id") is null) { _explicitNullValueFetchId = default!; _explicitNullProperties?.Remove("fetch_id"); }
+            else if (parseNode.GetChildNode("fetch_id") is { } nullNodeFetchId && nullNodeFetchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FetchId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional to decide the number or ID.</summary>
-        public bool? FetchId { get => _explicitNullValueFetchId; set { _explicitNullValueFetchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetch_id"); else _explicitNullProperties?.Remove("fetch_id"); } }
+        public bool? FetchId { get => _explicitNullValueFetchId; set { _explicitNullValueFetchId = value; AdditionalData?.Remove("fetch_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetch_id"); else _explicitNullProperties?.Remove("fetch_id"); } }
         private bool? _explicitNullValueFetchId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Fetchtype"/> and sets the default values.

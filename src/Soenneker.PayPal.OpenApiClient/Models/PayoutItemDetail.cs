@@ -18,14 +18,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("purpose") is { } nullNodePurpose && nullNodePurpose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Purpose = null;
-            if (parseNode.GetChildNode("receiver") is { } nullNodeReceiver && nullNodeReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receiver = null;
-            if (parseNode.GetChildNode("recipient_name") is { } nullNodeRecipientName && nullNodeRecipientName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientName = null;
-            if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
-            if (parseNode.GetChildNode("recipient_wallet") is { } nullNodeRecipientWallet && nullNodeRecipientWallet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientWallet = null;
-            if (parseNode.GetChildNode("sender_item_id") is { } nullNodeSenderItemId && nullNodeSenderItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderItemId = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("purpose") is null) { _explicitNullValuePurpose = default!; _explicitNullProperties?.Remove("purpose"); }
+            else if (parseNode.GetChildNode("purpose") is { } nullNodePurpose && nullNodePurpose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Purpose = null;
+            if (parseNode.GetChildNode("receiver") is null) { _explicitNullValueReceiver = default!; _explicitNullProperties?.Remove("receiver"); }
+            else if (parseNode.GetChildNode("receiver") is { } nullNodeReceiver && nullNodeReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receiver = null;
+            if (parseNode.GetChildNode("recipient_name") is null) { _explicitNullValueRecipientName = default!; _explicitNullProperties?.Remove("recipient_name"); }
+            else if (parseNode.GetChildNode("recipient_name") is { } nullNodeRecipientName && nullNodeRecipientName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientName = null;
+            if (parseNode.GetChildNode("recipient_type") is null) { _explicitNullValueRecipientType = default!; _explicitNullProperties?.Remove("recipient_type"); }
+            else if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
+            if (parseNode.GetChildNode("recipient_wallet") is null) { _explicitNullValueRecipientWallet = default!; _explicitNullProperties?.Remove("recipient_wallet"); }
+            else if (parseNode.GetChildNode("recipient_wallet") is { } nullNodeRecipientWallet && nullNodeRecipientWallet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientWallet = null;
+            if (parseNode.GetChildNode("sender_item_id") is null) { _explicitNullValueSenderItemId = default!; _explicitNullProperties?.Remove("sender_item_id"); }
+            else if (parseNode.GetChildNode("sender_item_id") is { } nullNodeSenderItemId && nullNodeSenderItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderItemId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,60 +41,60 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency _explicitNullValueAmount = default!;
 #endif
         /// <summary>The sender-specified note for notifications. Supports up to 4000 ASCII characters and 1000 non-ASCII characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The purpose of the transaction.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum? Purpose { get => _explicitNullValuePurpose; set { _explicitNullValuePurpose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purpose"); else _explicitNullProperties?.Remove("purpose"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum? Purpose { get => _explicitNullValuePurpose; set { _explicitNullValuePurpose = value; AdditionalData?.Remove("purpose"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purpose"); else _explicitNullProperties?.Remove("purpose"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum? _explicitNullValuePurpose = default!;
         /// <summary>The receiver of the payment. Corresponds to the `recipient_type` value in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        public string? Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; AdditionalData?.Remove("receiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
         private string? _explicitNullValueReceiver = default!;
 #nullable restore
 #else
-        public string Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        public string Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; AdditionalData?.Remove("receiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
         private string _explicitNullValueReceiver = default!;
 #endif
         /// <summary>The name of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name? RecipientName { get => _explicitNullValueRecipientName; set { _explicitNullValueRecipientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_name"); else _explicitNullProperties?.Remove("recipient_name"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name? RecipientName { get => _explicitNullValueRecipientName; set { _explicitNullValueRecipientName = value; AdditionalData?.Remove("recipient_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_name"); else _explicitNullProperties?.Remove("recipient_name"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name? _explicitNullValueRecipientName = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name RecipientName { get => _explicitNullValueRecipientName; set { _explicitNullValueRecipientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_name"); else _explicitNullProperties?.Remove("recipient_name"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name RecipientName { get => _explicitNullValueRecipientName; set { _explicitNullValueRecipientName = value; AdditionalData?.Remove("recipient_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_name"); else _explicitNullProperties?.Remove("recipient_name"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name _explicitNullValueRecipientName = default!;
 #endif
         /// <summary>The ID type that identifies the payment receiver.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; AdditionalData?.Remove("recipient_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? _explicitNullValueRecipientType = default!;
         /// <summary>The wallet where the recipient receives the payout. Payouts to Venmo recipients require a &apos;note&apos; string and a US mobile phone number.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum? RecipientWallet { get => _explicitNullValueRecipientWallet; set { _explicitNullValueRecipientWallet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_wallet"); else _explicitNullProperties?.Remove("recipient_wallet"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum? RecipientWallet { get => _explicitNullValueRecipientWallet; set { _explicitNullValueRecipientWallet = value; AdditionalData?.Remove("recipient_wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_wallet"); else _explicitNullProperties?.Remove("recipient_wallet"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum? _explicitNullValueRecipientWallet = default!;
         /// <summary>A sender-specified ID number. Tracks the payout in an accounting system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderItemId { get => _explicitNullValueSenderItemId; set { _explicitNullValueSenderItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_item_id"); else _explicitNullProperties?.Remove("sender_item_id"); } }
+        public string? SenderItemId { get => _explicitNullValueSenderItemId; set { _explicitNullValueSenderItemId = value; AdditionalData?.Remove("sender_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_item_id"); else _explicitNullProperties?.Remove("sender_item_id"); } }
         private string? _explicitNullValueSenderItemId = default!;
 #nullable restore
 #else
-        public string SenderItemId { get => _explicitNullValueSenderItemId; set { _explicitNullValueSenderItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_item_id"); else _explicitNullProperties?.Remove("sender_item_id"); } }
+        public string SenderItemId { get => _explicitNullValueSenderItemId; set { _explicitNullValueSenderItemId = value; AdditionalData?.Remove("sender_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_item_id"); else _explicitNullProperties?.Remove("sender_item_id"); } }
         private string _explicitNullValueSenderItemId = default!;
 #endif
         /// <summary>
@@ -116,11 +124,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "note", n => { Note = n.GetStringValue(); } },
-                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum>(); } },
+                { "purpose", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PurposeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePurpose = default; _explicitNullProperties?.Remove("purpose"); AdditionalData["purpose"] = unknown; } else { Purpose = parsed; AdditionalData.Remove("purpose"); } } },
                 { "receiver", n => { Receiver = n.GetStringValue(); } },
                 { "recipient_name", n => { RecipientName = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Name.CreateFromDiscriminatorValue); } },
-                { "recipient_type", n => { RecipientType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum>(); } },
-                { "recipient_wallet", n => { RecipientWallet = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum>(); } },
+                { "recipient_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecipientType = default; _explicitNullProperties?.Remove("recipient_type"); AdditionalData["recipient_type"] = unknown; } else { RecipientType = parsed; AdditionalData.Remove("recipient_type"); } } },
+                { "recipient_wallet", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RecipientWalletEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecipientWallet = default; _explicitNullProperties?.Remove("recipient_wallet"); AdditionalData["recipient_wallet"] = unknown; } else { RecipientWallet = parsed; AdditionalData.Remove("recipient_wallet"); } } },
                 { "sender_item_id", n => { SenderItemId = n.GetStringValue(); } },
             };
         }

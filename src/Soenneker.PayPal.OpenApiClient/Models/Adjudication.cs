@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adjudication_time") is { } nullNodeAdjudicationTime && nullNodeAdjudicationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjudicationTime = null;
-            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("adjudication_time") is null) { _explicitNullValueAdjudicationTime = default!; _explicitNullProperties?.Remove("adjudication_time"); }
+            else if (parseNode.GetChildNode("adjudication_time") is { } nullNodeAdjudicationTime && nullNodeAdjudicationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjudicationTime = null;
+            if (parseNode.GetChildNode("reason") is null) { _explicitNullValueReason = default!; _explicitNullProperties?.Remove("reason"); }
+            else if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,20 +31,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
+        public string? AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; AdditionalData?.Remove("adjudication_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
         private string? _explicitNullValueAdjudicationTime = default!;
 #nullable restore
 #else
-        public string AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
+        public string AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; AdditionalData?.Remove("adjudication_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
         private string _explicitNullValueAdjudicationTime = default!;
 #endif
         /// <summary>The stage in the dispute lifecycle.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage? DisputeLifeCycleStage { get; private set; }
         /// <summary>The reason for the adjudication type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; AdditionalData?.Remove("reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? _explicitNullValueReason = default!;
         /// <summary>The type of adjudication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Adjudication"/> and sets the default values.
@@ -70,8 +73,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "adjudication_time", n => { AdjudicationTime = n.GetStringValue(); } },
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType>(); } },
+                { "reason", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReason = default; _explicitNullProperties?.Remove("reason"); AdditionalData["reason"] = unknown; } else { Reason = parsed; AdditionalData.Remove("reason"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

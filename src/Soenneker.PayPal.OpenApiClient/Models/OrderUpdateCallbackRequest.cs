@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
-            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
-            if (parseNode.GetChildNode("shipping_option") is { } nullNodeShippingOption && nullNodeShippingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOption = null;
+            if (parseNode.GetChildNode("purchase_units") is null) { _explicitNullValuePurchaseUnits = default!; _explicitNullProperties?.Remove("purchase_units"); }
+            else if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
+            if (parseNode.GetChildNode("shipping_address") is null) { _explicitNullValueShippingAddress = default!; _explicitNullProperties?.Remove("shipping_address"); }
+            else if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("shipping_option") is null) { _explicitNullValueShippingOption = default!; _explicitNullProperties?.Remove("shipping_option"); }
+            else if (parseNode.GetChildNode("shipping_option") is { } nullNodeShippingOption && nullNodeShippingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOption = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,31 +39,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of purchase units. At present only 1 purchase_unit is supported. Each purchase unit establishes a contract between a payer and the payee. Each purchase unit represents either a full or partial order that the payer intends to purchase from the payee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem>? _explicitNullValuePurchaseUnits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem> _explicitNullValuePurchaseUnits = default!;
 #endif
         /// <summary>Redacted shipping address to be used for shipping options and tax calculations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>Buyer selected shipping option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption? ShippingOption { get => _explicitNullValueShippingOption; set { _explicitNullValueShippingOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option"); else _explicitNullProperties?.Remove("shipping_option"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption? ShippingOption { get => _explicitNullValueShippingOption; set { _explicitNullValueShippingOption = value; AdditionalData?.Remove("shipping_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option"); else _explicitNullProperties?.Remove("shipping_option"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption? _explicitNullValueShippingOption = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption ShippingOption { get => _explicitNullValueShippingOption; set { _explicitNullValueShippingOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option"); else _explicitNullProperties?.Remove("shipping_option"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption ShippingOption { get => _explicitNullValueShippingOption; set { _explicitNullValueShippingOption = value; AdditionalData?.Remove("shipping_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option"); else _explicitNullProperties?.Remove("shipping_option"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestShippingOption _explicitNullValueShippingOption = default!;
 #endif
         /// <summary>

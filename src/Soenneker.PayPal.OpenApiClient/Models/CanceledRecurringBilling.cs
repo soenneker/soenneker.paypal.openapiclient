@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancellation_details") is { } nullNodeCancellationDetails && nullNodeCancellationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDetails = null;
-            if (parseNode.GetChildNode("expected_refund") is { } nullNodeExpectedRefund && nullNodeExpectedRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedRefund = null;
+            if (parseNode.GetChildNode("cancellation_details") is null) { _explicitNullValueCancellationDetails = default!; _explicitNullProperties?.Remove("cancellation_details"); }
+            else if (parseNode.GetChildNode("cancellation_details") is { } nullNodeCancellationDetails && nullNodeCancellationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDetails = null;
+            if (parseNode.GetChildNode("expected_refund") is null) { _explicitNullValueExpectedRefund = default!; _explicitNullProperties?.Remove("expected_refund"); }
+            else if (parseNode.GetChildNode("expected_refund") is { } nullNodeExpectedRefund && nullNodeExpectedRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedRefund = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The cancellation details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails? _explicitNullValueCancellationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails _explicitNullValueCancellationDetails = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? ExpectedRefund { get => _explicitNullValueExpectedRefund; set { _explicitNullValueExpectedRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_refund"); else _explicitNullProperties?.Remove("expected_refund"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? ExpectedRefund { get => _explicitNullValueExpectedRefund; set { _explicitNullValueExpectedRefund = value; AdditionalData?.Remove("expected_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_refund"); else _explicitNullProperties?.Remove("expected_refund"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueExpectedRefund = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money ExpectedRefund { get => _explicitNullValueExpectedRefund; set { _explicitNullValueExpectedRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_refund"); else _explicitNullProperties?.Remove("expected_refund"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money ExpectedRefund { get => _explicitNullValueExpectedRefund; set { _explicitNullValueExpectedRefund = value; AdditionalData?.Remove("expected_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_refund"); else _explicitNullProperties?.Remove("expected_refund"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueExpectedRefund = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("correct_transaction_amount") is { } nullNodeCorrectTransactionAmount && nullNodeCorrectTransactionAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionAmount = null;
-            if (parseNode.GetChildNode("correct_transaction_asset") is { } nullNodeCorrectTransactionAsset && nullNodeCorrectTransactionAsset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionAsset = null;
-            if (parseNode.GetChildNode("correct_transaction_time") is { } nullNodeCorrectTransactionTime && nullNodeCorrectTransactionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionTime = null;
+            if (parseNode.GetChildNode("correct_transaction_amount") is null) { _explicitNullValueCorrectTransactionAmount = default!; _explicitNullProperties?.Remove("correct_transaction_amount"); }
+            else if (parseNode.GetChildNode("correct_transaction_amount") is { } nullNodeCorrectTransactionAmount && nullNodeCorrectTransactionAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionAmount = null;
+            if (parseNode.GetChildNode("correct_transaction_asset") is null) { _explicitNullValueCorrectTransactionAsset = default!; _explicitNullProperties?.Remove("correct_transaction_asset"); }
+            else if (parseNode.GetChildNode("correct_transaction_asset") is { } nullNodeCorrectTransactionAsset && nullNodeCorrectTransactionAsset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionAsset = null;
+            if (parseNode.GetChildNode("correct_transaction_time") is null) { _explicitNullValueCorrectTransactionTime = default!; _explicitNullProperties?.Remove("correct_transaction_time"); }
+            else if (parseNode.GetChildNode("correct_transaction_time") is { } nullNodeCorrectTransactionTime && nullNodeCorrectTransactionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectTransactionTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? CorrectTransactionAmount { get => _explicitNullValueCorrectTransactionAmount; set { _explicitNullValueCorrectTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_amount"); else _explicitNullProperties?.Remove("correct_transaction_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? CorrectTransactionAmount { get => _explicitNullValueCorrectTransactionAmount; set { _explicitNullValueCorrectTransactionAmount = value; AdditionalData?.Remove("correct_transaction_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_amount"); else _explicitNullProperties?.Remove("correct_transaction_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueCorrectTransactionAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money CorrectTransactionAmount { get => _explicitNullValueCorrectTransactionAmount; set { _explicitNullValueCorrectTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_amount"); else _explicitNullProperties?.Remove("correct_transaction_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money CorrectTransactionAmount { get => _explicitNullValueCorrectTransactionAmount; set { _explicitNullValueCorrectTransactionAmount = value; AdditionalData?.Remove("correct_transaction_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_amount"); else _explicitNullProperties?.Remove("correct_transaction_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueCorrectTransactionAmount = default!;
 #endif
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? CorrectTransactionAsset { get => _explicitNullValueCorrectTransactionAsset; set { _explicitNullValueCorrectTransactionAsset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_asset"); else _explicitNullProperties?.Remove("correct_transaction_asset"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? CorrectTransactionAsset { get => _explicitNullValueCorrectTransactionAsset; set { _explicitNullValueCorrectTransactionAsset = value; AdditionalData?.Remove("correct_transaction_asset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_asset"); else _explicitNullProperties?.Remove("correct_transaction_asset"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? _explicitNullValueCorrectTransactionAsset = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency CorrectTransactionAsset { get => _explicitNullValueCorrectTransactionAsset; set { _explicitNullValueCorrectTransactionAsset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_asset"); else _explicitNullProperties?.Remove("correct_transaction_asset"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency CorrectTransactionAsset { get => _explicitNullValueCorrectTransactionAsset; set { _explicitNullValueCorrectTransactionAsset = value; AdditionalData?.Remove("correct_transaction_asset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_asset"); else _explicitNullProperties?.Remove("correct_transaction_asset"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency _explicitNullValueCorrectTransactionAsset = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CorrectTransactionTime { get => _explicitNullValueCorrectTransactionTime; set { _explicitNullValueCorrectTransactionTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_time"); else _explicitNullProperties?.Remove("correct_transaction_time"); } }
+        public string? CorrectTransactionTime { get => _explicitNullValueCorrectTransactionTime; set { _explicitNullValueCorrectTransactionTime = value; AdditionalData?.Remove("correct_transaction_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_time"); else _explicitNullProperties?.Remove("correct_transaction_time"); } }
         private string? _explicitNullValueCorrectTransactionTime = default!;
 #nullable restore
 #else
-        public string CorrectTransactionTime { get => _explicitNullValueCorrectTransactionTime; set { _explicitNullValueCorrectTransactionTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_time"); else _explicitNullProperties?.Remove("correct_transaction_time"); } }
+        public string CorrectTransactionTime { get => _explicitNullValueCorrectTransactionTime; set { _explicitNullValueCorrectTransactionTime = value; AdditionalData?.Remove("correct_transaction_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correct_transaction_time"); else _explicitNullProperties?.Remove("correct_transaction_time"); } }
         private string _explicitNullValueCorrectTransactionTime = default!;
 #endif
         /// <summary>

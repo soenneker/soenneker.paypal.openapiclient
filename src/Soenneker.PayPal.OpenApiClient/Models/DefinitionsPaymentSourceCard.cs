@@ -18,13 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_address") is { } nullNodeBillingAddress && nullNodeBillingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddress = null;
-            if (parseNode.GetChildNode("brand") is { } nullNodeBrand && nullNodeBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brand = null;
-            if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
-            if (parseNode.GetChildNode("number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
-            if (parseNode.GetChildNode("security_code") is { } nullNodeSecurityCode && nullNodeSecurityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityCode = null;
+            if (parseNode.GetChildNode("billing_address") is null) { _explicitNullValueBillingAddress = default!; _explicitNullProperties?.Remove("billing_address"); }
+            else if (parseNode.GetChildNode("billing_address") is { } nullNodeBillingAddress && nullNodeBillingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddress = null;
+            if (parseNode.GetChildNode("brand") is null) { _explicitNullValueBrand = default!; _explicitNullProperties?.Remove("brand"); }
+            else if (parseNode.GetChildNode("brand") is { } nullNodeBrand && nullNodeBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brand = null;
+            if (parseNode.GetChildNode("expiry") is null) { _explicitNullValueExpiry = default!; _explicitNullProperties?.Remove("expiry"); }
+            else if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("network_transaction_reference") is null) { _explicitNullValueNetworkTransactionReference = default!; _explicitNullProperties?.Remove("network_transaction_reference"); }
+            else if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
+            if (parseNode.GetChildNode("number") is null) { _explicitNullValueNumber = default!; _explicitNullProperties?.Remove("number"); }
+            else if (parseNode.GetChildNode("number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("security_code") is null) { _explicitNullValueSecurityCode = default!; _explicitNullProperties?.Remove("security_code"); }
+            else if (parseNode.GetChildNode("security_code") is { } nullNodeSecurityCode && nullNodeSecurityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,64 +39,64 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress? BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress? BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress? _explicitNullValueBillingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress _explicitNullValueBillingAddress = default!;
 #endif
         /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand? Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand? Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; AdditionalData?.Remove("brand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand? _explicitNullValueBrand = default!;
         /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string? _explicitNullValueExpiry = default!;
 #nullable restore
 #else
-        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string _explicitNullValueExpiry = default!;
 #endif
         /// <summary>The card holder&apos;s name as it appears on the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The network_transaction_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public UntypedNode? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private UntypedNode? _explicitNullValueNetworkTransactionReference = default!;
 #nullable restore
 #else
-        public UntypedNode NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public UntypedNode NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private UntypedNode _explicitNullValueNetworkTransactionReference = default!;
 #endif
         /// <summary>The primary account number (PAN) for the payment card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
+        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
         private string? _explicitNullValueNumber = default!;
 #nullable restore
 #else
-        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
+        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
         private string _explicitNullValueNumber = default!;
 #endif
         /// <summary>The three- or four-digit security code of the card. Also known as the CVV, CVC, CVN, CVE, or CID. This parameter cannot be present in the request when `payment_initiator=MERCHANT`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_code"); else _explicitNullProperties?.Remove("security_code"); } }
+        public string? SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; AdditionalData?.Remove("security_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_code"); else _explicitNullProperties?.Remove("security_code"); } }
         private string? _explicitNullValueSecurityCode = default!;
 #nullable restore
 #else
-        public string SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_code"); else _explicitNullProperties?.Remove("security_code"); } }
+        public string SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; AdditionalData?.Remove("security_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_code"); else _explicitNullProperties?.Remove("security_code"); } }
         private string _explicitNullValueSecurityCode = default!;
 #endif
         /// <summary>
@@ -118,7 +125,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress>(global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsPaymentSourceCardBillingAddress.CreateFromDiscriminatorValue); } },
-                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>(); } },
+                { "brand", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardBrand>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBrand = default; _explicitNullProperties?.Remove("brand"); AdditionalData["brand"] = unknown; } else { Brand = parsed; AdditionalData.Remove("brand"); } } },
                 { "expiry", n => { Expiry = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "network_transaction_reference", n => { NetworkTransactionReference = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },

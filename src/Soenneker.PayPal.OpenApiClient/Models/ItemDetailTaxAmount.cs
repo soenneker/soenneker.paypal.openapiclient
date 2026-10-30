@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tax_amount") is { } nullNodeTaxAmount && nullNodeTaxAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxAmount = null;
+            if (parseNode.GetChildNode("tax_amount") is null) { _explicitNullValueTaxAmount = default!; _explicitNullProperties?.Remove("tax_amount"); }
+            else if (parseNode.GetChildNode("tax_amount") is { } nullNodeTaxAmount && nullNodeTaxAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? TaxAmount { get => _explicitNullValueTaxAmount; set { _explicitNullValueTaxAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amount"); else _explicitNullProperties?.Remove("tax_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? TaxAmount { get => _explicitNullValueTaxAmount; set { _explicitNullValueTaxAmount = value; AdditionalData?.Remove("tax_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amount"); else _explicitNullProperties?.Remove("tax_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? _explicitNullValueTaxAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money TaxAmount { get => _explicitNullValueTaxAmount; set { _explicitNullValueTaxAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amount"); else _explicitNullProperties?.Remove("tax_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money TaxAmount { get => _explicitNullValueTaxAmount; set { _explicitNullValueTaxAmount = value; AdditionalData?.Remove("tax_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amount"); else _explicitNullProperties?.Remove("tax_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money _explicitNullValueTaxAmount = default!;
 #endif
         /// <summary>

@@ -18,34 +18,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("last_sync_status") is { } nullNodeLastSyncStatus && nullNodeLastSyncStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncStatus = null;
-            if (parseNode.GetChildNode("last_sync_time") is { } nullNodeLastSyncTime && nullNodeLastSyncTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncTime = null;
-            if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
+            if (parseNode.GetChildNode("last_sync_status") is null) { _explicitNullValueLastSyncStatus = default!; _explicitNullProperties?.Remove("last_sync_status"); }
+            else if (parseNode.GetChildNode("last_sync_status") is { } nullNodeLastSyncStatus && nullNodeLastSyncStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncStatus = null;
+            if (parseNode.GetChildNode("last_sync_time") is null) { _explicitNullValueLastSyncTime = default!; _explicitNullProperties?.Remove("last_sync_time"); }
+            else if (parseNode.GetChildNode("last_sync_time") is { } nullNodeLastSyncTime && nullNodeLastSyncTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncTime = null;
+            if (parseNode.GetChildNode("platform_name") is null) { _explicitNullValuePlatformName = default!; _explicitNullProperties?.Remove("platform_name"); }
+            else if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the last sync. This property supports Unicode.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? LastSyncStatus { get => _explicitNullValueLastSyncStatus; set { _explicitNullValueLastSyncStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_status"); else _explicitNullProperties?.Remove("last_sync_status"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? LastSyncStatus { get => _explicitNullValueLastSyncStatus; set { _explicitNullValueLastSyncStatus = value; AdditionalData?.Remove("last_sync_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_status"); else _explicitNullProperties?.Remove("last_sync_status"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? _explicitNullValueLastSyncStatus = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
+        public string? LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; AdditionalData?.Remove("last_sync_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
         private string? _explicitNullValueLastSyncTime = default!;
 #nullable restore
 #else
-        public string LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
+        public string LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; AdditionalData?.Remove("last_sync_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
         private string _explicitNullValueLastSyncTime = default!;
 #endif
         /// <summary>The name of the platform. This property supports Unicode. The pattern is not provided because the value is defined by an external party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; AdditionalData?.Remove("platform_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
         private string? _explicitNullValuePlatformName = default!;
 #nullable restore
 #else
-        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; AdditionalData?.Remove("platform_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
         private string _explicitNullValuePlatformName = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "last_sync_status", n => { LastSyncStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus>(); } },
+                { "last_sync_status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLastSyncStatus = default; _explicitNullProperties?.Remove("last_sync_status"); AdditionalData["last_sync_status"] = unknown; } else { LastSyncStatus = parsed; AdditionalData.Remove("last_sync_status"); } } },
                 { "last_sync_time", n => { LastSyncTime = n.GetStringValue(); } },
                 { "platform_name", n => { PlatformName = n.GetStringValue(); } },
             };

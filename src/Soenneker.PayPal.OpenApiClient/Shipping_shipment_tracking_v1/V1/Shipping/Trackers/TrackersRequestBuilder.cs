@@ -108,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.TrackersRequestBuilder.TrackersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers?transaction_id={transaction_id}{&account_id*,tracking_number*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/shipping_shipment_tracking_v1/v1/shipping/trackers?transaction_id={transaction_id}{&account_id*,tracking_number*}", RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/shipping_shipment_tracking_v1/v1/shipping/trackers", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/shipping_shipment_tracking_v1/v1/shipping/trackers", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

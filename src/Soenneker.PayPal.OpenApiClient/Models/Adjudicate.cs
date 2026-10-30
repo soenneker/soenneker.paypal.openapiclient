@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adjudication_outcome") is { } nullNodeAdjudicationOutcome && nullNodeAdjudicationOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjudicationOutcome = null;
+            if (parseNode.GetChildNode("adjudication_outcome") is null) { _explicitNullValueAdjudicationOutcome = default!; _explicitNullProperties?.Remove("adjudication_outcome"); }
+            else if (parseNode.GetChildNode("adjudication_outcome") is { } nullNodeAdjudicationOutcome && nullNodeAdjudicationOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjudicationOutcome = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The outcome of the adjudication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome? AdjudicationOutcome { get => _explicitNullValueAdjudicationOutcome; set { _explicitNullValueAdjudicationOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_outcome"); else _explicitNullProperties?.Remove("adjudication_outcome"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome? AdjudicationOutcome { get => _explicitNullValueAdjudicationOutcome; set { _explicitNullValueAdjudicationOutcome = value; AdditionalData?.Remove("adjudication_outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_outcome"); else _explicitNullProperties?.Remove("adjudication_outcome"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome? _explicitNullValueAdjudicationOutcome = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Adjudicate"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adjudication_outcome", n => { AdjudicationOutcome = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome>(); } },
+                { "adjudication_outcome", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicateAdjudicationOutcome>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdjudicationOutcome = default; _explicitNullProperties?.Remove("adjudication_outcome"); AdditionalData["adjudication_outcome"] = unknown; } else { AdjudicationOutcome = parsed; AdditionalData.Remove("adjudication_outcome"); } } },
             };
         }
         /// <summary>

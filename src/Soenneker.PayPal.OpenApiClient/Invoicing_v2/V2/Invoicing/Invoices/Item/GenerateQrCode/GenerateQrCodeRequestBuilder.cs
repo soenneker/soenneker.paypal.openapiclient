@@ -40,6 +40,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <param name="body">The configuration for a QR code.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.QrConfig body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +52,11 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Generates a QR code for an invoice, by ID. The QR code is a PNG image in &lt;a href=&quot;https://www.base64encode.org/&quot;&gt;Base64-encoded&lt;/a&gt; format that corresponds to the invoice ID. You can generate a QR code for an invoice and add it to a paper or PDF invoice. When customers use their mobile devices to scan the QR code, they are redirected to the PayPal mobile payment flow where they can view the invoice and pay online with PayPal or a credit card. Before you get a QR code, you must &lt;a href=&quot;#invoices_create&quot;&gt;create an invoice&lt;/a&gt; and &lt;a href=&quot;#invoices_send&quot;&gt;send an invoice&lt;/a&gt; to move the invoice from a draft to payable state. Do not include an email address if you do not want the invoice emailed.
@@ -69,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/invoicing_v2/v2/invoicing/invoices/{invoiceId}/generate-qr-code", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -18,11 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accepted") is { } nullNodeAccepted && nullNodeAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accepted = null;
+            if (parseNode.GetChildNode("accepted") is null) { _explicitNullValueAccepted = default!; _explicitNullProperties?.Remove("accepted"); }
+            else if (parseNode.GetChildNode("accepted") is { } nullNodeAccepted && nullNodeAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accepted = null;
         }
 
         /// <summary>Whether mandate was accepted or not.</summary>
-        public bool? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        public bool? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
         private bool? _explicitNullValueAccepted = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

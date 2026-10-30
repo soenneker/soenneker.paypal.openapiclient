@@ -18,78 +18,85 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("account_type") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
-            if (parseNode.GetChildNode("branch_location") is { } nullNodeBranchLocation && nullNodeBranchLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchLocation = null;
-            if (parseNode.GetChildNode("currency_code") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("identifiers") is { } nullNodeIdentifiers && nullNodeIdentifiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifiers = null;
-            if (parseNode.GetChildNode("mandate") is { } nullNodeMandate && nullNodeMandate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mandate = null;
-            if (parseNode.GetChildNode("nick_name") is { } nullNodeNickName && nullNodeNickName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NickName = null;
+            if (parseNode.GetChildNode("account_number") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("account_number"); }
+            else if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("account_type") is null) { _explicitNullValueAccountType = default!; _explicitNullProperties?.Remove("account_type"); }
+            else if (parseNode.GetChildNode("account_type") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
+            if (parseNode.GetChildNode("branch_location") is null) { _explicitNullValueBranchLocation = default!; _explicitNullProperties?.Remove("branch_location"); }
+            else if (parseNode.GetChildNode("branch_location") is { } nullNodeBranchLocation && nullNodeBranchLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchLocation = null;
+            if (parseNode.GetChildNode("currency_code") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currency_code"); }
+            else if (parseNode.GetChildNode("currency_code") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("identifiers") is null) { _explicitNullValueIdentifiers = default!; _explicitNullProperties?.Remove("identifiers"); }
+            else if (parseNode.GetChildNode("identifiers") is { } nullNodeIdentifiers && nullNodeIdentifiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifiers = null;
+            if (parseNode.GetChildNode("mandate") is null) { _explicitNullValueMandate = default!; _explicitNullProperties?.Remove("mandate"); }
+            else if (parseNode.GetChildNode("mandate") is { } nullNodeMandate && nullNodeMandate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mandate = null;
+            if (parseNode.GetChildNode("nick_name") is null) { _explicitNullValueNickName = default!; _explicitNullProperties?.Remove("nick_name"); }
+            else if (parseNode.GetChildNode("nick_name") is { } nullNodeNickName && nullNodeNickName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NickName = null;
         }
 
         /// <summary>The bank account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("account_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("account_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>The type of bank account.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_type"); else _explicitNullProperties?.Remove("account_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; AdditionalData?.Remove("account_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_type"); else _explicitNullProperties?.Remove("account_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType? _explicitNullValueAccountType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation? BranchLocation { get => _explicitNullValueBranchLocation; set { _explicitNullValueBranchLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_location"); else _explicitNullProperties?.Remove("branch_location"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation? BranchLocation { get => _explicitNullValueBranchLocation; set { _explicitNullValueBranchLocation = value; AdditionalData?.Remove("branch_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_location"); else _explicitNullProperties?.Remove("branch_location"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation? _explicitNullValueBranchLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation BranchLocation { get => _explicitNullValueBranchLocation; set { _explicitNullValueBranchLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_location"); else _explicitNullProperties?.Remove("branch_location"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation BranchLocation { get => _explicitNullValueBranchLocation; set { _explicitNullValueBranchLocation = value; AdditionalData?.Remove("branch_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_location"); else _explicitNullProperties?.Remove("branch_location"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation _explicitNullValueBranchLocation = default!;
 #endif
         /// <summary>The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/) that identifies the currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currency_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currency_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>An array of instrument institute attributes. Used with the account number to uniquely identify the instrument. Value is:&lt;ul&gt;&lt;li&gt;For banks with IBAN information, the IBAN number.&lt;/li&gt;&lt;li&gt;For banks with BBAN information, the BBAN number.&lt;/li&gt;&lt;li&gt;For banks with both IBAN and BBAN information, the IBAN number.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>? _explicitNullValueIdentifiers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier> Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier> Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Identifier> _explicitNullValueIdentifiers = default!;
 #endif
         /// <summary>Seller’s consent to operate on this financial instrument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Mandate? Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Mandate? Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; AdditionalData?.Remove("mandate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Mandate? _explicitNullValueMandate = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Mandate Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Mandate Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; AdditionalData?.Remove("mandate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Mandate _explicitNullValueMandate = default!;
 #endif
         /// <summary>The user-provided short name for the user&apos;s bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NickName { get => _explicitNullValueNickName; set { _explicitNullValueNickName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nick_name"); else _explicitNullProperties?.Remove("nick_name"); } }
+        public string? NickName { get => _explicitNullValueNickName; set { _explicitNullValueNickName = value; AdditionalData?.Remove("nick_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nick_name"); else _explicitNullProperties?.Remove("nick_name"); } }
         private string? _explicitNullValueNickName = default!;
 #nullable restore
 #else
-        public string NickName { get => _explicitNullValueNickName; set { _explicitNullValueNickName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nick_name"); else _explicitNullProperties?.Remove("nick_name"); } }
+        public string NickName { get => _explicitNullValueNickName; set { _explicitNullValueNickName = value; AdditionalData?.Remove("nick_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nick_name"); else _explicitNullProperties?.Remove("nick_name"); } }
         private string _explicitNullValueNickName = default!;
 #endif
         /// <summary>
@@ -118,7 +125,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_number", n => { AccountNumber = n.GetStringValue(); } },
-                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType>(); } },
+                { "account_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BankAccountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccountType = default; _explicitNullProperties?.Remove("account_type"); AdditionalData["account_type"] = unknown; } else { AccountType = parsed; AdditionalData.Remove("account_type"); } } },
                 { "branch_location", n => { BranchLocation = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation>(global::Soenneker.PayPal.OpenApiClient.Models.BankBranchLocation.CreateFromDiscriminatorValue); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Identifier>(global::Soenneker.PayPal.OpenApiClient.Models.Identifier.CreateFromDiscriminatorValue)?.AsList(); } },

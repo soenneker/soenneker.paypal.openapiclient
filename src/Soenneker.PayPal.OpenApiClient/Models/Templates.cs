@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
-            if (parseNode.GetChildNode("phones") is { } nullNodePhones && nullNodePhones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phones = null;
-            if (parseNode.GetChildNode("templates") is { } nullNodeTemplatesProp && nullNodeTemplatesProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplatesProp = null;
+            if (parseNode.GetChildNode("emails") is null) { _explicitNullValueEmails = default!; _explicitNullProperties?.Remove("emails"); }
+            else if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("phones") is null) { _explicitNullValuePhones = default!; _explicitNullProperties?.Remove("phones"); }
+            else if (parseNode.GetChildNode("phones") is { } nullNodePhones && nullNodePhones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phones = null;
+            if (parseNode.GetChildNode("templates") is null) { _explicitNullValueTemplatesProp = default!; _explicitNullProperties?.Remove("templates"); }
+            else if (parseNode.GetChildNode("templates") is { } nullNodeTemplatesProp && nullNodeTemplatesProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplatesProp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +39,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public string? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private string? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public string Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public string Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private string _explicitNullValueEmails = default!;
 #endif
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
@@ -54,21 +57,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of phone numbers in the user&apos;s PayPal profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail>? Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail>? Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; AdditionalData?.Remove("phones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail>? _explicitNullValuePhones = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail> Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail> Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; AdditionalData?.Remove("phones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PhoneDetail> _explicitNullValuePhones = default!;
 #endif
         /// <summary>An array of details for each template. If `fields` is `none`, returns only the template name, ID, and default status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Template>? TemplatesProp { get => _explicitNullValueTemplatesProp; set { _explicitNullValueTemplatesProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Template>? TemplatesProp { get => _explicitNullValueTemplatesProp; set { _explicitNullValueTemplatesProp = value; AdditionalData?.Remove("templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Template>? _explicitNullValueTemplatesProp = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Template> TemplatesProp { get => _explicitNullValueTemplatesProp; set { _explicitNullValueTemplatesProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Template> TemplatesProp { get => _explicitNullValueTemplatesProp; set { _explicitNullValueTemplatesProp = value; AdditionalData?.Remove("templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Template> _explicitNullValueTemplatesProp = default!;
 #endif
         /// <summary>

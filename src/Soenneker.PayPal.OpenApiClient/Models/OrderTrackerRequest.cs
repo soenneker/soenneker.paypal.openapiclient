@@ -18,12 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("capture_id") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("carrier_name_other") is { } nullNodeCarrierNameOther && nullNodeCarrierNameOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierNameOther = null;
-            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
-            if (parseNode.GetChildNode("notify_payer") is { } nullNodeNotifyPayer && nullNodeNotifyPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyPayer = null;
-            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("capture_id") is null) { _explicitNullValueCaptureId = default!; _explicitNullProperties?.Remove("capture_id"); }
+            else if (parseNode.GetChildNode("capture_id") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("carrier_name_other") is null) { _explicitNullValueCarrierNameOther = default!; _explicitNullProperties?.Remove("carrier_name_other"); }
+            else if (parseNode.GetChildNode("carrier_name_other") is { } nullNodeCarrierNameOther && nullNodeCarrierNameOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierNameOther = null;
+            if (parseNode.GetChildNode("items") is null) { _explicitNullValueItems = default!; _explicitNullProperties?.Remove("items"); }
+            else if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("notify_payer") is null) { _explicitNullValueNotifyPayer = default!; _explicitNullProperties?.Remove("notify_payer"); }
+            else if (parseNode.GetChildNode("notify_payer") is { } nullNodeNotifyPayer && nullNodeNotifyPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyPayer = null;
+            if (parseNode.GetChildNode("tracking_number") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("tracking_number"); }
+            else if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,49 +37,49 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The PayPal capture ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; AdditionalData?.Remove("capture_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
         private string? _explicitNullValueCaptureId = default!;
 #nullable restore
 #else
-        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; AdditionalData?.Remove("capture_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
         private string _explicitNullValueCaptureId = default!;
 #endif
         /// <summary>The carrier for the shipment. Some carriers have a global version as well as local subsidiaries. The subsidiaries are repeated over many countries and might also have an entry in the global list. Choose the carrier for your country. If the carrier is not available for your country, choose the global version of the carrier. If your carrier name is not in the list, set `carrier` to `OTHER` and set carrier name in `carrier_name_other`. For allowed values, see &lt;a href=&quot;/docs/tracking/reference/carriers/&quot;&gt;Carriers&lt;/a&gt;.</summary>
 #nullable enable
-        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string? _explicitNullValueCarrier = default!;
 #nullable restore
         /// <summary>The name of the carrier for the shipment. Provide this value only if the carrier parameter is OTHER. This property supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        public string? CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; AdditionalData?.Remove("carrier_name_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
         private string? _explicitNullValueCarrierNameOther = default!;
 #nullable restore
 #else
-        public string CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        public string CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; AdditionalData?.Remove("carrier_name_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
         private string _explicitNullValueCarrierNameOther = default!;
 #endif
         /// <summary>An array of details of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>If true, PayPal will send an email notification to the payer of the PayPal transaction. The email contains the tracking details provided through the Orders tracking API request. Independent of any value passed for `notify_payer`, the payer may receive tracking notifications within the PayPal app, based on the user&apos;s notification preferences.</summary>
-        public bool? NotifyPayer { get => _explicitNullValueNotifyPayer; set { _explicitNullValueNotifyPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_payer"); else _explicitNullProperties?.Remove("notify_payer"); } }
+        public bool? NotifyPayer { get => _explicitNullValueNotifyPayer; set { _explicitNullValueNotifyPayer = value; AdditionalData?.Remove("notify_payer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_payer"); else _explicitNullProperties?.Remove("notify_payer"); } }
         private bool? _explicitNullValueNotifyPayer = default!;
         /// <summary>The tracking number for the shipment. This property supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>

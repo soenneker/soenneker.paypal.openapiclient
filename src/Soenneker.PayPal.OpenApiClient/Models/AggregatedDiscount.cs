@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invoice_discount") is { } nullNodeInvoiceDiscount && nullNodeInvoiceDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceDiscount = null;
-            if (parseNode.GetChildNode("item_discount") is { } nullNodeItemDiscount && nullNodeItemDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDiscount = null;
+            if (parseNode.GetChildNode("invoice_discount") is null) { _explicitNullValueInvoiceDiscount = default!; _explicitNullProperties?.Remove("invoice_discount"); }
+            else if (parseNode.GetChildNode("invoice_discount") is { } nullNodeInvoiceDiscount && nullNodeInvoiceDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceDiscount = null;
+            if (parseNode.GetChildNode("item_discount") is null) { _explicitNullValueItemDiscount = default!; _explicitNullProperties?.Remove("item_discount"); }
+            else if (parseNode.GetChildNode("item_discount") is { } nullNodeItemDiscount && nullNodeItemDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDiscount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The discount as a percent or amount at invoice level. The invoice discount amount is subtracted from the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? InvoiceDiscount { get => _explicitNullValueInvoiceDiscount; set { _explicitNullValueInvoiceDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_discount"); else _explicitNullProperties?.Remove("invoice_discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? InvoiceDiscount { get => _explicitNullValueInvoiceDiscount; set { _explicitNullValueInvoiceDiscount = value; AdditionalData?.Remove("invoice_discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_discount"); else _explicitNullProperties?.Remove("invoice_discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Discount? _explicitNullValueInvoiceDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount InvoiceDiscount { get => _explicitNullValueInvoiceDiscount; set { _explicitNullValueInvoiceDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_discount"); else _explicitNullProperties?.Remove("invoice_discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount InvoiceDiscount { get => _explicitNullValueInvoiceDiscount; set { _explicitNullValueInvoiceDiscount = value; AdditionalData?.Remove("invoice_discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_discount"); else _explicitNullProperties?.Remove("invoice_discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Discount _explicitNullValueInvoiceDiscount = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? ItemDiscount { get => _explicitNullValueItemDiscount; set { _explicitNullValueItemDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_discount"); else _explicitNullProperties?.Remove("item_discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? ItemDiscount { get => _explicitNullValueItemDiscount; set { _explicitNullValueItemDiscount = value; AdditionalData?.Remove("item_discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_discount"); else _explicitNullProperties?.Remove("item_discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? _explicitNullValueItemDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money ItemDiscount { get => _explicitNullValueItemDiscount; set { _explicitNullValueItemDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_discount"); else _explicitNullProperties?.Remove("item_discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money ItemDiscount { get => _explicitNullValueItemDiscount; set { _explicitNullValueItemDiscount = value; AdditionalData?.Remove("item_discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_discount"); else _explicitNullProperties?.Remove("item_discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValueItemDiscount = default!;
 #endif
         /// <summary>

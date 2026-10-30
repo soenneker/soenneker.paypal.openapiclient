@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("provided_time") is { } nullNodeProvidedTime && nullNodeProvidedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvidedTime = null;
+            if (parseNode.GetChildNode("provided_time") is null) { _explicitNullValueProvidedTime = default!; _explicitNullProperties?.Remove("provided_time"); }
+            else if (parseNode.GetChildNode("provided_time") is { } nullNodeProvidedTime && nullNodeProvidedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvidedTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,11 +45,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProvidedTime { get => _explicitNullValueProvidedTime; set { _explicitNullValueProvidedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_time"); else _explicitNullProperties?.Remove("provided_time"); } }
+        public string? ProvidedTime { get => _explicitNullValueProvidedTime; set { _explicitNullValueProvidedTime = value; AdditionalData?.Remove("provided_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_time"); else _explicitNullProperties?.Remove("provided_time"); } }
         private string? _explicitNullValueProvidedTime = default!;
 #nullable restore
 #else
-        public string ProvidedTime { get => _explicitNullValueProvidedTime; set { _explicitNullValueProvidedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_time"); else _explicitNullProperties?.Remove("provided_time"); } }
+        public string ProvidedTime { get => _explicitNullValueProvidedTime; set { _explicitNullValueProvidedTime = value; AdditionalData?.Remove("provided_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_time"); else _explicitNullProperties?.Remove("provided_time"); } }
         private string _explicitNullValueProvidedTime = default!;
 #endif
         /// <summary>The source of the Information.</summary>

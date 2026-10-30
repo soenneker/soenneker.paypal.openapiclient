@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
-            if (parseNode.GetChildNode("risk") is { } nullNodeRisk && nullNodeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Risk = null;
+            if (parseNode.GetChildNode("card") is null) { _explicitNullValueCard = default!; _explicitNullProperties?.Remove("card"); }
+            else if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("risk") is null) { _explicitNullValueRisk = default!; _explicitNullProperties?.Remove("risk"); }
+            else if (parseNode.GetChildNode("risk") is { } nullNodeRisk && nullNodeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Risk = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Merchants and partners can add Level 2 and 3 data to payments to reduce risk and payment processing costs. For more information about processing payments, see &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/processing/&quot;&gt;checkout&lt;/a&gt; or &lt;a href=&quot;https://developer.paypal.com/docs/multiparty/checkout/advanced/processing/&quot;&gt;multiparty checkout&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Merchants and partners can add additional customer parameters that can help with better fraud protection and reduced risk for unbranded card payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; AdditionalData?.Remove("risk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? _explicitNullValueRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; AdditionalData?.Remove("risk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk _explicitNullValueRisk = default!;
 #endif
         /// <summary>

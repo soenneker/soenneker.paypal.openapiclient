@@ -18,17 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accept_claim_types") is { } nullNodeAcceptClaimTypes && nullNodeAcceptClaimTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptClaimTypes = null;
+            if (parseNode.GetChildNode("accept_claim_types") is null) { _explicitNullValueAcceptClaimTypes = default!; _explicitNullProperties?.Remove("accept_claim_types"); }
+            else if (parseNode.GetChildNode("accept_claim_types") is { } nullNodeAcceptClaimTypes && nullNodeAcceptClaimTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptClaimTypes = null;
         }
 
         /// <summary>The types of refund the merchant can provide the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?>? AcceptClaimTypes { get => _explicitNullValueAcceptClaimTypes; set { _explicitNullValueAcceptClaimTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim_types"); else _explicitNullProperties?.Remove("accept_claim_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?>? AcceptClaimTypes { get => _explicitNullValueAcceptClaimTypes; set { _explicitNullValueAcceptClaimTypes = value; AdditionalData?.Remove("accept_claim_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim_types"); else _explicitNullProperties?.Remove("accept_claim_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?>? _explicitNullValueAcceptClaimTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?> AcceptClaimTypes { get => _explicitNullValueAcceptClaimTypes; set { _explicitNullValueAcceptClaimTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim_types"); else _explicitNullProperties?.Remove("accept_claim_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?> AcceptClaimTypes { get => _explicitNullValueAcceptClaimTypes; set { _explicitNullValueAcceptClaimTypes = value; AdditionalData?.Remove("accept_claim_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim_types"); else _explicitNullProperties?.Remove("accept_claim_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimType?> _explicitNullValueAcceptClaimTypes = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

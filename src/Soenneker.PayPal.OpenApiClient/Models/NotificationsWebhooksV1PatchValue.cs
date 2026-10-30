@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/>, <see cref="int"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NotificationsWebhooksV1PatchValue : IComposedTypeWrapper, IParsable
@@ -22,8 +22,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public bool? Boolean { get; set; }
         /// <summary>Composed type representation for type <see cref="double"/></summary>
         public double? Double { get; set; }
-        /// <summary>Composed type representation for type <see cref="int"/></summary>
-        public int? Integer { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,10 +63,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 result.Double = doubleValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int integerValue)
-            {
-                result.Integer = integerValue;
-            }
             else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
@@ -79,7 +73,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.Boolean == null && result.Double == null && result.Integer == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null) result.UnrecognizedValue = unionPayload;
+            if (result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -88,6 +82,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(NotificationsWebhooksV1PatchValueMember1 != null || NotificationsWebhooksV1PatchValueMember2 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2);
@@ -101,9 +97,15 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (Boolean == null && Double == null && Integer == null && NotificationsWebhooksV1PatchValueMember1 == null && NotificationsWebhooksV1PatchValueMember2 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (NotificationsWebhooksV1PatchValueMember1 != null && Boolean == null && Double == null && Integer == null && NotificationsWebhooksV1PatchValueMember2 == null && String == null) { if (NotificationsWebhooksV1PatchValueMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember1); return; }
-            if (NotificationsWebhooksV1PatchValueMember2 != null && Boolean == null && Double == null && Integer == null && NotificationsWebhooksV1PatchValueMember1 == null && String == null) { if (NotificationsWebhooksV1PatchValueMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember2); return; }
+            if (Boolean == null && Double == null && NotificationsWebhooksV1PatchValueMember1 == null && NotificationsWebhooksV1PatchValueMember2 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (Boolean != null) selectedUnionBranches++;
+            if (Double != null) selectedUnionBranches++;
+            if (NotificationsWebhooksV1PatchValueMember1 != null) selectedUnionBranches++;
+            if (NotificationsWebhooksV1PatchValueMember2 != null) selectedUnionBranches++;
+            if (String != null) selectedUnionBranches++;
+            if (NotificationsWebhooksV1PatchValueMember1 != null && selectedUnionBranches == 1) { if (NotificationsWebhooksV1PatchValueMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember1); return; }
+            if (NotificationsWebhooksV1PatchValueMember2 != null && selectedUnionBranches == 1) { if (NotificationsWebhooksV1PatchValueMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Boolean != null)
@@ -113,10 +115,6 @@ return result;
             else if(Double != null)
             {
                 writer.WriteDoubleValue(null, Double);
-            }
-            else if(Integer != null)
-            {
-                writer.WriteIntValue(null, Integer);
             }
             else if(String != null)
             {

@@ -18,14 +18,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
-            if (parseNode.GetChildNode("item_date") is { } nullNodeItemDate && nullNodeItemDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDate = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
-            if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
-            if (parseNode.GetChildNode("unit_of_measure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discount") is null) { _explicitNullValueDiscount = default!; _explicitNullProperties?.Remove("discount"); }
+            else if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("item_date") is null) { _explicitNullValueItemDate = default!; _explicitNullProperties?.Remove("item_date"); }
+            else if (parseNode.GetChildNode("item_date") is { } nullNodeItemDate && nullNodeItemDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDate = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("tax") is null) { _explicitNullValueTax = default!; _explicitNullProperties?.Remove("tax"); }
+            else if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("unit_amount") is null) { _explicitNullValueUnitAmount = default!; _explicitNullProperties?.Remove("unit_amount"); }
+            else if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
+            if (parseNode.GetChildNode("unit_of_measure") is null) { _explicitNullValueUnitOfMeasure = default!; _explicitNullProperties?.Remove("unit_of_measure"); }
+            else if (parseNode.GetChildNode("unit_of_measure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,21 +41,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The item description for the invoice line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The discount as a percent or amount at invoice level. The invoice discount amount is subtracted from the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Discount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Discount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Discount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Discount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>The ID of the invoice line item.</summary>
@@ -61,55 +69,55 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemDate { get => _explicitNullValueItemDate; set { _explicitNullValueItemDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_date"); else _explicitNullProperties?.Remove("item_date"); } }
+        public string? ItemDate { get => _explicitNullValueItemDate; set { _explicitNullValueItemDate = value; AdditionalData?.Remove("item_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_date"); else _explicitNullProperties?.Remove("item_date"); } }
         private string? _explicitNullValueItemDate = default!;
 #nullable restore
 #else
-        public string ItemDate { get => _explicitNullValueItemDate; set { _explicitNullValueItemDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_date"); else _explicitNullProperties?.Remove("item_date"); } }
+        public string ItemDate { get => _explicitNullValueItemDate; set { _explicitNullValueItemDate = value; AdditionalData?.Remove("item_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_date"); else _explicitNullProperties?.Remove("item_date"); } }
         private string _explicitNullValueItemDate = default!;
 #endif
         /// <summary>The item name for the invoice line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The quantity of the item that the invoicer provides to the payer. Value is from `-1000000` to `1000000`. Supports up to five decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The tax information. Includes the tax name and tax rate of invoice items. The tax amount is added to the item total.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Tax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Tax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Tax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Tax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Tax _explicitNullValueTax = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; AdditionalData?.Remove("unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? _explicitNullValueUnitAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; AdditionalData?.Remove("unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValueUnitAmount = default!;
 #endif
         /// <summary>The unit of measure for the invoiced item.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_of_measure"); else _explicitNullProperties?.Remove("unit_of_measure"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; AdditionalData?.Remove("unit_of_measure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_of_measure"); else _explicitNullProperties?.Remove("unit_of_measure"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? _explicitNullValueUnitOfMeasure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue"/> and sets the default values.
@@ -144,7 +152,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Tax>(global::Soenneker.PayPal.OpenApiClient.Models.Tax.CreateFromDiscriminatorValue); } },
                 { "unit_amount", n => { UnitAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
-                { "unit_of_measure", n => { UnitOfMeasure = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure>(); } },
+                { "unit_of_measure", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUnitOfMeasure = default; _explicitNullProperties?.Remove("unit_of_measure"); AdditionalData["unit_of_measure"] = unknown; } else { UnitOfMeasure = parsed; AdditionalData.Remove("unit_of_measure"); } } },
             };
         }
         /// <summary>

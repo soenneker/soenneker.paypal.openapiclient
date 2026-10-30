@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("application_context") is { } nullNodeApplicationContext && nullNodeApplicationContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationContext = null;
-            if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
-            if (parseNode.GetChildNode("payer") is { } nullNodePayer && nullNodePayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payer = null;
-            if (parseNode.GetChildNode("payment_source") is { } nullNodePaymentSource && nullNodePaymentSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSource = null;
-            if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
+            if (parseNode.GetChildNode("application_context") is null) { _explicitNullValueApplicationContext = default!; _explicitNullProperties?.Remove("application_context"); }
+            else if (parseNode.GetChildNode("application_context") is { } nullNodeApplicationContext && nullNodeApplicationContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationContext = null;
+            if (parseNode.GetChildNode("intent") is null) { _explicitNullValueIntent = default!; _explicitNullProperties?.Remove("intent"); }
+            else if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
+            if (parseNode.GetChildNode("payer") is null) { _explicitNullValuePayer = default!; _explicitNullProperties?.Remove("payer"); }
+            else if (parseNode.GetChildNode("payer") is { } nullNodePayer && nullNodePayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payer = null;
+            if (parseNode.GetChildNode("payment_source") is null) { _explicitNullValuePaymentSource = default!; _explicitNullProperties?.Remove("payment_source"); }
+            else if (parseNode.GetChildNode("payment_source") is { } nullNodePaymentSource && nullNodePaymentSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSource = null;
+            if (parseNode.GetChildNode("purchase_units") is null) { _explicitNullValuePurchaseUnits = default!; _explicitNullProperties?.Remove("purchase_units"); }
+            else if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,45 +35,45 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Customize the payer experience during the approval process for the payment with PayPal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext? ApplicationContext { get => _explicitNullValueApplicationContext; set { _explicitNullValueApplicationContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_context"); else _explicitNullProperties?.Remove("application_context"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext? ApplicationContext { get => _explicitNullValueApplicationContext; set { _explicitNullValueApplicationContext = value; AdditionalData?.Remove("application_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_context"); else _explicitNullProperties?.Remove("application_context"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext? _explicitNullValueApplicationContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext ApplicationContext { get => _explicitNullValueApplicationContext; set { _explicitNullValueApplicationContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_context"); else _explicitNullProperties?.Remove("application_context"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext ApplicationContext { get => _explicitNullValueApplicationContext; set { _explicitNullValueApplicationContext = value; AdditionalData?.Remove("application_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_context"); else _explicitNullProperties?.Remove("application_context"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext _explicitNullValueApplicationContext = default!;
 #endif
         /// <summary>The intent to either capture payment immediately or authorize a payment for an order after order creation.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; AdditionalData?.Remove("intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent? _explicitNullValueIntent = default!;
         /// <summary>DEPRECATED. The customer is also known as the payer. The Payer object was intended to only be used with the `payment_source.paypal` object. In order to make this design more clear, the details in the `payer` object are now available under `payment_source.paypal`. Please use `payment_source.paypal`. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;th&gt;Since Version&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;payment_source.paypal&lt;/td&gt;&lt;td&gt;2.9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer? Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer"); else _explicitNullProperties?.Remove("payer"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer? Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; AdditionalData?.Remove("payer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer"); else _explicitNullProperties?.Remove("payer"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer? _explicitNullValuePayer = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer"); else _explicitNullProperties?.Remove("payer"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; AdditionalData?.Remove("payer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer"); else _explicitNullProperties?.Remove("payer"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer _explicitNullValuePayer = default!;
 #endif
         /// <summary>The payment source definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource? PaymentSource { get => _explicitNullValuePaymentSource; set { _explicitNullValuePaymentSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source"); else _explicitNullProperties?.Remove("payment_source"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource? PaymentSource { get => _explicitNullValuePaymentSource; set { _explicitNullValuePaymentSource = value; AdditionalData?.Remove("payment_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source"); else _explicitNullProperties?.Remove("payment_source"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource? _explicitNullValuePaymentSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource PaymentSource { get => _explicitNullValuePaymentSource; set { _explicitNullValuePaymentSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source"); else _explicitNullProperties?.Remove("payment_source"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource PaymentSource { get => _explicitNullValuePaymentSource; set { _explicitNullValuePaymentSource = value; AdditionalData?.Remove("payment_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source"); else _explicitNullProperties?.Remove("payment_source"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource _explicitNullValuePaymentSource = default!;
 #endif
         /// <summary>An array of purchase units. Each purchase unit establishes a contract between a payer and the payee. Each purchase unit represents either a full or partial order that the payer intends to purchase from the payee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem>? _explicitNullValuePurchaseUnits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem> _explicitNullValuePurchaseUnits = default!;
 #endif
         /// <summary>
@@ -97,7 +102,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext.CreateFromDiscriminatorValue); } },
-                { "intent", n => { Intent = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent>(); } },
+                { "intent", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutPaymentIntent>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntent = default; _explicitNullProperties?.Remove("intent"); AdditionalData["intent"] = unknown; } else { Intent = parsed; AdditionalData.Remove("intent"); } } },
                 { "payer", n => { Payer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPayer.CreateFromDiscriminatorValue); } },
                 { "payment_source", n => { PaymentSource = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PaymentSource.CreateFromDiscriminatorValue); } },
                 { "purchase_units", n => { PurchaseUnits = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem>(global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestPurchaseUnitsItem.CreateFromDiscriminatorValue)?.AsList(); } },

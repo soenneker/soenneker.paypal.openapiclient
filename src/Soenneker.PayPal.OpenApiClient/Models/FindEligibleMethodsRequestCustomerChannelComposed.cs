@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("browser_type") is { } nullNodeBrowserType && nullNodeBrowserType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserType = null;
-            if (parseNode.GetChildNode("client_os") is { } nullNodeClientOs && nullNodeClientOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientOs = null;
-            if (parseNode.GetChildNode("device_type") is { } nullNodeDeviceType && nullNodeDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceType = null;
+            if (parseNode.GetChildNode("browser_type") is null) { _explicitNullValueBrowserType = default!; _explicitNullProperties?.Remove("browser_type"); }
+            else if (parseNode.GetChildNode("browser_type") is { } nullNodeBrowserType && nullNodeBrowserType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserType = null;
+            if (parseNode.GetChildNode("client_os") is null) { _explicitNullValueClientOs = default!; _explicitNullProperties?.Remove("client_os"); }
+            else if (parseNode.GetChildNode("client_os") is { } nullNodeClientOs && nullNodeClientOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientOs = null;
+            if (parseNode.GetChildNode("device_type") is null) { _explicitNullValueDeviceType = default!; _explicitNullProperties?.Remove("device_type"); }
+            else if (parseNode.GetChildNode("device_type") is { } nullNodeDeviceType && nullNodeDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The browser used by the customer. Example: Safari, Chrome, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrowserType { get => _explicitNullValueBrowserType; set { _explicitNullValueBrowserType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_type"); else _explicitNullProperties?.Remove("browser_type"); } }
+        public string? BrowserType { get => _explicitNullValueBrowserType; set { _explicitNullValueBrowserType = value; AdditionalData?.Remove("browser_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_type"); else _explicitNullProperties?.Remove("browser_type"); } }
         private string? _explicitNullValueBrowserType = default!;
 #nullable restore
 #else
-        public string BrowserType { get => _explicitNullValueBrowserType; set { _explicitNullValueBrowserType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_type"); else _explicitNullProperties?.Remove("browser_type"); } }
+        public string BrowserType { get => _explicitNullValueBrowserType; set { _explicitNullValueBrowserType = value; AdditionalData?.Remove("browser_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_type"); else _explicitNullProperties?.Remove("browser_type"); } }
         private string _explicitNullValueBrowserType = default!;
 #endif
         /// <summary>The operating system on the device used by the customer. Example: iOS 16.5, Android 30, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientOs { get => _explicitNullValueClientOs; set { _explicitNullValueClientOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_os"); else _explicitNullProperties?.Remove("client_os"); } }
+        public string? ClientOs { get => _explicitNullValueClientOs; set { _explicitNullValueClientOs = value; AdditionalData?.Remove("client_os"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_os"); else _explicitNullProperties?.Remove("client_os"); } }
         private string? _explicitNullValueClientOs = default!;
 #nullable restore
 #else
-        public string ClientOs { get => _explicitNullValueClientOs; set { _explicitNullValueClientOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_os"); else _explicitNullProperties?.Remove("client_os"); } }
+        public string ClientOs { get => _explicitNullValueClientOs; set { _explicitNullValueClientOs = value; AdditionalData?.Remove("client_os"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_os"); else _explicitNullProperties?.Remove("client_os"); } }
         private string _explicitNullValueClientOs = default!;
 #endif
         /// <summary>The type of device used by the customer. Example: Mobile, Desktop, Tablet, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_type"); else _explicitNullProperties?.Remove("device_type"); } }
+        public string? DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; AdditionalData?.Remove("device_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_type"); else _explicitNullProperties?.Remove("device_type"); } }
         private string? _explicitNullValueDeviceType = default!;
 #nullable restore
 #else
-        public string DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_type"); else _explicitNullProperties?.Remove("device_type"); } }
+        public string DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; AdditionalData?.Remove("device_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_type"); else _explicitNullProperties?.Remove("device_type"); } }
         private string _explicitNullValueDeviceType = default!;
 #endif
         /// <summary>

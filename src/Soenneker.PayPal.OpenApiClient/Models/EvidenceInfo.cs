@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("refund_ids") is { } nullNodeRefundIds && nullNodeRefundIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundIds = null;
-            if (parseNode.GetChildNode("tracking_info") is { } nullNodeTrackingInfo && nullNodeTrackingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingInfo = null;
+            if (parseNode.GetChildNode("refund_ids") is null) { _explicitNullValueRefundIds = default!; _explicitNullProperties?.Remove("refund_ids"); }
+            else if (parseNode.GetChildNode("refund_ids") is { } nullNodeRefundIds && nullNodeRefundIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundIds = null;
+            if (parseNode.GetChildNode("tracking_info") is null) { _explicitNullValueTrackingInfo = default!; _explicitNullProperties?.Remove("tracking_info"); }
+            else if (parseNode.GetChildNode("tracking_info") is { } nullNodeTrackingInfo && nullNodeTrackingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of refund IDs for the transaction involved in this dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RefundIds { get => _explicitNullValueRefundIds; set { _explicitNullValueRefundIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_ids"); else _explicitNullProperties?.Remove("refund_ids"); } }
+        public List<string>? RefundIds { get => _explicitNullValueRefundIds; set { _explicitNullValueRefundIds = value; AdditionalData?.Remove("refund_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_ids"); else _explicitNullProperties?.Remove("refund_ids"); } }
         private List<string>? _explicitNullValueRefundIds = default!;
 #nullable restore
 #else
-        public List<string> RefundIds { get => _explicitNullValueRefundIds; set { _explicitNullValueRefundIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_ids"); else _explicitNullProperties?.Remove("refund_ids"); } }
+        public List<string> RefundIds { get => _explicitNullValueRefundIds; set { _explicitNullValueRefundIds = value; AdditionalData?.Remove("refund_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_ids"); else _explicitNullProperties?.Remove("refund_ids"); } }
         private List<string> _explicitNullValueRefundIds = default!;
 #endif
         /// <summary>An array of relevant tracking information for the transaction involved in this dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo>? TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo>? TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; AdditionalData?.Remove("tracking_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo>? _explicitNullValueTrackingInfo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo> TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo> TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; AdditionalData?.Remove("tracking_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TrackingInfo> _explicitNullValueTrackingInfo = default!;
 #endif
         /// <summary>

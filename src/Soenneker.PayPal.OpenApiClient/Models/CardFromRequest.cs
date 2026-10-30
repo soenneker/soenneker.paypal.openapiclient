@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
+            if (parseNode.GetChildNode("expiry") is null) { _explicitNullValueExpiry = default!; _explicitNullProperties?.Remove("expiry"); }
+            else if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string? _explicitNullValueExpiry = default!;
 #nullable restore
 #else
-        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string _explicitNullValueExpiry = default!;
 #endif
         /// <summary>The last digits of the payment card.</summary>

@@ -18,17 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acknowledgement_types") is { } nullNodeAcknowledgementTypes && nullNodeAcknowledgementTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcknowledgementTypes = null;
+            if (parseNode.GetChildNode("acknowledgement_types") is null) { _explicitNullValueAcknowledgementTypes = default!; _explicitNullProperties?.Remove("acknowledgement_types"); }
+            else if (parseNode.GetChildNode("acknowledgement_types") is { } nullNodeAcknowledgementTypes && nullNodeAcknowledgementTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcknowledgementTypes = null;
         }
 
         /// <summary>The types of response when the merchant acknowledges a returned item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?>? AcknowledgementTypes { get => _explicitNullValueAcknowledgementTypes; set { _explicitNullValueAcknowledgementTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledgement_types"); else _explicitNullProperties?.Remove("acknowledgement_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?>? AcknowledgementTypes { get => _explicitNullValueAcknowledgementTypes; set { _explicitNullValueAcknowledgementTypes = value; AdditionalData?.Remove("acknowledgement_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledgement_types"); else _explicitNullProperties?.Remove("acknowledgement_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?>? _explicitNullValueAcknowledgementTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?> AcknowledgementTypes { get => _explicitNullValueAcknowledgementTypes; set { _explicitNullValueAcknowledgementTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledgement_types"); else _explicitNullProperties?.Remove("acknowledgement_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?> AcknowledgementTypes { get => _explicitNullValueAcknowledgementTypes; set { _explicitNullValueAcknowledgementTypes = value; AdditionalData?.Remove("acknowledgement_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledgement_types"); else _explicitNullProperties?.Remove("acknowledgement_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgementType?> _explicitNullValueAcknowledgementTypes = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

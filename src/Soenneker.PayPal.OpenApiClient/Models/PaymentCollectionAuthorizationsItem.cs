@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
-            if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
+            if (parseNode.GetChildNode("custom_id") is null) { _explicitNullValueCustomId = default!; _explicitNullProperties?.Remove("custom_id"); }
+            else if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
+            if (parseNode.GetChildNode("network_transaction_reference") is null) { _explicitNullValueNetworkTransactionReference = default!; _explicitNullProperties?.Remove("network_transaction_reference"); }
+            else if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,11 +45,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string? _explicitNullValueCustomId = default!;
 #nullable restore
 #else
-        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string _explicitNullValueCustomId = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
@@ -85,11 +87,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The network_transaction_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference? _explicitNullValueNetworkTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AuthorizationAllOf2NetworkTransactionReference _explicitNullValueNetworkTransactionReference = default!;
 #endif
         /// <summary>The processor response for card transactions.</summary>

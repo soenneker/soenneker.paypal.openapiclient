@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("connections") is { } nullNodeConnectionsProp && nullNodeConnectionsProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionsProp = null;
+            if (parseNode.GetChildNode("connections") is null) { _explicitNullValueConnectionsProp = default!; _explicitNullProperties?.Remove("connections"); }
+            else if (parseNode.GetChildNode("connections") is { } nullNodeConnectionsProp && nullNodeConnectionsProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionsProp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of connection-level details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connection>? ConnectionsProp { get => _explicitNullValueConnectionsProp; set { _explicitNullValueConnectionsProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connections"); else _explicitNullProperties?.Remove("connections"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connection>? ConnectionsProp { get => _explicitNullValueConnectionsProp; set { _explicitNullValueConnectionsProp = value; AdditionalData?.Remove("connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connections"); else _explicitNullProperties?.Remove("connections"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Connection>? _explicitNullValueConnectionsProp = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connection> ConnectionsProp { get => _explicitNullValueConnectionsProp; set { _explicitNullValueConnectionsProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connections"); else _explicitNullProperties?.Remove("connections"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Connection> ConnectionsProp { get => _explicitNullValueConnectionsProp; set { _explicitNullValueConnectionsProp = value; AdditionalData?.Remove("connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connections"); else _explicitNullProperties?.Remove("connections"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Connection> _explicitNullValueConnectionsProp = default!;
 #endif
         /// <summary>

@@ -18,19 +18,32 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_info") is { } nullNodeBillingInfo && nullNodeBillingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInfo = null;
-            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
-            if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
-            if (parseNode.GetChildNode("plan_id") is { } nullNodePlanId && nullNodePlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanId = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("shipping_amount") is { } nullNodeShippingAmount && nullNodeShippingAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAmount = null;
-            if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("status_change_note") is { } nullNodeStatusChangeNote && nullNodeStatusChangeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusChangeNote = null;
-            if (parseNode.GetChildNode("status_update_time") is { } nullNodeStatusUpdateTime && nullNodeStatusUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUpdateTime = null;
-            if (parseNode.GetChildNode("subscriber") is { } nullNodeSubscriber && nullNodeSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscriber = null;
-            if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+            if (parseNode.GetChildNode("billing_info") is null) { _explicitNullValueBillingInfo = default!; _explicitNullProperties?.Remove("billing_info"); }
+            else if (parseNode.GetChildNode("billing_info") is { } nullNodeBillingInfo && nullNodeBillingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInfo = null;
+            if (parseNode.GetChildNode("create_time") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("create_time"); }
+            else if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("custom_id") is null) { _explicitNullValueCustomId = default!; _explicitNullProperties?.Remove("custom_id"); }
+            else if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
+            if (parseNode.GetChildNode("plan") is null) { _explicitNullValuePlan = default!; _explicitNullProperties?.Remove("plan"); }
+            else if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
+            if (parseNode.GetChildNode("plan_id") is null) { _explicitNullValuePlanId = default!; _explicitNullProperties?.Remove("plan_id"); }
+            else if (parseNode.GetChildNode("plan_id") is { } nullNodePlanId && nullNodePlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanId = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("shipping_amount") is null) { _explicitNullValueShippingAmount = default!; _explicitNullProperties?.Remove("shipping_amount"); }
+            else if (parseNode.GetChildNode("shipping_amount") is { } nullNodeShippingAmount && nullNodeShippingAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAmount = null;
+            if (parseNode.GetChildNode("start_time") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("start_time"); }
+            else if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_change_note") is null) { _explicitNullValueStatusChangeNote = default!; _explicitNullProperties?.Remove("status_change_note"); }
+            else if (parseNode.GetChildNode("status_change_note") is { } nullNodeStatusChangeNote && nullNodeStatusChangeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusChangeNote = null;
+            if (parseNode.GetChildNode("status_update_time") is null) { _explicitNullValueStatusUpdateTime = default!; _explicitNullProperties?.Remove("status_update_time"); }
+            else if (parseNode.GetChildNode("status_update_time") is { } nullNodeStatusUpdateTime && nullNodeStatusUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUpdateTime = null;
+            if (parseNode.GetChildNode("subscriber") is null) { _explicitNullValueSubscriber = default!; _explicitNullProperties?.Remove("subscriber"); }
+            else if (parseNode.GetChildNode("subscriber") is { } nullNodeSubscriber && nullNodeSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscriber = null;
+            if (parseNode.GetChildNode("update_time") is null) { _explicitNullValueUpdateTime = default!; _explicitNullProperties?.Remove("update_time"); }
+            else if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,31 +51,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The billing details for the subscription. If the subscription was or is active, these fields are populated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo? BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo? BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; AdditionalData?.Remove("billing_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo? _explicitNullValueBillingInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo BillingInfo { get => _explicitNullValueBillingInfo; set { _explicitNullValueBillingInfo = value; AdditionalData?.Remove("billing_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_info"); else _explicitNullProperties?.Remove("billing_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionBillingInfo _explicitNullValueBillingInfo = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string? _explicitNullValueCreateTime = default!;
 #nullable restore
 #else
-        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string _explicitNullValueCreateTime = default!;
 #endif
         /// <summary>The custom id for the subscription. Can be invoice id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string? _explicitNullValueCustomId = default!;
 #nullable restore
 #else
-        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string _explicitNullValueCustomId = default!;
 #endif
         /// <summary>The PayPal-generated ID for the subscription.</summary>
@@ -84,21 +97,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The plan details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan? _explicitNullValuePlan = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionAllOf3Plan _explicitNullValuePlan = default!;
 #endif
         /// <summary>The ID of the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        public string? PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; AdditionalData?.Remove("plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
         private string? _explicitNullValuePlanId = default!;
 #nullable restore
 #else
-        public string PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        public string PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; AdditionalData?.Remove("plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
         private string _explicitNullValuePlanId = default!;
 #endif
         /// <summary>Indicates whether the subscription has overridden any plan attributes.</summary>
@@ -106,74 +119,74 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The quantity of the product in the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money? ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; AdditionalData?.Remove("shipping_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money? _explicitNullValueShippingAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; AdditionalData?.Remove("shipping_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money _explicitNullValueShippingAmount = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
         private string? _explicitNullValueStartTime = default!;
 #nullable restore
 #else
-        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
         private string _explicitNullValueStartTime = default!;
 #endif
         /// <summary>The status of the subscription.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum? _explicitNullValueStatus = default!;
         /// <summary>The reason or notes for the status of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusChangeNote { get => _explicitNullValueStatusChangeNote; set { _explicitNullValueStatusChangeNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_change_note"); else _explicitNullProperties?.Remove("status_change_note"); } }
+        public string? StatusChangeNote { get => _explicitNullValueStatusChangeNote; set { _explicitNullValueStatusChangeNote = value; AdditionalData?.Remove("status_change_note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_change_note"); else _explicitNullProperties?.Remove("status_change_note"); } }
         private string? _explicitNullValueStatusChangeNote = default!;
 #nullable restore
 #else
-        public string StatusChangeNote { get => _explicitNullValueStatusChangeNote; set { _explicitNullValueStatusChangeNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_change_note"); else _explicitNullProperties?.Remove("status_change_note"); } }
+        public string StatusChangeNote { get => _explicitNullValueStatusChangeNote; set { _explicitNullValueStatusChangeNote = value; AdditionalData?.Remove("status_change_note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_change_note"); else _explicitNullProperties?.Remove("status_change_note"); } }
         private string _explicitNullValueStatusChangeNote = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusUpdateTime { get => _explicitNullValueStatusUpdateTime; set { _explicitNullValueStatusUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_update_time"); else _explicitNullProperties?.Remove("status_update_time"); } }
+        public string? StatusUpdateTime { get => _explicitNullValueStatusUpdateTime; set { _explicitNullValueStatusUpdateTime = value; AdditionalData?.Remove("status_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_update_time"); else _explicitNullProperties?.Remove("status_update_time"); } }
         private string? _explicitNullValueStatusUpdateTime = default!;
 #nullable restore
 #else
-        public string StatusUpdateTime { get => _explicitNullValueStatusUpdateTime; set { _explicitNullValueStatusUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_update_time"); else _explicitNullProperties?.Remove("status_update_time"); } }
+        public string StatusUpdateTime { get => _explicitNullValueStatusUpdateTime; set { _explicitNullValueStatusUpdateTime = value; AdditionalData?.Remove("status_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_update_time"); else _explicitNullProperties?.Remove("status_update_time"); } }
         private string _explicitNullValueStatusUpdateTime = default!;
 #endif
         /// <summary>The subscriber response information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber? Subscriber { get => _explicitNullValueSubscriber; set { _explicitNullValueSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriber"); else _explicitNullProperties?.Remove("subscriber"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber? Subscriber { get => _explicitNullValueSubscriber; set { _explicitNullValueSubscriber = value; AdditionalData?.Remove("subscriber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriber"); else _explicitNullProperties?.Remove("subscriber"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Subscriber? _explicitNullValueSubscriber = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber Subscriber { get => _explicitNullValueSubscriber; set { _explicitNullValueSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriber"); else _explicitNullProperties?.Remove("subscriber"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Subscriber Subscriber { get => _explicitNullValueSubscriber; set { _explicitNullValueSubscriber = value; AdditionalData?.Remove("subscriber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriber"); else _explicitNullProperties?.Remove("subscriber"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Subscriber _explicitNullValueSubscriber = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        public string? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
         private string? _explicitNullValueUpdateTime = default!;
 #nullable restore
 #else
-        public string UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        public string UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
         private string _explicitNullValueUpdateTime = default!;
 #endif
         /// <summary>
@@ -212,7 +225,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "shipping_amount", n => { ShippingAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionStatusEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_change_note", n => { StatusChangeNote = n.GetStringValue(); } },
                 { "status_update_time", n => { StatusUpdateTime = n.GetStringValue(); } },
                 { "subscriber", n => { Subscriber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Subscriber>(global::Soenneker.PayPal.OpenApiClient.Models.Subscriber.CreateFromDiscriminatorValue); } },

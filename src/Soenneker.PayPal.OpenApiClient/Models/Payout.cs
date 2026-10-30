@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batch_header") is { } nullNodeBatchHeader && nullNodeBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchHeader = null;
+            if (parseNode.GetChildNode("batch_header") is null) { _explicitNullValueBatchHeader = default!; _explicitNullProperties?.Remove("batch_header"); }
+            else if (parseNode.GetChildNode("batch_header") is { } nullNodeBatchHeader && nullNodeBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchHeader = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payout header that is returned in response to a payout header request. Shows details for an entire payout request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader? BatchHeader { get => _explicitNullValueBatchHeader; set { _explicitNullValueBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_header"); else _explicitNullProperties?.Remove("batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader? BatchHeader { get => _explicitNullValueBatchHeader; set { _explicitNullValueBatchHeader = value; AdditionalData?.Remove("batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_header"); else _explicitNullProperties?.Remove("batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader? _explicitNullValueBatchHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader BatchHeader { get => _explicitNullValueBatchHeader; set { _explicitNullValueBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_header"); else _explicitNullProperties?.Remove("batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader BatchHeader { get => _explicitNullValueBatchHeader; set { _explicitNullValueBatchHeader = value; AdditionalData?.Remove("batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_header"); else _explicitNullProperties?.Remove("batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader _explicitNullValueBatchHeader = default!;
 #endif
         /// <summary>An array of request-related [HATEOAS links](/api/rest/responses/#hateoas-links).</summary>

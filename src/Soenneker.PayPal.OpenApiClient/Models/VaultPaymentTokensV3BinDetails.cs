@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bin") is { } nullNodeBin && nullNodeBin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bin = null;
-            if (parseNode.GetChildNode("bin_country_code") is { } nullNodeBinCountryCode && nullNodeBinCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinCountryCode = null;
-            if (parseNode.GetChildNode("issuing_bank") is { } nullNodeIssuingBank && nullNodeIssuingBank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingBank = null;
-            if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
+            if (parseNode.GetChildNode("bin") is null) { _explicitNullValueBin = default!; _explicitNullProperties?.Remove("bin"); }
+            else if (parseNode.GetChildNode("bin") is { } nullNodeBin && nullNodeBin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bin = null;
+            if (parseNode.GetChildNode("bin_country_code") is null) { _explicitNullValueBinCountryCode = default!; _explicitNullProperties?.Remove("bin_country_code"); }
+            else if (parseNode.GetChildNode("bin_country_code") is { } nullNodeBinCountryCode && nullNodeBinCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinCountryCode = null;
+            if (parseNode.GetChildNode("issuing_bank") is null) { _explicitNullValueIssuingBank = default!; _explicitNullProperties?.Remove("issuing_bank"); }
+            else if (parseNode.GetChildNode("issuing_bank") is { } nullNodeIssuingBank && nullNodeIssuingBank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingBank = null;
+            if (parseNode.GetChildNode("products") is null) { _explicitNullValueProducts = default!; _explicitNullProperties?.Remove("products"); }
+            else if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The Bank Identification Number (BIN) signifies the number that is being used to identify the granular level details (except the PII information) of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bin { get => _explicitNullValueBin; set { _explicitNullValueBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin"); else _explicitNullProperties?.Remove("bin"); } }
+        public string? Bin { get => _explicitNullValueBin; set { _explicitNullValueBin = value; AdditionalData?.Remove("bin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin"); else _explicitNullProperties?.Remove("bin"); } }
         private string? _explicitNullValueBin = default!;
 #nullable restore
 #else
-        public string Bin { get => _explicitNullValueBin; set { _explicitNullValueBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin"); else _explicitNullProperties?.Remove("bin"); } }
+        public string Bin { get => _explicitNullValueBin; set { _explicitNullValueBin = value; AdditionalData?.Remove("bin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin"); else _explicitNullProperties?.Remove("bin"); } }
         private string _explicitNullValueBin = default!;
 #endif
         /// <summary>The [two-character ISO 3166-1 code](/api/rest/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BinCountryCode { get => _explicitNullValueBinCountryCode; set { _explicitNullValueBinCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_country_code"); else _explicitNullProperties?.Remove("bin_country_code"); } }
+        public string? BinCountryCode { get => _explicitNullValueBinCountryCode; set { _explicitNullValueBinCountryCode = value; AdditionalData?.Remove("bin_country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_country_code"); else _explicitNullProperties?.Remove("bin_country_code"); } }
         private string? _explicitNullValueBinCountryCode = default!;
 #nullable restore
 #else
-        public string BinCountryCode { get => _explicitNullValueBinCountryCode; set { _explicitNullValueBinCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_country_code"); else _explicitNullProperties?.Remove("bin_country_code"); } }
+        public string BinCountryCode { get => _explicitNullValueBinCountryCode; set { _explicitNullValueBinCountryCode = value; AdditionalData?.Remove("bin_country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_country_code"); else _explicitNullProperties?.Remove("bin_country_code"); } }
         private string _explicitNullValueBinCountryCode = default!;
 #endif
         /// <summary>The issuer of the card instrument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingBank { get => _explicitNullValueIssuingBank; set { _explicitNullValueIssuingBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_bank"); else _explicitNullProperties?.Remove("issuing_bank"); } }
+        public string? IssuingBank { get => _explicitNullValueIssuingBank; set { _explicitNullValueIssuingBank = value; AdditionalData?.Remove("issuing_bank"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_bank"); else _explicitNullProperties?.Remove("issuing_bank"); } }
         private string? _explicitNullValueIssuingBank = default!;
 #nullable restore
 #else
-        public string IssuingBank { get => _explicitNullValueIssuingBank; set { _explicitNullValueIssuingBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_bank"); else _explicitNullProperties?.Remove("issuing_bank"); } }
+        public string IssuingBank { get => _explicitNullValueIssuingBank; set { _explicitNullValueIssuingBank = value; AdditionalData?.Remove("issuing_bank"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_bank"); else _explicitNullProperties?.Remove("issuing_bank"); } }
         private string _explicitNullValueIssuingBank = default!;
 #endif
         /// <summary>The type of card product assigned to the BIN by the issuer. These values are defined by the issuer and may change over time. Some examples include: PREPAID_GIFT, CONSUMER, CORPORATE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<string>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<string>? _explicitNullValueProducts = default!;
 #nullable restore
 #else
-        public List<string> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<string> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<string> _explicitNullValueProducts = default!;
 #endif
         /// <summary>

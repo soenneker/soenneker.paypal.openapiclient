@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_refunded") is { } nullNodeAmountRefunded && nullNodeAmountRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountRefunded = null;
-            if (parseNode.GetChildNode("asset_refunded") is { } nullNodeAssetRefunded && nullNodeAssetRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetRefunded = null;
-            if (parseNode.GetChildNode("outcome_code") is { } nullNodeOutcomeCode && nullNodeOutcomeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeCode = null;
-            if (parseNode.GetChildNode("outcome_reason") is { } nullNodeOutcomeReason && nullNodeOutcomeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeReason = null;
+            if (parseNode.GetChildNode("amount_refunded") is null) { _explicitNullValueAmountRefunded = default!; _explicitNullProperties?.Remove("amount_refunded"); }
+            else if (parseNode.GetChildNode("amount_refunded") is { } nullNodeAmountRefunded && nullNodeAmountRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountRefunded = null;
+            if (parseNode.GetChildNode("asset_refunded") is null) { _explicitNullValueAssetRefunded = default!; _explicitNullProperties?.Remove("asset_refunded"); }
+            else if (parseNode.GetChildNode("asset_refunded") is { } nullNodeAssetRefunded && nullNodeAssetRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetRefunded = null;
+            if (parseNode.GetChildNode("outcome_code") is null) { _explicitNullValueOutcomeCode = default!; _explicitNullProperties?.Remove("outcome_code"); }
+            else if (parseNode.GetChildNode("outcome_code") is { } nullNodeOutcomeCode && nullNodeOutcomeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeCode = null;
+            if (parseNode.GetChildNode("outcome_reason") is null) { _explicitNullValueOutcomeReason = default!; _explicitNullProperties?.Remove("outcome_reason"); }
+            else if (parseNode.GetChildNode("outcome_reason") is { } nullNodeOutcomeReason && nullNodeOutcomeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; AdditionalData?.Remove("amount_refunded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueAmountRefunded = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; AdditionalData?.Remove("amount_refunded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueAmountRefunded = default!;
 #endif
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; AdditionalData?.Remove("asset_refunded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? _explicitNullValueAssetRefunded = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; AdditionalData?.Remove("asset_refunded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency _explicitNullValueAssetRefunded = default!;
 #endif
         /// <summary>The outcome of a resolved dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? OutcomeCode { get => _explicitNullValueOutcomeCode; set { _explicitNullValueOutcomeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_code"); else _explicitNullProperties?.Remove("outcome_code"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? OutcomeCode { get => _explicitNullValueOutcomeCode; set { _explicitNullValueOutcomeCode = value; AdditionalData?.Remove("outcome_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_code"); else _explicitNullProperties?.Remove("outcome_code"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? _explicitNullValueOutcomeCode = default!;
         /// <summary>The reason for the adjudication type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? OutcomeReason { get => _explicitNullValueOutcomeReason; set { _explicitNullValueOutcomeReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_reason"); else _explicitNullProperties?.Remove("outcome_reason"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? OutcomeReason { get => _explicitNullValueOutcomeReason; set { _explicitNullValueOutcomeReason = value; AdditionalData?.Remove("outcome_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_reason"); else _explicitNullProperties?.Remove("outcome_reason"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? _explicitNullValueOutcomeReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome"/> and sets the default values.
@@ -79,8 +83,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
                 { "asset_refunded", n => { AssetRefunded = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>(global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency.CreateFromDiscriminatorValue); } },
-                { "outcome_code", n => { OutcomeCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode>(); } },
-                { "outcome_reason", n => { OutcomeReason = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); } },
+                { "outcome_code", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOutcomeCode = default; _explicitNullProperties?.Remove("outcome_code"); AdditionalData["outcome_code"] = unknown; } else { OutcomeCode = parsed; AdditionalData.Remove("outcome_code"); } } },
+                { "outcome_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOutcomeReason = default; _explicitNullProperties?.Remove("outcome_reason"); AdditionalData["outcome_reason"] = unknown; } else { OutcomeReason = parsed; AdditionalData.Remove("outcome_reason"); } } },
             };
         }
         /// <summary>

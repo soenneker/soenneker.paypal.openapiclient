@@ -18,23 +18,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("merchant_agreed_refund") is { } nullNodeMerchantAgreedRefund && nullNodeMerchantAgreedRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefund = null;
-            if (parseNode.GetChildNode("merchant_agreed_refund_time") is { } nullNodeMerchantAgreedRefundTime && nullNodeMerchantAgreedRefundTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefundTime = null;
+            if (parseNode.GetChildNode("merchant_agreed_refund") is null) { _explicitNullValueMerchantAgreedRefund = default!; _explicitNullProperties?.Remove("merchant_agreed_refund"); }
+            else if (parseNode.GetChildNode("merchant_agreed_refund") is { } nullNodeMerchantAgreedRefund && nullNodeMerchantAgreedRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefund = null;
+            if (parseNode.GetChildNode("merchant_agreed_refund_time") is null) { _explicitNullValueMerchantAgreedRefundTime = default!; _explicitNullProperties?.Remove("merchant_agreed_refund_time"); }
+            else if (parseNode.GetChildNode("merchant_agreed_refund_time") is { } nullNodeMerchantAgreedRefundTime && nullNodeMerchantAgreedRefundTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefundTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether merchant has agreed to refund the buyer or not.</summary>
-        public bool? MerchantAgreedRefund { get => _explicitNullValueMerchantAgreedRefund; set { _explicitNullValueMerchantAgreedRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund"); else _explicitNullProperties?.Remove("merchant_agreed_refund"); } }
+        public bool? MerchantAgreedRefund { get => _explicitNullValueMerchantAgreedRefund; set { _explicitNullValueMerchantAgreedRefund = value; AdditionalData?.Remove("merchant_agreed_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund"); else _explicitNullProperties?.Remove("merchant_agreed_refund"); } }
         private bool? _explicitNullValueMerchantAgreedRefund = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
+        public string? MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; AdditionalData?.Remove("merchant_agreed_refund_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
         private string? _explicitNullValueMerchantAgreedRefundTime = default!;
 #nullable restore
 #else
-        public string MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
+        public string MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; AdditionalData?.Remove("merchant_agreed_refund_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
         private string _explicitNullValueMerchantAgreedRefundTime = default!;
 #endif
         /// <summary>

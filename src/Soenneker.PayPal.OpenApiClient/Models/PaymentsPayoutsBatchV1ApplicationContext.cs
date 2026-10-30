@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("holler_url") is { } nullNodeHollerUrl && nullNodeHollerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HollerUrl = null;
-            if (parseNode.GetChildNode("logo_url") is { } nullNodeLogoUrl && nullNodeLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoUrl = null;
-            if (parseNode.GetChildNode("social_feed_privacy") is { } nullNodeSocialFeedPrivacy && nullNodeSocialFeedPrivacy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialFeedPrivacy = null;
+            if (parseNode.GetChildNode("holler_url") is null) { _explicitNullValueHollerUrl = default!; _explicitNullProperties?.Remove("holler_url"); }
+            else if (parseNode.GetChildNode("holler_url") is { } nullNodeHollerUrl && nullNodeHollerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HollerUrl = null;
+            if (parseNode.GetChildNode("logo_url") is null) { _explicitNullValueLogoUrl = default!; _explicitNullProperties?.Remove("logo_url"); }
+            else if (parseNode.GetChildNode("logo_url") is { } nullNodeLogoUrl && nullNodeLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoUrl = null;
+            if (parseNode.GetChildNode("social_feed_privacy") is null) { _explicitNullValueSocialFeedPrivacy = default!; _explicitNullProperties?.Remove("social_feed_privacy"); }
+            else if (parseNode.GetChildNode("social_feed_privacy") is { } nullNodeSocialFeedPrivacy && nullNodeSocialFeedPrivacy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialFeedPrivacy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,31 +32,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
+        public string? HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; AdditionalData?.Remove("holler_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
         private string? _explicitNullValueHollerUrl = default!;
 #nullable restore
 #else
-        public string HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
+        public string HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; AdditionalData?.Remove("holler_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
         private string _explicitNullValueHollerUrl = default!;
 #endif
         /// <summary>Link to a logo that displays as the sender&apos;s profile image in the recipient&apos;s Venmo feed. Used to add or update the business profile image. Max image size: 1024 x 1024 pixels. The image should be square and maximum URL length is 2000.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        public string? LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; AdditionalData?.Remove("logo_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
         private string? _explicitNullValueLogoUrl = default!;
 #nullable restore
 #else
-        public string LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        public string LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; AdditionalData?.Remove("logo_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
         private string _explicitNullValueLogoUrl = default!;
 #endif
         /// <summary>This attribute controls the privacy of a payout transaction in recipient’s feed. PUBLIC, FRIENDS_ONLY &amp; PRIVATE are the values that can be used. PUBLIC - The payment displays on the recipient&apos;s public Venmo feed. FRIENDS_ONLY - The payment displays only to the recipient&apos;s Venmo friends. PRIVATE - The payment displays only on the recipient&apos;s personal feed. Defaults to `PRIVATE` if left blank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
+        public string? SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; AdditionalData?.Remove("social_feed_privacy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
         private string? _explicitNullValueSocialFeedPrivacy = default!;
 #nullable restore
 #else
-        public string SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
+        public string SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; AdditionalData?.Remove("social_feed_privacy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
         private string _explicitNullValueSocialFeedPrivacy = default!;
 #endif
         /// <summary>

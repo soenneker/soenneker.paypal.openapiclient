@@ -18,17 +18,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("interval_count") is { } nullNodeIntervalCount && nullNodeIntervalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalCount = null;
-            if (parseNode.GetChildNode("interval_unit") is { } nullNodeIntervalUnit && nullNodeIntervalUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalUnit = null;
+            if (parseNode.GetChildNode("interval_count") is null) { _explicitNullValueIntervalCount = default!; _explicitNullProperties?.Remove("interval_count"); }
+            else if (parseNode.GetChildNode("interval_count") is { } nullNodeIntervalCount && nullNodeIntervalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalCount = null;
+            if (parseNode.GetChildNode("interval_unit") is null) { _explicitNullValueIntervalUnit = default!; _explicitNullProperties?.Remove("interval_unit"); }
+            else if (parseNode.GetChildNode("interval_unit") is { } nullNodeIntervalUnit && nullNodeIntervalUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalUnit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of intervals after which a subscriber is billed. For example, if the `interval_unit` is `DAY` with an `interval_count` of  `2`, the subscription is billed once every two days. The following table lists the maximum allowed values for the `interval_count` for each `interval_unit`:&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;code&gt;Interval unit&lt;/code&gt;&lt;/th&gt;&lt;th&gt;Maximum interval count&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;DAY&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;365&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;WEEK&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;52&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;MONTH&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;YEAR&lt;/code&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</summary>
-        public int? IntervalCount { get => _explicitNullValueIntervalCount; set { _explicitNullValueIntervalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_count"); else _explicitNullProperties?.Remove("interval_count"); } }
+        public int? IntervalCount { get => _explicitNullValueIntervalCount; set { _explicitNullValueIntervalCount = value; AdditionalData?.Remove("interval_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_count"); else _explicitNullProperties?.Remove("interval_count"); } }
         private int? _explicitNullValueIntervalCount = default!;
         /// <summary>The interval at which the subscription is charged or billed.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit? IntervalUnit { get => _explicitNullValueIntervalUnit; set { _explicitNullValueIntervalUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_unit"); else _explicitNullProperties?.Remove("interval_unit"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit? IntervalUnit { get => _explicitNullValueIntervalUnit; set { _explicitNullValueIntervalUnit = value; AdditionalData?.Remove("interval_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_unit"); else _explicitNullProperties?.Remove("interval_unit"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit? _explicitNullValueIntervalUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Frequency"/> and sets the default values.
@@ -57,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
-                { "interval_unit", n => { IntervalUnit = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit>(); } },
+                { "interval_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FrequencyIntervalUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntervalUnit = default; _explicitNullProperties?.Remove("interval_unit"); AdditionalData["interval_unit"] = unknown; } else { IntervalUnit = parsed; AdditionalData.Remove("interval_unit"); } } },
             };
         }
         /// <summary>

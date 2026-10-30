@@ -18,17 +18,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authentication_status") is { } nullNodeAuthenticationStatus && nullNodeAuthenticationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationStatus = null;
-            if (parseNode.GetChildNode("enrollment_status") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
+            if (parseNode.GetChildNode("authentication_status") is null) { _explicitNullValueAuthenticationStatus = default!; _explicitNullProperties?.Remove("authentication_status"); }
+            else if (parseNode.GetChildNode("authentication_status") is { } nullNodeAuthenticationStatus && nullNodeAuthenticationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationStatus = null;
+            if (parseNode.GetChildNode("enrollment_status") is null) { _explicitNullValueEnrollmentStatus = default!; _explicitNullProperties?.Remove("enrollment_status"); }
+            else if (parseNode.GetChildNode("enrollment_status") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Transactions status result identifier. The outcome of the issuer&apos;s authentication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseAuthenticationStatus? AuthenticationStatus { get => _explicitNullValueAuthenticationStatus; set { _explicitNullValueAuthenticationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_status"); else _explicitNullProperties?.Remove("authentication_status"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseAuthenticationStatus? AuthenticationStatus { get => _explicitNullValueAuthenticationStatus; set { _explicitNullValueAuthenticationStatus = value; AdditionalData?.Remove("authentication_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_status"); else _explicitNullProperties?.Remove("authentication_status"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseAuthenticationStatus? _explicitNullValueAuthenticationStatus = default!;
         /// <summary>Status of Authentication eligibility.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseEnrollmentStatus? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseEnrollmentStatus? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; AdditionalData?.Remove("enrollment_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseEnrollmentStatus? _explicitNullValueEnrollmentStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "authentication_status", n => { AuthenticationStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseAuthenticationStatus>(); } },
-                { "enrollment_status", n => { EnrollmentStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseEnrollmentStatus>(); } },
+                { "authentication_status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseAuthenticationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAuthenticationStatus = default; _explicitNullProperties?.Remove("authentication_status"); AdditionalData["authentication_status"] = unknown; } else { AuthenticationStatus = parsed; AdditionalData.Remove("authentication_status"); } } },
+                { "enrollment_status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponseEnrollmentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEnrollmentStatus = default; _explicitNullProperties?.Remove("enrollment_status"); AdditionalData["enrollment_status"] = unknown; } else { EnrollmentStatus = parsed; AdditionalData.Remove("enrollment_status"); } } },
             };
         }
         /// <summary>

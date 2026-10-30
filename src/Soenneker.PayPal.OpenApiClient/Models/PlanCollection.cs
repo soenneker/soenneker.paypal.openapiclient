@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("plans") is { } nullNodePlans && nullNodePlans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plans = null;
-            if (parseNode.GetChildNode("total_items") is { } nullNodeTotalItems && nullNodeTotalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalItems = null;
-            if (parseNode.GetChildNode("total_pages") is { } nullNodeTotalPages && nullNodeTotalPages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPages = null;
+            if (parseNode.GetChildNode("plans") is null) { _explicitNullValuePlans = default!; _explicitNullProperties?.Remove("plans"); }
+            else if (parseNode.GetChildNode("plans") is { } nullNodePlans && nullNodePlans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plans = null;
+            if (parseNode.GetChildNode("total_items") is null) { _explicitNullValueTotalItems = default!; _explicitNullProperties?.Remove("total_items"); }
+            else if (parseNode.GetChildNode("total_items") is { } nullNodeTotalItems && nullNodeTotalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalItems = null;
+            if (parseNode.GetChildNode("total_pages") is null) { _explicitNullValueTotalPages = default!; _explicitNullProperties?.Remove("total_pages"); }
+            else if (parseNode.GetChildNode("total_pages") is { } nullNodeTotalPages && nullNodeTotalPages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,18 +39,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of plans.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan>? Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan>? Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; AdditionalData?.Remove("plans"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Plan>? _explicitNullValuePlans = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan> Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Plan> Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; AdditionalData?.Remove("plans"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Plan> _explicitNullValuePlans = default!;
 #endif
         /// <summary>The total number of items.</summary>
-        public int? TotalItems { get => _explicitNullValueTotalItems; set { _explicitNullValueTotalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_items"); else _explicitNullProperties?.Remove("total_items"); } }
+        public int? TotalItems { get => _explicitNullValueTotalItems; set { _explicitNullValueTotalItems = value; AdditionalData?.Remove("total_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_items"); else _explicitNullProperties?.Remove("total_items"); } }
         private int? _explicitNullValueTotalItems = default!;
         /// <summary>The total number of pages.</summary>
-        public int? TotalPages { get => _explicitNullValueTotalPages; set { _explicitNullValueTotalPages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_pages"); else _explicitNullProperties?.Remove("total_pages"); } }
+        public int? TotalPages { get => _explicitNullValueTotalPages; set { _explicitNullValueTotalPages = value; AdditionalData?.Remove("total_pages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_pages"); else _explicitNullProperties?.Remove("total_pages"); } }
         private int? _explicitNullValueTotalPages = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PlanCollection"/> and sets the default values.

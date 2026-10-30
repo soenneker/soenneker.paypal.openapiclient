@@ -18,15 +18,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("batch_status") is { } nullNodeBatchStatus && nullNodeBatchStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchStatus = null;
-            if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
-            if (parseNode.GetChildNode("funding_source") is { } nullNodeFundingSource && nullNodeFundingSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingSource = null;
-            if (parseNode.GetChildNode("payout_batch_id") is { } nullNodePayoutBatchId && nullNodePayoutBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutBatchId = null;
-            if (parseNode.GetChildNode("sender_batch_header") is { } nullNodeSenderBatchHeader && nullNodeSenderBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchHeader = null;
-            if (parseNode.GetChildNode("time_closed") is { } nullNodeTimeClosed && nullNodeTimeClosed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeClosed = null;
-            if (parseNode.GetChildNode("time_completed") is { } nullNodeTimeCompleted && nullNodeTimeCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeCompleted = null;
-            if (parseNode.GetChildNode("time_created") is { } nullNodeTimeCreated && nullNodeTimeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeCreated = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("batch_status") is null) { _explicitNullValueBatchStatus = default!; _explicitNullProperties?.Remove("batch_status"); }
+            else if (parseNode.GetChildNode("batch_status") is { } nullNodeBatchStatus && nullNodeBatchStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchStatus = null;
+            if (parseNode.GetChildNode("fees") is null) { _explicitNullValueFees = default!; _explicitNullProperties?.Remove("fees"); }
+            else if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
+            if (parseNode.GetChildNode("funding_source") is null) { _explicitNullValueFundingSource = default!; _explicitNullProperties?.Remove("funding_source"); }
+            else if (parseNode.GetChildNode("funding_source") is { } nullNodeFundingSource && nullNodeFundingSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingSource = null;
+            if (parseNode.GetChildNode("payout_batch_id") is null) { _explicitNullValuePayoutBatchId = default!; _explicitNullProperties?.Remove("payout_batch_id"); }
+            else if (parseNode.GetChildNode("payout_batch_id") is { } nullNodePayoutBatchId && nullNodePayoutBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutBatchId = null;
+            if (parseNode.GetChildNode("sender_batch_header") is null) { _explicitNullValueSenderBatchHeader = default!; _explicitNullProperties?.Remove("sender_batch_header"); }
+            else if (parseNode.GetChildNode("sender_batch_header") is { } nullNodeSenderBatchHeader && nullNodeSenderBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchHeader = null;
+            if (parseNode.GetChildNode("time_closed") is null) { _explicitNullValueTimeClosed = default!; _explicitNullProperties?.Remove("time_closed"); }
+            else if (parseNode.GetChildNode("time_closed") is { } nullNodeTimeClosed && nullNodeTimeClosed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeClosed = null;
+            if (parseNode.GetChildNode("time_completed") is null) { _explicitNullValueTimeCompleted = default!; _explicitNullProperties?.Remove("time_completed"); }
+            else if (parseNode.GetChildNode("time_completed") is { } nullNodeTimeCompleted && nullNodeTimeCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeCompleted = null;
+            if (parseNode.GetChildNode("time_created") is null) { _explicitNullValueTimeCreated = default!; _explicitNullProperties?.Remove("time_created"); }
+            else if (parseNode.GetChildNode("time_created") is { } nullNodeTimeCreated && nullNodeTimeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeCreated = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,57 +43,57 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency _explicitNullValueAmount = default!;
 #endif
         /// <summary>The payouts status.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? BatchStatus { get => _explicitNullValueBatchStatus; set { _explicitNullValueBatchStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_status"); else _explicitNullProperties?.Remove("batch_status"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? BatchStatus { get => _explicitNullValueBatchStatus; set { _explicitNullValueBatchStatus = value; AdditionalData?.Remove("batch_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_status"); else _explicitNullProperties?.Remove("batch_status"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? _explicitNullValueBatchStatus = default!;
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; AdditionalData?.Remove("fees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency? _explicitNullValueFees = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Currency Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; AdditionalData?.Remove("fees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Currency _explicitNullValueFees = default!;
 #endif
         /// <summary>Identifies a funding source type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FundingSource? FundingSource { get => _explicitNullValueFundingSource; set { _explicitNullValueFundingSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source"); else _explicitNullProperties?.Remove("funding_source"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FundingSource? FundingSource { get => _explicitNullValueFundingSource; set { _explicitNullValueFundingSource = value; AdditionalData?.Remove("funding_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source"); else _explicitNullProperties?.Remove("funding_source"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FundingSource? _explicitNullValueFundingSource = default!;
         /// <summary>The PayPal-generated ID for a payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
+        public string? PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; AdditionalData?.Remove("payout_batch_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
         private string? _explicitNullValuePayoutBatchId = default!;
 #nullable restore
 #else
-        public string PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
+        public string PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; AdditionalData?.Remove("payout_batch_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
         private string _explicitNullValuePayoutBatchId = default!;
 #endif
         /// <summary>The sender-provided header for a payout request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; AdditionalData?.Remove("sender_batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? _explicitNullValueSenderBatchHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; AdditionalData?.Remove("sender_batch_header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader _explicitNullValueSenderBatchHeader = default!;
 #endif
         /// <summary>The date and time when the payout was closed, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). A payout is considered closed when all items in a batch are processed and the available balance from the temporary hold is released.</summary>
-        public DateTimeOffset? TimeClosed { get => _explicitNullValueTimeClosed; set { _explicitNullValueTimeClosed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_closed"); else _explicitNullProperties?.Remove("time_closed"); } }
+        public DateTimeOffset? TimeClosed { get => _explicitNullValueTimeClosed; set { _explicitNullValueTimeClosed = value; AdditionalData?.Remove("time_closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_closed"); else _explicitNullProperties?.Remove("time_closed"); } }
         private DateTimeOffset? _explicitNullValueTimeClosed = default!;
         /// <summary>The date and time when processing for the payout was completed, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
-        public DateTimeOffset? TimeCompleted { get => _explicitNullValueTimeCompleted; set { _explicitNullValueTimeCompleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_completed"); else _explicitNullProperties?.Remove("time_completed"); } }
+        public DateTimeOffset? TimeCompleted { get => _explicitNullValueTimeCompleted; set { _explicitNullValueTimeCompleted = value; AdditionalData?.Remove("time_completed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_completed"); else _explicitNullProperties?.Remove("time_completed"); } }
         private DateTimeOffset? _explicitNullValueTimeCompleted = default!;
         /// <summary>The date and time when processing for the payout began, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
-        public DateTimeOffset? TimeCreated { get => _explicitNullValueTimeCreated; set { _explicitNullValueTimeCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_created"); else _explicitNullProperties?.Remove("time_created"); } }
+        public DateTimeOffset? TimeCreated { get => _explicitNullValueTimeCreated; set { _explicitNullValueTimeCreated = value; AdditionalData?.Remove("time_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_created"); else _explicitNullProperties?.Remove("time_created"); } }
         private DateTimeOffset? _explicitNullValueTimeCreated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutBatchHeader"/> and sets the default values.
@@ -112,9 +121,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
-                { "batch_status", n => { BatchStatus = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum>(); } },
+                { "batch_status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBatchStatus = default; _explicitNullProperties?.Remove("batch_status"); AdditionalData["batch_status"] = unknown; } else { BatchStatus = parsed; AdditionalData.Remove("batch_status"); } } },
                 { "fees", n => { Fees = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
-                { "funding_source", n => { FundingSource = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundingSource>(); } },
+                { "funding_source", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FundingSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFundingSource = default; _explicitNullProperties?.Remove("funding_source"); AdditionalData["funding_source"] = unknown; } else { FundingSource = parsed; AdditionalData.Remove("funding_source"); } } },
                 { "payout_batch_id", n => { PayoutBatchId = n.GetStringValue(); } },
                 { "sender_batch_header", n => { SenderBatchHeader = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader>(global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader.CreateFromDiscriminatorValue); } },
                 { "time_closed", n => { TimeClosed = n.GetDateTimeOffsetValue(); } },

@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("purchase_url") is { } nullNodePurchaseUrl && nullNodePurchaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUrl = null;
-            if (parseNode.GetChildNode("service_started") is { } nullNodeServiceStarted && nullNodeServiceStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceStarted = null;
-            if (parseNode.GetChildNode("sub_reasons") is { } nullNodeSubReasons && nullNodeSubReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubReasons = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("purchase_url") is null) { _explicitNullValuePurchaseUrl = default!; _explicitNullProperties?.Remove("purchase_url"); }
+            else if (parseNode.GetChildNode("purchase_url") is { } nullNodePurchaseUrl && nullNodePurchaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUrl = null;
+            if (parseNode.GetChildNode("service_started") is null) { _explicitNullValueServiceStarted = default!; _explicitNullProperties?.Remove("service_started"); }
+            else if (parseNode.GetChildNode("service_started") is { } nullNodeServiceStarted && nullNodeServiceStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceStarted = null;
+            if (parseNode.GetChildNode("sub_reasons") is null) { _explicitNullValueSubReasons = default!; _explicitNullProperties?.Remove("sub_reasons"); }
+            else if (parseNode.GetChildNode("sub_reasons") is { } nullNodeSubReasons && nullNodeSubReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubReasons = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,44 +35,44 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The service description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The customer specified note about the service usage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The URL of the merchant or marketplace site where the customer purchased the service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseUrl { get => _explicitNullValuePurchaseUrl; set { _explicitNullValuePurchaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_url"); else _explicitNullProperties?.Remove("purchase_url"); } }
+        public string? PurchaseUrl { get => _explicitNullValuePurchaseUrl; set { _explicitNullValuePurchaseUrl = value; AdditionalData?.Remove("purchase_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_url"); else _explicitNullProperties?.Remove("purchase_url"); } }
         private string? _explicitNullValuePurchaseUrl = default!;
 #nullable restore
 #else
-        public string PurchaseUrl { get => _explicitNullValuePurchaseUrl; set { _explicitNullValuePurchaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_url"); else _explicitNullProperties?.Remove("purchase_url"); } }
+        public string PurchaseUrl { get => _explicitNullValuePurchaseUrl; set { _explicitNullValuePurchaseUrl = value; AdditionalData?.Remove("purchase_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_url"); else _explicitNullProperties?.Remove("purchase_url"); } }
         private string _explicitNullValuePurchaseUrl = default!;
 #endif
         /// <summary>Indicates whether the service was started or cancelled.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted? ServiceStarted { get => _explicitNullValueServiceStarted; set { _explicitNullValueServiceStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_started"); else _explicitNullProperties?.Remove("service_started"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted? ServiceStarted { get => _explicitNullValueServiceStarted; set { _explicitNullValueServiceStarted = value; AdditionalData?.Remove("service_started"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_started"); else _explicitNullProperties?.Remove("service_started"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted? _explicitNullValueServiceStarted = default!;
         /// <summary>An array of sub-reasons for the service issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?>? SubReasons { get => _explicitNullValueSubReasons; set { _explicitNullValueSubReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_reasons"); else _explicitNullProperties?.Remove("sub_reasons"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?>? SubReasons { get => _explicitNullValueSubReasons; set { _explicitNullValueSubReasons = value; AdditionalData?.Remove("sub_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_reasons"); else _explicitNullProperties?.Remove("sub_reasons"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?>? _explicitNullValueSubReasons = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?> SubReasons { get => _explicitNullValueSubReasons; set { _explicitNullValueSubReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_reasons"); else _explicitNullProperties?.Remove("sub_reasons"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?> SubReasons { get => _explicitNullValueSubReasons; set { _explicitNullValueSubReasons = value; AdditionalData?.Remove("sub_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_reasons"); else _explicitNullProperties?.Remove("sub_reasons"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons?> _explicitNullValueSubReasons = default!;
 #endif
         /// <summary>
@@ -98,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "purchase_url", n => { PurchaseUrl = n.GetStringValue(); } },
-                { "service_started", n => { ServiceStarted = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted>(); } },
+                { "service_started", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetailsServiceStarted>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueServiceStarted = default; _explicitNullProperties?.Remove("service_started"); AdditionalData["service_started"] = unknown; } else { ServiceStarted = parsed; AdditionalData.Remove("service_started"); } } },
                 { "sub_reasons", n => { SubReasons = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.DefinitionsSubReasons>()?.AsList(); } },
             };
         }

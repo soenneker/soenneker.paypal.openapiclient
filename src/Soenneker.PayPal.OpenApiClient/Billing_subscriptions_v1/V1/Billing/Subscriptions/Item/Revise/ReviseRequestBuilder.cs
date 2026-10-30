@@ -46,6 +46,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsRevise404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsRevise422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseResponse?> PostAsync(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,8 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsRevise404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsRevise422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,7 +86,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/billing_subscriptions_v1/v1/billing/subscriptions/{id}/revise", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -18,47 +18,51 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier_name") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
-            if (parseNode.GetChildNode("carrier_name_other") is { } nullNodeCarrierNameOther && nullNodeCarrierNameOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierNameOther = null;
-            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
-            if (parseNode.GetChildNode("tracking_url") is { } nullNodeTrackingUrl && nullNodeTrackingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrl = null;
+            if (parseNode.GetChildNode("carrier_name") is null) { _explicitNullValueCarrierName = default!; _explicitNullProperties?.Remove("carrier_name"); }
+            else if (parseNode.GetChildNode("carrier_name") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
+            if (parseNode.GetChildNode("carrier_name_other") is null) { _explicitNullValueCarrierNameOther = default!; _explicitNullProperties?.Remove("carrier_name_other"); }
+            else if (parseNode.GetChildNode("carrier_name_other") is { } nullNodeCarrierNameOther && nullNodeCarrierNameOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierNameOther = null;
+            if (parseNode.GetChildNode("tracking_number") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("tracking_number"); }
+            else if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("tracking_url") is null) { _explicitNullValueTrackingUrl = default!; _explicitNullProperties?.Remove("tracking_url"); }
+            else if (parseNode.GetChildNode("tracking_url") is { } nullNodeTrackingUrl && nullNodeTrackingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the shipment carrier for the transaction for this dispute.</summary>
 #nullable enable
-        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name"); else _explicitNullProperties?.Remove("carrier_name"); } }
+        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; AdditionalData?.Remove("carrier_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name"); else _explicitNullProperties?.Remove("carrier_name"); } }
         private string? _explicitNullValueCarrierName = default!;
 #nullable restore
         /// <summary>The name of carrier in free-form text for unavailable carriers. This field is mandatory when &lt;code&gt;carrier_name&lt;/code&gt; is &lt;code&gt;OTHER&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        public string? CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; AdditionalData?.Remove("carrier_name_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
         private string? _explicitNullValueCarrierNameOther = default!;
 #nullable restore
 #else
-        public string CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        public string CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; AdditionalData?.Remove("carrier_name_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
         private string _explicitNullValueCarrierNameOther = default!;
 #endif
         /// <summary>The number to track the dispute-related transaction shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>The URL to track the dispute-related transaction shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url"); else _explicitNullProperties?.Remove("tracking_url"); } }
+        public string? TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; AdditionalData?.Remove("tracking_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url"); else _explicitNullProperties?.Remove("tracking_url"); } }
         private string? _explicitNullValueTrackingUrl = default!;
 #nullable restore
 #else
-        public string TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url"); else _explicitNullProperties?.Remove("tracking_url"); } }
+        public string TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; AdditionalData?.Remove("tracking_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url"); else _explicitNullProperties?.Remove("tracking_url"); } }
         private string _explicitNullValueTrackingUrl = default!;
 #endif
         /// <summary>

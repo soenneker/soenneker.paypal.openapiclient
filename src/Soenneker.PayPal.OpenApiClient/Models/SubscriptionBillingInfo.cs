@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("final_payment_time") is { } nullNodeFinalPaymentTime && nullNodeFinalPaymentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalPaymentTime = null;
-            if (parseNode.GetChildNode("last_failed_payment") is { } nullNodeLastFailedPayment && nullNodeLastFailedPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFailedPayment = null;
-            if (parseNode.GetChildNode("last_payment") is { } nullNodeLastPayment && nullNodeLastPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastPayment = null;
-            if (parseNode.GetChildNode("next_billing_time") is { } nullNodeNextBillingTime && nullNodeNextBillingTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextBillingTime = null;
-            if (parseNode.GetChildNode("outstanding_balance") is { } nullNodeOutstandingBalance && nullNodeOutstandingBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutstandingBalance = null;
+            if (parseNode.GetChildNode("final_payment_time") is null) { _explicitNullValueFinalPaymentTime = default!; _explicitNullProperties?.Remove("final_payment_time"); }
+            else if (parseNode.GetChildNode("final_payment_time") is { } nullNodeFinalPaymentTime && nullNodeFinalPaymentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalPaymentTime = null;
+            if (parseNode.GetChildNode("last_failed_payment") is null) { _explicitNullValueLastFailedPayment = default!; _explicitNullProperties?.Remove("last_failed_payment"); }
+            else if (parseNode.GetChildNode("last_failed_payment") is { } nullNodeLastFailedPayment && nullNodeLastFailedPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFailedPayment = null;
+            if (parseNode.GetChildNode("last_payment") is null) { _explicitNullValueLastPayment = default!; _explicitNullProperties?.Remove("last_payment"); }
+            else if (parseNode.GetChildNode("last_payment") is { } nullNodeLastPayment && nullNodeLastPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastPayment = null;
+            if (parseNode.GetChildNode("next_billing_time") is null) { _explicitNullValueNextBillingTime = default!; _explicitNullProperties?.Remove("next_billing_time"); }
+            else if (parseNode.GetChildNode("next_billing_time") is { } nullNodeNextBillingTime && nullNodeNextBillingTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextBillingTime = null;
+            if (parseNode.GetChildNode("outstanding_balance") is null) { _explicitNullValueOutstandingBalance = default!; _explicitNullProperties?.Remove("outstanding_balance"); }
+            else if (parseNode.GetChildNode("outstanding_balance") is { } nullNodeOutstandingBalance && nullNodeOutstandingBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutstandingBalance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,51 +45,51 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalPaymentTime { get => _explicitNullValueFinalPaymentTime; set { _explicitNullValueFinalPaymentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_payment_time"); else _explicitNullProperties?.Remove("final_payment_time"); } }
+        public string? FinalPaymentTime { get => _explicitNullValueFinalPaymentTime; set { _explicitNullValueFinalPaymentTime = value; AdditionalData?.Remove("final_payment_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_payment_time"); else _explicitNullProperties?.Remove("final_payment_time"); } }
         private string? _explicitNullValueFinalPaymentTime = default!;
 #nullable restore
 #else
-        public string FinalPaymentTime { get => _explicitNullValueFinalPaymentTime; set { _explicitNullValueFinalPaymentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_payment_time"); else _explicitNullProperties?.Remove("final_payment_time"); } }
+        public string FinalPaymentTime { get => _explicitNullValueFinalPaymentTime; set { _explicitNullValueFinalPaymentTime = value; AdditionalData?.Remove("final_payment_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_payment_time"); else _explicitNullProperties?.Remove("final_payment_time"); } }
         private string _explicitNullValueFinalPaymentTime = default!;
 #endif
         /// <summary>The details for the failed payment of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails? LastFailedPayment { get => _explicitNullValueLastFailedPayment; set { _explicitNullValueLastFailedPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_failed_payment"); else _explicitNullProperties?.Remove("last_failed_payment"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails? LastFailedPayment { get => _explicitNullValueLastFailedPayment; set { _explicitNullValueLastFailedPayment = value; AdditionalData?.Remove("last_failed_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_failed_payment"); else _explicitNullProperties?.Remove("last_failed_payment"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails? _explicitNullValueLastFailedPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails LastFailedPayment { get => _explicitNullValueLastFailedPayment; set { _explicitNullValueLastFailedPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_failed_payment"); else _explicitNullProperties?.Remove("last_failed_payment"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails LastFailedPayment { get => _explicitNullValueLastFailedPayment; set { _explicitNullValueLastFailedPayment = value; AdditionalData?.Remove("last_failed_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_failed_payment"); else _explicitNullProperties?.Remove("last_failed_payment"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FailedPaymentDetails _explicitNullValueLastFailedPayment = default!;
 #endif
         /// <summary>The details for the last payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails? LastPayment { get => _explicitNullValueLastPayment; set { _explicitNullValueLastPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_payment"); else _explicitNullProperties?.Remove("last_payment"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails? LastPayment { get => _explicitNullValueLastPayment; set { _explicitNullValueLastPayment = value; AdditionalData?.Remove("last_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_payment"); else _explicitNullProperties?.Remove("last_payment"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails? _explicitNullValueLastPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails LastPayment { get => _explicitNullValueLastPayment; set { _explicitNullValueLastPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_payment"); else _explicitNullProperties?.Remove("last_payment"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails LastPayment { get => _explicitNullValueLastPayment; set { _explicitNullValueLastPayment = value; AdditionalData?.Remove("last_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_payment"); else _explicitNullProperties?.Remove("last_payment"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.LastPaymentDetails _explicitNullValueLastPayment = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextBillingTime { get => _explicitNullValueNextBillingTime; set { _explicitNullValueNextBillingTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_billing_time"); else _explicitNullProperties?.Remove("next_billing_time"); } }
+        public string? NextBillingTime { get => _explicitNullValueNextBillingTime; set { _explicitNullValueNextBillingTime = value; AdditionalData?.Remove("next_billing_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_billing_time"); else _explicitNullProperties?.Remove("next_billing_time"); } }
         private string? _explicitNullValueNextBillingTime = default!;
 #nullable restore
 #else
-        public string NextBillingTime { get => _explicitNullValueNextBillingTime; set { _explicitNullValueNextBillingTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_billing_time"); else _explicitNullProperties?.Remove("next_billing_time"); } }
+        public string NextBillingTime { get => _explicitNullValueNextBillingTime; set { _explicitNullValueNextBillingTime = value; AdditionalData?.Remove("next_billing_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_billing_time"); else _explicitNullProperties?.Remove("next_billing_time"); } }
         private string _explicitNullValueNextBillingTime = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money? OutstandingBalance { get => _explicitNullValueOutstandingBalance; set { _explicitNullValueOutstandingBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_balance"); else _explicitNullProperties?.Remove("outstanding_balance"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? OutstandingBalance { get => _explicitNullValueOutstandingBalance; set { _explicitNullValueOutstandingBalance = value; AdditionalData?.Remove("outstanding_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_balance"); else _explicitNullProperties?.Remove("outstanding_balance"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money? _explicitNullValueOutstandingBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money OutstandingBalance { get => _explicitNullValueOutstandingBalance; set { _explicitNullValueOutstandingBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_balance"); else _explicitNullProperties?.Remove("outstanding_balance"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money OutstandingBalance { get => _explicitNullValueOutstandingBalance; set { _explicitNullValueOutstandingBalance = value; AdditionalData?.Remove("outstanding_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_balance"); else _explicitNullProperties?.Remove("outstanding_balance"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money _explicitNullValueOutstandingBalance = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
-            if (parseNode.GetChildNode("return_url_description") is { } nullNodeReturnUrlDescription && nullNodeReturnUrlDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrlDescription = null;
-            if (parseNode.GetChildNode("show_add_credit_card") is { } nullNodeShowAddCreditCard && nullNodeShowAddCreditCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowAddCreditCard = null;
+            if (parseNode.GetChildNode("return_url") is null) { _explicitNullValueReturnUrl = default!; _explicitNullProperties?.Remove("return_url"); }
+            else if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("return_url_description") is null) { _explicitNullValueReturnUrlDescription = default!; _explicitNullProperties?.Remove("return_url_description"); }
+            else if (parseNode.GetChildNode("return_url_description") is { } nullNodeReturnUrlDescription && nullNodeReturnUrlDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrlDescription = null;
+            if (parseNode.GetChildNode("show_add_credit_card") is null) { _explicitNullValueShowAddCreditCard = default!; _explicitNullProperties?.Remove("show_add_credit_card"); }
+            else if (parseNode.GetChildNode("show_add_credit_card") is { } nullNodeShowAddCreditCard && nullNodeShowAddCreditCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowAddCreditCard = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The URL to which to redirect the customer upon completion of the onboarding process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>The description of the return URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrlDescription { get => _explicitNullValueReturnUrlDescription; set { _explicitNullValueReturnUrlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url_description"); else _explicitNullProperties?.Remove("return_url_description"); } }
+        public string? ReturnUrlDescription { get => _explicitNullValueReturnUrlDescription; set { _explicitNullValueReturnUrlDescription = value; AdditionalData?.Remove("return_url_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url_description"); else _explicitNullProperties?.Remove("return_url_description"); } }
         private string? _explicitNullValueReturnUrlDescription = default!;
 #nullable restore
 #else
-        public string ReturnUrlDescription { get => _explicitNullValueReturnUrlDescription; set { _explicitNullValueReturnUrlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url_description"); else _explicitNullProperties?.Remove("return_url_description"); } }
+        public string ReturnUrlDescription { get => _explicitNullValueReturnUrlDescription; set { _explicitNullValueReturnUrlDescription = value; AdditionalData?.Remove("return_url_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url_description"); else _explicitNullProperties?.Remove("return_url_description"); } }
         private string _explicitNullValueReturnUrlDescription = default!;
 #endif
         /// <summary>Indicates whether to show an add credit card page.</summary>
-        public bool? ShowAddCreditCard { get => _explicitNullValueShowAddCreditCard; set { _explicitNullValueShowAddCreditCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_add_credit_card"); else _explicitNullProperties?.Remove("show_add_credit_card"); } }
+        public bool? ShowAddCreditCard { get => _explicitNullValueShowAddCreditCard; set { _explicitNullValueShowAddCreditCard = value; AdditionalData?.Remove("show_add_credit_card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_add_credit_card"); else _explicitNullProperties?.Remove("show_add_credit_card"); } }
         private bool? _explicitNullValueShowAddCreditCard = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride"/> and sets the default values.

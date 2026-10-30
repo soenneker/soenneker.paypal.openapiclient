@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cobranded_cards") is { } nullNodeCobrandedCards && nullNodeCobrandedCards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CobrandedCards = null;
-            if (parseNode.GetChildNode("vault") is { } nullNodeVault && nullNodeVault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vault = null;
+            if (parseNode.GetChildNode("cobranded_cards") is null) { _explicitNullValueCobrandedCards = default!; _explicitNullProperties?.Remove("cobranded_cards"); }
+            else if (parseNode.GetChildNode("cobranded_cards") is { } nullNodeCobrandedCards && nullNodeCobrandedCards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CobrandedCards = null;
+            if (parseNode.GetChildNode("vault") is null) { _explicitNullValueVault = default!; _explicitNullProperties?.Remove("vault"); }
+            else if (parseNode.GetChildNode("vault") is { } nullNodeVault && nullNodeVault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vault = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of merchant cobranded cards used by buyer to complete an order. This array will be present if a merchant has onboarded their cobranded card with PayPal and provided corresponding label(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>? CobrandedCards { get => _explicitNullValueCobrandedCards; set { _explicitNullValueCobrandedCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cobranded_cards"); else _explicitNullProperties?.Remove("cobranded_cards"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>? CobrandedCards { get => _explicitNullValueCobrandedCards; set { _explicitNullValueCobrandedCards = value; AdditionalData?.Remove("cobranded_cards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cobranded_cards"); else _explicitNullProperties?.Remove("cobranded_cards"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem>? _explicitNullValueCobrandedCards = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem> CobrandedCards { get => _explicitNullValueCobrandedCards; set { _explicitNullValueCobrandedCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cobranded_cards"); else _explicitNullProperties?.Remove("cobranded_cards"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem> CobrandedCards { get => _explicitNullValueCobrandedCards; set { _explicitNullValueCobrandedCards = value; AdditionalData?.Remove("cobranded_cards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cobranded_cards"); else _explicitNullProperties?.Remove("cobranded_cards"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletAttributesResponseCobrandedCardsItem> _explicitNullValueCobrandedCards = default!;
 #endif
         /// <summary>The details about a saved PayPal Wallet payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse? Vault { get => _explicitNullValueVault; set { _explicitNullValueVault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault"); else _explicitNullProperties?.Remove("vault"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse? Vault { get => _explicitNullValueVault; set { _explicitNullValueVault = value; AdditionalData?.Remove("vault"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault"); else _explicitNullProperties?.Remove("vault"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse? _explicitNullValueVault = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse Vault { get => _explicitNullValueVault; set { _explicitNullValueVault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault"); else _explicitNullProperties?.Remove("vault"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse Vault { get => _explicitNullValueVault; set { _explicitNullValueVault = value; AdditionalData?.Remove("vault"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault"); else _explicitNullProperties?.Remove("vault"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletVaultResponse _explicitNullValueVault = default!;
 #endif
         /// <summary>

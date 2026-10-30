@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auction_buyer_id") is { } nullNodeAuctionBuyerId && nullNodeAuctionBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionBuyerId = null;
-            if (parseNode.GetChildNode("auction_closing_date") is { } nullNodeAuctionClosingDate && nullNodeAuctionClosingDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionClosingDate = null;
-            if (parseNode.GetChildNode("auction_item_site") is { } nullNodeAuctionItemSite && nullNodeAuctionItemSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionItemSite = null;
-            if (parseNode.GetChildNode("auction_site") is { } nullNodeAuctionSite && nullNodeAuctionSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionSite = null;
+            if (parseNode.GetChildNode("auction_buyer_id") is null) { _explicitNullValueAuctionBuyerId = default!; _explicitNullProperties?.Remove("auction_buyer_id"); }
+            else if (parseNode.GetChildNode("auction_buyer_id") is { } nullNodeAuctionBuyerId && nullNodeAuctionBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionBuyerId = null;
+            if (parseNode.GetChildNode("auction_closing_date") is null) { _explicitNullValueAuctionClosingDate = default!; _explicitNullProperties?.Remove("auction_closing_date"); }
+            else if (parseNode.GetChildNode("auction_closing_date") is { } nullNodeAuctionClosingDate && nullNodeAuctionClosingDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionClosingDate = null;
+            if (parseNode.GetChildNode("auction_item_site") is null) { _explicitNullValueAuctionItemSite = default!; _explicitNullProperties?.Remove("auction_item_site"); }
+            else if (parseNode.GetChildNode("auction_item_site") is { } nullNodeAuctionItemSite && nullNodeAuctionItemSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionItemSite = null;
+            if (parseNode.GetChildNode("auction_site") is null) { _explicitNullValueAuctionSite = default!; _explicitNullProperties?.Remove("auction_site"); }
+            else if (parseNode.GetChildNode("auction_site") is { } nullNodeAuctionSite && nullNodeAuctionSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionSite = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The ID of the buyer who makes the purchase in the auction. This ID might be different from the payer ID provided for the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
+        public string? AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; AdditionalData?.Remove("auction_buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
         private string? _explicitNullValueAuctionBuyerId = default!;
 #nullable restore
 #else
-        public string AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
+        public string AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; AdditionalData?.Remove("auction_buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
         private string _explicitNullValueAuctionBuyerId = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
+        public string? AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; AdditionalData?.Remove("auction_closing_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
         private string? _explicitNullValueAuctionClosingDate = default!;
 #nullable restore
 #else
-        public string AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
+        public string AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; AdditionalData?.Remove("auction_closing_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
         private string _explicitNullValueAuctionClosingDate = default!;
 #endif
         /// <summary>The auction site URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
+        public string? AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; AdditionalData?.Remove("auction_item_site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
         private string? _explicitNullValueAuctionItemSite = default!;
 #nullable restore
 #else
-        public string AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
+        public string AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; AdditionalData?.Remove("auction_item_site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
         private string _explicitNullValueAuctionItemSite = default!;
 #endif
         /// <summary>The name of the auction site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
+        public string? AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; AdditionalData?.Remove("auction_site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
         private string? _explicitNullValueAuctionSite = default!;
 #nullable restore
 #else
-        public string AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
+        public string AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; AdditionalData?.Remove("auction_site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
         private string _explicitNullValueAuctionSite = default!;
 #endif
         /// <summary>

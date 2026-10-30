@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
-            if (parseNode.GetChildNode("seller_nonce") is { } nullNodeSellerNonce && nullNodeSellerNonce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerNonce = null;
+            if (parseNode.GetChildNode("features") is null) { _explicitNullValueFeatures = default!; _explicitNullProperties?.Remove("features"); }
+            else if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("seller_nonce") is null) { _explicitNullValueSellerNonce = default!; _explicitNullProperties?.Remove("seller_nonce"); }
+            else if (parseNode.GetChildNode("seller_nonce") is { } nullNodeSellerNonce && nullNodeSellerNonce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerNonce = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of features that partner can access, or use, in PayPal on behalf of the seller. The seller grants permission for these features to the partner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> _explicitNullValueFeatures = default!;
 #endif
         /// <summary>S256 - The code verifier must be high-entropy cryptographic random string with a byte length of 43-128 range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SellerNonce { get => _explicitNullValueSellerNonce; set { _explicitNullValueSellerNonce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_nonce"); else _explicitNullProperties?.Remove("seller_nonce"); } }
+        public string? SellerNonce { get => _explicitNullValueSellerNonce; set { _explicitNullValueSellerNonce = value; AdditionalData?.Remove("seller_nonce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_nonce"); else _explicitNullProperties?.Remove("seller_nonce"); } }
         private string? _explicitNullValueSellerNonce = default!;
 #nullable restore
 #else
-        public string SellerNonce { get => _explicitNullValueSellerNonce; set { _explicitNullValueSellerNonce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_nonce"); else _explicitNullProperties?.Remove("seller_nonce"); } }
+        public string SellerNonce { get => _explicitNullValueSellerNonce; set { _explicitNullValueSellerNonce = value; AdditionalData?.Remove("seller_nonce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_nonce"); else _explicitNullProperties?.Remove("seller_nonce"); } }
         private string _explicitNullValueSellerNonce = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("source_currency") is { } nullNodeSourceCurrency && nullNodeSourceCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceCurrency = null;
-            if (parseNode.GetChildNode("target_currency") is { } nullNodeTargetCurrency && nullNodeTargetCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetCurrency = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("source_currency") is null) { _explicitNullValueSourceCurrency = default!; _explicitNullProperties?.Remove("source_currency"); }
+            else if (parseNode.GetChildNode("source_currency") is { } nullNodeSourceCurrency && nullNodeSourceCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceCurrency = null;
+            if (parseNode.GetChildNode("target_currency") is null) { _explicitNullValueTargetCurrency = default!; _explicitNullProperties?.Remove("target_currency"); }
+            else if (parseNode.GetChildNode("target_currency") is { } nullNodeTargetCurrency && nullNodeTargetCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetCurrency = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The [three-character ISO-4217 currency code](/api/rest/reference/currency-codes/) that identifies the currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceCurrency { get => _explicitNullValueSourceCurrency; set { _explicitNullValueSourceCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_currency"); else _explicitNullProperties?.Remove("source_currency"); } }
+        public string? SourceCurrency { get => _explicitNullValueSourceCurrency; set { _explicitNullValueSourceCurrency = value; AdditionalData?.Remove("source_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_currency"); else _explicitNullProperties?.Remove("source_currency"); } }
         private string? _explicitNullValueSourceCurrency = default!;
 #nullable restore
 #else
-        public string SourceCurrency { get => _explicitNullValueSourceCurrency; set { _explicitNullValueSourceCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_currency"); else _explicitNullProperties?.Remove("source_currency"); } }
+        public string SourceCurrency { get => _explicitNullValueSourceCurrency; set { _explicitNullValueSourceCurrency = value; AdditionalData?.Remove("source_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_currency"); else _explicitNullProperties?.Remove("source_currency"); } }
         private string _explicitNullValueSourceCurrency = default!;
 #endif
         /// <summary>The [three-character ISO-4217 currency code](/api/rest/reference/currency-codes/) that identifies the currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetCurrency { get => _explicitNullValueTargetCurrency; set { _explicitNullValueTargetCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_currency"); else _explicitNullProperties?.Remove("target_currency"); } }
+        public string? TargetCurrency { get => _explicitNullValueTargetCurrency; set { _explicitNullValueTargetCurrency = value; AdditionalData?.Remove("target_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_currency"); else _explicitNullProperties?.Remove("target_currency"); } }
         private string? _explicitNullValueTargetCurrency = default!;
 #nullable restore
 #else
-        public string TargetCurrency { get => _explicitNullValueTargetCurrency; set { _explicitNullValueTargetCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_currency"); else _explicitNullProperties?.Remove("target_currency"); } }
+        public string TargetCurrency { get => _explicitNullValueTargetCurrency; set { _explicitNullValueTargetCurrency = value; AdditionalData?.Remove("target_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_currency"); else _explicitNullProperties?.Remove("target_currency"); } }
         private string _explicitNullValueTargetCurrency = default!;
 #endif
         /// <summary>The target currency amount. Equivalent to one unit of the source currency. Formatted as integer or decimal value with one to 15 digits to the right of the decimal point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
         /// <summary>

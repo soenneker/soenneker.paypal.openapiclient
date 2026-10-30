@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mobile_web") is { } nullNodeMobileWeb && nullNodeMobileWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileWeb = null;
-            if (parseNode.GetChildNode("native_app") is { } nullNodeNativeApp && nullNodeNativeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeApp = null;
+            if (parseNode.GetChildNode("mobile_web") is null) { _explicitNullValueMobileWeb = default!; _explicitNullProperties?.Remove("mobile_web"); }
+            else if (parseNode.GetChildNode("mobile_web") is { } nullNodeMobileWeb && nullNodeMobileWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileWeb = null;
+            if (parseNode.GetChildNode("native_app") is null) { _explicitNullValueNativeApp = default!; _explicitNullProperties?.Remove("native_app"); }
+            else if (parseNode.GetChildNode("native_app") is { } nullNodeNativeApp && nullNodeNativeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeApp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Buyer&apos;s mobile web browser context to app switch to the PayPal consumer app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; AdditionalData?.Remove("mobile_web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? _explicitNullValueMobileWeb = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; AdditionalData?.Remove("mobile_web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext _explicitNullValueMobileWeb = default!;
 #endif
         /// <summary>Merchant provided, buyer&apos;s native app preferences to app switch to the PayPal consumer app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; AdditionalData?.Remove("native_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? _explicitNullValueNativeApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; AdditionalData?.Remove("native_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext _explicitNullValueNativeApp = default!;
 #endif
         /// <summary>

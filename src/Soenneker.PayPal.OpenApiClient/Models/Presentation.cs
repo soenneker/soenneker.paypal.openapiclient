@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
-            if (parseNode.GetChildNode("locale_code") is { } nullNodeLocaleCode && nullNodeLocaleCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocaleCode = null;
-            if (parseNode.GetChildNode("logo_image") is { } nullNodeLogoImage && nullNodeLogoImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoImage = null;
+            if (parseNode.GetChildNode("brand_name") is null) { _explicitNullValueBrandName = default!; _explicitNullProperties?.Remove("brand_name"); }
+            else if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
+            if (parseNode.GetChildNode("locale_code") is null) { _explicitNullValueLocaleCode = default!; _explicitNullProperties?.Remove("locale_code"); }
+            else if (parseNode.GetChildNode("locale_code") is { } nullNodeLocaleCode && nullNodeLocaleCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocaleCode = null;
+            if (parseNode.GetChildNode("logo_image") is null) { _explicitNullValueLogoImage = default!; _explicitNullProperties?.Remove("logo_image"); }
+            else if (parseNode.GetChildNode("logo_image") is { } nullNodeLogoImage && nullNodeLogoImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoImage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A label that overrides the business name in the PayPal account on the PayPal pages. Character length and limitations: 127 single-byte alphanumeric characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string? _explicitNullValueBrandName = default!;
 #nullable restore
 #else
-        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string _explicitNullValueBrandName = default!;
 #endif
         /// <summary>The locale of pages that the PayPal payment experience displays. A valid value is `AU`, `AT`, `BE`, `BR`, `CA`, `CH`, `CN`, `DE`, `ES`, `GB`, `FR`, `IT`, `NL`, `PL`, `PT`, `RU`, or `US`. A 5-character code is also valid for languages in these countries: `da_DK`, `he_IL`, `id_ID`, `ja_JP`, `no_NO`, `pt_BR`, `ru_RU`, `sv_SE`, `th_TH`, `zh_CN`, `zh_HK`, or `zh_TW`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocaleCode { get => _explicitNullValueLocaleCode; set { _explicitNullValueLocaleCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale_code"); else _explicitNullProperties?.Remove("locale_code"); } }
+        public string? LocaleCode { get => _explicitNullValueLocaleCode; set { _explicitNullValueLocaleCode = value; AdditionalData?.Remove("locale_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale_code"); else _explicitNullProperties?.Remove("locale_code"); } }
         private string? _explicitNullValueLocaleCode = default!;
 #nullable restore
 #else
-        public string LocaleCode { get => _explicitNullValueLocaleCode; set { _explicitNullValueLocaleCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale_code"); else _explicitNullProperties?.Remove("locale_code"); } }
+        public string LocaleCode { get => _explicitNullValueLocaleCode; set { _explicitNullValueLocaleCode = value; AdditionalData?.Remove("locale_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale_code"); else _explicitNullProperties?.Remove("locale_code"); } }
         private string _explicitNullValueLocaleCode = default!;
 #endif
         /// <summary>A URL to the logo image. A valid media type is `.gif`, `.jpg`, or `.png`. The image&apos;s maximum width is 190 pixels and maximum height is 60 pixels. PayPal crops images that are larger. PayPal places your logo image at the top of the cart review area. PayPal recommends that you store the image on a secure (HTTPS) server. Otherwise, web browsers display a message that checkout pages contain non-secure items. Character length and limitations: 127 single-byte alphanumeric characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogoImage { get => _explicitNullValueLogoImage; set { _explicitNullValueLogoImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_image"); else _explicitNullProperties?.Remove("logo_image"); } }
+        public string? LogoImage { get => _explicitNullValueLogoImage; set { _explicitNullValueLogoImage = value; AdditionalData?.Remove("logo_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_image"); else _explicitNullProperties?.Remove("logo_image"); } }
         private string? _explicitNullValueLogoImage = default!;
 #nullable restore
 #else
-        public string LogoImage { get => _explicitNullValueLogoImage; set { _explicitNullValueLogoImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_image"); else _explicitNullProperties?.Remove("logo_image"); } }
+        public string LogoImage { get => _explicitNullValueLogoImage; set { _explicitNullValueLogoImage = value; AdditionalData?.Remove("logo_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_image"); else _explicitNullProperties?.Remove("logo_image"); } }
         private string _explicitNullValueLogoImage = default!;
 #endif
         /// <summary>

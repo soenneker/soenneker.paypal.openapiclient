@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("given_name") is { } nullNodeGivenName && nullNodeGivenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GivenName = null;
-            if (parseNode.GetChildNode("surname") is { } nullNodeSurname && nullNodeSurname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Surname = null;
+            if (parseNode.GetChildNode("given_name") is null) { _explicitNullValueGivenName = default!; _explicitNullProperties?.Remove("given_name"); }
+            else if (parseNode.GetChildNode("given_name") is { } nullNodeGivenName && nullNodeGivenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GivenName = null;
+            if (parseNode.GetChildNode("surname") is null) { _explicitNullValueSurname = default!; _explicitNullProperties?.Remove("surname"); }
+            else if (parseNode.GetChildNode("surname") is { } nullNodeSurname && nullNodeSurname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Surname = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>When the party is a person, the party&apos;s given, or first, name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        public string? GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; AdditionalData?.Remove("given_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
         private string? _explicitNullValueGivenName = default!;
 #nullable restore
 #else
-        public string GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        public string GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; AdditionalData?.Remove("given_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
         private string _explicitNullValueGivenName = default!;
 #endif
         /// <summary>When the party is a person, the party&apos;s surname or family name. Also known as the last name. Required when the party is a person. Use also to store multiple surnames including the matronymic, or mother&apos;s, surname.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Surname { get => _explicitNullValueSurname; set { _explicitNullValueSurname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surname"); else _explicitNullProperties?.Remove("surname"); } }
+        public string? Surname { get => _explicitNullValueSurname; set { _explicitNullValueSurname = value; AdditionalData?.Remove("surname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surname"); else _explicitNullProperties?.Remove("surname"); } }
         private string? _explicitNullValueSurname = default!;
 #nullable restore
 #else
-        public string Surname { get => _explicitNullValueSurname; set { _explicitNullValueSurname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surname"); else _explicitNullProperties?.Remove("surname"); } }
+        public string Surname { get => _explicitNullValueSurname; set { _explicitNullValueSurname = value; AdditionalData?.Remove("surname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surname"); else _explicitNullProperties?.Remove("surname"); } }
         private string _explicitNullValueSurname = default!;
 #endif
         /// <summary>

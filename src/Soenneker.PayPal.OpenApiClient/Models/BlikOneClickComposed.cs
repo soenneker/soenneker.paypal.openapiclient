@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("consumer_reference") is { } nullNodeConsumerReference && nullNodeConsumerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumerReference = null;
+            if (parseNode.GetChildNode("consumer_reference") is null) { _explicitNullValueConsumerReference = default!; _explicitNullProperties?.Remove("consumer_reference"); }
+            else if (parseNode.GetChildNode("consumer_reference") is { } nullNodeConsumerReference && nullNodeConsumerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumerReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The merchant generated, unique reference serving as a primary identifier for accounts connected between Blik and a merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
+        public string? ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; AdditionalData?.Remove("consumer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
         private string? _explicitNullValueConsumerReference = default!;
 #nullable restore
 #else
-        public string ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
+        public string ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; AdditionalData?.Remove("consumer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
         private string _explicitNullValueConsumerReference = default!;
 #endif
         /// <summary>

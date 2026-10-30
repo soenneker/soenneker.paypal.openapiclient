@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_refund_amount") is { } nullNodeAllowedRefundAmount && nullNodeAllowedRefundAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedRefundAmount = null;
+            if (parseNode.GetChildNode("allowed_refund_amount") is null) { _explicitNullValueAllowedRefundAmount = default!; _explicitNullProperties?.Remove("allowed_refund_amount"); }
+            else if (parseNode.GetChildNode("allowed_refund_amount") is { } nullNodeAllowedRefundAmount && nullNodeAllowedRefundAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedRefundAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AllowedRefundAmount { get => _explicitNullValueAllowedRefundAmount; set { _explicitNullValueAllowedRefundAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_refund_amount"); else _explicitNullProperties?.Remove("allowed_refund_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AllowedRefundAmount { get => _explicitNullValueAllowedRefundAmount; set { _explicitNullValueAllowedRefundAmount = value; AdditionalData?.Remove("allowed_refund_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_refund_amount"); else _explicitNullProperties?.Remove("allowed_refund_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueAllowedRefundAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AllowedRefundAmount { get => _explicitNullValueAllowedRefundAmount; set { _explicitNullValueAllowedRefundAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_refund_amount"); else _explicitNullProperties?.Remove("allowed_refund_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AllowedRefundAmount { get => _explicitNullValueAllowedRefundAmount; set { _explicitNullValueAllowedRefundAmount = value; AdditionalData?.Remove("allowed_refund_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_refund_amount"); else _explicitNullProperties?.Remove("allowed_refund_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueAllowedRefundAmount = default!;
 #endif
         /// <summary>

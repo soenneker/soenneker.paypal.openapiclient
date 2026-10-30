@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
-            if (parseNode.GetChildNode("pricing_model") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
-            if (parseNode.GetChildNode("reload_threshold_amount") is { } nullNodeReloadThresholdAmount && nullNodeReloadThresholdAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReloadThresholdAmount = null;
+            if (parseNode.GetChildNode("price") is null) { _explicitNullValuePrice = default!; _explicitNullProperties?.Remove("price"); }
+            else if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("pricing_model") is null) { _explicitNullValuePricingModel = default!; _explicitNullProperties?.Remove("pricing_model"); }
+            else if (parseNode.GetChildNode("pricing_model") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
+            if (parseNode.GetChildNode("reload_threshold_amount") is null) { _explicitNullValueReloadThresholdAmount = default!; _explicitNullProperties?.Remove("reload_threshold_amount"); }
+            else if (parseNode.GetChildNode("reload_threshold_amount") is { } nullNodeReloadThresholdAmount && nullNodeReloadThresholdAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReloadThresholdAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,24 +31,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The price the customer will be charged based on the pricing model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice? _explicitNullValuePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice _explicitNullValuePrice = default!;
 #endif
         /// <summary>The pricing model for the billing cycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_model"); else _explicitNullProperties?.Remove("pricing_model"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; AdditionalData?.Remove("pricing_model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_model"); else _explicitNullProperties?.Remove("pricing_model"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePricingModel? _explicitNullValuePricingModel = default!;
         /// <summary>The threshold amount on which the reload charge would be triggered. This will be associated with the account-balance where if the account-balance goes below this amount then customer would incur reload charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount? ReloadThresholdAmount { get => _explicitNullValueReloadThresholdAmount; set { _explicitNullValueReloadThresholdAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reload_threshold_amount"); else _explicitNullProperties?.Remove("reload_threshold_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount? ReloadThresholdAmount { get => _explicitNullValueReloadThresholdAmount; set { _explicitNullValueReloadThresholdAmount = value; AdditionalData?.Remove("reload_threshold_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reload_threshold_amount"); else _explicitNullProperties?.Remove("reload_threshold_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount? _explicitNullValueReloadThresholdAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount ReloadThresholdAmount { get => _explicitNullValueReloadThresholdAmount; set { _explicitNullValueReloadThresholdAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reload_threshold_amount"); else _explicitNullProperties?.Remove("reload_threshold_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount ReloadThresholdAmount { get => _explicitNullValueReloadThresholdAmount; set { _explicitNullValueReloadThresholdAmount = value; AdditionalData?.Remove("reload_threshold_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reload_threshold_amount"); else _explicitNullProperties?.Remove("reload_threshold_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount _explicitNullValueReloadThresholdAmount = default!;
 #endif
         /// <summary>
@@ -74,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice>(global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePrice.CreateFromDiscriminatorValue); } },
-                { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePricingModel>(); } },
+                { "pricing_model", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PricingSchemePricingModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePricingModel = default; _explicitNullProperties?.Remove("pricing_model"); AdditionalData["pricing_model"] = unknown; } else { PricingModel = parsed; AdditionalData.Remove("pricing_model"); } } },
                 { "reload_threshold_amount", n => { ReloadThresholdAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemeReloadThresholdAmount.CreateFromDiscriminatorValue); } },
             };
         }

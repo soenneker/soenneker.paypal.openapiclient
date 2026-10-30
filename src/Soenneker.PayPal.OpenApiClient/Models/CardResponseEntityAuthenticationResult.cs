@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
+            if (parseNode.GetChildNode("three_d_secure") is null) { _explicitNullValueThreeDSecure = default!; _explicitNullProperties?.Remove("three_d_secure"); }
+            else if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Results of 3D Secure Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2 ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2 ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2 _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>

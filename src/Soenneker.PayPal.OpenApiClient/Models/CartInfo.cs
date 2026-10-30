@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("item_details") is { } nullNodeItemDetails && nullNodeItemDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDetails = null;
-            if (parseNode.GetChildNode("paypal_invoice_id") is { } nullNodePaypalInvoiceId && nullNodePaypalInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalInvoiceId = null;
-            if (parseNode.GetChildNode("tax_inclusive") is { } nullNodeTaxInclusive && nullNodeTaxInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInclusive = null;
+            if (parseNode.GetChildNode("item_details") is null) { _explicitNullValueItemDetails = default!; _explicitNullProperties?.Remove("item_details"); }
+            else if (parseNode.GetChildNode("item_details") is { } nullNodeItemDetails && nullNodeItemDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDetails = null;
+            if (parseNode.GetChildNode("paypal_invoice_id") is null) { _explicitNullValuePaypalInvoiceId = default!; _explicitNullProperties?.Remove("paypal_invoice_id"); }
+            else if (parseNode.GetChildNode("paypal_invoice_id") is { } nullNodePaypalInvoiceId && nullNodePaypalInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalInvoiceId = null;
+            if (parseNode.GetChildNode("tax_inclusive") is null) { _explicitNullValueTaxInclusive = default!; _explicitNullProperties?.Remove("tax_inclusive"); }
+            else if (parseNode.GetChildNode("tax_inclusive") is { } nullNodeTaxInclusive && nullNodeTaxInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInclusive = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of item details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail>? ItemDetails { get => _explicitNullValueItemDetails; set { _explicitNullValueItemDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_details"); else _explicitNullProperties?.Remove("item_details"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail>? ItemDetails { get => _explicitNullValueItemDetails; set { _explicitNullValueItemDetails = value; AdditionalData?.Remove("item_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_details"); else _explicitNullProperties?.Remove("item_details"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail>? _explicitNullValueItemDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail> ItemDetails { get => _explicitNullValueItemDetails; set { _explicitNullValueItemDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_details"); else _explicitNullProperties?.Remove("item_details"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail> ItemDetails { get => _explicitNullValueItemDetails; set { _explicitNullValueItemDetails = value; AdditionalData?.Remove("item_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_details"); else _explicitNullProperties?.Remove("item_details"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.ItemDetail> _explicitNullValueItemDetails = default!;
 #endif
         /// <summary>The ID of the invoice. Appears for only PayPal-generated invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaypalInvoiceId { get => _explicitNullValuePaypalInvoiceId; set { _explicitNullValuePaypalInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_invoice_id"); else _explicitNullProperties?.Remove("paypal_invoice_id"); } }
+        public string? PaypalInvoiceId { get => _explicitNullValuePaypalInvoiceId; set { _explicitNullValuePaypalInvoiceId = value; AdditionalData?.Remove("paypal_invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_invoice_id"); else _explicitNullProperties?.Remove("paypal_invoice_id"); } }
         private string? _explicitNullValuePaypalInvoiceId = default!;
 #nullable restore
 #else
-        public string PaypalInvoiceId { get => _explicitNullValuePaypalInvoiceId; set { _explicitNullValuePaypalInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_invoice_id"); else _explicitNullProperties?.Remove("paypal_invoice_id"); } }
+        public string PaypalInvoiceId { get => _explicitNullValuePaypalInvoiceId; set { _explicitNullValuePaypalInvoiceId = value; AdditionalData?.Remove("paypal_invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_invoice_id"); else _explicitNullProperties?.Remove("paypal_invoice_id"); } }
         private string _explicitNullValuePaypalInvoiceId = default!;
 #endif
         /// <summary>Indicates whether the item amount or the shipping amount already includes tax.</summary>
-        public bool? TaxInclusive { get => _explicitNullValueTaxInclusive; set { _explicitNullValueTaxInclusive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_inclusive"); else _explicitNullProperties?.Remove("tax_inclusive"); } }
+        public bool? TaxInclusive { get => _explicitNullValueTaxInclusive; set { _explicitNullValueTaxInclusive = value; AdditionalData?.Remove("tax_inclusive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_inclusive"); else _explicitNullProperties?.Remove("tax_inclusive"); } }
         private bool? _explicitNullValueTaxInclusive = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CartInfo"/> and sets the default values.

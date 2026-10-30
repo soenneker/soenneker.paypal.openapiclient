@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("webhooks_lookups") is { } nullNodeWebhooksLookups && nullNodeWebhooksLookups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksLookups = null;
+            if (parseNode.GetChildNode("webhooks_lookups") is null) { _explicitNullValueWebhooksLookups = default!; _explicitNullProperties?.Remove("webhooks_lookups"); }
+            else if (parseNode.GetChildNode("webhooks_lookups") is { } nullNodeWebhooksLookups && nullNodeWebhooksLookups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksLookups = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of webhook lookups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>? WebhooksLookups { get => _explicitNullValueWebhooksLookups; set { _explicitNullValueWebhooksLookups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_lookups"); else _explicitNullProperties?.Remove("webhooks_lookups"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>? WebhooksLookups { get => _explicitNullValueWebhooksLookups; set { _explicitNullValueWebhooksLookups = value; AdditionalData?.Remove("webhooks_lookups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_lookups"); else _explicitNullProperties?.Remove("webhooks_lookups"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup>? _explicitNullValueWebhooksLookups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup> WebhooksLookups { get => _explicitNullValueWebhooksLookups; set { _explicitNullValueWebhooksLookups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_lookups"); else _explicitNullProperties?.Remove("webhooks_lookups"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup> WebhooksLookups { get => _explicitNullValueWebhooksLookups; set { _explicitNullValueWebhooksLookups = value; AdditionalData?.Remove("webhooks_lookups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_lookups"); else _explicitNullProperties?.Remove("webhooks_lookups"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.WebhooksLookup> _explicitNullValueWebhooksLookups = default!;
 #endif
         /// <summary>

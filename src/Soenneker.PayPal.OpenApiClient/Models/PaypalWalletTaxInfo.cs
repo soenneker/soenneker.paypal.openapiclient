@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
-            if (parseNode.GetChildNode("tax_id_type") is { } nullNodeTaxIdType && nullNodeTaxIdType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdType = null;
+            if (parseNode.GetChildNode("tax_id") is null) { _explicitNullValueTaxId = default!; _explicitNullProperties?.Remove("tax_id"); }
+            else if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
+            if (parseNode.GetChildNode("tax_id_type") is null) { _explicitNullValueTaxIdType = default!; _explicitNullProperties?.Remove("tax_id_type"); }
+            else if (parseNode.GetChildNode("tax_id_type") is { } nullNodeTaxIdType && nullNodeTaxIdType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The customer&apos;s tax ID value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        public string? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; AdditionalData?.Remove("tax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
         private string? _explicitNullValueTaxId = default!;
 #nullable restore
 #else
-        public string TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        public string TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; AdditionalData?.Remove("tax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
         private string _explicitNullValueTaxId = default!;
 #endif
         /// <summary>The customer&apos;s tax ID type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.TaxInfoTaxIdType? TaxIdType { get => _explicitNullValueTaxIdType; set { _explicitNullValueTaxIdType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_type"); else _explicitNullProperties?.Remove("tax_id_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TaxInfoTaxIdType? TaxIdType { get => _explicitNullValueTaxIdType; set { _explicitNullValueTaxIdType = value; AdditionalData?.Remove("tax_id_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_type"); else _explicitNullProperties?.Remove("tax_id_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TaxInfoTaxIdType? _explicitNullValueTaxIdType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletTaxInfo"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "tax_id", n => { TaxId = n.GetStringValue(); } },
-                { "tax_id_type", n => { TaxIdType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TaxInfoTaxIdType>(); } },
+                { "tax_id_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.TaxInfoTaxIdType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxIdType = default; _explicitNullProperties?.Remove("tax_id_type"); AdditionalData["tax_id_type"] = unknown; } else { TaxIdType = parsed; AdditionalData.Remove("tax_id_type"); } } },
             };
         }
         /// <summary>

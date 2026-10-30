@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
-            if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
-            if (parseNode.GetChildNode("signup_mode") is { } nullNodeSignupMode && nullNodeSignupMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupMode = null;
+            if (parseNode.GetChildNode("features") is null) { _explicitNullValueFeatures = default!; _explicitNullProperties?.Remove("features"); }
+            else if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("organization") is null) { _explicitNullValueOrganization = default!; _explicitNullProperties?.Remove("organization"); }
+            else if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
+            if (parseNode.GetChildNode("signup_mode") is null) { _explicitNullValueSignupMode = default!; _explicitNullProperties?.Remove("signup_mode"); }
+            else if (parseNode.GetChildNode("signup_mode") is { } nullNodeSignupMode && nullNodeSignupMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of features that partner can access, or use, in PayPal on behalf of the seller. The seller grants permission for these features to the partner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?>? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum?> _explicitNullValueFeatures = default!;
 #endif
         /// <summary>The organization to which the account will belong in the partner’s hierarchy, as a path.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        public string? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; AdditionalData?.Remove("organization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
         private string? _explicitNullValueOrganization = default!;
 #nullable restore
 #else
-        public string Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        public string Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; AdditionalData?.Remove("organization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
         private string _explicitNullValueOrganization = default!;
 #endif
         /// <summary>Signup Mode to be used for sellers for third party integration.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.SignupMode? SignupMode { get => _explicitNullValueSignupMode; set { _explicitNullValueSignupMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_mode"); else _explicitNullProperties?.Remove("signup_mode"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SignupMode? SignupMode { get => _explicitNullValueSignupMode; set { _explicitNullValueSignupMode = value; AdditionalData?.Remove("signup_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_mode"); else _explicitNullProperties?.Remove("signup_mode"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.SignupMode? _explicitNullValueSignupMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "features", n => { Features = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.RestEndpointFeaturesEnum>()?.AsList(); } },
                 { "organization", n => { Organization = n.GetStringValue(); } },
-                { "signup_mode", n => { SignupMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SignupMode>(); } },
+                { "signup_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.SignupMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSignupMode = default; _explicitNullProperties?.Remove("signup_mode"); AdditionalData["signup_mode"] = unknown; } else { SignupMode = parsed; AdditionalData.Remove("signup_mode"); } } },
             };
         }
         /// <summary>

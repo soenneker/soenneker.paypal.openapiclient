@@ -18,23 +18,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_partial_payment") is { } nullNodeAllowPartialPayment && nullNodeAllowPartialPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPartialPayment = null;
-            if (parseNode.GetChildNode("minimum_amount_due") is { } nullNodeMinimumAmountDue && nullNodeMinimumAmountDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmountDue = null;
+            if (parseNode.GetChildNode("allow_partial_payment") is null) { _explicitNullValueAllowPartialPayment = default!; _explicitNullProperties?.Remove("allow_partial_payment"); }
+            else if (parseNode.GetChildNode("allow_partial_payment") is { } nullNodeAllowPartialPayment && nullNodeAllowPartialPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPartialPayment = null;
+            if (parseNode.GetChildNode("minimum_amount_due") is null) { _explicitNullValueMinimumAmountDue = default!; _explicitNullProperties?.Remove("minimum_amount_due"); }
+            else if (parseNode.GetChildNode("minimum_amount_due") is { } nullNodeMinimumAmountDue && nullNodeMinimumAmountDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmountDue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the invoice allows a partial payment. If `false`, the invoice must be paid in full. If `true`, the invoice allows partial payments.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature is not available for users in `India`, `Brazil`, or `Israel`.&lt;/blockquote&gt;</summary>
-        public bool? AllowPartialPayment { get => _explicitNullValueAllowPartialPayment; set { _explicitNullValueAllowPartialPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_partial_payment"); else _explicitNullProperties?.Remove("allow_partial_payment"); } }
+        public bool? AllowPartialPayment { get => _explicitNullValueAllowPartialPayment; set { _explicitNullValueAllowPartialPayment = value; AdditionalData?.Remove("allow_partial_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_partial_payment"); else _explicitNullProperties?.Remove("allow_partial_payment"); } }
         private bool? _explicitNullValueAllowPartialPayment = default!;
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? MinimumAmountDue { get => _explicitNullValueMinimumAmountDue; set { _explicitNullValueMinimumAmountDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_due"); else _explicitNullProperties?.Remove("minimum_amount_due"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? MinimumAmountDue { get => _explicitNullValueMinimumAmountDue; set { _explicitNullValueMinimumAmountDue = value; AdditionalData?.Remove("minimum_amount_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_due"); else _explicitNullProperties?.Remove("minimum_amount_due"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? _explicitNullValueMinimumAmountDue = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money MinimumAmountDue { get => _explicitNullValueMinimumAmountDue; set { _explicitNullValueMinimumAmountDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_due"); else _explicitNullProperties?.Remove("minimum_amount_due"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money MinimumAmountDue { get => _explicitNullValueMinimumAmountDue; set { _explicitNullValueMinimumAmountDue = value; AdditionalData?.Remove("minimum_amount_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_due"); else _explicitNullProperties?.Remove("minimum_amount_due"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValueMinimumAmountDue = default!;
 #endif
         /// <summary>

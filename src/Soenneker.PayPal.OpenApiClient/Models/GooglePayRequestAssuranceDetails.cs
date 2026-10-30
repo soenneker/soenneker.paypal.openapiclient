@@ -18,17 +18,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_verified") is { } nullNodeAccountVerified && nullNodeAccountVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountVerified = null;
-            if (parseNode.GetChildNode("card_holder_authenticated") is { } nullNodeCardHolderAuthenticated && nullNodeCardHolderAuthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardHolderAuthenticated = null;
+            if (parseNode.GetChildNode("account_verified") is null) { _explicitNullValueAccountVerified = default!; _explicitNullProperties?.Remove("account_verified"); }
+            else if (parseNode.GetChildNode("account_verified") is { } nullNodeAccountVerified && nullNodeAccountVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountVerified = null;
+            if (parseNode.GetChildNode("card_holder_authenticated") is null) { _explicitNullValueCardHolderAuthenticated = default!; _explicitNullProperties?.Remove("card_holder_authenticated"); }
+            else if (parseNode.GetChildNode("card_holder_authenticated") is { } nullNodeCardHolderAuthenticated && nullNodeCardHolderAuthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardHolderAuthenticated = null;
         }
 
         /// <summary>If true, indicates that Cardholder possession validation has been performed on returned payment credential.</summary>
-        public bool? AccountVerified { get => _explicitNullValueAccountVerified; set { _explicitNullValueAccountVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_verified"); else _explicitNullProperties?.Remove("account_verified"); } }
+        public bool? AccountVerified { get => _explicitNullValueAccountVerified; set { _explicitNullValueAccountVerified = value; AdditionalData?.Remove("account_verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_verified"); else _explicitNullProperties?.Remove("account_verified"); } }
         private bool? _explicitNullValueAccountVerified = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If true, indicates that identification and verifications (ID&amp;V) was performed on the returned payment credential.If false, the same risk-based authentication can be performed as you would for card transactions. This risk-based authentication can include, but not limited to, step-up with 3D Secure protocol if applicable.</summary>
-        public bool? CardHolderAuthenticated { get => _explicitNullValueCardHolderAuthenticated; set { _explicitNullValueCardHolderAuthenticated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_holder_authenticated"); else _explicitNullProperties?.Remove("card_holder_authenticated"); } }
+        public bool? CardHolderAuthenticated { get => _explicitNullValueCardHolderAuthenticated; set { _explicitNullValueCardHolderAuthenticated = value; AdditionalData?.Remove("card_holder_authenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_holder_authenticated"); else _explicitNullProperties?.Remove("card_holder_authenticated"); } }
         private bool? _explicitNullValueCardHolderAuthenticated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.GooglePayRequestAssuranceDetails"/> and sets the default values.

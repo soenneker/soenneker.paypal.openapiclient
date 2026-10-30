@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
-            if (parseNode.GetChildNode("shipping_preference") is { } nullNodeShippingPreference && nullNodeShippingPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingPreference = null;
-            if (parseNode.GetChildNode("vault_instruction") is { } nullNodeVaultInstruction && nullNodeVaultInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VaultInstruction = null;
+            if (parseNode.GetChildNode("brand_name") is null) { _explicitNullValueBrandName = default!; _explicitNullProperties?.Remove("brand_name"); }
+            else if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
+            if (parseNode.GetChildNode("shipping_preference") is null) { _explicitNullValueShippingPreference = default!; _explicitNullProperties?.Remove("shipping_preference"); }
+            else if (parseNode.GetChildNode("shipping_preference") is { } nullNodeShippingPreference && nullNodeShippingPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingPreference = null;
+            if (parseNode.GetChildNode("vault_instruction") is null) { _explicitNullValueVaultInstruction = default!; _explicitNullProperties?.Remove("vault_instruction"); }
+            else if (parseNode.GetChildNode("vault_instruction") is { } nullNodeVaultInstruction && nullNodeVaultInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VaultInstruction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,18 +31,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The label that overrides the business name in the PayPal account on the PayPal site. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string? _explicitNullValueBrandName = default!;
 #nullable restore
 #else
-        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string _explicitNullValueBrandName = default!;
 #endif
         /// <summary>The shipping preference. This only applies to PayPal payment source.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContextShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContextShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; AdditionalData?.Remove("shipping_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContextShippingPreference? _explicitNullValueShippingPreference = default!;
         /// <summary>Vault Instruction on action to be performed after a successful payer approval.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction? VaultInstruction { get => _explicitNullValueVaultInstruction; set { _explicitNullValueVaultInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_instruction"); else _explicitNullProperties?.Remove("vault_instruction"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction? VaultInstruction { get => _explicitNullValueVaultInstruction; set { _explicitNullValueVaultInstruction = value; AdditionalData?.Remove("vault_instruction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_instruction"); else _explicitNullProperties?.Remove("vault_instruction"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction? _explicitNullValueVaultInstruction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContext"/> and sets the default values.
@@ -67,8 +70,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "shipping_preference", n => { ShippingPreference = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContextShippingPreference>(); } },
-                { "vault_instruction", n => { VaultInstruction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction>(); } },
+                { "shipping_preference", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoRequestAllOf2ExperienceContextShippingPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueShippingPreference = default; _explicitNullProperties?.Remove("shipping_preference"); AdditionalData["shipping_preference"] = unknown; } else { ShippingPreference = parsed; AdditionalData.Remove("shipping_preference"); } } },
+                { "vault_instruction", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultInstruction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVaultInstruction = default; _explicitNullProperties?.Remove("vault_instruction"); AdditionalData["vault_instruction"] = unknown; } else { VaultInstruction = parsed; AdditionalData.Remove("vault_instruction"); } } },
             };
         }
         /// <summary>

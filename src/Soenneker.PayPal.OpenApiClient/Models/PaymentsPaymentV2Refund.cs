@@ -18,18 +18,20 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acquirer_reference_number") is { } nullNodeAcquirerReferenceNumber && nullNodeAcquirerReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerReferenceNumber = null;
-            if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
+            if (parseNode.GetChildNode("acquirer_reference_number") is null) { _explicitNullValueAcquirerReferenceNumber = default!; _explicitNullProperties?.Remove("acquirer_reference_number"); }
+            else if (parseNode.GetChildNode("acquirer_reference_number") is { } nullNodeAcquirerReferenceNumber && nullNodeAcquirerReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerReferenceNumber = null;
+            if (parseNode.GetChildNode("custom_id") is null) { _explicitNullValueCustomId = default!; _explicitNullProperties?.Remove("custom_id"); }
+            else if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
         }
 
         /// <summary>Reference ID issued for the card transaction. This ID can be used to track the transaction across processors, card brands and issuing banks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquirerReferenceNumber { get => _explicitNullValueAcquirerReferenceNumber; set { _explicitNullValueAcquirerReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_reference_number"); else _explicitNullProperties?.Remove("acquirer_reference_number"); } }
+        public string? AcquirerReferenceNumber { get => _explicitNullValueAcquirerReferenceNumber; set { _explicitNullValueAcquirerReferenceNumber = value; AdditionalData?.Remove("acquirer_reference_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_reference_number"); else _explicitNullProperties?.Remove("acquirer_reference_number"); } }
         private string? _explicitNullValueAcquirerReferenceNumber = default!;
 #nullable restore
 #else
-        public string AcquirerReferenceNumber { get => _explicitNullValueAcquirerReferenceNumber; set { _explicitNullValueAcquirerReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_reference_number"); else _explicitNullProperties?.Remove("acquirer_reference_number"); } }
+        public string AcquirerReferenceNumber { get => _explicitNullValueAcquirerReferenceNumber; set { _explicitNullValueAcquirerReferenceNumber = value; AdditionalData?.Remove("acquirer_reference_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_reference_number"); else _explicitNullProperties?.Remove("acquirer_reference_number"); } }
         private string _explicitNullValueAcquirerReferenceNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -53,11 +55,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string? _explicitNullValueCustomId = default!;
 #nullable restore
 #else
-        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string _explicitNullValueCustomId = default!;
 #endif
         /// <summary>The PayPal-generated ID for the refund.</summary>

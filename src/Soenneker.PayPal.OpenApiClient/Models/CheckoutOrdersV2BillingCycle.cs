@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pricing_scheme") is { } nullNodePricingScheme && nullNodePricingScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingScheme = null;
-            if (parseNode.GetChildNode("sequence") is { } nullNodeSequence && nullNodeSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sequence = null;
-            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
-            if (parseNode.GetChildNode("tenure_type") is { } nullNodeTenureType && nullNodeTenureType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TenureType = null;
-            if (parseNode.GetChildNode("total_cycles") is { } nullNodeTotalCycles && nullNodeTotalCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCycles = null;
+            if (parseNode.GetChildNode("pricing_scheme") is null) { _explicitNullValuePricingScheme = default!; _explicitNullProperties?.Remove("pricing_scheme"); }
+            else if (parseNode.GetChildNode("pricing_scheme") is { } nullNodePricingScheme && nullNodePricingScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingScheme = null;
+            if (parseNode.GetChildNode("sequence") is null) { _explicitNullValueSequence = default!; _explicitNullProperties?.Remove("sequence"); }
+            else if (parseNode.GetChildNode("sequence") is { } nullNodeSequence && nullNodeSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sequence = null;
+            if (parseNode.GetChildNode("start_date") is null) { _explicitNullValueStartDate = default!; _explicitNullProperties?.Remove("start_date"); }
+            else if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("tenure_type") is null) { _explicitNullValueTenureType = default!; _explicitNullProperties?.Remove("tenure_type"); }
+            else if (parseNode.GetChildNode("tenure_type") is { } nullNodeTenureType && nullNodeTenureType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TenureType = null;
+            if (parseNode.GetChildNode("total_cycles") is null) { _explicitNullValueTotalCycles = default!; _explicitNullProperties?.Remove("total_cycles"); }
+            else if (parseNode.GetChildNode("total_cycles") is { } nullNodeTotalCycles && nullNodeTotalCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCycles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,31 +35,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The active pricing scheme for this billing cycle. A free trial billing cycle does not require a pricing scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme? PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme? PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; AdditionalData?.Remove("pricing_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme? _explicitNullValuePricingScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; AdditionalData?.Remove("pricing_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme _explicitNullValuePricingScheme = default!;
 #endif
         /// <summary>The order in which this cycle is to run among other billing cycles. For example, a trial billing cycle has a `sequence` of `1` while a regular billing cycle has a `sequence` of `2`, so that trial cycle runs before the regular cycle.</summary>
-        public int? Sequence { get => _explicitNullValueSequence; set { _explicitNullValueSequence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence"); else _explicitNullProperties?.Remove("sequence"); } }
+        public int? Sequence { get => _explicitNullValueSequence; set { _explicitNullValueSequence = value; AdditionalData?.Remove("sequence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence"); else _explicitNullProperties?.Remove("sequence"); } }
         private int? _explicitNullValueSequence = default!;
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
         private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
         private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>The tenure type of the billing cycle identifies if the billing cycle is a trial(free or discounted) or regular billing cycle.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType? TenureType { get => _explicitNullValueTenureType; set { _explicitNullValueTenureType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tenure_type"); else _explicitNullProperties?.Remove("tenure_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType? TenureType { get => _explicitNullValueTenureType; set { _explicitNullValueTenureType = value; AdditionalData?.Remove("tenure_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tenure_type"); else _explicitNullProperties?.Remove("tenure_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType? _explicitNullValueTenureType = default!;
         /// <summary>The number of times this billing cycle gets executed. Trial billing cycles can only be executed a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;). Regular billing cycles can be executed infinite times (value of &lt;code&gt;0&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;) or a finite number of times (value between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;999&lt;/code&gt; for &lt;code&gt;total_cycles&lt;/code&gt;).</summary>
-        public int? TotalCycles { get => _explicitNullValueTotalCycles; set { _explicitNullValueTotalCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_cycles"); else _explicitNullProperties?.Remove("total_cycles"); } }
+        public int? TotalCycles { get => _explicitNullValueTotalCycles; set { _explicitNullValueTotalCycles = value; AdditionalData?.Remove("total_cycles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_cycles"); else _explicitNullProperties?.Remove("total_cycles"); } }
         private int? _explicitNullValueTotalCycles = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycle"/> and sets the default values.
@@ -86,7 +91,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.BillingCyclePricingScheme.CreateFromDiscriminatorValue); } },
                 { "sequence", n => { Sequence = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
-                { "tenure_type", n => { TenureType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType>(); } },
+                { "tenure_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2BillingCycleTenureType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTenureType = default; _explicitNullProperties?.Remove("tenure_type"); AdditionalData["tenure_type"] = unknown; } else { TenureType = parsed; AdditionalData.Remove("tenure_type"); } } },
                 { "total_cycles", n => { TotalCycles = n.GetIntValue(); } },
             };
         }

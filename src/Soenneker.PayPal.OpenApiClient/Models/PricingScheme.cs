@@ -18,11 +18,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("fixed_price") is { } nullNodeFixedPrice && nullNodeFixedPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedPrice = null;
-            if (parseNode.GetChildNode("pricing_model") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
-            if (parseNode.GetChildNode("tiers") is { } nullNodeTiers && nullNodeTiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tiers = null;
-            if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+            if (parseNode.GetChildNode("create_time") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("create_time"); }
+            else if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("fixed_price") is null) { _explicitNullValueFixedPrice = default!; _explicitNullProperties?.Remove("fixed_price"); }
+            else if (parseNode.GetChildNode("fixed_price") is { } nullNodeFixedPrice && nullNodeFixedPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedPrice = null;
+            if (parseNode.GetChildNode("pricing_model") is null) { _explicitNullValuePricingModel = default!; _explicitNullProperties?.Remove("pricing_model"); }
+            else if (parseNode.GetChildNode("pricing_model") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
+            if (parseNode.GetChildNode("tiers") is null) { _explicitNullValueTiers = default!; _explicitNullProperties?.Remove("tiers"); }
+            else if (parseNode.GetChildNode("tiers") is { } nullNodeTiers && nullNodeTiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tiers = null;
+            if (parseNode.GetChildNode("update_time") is null) { _explicitNullValueUpdateTime = default!; _explicitNullProperties?.Remove("update_time"); }
+            else if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,44 +35,44 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string? _explicitNullValueCreateTime = default!;
 #nullable restore
 #else
-        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string _explicitNullValueCreateTime = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money? FixedPrice { get => _explicitNullValueFixedPrice; set { _explicitNullValueFixedPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_price"); else _explicitNullProperties?.Remove("fixed_price"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? FixedPrice { get => _explicitNullValueFixedPrice; set { _explicitNullValueFixedPrice = value; AdditionalData?.Remove("fixed_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_price"); else _explicitNullProperties?.Remove("fixed_price"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money? _explicitNullValueFixedPrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money FixedPrice { get => _explicitNullValueFixedPrice; set { _explicitNullValueFixedPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_price"); else _explicitNullProperties?.Remove("fixed_price"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money FixedPrice { get => _explicitNullValueFixedPrice; set { _explicitNullValueFixedPrice = value; AdditionalData?.Remove("fixed_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_price"); else _explicitNullProperties?.Remove("fixed_price"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money _explicitNullValueFixedPrice = default!;
 #endif
         /// <summary>The pricing model for tiered plan. The `tiers` parameter is required.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_model"); else _explicitNullProperties?.Remove("pricing_model"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; AdditionalData?.Remove("pricing_model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_model"); else _explicitNullProperties?.Remove("pricing_model"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePricingModel? _explicitNullValuePricingModel = default!;
         /// <summary>An array of pricing tiers which are used for billing volume/tiered plans. pricing_model field has to be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>? Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>? Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; AdditionalData?.Remove("tiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>? _explicitNullValueTiers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier> Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier> Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; AdditionalData?.Remove("tiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier> _explicitNullValueTiers = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        public string? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
         private string? _explicitNullValueUpdateTime = default!;
 #nullable restore
 #else
-        public string UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        public string UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
         private string _explicitNullValueUpdateTime = default!;
 #endif
         /// <summary>The version of the pricing scheme.</summary>
@@ -99,7 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "fixed_price", n => { FixedPrice = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
-                { "pricing_model", n => { PricingModel = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePricingModel>(); } },
+                { "pricing_model", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingSchemePricingModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePricingModel = default; _explicitNullProperties?.Remove("pricing_model"); AdditionalData["pricing_model"] = unknown; } else { PricingModel = parsed; AdditionalData.Remove("pricing_model"); } } },
                 { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PricingTier>(global::Soenneker.PayPal.OpenApiClient.Models.PricingTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetIntValue(); } },

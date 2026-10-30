@@ -18,23 +18,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("liability_shift") is { } nullNodeLiabilityShift && nullNodeLiabilityShift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiabilityShift = null;
-            if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
+            if (parseNode.GetChildNode("liability_shift") is null) { _explicitNullValueLiabilityShift = default!; _explicitNullProperties?.Remove("liability_shift"); }
+            else if (parseNode.GetChildNode("liability_shift") is { } nullNodeLiabilityShift && nullNodeLiabilityShift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiabilityShift = null;
+            if (parseNode.GetChildNode("three_d_secure") is null) { _explicitNullValueThreeDSecure = default!; _explicitNullProperties?.Remove("three_d_secure"); }
+            else if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Liability shift indicator. The outcome of the issuer&apos;s authentication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LiabilityShift? LiabilityShift { get => _explicitNullValueLiabilityShift; set { _explicitNullValueLiabilityShift = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability_shift"); else _explicitNullProperties?.Remove("liability_shift"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LiabilityShift? LiabilityShift { get => _explicitNullValueLiabilityShift; set { _explicitNullValueLiabilityShift = value; AdditionalData?.Remove("liability_shift"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability_shift"); else _explicitNullProperties?.Remove("liability_shift"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LiabilityShift? _explicitNullValueLiabilityShift = default!;
         /// <summary>Results of 3D Secure Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "liability_shift", n => { LiabilityShift = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LiabilityShift>(); } },
+                { "liability_shift", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2LiabilityShift>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLiabilityShift = default; _explicitNullProperties?.Remove("liability_shift"); AdditionalData["liability_shift"] = unknown; } else { LiabilityShift = parsed; AdditionalData.Remove("liability_shift"); } } },
                 { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2ThreeDSecureAuthenticationResponse.CreateFromDiscriminatorValue); } },
             };
         }

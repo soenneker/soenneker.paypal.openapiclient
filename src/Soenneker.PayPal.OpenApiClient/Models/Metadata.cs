@@ -18,12 +18,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancel_time") is { } nullNodeCancelTime && nullNodeCancelTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelTime = null;
-            if (parseNode.GetChildNode("created_by_flow") is { } nullNodeCreatedByFlow && nullNodeCreatedByFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByFlow = null;
-            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("first_sent_time") is { } nullNodeFirstSentTime && nullNodeFirstSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstSentTime = null;
-            if (parseNode.GetChildNode("last_sent_time") is { } nullNodeLastSentTime && nullNodeLastSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSentTime = null;
-            if (parseNode.GetChildNode("last_update_time") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
+            if (parseNode.GetChildNode("cancel_time") is null) { _explicitNullValueCancelTime = default!; _explicitNullProperties?.Remove("cancel_time"); }
+            else if (parseNode.GetChildNode("cancel_time") is { } nullNodeCancelTime && nullNodeCancelTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelTime = null;
+            if (parseNode.GetChildNode("created_by_flow") is null) { _explicitNullValueCreatedByFlow = default!; _explicitNullProperties?.Remove("created_by_flow"); }
+            else if (parseNode.GetChildNode("created_by_flow") is { } nullNodeCreatedByFlow && nullNodeCreatedByFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByFlow = null;
+            if (parseNode.GetChildNode("create_time") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("create_time"); }
+            else if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("first_sent_time") is null) { _explicitNullValueFirstSentTime = default!; _explicitNullProperties?.Remove("first_sent_time"); }
+            else if (parseNode.GetChildNode("first_sent_time") is { } nullNodeFirstSentTime && nullNodeFirstSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstSentTime = null;
+            if (parseNode.GetChildNode("last_sent_time") is null) { _explicitNullValueLastSentTime = default!; _explicitNullProperties?.Remove("last_sent_time"); }
+            else if (parseNode.GetChildNode("last_sent_time") is { } nullNodeLastSentTime && nullNodeLastSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSentTime = null;
+            if (parseNode.GetChildNode("last_update_time") is null) { _explicitNullValueLastUpdateTime = default!; _explicitNullProperties?.Remove("last_update_time"); }
+            else if (parseNode.GetChildNode("last_update_time") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,11 +45,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelTime { get => _explicitNullValueCancelTime; set { _explicitNullValueCancelTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_time"); else _explicitNullProperties?.Remove("cancel_time"); } }
+        public string? CancelTime { get => _explicitNullValueCancelTime; set { _explicitNullValueCancelTime = value; AdditionalData?.Remove("cancel_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_time"); else _explicitNullProperties?.Remove("cancel_time"); } }
         private string? _explicitNullValueCancelTime = default!;
 #nullable restore
 #else
-        public string CancelTime { get => _explicitNullValueCancelTime; set { _explicitNullValueCancelTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_time"); else _explicitNullProperties?.Remove("cancel_time"); } }
+        public string CancelTime { get => _explicitNullValueCancelTime; set { _explicitNullValueCancelTime = value; AdditionalData?.Remove("cancel_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_time"); else _explicitNullProperties?.Remove("cancel_time"); } }
         private string _explicitNullValueCancelTime = default!;
 #endif
         /// <summary>The email address of the account that created the resource.</summary>
@@ -55,26 +61,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string CreatedBy { get; private set; }
 #endif
         /// <summary>The frequency at which the invoice is sent:&lt;ul&gt;&lt;li&gt;Multiple recipient. Sent to multiple recipients.&lt;/li&gt;&lt;li&gt;Batch. Sent in a batch.&lt;/li&gt;&lt;li&gt;Regular single. Sent one time to a single recipient.&lt;/li&gt;&lt;/ul&gt;</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow? CreatedByFlow { get => _explicitNullValueCreatedByFlow; set { _explicitNullValueCreatedByFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_flow"); else _explicitNullProperties?.Remove("created_by_flow"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow? CreatedByFlow { get => _explicitNullValueCreatedByFlow; set { _explicitNullValueCreatedByFlow = value; AdditionalData?.Remove("created_by_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_flow"); else _explicitNullProperties?.Remove("created_by_flow"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow? _explicitNullValueCreatedByFlow = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string? _explicitNullValueCreateTime = default!;
 #nullable restore
 #else
-        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string _explicitNullValueCreateTime = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstSentTime { get => _explicitNullValueFirstSentTime; set { _explicitNullValueFirstSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_sent_time"); else _explicitNullProperties?.Remove("first_sent_time"); } }
+        public string? FirstSentTime { get => _explicitNullValueFirstSentTime; set { _explicitNullValueFirstSentTime = value; AdditionalData?.Remove("first_sent_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_sent_time"); else _explicitNullProperties?.Remove("first_sent_time"); } }
         private string? _explicitNullValueFirstSentTime = default!;
 #nullable restore
 #else
-        public string FirstSentTime { get => _explicitNullValueFirstSentTime; set { _explicitNullValueFirstSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_sent_time"); else _explicitNullProperties?.Remove("first_sent_time"); } }
+        public string FirstSentTime { get => _explicitNullValueFirstSentTime; set { _explicitNullValueFirstSentTime = value; AdditionalData?.Remove("first_sent_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_sent_time"); else _explicitNullProperties?.Remove("first_sent_time"); } }
         private string _explicitNullValueFirstSentTime = default!;
 #endif
         /// <summary>The URL for the invoice merchant view hosted on paypal.com.</summary>
@@ -96,11 +102,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastSentTime { get => _explicitNullValueLastSentTime; set { _explicitNullValueLastSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sent_time"); else _explicitNullProperties?.Remove("last_sent_time"); } }
+        public string? LastSentTime { get => _explicitNullValueLastSentTime; set { _explicitNullValueLastSentTime = value; AdditionalData?.Remove("last_sent_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sent_time"); else _explicitNullProperties?.Remove("last_sent_time"); } }
         private string? _explicitNullValueLastSentTime = default!;
 #nullable restore
 #else
-        public string LastSentTime { get => _explicitNullValueLastSentTime; set { _explicitNullValueLastSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sent_time"); else _explicitNullProperties?.Remove("last_sent_time"); } }
+        public string LastSentTime { get => _explicitNullValueLastSentTime; set { _explicitNullValueLastSentTime = value; AdditionalData?.Remove("last_sent_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sent_time"); else _explicitNullProperties?.Remove("last_sent_time"); } }
         private string _explicitNullValueLastSentTime = default!;
 #endif
         /// <summary>The email address of the account that last edited the resource.</summary>
@@ -114,11 +120,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
+        public string? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; AdditionalData?.Remove("last_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
         private string? _explicitNullValueLastUpdateTime = default!;
 #nullable restore
 #else
-        public string LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
+        public string LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; AdditionalData?.Remove("last_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
         private string _explicitNullValueLastUpdateTime = default!;
 #endif
         /// <summary>The URL for the invoice payer view hosted on paypal.com.</summary>
@@ -158,7 +164,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "cancelled_by", n => { CancelledBy = n.GetStringValue(); } },
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
-                { "created_by_flow", n => { CreatedByFlow = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow>(); } },
+                { "created_by_flow", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoiceCreationFlow>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCreatedByFlow = default; _explicitNullProperties?.Remove("created_by_flow"); AdditionalData["created_by_flow"] = unknown; } else { CreatedByFlow = parsed; AdditionalData.Remove("created_by_flow"); } } },
                 { "first_sent_time", n => { FirstSentTime = n.GetStringValue(); } },
                 { "invoicer_view_url", n => { InvoicerViewUrl = n.GetStringValue(); } },
                 { "last_sent_by", n => { LastSentBy = n.GetStringValue(); } },

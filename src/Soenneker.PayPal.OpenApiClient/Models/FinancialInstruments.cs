@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("banks") is { } nullNodeBanks && nullNodeBanks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Banks = null;
+            if (parseNode.GetChildNode("banks") is null) { _explicitNullValueBanks = default!; _explicitNullProperties?.Remove("banks"); }
+            else if (parseNode.GetChildNode("banks") is { } nullNodeBanks && nullNodeBanks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Banks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of banks attached to this managed account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank>? Banks { get => _explicitNullValueBanks; set { _explicitNullValueBanks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banks"); else _explicitNullProperties?.Remove("banks"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank>? Banks { get => _explicitNullValueBanks; set { _explicitNullValueBanks = value; AdditionalData?.Remove("banks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banks"); else _explicitNullProperties?.Remove("banks"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Bank>? _explicitNullValueBanks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank> Banks { get => _explicitNullValueBanks; set { _explicitNullValueBanks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banks"); else _explicitNullProperties?.Remove("banks"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Bank> Banks { get => _explicitNullValueBanks; set { _explicitNullValueBanks = value; AdditionalData?.Remove("banks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banks"); else _explicitNullProperties?.Remove("banks"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Bank> _explicitNullValueBanks = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("paid_amount") is { } nullNodePaidAmount && nullNodePaidAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidAmount = null;
+            if (parseNode.GetChildNode("paid_amount") is null) { _explicitNullValuePaidAmount = default!; _explicitNullProperties?.Remove("paid_amount"); }
+            else if (parseNode.GetChildNode("paid_amount") is { } nullNodePaidAmount && nullNodePaidAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? PaidAmount { get => _explicitNullValuePaidAmount; set { _explicitNullValuePaidAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_amount"); else _explicitNullProperties?.Remove("paid_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? PaidAmount { get => _explicitNullValuePaidAmount; set { _explicitNullValuePaidAmount = value; AdditionalData?.Remove("paid_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_amount"); else _explicitNullProperties?.Remove("paid_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money? _explicitNullValuePaidAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money PaidAmount { get => _explicitNullValuePaidAmount; set { _explicitNullValuePaidAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_amount"); else _explicitNullProperties?.Remove("paid_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money PaidAmount { get => _explicitNullValuePaidAmount; set { _explicitNullValuePaidAmount = value; AdditionalData?.Remove("paid_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_amount"); else _explicitNullProperties?.Remove("paid_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValuePaidAmount = default!;
 #endif
         /// <summary>An array of payment details for the invoice. The payment details of the invoice like payment type, method, date, discount and transaction type.</summary>

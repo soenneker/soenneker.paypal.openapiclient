@@ -18,23 +18,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_context_set") is { } nullNodeBillingContextSet && nullNodeBillingContextSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingContextSet = null;
-            if (parseNode.GetChildNode("experience_id") is { } nullNodeExperienceId && nullNodeExperienceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceId = null;
+            if (parseNode.GetChildNode("billing_context_set") is null) { _explicitNullValueBillingContextSet = default!; _explicitNullProperties?.Remove("billing_context_set"); }
+            else if (parseNode.GetChildNode("billing_context_set") is { } nullNodeBillingContextSet && nullNodeBillingContextSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingContextSet = null;
+            if (parseNode.GetChildNode("experience_id") is null) { _explicitNullValueExperienceId = default!; _explicitNullProperties?.Remove("experience_id"); }
+            else if (parseNode.GetChildNode("experience_id") is { } nullNodeExperienceId && nullNodeExperienceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the partner has already displayed the billing context to the seller.</summary>
-        public bool? BillingContextSet { get => _explicitNullValueBillingContextSet; set { _explicitNullValueBillingContextSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_context_set"); else _explicitNullProperties?.Remove("billing_context_set"); } }
+        public bool? BillingContextSet { get => _explicitNullValueBillingContextSet; set { _explicitNullValueBillingContextSet = value; AdditionalData?.Remove("billing_context_set"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_context_set"); else _explicitNullProperties?.Remove("billing_context_set"); } }
         private bool? _explicitNullValueBillingContextSet = default!;
         /// <summary>The ID of the payment web experience profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
+        public string? ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; AdditionalData?.Remove("experience_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
         private string? _explicitNullValueExperienceId = default!;
 #nullable restore
 #else
-        public string ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
+        public string ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; AdditionalData?.Remove("experience_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
         private string _explicitNullValueExperienceId = default!;
 #endif
         /// <summary>

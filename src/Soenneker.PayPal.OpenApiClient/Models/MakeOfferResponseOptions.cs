@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("offer_types") is { } nullNodeOfferTypes && nullNodeOfferTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferTypes = null;
+            if (parseNode.GetChildNode("offer_types") is null) { _explicitNullValueOfferTypes = default!; _explicitNullProperties?.Remove("offer_types"); }
+            else if (parseNode.GetChildNode("offer_types") is { } nullNodeOfferTypes && nullNodeOfferTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The types of offer the merchant can offer the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?>? OfferTypes { get => _explicitNullValueOfferTypes; set { _explicitNullValueOfferTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_types"); else _explicitNullProperties?.Remove("offer_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?>? OfferTypes { get => _explicitNullValueOfferTypes; set { _explicitNullValueOfferTypes = value; AdditionalData?.Remove("offer_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_types"); else _explicitNullProperties?.Remove("offer_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?>? _explicitNullValueOfferTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?> OfferTypes { get => _explicitNullValueOfferTypes; set { _explicitNullValueOfferTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_types"); else _explicitNullProperties?.Remove("offer_types"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?> OfferTypes { get => _explicitNullValueOfferTypes; set { _explicitNullValueOfferTypes = value; AdditionalData?.Remove("offer_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_types"); else _explicitNullProperties?.Remove("offer_types"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.OfferType?> _explicitNullValueOfferTypes = default!;
 #endif
         /// <summary>

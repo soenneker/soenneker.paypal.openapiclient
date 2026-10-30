@@ -18,23 +18,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("constraint_type") is { } nullNodeConstraintType && nullNodeConstraintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConstraintType = null;
-            if (parseNode.GetChildNode("payment_sources") is { } nullNodePaymentSources && nullNodePaymentSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSources = null;
+            if (parseNode.GetChildNode("constraint_type") is null) { _explicitNullValueConstraintType = default!; _explicitNullProperties?.Remove("constraint_type"); }
+            else if (parseNode.GetChildNode("constraint_type") is { } nullNodeConstraintType && nullNodeConstraintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConstraintType = null;
+            if (parseNode.GetChildNode("payment_sources") is null) { _explicitNullValuePaymentSources = default!; _explicitNullProperties?.Remove("payment_sources"); }
+            else if (parseNode.GetChildNode("payment_sources") is { } nullNodePaymentSources && nullNodePaymentSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSources = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Constraint type defines whether given payment sources needs to be included or excluded.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType? ConstraintType { get => _explicitNullValueConstraintType; set { _explicitNullValueConstraintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("constraint_type"); else _explicitNullProperties?.Remove("constraint_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType? ConstraintType { get => _explicitNullValueConstraintType; set { _explicitNullValueConstraintType = value; AdditionalData?.Remove("constraint_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("constraint_type"); else _explicitNullProperties?.Remove("constraint_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType? _explicitNullValueConstraintType = default!;
         /// <summary>Set of unique payment methods that will be included/excluded for eligibility assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?>? PaymentSources { get => _explicitNullValuePaymentSources; set { _explicitNullValuePaymentSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_sources"); else _explicitNullProperties?.Remove("payment_sources"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?>? PaymentSources { get => _explicitNullValuePaymentSources; set { _explicitNullValuePaymentSources = value; AdditionalData?.Remove("payment_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_sources"); else _explicitNullProperties?.Remove("payment_sources"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?>? _explicitNullValuePaymentSources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?> PaymentSources { get => _explicitNullValuePaymentSources; set { _explicitNullValuePaymentSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_sources"); else _explicitNullProperties?.Remove("payment_sources"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?> PaymentSources { get => _explicitNullValuePaymentSources; set { _explicitNullValuePaymentSources = value; AdditionalData?.Remove("payment_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_sources"); else _explicitNullProperties?.Remove("payment_sources"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod?> _explicitNullValuePaymentSources = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "constraint_type", n => { ConstraintType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType>(); } },
+                { "constraint_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraintConstraintType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConstraintType = default; _explicitNullProperties?.Remove("constraint_type"); AdditionalData["constraint_type"] = unknown; } else { ConstraintType = parsed; AdditionalData.Remove("constraint_type"); } } },
                 { "payment_sources", n => { PaymentSources = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentMethod>()?.AsList(); } },
             };
         }

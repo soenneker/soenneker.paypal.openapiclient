@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("incorporation_country_code") is { } nullNodeIncorporationCountryCode && nullNodeIncorporationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncorporationCountryCode = null;
-            if (parseNode.GetChildNode("incorporation_date") is { } nullNodeIncorporationDate && nullNodeIncorporationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncorporationDate = null;
+            if (parseNode.GetChildNode("incorporation_country_code") is null) { _explicitNullValueIncorporationCountryCode = default!; _explicitNullProperties?.Remove("incorporation_country_code"); }
+            else if (parseNode.GetChildNode("incorporation_country_code") is { } nullNodeIncorporationCountryCode && nullNodeIncorporationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncorporationCountryCode = null;
+            if (parseNode.GetChildNode("incorporation_date") is null) { _explicitNullValueIncorporationDate = default!; _explicitNullProperties?.Remove("incorporation_date"); }
+            else if (parseNode.GetChildNode("incorporation_date") is { } nullNodeIncorporationDate && nullNodeIncorporationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncorporationDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The [two-character ISO 3166-1 code](/docs/api/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncorporationCountryCode { get => _explicitNullValueIncorporationCountryCode; set { _explicitNullValueIncorporationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_country_code"); else _explicitNullProperties?.Remove("incorporation_country_code"); } }
+        public string? IncorporationCountryCode { get => _explicitNullValueIncorporationCountryCode; set { _explicitNullValueIncorporationCountryCode = value; AdditionalData?.Remove("incorporation_country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_country_code"); else _explicitNullProperties?.Remove("incorporation_country_code"); } }
         private string? _explicitNullValueIncorporationCountryCode = default!;
 #nullable restore
 #else
-        public string IncorporationCountryCode { get => _explicitNullValueIncorporationCountryCode; set { _explicitNullValueIncorporationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_country_code"); else _explicitNullProperties?.Remove("incorporation_country_code"); } }
+        public string IncorporationCountryCode { get => _explicitNullValueIncorporationCountryCode; set { _explicitNullValueIncorporationCountryCode = value; AdditionalData?.Remove("incorporation_country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_country_code"); else _explicitNullProperties?.Remove("incorporation_country_code"); } }
         private string _explicitNullValueIncorporationCountryCode = default!;
 #endif
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncorporationDate { get => _explicitNullValueIncorporationDate; set { _explicitNullValueIncorporationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_date"); else _explicitNullProperties?.Remove("incorporation_date"); } }
+        public string? IncorporationDate { get => _explicitNullValueIncorporationDate; set { _explicitNullValueIncorporationDate = value; AdditionalData?.Remove("incorporation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_date"); else _explicitNullProperties?.Remove("incorporation_date"); } }
         private string? _explicitNullValueIncorporationDate = default!;
 #nullable restore
 #else
-        public string IncorporationDate { get => _explicitNullValueIncorporationDate; set { _explicitNullValueIncorporationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_date"); else _explicitNullProperties?.Remove("incorporation_date"); } }
+        public string IncorporationDate { get => _explicitNullValueIncorporationDate; set { _explicitNullValueIncorporationDate = value; AdditionalData?.Remove("incorporation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorporation_date"); else _explicitNullProperties?.Remove("incorporation_date"); } }
         private string _explicitNullValueIncorporationDate = default!;
 #endif
         /// <summary>

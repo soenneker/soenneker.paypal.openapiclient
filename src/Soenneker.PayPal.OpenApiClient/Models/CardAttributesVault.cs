@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("store_in_vault") is { } nullNodeStoreInVault && nullNodeStoreInVault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreInVault = null;
+            if (parseNode.GetChildNode("store_in_vault") is null) { _explicitNullValueStoreInVault = default!; _explicitNullProperties?.Remove("store_in_vault"); }
+            else if (parseNode.GetChildNode("store_in_vault") is { } nullNodeStoreInVault && nullNodeStoreInVault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreInVault = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines how and when the payment source gets vaulted.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2StoreInVaultInstruction? StoreInVault { get => _explicitNullValueStoreInVault; set { _explicitNullValueStoreInVault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_in_vault"); else _explicitNullProperties?.Remove("store_in_vault"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2StoreInVaultInstruction? StoreInVault { get => _explicitNullValueStoreInVault; set { _explicitNullValueStoreInVault = value; AdditionalData?.Remove("store_in_vault"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_in_vault"); else _explicitNullProperties?.Remove("store_in_vault"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2StoreInVaultInstruction? _explicitNullValueStoreInVault = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CardAttributesVault"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "store_in_vault", n => { StoreInVault = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2StoreInVaultInstruction>(); } },
+                { "store_in_vault", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2StoreInVaultInstruction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStoreInVault = default; _explicitNullProperties?.Remove("store_in_vault"); AdditionalData["store_in_vault"] = unknown; } else { StoreInVault = parsed; AdditionalData.Remove("store_in_vault"); } } },
             };
         }
         /// <summary>

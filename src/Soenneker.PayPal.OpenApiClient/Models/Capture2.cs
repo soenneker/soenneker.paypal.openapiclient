@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
-            if (parseNode.GetChildNode("disbursement_mode") is { } nullNodeDisbursementMode && nullNodeDisbursementMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisbursementMode = null;
-            if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
-            if (parseNode.GetChildNode("processor_response") is { } nullNodeProcessorResponse && nullNodeProcessorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessorResponse = null;
+            if (parseNode.GetChildNode("custom_id") is null) { _explicitNullValueCustomId = default!; _explicitNullProperties?.Remove("custom_id"); }
+            else if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
+            if (parseNode.GetChildNode("disbursement_mode") is null) { _explicitNullValueDisbursementMode = default!; _explicitNullProperties?.Remove("disbursement_mode"); }
+            else if (parseNode.GetChildNode("disbursement_mode") is { } nullNodeDisbursementMode && nullNodeDisbursementMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisbursementMode = null;
+            if (parseNode.GetChildNode("network_transaction_reference") is null) { _explicitNullValueNetworkTransactionReference = default!; _explicitNullProperties?.Remove("network_transaction_reference"); }
+            else if (parseNode.GetChildNode("network_transaction_reference") is { } nullNodeNetworkTransactionReference && nullNodeNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkTransactionReference = null;
+            if (parseNode.GetChildNode("processor_response") is null) { _explicitNullValueProcessorResponse = default!; _explicitNullProperties?.Remove("processor_response"); }
+            else if (parseNode.GetChildNode("processor_response") is { } nullNodeProcessorResponse && nullNodeProcessorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessorResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -45,15 +49,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The API caller-provided external ID. Used to reconcile API caller-initiated transactions with PayPal transactions. Appears in transaction and settlement reports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string? _explicitNullValueCustomId = default!;
 #nullable restore
 #else
-        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; AdditionalData?.Remove("custom_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
         private string _explicitNullValueCustomId = default!;
 #endif
         /// <summary>The funds that are held on behalf of the merchant.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2DisbursementMode? DisbursementMode { get => _explicitNullValueDisbursementMode; set { _explicitNullValueDisbursementMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disbursement_mode"); else _explicitNullProperties?.Remove("disbursement_mode"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2DisbursementMode? DisbursementMode { get => _explicitNullValueDisbursementMode; set { _explicitNullValueDisbursementMode = value; AdditionalData?.Remove("disbursement_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disbursement_mode"); else _explicitNullProperties?.Remove("disbursement_mode"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2DisbursementMode? _explicitNullValueDisbursementMode = default!;
         /// <summary>Indicates whether you can make additional captures against the authorized payment. Set to `true` if you do not intend to capture additional payments against the authorization. Set to `false` if you intend to capture additional payments against the authorization.</summary>
         public bool? FinalCapture { get; private set; }
@@ -84,11 +88,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The network_transaction_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference? NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference? _explicitNullValueNetworkTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference NetworkTransactionReference { get => _explicitNullValueNetworkTransactionReference; set { _explicitNullValueNetworkTransactionReference = value; AdditionalData?.Remove("network_transaction_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_transaction_reference"); else _explicitNullProperties?.Remove("network_transaction_reference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2NetworkTransactionReference _explicitNullValueNetworkTransactionReference = default!;
 #endif
         /// <summary>The payee property</summary>
@@ -102,11 +106,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An object that provides additional processor information for a direct credit card transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse? ProcessorResponse { get => _explicitNullValueProcessorResponse; set { _explicitNullValueProcessorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processor_response"); else _explicitNullProperties?.Remove("processor_response"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse? ProcessorResponse { get => _explicitNullValueProcessorResponse; set { _explicitNullValueProcessorResponse = value; AdditionalData?.Remove("processor_response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processor_response"); else _explicitNullProperties?.Remove("processor_response"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse? _explicitNullValueProcessorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse ProcessorResponse { get => _explicitNullValueProcessorResponse; set { _explicitNullValueProcessorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processor_response"); else _explicitNullProperties?.Remove("processor_response"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse ProcessorResponse { get => _explicitNullValueProcessorResponse; set { _explicitNullValueProcessorResponse = value; AdditionalData?.Remove("processor_response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processor_response"); else _explicitNullProperties?.Remove("processor_response"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2ProcessorResponse _explicitNullValueProcessorResponse = default!;
 #endif
         /// <summary>The seller_protection property</summary>
@@ -180,7 +184,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2Amount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2Amount.CreateFromDiscriminatorValue); } },
                 { "create_time", n => { CreateTime = n.GetStringValue(); } },
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
-                { "disbursement_mode", n => { DisbursementMode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2DisbursementMode>(); } },
+                { "disbursement_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2DisbursementMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisbursementMode = default; _explicitNullProperties?.Remove("disbursement_mode"); AdditionalData["disbursement_mode"] = unknown; } else { DisbursementMode = parsed; AdditionalData.Remove("disbursement_mode"); } } },
                 { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },

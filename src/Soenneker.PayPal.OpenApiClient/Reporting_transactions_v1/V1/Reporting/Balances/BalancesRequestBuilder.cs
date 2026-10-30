@@ -42,6 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error400">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,8 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error400.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error403.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.BalancesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,7 +76,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Balances.BalancesRequestBuilder.BalancesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/reporting_transactions_v1/v1/reporting/balances", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

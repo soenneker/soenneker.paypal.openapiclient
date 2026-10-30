@@ -17,14 +17,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("authentication_result") is { } nullNodeAuthenticationResult && nullNodeAuthenticationResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationResult = null;
-            if (parseNode.GetChildNode("bin_details") is { } nullNodeBinDetails && nullNodeBinDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinDetails = null;
-            if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
-            if (parseNode.GetChildNode("from_request") is { } nullNodeFromRequest && nullNodeFromRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromRequest = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("stored_credential") is { } nullNodeStoredCredential && nullNodeStoredCredential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoredCredential = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("authentication_result") is null) { _explicitNullValueAuthenticationResult = default!; _explicitNullProperties?.Remove("authentication_result"); }
+            else if (parseNode.GetChildNode("authentication_result") is { } nullNodeAuthenticationResult && nullNodeAuthenticationResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationResult = null;
+            if (parseNode.GetChildNode("bin_details") is null) { _explicitNullValueBinDetails = default!; _explicitNullProperties?.Remove("bin_details"); }
+            else if (parseNode.GetChildNode("bin_details") is { } nullNodeBinDetails && nullNodeBinDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinDetails = null;
+            if (parseNode.GetChildNode("expiry") is null) { _explicitNullValueExpiry = default!; _explicitNullProperties?.Remove("expiry"); }
+            else if (parseNode.GetChildNode("expiry") is { } nullNodeExpiry && nullNodeExpiry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiry = null;
+            if (parseNode.GetChildNode("from_request") is null) { _explicitNullValueFromRequest = default!; _explicitNullProperties?.Remove("from_request"); }
+            else if (parseNode.GetChildNode("from_request") is { } nullNodeFromRequest && nullNodeFromRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromRequest = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("stored_credential") is null) { _explicitNullValueStoredCredential = default!; _explicitNullProperties?.Remove("stored_credential"); }
+            else if (parseNode.GetChildNode("stored_credential") is { } nullNodeStoredCredential && nullNodeStoredCredential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoredCredential = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,21 +40,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Additional attributes associated with the use of this card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardAttributesResponse _explicitNullValueAttributes = default!;
 #endif
         /// <summary>Results of Authentication such as 3D Secure.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse? AuthenticationResult { get => _explicitNullValueAuthenticationResult; set { _explicitNullValueAuthenticationResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_result"); else _explicitNullProperties?.Remove("authentication_result"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse? AuthenticationResult { get => _explicitNullValueAuthenticationResult; set { _explicitNullValueAuthenticationResult = value; AdditionalData?.Remove("authentication_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_result"); else _explicitNullProperties?.Remove("authentication_result"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse? _explicitNullValueAuthenticationResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse AuthenticationResult { get => _explicitNullValueAuthenticationResult; set { _explicitNullValueAuthenticationResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_result"); else _explicitNullProperties?.Remove("authentication_result"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse AuthenticationResult { get => _explicitNullValueAuthenticationResult; set { _explicitNullValueAuthenticationResult = value; AdditionalData?.Remove("authentication_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_result"); else _explicitNullProperties?.Remove("authentication_result"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2AuthenticationResponse _explicitNullValueAuthenticationResult = default!;
 #endif
         /// <summary>Array of brands or networks associated with the card.</summary>
@@ -60,11 +68,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Bank Identification Number (BIN) details used to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails? BinDetails { get => _explicitNullValueBinDetails; set { _explicitNullValueBinDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_details"); else _explicitNullProperties?.Remove("bin_details"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails? BinDetails { get => _explicitNullValueBinDetails; set { _explicitNullValueBinDetails = value; AdditionalData?.Remove("bin_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_details"); else _explicitNullProperties?.Remove("bin_details"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails? _explicitNullValueBinDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails BinDetails { get => _explicitNullValueBinDetails; set { _explicitNullValueBinDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_details"); else _explicitNullProperties?.Remove("bin_details"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails BinDetails { get => _explicitNullValueBinDetails; set { _explicitNullValueBinDetails = value; AdditionalData?.Remove("bin_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bin_details"); else _explicitNullProperties?.Remove("bin_details"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardResponseBinDetails _explicitNullValueBinDetails = default!;
 #endif
         /// <summary>The card network or brand. Applies to credit, debit, gift, and payment cards.</summary>
@@ -72,21 +80,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The year and month, in ISO-8601 `YYYY-MM` date format. See [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string? Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string? _explicitNullValueExpiry = default!;
 #nullable restore
 #else
-        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
+        public string Expiry { get => _explicitNullValueExpiry; set { _explicitNullValueExpiry = value; AdditionalData?.Remove("expiry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry"); else _explicitNullProperties?.Remove("expiry"); } }
         private string _explicitNullValueExpiry = default!;
 #endif
         /// <summary>Representation of card details as received in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest? FromRequest { get => _explicitNullValueFromRequest; set { _explicitNullValueFromRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_request"); else _explicitNullProperties?.Remove("from_request"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest? FromRequest { get => _explicitNullValueFromRequest; set { _explicitNullValueFromRequest = value; AdditionalData?.Remove("from_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_request"); else _explicitNullProperties?.Remove("from_request"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest? _explicitNullValueFromRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest FromRequest { get => _explicitNullValueFromRequest; set { _explicitNullValueFromRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_request"); else _explicitNullProperties?.Remove("from_request"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest FromRequest { get => _explicitNullValueFromRequest; set { _explicitNullValueFromRequest = value; AdditionalData?.Remove("from_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_request"); else _explicitNullProperties?.Remove("from_request"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardFromRequest _explicitNullValueFromRequest = default!;
 #endif
         /// <summary>The last digits of the payment card.</summary>
@@ -100,25 +108,25 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The card holder&apos;s name as it appears on the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Provides additional details to process a payment using a `card` that has been stored or is intended to be stored (also referred to as stored_credential or card-on-file).&lt;br/&gt;Parameter compatibility:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;`payment_type=ONE_TIME` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`usage=FIRST` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`previous_transaction_reference` or `previous_network_transaction_reference` is compatible only with `payment_initiator=MERCHANT`.&lt;/li&gt;&lt;li&gt;Only one of the parameters - `previous_transaction_reference` and `previous_network_transaction_reference` - can be present in the request.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; AdditionalData?.Remove("stored_credential"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? _explicitNullValueStoredCredential = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; AdditionalData?.Remove("stored_credential"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential _explicitNullValueStoredCredential = default!;
 #endif
         /// <summary>Type of card. i.e Credit, Debit and so on.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayCardResponseAllOf1"/> and sets the default values.
@@ -155,7 +163,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "last_digits", n => { LastDigits = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "stored_credential", n => { StoredCredential = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>(global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponseType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
-            if (parseNode.GetChildNode("preferences") is { } nullNodePreferences && nullNodePreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferences = null;
-            if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
+            if (parseNode.GetChildNode("customer") is null) { _explicitNullValueCustomer = default!; _explicitNullProperties?.Remove("customer"); }
+            else if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("preferences") is null) { _explicitNullValuePreferences = default!; _explicitNullProperties?.Remove("preferences"); }
+            else if (parseNode.GetChildNode("preferences") is { } nullNodePreferences && nullNodePreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferences = null;
+            if (parseNode.GetChildNode("purchase_units") is null) { _explicitNullValuePurchaseUnits = default!; _explicitNullProperties?.Remove("purchase_units"); }
+            else if (parseNode.GetChildNode("purchase_units") is { } nullNodePurchaseUnits && nullNodePurchaseUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseUnits = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Customer who is making a purchase from the merchant/partner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; AdditionalData?.Remove("customer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; AdditionalData?.Remove("customer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestCustomer _explicitNullValueCustomer = default!;
 #endif
         /// <summary>Preferences of merchant/partner consuming the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences? Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences? Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; AdditionalData?.Remove("preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences? _explicitNullValuePreferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; AdditionalData?.Remove("preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences _explicitNullValuePreferences = default!;
 #endif
         /// <summary>Array of purchase units.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest>? PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest>? _explicitNullValuePurchaseUnits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest> PurchaseUnits { get => _explicitNullValuePurchaseUnits; set { _explicitNullValuePurchaseUnits = value; AdditionalData?.Remove("purchase_units"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_units"); else _explicitNullProperties?.Remove("purchase_units"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest> _explicitNullValuePurchaseUnits = default!;
 #endif
         /// <summary>

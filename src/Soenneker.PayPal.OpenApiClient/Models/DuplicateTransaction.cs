@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("original_transaction") is { } nullNodeOriginalTransaction && nullNodeOriginalTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTransaction = null;
-            if (parseNode.GetChildNode("received_duplicate") is { } nullNodeReceivedDuplicate && nullNodeReceivedDuplicate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDuplicate = null;
+            if (parseNode.GetChildNode("original_transaction") is null) { _explicitNullValueOriginalTransaction = default!; _explicitNullProperties?.Remove("original_transaction"); }
+            else if (parseNode.GetChildNode("original_transaction") is { } nullNodeOriginalTransaction && nullNodeOriginalTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTransaction = null;
+            if (parseNode.GetChildNode("received_duplicate") is null) { _explicitNullValueReceivedDuplicate = default!; _explicitNullProperties?.Remove("received_duplicate"); }
+            else if (parseNode.GetChildNode("received_duplicate") is { } nullNodeReceivedDuplicate && nullNodeReceivedDuplicate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDuplicate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The information about the disputed transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo? OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo? OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; AdditionalData?.Remove("original_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo? _explicitNullValueOriginalTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; AdditionalData?.Remove("original_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TransactionInfo _explicitNullValueOriginalTransaction = default!;
 #endif
         /// <summary>If `true`, indicates that a duplicate transaction was received.</summary>
-        public bool? ReceivedDuplicate { get => _explicitNullValueReceivedDuplicate; set { _explicitNullValueReceivedDuplicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_duplicate"); else _explicitNullProperties?.Remove("received_duplicate"); } }
+        public bool? ReceivedDuplicate { get => _explicitNullValueReceivedDuplicate; set { _explicitNullValueReceivedDuplicate = value; AdditionalData?.Remove("received_duplicate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_duplicate"); else _explicitNullProperties?.Remove("received_duplicate"); } }
         private bool? _explicitNullValueReceivedDuplicate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction"/> and sets the default values.

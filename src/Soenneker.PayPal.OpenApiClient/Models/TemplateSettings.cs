@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("template_item_settings") is { } nullNodeTemplateItemSettings && nullNodeTemplateItemSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateItemSettings = null;
-            if (parseNode.GetChildNode("template_subtotal_settings") is { } nullNodeTemplateSubtotalSettings && nullNodeTemplateSubtotalSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSubtotalSettings = null;
+            if (parseNode.GetChildNode("template_item_settings") is null) { _explicitNullValueTemplateItemSettings = default!; _explicitNullProperties?.Remove("template_item_settings"); }
+            else if (parseNode.GetChildNode("template_item_settings") is { } nullNodeTemplateItemSettings && nullNodeTemplateItemSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateItemSettings = null;
+            if (parseNode.GetChildNode("template_subtotal_settings") is null) { _explicitNullValueTemplateSubtotalSettings = default!; _explicitNullProperties?.Remove("template_subtotal_settings"); }
+            else if (parseNode.GetChildNode("template_subtotal_settings") is { } nullNodeTemplateSubtotalSettings && nullNodeTemplateSubtotalSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSubtotalSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The template item headers display preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; AdditionalData?.Remove("template_item_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? _explicitNullValueTemplateItemSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; AdditionalData?.Remove("template_item_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> _explicitNullValueTemplateItemSettings = default!;
 #endif
         /// <summary>The template subtotal headers display preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; AdditionalData?.Remove("template_subtotal_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? _explicitNullValueTemplateSubtotalSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; AdditionalData?.Remove("template_subtotal_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> _explicitNullValueTemplateSubtotalSettings = default!;
 #endif
         /// <summary>

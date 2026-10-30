@@ -18,17 +18,19 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payee_preferred") is { } nullNodePayeePreferred && nullNodePayeePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeePreferred = null;
-            if (parseNode.GetChildNode("standard_entry_class_code") is { } nullNodeStandardEntryClassCode && nullNodeStandardEntryClassCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEntryClassCode = null;
+            if (parseNode.GetChildNode("payee_preferred") is null) { _explicitNullValuePayeePreferred = default!; _explicitNullProperties?.Remove("payee_preferred"); }
+            else if (parseNode.GetChildNode("payee_preferred") is { } nullNodePayeePreferred && nullNodePayeePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeePreferred = null;
+            if (parseNode.GetChildNode("standard_entry_class_code") is null) { _explicitNullValueStandardEntryClassCode = default!; _explicitNullProperties?.Remove("standard_entry_class_code"); }
+            else if (parseNode.GetChildNode("standard_entry_class_code") is { } nullNodeStandardEntryClassCode && nullNodeStandardEntryClassCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEntryClassCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant-preferred payment methods.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayeePaymentMethodPreference? PayeePreferred { get => _explicitNullValuePayeePreferred; set { _explicitNullValuePayeePreferred = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_preferred"); else _explicitNullProperties?.Remove("payee_preferred"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayeePaymentMethodPreference? PayeePreferred { get => _explicitNullValuePayeePreferred; set { _explicitNullValuePayeePreferred = value; AdditionalData?.Remove("payee_preferred"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_preferred"); else _explicitNullProperties?.Remove("payee_preferred"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayeePaymentMethodPreference? _explicitNullValuePayeePreferred = default!;
         /// <summary>NACHA (the regulatory body governing the ACH network) requires that API callers (merchants, partners) obtain the consumer’s explicit authorization before initiating a transaction. To stay compliant, you’ll need to make sure that you retain a compliant authorization for each transaction that you originate to the ACH Network using this API. ACH transactions are categorized (using SEC codes) by how you capture authorization from the Receiver (the person whose bank account is being debited or credited). PayPal supports the following SEC codes.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodStandardEntryClassCode? StandardEntryClassCode { get => _explicitNullValueStandardEntryClassCode; set { _explicitNullValueStandardEntryClassCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_entry_class_code"); else _explicitNullProperties?.Remove("standard_entry_class_code"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodStandardEntryClassCode? StandardEntryClassCode { get => _explicitNullValueStandardEntryClassCode; set { _explicitNullValueStandardEntryClassCode = value; AdditionalData?.Remove("standard_entry_class_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_entry_class_code"); else _explicitNullProperties?.Remove("standard_entry_class_code"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodStandardEntryClassCode? _explicitNullValueStandardEntryClassCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payee_preferred", n => { PayeePreferred = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayeePaymentMethodPreference>(); } },
-                { "standard_entry_class_code", n => { StandardEntryClassCode = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodStandardEntryClassCode>(); } },
+                { "payee_preferred", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2PayeePaymentMethodPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePayeePreferred = default; _explicitNullProperties?.Remove("payee_preferred"); AdditionalData["payee_preferred"] = unknown; } else { PayeePreferred = parsed; AdditionalData.Remove("payee_preferred"); } } },
+                { "standard_entry_class_code", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodStandardEntryClassCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStandardEntryClassCode = default; _explicitNullProperties?.Remove("standard_entry_class_code"); AdditionalData["standard_entry_class_code"] = unknown; } else { StandardEntryClassCode = parsed; AdditionalData.Remove("standard_entry_class_code"); } } },
             };
         }
         /// <summary>

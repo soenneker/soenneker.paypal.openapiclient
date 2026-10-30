@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("cancel_url") is null) { _explicitNullValueCancelUrl = default!; _explicitNullProperties?.Remove("cancel_url"); }
+            else if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("return_url") is null) { _explicitNullValueReturnUrl = default!; _explicitNullProperties?.Remove("return_url"); }
+            else if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingCancelUrl _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/api/rest/reference/country-codes/) or [M49 region code](https://unstats.un.org/unsd/methodology/m49/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseWithoutBrandShippingReturnUrl _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>

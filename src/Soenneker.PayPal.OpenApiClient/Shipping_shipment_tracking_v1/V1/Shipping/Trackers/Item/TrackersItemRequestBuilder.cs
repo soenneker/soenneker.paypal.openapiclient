@@ -94,7 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shipping.Trackers.Item.TrackersItemRequestBuilder.TrackersItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/shipping_shipment_tracking_v1/v1/shipping/trackers/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -115,7 +115,7 @@ namespace Soenneker.PayPal.OpenApiClient.Shipping_shipment_tracking_v1.V1.Shippi
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/shipping_shipment_tracking_v1/v1/shipping/trackers/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

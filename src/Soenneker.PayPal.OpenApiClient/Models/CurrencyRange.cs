@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("maximum_amount") is { } nullNodeMaximumAmount && nullNodeMaximumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAmount = null;
-            if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
+            if (parseNode.GetChildNode("maximum_amount") is null) { _explicitNullValueMaximumAmount = default!; _explicitNullProperties?.Remove("maximum_amount"); }
+            else if (parseNode.GetChildNode("maximum_amount") is { } nullNodeMaximumAmount && nullNodeMaximumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAmount = null;
+            if (parseNode.GetChildNode("minimum_amount") is null) { _explicitNullValueMinimumAmount = default!; _explicitNullProperties?.Remove("minimum_amount"); }
+            else if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; AdditionalData?.Remove("maximum_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? _explicitNullValueMaximumAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; AdditionalData?.Remove("maximum_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money _explicitNullValueMaximumAmount = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; AdditionalData?.Remove("minimum_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? _explicitNullValueMinimumAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; AdditionalData?.Remove("minimum_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money _explicitNullValueMinimumAmount = default!;
 #endif
         /// <summary>

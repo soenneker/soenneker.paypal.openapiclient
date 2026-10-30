@@ -18,7 +18,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyer_user_agent") is { } nullNodeBuyerUserAgent && nullNodeBuyerUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerUserAgent = null;
+            if (parseNode.GetChildNode("buyer_user_agent") is null) { _explicitNullValueBuyerUserAgent = default!; _explicitNullProperties?.Remove("buyer_user_agent"); }
+            else if (parseNode.GetChildNode("buyer_user_agent") is { } nullNodeBuyerUserAgent && nullNodeBuyerUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerUserAgent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>User agent from the request originating from the buyer&apos;s device. This will be used to identify the buyer&apos;s operating system and browser versions. NOTE: Merchants must not alter or modify the buyer&apos;s device user agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
+        public string? BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; AdditionalData?.Remove("buyer_user_agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
         private string? _explicitNullValueBuyerUserAgent = default!;
 #nullable restore
 #else
-        public string BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
+        public string BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; AdditionalData?.Remove("buyer_user_agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
         private string _explicitNullValueBuyerUserAgent = default!;
 #endif
         /// <summary>Merchant preference on how the buyer can navigate back to merchant website post approving the transaction on the PayPal App.</summary>

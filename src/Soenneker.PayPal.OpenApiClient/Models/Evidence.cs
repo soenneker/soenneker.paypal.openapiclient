@@ -18,24 +18,32 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action_info") is { } nullNodeActionInfo && nullNodeActionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionInfo = null;
-            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
-            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
-            if (parseNode.GetChildNode("evidence_info") is { } nullNodeEvidenceInfo && nullNodeEvidenceInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvidenceInfo = null;
-            if (parseNode.GetChildNode("evidence_type") is { } nullNodeEvidenceType && nullNodeEvidenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvidenceType = null;
-            if (parseNode.GetChildNode("item_id") is { } nullNodeItemId && nullNodeItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemId = null;
-            if (parseNode.GetChildNode("item_type") is { } nullNodeItemType && nullNodeItemType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemType = null;
-            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("action_info") is null) { _explicitNullValueActionInfo = default!; _explicitNullProperties?.Remove("action_info"); }
+            else if (parseNode.GetChildNode("action_info") is { } nullNodeActionInfo && nullNodeActionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionInfo = null;
+            if (parseNode.GetChildNode("date") is null) { _explicitNullValueDate = default!; _explicitNullProperties?.Remove("date"); }
+            else if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("documents") is null) { _explicitNullValueDocuments = default!; _explicitNullProperties?.Remove("documents"); }
+            else if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("evidence_info") is null) { _explicitNullValueEvidenceInfo = default!; _explicitNullProperties?.Remove("evidence_info"); }
+            else if (parseNode.GetChildNode("evidence_info") is { } nullNodeEvidenceInfo && nullNodeEvidenceInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvidenceInfo = null;
+            if (parseNode.GetChildNode("evidence_type") is null) { _explicitNullValueEvidenceType = default!; _explicitNullProperties?.Remove("evidence_type"); }
+            else if (parseNode.GetChildNode("evidence_type") is { } nullNodeEvidenceType && nullNodeEvidenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvidenceType = null;
+            if (parseNode.GetChildNode("item_id") is null) { _explicitNullValueItemId = default!; _explicitNullProperties?.Remove("item_id"); }
+            else if (parseNode.GetChildNode("item_id") is { } nullNodeItemId && nullNodeItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemId = null;
+            if (parseNode.GetChildNode("item_type") is null) { _explicitNullValueItemType = default!; _explicitNullProperties?.Remove("item_type"); }
+            else if (parseNode.GetChildNode("item_type") is { } nullNodeItemType && nullNodeItemType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemType = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
         }
 
         /// <summary>The extended properties for a evidence. Includes additional information such as the action for which the evidence was requested/submitted, and whether the evidence is mandatory.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo? ActionInfo { get => _explicitNullValueActionInfo; set { _explicitNullValueActionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_info"); else _explicitNullProperties?.Remove("action_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo? ActionInfo { get => _explicitNullValueActionInfo; set { _explicitNullValueActionInfo = value; AdditionalData?.Remove("action_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_info"); else _explicitNullProperties?.Remove("action_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo? _explicitNullValueActionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo ActionInfo { get => _explicitNullValueActionInfo; set { _explicitNullValueActionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_info"); else _explicitNullProperties?.Remove("action_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo ActionInfo { get => _explicitNullValueActionInfo; set { _explicitNullValueActionInfo = value; AdditionalData?.Remove("action_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_info"); else _explicitNullProperties?.Remove("action_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo _explicitNullValueActionInfo = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,11 +51,11 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
         private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
         private string _explicitNullValueDate = default!;
 #endif
         /// <summary>The stage in the dispute lifecycle.</summary>
@@ -55,47 +63,47 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of evidence documents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; AdditionalData?.Remove("documents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Document>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Document> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; AdditionalData?.Remove("documents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.Document> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>The evidence-related information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo? EvidenceInfo { get => _explicitNullValueEvidenceInfo; set { _explicitNullValueEvidenceInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_info"); else _explicitNullProperties?.Remove("evidence_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo? EvidenceInfo { get => _explicitNullValueEvidenceInfo; set { _explicitNullValueEvidenceInfo = value; AdditionalData?.Remove("evidence_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_info"); else _explicitNullProperties?.Remove("evidence_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo? _explicitNullValueEvidenceInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo EvidenceInfo { get => _explicitNullValueEvidenceInfo; set { _explicitNullValueEvidenceInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_info"); else _explicitNullProperties?.Remove("evidence_info"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo EvidenceInfo { get => _explicitNullValueEvidenceInfo; set { _explicitNullValueEvidenceInfo = value; AdditionalData?.Remove("evidence_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_info"); else _explicitNullProperties?.Remove("evidence_info"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo _explicitNullValueEvidenceInfo = default!;
 #endif
         /// <summary>The evidence type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType? EvidenceType { get => _explicitNullValueEvidenceType; set { _explicitNullValueEvidenceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_type"); else _explicitNullProperties?.Remove("evidence_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType? EvidenceType { get => _explicitNullValueEvidenceType; set { _explicitNullValueEvidenceType = value; AdditionalData?.Remove("evidence_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_type"); else _explicitNullProperties?.Remove("evidence_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType? _explicitNullValueEvidenceType = default!;
         /// <summary>The item ID. If the merchant provides multiple pieces of evidence and the transaction has multiple item IDs, the merchant can use this value to associate a piece of evidence with an item ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        public string? ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; AdditionalData?.Remove("item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
         private string? _explicitNullValueItemId = default!;
 #nullable restore
 #else
-        public string ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        public string ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; AdditionalData?.Remove("item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
         private string _explicitNullValueItemId = default!;
 #endif
         /// <summary>The type of the item which has the issue.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemType? ItemType { get => _explicitNullValueItemType; set { _explicitNullValueItemType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_type"); else _explicitNullProperties?.Remove("item_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemType? ItemType { get => _explicitNullValueItemType; set { _explicitNullValueItemType = value; AdditionalData?.Remove("item_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_type"); else _explicitNullProperties?.Remove("item_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.ItemType? _explicitNullValueItemType = default!;
         /// <summary>Any evidence-related notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The source of the evidence.</summary>
@@ -130,9 +138,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "dispute_life_cycle_stage", n => { DisputeLifeCycleStage = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage>(); } },
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Document>(global::Soenneker.PayPal.OpenApiClient.Models.Document.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "evidence_info", n => { EvidenceInfo = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo>(global::Soenneker.PayPal.OpenApiClient.Models.EvidenceInfo.CreateFromDiscriminatorValue); } },
-                { "evidence_type", n => { EvidenceType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType>(); } },
+                { "evidence_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceEvidenceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEvidenceType = default; _explicitNullProperties?.Remove("evidence_type"); AdditionalData["evidence_type"] = unknown; } else { EvidenceType = parsed; AdditionalData.Remove("evidence_type"); } } },
                 { "item_id", n => { ItemId = n.GetStringValue(); } },
-                { "item_type", n => { ItemType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>(); } },
+                { "item_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ItemType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueItemType = default; _explicitNullProperties?.Remove("item_type"); AdditionalData["item_type"] = unknown; } else { ItemType = parsed; AdditionalData.Remove("item_type"); } } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.EvidenceSource>(); } },
             };

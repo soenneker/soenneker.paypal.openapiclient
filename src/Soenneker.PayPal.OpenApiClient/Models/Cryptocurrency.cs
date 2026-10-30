@@ -18,38 +18,42 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("asset_symbol") is { } nullNodeAssetSymbol && nullNodeAssetSymbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetSymbol = null;
-            if (parseNode.GetChildNode("decimals") is { } nullNodeDecimals && nullNodeDecimals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Decimals = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("quantity_in_subunits") is { } nullNodeQuantityInSubunits && nullNodeQuantityInSubunits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantityInSubunits = null;
+            if (parseNode.GetChildNode("asset_symbol") is null) { _explicitNullValueAssetSymbol = default!; _explicitNullProperties?.Remove("asset_symbol"); }
+            else if (parseNode.GetChildNode("asset_symbol") is { } nullNodeAssetSymbol && nullNodeAssetSymbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetSymbol = null;
+            if (parseNode.GetChildNode("decimals") is null) { _explicitNullValueDecimals = default!; _explicitNullProperties?.Remove("decimals"); }
+            else if (parseNode.GetChildNode("decimals") is { } nullNodeDecimals && nullNodeDecimals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Decimals = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("quantity_in_subunits") is null) { _explicitNullValueQuantityInSubunits = default!; _explicitNullProperties?.Remove("quantity_in_subunits"); }
+            else if (parseNode.GetChildNode("quantity_in_subunits") is { } nullNodeQuantityInSubunits && nullNodeQuantityInSubunits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantityInSubunits = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cryptocurrency symbol or code ticker options. Assigned by liquidity providers and exchanges.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol? AssetSymbol { get => _explicitNullValueAssetSymbol; set { _explicitNullValueAssetSymbol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_symbol"); else _explicitNullProperties?.Remove("asset_symbol"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol? AssetSymbol { get => _explicitNullValueAssetSymbol; set { _explicitNullValueAssetSymbol = value; AdditionalData?.Remove("asset_symbol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_symbol"); else _explicitNullProperties?.Remove("asset_symbol"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol? _explicitNullValueAssetSymbol = default!;
         /// <summary>The number of decimal digits supported by this cryptocurrency. For example, for Bitcoin this value is 8 because there are 10^8 satoshis in one Bitcoin and for Ethereum it&apos;s 18 since there are 10^18 wei in one Ether.</summary>
-        public int? Decimals { get => _explicitNullValueDecimals; set { _explicitNullValueDecimals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decimals"); else _explicitNullProperties?.Remove("decimals"); } }
+        public int? Decimals { get => _explicitNullValueDecimals; set { _explicitNullValueDecimals = value; AdditionalData?.Remove("decimals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decimals"); else _explicitNullProperties?.Remove("decimals"); } }
         private int? _explicitNullValueDecimals = default!;
         /// <summary>The quantity of a cryptocurrency asset. This is a decimal number with a scale defined for each cryptocurrency by its founders. For example, Bitcoin (BTC) has 8 as its scale, Ethereum (ETH) has 18 as its scale. The PayPal Cryptocurrency platform handles the scale to 8 digits for Bitcoin. including its forks or offshoots, as well as Ethereum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The quantity of a cryptocurrency asset in the currency&apos;s sub units.&lt;br/&gt;Amount is an integer in a string format.&lt;br/&gt;Floating point should be avoided to avoid precision errors. For example: &lt;li&gt;Bitcoin(BTC) has 8 decimals,&lt;/li&gt; so 1 BTC will be represented as 100000000 (1 followed by 8 zeroes). &lt;li&gt;Ethereum(ETH) has 18 decimals,&lt;/li&gt; so 1 ETH will be represented as 1000000000000000000 (1 followed by 18 zeroes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuantityInSubunits { get => _explicitNullValueQuantityInSubunits; set { _explicitNullValueQuantityInSubunits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_in_subunits"); else _explicitNullProperties?.Remove("quantity_in_subunits"); } }
+        public string? QuantityInSubunits { get => _explicitNullValueQuantityInSubunits; set { _explicitNullValueQuantityInSubunits = value; AdditionalData?.Remove("quantity_in_subunits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_in_subunits"); else _explicitNullProperties?.Remove("quantity_in_subunits"); } }
         private string? _explicitNullValueQuantityInSubunits = default!;
 #nullable restore
 #else
-        public string QuantityInSubunits { get => _explicitNullValueQuantityInSubunits; set { _explicitNullValueQuantityInSubunits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_in_subunits"); else _explicitNullProperties?.Remove("quantity_in_subunits"); } }
+        public string QuantityInSubunits { get => _explicitNullValueQuantityInSubunits; set { _explicitNullValueQuantityInSubunits = value; AdditionalData?.Remove("quantity_in_subunits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_in_subunits"); else _explicitNullProperties?.Remove("quantity_in_subunits"); } }
         private string _explicitNullValueQuantityInSubunits = default!;
 #endif
         /// <summary>
@@ -77,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "asset_symbol", n => { AssetSymbol = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol>(); } },
+                { "asset_symbol", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAssetSymbol = default; _explicitNullProperties?.Remove("asset_symbol"); AdditionalData["asset_symbol"] = unknown; } else { AssetSymbol = parsed; AdditionalData.Remove("asset_symbol"); } } },
                 { "decimals", n => { Decimals = n.GetIntValue(); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "quantity_in_subunits", n => { QuantityInSubunits = n.GetStringValue(); } },

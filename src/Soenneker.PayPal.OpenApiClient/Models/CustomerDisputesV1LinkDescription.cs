@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("href") is { } nullNodeHref && nullNodeHref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Href = null;
-            if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
-            if (parseNode.GetChildNode("rel") is { } nullNodeRel && nullNodeRel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rel = null;
+            if (parseNode.GetChildNode("href") is null) { _explicitNullValueHref = default!; _explicitNullProperties?.Remove("href"); }
+            else if (parseNode.GetChildNode("href") is { } nullNodeHref && nullNodeHref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Href = null;
+            if (parseNode.GetChildNode("method") is null) { _explicitNullValueMethod = default!; _explicitNullProperties?.Remove("method"); }
+            else if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
+            if (parseNode.GetChildNode("rel") is null) { _explicitNullValueRel = default!; _explicitNullProperties?.Remove("rel"); }
+            else if (parseNode.GetChildNode("rel") is { } nullNodeRel && nullNodeRel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,24 +31,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The complete target URL. To make the related call, combine the method with this [URI Template-formatted](https://tools.ietf.org/html/rfc6570) link. For pre-processing, include the `$`, `(`, and `)` characters. The `href` is the key HATEOAS component that links a completed call with a subsequent call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Href { get => _explicitNullValueHref; set { _explicitNullValueHref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("href"); else _explicitNullProperties?.Remove("href"); } }
+        public string? Href { get => _explicitNullValueHref; set { _explicitNullValueHref = value; AdditionalData?.Remove("href"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("href"); else _explicitNullProperties?.Remove("href"); } }
         private string? _explicitNullValueHref = default!;
 #nullable restore
 #else
-        public string Href { get => _explicitNullValueHref; set { _explicitNullValueHref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("href"); else _explicitNullProperties?.Remove("href"); } }
+        public string Href { get => _explicitNullValueHref; set { _explicitNullValueHref = value; AdditionalData?.Remove("href"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("href"); else _explicitNullProperties?.Remove("href"); } }
         private string _explicitNullValueHref = default!;
 #endif
         /// <summary>The HTTP method required to make the related call.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescriptionMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescriptionMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescriptionMethod? _explicitNullValueMethod = default!;
         /// <summary>The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rel { get => _explicitNullValueRel; set { _explicitNullValueRel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rel"); else _explicitNullProperties?.Remove("rel"); } }
+        public string? Rel { get => _explicitNullValueRel; set { _explicitNullValueRel = value; AdditionalData?.Remove("rel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rel"); else _explicitNullProperties?.Remove("rel"); } }
         private string? _explicitNullValueRel = default!;
 #nullable restore
 #else
-        public string Rel { get => _explicitNullValueRel; set { _explicitNullValueRel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rel"); else _explicitNullProperties?.Remove("rel"); } }
+        public string Rel { get => _explicitNullValueRel; set { _explicitNullValueRel = value; AdditionalData?.Remove("rel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rel"); else _explicitNullProperties?.Remove("rel"); } }
         private string _explicitNullValueRel = default!;
 #endif
         /// <summary>
@@ -74,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "href", n => { Href = n.GetStringValue(); } },
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescriptionMethod>(); } },
+                { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1LinkDescriptionMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },
                 { "rel", n => { Rel = n.GetStringValue(); } },
             };
         }

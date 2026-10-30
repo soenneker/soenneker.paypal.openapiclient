@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
-            if (parseNode.GetChildNode("phone_type") is { } nullNodePhoneType && nullNodePhoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneType = null;
+            if (parseNode.GetChildNode("phone_number") is null) { _explicitNullValuePhoneNumber = default!; _explicitNullProperties?.Remove("phone_number"); }
+            else if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("phone_type") is null) { _explicitNullValuePhoneType = default!; _explicitNullProperties?.Remove("phone_type"); }
+            else if (parseNode.GetChildNode("phone_type") is { } nullNodePhoneType && nullNodePhoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The phone number, in its canonical international [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164/en).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>The phone type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneType? PhoneType { get => _explicitNullValuePhoneType; set { _explicitNullValuePhoneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_type"); else _explicitNullProperties?.Remove("phone_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneType? PhoneType { get => _explicitNullValuePhoneType; set { _explicitNullValuePhoneType = value; AdditionalData?.Remove("phone_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_type"); else _explicitNullProperties?.Remove("phone_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneType? _explicitNullValuePhoneType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithType"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "phone_number", n => { PhoneNumber = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneWithTypePhoneNumber.CreateFromDiscriminatorValue); } },
-                { "phone_type", n => { PhoneType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneType>(); } },
+                { "phone_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PhoneType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePhoneType = default; _explicitNullProperties?.Remove("phone_type"); AdditionalData["phone_type"] = unknown; } else { PhoneType = parsed; AdditionalData.Remove("phone_type"); } } },
             };
         }
         /// <summary>

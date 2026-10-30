@@ -43,6 +43,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PlansDeactivate404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.PlansDeactivate422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,8 +61,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.PlansDeactivate404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.PlansDeactivate422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Pla
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/billing_subscriptions_v1/v1/billing/plans/{id}/deactivate", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

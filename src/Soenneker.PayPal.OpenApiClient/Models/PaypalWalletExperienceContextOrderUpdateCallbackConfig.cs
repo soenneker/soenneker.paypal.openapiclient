@@ -18,8 +18,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("callback_events") is { } nullNodeCallbackEvents && nullNodeCallbackEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackEvents = null;
-            if (parseNode.GetChildNode("callback_url") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("callback_events") is null) { _explicitNullValueCallbackEvents = default!; _explicitNullProperties?.Remove("callback_events"); }
+            else if (parseNode.GetChildNode("callback_events") is { } nullNodeCallbackEvents && nullNodeCallbackEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackEvents = null;
+            if (parseNode.GetChildNode("callback_url") is null) { _explicitNullValueCallbackUrl = default!; _explicitNullProperties?.Remove("callback_url"); }
+            else if (parseNode.GetChildNode("callback_url") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of callback events merchant can subscribe to for the corresponding callback url.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?>? CallbackEvents { get => _explicitNullValueCallbackEvents; set { _explicitNullValueCallbackEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_events"); else _explicitNullProperties?.Remove("callback_events"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?>? CallbackEvents { get => _explicitNullValueCallbackEvents; set { _explicitNullValueCallbackEvents = value; AdditionalData?.Remove("callback_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_events"); else _explicitNullProperties?.Remove("callback_events"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?>? _explicitNullValueCallbackEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?> CallbackEvents { get => _explicitNullValueCallbackEvents; set { _explicitNullValueCallbackEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_events"); else _explicitNullProperties?.Remove("callback_events"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?> CallbackEvents { get => _explicitNullValueCallbackEvents; set { _explicitNullValueCallbackEvents = value; AdditionalData?.Remove("callback_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_events"); else _explicitNullProperties?.Remove("callback_events"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.CallbackConfigurationCallbackEventsItem?> _explicitNullValueCallbackEvents = default!;
 #endif
         /// <summary>Merchant provided CallBack url.PayPal/Venmo will use this url to call the merchant back when the events occur .PayPal/Venmo expects a secured url usually in the https format.merchant can append the cart id or other params part of the url as query or path params.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
         private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
         private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>

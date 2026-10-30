@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("term_type") is { } nullNodeTermType && nullNodeTermType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermType = null;
+            if (parseNode.GetChildNode("term_type") is null) { _explicitNullValueTermType = default!; _explicitNullProperties?.Remove("term_type"); }
+            else if (parseNode.GetChildNode("term_type") is { } nullNodeTermType && nullNodeTermType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The payment term. Payment can be due upon receipt, a specified date, or in a set number of days.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType? TermType { get => _explicitNullValueTermType; set { _explicitNullValueTermType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("term_type"); else _explicitNullProperties?.Remove("term_type"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType? TermType { get => _explicitNullValueTermType; set { _explicitNullValueTermType = value; AdditionalData?.Remove("term_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("term_type"); else _explicitNullProperties?.Remove("term_type"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType? _explicitNullValueTermType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentTerm"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "term_type", n => { TermType = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType>(); } },
+                { "term_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTermType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTermType = default; _explicitNullProperties?.Remove("term_type"); AdditionalData["term_type"] = unknown; } else { TermType = parsed; AdditionalData.Remove("term_type"); } } },
             };
         }
         /// <summary>

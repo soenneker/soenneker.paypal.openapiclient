@@ -17,8 +17,10 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
-            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("cancel_url") is null) { _explicitNullValueCancelUrl = default!; _explicitNullProperties?.Remove("cancel_url"); }
+            else if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
+            if (parseNode.GetChildNode("return_url") is null) { _explicitNullValueReturnUrl = default!; _explicitNullProperties?.Remove("return_url"); }
+            else if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The cancel_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextCancelUrl _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.CardExperienceContextReturnUrl _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>

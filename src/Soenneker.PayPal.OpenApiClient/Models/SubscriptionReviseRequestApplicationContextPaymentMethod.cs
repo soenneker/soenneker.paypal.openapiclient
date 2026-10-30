@@ -18,13 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payee_preferred") is { } nullNodePayeePreferred && nullNodePayeePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeePreferred = null;
+            if (parseNode.GetChildNode("payee_preferred") is null) { _explicitNullValuePayeePreferred = default!; _explicitNullProperties?.Remove("payee_preferred"); }
+            else if (parseNode.GetChildNode("payee_preferred") is { } nullNodePayeePreferred && nullNodePayeePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeePreferred = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant-preferred payment methods.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference? PayeePreferred { get => _explicitNullValuePayeePreferred; set { _explicitNullValuePayeePreferred = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_preferred"); else _explicitNullProperties?.Remove("payee_preferred"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference? PayeePreferred { get => _explicitNullValuePayeePreferred; set { _explicitNullValuePayeePreferred = value; AdditionalData?.Remove("payee_preferred"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_preferred"); else _explicitNullProperties?.Remove("payee_preferred"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference? _explicitNullValuePayeePreferred = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseRequestApplicationContextPaymentMethod"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payee_preferred", n => { PayeePreferred = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference>(); } },
+                { "payee_preferred", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PayeePaymentMethodPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePayeePreferred = default; _explicitNullProperties?.Remove("payee_preferred"); AdditionalData["payee_preferred"] = unknown; } else { PayeePreferred = parsed; AdditionalData.Remove("payee_preferred"); } } },
             };
         }
         /// <summary>

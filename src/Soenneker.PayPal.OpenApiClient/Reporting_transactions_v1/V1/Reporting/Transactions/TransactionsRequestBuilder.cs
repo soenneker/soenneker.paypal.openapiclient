@@ -39,6 +39,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +50,11 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1ErrorDefaultError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists transactions. Specify one or more query parameters to filter the transaction that appear in the response.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;If you specify one or more optional query parameters, the &lt;code&gt;ending_balance&lt;/code&gt; response field is empty.&lt;/li&gt;&lt;li&gt;It takes a maximum of three hours for executed transactions to appear in the list transactions call.&lt;/li&gt;&lt;li&gt;This call lists transaction for the previous three years.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
@@ -65,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/reporting_transactions_v1/v1/reporting/transactions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

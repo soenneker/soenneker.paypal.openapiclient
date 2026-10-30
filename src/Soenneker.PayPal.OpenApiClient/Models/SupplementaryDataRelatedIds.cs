@@ -17,9 +17,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authorization_id") is { } nullNodeAuthorizationId && nullNodeAuthorizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationId = null;
-            if (parseNode.GetChildNode("capture_id") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
-            if (parseNode.GetChildNode("order_id") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
+            if (parseNode.GetChildNode("authorization_id") is null) { _explicitNullValueAuthorizationId = default!; _explicitNullProperties?.Remove("authorization_id"); }
+            else if (parseNode.GetChildNode("authorization_id") is { } nullNodeAuthorizationId && nullNodeAuthorizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationId = null;
+            if (parseNode.GetChildNode("capture_id") is null) { _explicitNullValueCaptureId = default!; _explicitNullProperties?.Remove("capture_id"); }
+            else if (parseNode.GetChildNode("capture_id") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
+            if (parseNode.GetChildNode("order_id") is null) { _explicitNullValueOrderId = default!; _explicitNullProperties?.Remove("order_id"); }
+            else if (parseNode.GetChildNode("order_id") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Authorization ID related to the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizationId { get => _explicitNullValueAuthorizationId; set { _explicitNullValueAuthorizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_id"); else _explicitNullProperties?.Remove("authorization_id"); } }
+        public string? AuthorizationId { get => _explicitNullValueAuthorizationId; set { _explicitNullValueAuthorizationId = value; AdditionalData?.Remove("authorization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_id"); else _explicitNullProperties?.Remove("authorization_id"); } }
         private string? _explicitNullValueAuthorizationId = default!;
 #nullable restore
 #else
-        public string AuthorizationId { get => _explicitNullValueAuthorizationId; set { _explicitNullValueAuthorizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_id"); else _explicitNullProperties?.Remove("authorization_id"); } }
+        public string AuthorizationId { get => _explicitNullValueAuthorizationId; set { _explicitNullValueAuthorizationId = value; AdditionalData?.Remove("authorization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_id"); else _explicitNullProperties?.Remove("authorization_id"); } }
         private string _explicitNullValueAuthorizationId = default!;
 #endif
         /// <summary>Capture ID related to the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; AdditionalData?.Remove("capture_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
         private string? _explicitNullValueCaptureId = default!;
 #nullable restore
 #else
-        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; AdditionalData?.Remove("capture_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
         private string _explicitNullValueCaptureId = default!;
 #endif
         /// <summary>Order ID related to the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
+        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; AdditionalData?.Remove("order_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
         private string? _explicitNullValueOrderId = default!;
 #nullable restore
 #else
-        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
+        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; AdditionalData?.Remove("order_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
         private string _explicitNullValueOrderId = default!;
 #endif
         /// <summary>

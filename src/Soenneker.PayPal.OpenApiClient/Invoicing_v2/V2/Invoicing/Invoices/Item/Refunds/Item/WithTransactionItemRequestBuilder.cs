@@ -42,6 +42,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicesRefundsDelete403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,8 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.InvoicesRefundsDelete403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error404.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Error500.CreateFromDiscriminatorValue },
-                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ErrorDefaultError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -77,7 +77,7 @@ namespace Soenneker.PayPal.OpenApiClient.Invoicing_v2.V2.Invoicing.Invoices.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api-m.sandbox.paypal.com", "/invoicing_v2/v2/invoicing/invoices/{invoiceId}/refunds/{transactionId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -18,32 +18,36 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auto_bill_outstanding") is { } nullNodeAutoBillOutstanding && nullNodeAutoBillOutstanding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoBillOutstanding = null;
-            if (parseNode.GetChildNode("payment_failure_threshold") is { } nullNodePaymentFailureThreshold && nullNodePaymentFailureThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFailureThreshold = null;
-            if (parseNode.GetChildNode("setup_fee") is { } nullNodeSetupFee && nullNodeSetupFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFee = null;
-            if (parseNode.GetChildNode("setup_fee_failure_action") is { } nullNodeSetupFeeFailureAction && nullNodeSetupFeeFailureAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFeeFailureAction = null;
+            if (parseNode.GetChildNode("auto_bill_outstanding") is null) { _explicitNullValueAutoBillOutstanding = default!; _explicitNullProperties?.Remove("auto_bill_outstanding"); }
+            else if (parseNode.GetChildNode("auto_bill_outstanding") is { } nullNodeAutoBillOutstanding && nullNodeAutoBillOutstanding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoBillOutstanding = null;
+            if (parseNode.GetChildNode("payment_failure_threshold") is null) { _explicitNullValuePaymentFailureThreshold = default!; _explicitNullProperties?.Remove("payment_failure_threshold"); }
+            else if (parseNode.GetChildNode("payment_failure_threshold") is { } nullNodePaymentFailureThreshold && nullNodePaymentFailureThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFailureThreshold = null;
+            if (parseNode.GetChildNode("setup_fee") is null) { _explicitNullValueSetupFee = default!; _explicitNullProperties?.Remove("setup_fee"); }
+            else if (parseNode.GetChildNode("setup_fee") is { } nullNodeSetupFee && nullNodeSetupFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFee = null;
+            if (parseNode.GetChildNode("setup_fee_failure_action") is null) { _explicitNullValueSetupFeeFailureAction = default!; _explicitNullProperties?.Remove("setup_fee_failure_action"); }
+            else if (parseNode.GetChildNode("setup_fee_failure_action") is { } nullNodeSetupFeeFailureAction && nullNodeSetupFeeFailureAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFeeFailureAction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether to automatically bill the outstanding amount in the next billing cycle.</summary>
-        public bool? AutoBillOutstanding { get => _explicitNullValueAutoBillOutstanding; set { _explicitNullValueAutoBillOutstanding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_bill_outstanding"); else _explicitNullProperties?.Remove("auto_bill_outstanding"); } }
+        public bool? AutoBillOutstanding { get => _explicitNullValueAutoBillOutstanding; set { _explicitNullValueAutoBillOutstanding = value; AdditionalData?.Remove("auto_bill_outstanding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_bill_outstanding"); else _explicitNullProperties?.Remove("auto_bill_outstanding"); } }
         private bool? _explicitNullValueAutoBillOutstanding = default!;
         /// <summary>The maximum number of payment failures before a subscription is suspended. For example, if `payment_failure_threshold` is `2`, the subscription automatically updates to the `SUSPEND` state if two consecutive payments fail.</summary>
-        public int? PaymentFailureThreshold { get => _explicitNullValuePaymentFailureThreshold; set { _explicitNullValuePaymentFailureThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_failure_threshold"); else _explicitNullProperties?.Remove("payment_failure_threshold"); } }
+        public int? PaymentFailureThreshold { get => _explicitNullValuePaymentFailureThreshold; set { _explicitNullValuePaymentFailureThreshold = value; AdditionalData?.Remove("payment_failure_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_failure_threshold"); else _explicitNullProperties?.Remove("payment_failure_threshold"); } }
         private int? _explicitNullValuePaymentFailureThreshold = default!;
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money? SetupFee { get => _explicitNullValueSetupFee; set { _explicitNullValueSetupFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee"); else _explicitNullProperties?.Remove("setup_fee"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money? SetupFee { get => _explicitNullValueSetupFee; set { _explicitNullValueSetupFee = value; AdditionalData?.Remove("setup_fee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee"); else _explicitNullProperties?.Remove("setup_fee"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money? _explicitNullValueSetupFee = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Money SetupFee { get => _explicitNullValueSetupFee; set { _explicitNullValueSetupFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee"); else _explicitNullProperties?.Remove("setup_fee"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Money SetupFee { get => _explicitNullValueSetupFee; set { _explicitNullValueSetupFee = value; AdditionalData?.Remove("setup_fee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee"); else _explicitNullProperties?.Remove("setup_fee"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.Money _explicitNullValueSetupFee = default!;
 #endif
         /// <summary>The action to take on the subscription if the initial payment for the setup fails.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction? SetupFeeFailureAction { get => _explicitNullValueSetupFeeFailureAction; set { _explicitNullValueSetupFeeFailureAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee_failure_action"); else _explicitNullProperties?.Remove("setup_fee_failure_action"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction? SetupFeeFailureAction { get => _explicitNullValueSetupFeeFailureAction; set { _explicitNullValueSetupFeeFailureAction = value; AdditionalData?.Remove("setup_fee_failure_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_fee_failure_action"); else _explicitNullProperties?.Remove("setup_fee_failure_action"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction? _explicitNullValueSetupFeeFailureAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferences"/> and sets the default values.
@@ -75,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "auto_bill_outstanding", n => { AutoBillOutstanding = n.GetBoolValue(); } },
                 { "payment_failure_threshold", n => { PaymentFailureThreshold = n.GetIntValue(); } },
                 { "setup_fee", n => { SetupFee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Money>(global::Soenneker.PayPal.OpenApiClient.Models.Money.CreateFromDiscriminatorValue); } },
-                { "setup_fee_failure_action", n => { SetupFeeFailureAction = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction>(); } },
+                { "setup_fee_failure_action", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesSetupFeeFailureAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetupFeeFailureAction = default; _explicitNullProperties?.Remove("setup_fee_failure_action"); AdditionalData["setup_fee_failure_action"] = unknown; } else { SetupFeeFailureAction = parsed; AdditionalData.Remove("setup_fee_failure_action"); } } },
             };
         }
         /// <summary>

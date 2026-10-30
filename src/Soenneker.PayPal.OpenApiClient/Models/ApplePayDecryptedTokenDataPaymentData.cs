@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cryptogram") is { } nullNodeCryptogram && nullNodeCryptogram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cryptogram = null;
-            if (parseNode.GetChildNode("eci_indicator") is { } nullNodeEciIndicator && nullNodeEciIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EciIndicator = null;
-            if (parseNode.GetChildNode("emv_data") is { } nullNodeEmvData && nullNodeEmvData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmvData = null;
-            if (parseNode.GetChildNode("pin") is { } nullNodePin && nullNodePin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pin = null;
+            if (parseNode.GetChildNode("cryptogram") is null) { _explicitNullValueCryptogram = default!; _explicitNullProperties?.Remove("cryptogram"); }
+            else if (parseNode.GetChildNode("cryptogram") is { } nullNodeCryptogram && nullNodeCryptogram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cryptogram = null;
+            if (parseNode.GetChildNode("eci_indicator") is null) { _explicitNullValueEciIndicator = default!; _explicitNullProperties?.Remove("eci_indicator"); }
+            else if (parseNode.GetChildNode("eci_indicator") is { } nullNodeEciIndicator && nullNodeEciIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EciIndicator = null;
+            if (parseNode.GetChildNode("emv_data") is null) { _explicitNullValueEmvData = default!; _explicitNullProperties?.Remove("emv_data"); }
+            else if (parseNode.GetChildNode("emv_data") is { } nullNodeEmvData && nullNodeEmvData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmvData = null;
+            if (parseNode.GetChildNode("pin") is null) { _explicitNullValuePin = default!; _explicitNullProperties?.Remove("pin"); }
+            else if (parseNode.GetChildNode("pin") is { } nullNodePin && nullNodePin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pin = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Online payment cryptogram, as defined by 3D Secure. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        public string? Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; AdditionalData?.Remove("cryptogram"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
         private string? _explicitNullValueCryptogram = default!;
 #nullable restore
 #else
-        public string Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        public string Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; AdditionalData?.Remove("cryptogram"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
         private string _explicitNullValueCryptogram = default!;
 #endif
         /// <summary>ECI indicator, as defined by 3- Secure. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EciIndicator { get => _explicitNullValueEciIndicator; set { _explicitNullValueEciIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci_indicator"); else _explicitNullProperties?.Remove("eci_indicator"); } }
+        public string? EciIndicator { get => _explicitNullValueEciIndicator; set { _explicitNullValueEciIndicator = value; AdditionalData?.Remove("eci_indicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci_indicator"); else _explicitNullProperties?.Remove("eci_indicator"); } }
         private string? _explicitNullValueEciIndicator = default!;
 #nullable restore
 #else
-        public string EciIndicator { get => _explicitNullValueEciIndicator; set { _explicitNullValueEciIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci_indicator"); else _explicitNullProperties?.Remove("eci_indicator"); } }
+        public string EciIndicator { get => _explicitNullValueEciIndicator; set { _explicitNullValueEciIndicator = value; AdditionalData?.Remove("eci_indicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci_indicator"); else _explicitNullProperties?.Remove("eci_indicator"); } }
         private string _explicitNullValueEciIndicator = default!;
 #endif
         /// <summary>Encoded Apple Pay EMV Payment Structure used for payments in China. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmvData { get => _explicitNullValueEmvData; set { _explicitNullValueEmvData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emv_data"); else _explicitNullProperties?.Remove("emv_data"); } }
+        public string? EmvData { get => _explicitNullValueEmvData; set { _explicitNullValueEmvData = value; AdditionalData?.Remove("emv_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emv_data"); else _explicitNullProperties?.Remove("emv_data"); } }
         private string? _explicitNullValueEmvData = default!;
 #nullable restore
 #else
-        public string EmvData { get => _explicitNullValueEmvData; set { _explicitNullValueEmvData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emv_data"); else _explicitNullProperties?.Remove("emv_data"); } }
+        public string EmvData { get => _explicitNullValueEmvData; set { _explicitNullValueEmvData = value; AdditionalData?.Remove("emv_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emv_data"); else _explicitNullProperties?.Remove("emv_data"); } }
         private string _explicitNullValueEmvData = default!;
 #endif
         /// <summary>Bank Key encrypted Apple Pay PIN. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        public string? Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; AdditionalData?.Remove("pin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
         private string? _explicitNullValuePin = default!;
 #nullable restore
 #else
-        public string Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        public string Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; AdditionalData?.Remove("pin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
         private string _explicitNullValuePin = default!;
 #endif
         /// <summary>

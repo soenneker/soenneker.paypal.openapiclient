@@ -18,10 +18,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alias_key") is { } nullNodeAliasKey && nullNodeAliasKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasKey = null;
-            if (parseNode.GetChildNode("alias_label") is { } nullNodeAliasLabel && nullNodeAliasLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasLabel = null;
-            if (parseNode.GetChildNode("auth_code") is { } nullNodeAuthCode && nullNodeAuthCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthCode = null;
-            if (parseNode.GetChildNode("consumer_reference") is { } nullNodeConsumerReference && nullNodeConsumerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumerReference = null;
+            if (parseNode.GetChildNode("alias_key") is null) { _explicitNullValueAliasKey = default!; _explicitNullProperties?.Remove("alias_key"); }
+            else if (parseNode.GetChildNode("alias_key") is { } nullNodeAliasKey && nullNodeAliasKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasKey = null;
+            if (parseNode.GetChildNode("alias_label") is null) { _explicitNullValueAliasLabel = default!; _explicitNullProperties?.Remove("alias_label"); }
+            else if (parseNode.GetChildNode("alias_label") is { } nullNodeAliasLabel && nullNodeAliasLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasLabel = null;
+            if (parseNode.GetChildNode("auth_code") is null) { _explicitNullValueAuthCode = default!; _explicitNullProperties?.Remove("auth_code"); }
+            else if (parseNode.GetChildNode("auth_code") is { } nullNodeAuthCode && nullNodeAuthCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthCode = null;
+            if (parseNode.GetChildNode("consumer_reference") is null) { _explicitNullValueConsumerReference = default!; _explicitNullProperties?.Remove("consumer_reference"); }
+            else if (parseNode.GetChildNode("consumer_reference") is { } nullNodeConsumerReference && nullNodeConsumerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumerReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>A Blik-defined identifier for a specific Blik-enabled bank account that is associated with a given merchant. Used only in conjunction with a Consumer Reference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AliasKey { get => _explicitNullValueAliasKey; set { _explicitNullValueAliasKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_key"); else _explicitNullProperties?.Remove("alias_key"); } }
+        public string? AliasKey { get => _explicitNullValueAliasKey; set { _explicitNullValueAliasKey = value; AdditionalData?.Remove("alias_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_key"); else _explicitNullProperties?.Remove("alias_key"); } }
         private string? _explicitNullValueAliasKey = default!;
 #nullable restore
 #else
-        public string AliasKey { get => _explicitNullValueAliasKey; set { _explicitNullValueAliasKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_key"); else _explicitNullProperties?.Remove("alias_key"); } }
+        public string AliasKey { get => _explicitNullValueAliasKey; set { _explicitNullValueAliasKey = value; AdditionalData?.Remove("alias_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_key"); else _explicitNullProperties?.Remove("alias_key"); } }
         private string _explicitNullValueAliasKey = default!;
 #endif
         /// <summary>A bank defined identifier used as a display name to allow the payer to differentiate between multiple registered bank accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AliasLabel { get => _explicitNullValueAliasLabel; set { _explicitNullValueAliasLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_label"); else _explicitNullProperties?.Remove("alias_label"); } }
+        public string? AliasLabel { get => _explicitNullValueAliasLabel; set { _explicitNullValueAliasLabel = value; AdditionalData?.Remove("alias_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_label"); else _explicitNullProperties?.Remove("alias_label"); } }
         private string? _explicitNullValueAliasLabel = default!;
 #nullable restore
 #else
-        public string AliasLabel { get => _explicitNullValueAliasLabel; set { _explicitNullValueAliasLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_label"); else _explicitNullProperties?.Remove("alias_label"); } }
+        public string AliasLabel { get => _explicitNullValueAliasLabel; set { _explicitNullValueAliasLabel = value; AdditionalData?.Remove("alias_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_label"); else _explicitNullProperties?.Remove("alias_label"); } }
         private string _explicitNullValueAliasLabel = default!;
 #endif
         /// <summary>The 6-digit code used to authenticate a consumer within BLIK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
+        public string? AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; AdditionalData?.Remove("auth_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
         private string? _explicitNullValueAuthCode = default!;
 #nullable restore
 #else
-        public string AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
+        public string AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; AdditionalData?.Remove("auth_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
         private string _explicitNullValueAuthCode = default!;
 #endif
         /// <summary>The merchant generated, unique reference serving as a primary identifier for accounts connected between Blik and a merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
+        public string? ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; AdditionalData?.Remove("consumer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
         private string? _explicitNullValueConsumerReference = default!;
 #nullable restore
 #else
-        public string ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
+        public string ConsumerReference { get => _explicitNullValueConsumerReference; set { _explicitNullValueConsumerReference = value; AdditionalData?.Remove("consumer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consumer_reference"); else _explicitNullProperties?.Remove("consumer_reference"); } }
         private string _explicitNullValueConsumerReference = default!;
 #endif
         /// <summary>

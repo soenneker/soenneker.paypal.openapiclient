@@ -18,9 +18,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_cycles") is { } nullNodeBillingCycles && nullNodeBillingCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycles = null;
-            if (parseNode.GetChildNode("payment_preferences") is { } nullNodePaymentPreferences && nullNodePaymentPreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentPreferences = null;
-            if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
+            if (parseNode.GetChildNode("billing_cycles") is null) { _explicitNullValueBillingCycles = default!; _explicitNullProperties?.Remove("billing_cycles"); }
+            else if (parseNode.GetChildNode("billing_cycles") is { } nullNodeBillingCycles && nullNodeBillingCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycles = null;
+            if (parseNode.GetChildNode("payment_preferences") is null) { _explicitNullValuePaymentPreferences = default!; _explicitNullProperties?.Remove("payment_preferences"); }
+            else if (parseNode.GetChildNode("payment_preferences") is { } nullNodePaymentPreferences && nullNodePaymentPreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentPreferences = null;
+            if (parseNode.GetChildNode("taxes") is null) { _explicitNullValueTaxes = default!; _explicitNullProperties?.Remove("taxes"); }
+            else if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of billing cycles for trial billing and regular billing. The subscription billing cycle definition has to adhere to the plan billing cycle definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride>? BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride>? BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; AdditionalData?.Remove("billing_cycles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride>? _explicitNullValueBillingCycles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride> BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride> BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; AdditionalData?.Remove("billing_cycles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
         private List<global::Soenneker.PayPal.OpenApiClient.Models.BillingCycleOverride> _explicitNullValueBillingCycles = default!;
 #endif
         /// <summary>The payment preferences to override at subscription level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride? PaymentPreferences { get => _explicitNullValuePaymentPreferences; set { _explicitNullValuePaymentPreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_preferences"); else _explicitNullProperties?.Remove("payment_preferences"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride? PaymentPreferences { get => _explicitNullValuePaymentPreferences; set { _explicitNullValuePaymentPreferences = value; AdditionalData?.Remove("payment_preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_preferences"); else _explicitNullProperties?.Remove("payment_preferences"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride? _explicitNullValuePaymentPreferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride PaymentPreferences { get => _explicitNullValuePaymentPreferences; set { _explicitNullValuePaymentPreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_preferences"); else _explicitNullProperties?.Remove("payment_preferences"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride PaymentPreferences { get => _explicitNullValuePaymentPreferences; set { _explicitNullValuePaymentPreferences = value; AdditionalData?.Remove("payment_preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_preferences"); else _explicitNullProperties?.Remove("payment_preferences"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaymentPreferencesOverride _explicitNullValuePaymentPreferences = default!;
 #endif
         /// <summary>The tax details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride? _explicitNullValueTaxes = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.TaxesOverride _explicitNullValueTaxes = default!;
 #endif
         /// <summary>
