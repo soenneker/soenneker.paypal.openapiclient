@@ -12,23 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Adjudication : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adjudication_time") is { } nullNodeAdjudicationTime && nullNodeAdjudicationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjudicationTime = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdjudicationTime { get; set; }
+        public string? AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
+        private string? _explicitNullValueAdjudicationTime = default!;
 #nullable restore
 #else
-        public string AdjudicationTime { get; set; }
+        public string AdjudicationTime { get => _explicitNullValueAdjudicationTime; set { _explicitNullValueAdjudicationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjudication_time"); else _explicitNullProperties?.Remove("adjudication_time"); } }
+        private string _explicitNullValueAdjudicationTime = default!;
 #endif
         /// <summary>The stage in the dispute lifecycle.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage? DisputeLifeCycleStage { get; private set; }
         /// <summary>The reason for the adjudication type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? Reason { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? _explicitNullValueReason = default!;
         /// <summary>The type of adjudication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? Type { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Adjudication"/> and sets the default values.
         /// </summary>
@@ -44,7 +58,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Adjudication CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Adjudication();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Adjudication(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +84,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("adjudication_time", AdjudicationTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>("reason", Reason);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

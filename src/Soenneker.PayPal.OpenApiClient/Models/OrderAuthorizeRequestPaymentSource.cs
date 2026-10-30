@@ -12,136 +12,191 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrderAuthorizeRequestPaymentSource : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("apple_pay") is { } nullNodeApplePay && nullNodeApplePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePay = null;
+            if (parseNode.GetChildNode("bancontact") is { } nullNodeBancontact && nullNodeBancontact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bancontact = null;
+            if (parseNode.GetChildNode("blik") is { } nullNodeBlik && nullNodeBlik.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blik = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("crypto") is { } nullNodeCrypto && nullNodeCrypto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Crypto = null;
+            if (parseNode.GetChildNode("eps") is { } nullNodeEps && nullNodeEps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eps = null;
+            if (parseNode.GetChildNode("giropay") is { } nullNodeGiropay && nullNodeGiropay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Giropay = null;
+            if (parseNode.GetChildNode("google_pay") is { } nullNodeGooglePay && nullNodeGooglePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePay = null;
+            if (parseNode.GetChildNode("ideal") is { } nullNodeIdeal && nullNodeIdeal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ideal = null;
+            if (parseNode.GetChildNode("mybank") is { } nullNodeMybank && nullNodeMybank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mybank = null;
+            if (parseNode.GetChildNode("p24") is { } nullNodeP24 && nullNodeP24.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) P24 = null;
+            if (parseNode.GetChildNode("paypal") is { } nullNodePaypal && nullNodePaypal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypal = null;
+            if (parseNode.GetChildNode("sofort") is { } nullNodeSofort && nullNodeSofort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sofort = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("trustly") is { } nullNodeTrustly && nullNodeTrustly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trustly = null;
+            if (parseNode.GetChildNode("venmo") is { } nullNodeVenmo && nullNodeVenmo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Venmo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ApplePay payment source, allows buyer to pay using ApplePay, both on Web as well as on Native.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay? ApplePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay? ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay? _explicitNullValueApplePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay ApplePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceApplePay _explicitNullValueApplePay = default!;
 #endif
         /// <summary>Bancontact is the most popular online payment in Belgium. [More Details](https://www.bancontact.com/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact? Bancontact { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact? Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact? _explicitNullValueBancontact = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact Bancontact { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBancontact _explicitNullValueBancontact = default!;
 #endif
         /// <summary>BLIK is a mobile payment system, created by Polish Payment Standard in order to allow millions of users to pay in shops, payout cash in ATMs and make online purchases and payments. [More Details](https://blikmobile.pl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik? Blik { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik? Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik? _explicitNullValueBlik = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik Blik { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceBlik _explicitNullValueBlik = default!;
 #endif
         /// <summary>The payment card to use to fund a payment. Can be a credit or debit card.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Passing card number, cvv and expiry directly via the API requires &lt;a href=&quot;https://www.pcisecuritystandards.org/pci_security/completing_self_assessment&quot;&gt; PCI SAQ D compliance&lt;/a&gt;. &lt;br&gt;*PayPal offers a mechanism by which you do not have to take on the &lt;strong&gt;PCI SAQ D&lt;/strong&gt; burden by using hosted fields - refer to &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/integrate/&quot;&gt;this Integration Guide&lt;/a&gt;*.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequest? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequest Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequest _explicitNullValueCard = default!;
 #endif
         /// <summary>Indicates that Crypto Wallet is the payment source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto? Crypto { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto? Crypto { get => _explicitNullValueCrypto; set { _explicitNullValueCrypto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto"); else _explicitNullProperties?.Remove("crypto"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto? _explicitNullValueCrypto = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto Crypto { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto Crypto { get => _explicitNullValueCrypto; set { _explicitNullValueCrypto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto"); else _explicitNullProperties?.Remove("crypto"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceCrypto _explicitNullValueCrypto = default!;
 #endif
         /// <summary>The eps transfer is an online payment method developed by many Austrian banks. [More Details](https://www.eps-ueberweisung.at/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps? Eps { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps? Eps { get => _explicitNullValueEps; set { _explicitNullValueEps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eps"); else _explicitNullProperties?.Remove("eps"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps? _explicitNullValueEps = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps Eps { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps Eps { get => _explicitNullValueEps; set { _explicitNullValueEps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eps"); else _explicitNullProperties?.Remove("eps"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceEps _explicitNullValueEps = default!;
 #endif
         /// <summary>Giropay is an Internet payment System in Germany, based on online banking. [More Details](https://giropay.de/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay? Giropay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay? Giropay { get => _explicitNullValueGiropay; set { _explicitNullValueGiropay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("giropay"); else _explicitNullProperties?.Remove("giropay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay? _explicitNullValueGiropay = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay Giropay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay Giropay { get => _explicitNullValueGiropay; set { _explicitNullValueGiropay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("giropay"); else _explicitNullProperties?.Remove("giropay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGiropay _explicitNullValueGiropay = default!;
 #endif
         /// <summary>Google Pay payment source, allows buyer to pay using Google Pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay? GooglePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay? GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay? _explicitNullValueGooglePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay GooglePay { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceGooglePay _explicitNullValueGooglePay = default!;
 #endif
         /// <summary>The Dutch payment method iDEAL is an online payment method that enables consumers to pay online through their own bank. [More Details](https://www.ideal.nl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal? Ideal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal? Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal? _explicitNullValueIdeal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal Ideal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceIdeal _explicitNullValueIdeal = default!;
 #endif
         /// <summary>MyBank is an e-authorisation solution which enables safe digital payments and identity authentication through a consumer’s own online banking portal or mobile application. [More Details](https://www.mybank.eu/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank? Mybank { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank? Mybank { get => _explicitNullValueMybank; set { _explicitNullValueMybank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mybank"); else _explicitNullProperties?.Remove("mybank"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank? _explicitNullValueMybank = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank Mybank { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank Mybank { get => _explicitNullValueMybank; set { _explicitNullValueMybank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mybank"); else _explicitNullProperties?.Remove("mybank"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceMybank _explicitNullValueMybank = default!;
 #endif
         /// <summary>P24 (Przelewy24) is a secure and fast online bank transfer service linked to all the major banks in Poland. [More Details](https://www.przelewy24.pl/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24? P24 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24? P24 { get => _explicitNullValueP24; set { _explicitNullValueP24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p24"); else _explicitNullProperties?.Remove("p24"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24? _explicitNullValueP24 = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24 P24 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24 P24 { get => _explicitNullValueP24; set { _explicitNullValueP24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p24"); else _explicitNullProperties?.Remove("p24"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceP24 _explicitNullValueP24 = default!;
 #endif
         /// <summary>Indicates that PayPal Wallet is the payment source. Main use of this selection is to provide additional instructions associated with this choice like vaulting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal? Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal? Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal? _explicitNullValuePaypal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourcePaypal _explicitNullValuePaypal = default!;
 #endif
         /// <summary>SOFORT Banking is a real-time bank transfer payment method that buyers use to transfer funds directly to merchants from their bank accounts. [More Details](https://www.klarna.com/sofort/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort? Sofort { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort? Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort? _explicitNullValueSofort = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort Sofort { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceSofort _explicitNullValueSofort = default!;
 #endif
         /// <summary>The tokenized payment source to fund a payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Token? Token { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Token? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Token? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Token Token { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Token Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Token _explicitNullValueToken = default!;
 #endif
         /// <summary>Trustly is a payment method that allows customers to shop and pay from their bank account. [More Details](https://www.trustly.net/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly? Trustly { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly? Trustly { get => _explicitNullValueTrustly; set { _explicitNullValueTrustly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trustly"); else _explicitNullProperties?.Remove("trustly"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly? _explicitNullValueTrustly = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly Trustly { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly Trustly { get => _explicitNullValueTrustly; set { _explicitNullValueTrustly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trustly"); else _explicitNullProperties?.Remove("trustly"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly _explicitNullValueTrustly = default!;
 #endif
         /// <summary>Information needed to indicate that Venmo is being used to fund the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo? Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo? Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo? _explicitNullValueVenmo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo _explicitNullValueVenmo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource"/> and sets the default values.
@@ -158,7 +213,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.OrderAuthorizeRequestPaymentSource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -209,6 +264,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Token>("token", Token);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceTrustly>("trustly", Trustly);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentSourceVenmo>("venmo", Venmo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

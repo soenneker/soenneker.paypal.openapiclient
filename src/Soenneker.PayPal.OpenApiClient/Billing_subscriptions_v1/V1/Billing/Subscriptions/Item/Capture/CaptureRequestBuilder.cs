@@ -65,6 +65,8 @@ namespace Soenneker.PayPal.OpenApiClient.Billing_subscriptions_v1.V1.Billing.Sub
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsCapture404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionsCapture422Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.Error500.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.Transaction>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

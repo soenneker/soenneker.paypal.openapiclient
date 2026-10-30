@@ -12,21 +12,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PayoutAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("country_transfer_method_currency_selection") is { } nullNodeCountryTransferMethodCurrencySelection && nullNodeCountryTransferMethodCurrencySelection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryTransferMethodCurrencySelection = null;
+            if (parseNode.GetChildNode("kyc_required") is { } nullNodeKycRequired && nullNodeKycRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KycRequired = null;
+            if (parseNode.GetChildNode("marketplace") is { } nullNodeMarketplace && nullNodeMarketplace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Marketplace = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Requested country, transfer method and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection>? CountryTransferMethodCurrencySelection { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection>? CountryTransferMethodCurrencySelection { get => _explicitNullValueCountryTransferMethodCurrencySelection; set { _explicitNullValueCountryTransferMethodCurrencySelection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_transfer_method_currency_selection"); else _explicitNullProperties?.Remove("country_transfer_method_currency_selection"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection>? _explicitNullValueCountryTransferMethodCurrencySelection = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection> CountryTransferMethodCurrencySelection { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection> CountryTransferMethodCurrencySelection { get => _explicitNullValueCountryTransferMethodCurrencySelection; set { _explicitNullValueCountryTransferMethodCurrencySelection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_transfer_method_currency_selection"); else _explicitNullProperties?.Remove("country_transfer_method_currency_selection"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection> _explicitNullValueCountryTransferMethodCurrencySelection = default!;
 #endif
         /// <summary>If `true`, specifies that the Kyc is required for the merchant.</summary>
-        public bool? KycRequired { get; set; }
+        public bool? KycRequired { get => _explicitNullValueKycRequired; set { _explicitNullValueKycRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kyc_required"); else _explicitNullProperties?.Remove("kyc_required"); } }
+        private bool? _explicitNullValueKycRequired = default!;
         /// <summary>If `true`, specifies that the merchant or platform is offering goods or services on behalf of 3rd party sellers.</summary>
-        public bool? Marketplace { get; set; }
+        public bool? Marketplace { get => _explicitNullValueMarketplace; set { _explicitNullValueMarketplace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace"); else _explicitNullProperties?.Remove("marketplace"); } }
+        private bool? _explicitNullValueMarketplace = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CountryTransferMethodCurrencySelection>("country_transfer_method_currency_selection", CountryTransferMethodCurrencySelection);
             writer.WriteBoolValue("kyc_required", KycRequired);
             writer.WriteBoolValue("marketplace", Marketplace);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

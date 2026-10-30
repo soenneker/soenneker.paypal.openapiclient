@@ -12,64 +12,92 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentsPaymentV2AmountBreakdown : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("handling") is { } nullNodeHandling && nullNodeHandling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Handling = null;
+            if (parseNode.GetChildNode("insurance") is { } nullNodeInsurance && nullNodeInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insurance = null;
+            if (parseNode.GetChildNode("item_total") is { } nullNodeItemTotal && nullNodeItemTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemTotal = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("shipping_discount") is { } nullNodeShippingDiscount && nullNodeShippingDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingDiscount = null;
+            if (parseNode.GetChildNode("tax_total") is { } nullNodeTaxTotal && nullNodeTaxTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxTotal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The discount for all items within a given `purchase_unit`. &lt;code&gt;discount.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount? Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount Discount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>The handling fee for all items within a given `purchase_unit`. &lt;code&gt;handling.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling? Handling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling? Handling { get => _explicitNullValueHandling; set { _explicitNullValueHandling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handling"); else _explicitNullProperties?.Remove("handling"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling? _explicitNullValueHandling = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling Handling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling Handling { get => _explicitNullValueHandling; set { _explicitNullValueHandling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handling"); else _explicitNullProperties?.Remove("handling"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownHandling _explicitNullValueHandling = default!;
 #endif
         /// <summary>The insurance fee for all items within a given `purchase_unit`. &lt;code&gt;insurance.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance? Insurance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance? Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance? _explicitNullValueInsurance = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance Insurance { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownInsurance _explicitNullValueInsurance = default!;
 #endif
         /// <summary>The subtotal for all items. Required if the request includes `purchase_units[].items[].unit_amount`. Must equal the sum of `(items[].unit_amount * items[].quantity)` for all items. &lt;code&gt;item_total.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal? ItemTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal? ItemTotal { get => _explicitNullValueItemTotal; set { _explicitNullValueItemTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_total"); else _explicitNullProperties?.Remove("item_total"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal? _explicitNullValueItemTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal ItemTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal ItemTotal { get => _explicitNullValueItemTotal; set { _explicitNullValueItemTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_total"); else _explicitNullProperties?.Remove("item_total"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownItemTotal _explicitNullValueItemTotal = default!;
 #endif
         /// <summary>The shipping fee for all items within a given `purchase_unit`. &lt;code&gt;shipping.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping? Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The shipping discount for all items within a given `purchase_unit`. &lt;code&gt;shipping_discount.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount? ShippingDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount? ShippingDiscount { get => _explicitNullValueShippingDiscount; set { _explicitNullValueShippingDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_discount"); else _explicitNullProperties?.Remove("shipping_discount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount? _explicitNullValueShippingDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount ShippingDiscount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount ShippingDiscount { get => _explicitNullValueShippingDiscount; set { _explicitNullValueShippingDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_discount"); else _explicitNullProperties?.Remove("shipping_discount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount _explicitNullValueShippingDiscount = default!;
 #endif
         /// <summary>The total tax for all items. Required if the request includes `purchase_units.items.tax`. Must equal the sum of `(items[].tax * items[].quantity)` for all items. &lt;code&gt;tax_total.value&lt;/code&gt; can not be a negative number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal? TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal? TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal? _explicitNullValueTaxTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal TaxTotal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal TaxTotal { get => _explicitNullValueTaxTotal; set { _explicitNullValueTaxTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_total"); else _explicitNullProperties?.Remove("tax_total"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal _explicitNullValueTaxTotal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdown(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownShippingDiscount>("shipping_discount", ShippingDiscount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountBreakdownTaxTotal>("tax_total", TaxTotal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,56 +12,81 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddressDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("building_name") is { } nullNodeBuildingName && nullNodeBuildingName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildingName = null;
+            if (parseNode.GetChildNode("delivery_service") is { } nullNodeDeliveryService && nullNodeDeliveryService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryService = null;
+            if (parseNode.GetChildNode("street_name") is { } nullNodeStreetName && nullNodeStreetName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreetName = null;
+            if (parseNode.GetChildNode("street_number") is { } nullNodeStreetNumber && nullNodeStreetNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreetNumber = null;
+            if (parseNode.GetChildNode("street_type") is { } nullNodeStreetType && nullNodeStreetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreetType = null;
+            if (parseNode.GetChildNode("sub_building") is { } nullNodeSubBuilding && nullNodeSubBuilding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubBuilding = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A named locations that represents the premise. Usually a building name or number or collection of buildings with a common name or number. For example, &lt;code&gt;Craven House&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildingName { get; set; }
+        public string? BuildingName { get => _explicitNullValueBuildingName; set { _explicitNullValueBuildingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building_name"); else _explicitNullProperties?.Remove("building_name"); } }
+        private string? _explicitNullValueBuildingName = default!;
 #nullable restore
 #else
-        public string BuildingName { get; set; }
+        public string BuildingName { get => _explicitNullValueBuildingName; set { _explicitNullValueBuildingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building_name"); else _explicitNullProperties?.Remove("building_name"); } }
+        private string _explicitNullValueBuildingName = default!;
 #endif
         /// <summary>The delivery service. Post office box, bag number, or post office name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryService { get; set; }
+        public string? DeliveryService { get => _explicitNullValueDeliveryService; set { _explicitNullValueDeliveryService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_service"); else _explicitNullProperties?.Remove("delivery_service"); } }
+        private string? _explicitNullValueDeliveryService = default!;
 #nullable restore
 #else
-        public string DeliveryService { get; set; }
+        public string DeliveryService { get => _explicitNullValueDeliveryService; set { _explicitNullValueDeliveryService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_service"); else _explicitNullProperties?.Remove("delivery_service"); } }
+        private string _explicitNullValueDeliveryService = default!;
 #endif
         /// <summary>The street name. Just `Drury` in `Drury Lane`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreetName { get; set; }
+        public string? StreetName { get => _explicitNullValueStreetName; set { _explicitNullValueStreetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_name"); else _explicitNullProperties?.Remove("street_name"); } }
+        private string? _explicitNullValueStreetName = default!;
 #nullable restore
 #else
-        public string StreetName { get; set; }
+        public string StreetName { get => _explicitNullValueStreetName; set { _explicitNullValueStreetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_name"); else _explicitNullProperties?.Remove("street_name"); } }
+        private string _explicitNullValueStreetName = default!;
 #endif
         /// <summary>The street number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreetNumber { get; set; }
+        public string? StreetNumber { get => _explicitNullValueStreetNumber; set { _explicitNullValueStreetNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_number"); else _explicitNullProperties?.Remove("street_number"); } }
+        private string? _explicitNullValueStreetNumber = default!;
 #nullable restore
 #else
-        public string StreetNumber { get; set; }
+        public string StreetNumber { get => _explicitNullValueStreetNumber; set { _explicitNullValueStreetNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_number"); else _explicitNullProperties?.Remove("street_number"); } }
+        private string _explicitNullValueStreetNumber = default!;
 #endif
         /// <summary>The street type. For example, avenue, boulevard, road, or expressway.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreetType { get; set; }
+        public string? StreetType { get => _explicitNullValueStreetType; set { _explicitNullValueStreetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_type"); else _explicitNullProperties?.Remove("street_type"); } }
+        private string? _explicitNullValueStreetType = default!;
 #nullable restore
 #else
-        public string StreetType { get; set; }
+        public string StreetType { get => _explicitNullValueStreetType; set { _explicitNullValueStreetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("street_type"); else _explicitNullProperties?.Remove("street_type"); } }
+        private string _explicitNullValueStreetType = default!;
 #endif
         /// <summary>The first-order entity below a named building or location that represents the sub-premises. Usually a single building within a collection of buildings with a common name. Can be a flat, story, floor, room, or apartment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubBuilding { get; set; }
+        public string? SubBuilding { get => _explicitNullValueSubBuilding; set { _explicitNullValueSubBuilding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_building"); else _explicitNullProperties?.Remove("sub_building"); } }
+        private string? _explicitNullValueSubBuilding = default!;
 #nullable restore
 #else
-        public string SubBuilding { get; set; }
+        public string SubBuilding { get => _explicitNullValueSubBuilding; set { _explicitNullValueSubBuilding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_building"); else _explicitNullProperties?.Remove("sub_building"); } }
+        private string _explicitNullValueSubBuilding = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AddressDetails"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.AddressDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.AddressDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.AddressDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("street_number", StreetNumber);
             writer.WriteStringValue("street_type", StreetType);
             writer.WriteStringValue("sub_building", SubBuilding);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

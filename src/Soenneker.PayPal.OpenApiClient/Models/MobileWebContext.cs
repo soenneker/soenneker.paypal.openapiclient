@@ -12,16 +12,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MobileWebContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("buyer_user_agent") is { } nullNodeBuyerUserAgent && nullNodeBuyerUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerUserAgent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>User agent from the request originating from the buyer&apos;s device. This will be used to identify the buyer&apos;s operating system and browser versions. NOTE: Merchants must not alter or modify the buyer&apos;s device user agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerUserAgent { get; set; }
+        public string? BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
+        private string? _explicitNullValueBuyerUserAgent = default!;
 #nullable restore
 #else
-        public string BuyerUserAgent { get; set; }
+        public string BuyerUserAgent { get => _explicitNullValueBuyerUserAgent; set { _explicitNullValueBuyerUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_user_agent"); else _explicitNullProperties?.Remove("buyer_user_agent"); } }
+        private string _explicitNullValueBuyerUserAgent = default!;
 #endif
         /// <summary>Merchant preference on how the buyer can navigate back to merchant website post approving the transaction on the PayPal App.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContextReturnFlow? ReturnFlow { get; private set; }
@@ -40,7 +50,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("buyer_user_agent", BuyerUserAgent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

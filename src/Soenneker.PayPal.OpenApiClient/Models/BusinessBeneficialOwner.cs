@@ -12,88 +12,125 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BusinessBeneficialOwner : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addresses") is { } nullNodeAddresses && nullNodeAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Addresses = null;
+            if (parseNode.GetChildNode("business_incorporation") is { } nullNodeBusinessIncorporation && nullNodeBusinessIncorporation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessIncorporation = null;
+            if (parseNode.GetChildNode("business_industry") is { } nullNodeBusinessIndustry && nullNodeBusinessIndustry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessIndustry = null;
+            if (parseNode.GetChildNode("business_type") is { } nullNodeBusinessType && nullNodeBusinessType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessType = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("names") is { } nullNodeNames && nullNodeNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Names = null;
+            if (parseNode.GetChildNode("percentage_of_ownership") is { } nullNodePercentageOfOwnership && nullNodePercentageOfOwnership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageOfOwnership = null;
+            if (parseNode.GetChildNode("phones") is { } nullNodePhones && nullNodePhones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phones = null;
+            if (parseNode.GetChildNode("website") is { } nullNodeWebsite && nullNodeWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Website = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of addresses associated with the business entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>? Addresses { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>? Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail>? _explicitNullValueAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail> Addresses { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail> Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessAddressDetail> _explicitNullValueAddresses = default!;
 #endif
         /// <summary>Business incorporation information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation? BusinessIncorporation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation? BusinessIncorporation { get => _explicitNullValueBusinessIncorporation; set { _explicitNullValueBusinessIncorporation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_incorporation"); else _explicitNullProperties?.Remove("business_incorporation"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation? _explicitNullValueBusinessIncorporation = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation BusinessIncorporation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation BusinessIncorporation { get => _explicitNullValueBusinessIncorporation; set { _explicitNullValueBusinessIncorporation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_incorporation"); else _explicitNullProperties?.Remove("business_incorporation"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessBusinessIncorporation _explicitNullValueBusinessIncorporation = default!;
 #endif
         /// <summary>The category, subcategory and MCC code of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry? BusinessIndustry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry? BusinessIndustry { get => _explicitNullValueBusinessIndustry; set { _explicitNullValueBusinessIndustry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_industry"); else _explicitNullProperties?.Remove("business_industry"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry? _explicitNullValueBusinessIndustry = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry BusinessIndustry { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry BusinessIndustry { get => _explicitNullValueBusinessIndustry; set { _explicitNullValueBusinessIndustry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_industry"); else _explicitNullProperties?.Remove("business_industry"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry _explicitNullValueBusinessIndustry = default!;
 #endif
         /// <summary>The type and subtype of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo? BusinessType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo? BusinessType { get => _explicitNullValueBusinessType; set { _explicitNullValueBusinessType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_type"); else _explicitNullProperties?.Remove("business_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo? _explicitNullValueBusinessType = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo BusinessType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo BusinessType { get => _explicitNullValueBusinessType; set { _explicitNullValueBusinessType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_type"); else _explicitNullProperties?.Remove("business_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo _explicitNullValueBusinessType = default!;
 #endif
         /// <summary>Business Party related Document data collected from the customer.. For example SSN, ITIN, Business registration number that were collected from the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>? Documents { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument> Documents { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>Email addresses of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? Emails { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> Emails { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> _explicitNullValueEmails = default!;
 #endif
         /// <summary>Name of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>? Names { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>? Names { get => _explicitNullValueNames; set { _explicitNullValueNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("names"); else _explicitNullProperties?.Remove("names"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>? _explicitNullValueNames = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail> Names { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail> Names { get => _explicitNullValueNames; set { _explicitNullValueNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("names"); else _explicitNullProperties?.Remove("names"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail> _explicitNullValueNames = default!;
 #endif
         /// <summary>The percentage, as a fixed-point, signed decimal number. For example, define a 19.99% interest rate as `19.99`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PercentageOfOwnership { get; set; }
+        public string? PercentageOfOwnership { get => _explicitNullValuePercentageOfOwnership; set { _explicitNullValuePercentageOfOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_of_ownership"); else _explicitNullProperties?.Remove("percentage_of_ownership"); } }
+        private string? _explicitNullValuePercentageOfOwnership = default!;
 #nullable restore
 #else
-        public string PercentageOfOwnership { get; set; }
+        public string PercentageOfOwnership { get => _explicitNullValuePercentageOfOwnership; set { _explicitNullValuePercentageOfOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_of_ownership"); else _explicitNullProperties?.Remove("percentage_of_ownership"); } }
+        private string _explicitNullValuePercentageOfOwnership = default!;
 #endif
         /// <summary>List of phone number associated with the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>? Phones { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>? Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>? _explicitNullValuePhones = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail> Phones { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail> Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail> _explicitNullValuePhones = default!;
 #endif
         /// <summary>Website of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Website { get; set; }
+        public string? Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private string? _explicitNullValueWebsite = default!;
 #nullable restore
 #else
-        public string Website { get; set; }
+        public string Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private string _explicitNullValueWebsite = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BusinessBeneficialOwner"/> and sets the default values.
@@ -110,7 +147,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.BusinessBeneficialOwner CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.BusinessBeneficialOwner();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.BusinessBeneficialOwner(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -149,6 +186,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("percentage_of_ownership", PercentageOfOwnership);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>("phones", Phones);
             writer.WriteStringValue("website", Website);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

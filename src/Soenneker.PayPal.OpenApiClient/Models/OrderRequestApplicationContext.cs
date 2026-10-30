@@ -12,66 +12,97 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrderRequestApplicationContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
+            if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
+            if (parseNode.GetChildNode("landing_page") is { } nullNodeLandingPage && nullNodeLandingPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandingPage = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("shipping_preference") is { } nullNodeShippingPreference && nullNodeShippingPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingPreference = null;
+            if (parseNode.GetChildNode("stored_payment_source") is { } nullNodeStoredPaymentSource && nullNodeStoredPaymentSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoredPaymentSource = null;
+            if (parseNode.GetChildNode("user_action") is { } nullNodeUserAction && nullNodeUserAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>DEPRECATED. The label that overrides the business name in the PayPal account on the PayPal site. The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.brand_name`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandName { get; set; }
+        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        private string? _explicitNullValueBrandName = default!;
 #nullable restore
 #else
-        public string BrandName { get; set; }
+        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        private string _explicitNullValueBrandName = default!;
 #endif
         /// <summary>DEPRECATED. The URL where the customer is redirected after the customer cancels the payment. The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.cancel_url`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelUrl { get; set; }
+        public string? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public string CancelUrl { get; set; }
+        public string CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>DEPRECATED. DEPRECATED. The type of landing page to show on the PayPal site for customer checkout.  The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.landing_page`). Please specify this field in the `experience_context` object instead of the `application_context` object. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;th&gt;Since Version&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;payment_source.paypal.experience_context.landing_page&lt;/td&gt;&lt;td&gt;2.9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
         [Obsolete("")]
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLandingPage? LandingPage { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLandingPage? LandingPage { get => _explicitNullValueLandingPage; set { _explicitNullValueLandingPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landing_page"); else _explicitNullProperties?.Remove("landing_page"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextLandingPage? _explicitNullValueLandingPage = default!;
         /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/api/rest/reference/country-codes/) or [M49 region code](https://unstats.un.org/unsd/methodology/m49/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>DEPRECATED. The customer and merchant payment preferences. The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.payment_method_selected`). Please specify this field in the `experience_context` object instead of the `application_context` object..</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextPaymentMethod _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>DEPRECATED. The URL where the customer is redirected after the customer approves the payment. The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.return_url`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>DEPRECATED. DEPRECATED. The shipping preference:&lt;ul&gt;&lt;li&gt;Displays the shipping address to the customer.&lt;/li&gt;&lt;li&gt;Enables the customer to choose an address on the PayPal site.&lt;/li&gt;&lt;li&gt;Restricts the customer from changing the address during the payment-approval process.&lt;/li&gt;&lt;/ul&gt;.  The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.shipping_preference`). Please specify this field in the `experience_context` object instead of the `application_context` object. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;th&gt;Since Version&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;payment_source.paypal.experience_context.shipping_preference&lt;/td&gt;&lt;td&gt;2.9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
         [Obsolete("")]
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextShippingPreference? ShippingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextShippingPreference? _explicitNullValueShippingPreference = default!;
         /// <summary>DEPRECATED. Provides additional details to process a payment using a `payment_source` that has been stored or is intended to be stored (also referred to as stored_credential or card-on-file).&lt;br/&gt;Parameter compatibility:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;`payment_type=ONE_TIME` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`usage=FIRST` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`previous_transaction_reference` or `previous_network_transaction_reference` is compatible only with `payment_initiator=MERCHANT`.&lt;/li&gt;&lt;li&gt;Only one of the parameters - `previous_transaction_reference` and `previous_network_transaction_reference` - can be present in the request.&lt;/li&gt;&lt;/ul&gt;.  The fields in `stored_payment_source` are now available in the `stored_credential` object under the `payment_source` which supports them (eg. `payment_source.card.stored_credential.payment_initiator`). Please specify this field in the `payment_source` object instead of the `application_context` object. &lt;b&gt;DEPRECATED&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;See&lt;/th&gt;&lt;th&gt;Since Version&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;payment_source.card.stored_credential&lt;/td&gt;&lt;td&gt;2.9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource? StoredPaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource? StoredPaymentSource { get => _explicitNullValueStoredPaymentSource; set { _explicitNullValueStoredPaymentSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_payment_source"); else _explicitNullProperties?.Remove("stored_payment_source"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource? _explicitNullValueStoredPaymentSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource StoredPaymentSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource StoredPaymentSource { get => _explicitNullValueStoredPaymentSource; set { _explicitNullValueStoredPaymentSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_payment_source"); else _explicitNullProperties?.Remove("stored_payment_source"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource _explicitNullValueStoredPaymentSource = default!;
 #endif
         /// <summary>DEPRECATED. Configures a &lt;strong&gt;Continue&lt;/strong&gt; or &lt;strong&gt;Pay Now&lt;/strong&gt; checkout flow.  The fields in `application_context` are now available in the `experience_context` object under the `payment_source` which supports them (eg. `payment_source.paypal.experience_context.user_action`). Please specify this field in the `experience_context` object instead of the `application_context` object.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextUserAction? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextUserAction? UserAction { get => _explicitNullValueUserAction; set { _explicitNullValueUserAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_action"); else _explicitNullProperties?.Remove("user_action"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextUserAction? _explicitNullValueUserAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext"/> and sets the default values.
         /// </summary>
@@ -87,7 +118,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.OrderRequestApplicationContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +155,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextShippingPreference>("shipping_preference", ShippingPreference);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextStoredPaymentSource>("stored_payment_source", StoredPaymentSource);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OrderApplicationContextUserAction>("user_action", UserAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18679,45 +18679,37 @@
         }
       },
       "ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/Error400"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/Error401"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/Error403"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/Error404"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/Error409"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/Error415"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/Error422"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/Error500"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/Error503"
+            "$ref": "#/components/schemas/ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/Error400",
@@ -30168,45 +30160,37 @@
         }
       },
       "CatalogsProductsV1ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error400"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error401"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error403"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error404"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error409"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error415"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error422"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error500"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/CatalogsProductsV1Error503"
+            "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/CatalogsProductsV1Error400",
@@ -36224,13 +36208,6 @@
             }
           ]
         }
-      },
-      "PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
       },
       "CatalogsProductsV1InvalidParameterValueIssue": {
         "enum": [
@@ -67680,45 +67657,37 @@
         }
       },
       "CustomerDisputesV1ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error400"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error401"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error403"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error404"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error409"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error415"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error422"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error500"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/CustomerDisputesV1Error503"
+            "$ref": "#/components/schemas/CustomerDisputesV1ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/CustomerDisputesV1Error400",
@@ -85041,45 +85010,37 @@
         }
       },
       "CustomerPartnerReferralsV2ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error400"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error401"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error403"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error404"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error409"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error415"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error422"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error500"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/CustomerPartnerReferralsV2Error503"
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/CustomerPartnerReferralsV2Error400",
@@ -89836,45 +89797,37 @@
         }
       },
       "InvoicingV2ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/InvoicingV2Error400"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error401"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error403"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error404"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error409"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error415"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error422"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error500"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/InvoicingV2Error503"
+            "$ref": "#/components/schemas/InvoicingV2ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/InvoicingV2Error400",
@@ -101134,13 +101087,6 @@
           ]
         }
       },
-      "NotificationsWebhooksV1PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
-      },
       "AnchorType": {
         "enum": [
           "APPLICATION",
@@ -101496,45 +101442,37 @@
         }
       },
       "PaymentExperienceWebExperienceProfilesV1ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error400"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error401"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error403"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error404"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error409"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error415"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error422"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error500"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error503"
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1Error400",
@@ -102343,13 +102281,6 @@
             }
           ]
         }
-      },
-      "PaymentExperienceWebExperienceProfilesV1PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
       },
       "PaymentsPaymentV2StandardHeaderSchema": {
         "title": "Schema Object for standard headers",
@@ -109620,45 +109551,37 @@
         }
       },
       "PaymentsPayoutsBatchV1ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error400"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error401"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error403"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error404"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error409"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error415"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error422"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error500"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1Error503"
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/PaymentsPayoutsBatchV1Error400",
@@ -111707,45 +111630,37 @@
         }
       },
       "ReportingTransactionsV1ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error400"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error401"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error403"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error404"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error409"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error415"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error422"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error500"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/ReportingTransactionsV1Error503"
+            "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/ReportingTransactionsV1Error400",
@@ -123087,45 +123002,37 @@
         }
       },
       "VaultPaymentTokensV3ErrorDefault": {
-        "required": [
-          "name"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error400"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf1"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error401"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf2"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error403"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf3"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error404"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf4"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error409"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf5"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error415"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf6"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error422"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf7"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error500"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf8"
           },
           {
-            "$ref": "#/components/schemas/VaultPaymentTokensV3Error503"
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDefaultOneOf9"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
         "description": "The default error response.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "name",
           "mapping": {
             "INVALID_REQUEST": "#/components/schemas/VaultPaymentTokensV3Error400",
@@ -127038,26 +126945,3623 @@
         "description": "A link.",
         "readOnly": true
       },
-      "PatchValueAnyOf5Enum": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
+      "ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
       },
-      "NotificationsWebhooksV1PatchValueAnyOf5Enum": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
+      "ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
       },
-      "PaymentExperienceWebExperienceProfilesV1PatchValueAnyOf5Enum": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
+      "ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CatalogsProductsV1ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CatalogsProductsV1ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogsProductsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerDisputesV1ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerDisputesV1ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerDisputesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/CustomerPartnerReferralsV2ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "InvoicingV2ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/InvoicingV2ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicingV2ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentExperienceWebExperienceProfilesV1ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentExperienceWebExperienceProfilesV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "PaymentsPayoutsBatchV1ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentsPayoutsBatchV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ReportingTransactionsV1ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/ReportingTransactionsV1ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportingTransactionsV1ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INVALID_REQUEST"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InvalidRequestName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INVALID_REQUEST",
+                  "name": "InvalidRequest"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "AUTHENTICATION_FAILURE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "AuthenticationFailureName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "AUTHENTICATION_FAILURE",
+                  "name": "AuthenticationFailure"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3AuthenticationFailedDueToMissingAuthorizationHeaderCommaOrInvalidAuthenticationCredentialsDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "NOT_AUTHORIZED"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "NotAuthorizedName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "NOT_AUTHORIZED",
+                  "name": "NotAuthorized"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3AuthorizationFailedDueToInsufficientPermissionsMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_NOT_FOUND"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceNotFoundName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_NOT_FOUND",
+                  "name": "ResourceNotFound"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3TheSpecifiedResourceDoesNotExistMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf5": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "RESOURCE_CONFLICT"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ResourceConflictName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "RESOURCE_CONFLICT",
+                  "name": "ResourceConflict"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3TheServerHasDetectedAConflictWhileProcessingThisRequestMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf6": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNSUPPORTED_MEDIA_TYPE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnsupportedMediaTypeName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNSUPPORTED_MEDIA_TYPE",
+                  "name": "UnsupportedMediaType"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3TheServerDoesNotSupportTheRequestPayloadApostropheSMediaTypeDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf7": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "UNPROCESSABLE_ENTITY"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "UnprocessableEntityName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "UNPROCESSABLE_ENTITY",
+                  "name": "UnprocessableEntity"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3TheRequestedActionCouldNotBePerformedCommaSemanticallyIncorrectCommaOrFailedBusinessValidationDotMessage"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorDetails"
+            }
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf8": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "INTERNAL_SERVER_ERROR"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "InternalServerErrorName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INTERNAL_SERVER_ERROR",
+                  "name": "InternalServerError"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3AnInternalServerErrorOccurredMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "VaultPaymentTokensV3ErrorDefaultOneOf9": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "enum": [
+              "SERVICE_UNAVAILABLE"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "ServiceUnavailableName",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "SERVICE_UNAVAILABLE",
+                  "name": "ServiceUnavailable"
+                }
+              ]
+            }
+          },
+          "message": {
+            "$ref": "#/components/schemas/VaultPaymentTokensV3ServiceUnavailableMessage"
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "links": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VaultPaymentTokensV3ErrorLinkDescription"
+            },
+            "description": "An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS)."
+          }
+        },
+        "required": [
+          "name"
+        ]
       }
     },
     "responses": {

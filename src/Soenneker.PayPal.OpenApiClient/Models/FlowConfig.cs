@@ -12,23 +12,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bank_txn_pending_url") is { } nullNodeBankTxnPendingUrl && nullNodeBankTxnPendingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTxnPendingUrl = null;
+            if (parseNode.GetChildNode("landing_page_type") is { } nullNodeLandingPageType && nullNodeLandingPageType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandingPageType = null;
+            if (parseNode.GetChildNode("return_uri_http_method") is { } nullNodeReturnUriHttpMethod && nullNodeReturnUriHttpMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUriHttpMethod = null;
+            if (parseNode.GetChildNode("user_action") is { } nullNodeUserAction && nullNodeUserAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant site URL to display after a bank transfer payment. In Germany, valid only for the Giropay payment method or bank transfer payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BankTxnPendingUrl { get; set; }
+        public string? BankTxnPendingUrl { get => _explicitNullValueBankTxnPendingUrl; set { _explicitNullValueBankTxnPendingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_txn_pending_url"); else _explicitNullProperties?.Remove("bank_txn_pending_url"); } }
+        private string? _explicitNullValueBankTxnPendingUrl = default!;
 #nullable restore
 #else
-        public string BankTxnPendingUrl { get; set; }
+        public string BankTxnPendingUrl { get => _explicitNullValueBankTxnPendingUrl; set { _explicitNullValueBankTxnPendingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_txn_pending_url"); else _explicitNullProperties?.Remove("bank_txn_pending_url"); } }
+        private string _explicitNullValueBankTxnPendingUrl = default!;
 #endif
         /// <summary>The type of landing page to display on the PayPal site for user checkout. To use the non-PayPal account landing page, set to `Billing`. To use the PayPal account login landing page, set to `Login`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType? LandingPageType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType? LandingPageType { get => _explicitNullValueLandingPageType; set { _explicitNullValueLandingPageType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landing_page_type"); else _explicitNullProperties?.Remove("landing_page_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType? _explicitNullValueLandingPageType = default!;
         /// <summary>The HTTP method to use to redirect the customer to a return URL. Value is `GET` or `POST`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod? ReturnUriHttpMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod? ReturnUriHttpMethod { get => _explicitNullValueReturnUriHttpMethod; set { _explicitNullValueReturnUriHttpMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_uri_http_method"); else _explicitNullProperties?.Remove("return_uri_http_method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod? _explicitNullValueReturnUriHttpMethod = default!;
         /// <summary>Presents either the **Continue** or **Pay Now** checkout flow to the customer.&lt;br/&gt;&lt;br/&gt;Default is **Continue**, or `user_action=continue`. When you do not know the final payment amount, accept this default flow, which redirects the customer to the PayPal payment page with the **Continue** button. When the customer clicks **Continue**, the customer can change the payment amount.&lt;br/&gt;&lt;br/&gt; When you know the final payment amount, set `user_action=commit` to choose the **Pay Now** flow, which redirects the customer to the PayPal payment page with the **Pay Now** button. When the customer clicks **Pay Now**, the payment is processed immediately.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction? UserAction { get => _explicitNullValueUserAction; set { _explicitNullValueUserAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_action"); else _explicitNullProperties?.Remove("user_action"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction? _explicitNullValueUserAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig"/> and sets the default values.
         /// </summary>
@@ -44,7 +60,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,6 +87,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>("landing_page_type", LandingPageType);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigReturnUriHttpMethod>("return_uri_http_method", ReturnUriHttpMethod);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CommitUserAction>("user_action", UserAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

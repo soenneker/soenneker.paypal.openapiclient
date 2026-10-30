@@ -11,96 +11,136 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OrderUpdateCallbackRequestPurchaseUnitsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("custom_id") is { } nullNodeCustomId && nullNodeCustomId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("invoice_id") is { } nullNodeInvoiceId && nullNodeInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceId = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("payee") is { } nullNodePayee && nullNodePayee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payee = null;
+            if (parseNode.GetChildNode("payment_instruction") is { } nullNodePaymentInstruction && nullNodePaymentInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInstruction = null;
+            if (parseNode.GetChildNode("reference_id") is { } nullNodeReferenceId && nullNodeReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceId = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("soft_descriptor") is { } nullNodeSoftDescriptor && nullNodeSoftDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoftDescriptor = null;
+            if (parseNode.GetChildNode("supplementary_data") is { } nullNodeSupplementaryData && nullNodeSupplementaryData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupplementaryData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total order amount with an optional breakdown that provides details, such as the total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.&lt;br/&gt;If you specify `amount.breakdown`, the amount equals `item_total` plus `tax_total` plus `shipping` plus `handling` plus `insurance` minus `shipping_discount` minus discount.&lt;br/&gt;The amount must be a positive number. The `amount.value` field supports up to 15 digits preceding the decimal. For a list of supported currencies, decimal precision, and maximum charge amount, see the PayPal REST APIs &lt;a href=&quot;https://developer.paypal.com/api/rest/reference/currency-codes/&quot;&gt;Currency Codes&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount? Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount Amount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestAmount _explicitNullValueAmount = default!;
 #endif
         /// <summary>The API caller-provided external ID. Used to reconcile client transactions with PayPal transactions. Appears in transaction and settlement reports but is not visible to the payer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomId { get; set; }
+        public string? CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        private string? _explicitNullValueCustomId = default!;
 #nullable restore
 #else
-        public string CustomId { get; set; }
+        public string CustomId { get => _explicitNullValueCustomId; set { _explicitNullValueCustomId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_id"); else _explicitNullProperties?.Remove("custom_id"); } }
+        private string _explicitNullValueCustomId = default!;
 #endif
         /// <summary>&lt;blockquote&gt;This field supports up to 3,000 characters, but &lt;strong&gt;any content beyond 127 characters (including spaces) will be truncated. The 127 character limit is reflected in the response&lt;/strong&gt; representation of this field.&lt;/blockquote&gt;The purchase description. The maximum length of the character is dependent on the type of characters used. The character length is specified assuming a US ASCII character. Depending on type of character; (e.g. accented character, Japanese characters) the number of characters that that can be specified as input might not equal the permissible max length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The API caller-provided external invoice number for this order. Appears in both the payer&apos;s transaction history and the emails that the payer receives. invoice_id values are required to be unique within each merchant account by default. Although the uniqueness validation is configurable, disabling this behavior will remove the account&apos;s ability to use invoice_id in other APIs as an identifier. It is highly recommended to keep a unique invoice_id for each Order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceId { get; set; }
+        public string? InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        private string? _explicitNullValueInvoiceId = default!;
 #nullable restore
 #else
-        public string InvoiceId { get; set; }
+        public string InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        private string _explicitNullValueInvoiceId = default!;
 #endif
         /// <summary>An array of items that the customer purchases from the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem>? Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem> Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>The merchant who receives payment for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee? Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee? Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee? _explicitNullValuePayee = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee Payee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestPayee _explicitNullValuePayee = default!;
 #endif
         /// <summary>Any additional payment instructions to be consider during payment processing. This processing instruction is applicable for Capturing an order or Authorizing an Order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction? PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction? PaymentInstruction { get => _explicitNullValuePaymentInstruction; set { _explicitNullValuePaymentInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_instruction"); else _explicitNullProperties?.Remove("payment_instruction"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction? _explicitNullValuePaymentInstruction = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction PaymentInstruction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction PaymentInstruction { get => _explicitNullValuePaymentInstruction; set { _explicitNullValuePaymentInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_instruction"); else _explicitNullProperties?.Remove("payment_instruction"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentInstruction _explicitNullValuePaymentInstruction = default!;
 #endif
         /// <summary>The API caller-provided external ID for the purchase unit. Required for multiple purchase units when you must update the order through `PATCH`. If you omit this value and the order contains only one purchase unit, PayPal sets this value to `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceId { get; set; }
+        public string? ReferenceId { get => _explicitNullValueReferenceId; set { _explicitNullValueReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_id"); else _explicitNullProperties?.Remove("reference_id"); } }
+        private string? _explicitNullValueReferenceId = default!;
 #nullable restore
 #else
-        public string ReferenceId { get; set; }
+        public string ReferenceId { get => _explicitNullValueReferenceId; set { _explicitNullValueReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_id"); else _explicitNullProperties?.Remove("reference_id"); } }
+        private string _explicitNullValueReferenceId = default!;
 #endif
         /// <summary>The name and address of the person to whom to ship the items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping? Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>&lt;blockquote&gt;This field supports up to 127 characters, but &lt;strong&gt;any content beyond 22 characters (including spaces) will be truncated. The 22 character limit is reflected in the response&lt;/strong&gt; representation of this field.&lt;/blockquote&gt;The soft descriptor is the dynamic text used to construct the statement descriptor that appears on a payer&apos;s card statement.&lt;br&gt;&lt;br&gt;If an Order is paid using the &quot;PayPal Wallet&quot;, the statement descriptor will appear in following format on the payer&apos;s card statement: &lt;code&gt;&lt;var&gt;PAYPAL_prefix&lt;/var&gt;+(space)+&lt;var&gt;merchant_descriptor&lt;/var&gt;+(space)+ &lt;var&gt;soft_descriptor&lt;/var&gt;&lt;/code&gt;&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The merchant descriptor is the descriptor of the merchant’s payment receiving preferences which can be seen by logging into the merchant account https://www.sandbox.paypal.com/businessprofile/settings/info/edit&lt;/blockquote&gt;The &lt;code&gt;PAYPAL&lt;/code&gt; prefix uses 8 characters. Only the first 22 characters will be displayed in the statement. &lt;br&gt;For example, if:&lt;ul&gt;&lt;li&gt;The PayPal prefix toggle is &lt;code&gt;PAYPAL *&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;The merchant descriptor in the profile is &lt;code&gt;Janes Gift&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;The soft descriptor is &lt;code&gt;800-123-1234&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;Then, the statement descriptor on the card is &lt;code&gt;PAYPAL * Janes Gift 80&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SoftDescriptor { get; set; }
+        public string? SoftDescriptor { get => _explicitNullValueSoftDescriptor; set { _explicitNullValueSoftDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("soft_descriptor"); else _explicitNullProperties?.Remove("soft_descriptor"); } }
+        private string? _explicitNullValueSoftDescriptor = default!;
 #nullable restore
 #else
-        public string SoftDescriptor { get; set; }
+        public string SoftDescriptor { get => _explicitNullValueSoftDescriptor; set { _explicitNullValueSoftDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("soft_descriptor"); else _explicitNullProperties?.Remove("soft_descriptor"); } }
+        private string _explicitNullValueSoftDescriptor = default!;
 #endif
         /// <summary>Contains Supplementary Data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData? SupplementaryData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData? SupplementaryData { get => _explicitNullValueSupplementaryData; set { _explicitNullValueSupplementaryData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supplementary_data"); else _explicitNullProperties?.Remove("supplementary_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData? _explicitNullValueSupplementaryData = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData SupplementaryData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData SupplementaryData { get => _explicitNullValueSupplementaryData; set { _explicitNullValueSupplementaryData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supplementary_data"); else _explicitNullProperties?.Remove("supplementary_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData _explicitNullValueSupplementaryData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem"/> and sets the default values.
@@ -117,7 +157,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.OrderUpdateCallbackRequestPurchaseUnitsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,6 +198,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestShipping>("shipping", Shipping);
             writer.WriteStringValue("soft_descriptor", SoftDescriptor);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData>("supplementary_data", SupplementaryData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

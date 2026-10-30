@@ -12,44 +12,69 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrderTrackerRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capture_id") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
+            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("carrier_name_other") is { } nullNodeCarrierNameOther && nullNodeCarrierNameOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierNameOther = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("notify_payer") is { } nullNodeNotifyPayer && nullNodeNotifyPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyPayer = null;
+            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PayPal capture ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptureId { get; set; }
+        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        private string? _explicitNullValueCaptureId = default!;
 #nullable restore
 #else
-        public string CaptureId { get; set; }
+        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_id"); else _explicitNullProperties?.Remove("capture_id"); } }
+        private string _explicitNullValueCaptureId = default!;
 #endif
         /// <summary>The carrier for the shipment. Some carriers have a global version as well as local subsidiaries. The subsidiaries are repeated over many countries and might also have an entry in the global list. Choose the carrier for your country. If the carrier is not available for your country, choose the global version of the carrier. If your carrier name is not in the list, set `carrier` to `OTHER` and set carrier name in `carrier_name_other`. For allowed values, see &lt;a href=&quot;/docs/tracking/reference/carriers/&quot;&gt;Carriers&lt;/a&gt;.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier? Carrier { get; set; }
+#nullable enable
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        private string? _explicitNullValueCarrier = default!;
+#nullable restore
         /// <summary>The name of the carrier for the shipment. Provide this value only if the carrier parameter is OTHER. This property supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierNameOther { get; set; }
+        public string? CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        private string? _explicitNullValueCarrierNameOther = default!;
 #nullable restore
 #else
-        public string CarrierNameOther { get; set; }
+        public string CarrierNameOther { get => _explicitNullValueCarrierNameOther; set { _explicitNullValueCarrierNameOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_name_other"); else _explicitNullProperties?.Remove("carrier_name_other"); } }
+        private string _explicitNullValueCarrierNameOther = default!;
 #endif
         /// <summary>An array of details of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> Items { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>If true, PayPal will send an email notification to the payer of the PayPal transaction. The email contains the tracking details provided through the Orders tracking API request. Independent of any value passed for `notify_payer`, the payer may receive tracking notifications within the PayPal app, based on the user&apos;s notification preferences.</summary>
-        public bool? NotifyPayer { get; set; }
+        public bool? NotifyPayer { get => _explicitNullValueNotifyPayer; set { _explicitNullValueNotifyPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_payer"); else _explicitNullProperties?.Remove("notify_payer"); } }
+        private bool? _explicitNullValueNotifyPayer = default!;
         /// <summary>The tracking number for the shipment. This property supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest"/> and sets the default values.
@@ -67,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_id", n => { CaptureId = n.GetStringValue(); } },
-                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>(); } },
+                { "carrier", n => { Carrier = n.GetStringValue(); } },
                 { "carrier_name_other", n => { CarrierNameOther = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>(global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notify_payer", n => { NotifyPayer = n.GetBoolValue(); } },
@@ -93,11 +118,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("capture_id", CaptureId);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ShipmentCarrier>("carrier", Carrier);
+            writer.WriteStringValue("carrier", Carrier);
             writer.WriteStringValue("carrier_name_other", CarrierNameOther);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.OrderTrackerRequestTrackerRequestItemsItem>("items", Items);
             writer.WriteBoolValue("notify_payer", NotifyPayer);
             writer.WriteStringValue("tracking_number", TrackingNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

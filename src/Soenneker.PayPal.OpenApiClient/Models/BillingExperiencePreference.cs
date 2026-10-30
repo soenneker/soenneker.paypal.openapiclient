@@ -12,18 +12,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingExperiencePreference : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_context_set") is { } nullNodeBillingContextSet && nullNodeBillingContextSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingContextSet = null;
+            if (parseNode.GetChildNode("experience_id") is { } nullNodeExperienceId && nullNodeExperienceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the partner has already displayed the billing context to the seller.</summary>
-        public bool? BillingContextSet { get; set; }
+        public bool? BillingContextSet { get => _explicitNullValueBillingContextSet; set { _explicitNullValueBillingContextSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_context_set"); else _explicitNullProperties?.Remove("billing_context_set"); } }
+        private bool? _explicitNullValueBillingContextSet = default!;
         /// <summary>The ID of the payment web experience profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExperienceId { get; set; }
+        public string? ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
+        private string? _explicitNullValueExperienceId = default!;
 #nullable restore
 #else
-        public string ExperienceId { get; set; }
+        public string ExperienceId { get => _explicitNullValueExperienceId; set { _explicitNullValueExperienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_id"); else _explicitNullProperties?.Remove("experience_id"); } }
+        private string _explicitNullValueExperienceId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("billing_context_set", BillingContextSet);
             writer.WriteStringValue("experience_id", ExperienceId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

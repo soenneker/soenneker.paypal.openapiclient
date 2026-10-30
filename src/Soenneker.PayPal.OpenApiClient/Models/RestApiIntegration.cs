@@ -12,28 +12,45 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RestApiIntegration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("first_party_details") is { } nullNodeFirstPartyDetails && nullNodeFirstPartyDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstPartyDetails = null;
+            if (parseNode.GetChildNode("integration_method") is { } nullNodeIntegrationMethod && nullNodeIntegrationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationMethod = null;
+            if (parseNode.GetChildNode("integration_type") is { } nullNodeIntegrationType && nullNodeIntegrationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationType = null;
+            if (parseNode.GetChildNode("third_party_details") is { } nullNodeThirdPartyDetails && nullNodeThirdPartyDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The integration details for PayPal first party REST endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails? FirstPartyDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails? FirstPartyDetails { get => _explicitNullValueFirstPartyDetails; set { _explicitNullValueFirstPartyDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_party_details"); else _explicitNullProperties?.Remove("first_party_details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails? _explicitNullValueFirstPartyDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails FirstPartyDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails FirstPartyDetails { get => _explicitNullValueFirstPartyDetails; set { _explicitNullValueFirstPartyDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_party_details"); else _explicitNullProperties?.Remove("first_party_details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails _explicitNullValueFirstPartyDetails = default!;
 #endif
         /// <summary>The REST-credential integration method.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod? IntegrationMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod? IntegrationMethod { get => _explicitNullValueIntegrationMethod; set { _explicitNullValueIntegrationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_method"); else _explicitNullProperties?.Remove("integration_method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod? _explicitNullValueIntegrationMethod = default!;
         /// <summary>The type of REST-endpoint integration. To integrate with Braintree v.zero for PayPal REST endpoints, specify `third_party_details`.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType? IntegrationType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType? IntegrationType { get => _explicitNullValueIntegrationType; set { _explicitNullValueIntegrationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_type"); else _explicitNullProperties?.Remove("integration_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType? _explicitNullValueIntegrationType = default!;
         /// <summary>The integration details for PayPal REST endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails? ThirdPartyDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails? ThirdPartyDetails { get => _explicitNullValueThirdPartyDetails; set { _explicitNullValueThirdPartyDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_details"); else _explicitNullProperties?.Remove("third_party_details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails? _explicitNullValueThirdPartyDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails ThirdPartyDetails { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails ThirdPartyDetails { get => _explicitNullValueThirdPartyDetails; set { _explicitNullValueThirdPartyDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_details"); else _explicitNullProperties?.Remove("third_party_details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails _explicitNullValueThirdPartyDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration"/> and sets the default values.
@@ -50,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod>("integration_method", IntegrationMethod);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationType>("integration_type", IntegrationType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ThirdPartyDetails>("third_party_details", ThirdPartyDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

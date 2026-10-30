@@ -12,48 +12,70 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingDisputesProperties : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canceled_recurring_billing") is { } nullNodeCanceledRecurringBilling && nullNodeCanceledRecurringBilling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledRecurringBilling = null;
+            if (parseNode.GetChildNode("credit_not_processed") is { } nullNodeCreditNotProcessed && nullNodeCreditNotProcessed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditNotProcessed = null;
+            if (parseNode.GetChildNode("duplicate_transaction") is { } nullNodeDuplicateTransaction && nullNodeDuplicateTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateTransaction = null;
+            if (parseNode.GetChildNode("incorrect_transaction_amount") is { } nullNodeIncorrectTransactionAmount && nullNodeIncorrectTransactionAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncorrectTransactionAmount = null;
+            if (parseNode.GetChildNode("payment_by_other_means") is { } nullNodePaymentByOtherMeans && nullNodePaymentByOtherMeans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentByOtherMeans = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The recurring billing canceled details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling? CanceledRecurringBilling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling? CanceledRecurringBilling { get => _explicitNullValueCanceledRecurringBilling; set { _explicitNullValueCanceledRecurringBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_recurring_billing"); else _explicitNullProperties?.Remove("canceled_recurring_billing"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling? _explicitNullValueCanceledRecurringBilling = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling CanceledRecurringBilling { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling CanceledRecurringBilling { get => _explicitNullValueCanceledRecurringBilling; set { _explicitNullValueCanceledRecurringBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_recurring_billing"); else _explicitNullProperties?.Remove("canceled_recurring_billing"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CanceledRecurringBilling _explicitNullValueCanceledRecurringBilling = default!;
 #endif
         /// <summary>The credit not processed details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed? CreditNotProcessed { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed? CreditNotProcessed { get => _explicitNullValueCreditNotProcessed; set { _explicitNullValueCreditNotProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_not_processed"); else _explicitNullProperties?.Remove("credit_not_processed"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed? _explicitNullValueCreditNotProcessed = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed CreditNotProcessed { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed CreditNotProcessed { get => _explicitNullValueCreditNotProcessed; set { _explicitNullValueCreditNotProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_not_processed"); else _explicitNullProperties?.Remove("credit_not_processed"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CreditNotProcessed _explicitNullValueCreditNotProcessed = default!;
 #endif
         /// <summary>The duplicate transaction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction? DuplicateTransaction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction? DuplicateTransaction { get => _explicitNullValueDuplicateTransaction; set { _explicitNullValueDuplicateTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate_transaction"); else _explicitNullProperties?.Remove("duplicate_transaction"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction? _explicitNullValueDuplicateTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction DuplicateTransaction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction DuplicateTransaction { get => _explicitNullValueDuplicateTransaction; set { _explicitNullValueDuplicateTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate_transaction"); else _explicitNullProperties?.Remove("duplicate_transaction"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction _explicitNullValueDuplicateTransaction = default!;
 #endif
         /// <summary>The incorrect transaction amount details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount? IncorrectTransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount? IncorrectTransactionAmount { get => _explicitNullValueIncorrectTransactionAmount; set { _explicitNullValueIncorrectTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorrect_transaction_amount"); else _explicitNullProperties?.Remove("incorrect_transaction_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount? _explicitNullValueIncorrectTransactionAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount IncorrectTransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount IncorrectTransactionAmount { get => _explicitNullValueIncorrectTransactionAmount; set { _explicitNullValueIncorrectTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incorrect_transaction_amount"); else _explicitNullProperties?.Remove("incorrect_transaction_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount _explicitNullValueIncorrectTransactionAmount = default!;
 #endif
         /// <summary>The payment by other means details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans? PaymentByOtherMeans { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans? PaymentByOtherMeans { get => _explicitNullValuePaymentByOtherMeans; set { _explicitNullValuePaymentByOtherMeans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_by_other_means"); else _explicitNullProperties?.Remove("payment_by_other_means"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans? _explicitNullValuePaymentByOtherMeans = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans PaymentByOtherMeans { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans PaymentByOtherMeans { get => _explicitNullValuePaymentByOtherMeans; set { _explicitNullValuePaymentByOtherMeans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_by_other_means"); else _explicitNullProperties?.Remove("payment_by_other_means"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans _explicitNullValuePaymentByOtherMeans = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.DuplicateTransaction>("duplicate_transaction", DuplicateTransaction);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IncorrectTransactionAmount>("incorrect_transaction_amount", IncorrectTransactionAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans>("payment_by_other_means", PaymentByOtherMeans);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,49 +12,76 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaypalWalletRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_plan") is { } nullNodeBillingPlan && nullNodeBillingPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingPlan = null;
+            if (parseNode.GetChildNode("customer_type") is { } nullNodeCustomerType && nullNodeCustomerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerType = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("experience_context") is { } nullNodeExperienceContext && nullNodeExperienceContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceContext = null;
+            if (parseNode.GetChildNode("permit_multiple_payment_tokens") is { } nullNodePermitMultiplePaymentTokens && nullNodePermitMultiplePaymentTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermitMultiplePaymentTokens = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("usage_pattern") is { } nullNodeUsagePattern && nullNodeUsagePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsagePattern = null;
+            if (parseNode.GetChildNode("usage_type") is { } nullNodeUsageType && nullNodeUsageType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant level Recurring Billing plan metadata for the Billing Agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan? BillingPlan { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan? BillingPlan { get => _explicitNullValueBillingPlan; set { _explicitNullValueBillingPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_plan"); else _explicitNullProperties?.Remove("billing_plan"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan? _explicitNullValueBillingPlan = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan BillingPlan { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan BillingPlan { get => _explicitNullValueBillingPlan; set { _explicitNullValueBillingPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_plan"); else _explicitNullProperties?.Remove("billing_plan"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan _explicitNullValueBillingPlan = default!;
 #endif
         /// <summary>The customer type associated with a digital wallet payment token. This is to indicate whether the customer acting on the merchant / platform is either a business or a consumer.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? CustomerType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? CustomerType { get => _explicitNullValueCustomerType; set { _explicitNullValueCustomerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_type"); else _explicitNullProperties?.Remove("customer_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType? _explicitNullValueCustomerType = default!;
         /// <summary>The description displayed to the consumer on the approval flow for a digital wallet, as well as on the merchant view of the payment token management experience. exp: PayPal.com.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Customizes the Vault creation flow experience for your customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext? ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext? _explicitNullValueExperienceContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContext _explicitNullValueExperienceContext = default!;
 #endif
         /// <summary>Create multiple payment tokens for the same payer, merchant/platform combination. Use this when the customer has not logged in at merchant/platform. The payment token thus generated, can then also be used to create the customer account at merchant/platform. Use this also when multiple payment tokens are required for the same payer, different customer at merchant/platform. This helps to identify customers distinctly even though they may share the same PayPal account. This only applies to PayPal payment source.</summary>
-        public bool? PermitMultiplePaymentTokens { get; set; }
+        public bool? PermitMultiplePaymentTokens { get => _explicitNullValuePermitMultiplePaymentTokens; set { _explicitNullValuePermitMultiplePaymentTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permit_multiple_payment_tokens"); else _explicitNullProperties?.Remove("permit_multiple_payment_tokens"); } }
+        private bool? _explicitNullValuePermitMultiplePaymentTokens = default!;
         /// <summary>The shipping details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping? Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping Shipping { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>Expected business/charge model for the billing agreement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern? UsagePattern { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern? UsagePattern { get => _explicitNullValueUsagePattern; set { _explicitNullValueUsagePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_pattern"); else _explicitNullProperties?.Remove("usage_pattern"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern? _explicitNullValueUsagePattern = default!;
         /// <summary>The usage type associated with a digital wallet payment token.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType? UsageType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType? UsageType { get => _explicitNullValueUsageType; set { _explicitNullValueUsageType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_type"); else _explicitNullProperties?.Remove("usage_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType? _explicitNullValueUsageType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +133,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.WalletBaseShipping>("shipping", Shipping);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsagePattern>("usage_pattern", UsagePattern);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestUsageType>("usage_type", UsageType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

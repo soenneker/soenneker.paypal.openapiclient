@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SupplementaryDataCard : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("level_2") is { } nullNodeLevel2 && nullNodeLevel2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level2 = null;
+            if (parseNode.GetChildNode("level_3") is { } nullNodeLevel3 && nullNodeLevel3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level3 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The level 2 card processing data collections. If your merchant account has been configured for Level 2 processing this field will be passed to the processor on your behalf. Please contact your PayPal Technical Account Manager to define level 2 data for your business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData? Level2 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData? Level2 { get => _explicitNullValueLevel2; set { _explicitNullValueLevel2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_2"); else _explicitNullProperties?.Remove("level_2"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData? _explicitNullValueLevel2 = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData Level2 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData Level2 { get => _explicitNullValueLevel2; set { _explicitNullValueLevel2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_2"); else _explicitNullProperties?.Remove("level_2"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData _explicitNullValueLevel2 = default!;
 #endif
         /// <summary>The level 3 card processing data collections, If your merchant account has been configured for Level 3 processing this field will be passed to the processor on your behalf. Please contact your PayPal Technical Account Manager to define level 3 data for your business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData? Level3 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData? Level3 { get => _explicitNullValueLevel3; set { _explicitNullValueLevel3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_3"); else _explicitNullProperties?.Remove("level_3"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData? _explicitNullValueLevel3 = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData Level3 { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData Level3 { get => _explicitNullValueLevel3; set { _explicitNullValueLevel3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_3"); else _explicitNullProperties?.Remove("level_3"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData _explicitNullValueLevel3 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level2CardProcessingData>("level_2", Level2);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData>("level_3", Level3);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

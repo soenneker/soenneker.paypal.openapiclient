@@ -12,15 +12,29 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OfferHistory : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("event_type") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("offer_amount") is { } nullNodeOfferAmount && nullNodeOfferAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferAmount = null;
+            if (parseNode.GetChildNode("offer_time") is { } nullNodeOfferTime && nullNodeOfferTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferTime = null;
+            if (parseNode.GetChildNode("offer_type") is { } nullNodeOfferType && nullNodeOfferType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferType = null;
+        }
+
         /// <summary>The event-related actor.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor? Actor { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryActor? _explicitNullValueActor = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The stage in the dispute lifecycle.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.DisputeLifecycleStage? DisputeLifeCycleStage { get; private set; }
         /// <summary>The type of the history event.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType? EventType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OfferHistoryEventType? _explicitNullValueEventType = default!;
         /// <summary>The user submitted notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,21 +46,26 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? OfferAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? OfferAmount { get => _explicitNullValueOfferAmount; set { _explicitNullValueOfferAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_amount"); else _explicitNullProperties?.Remove("offer_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueOfferAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money OfferAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money OfferAmount { get => _explicitNullValueOfferAmount; set { _explicitNullValueOfferAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_amount"); else _explicitNullProperties?.Remove("offer_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueOfferAmount = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OfferTime { get; set; }
+        public string? OfferTime { get => _explicitNullValueOfferTime; set { _explicitNullValueOfferTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_time"); else _explicitNullProperties?.Remove("offer_time"); } }
+        private string? _explicitNullValueOfferTime = default!;
 #nullable restore
 #else
-        public string OfferTime { get; set; }
+        public string OfferTime { get => _explicitNullValueOfferTime; set { _explicitNullValueOfferTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_time"); else _explicitNullProperties?.Remove("offer_time"); } }
+        private string _explicitNullValueOfferTime = default!;
 #endif
         /// <summary>The merchant-proposed offer type for the dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OfferType? OfferType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OfferType? OfferType { get => _explicitNullValueOfferType; set { _explicitNullValueOfferType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_type"); else _explicitNullProperties?.Remove("offer_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OfferType? _explicitNullValueOfferType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory"/> and sets the default values.
         /// </summary>
@@ -62,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.OfferHistory(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +112,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>("offer_amount", OfferAmount);
             writer.WriteStringValue("offer_time", OfferTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OfferType>("offer_type", OfferType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

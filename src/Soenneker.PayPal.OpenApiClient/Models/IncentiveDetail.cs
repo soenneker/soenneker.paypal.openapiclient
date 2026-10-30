@@ -12,40 +12,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IncentiveDetail : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("incentive_amount") is { } nullNodeIncentiveAmount && nullNodeIncentiveAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncentiveAmount = null;
+            if (parseNode.GetChildNode("incentive_code") is { } nullNodeIncentiveCode && nullNodeIncentiveCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncentiveCode = null;
+            if (parseNode.GetChildNode("incentive_program_code") is { } nullNodeIncentiveProgramCode && nullNodeIncentiveProgramCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncentiveProgramCode = null;
+            if (parseNode.GetChildNode("incentive_type") is { } nullNodeIncentiveType && nullNodeIncentiveType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncentiveType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? IncentiveAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? IncentiveAmount { get => _explicitNullValueIncentiveAmount; set { _explicitNullValueIncentiveAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_amount"); else _explicitNullProperties?.Remove("incentive_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money? _explicitNullValueIncentiveAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money IncentiveAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money IncentiveAmount { get => _explicitNullValueIncentiveAmount; set { _explicitNullValueIncentiveAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_amount"); else _explicitNullProperties?.Remove("incentive_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1Money _explicitNullValueIncentiveAmount = default!;
 #endif
         /// <summary>The code that identifies an incentive, such as a coupon.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncentiveCode { get; set; }
+        public string? IncentiveCode { get => _explicitNullValueIncentiveCode; set { _explicitNullValueIncentiveCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_code"); else _explicitNullProperties?.Remove("incentive_code"); } }
+        private string? _explicitNullValueIncentiveCode = default!;
 #nullable restore
 #else
-        public string IncentiveCode { get; set; }
+        public string IncentiveCode { get => _explicitNullValueIncentiveCode; set { _explicitNullValueIncentiveCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_code"); else _explicitNullProperties?.Remove("incentive_code"); } }
+        private string _explicitNullValueIncentiveCode = default!;
 #endif
         /// <summary>The incentive program code that identifies a merchant loyalty or incentive program.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncentiveProgramCode { get; set; }
+        public string? IncentiveProgramCode { get => _explicitNullValueIncentiveProgramCode; set { _explicitNullValueIncentiveProgramCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_program_code"); else _explicitNullProperties?.Remove("incentive_program_code"); } }
+        private string? _explicitNullValueIncentiveProgramCode = default!;
 #nullable restore
 #else
-        public string IncentiveProgramCode { get; set; }
+        public string IncentiveProgramCode { get => _explicitNullValueIncentiveProgramCode; set { _explicitNullValueIncentiveProgramCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_program_code"); else _explicitNullProperties?.Remove("incentive_program_code"); } }
+        private string _explicitNullValueIncentiveProgramCode = default!;
 #endif
         /// <summary>The type of incentive, such as a special offer or coupon.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncentiveType { get; set; }
+        public string? IncentiveType { get => _explicitNullValueIncentiveType; set { _explicitNullValueIncentiveType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_type"); else _explicitNullProperties?.Remove("incentive_type"); } }
+        private string? _explicitNullValueIncentiveType = default!;
 #nullable restore
 #else
-        public string IncentiveType { get; set; }
+        public string IncentiveType { get => _explicitNullValueIncentiveType; set { _explicitNullValueIncentiveType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_type"); else _explicitNullProperties?.Remove("incentive_type"); } }
+        private string _explicitNullValueIncentiveType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.IncentiveDetail"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.IncentiveDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.IncentiveDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.IncentiveDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("incentive_code", IncentiveCode);
             writer.WriteStringValue("incentive_program_code", IncentiveProgramCode);
             writer.WriteStringValue("incentive_type", IncentiveType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

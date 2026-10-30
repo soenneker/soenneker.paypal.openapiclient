@@ -12,64 +12,92 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TransactionDetail : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auction_info") is { } nullNodeAuctionInfo && nullNodeAuctionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionInfo = null;
+            if (parseNode.GetChildNode("cart_info") is { } nullNodeCartInfo && nullNodeCartInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CartInfo = null;
+            if (parseNode.GetChildNode("incentive_info") is { } nullNodeIncentiveInfo && nullNodeIncentiveInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncentiveInfo = null;
+            if (parseNode.GetChildNode("payer_info") is { } nullNodePayerInfo && nullNodePayerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerInfo = null;
+            if (parseNode.GetChildNode("shipping_info") is { } nullNodeShippingInfo && nullNodeShippingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingInfo = null;
+            if (parseNode.GetChildNode("store_info") is { } nullNodeStoreInfo && nullNodeStoreInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreInfo = null;
+            if (parseNode.GetChildNode("transaction_info") is { } nullNodeTransactionInfo && nullNodeTransactionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auction information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo? AuctionInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo? AuctionInfo { get => _explicitNullValueAuctionInfo; set { _explicitNullValueAuctionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_info"); else _explicitNullProperties?.Remove("auction_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo? _explicitNullValueAuctionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo AuctionInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo AuctionInfo { get => _explicitNullValueAuctionInfo; set { _explicitNullValueAuctionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_info"); else _explicitNullProperties?.Remove("auction_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo _explicitNullValueAuctionInfo = default!;
 #endif
         /// <summary>The cart information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CartInfo? CartInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CartInfo? CartInfo { get => _explicitNullValueCartInfo; set { _explicitNullValueCartInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart_info"); else _explicitNullProperties?.Remove("cart_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CartInfo? _explicitNullValueCartInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CartInfo CartInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CartInfo CartInfo { get => _explicitNullValueCartInfo; set { _explicitNullValueCartInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart_info"); else _explicitNullProperties?.Remove("cart_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CartInfo _explicitNullValueCartInfo = default!;
 #endif
         /// <summary>The incentive details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo? IncentiveInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo? IncentiveInfo { get => _explicitNullValueIncentiveInfo; set { _explicitNullValueIncentiveInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_info"); else _explicitNullProperties?.Remove("incentive_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo? _explicitNullValueIncentiveInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo IncentiveInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo IncentiveInfo { get => _explicitNullValueIncentiveInfo; set { _explicitNullValueIncentiveInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incentive_info"); else _explicitNullProperties?.Remove("incentive_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IncentiveInfo _explicitNullValueIncentiveInfo = default!;
 #endif
         /// <summary>The payer information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo? PayerInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo? PayerInfo { get => _explicitNullValuePayerInfo; set { _explicitNullValuePayerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_info"); else _explicitNullProperties?.Remove("payer_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo? _explicitNullValuePayerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo PayerInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo PayerInfo { get => _explicitNullValuePayerInfo; set { _explicitNullValuePayerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_info"); else _explicitNullProperties?.Remove("payer_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayerInfo _explicitNullValuePayerInfo = default!;
 #endif
         /// <summary>The shipping information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo? ShippingInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo? ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo? _explicitNullValueShippingInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo ShippingInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo ShippingInfo { get => _explicitNullValueShippingInfo; set { _explicitNullValueShippingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_info"); else _explicitNullProperties?.Remove("shipping_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo _explicitNullValueShippingInfo = default!;
 #endif
         /// <summary>The store information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo? StoreInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo? StoreInfo { get => _explicitNullValueStoreInfo; set { _explicitNullValueStoreInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_info"); else _explicitNullProperties?.Remove("store_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo? _explicitNullValueStoreInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo StoreInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo StoreInfo { get => _explicitNullValueStoreInfo; set { _explicitNullValueStoreInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_info"); else _explicitNullProperties?.Remove("store_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo _explicitNullValueStoreInfo = default!;
 #endif
         /// <summary>The transaction information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo? TransactionInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo? TransactionInfo { get => _explicitNullValueTransactionInfo; set { _explicitNullValueTransactionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_info"); else _explicitNullProperties?.Remove("transaction_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo? _explicitNullValueTransactionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo TransactionInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo TransactionInfo { get => _explicitNullValueTransactionInfo; set { _explicitNullValueTransactionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_info"); else _explicitNullProperties?.Remove("transaction_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo _explicitNullValueTransactionInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TransactionDetail"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.TransactionDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.TransactionDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.TransactionDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ShippingInfo>("shipping_info", ShippingInfo);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.StoreInfo>("store_info", StoreInfo);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReportingTransactionsV1TransactionInfo>("transaction_info", TransactionInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

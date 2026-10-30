@@ -12,21 +12,35 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureAuthenticationResponse2 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authentication_id") is { } nullNodeAuthenticationId && nullNodeAuthenticationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationId = null;
+            if (parseNode.GetChildNode("authentication_status") is { } nullNodeAuthenticationStatus && nullNodeAuthenticationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationStatus = null;
+            if (parseNode.GetChildNode("enrollment_status") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The externally received 3ds authentication id, to be returned in card detokenization response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthenticationId { get; set; }
+        public string? AuthenticationId { get => _explicitNullValueAuthenticationId; set { _explicitNullValueAuthenticationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_id"); else _explicitNullProperties?.Remove("authentication_id"); } }
+        private string? _explicitNullValueAuthenticationId = default!;
 #nullable restore
 #else
-        public string AuthenticationId { get; set; }
+        public string AuthenticationId { get => _explicitNullValueAuthenticationId; set { _explicitNullValueAuthenticationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_id"); else _explicitNullProperties?.Remove("authentication_id"); } }
+        private string _explicitNullValueAuthenticationId = default!;
 #endif
         /// <summary>Transactions status result identifier. The outcome of the issuer&apos;s authentication.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3ParesStatus? AuthenticationStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3ParesStatus? AuthenticationStatus { get => _explicitNullValueAuthenticationStatus; set { _explicitNullValueAuthenticationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_status"); else _explicitNullProperties?.Remove("authentication_status"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3ParesStatus? _explicitNullValueAuthenticationStatus = default!;
         /// <summary>Status of Authentication eligibility.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Enrolled? EnrollmentStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Enrolled? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Enrolled? _explicitNullValueEnrollmentStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ThreeDSecureAuthenticationResponse2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("authentication_id", AuthenticationId);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3ParesStatus>("authentication_status", AuthenticationStatus);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Enrolled>("enrollment_status", EnrollmentStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

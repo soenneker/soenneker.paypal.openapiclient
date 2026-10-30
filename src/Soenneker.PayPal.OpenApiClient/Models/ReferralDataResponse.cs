@@ -12,7 +12,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReferralDataResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("referral_data") is { } nullNodeReferralData && nullNodeReferralData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).</summary>
@@ -34,10 +42,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The customer&apos;s referral data that partners share with PayPal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReferralData? ReferralData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReferralData? ReferralData { get => _explicitNullValueReferralData; set { _explicitNullValueReferralData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_data"); else _explicitNullProperties?.Remove("referral_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReferralData? _explicitNullValueReferralData = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReferralData ReferralData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReferralData ReferralData { get => _explicitNullValueReferralData; set { _explicitNullValueReferralData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_data"); else _explicitNullProperties?.Remove("referral_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReferralData _explicitNullValueReferralData = default!;
 #endif
         /// <summary>The client ID of the partner who shared the referral data. This cliend ID will be returned only when the caller is determined as an internal partner, which means the scope of the caller&apos;s security context only have &quot;https://uri.paypal.com/services/customer/partner-referrals&quot;, For more information, see &lt;a href=&quot;https://github.paypal.com/Customers-R/partnselleronbnodeserv/blob/b0a631c43e80a4dd43d34c01f479c272b3287796/src/helpers/securityContextHelpers.js#L143&quot;&gt;Api Actor type in Typhoon service&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,6 +105,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ReferralData>("referral_data", ReferralData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

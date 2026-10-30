@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CheckoutOption : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checkout_option_name") is { } nullNodeCheckoutOptionName && nullNodeCheckoutOptionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutOptionName = null;
+            if (parseNode.GetChildNode("checkout_option_value") is { } nullNodeCheckoutOptionValue && nullNodeCheckoutOptionValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutOptionValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkout option name, such as `color` or `texture`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckoutOptionName { get; set; }
+        public string? CheckoutOptionName { get => _explicitNullValueCheckoutOptionName; set { _explicitNullValueCheckoutOptionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_option_name"); else _explicitNullProperties?.Remove("checkout_option_name"); } }
+        private string? _explicitNullValueCheckoutOptionName = default!;
 #nullable restore
 #else
-        public string CheckoutOptionName { get; set; }
+        public string CheckoutOptionName { get => _explicitNullValueCheckoutOptionName; set { _explicitNullValueCheckoutOptionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_option_name"); else _explicitNullProperties?.Remove("checkout_option_name"); } }
+        private string _explicitNullValueCheckoutOptionName = default!;
 #endif
         /// <summary>The checkout option value. For example, the checkout option `color` might be `blue` or `red` while the checkout option `texture` might be `smooth` or `rippled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckoutOptionValue { get; set; }
+        public string? CheckoutOptionValue { get => _explicitNullValueCheckoutOptionValue; set { _explicitNullValueCheckoutOptionValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_option_value"); else _explicitNullProperties?.Remove("checkout_option_value"); } }
+        private string? _explicitNullValueCheckoutOptionValue = default!;
 #nullable restore
 #else
-        public string CheckoutOptionValue { get; set; }
+        public string CheckoutOptionValue { get => _explicitNullValueCheckoutOptionValue; set { _explicitNullValueCheckoutOptionValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_option_value"); else _explicitNullProperties?.Remove("checkout_option_value"); } }
+        private string _explicitNullValueCheckoutOptionValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOption"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOption CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOption();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOption(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkout_option_name", CheckoutOptionName);
             writer.WriteStringValue("checkout_option_value", CheckoutOptionValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

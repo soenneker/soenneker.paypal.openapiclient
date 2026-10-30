@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CurrencyRange : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maximum_amount") is { } nullNodeMaximumAmount && nullNodeMaximumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAmount = null;
+            if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MaximumAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? _explicitNullValueMaximumAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MaximumAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money _explicitNullValueMaximumAmount = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MinimumAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money? _explicitNullValueMinimumAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MinimumAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money _explicitNullValueMinimumAmount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.CurrencyRange(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money>("maximum_amount", MaximumAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Money>("minimum_amount", MinimumAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

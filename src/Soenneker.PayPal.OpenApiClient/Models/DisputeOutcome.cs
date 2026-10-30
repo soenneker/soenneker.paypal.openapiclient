@@ -12,29 +12,46 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DisputeOutcome : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_refunded") is { } nullNodeAmountRefunded && nullNodeAmountRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountRefunded = null;
+            if (parseNode.GetChildNode("asset_refunded") is { } nullNodeAssetRefunded && nullNodeAssetRefunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetRefunded = null;
+            if (parseNode.GetChildNode("outcome_code") is { } nullNodeOutcomeCode && nullNodeOutcomeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeCode = null;
+            if (parseNode.GetChildNode("outcome_reason") is { } nullNodeOutcomeReason && nullNodeOutcomeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeReason = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AmountRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueAmountRefunded = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AmountRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money AmountRefunded { get => _explicitNullValueAmountRefunded; set { _explicitNullValueAmountRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_refunded"); else _explicitNullProperties?.Remove("amount_refunded"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueAmountRefunded = default!;
 #endif
         /// <summary>The details needed to represent a specific cryptocurrency balance, such as its symbol and quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? AssetRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency? _explicitNullValueAssetRefunded = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency AssetRefunded { get => _explicitNullValueAssetRefunded; set { _explicitNullValueAssetRefunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_refunded"); else _explicitNullProperties?.Remove("asset_refunded"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency _explicitNullValueAssetRefunded = default!;
 #endif
         /// <summary>The outcome of a resolved dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? OutcomeCode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? OutcomeCode { get => _explicitNullValueOutcomeCode; set { _explicitNullValueOutcomeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_code"); else _explicitNullProperties?.Remove("outcome_code"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode? _explicitNullValueOutcomeCode = default!;
         /// <summary>The reason for the adjudication type.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? OutcomeReason { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? OutcomeReason { get => _explicitNullValueOutcomeReason; set { _explicitNullValueOutcomeReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_reason"); else _explicitNullProperties?.Remove("outcome_reason"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason? _explicitNullValueOutcomeReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome"/> and sets the default values.
         /// </summary>
@@ -50,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcome(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Cryptocurrency>("asset_refunded", AssetRefunded);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeOutcomeOutcomeCode>("outcome_code", OutcomeCode);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.AdjudicationReason>("outcome_reason", OutcomeReason);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

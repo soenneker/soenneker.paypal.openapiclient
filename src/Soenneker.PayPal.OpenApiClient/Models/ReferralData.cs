@@ -12,120 +12,169 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReferralData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("business_entity") is { } nullNodeBusinessEntity && nullNodeBusinessEntity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessEntity = null;
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("financial_instruments") is { } nullNodeFinancialInstruments && nullNodeFinancialInstruments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialInstruments = null;
+            if (parseNode.GetChildNode("individual_owners") is { } nullNodeIndividualOwners && nullNodeIndividualOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualOwners = null;
+            if (parseNode.GetChildNode("legal_consents") is { } nullNodeLegalConsents && nullNodeLegalConsents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalConsents = null;
+            if (parseNode.GetChildNode("legal_country_code") is { } nullNodeLegalCountryCode && nullNodeLegalCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalCountryCode = null;
+            if (parseNode.GetChildNode("operations") is { } nullNodeOperations && nullNodeOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operations = null;
+            if (parseNode.GetChildNode("outside_process_dependencies") is { } nullNodeOutsideProcessDependencies && nullNodeOutsideProcessDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutsideProcessDependencies = null;
+            if (parseNode.GetChildNode("partner_config_override") is { } nullNodePartnerConfigOverride && nullNodePartnerConfigOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerConfigOverride = null;
+            if (parseNode.GetChildNode("payout_attributes") is { } nullNodePayoutAttributes && nullNodePayoutAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutAttributes = null;
+            if (parseNode.GetChildNode("preferred_language_code") is { } nullNodePreferredLanguageCode && nullNodePreferredLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLanguageCode = null;
+            if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
+            if (parseNode.GetChildNode("tracking_id") is { } nullNodeTrackingId && nullNodeTrackingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Common business information section.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity? BusinessEntity { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity? BusinessEntity { get => _explicitNullValueBusinessEntity; set { _explicitNullValueBusinessEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_entity"); else _explicitNullProperties?.Remove("business_entity"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity? _explicitNullValueBusinessEntity = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity BusinessEntity { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity BusinessEntity { get => _explicitNullValueBusinessEntity; set { _explicitNullValueBusinessEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_entity"); else _explicitNullProperties?.Remove("business_entity"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BusinessEntity _explicitNullValueBusinessEntity = default!;
 #endif
         /// <summary>An array of capabilities which the partner wants to enable for the selected products. Supported only when products are specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?>? Capabilities { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?>? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?>? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?> Capabilities { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?> Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Capabilities?> _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Financial instruments attached to this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments? FinancialInstruments { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments? FinancialInstruments { get => _explicitNullValueFinancialInstruments; set { _explicitNullValueFinancialInstruments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_instruments"); else _explicitNullProperties?.Remove("financial_instruments"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments? _explicitNullValueFinancialInstruments = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments FinancialInstruments { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments FinancialInstruments { get => _explicitNullValueFinancialInstruments; set { _explicitNullValueFinancialInstruments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_instruments"); else _explicitNullProperties?.Remove("financial_instruments"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FinancialInstruments _explicitNullValueFinancialInstruments = default!;
 #endif
         /// <summary>List of owners in the account. There should be only one primary account owner which is mentioned in their role_type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>? IndividualOwners { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>? IndividualOwners { get => _explicitNullValueIndividualOwners; set { _explicitNullValueIndividualOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_owners"); else _explicitNullProperties?.Remove("individual_owners"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner>? _explicitNullValueIndividualOwners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner> IndividualOwners { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner> IndividualOwners { get => _explicitNullValueIndividualOwners; set { _explicitNullValueIndividualOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_owners"); else _explicitNullProperties?.Remove("individual_owners"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.IndividualOwner> _explicitNullValueIndividualOwners = default!;
 #endif
         /// <summary>An array of all consents that the partner has received from this seller. If `SHARE_DATA_CONSENT` is not granted, PayPal does not store customer data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>? LegalConsents { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>? LegalConsents { get => _explicitNullValueLegalConsents; set { _explicitNullValueLegalConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_consents"); else _explicitNullProperties?.Remove("legal_consents"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent>? _explicitNullValueLegalConsents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent> LegalConsents { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent> LegalConsents { get => _explicitNullValueLegalConsents; set { _explicitNullValueLegalConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_consents"); else _explicitNullProperties?.Remove("legal_consents"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LegalConsent> _explicitNullValueLegalConsents = default!;
 #endif
         /// <summary>The [two-character ISO 3166-1 code](/docs/api/reference/country-codes/) that identifies the country or region.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The country code for Great Britain is &lt;code&gt;GB&lt;/code&gt; and not &lt;code&gt;UK&lt;/code&gt; as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LegalCountryCode { get; set; }
+        public string? LegalCountryCode { get => _explicitNullValueLegalCountryCode; set { _explicitNullValueLegalCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_country_code"); else _explicitNullProperties?.Remove("legal_country_code"); } }
+        private string? _explicitNullValueLegalCountryCode = default!;
 #nullable restore
 #else
-        public string LegalCountryCode { get; set; }
+        public string LegalCountryCode { get => _explicitNullValueLegalCountryCode; set { _explicitNullValueLegalCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_country_code"); else _explicitNullProperties?.Remove("legal_country_code"); } }
+        private string _explicitNullValueLegalCountryCode = default!;
 #endif
         /// <summary>An array of operations to perform for the customer while they share their data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation>? Operations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation>? Operations { get => _explicitNullValueOperations; set { _explicitNullValueOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operations"); else _explicitNullProperties?.Remove("operations"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Operation>? _explicitNullValueOperations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation> Operations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Operation> Operations { get => _explicitNullValueOperations; set { _explicitNullValueOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operations"); else _explicitNullProperties?.Remove("operations"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Operation> _explicitNullValueOperations = default!;
 #endif
         /// <summary>An array of dependent processes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OutsideProcessDependencies { get; set; }
+        public UntypedNode? OutsideProcessDependencies { get => _explicitNullValueOutsideProcessDependencies; set { _explicitNullValueOutsideProcessDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outside_process_dependencies"); else _explicitNullProperties?.Remove("outside_process_dependencies"); } }
+        private UntypedNode? _explicitNullValueOutsideProcessDependencies = default!;
 #nullable restore
 #else
-        public UntypedNode OutsideProcessDependencies { get; set; }
+        public UntypedNode OutsideProcessDependencies { get => _explicitNullValueOutsideProcessDependencies; set { _explicitNullValueOutsideProcessDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outside_process_dependencies"); else _explicitNullProperties?.Remove("outside_process_dependencies"); } }
+        private UntypedNode _explicitNullValueOutsideProcessDependencies = default!;
 #endif
         /// <summary>The preference to customize the web experience of the customer by overriding that is set at the Partner&apos;s Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride? PartnerConfigOverride { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride? PartnerConfigOverride { get => _explicitNullValuePartnerConfigOverride; set { _explicitNullValuePartnerConfigOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_config_override"); else _explicitNullProperties?.Remove("partner_config_override"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride? _explicitNullValuePartnerConfigOverride = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride PartnerConfigOverride { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride PartnerConfigOverride { get => _explicitNullValuePartnerConfigOverride; set { _explicitNullValuePartnerConfigOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_config_override"); else _explicitNullProperties?.Remove("partner_config_override"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartnerConfigOverride _explicitNullValuePartnerConfigOverride = default!;
 #endif
         /// <summary>Payout specific attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes? PayoutAttributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes? PayoutAttributes { get => _explicitNullValuePayoutAttributes; set { _explicitNullValuePayoutAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_attributes"); else _explicitNullProperties?.Remove("payout_attributes"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes? _explicitNullValuePayoutAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes PayoutAttributes { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes PayoutAttributes { get => _explicitNullValuePayoutAttributes; set { _explicitNullValuePayoutAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_attributes"); else _explicitNullProperties?.Remove("payout_attributes"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayoutAttributes _explicitNullValuePayoutAttributes = default!;
 #endif
         /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/docs/integration/direct/rest/country-codes/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredLanguageCode { get; set; }
+        public string? PreferredLanguageCode { get => _explicitNullValuePreferredLanguageCode; set { _explicitNullValuePreferredLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language_code"); else _explicitNullProperties?.Remove("preferred_language_code"); } }
+        private string? _explicitNullValuePreferredLanguageCode = default!;
 #nullable restore
 #else
-        public string PreferredLanguageCode { get; set; }
+        public string PreferredLanguageCode { get => _explicitNullValuePreferredLanguageCode; set { _explicitNullValuePreferredLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language_code"); else _explicitNullProperties?.Remove("preferred_language_code"); } }
+        private string _explicitNullValuePreferredLanguageCode = default!;
 #endif
         /// <summary>An array of PayPal products to which the partner wants to onboard the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?>? Products { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?>? _explicitNullValueProducts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?> Products { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product?> _explicitNullValueProducts = default!;
 #endif
         /// <summary>The partner&apos;s unique identifier for this customer in their system which can be used to track user in PayPal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingId { get; set; }
+        public string? TrackingId { get => _explicitNullValueTrackingId; set { _explicitNullValueTrackingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_id"); else _explicitNullProperties?.Remove("tracking_id"); } }
+        private string? _explicitNullValueTrackingId = default!;
 #nullable restore
 #else
-        public string TrackingId { get; set; }
+        public string TrackingId { get => _explicitNullValueTrackingId; set { _explicitNullValueTrackingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_id"); else _explicitNullProperties?.Remove("tracking_id"); } }
+        private string _explicitNullValueTrackingId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReferralData"/> and sets the default values.
@@ -142,7 +191,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ReferralData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ReferralData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ReferralData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -189,6 +238,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("preferred_language_code", PreferredLanguageCode);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Product>("products", Products);
             writer.WriteStringValue("tracking_id", TrackingId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

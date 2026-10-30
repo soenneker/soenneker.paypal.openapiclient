@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PurchaseUnitRequestSupplementaryData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("risk") is { } nullNodeRisk && nullNodeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Risk = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Merchants and partners can add Level 2 and 3 data to payments to reduce risk and payment processing costs. For more information about processing payments, see &lt;a href=&quot;https://developer.paypal.com/docs/checkout/advanced/processing/&quot;&gt;checkout&lt;/a&gt; or &lt;a href=&quot;https://developer.paypal.com/docs/multiparty/checkout/advanced/processing/&quot;&gt;multiparty checkout&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard Card { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Merchants and partners can add additional customer parameters that can help with better fraud protection and reduced risk for unbranded card payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? Risk { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk? _explicitNullValueRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk Risk { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk _explicitNullValueRisk = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitRequestSupplementaryData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SupplementaryDataRisk>("risk", Risk);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

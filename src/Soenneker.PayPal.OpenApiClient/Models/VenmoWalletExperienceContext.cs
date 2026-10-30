@@ -12,29 +12,46 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VenmoWalletExperienceContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brand_name") is { } nullNodeBrandName && nullNodeBrandName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandName = null;
+            if (parseNode.GetChildNode("order_update_callback_config") is { } nullNodeOrderUpdateCallbackConfig && nullNodeOrderUpdateCallbackConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderUpdateCallbackConfig = null;
+            if (parseNode.GetChildNode("shipping_preference") is { } nullNodeShippingPreference && nullNodeShippingPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingPreference = null;
+            if (parseNode.GetChildNode("user_action") is { } nullNodeUserAction && nullNodeUserAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The business name of the merchant. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandName { get; set; }
+        public string? BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        private string? _explicitNullValueBrandName = default!;
 #nullable restore
 #else
-        public string BrandName { get; set; }
+        public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
+        private string _explicitNullValueBrandName = default!;
 #endif
         /// <summary>Merchant provided Order Update callback configuration for Venmo Wallet.Venmo will call back merchant when the specified event occurs.we recommend merchants to pass both the shipping_options and shipping_address callback events. Not supported when `shipping.type` is specified or when &apos;application_context.shipping_preference&apos; is set as &apos;NO_SHIPPING&apos; or &apos;SET_PROVIDED_ADDRESS&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig? OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig? OrderUpdateCallbackConfig { get => _explicitNullValueOrderUpdateCallbackConfig; set { _explicitNullValueOrderUpdateCallbackConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_update_callback_config"); else _explicitNullProperties?.Remove("order_update_callback_config"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig? _explicitNullValueOrderUpdateCallbackConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig OrderUpdateCallbackConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig OrderUpdateCallbackConfig { get => _explicitNullValueOrderUpdateCallbackConfig; set { _explicitNullValueOrderUpdateCallbackConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_update_callback_config"); else _explicitNullProperties?.Remove("order_update_callback_config"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig _explicitNullValueOrderUpdateCallbackConfig = default!;
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference? ShippingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference? _explicitNullValueShippingPreference = default!;
         /// <summary>Configures a &lt;strong&gt;Continue&lt;/strong&gt; or &lt;strong&gt;Pay Now&lt;/strong&gt; checkout flow.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction? UserAction { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction? UserAction { get => _explicitNullValueUserAction; set { _explicitNullValueUserAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_action"); else _explicitNullProperties?.Remove("user_action"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction? _explicitNullValueUserAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext"/> and sets the default values.
         /// </summary>
@@ -50,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextOrderUpdateCallbackConfig>("order_update_callback_config", OrderUpdateCallbackConfig);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextShippingPreference>("shipping_preference", ShippingPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoWalletExperienceContextUserAction>("user_action", UserAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

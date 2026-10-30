@@ -12,32 +12,48 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PurchaseUnitPayments : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorizations") is { } nullNodeAuthorizations && nullNodeAuthorizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorizations = null;
+            if (parseNode.GetChildNode("captures") is { } nullNodeCaptures && nullNodeCaptures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Captures = null;
+            if (parseNode.GetChildNode("refunds") is { } nullNodeRefunds && nullNodeRefunds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Refunds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of authorized payments for a purchase unit. A purchase unit can have zero or more authorized payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem>? Authorizations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem>? Authorizations { get => _explicitNullValueAuthorizations; set { _explicitNullValueAuthorizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizations"); else _explicitNullProperties?.Remove("authorizations"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem>? _explicitNullValueAuthorizations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem> Authorizations { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem> Authorizations { get => _explicitNullValueAuthorizations; set { _explicitNullValueAuthorizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizations"); else _explicitNullProperties?.Remove("authorizations"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem> _explicitNullValueAuthorizations = default!;
 #endif
         /// <summary>An array of captured payments for a purchase unit. A purchase unit can have zero or more captured payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem>? Captures { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem>? Captures { get => _explicitNullValueCaptures; set { _explicitNullValueCaptures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captures"); else _explicitNullProperties?.Remove("captures"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem>? _explicitNullValueCaptures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem> Captures { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem> Captures { get => _explicitNullValueCaptures; set { _explicitNullValueCaptures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captures"); else _explicitNullProperties?.Remove("captures"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem> _explicitNullValueCaptures = default!;
 #endif
         /// <summary>An array of refunds for a purchase unit. A purchase unit can have zero or more refunds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem>? Refunds { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem>? Refunds { get => _explicitNullValueRefunds; set { _explicitNullValueRefunds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunds"); else _explicitNullProperties?.Remove("refunds"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem>? _explicitNullValueRefunds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem> Refunds { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem> Refunds { get => _explicitNullValueRefunds; set { _explicitNullValueRefunds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunds"); else _explicitNullProperties?.Remove("refunds"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem> _explicitNullValueRefunds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PurchaseUnitPayments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionAuthorizationsItem>("authorizations", Authorizations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionCapturesItem>("captures", Captures);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentCollectionRefundsItem>("refunds", Refunds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,58 +12,85 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VerifyWebhookSignature : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auth_algo") is { } nullNodeAuthAlgo && nullNodeAuthAlgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthAlgo = null;
+            if (parseNode.GetChildNode("cert_url") is { } nullNodeCertUrl && nullNodeCertUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertUrl = null;
+            if (parseNode.GetChildNode("transmission_id") is { } nullNodeTransmissionId && nullNodeTransmissionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransmissionId = null;
+            if (parseNode.GetChildNode("transmission_sig") is { } nullNodeTransmissionSig && nullNodeTransmissionSig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransmissionSig = null;
+            if (parseNode.GetChildNode("transmission_time") is { } nullNodeTransmissionTime && nullNodeTransmissionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransmissionTime = null;
+            if (parseNode.GetChildNode("webhook_event") is { } nullNodeWebhookEvent && nullNodeWebhookEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookEvent = null;
+            if (parseNode.GetChildNode("webhook_id") is { } nullNodeWebhookId && nullNodeWebhookId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The algorithm that PayPal uses to generate the signature and that you can use to verify the signature. Extract this value from the `PAYPAL-AUTH-ALGO` response header, which is received with the webhook notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthAlgo { get; set; }
+        public string? AuthAlgo { get => _explicitNullValueAuthAlgo; set { _explicitNullValueAuthAlgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_algo"); else _explicitNullProperties?.Remove("auth_algo"); } }
+        private string? _explicitNullValueAuthAlgo = default!;
 #nullable restore
 #else
-        public string AuthAlgo { get; set; }
+        public string AuthAlgo { get => _explicitNullValueAuthAlgo; set { _explicitNullValueAuthAlgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_algo"); else _explicitNullProperties?.Remove("auth_algo"); } }
+        private string _explicitNullValueAuthAlgo = default!;
 #endif
         /// <summary>The X.509 public key certificate. Download the certificate from this URL and use it to verify the signature. Extract this value from the `PAYPAL-CERT-URL` response header, which is received with the webhook notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CertUrl { get; set; }
+        public string? CertUrl { get => _explicitNullValueCertUrl; set { _explicitNullValueCertUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cert_url"); else _explicitNullProperties?.Remove("cert_url"); } }
+        private string? _explicitNullValueCertUrl = default!;
 #nullable restore
 #else
-        public string CertUrl { get; set; }
+        public string CertUrl { get => _explicitNullValueCertUrl; set { _explicitNullValueCertUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cert_url"); else _explicitNullProperties?.Remove("cert_url"); } }
+        private string _explicitNullValueCertUrl = default!;
 #endif
         /// <summary>The ID of the HTTP transmission. Contained in the `PAYPAL-TRANSMISSION-ID` header of the notification message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransmissionId { get; set; }
+        public string? TransmissionId { get => _explicitNullValueTransmissionId; set { _explicitNullValueTransmissionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmission_id"); else _explicitNullProperties?.Remove("transmission_id"); } }
+        private string? _explicitNullValueTransmissionId = default!;
 #nullable restore
 #else
-        public string TransmissionId { get; set; }
+        public string TransmissionId { get => _explicitNullValueTransmissionId; set { _explicitNullValueTransmissionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmission_id"); else _explicitNullProperties?.Remove("transmission_id"); } }
+        private string _explicitNullValueTransmissionId = default!;
 #endif
         /// <summary>The PayPal-generated asymmetric signature. Appears in the `PAYPAL-TRANSMISSION-SIG` header of the notification message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransmissionSig { get; set; }
+        public string? TransmissionSig { get => _explicitNullValueTransmissionSig; set { _explicitNullValueTransmissionSig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmission_sig"); else _explicitNullProperties?.Remove("transmission_sig"); } }
+        private string? _explicitNullValueTransmissionSig = default!;
 #nullable restore
 #else
-        public string TransmissionSig { get; set; }
+        public string TransmissionSig { get => _explicitNullValueTransmissionSig; set { _explicitNullValueTransmissionSig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmission_sig"); else _explicitNullProperties?.Remove("transmission_sig"); } }
+        private string _explicitNullValueTransmissionSig = default!;
 #endif
         /// <summary>The date and time of the HTTP transmission, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Appears in the `PAYPAL-TRANSMISSION-TIME` header of the notification message.</summary>
-        public DateTimeOffset? TransmissionTime { get; set; }
+        public DateTimeOffset? TransmissionTime { get => _explicitNullValueTransmissionTime; set { _explicitNullValueTransmissionTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmission_time"); else _explicitNullProperties?.Remove("transmission_time"); } }
+        private DateTimeOffset? _explicitNullValueTransmissionTime = default!;
         /// <summary>A webhook event notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.EventType? WebhookEvent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventType? WebhookEvent { get => _explicitNullValueWebhookEvent; set { _explicitNullValueWebhookEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_event"); else _explicitNullProperties?.Remove("webhook_event"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.EventType? _explicitNullValueWebhookEvent = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.EventType WebhookEvent { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.EventType WebhookEvent { get => _explicitNullValueWebhookEvent; set { _explicitNullValueWebhookEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_event"); else _explicitNullProperties?.Remove("webhook_event"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.EventType _explicitNullValueWebhookEvent = default!;
 #endif
         /// <summary>The ID of the webhook as configured in your Developer Portal account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookId { get; set; }
+        public string? WebhookId { get => _explicitNullValueWebhookId; set { _explicitNullValueWebhookId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_id"); else _explicitNullProperties?.Remove("webhook_id"); } }
+        private string? _explicitNullValueWebhookId = default!;
 #nullable restore
 #else
-        public string WebhookId { get; set; }
+        public string WebhookId { get => _explicitNullValueWebhookId; set { _explicitNullValueWebhookId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_id"); else _explicitNullProperties?.Remove("webhook_id"); } }
+        private string _explicitNullValueWebhookId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignature"/> and sets the default values.
@@ -80,7 +107,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignature CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignature();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.VerifyWebhookSignature(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,6 +140,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("transmission_time", TransmissionTime);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.EventType>("webhook_event", WebhookEvent);
             writer.WriteStringValue("webhook_id", WebhookId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

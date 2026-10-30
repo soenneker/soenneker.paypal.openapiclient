@@ -12,35 +12,53 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Operation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_integration_preference") is { } nullNodeApiIntegrationPreference && nullNodeApiIntegrationPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiIntegrationPreference = null;
+            if (parseNode.GetChildNode("billing_agreement") is { } nullNodeBillingAgreement && nullNodeBillingAgreement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAgreement = null;
+            if (parseNode.GetChildNode("offline_onboarding_preference") is { } nullNodeOfflineOnboardingPreference && nullNodeOfflineOnboardingPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfflineOnboardingPreference = null;
+            if (parseNode.GetChildNode("operation") is { } nullNodeOperationProp && nullNodeOperationProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationProp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The integration details for the partner and customer relationship. Required if `operation` is `API_INTEGRATION`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails? ApiIntegrationPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails? ApiIntegrationPreference { get => _explicitNullValueApiIntegrationPreference; set { _explicitNullValueApiIntegrationPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_integration_preference"); else _explicitNullProperties?.Remove("api_integration_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails? _explicitNullValueApiIntegrationPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails ApiIntegrationPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails ApiIntegrationPreference { get => _explicitNullValueApiIntegrationPreference; set { _explicitNullValueApiIntegrationPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_integration_preference"); else _explicitNullProperties?.Remove("api_integration_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails _explicitNullValueApiIntegrationPreference = default!;
 #endif
         /// <summary>The details of the billing agreement between the partner and a seller.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement? BillingAgreement { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement? BillingAgreement { get => _explicitNullValueBillingAgreement; set { _explicitNullValueBillingAgreement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement"); else _explicitNullProperties?.Remove("billing_agreement"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement? _explicitNullValueBillingAgreement = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement BillingAgreement { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement BillingAgreement { get => _explicitNullValueBillingAgreement; set { _explicitNullValueBillingAgreement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement"); else _explicitNullProperties?.Remove("billing_agreement"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement _explicitNullValueBillingAgreement = default!;
 #endif
         /// <summary>The preference details for offline onboarding without UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty? OfflineOnboardingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty? OfflineOnboardingPreference { get => _explicitNullValueOfflineOnboardingPreference; set { _explicitNullValueOfflineOnboardingPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline_onboarding_preference"); else _explicitNullProperties?.Remove("offline_onboarding_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty? _explicitNullValueOfflineOnboardingPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty OfflineOnboardingPreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty OfflineOnboardingPreference { get => _explicitNullValueOfflineOnboardingPreference; set { _explicitNullValueOfflineOnboardingPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline_onboarding_preference"); else _explicitNullProperties?.Remove("offline_onboarding_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty _explicitNullValueOfflineOnboardingPreference = default!;
 #endif
         /// <summary>The operation to enable for the customer. To enable the collection of the API permissions that you require to integrate with the customer, specify `API_INTEGRATION`. `BANK_ADDITION` is supported only for the US.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation? OperationProp { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation? OperationProp { get => _explicitNullValueOperationProp; set { _explicitNullValueOperationProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation? _explicitNullValueOperationProp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Operation"/> and sets the default values.
         /// </summary>
@@ -56,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Operation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Operation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Operation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement>("billing_agreement", BillingAgreement);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOfflineOnboardingPreferenceProperty>("offline_onboarding_preference", OfflineOnboardingPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.OperationOperation>("operation", OperationProp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

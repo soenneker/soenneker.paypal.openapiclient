@@ -12,18 +12,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdatePricingSchemeRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_sequence") is { } nullNodeBillingCycleSequence && nullNodeBillingCycleSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleSequence = null;
+            if (parseNode.GetChildNode("pricing_scheme") is { } nullNodePricingScheme && nullNodePricingScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingScheme = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing cycle sequence.</summary>
-        public int? BillingCycleSequence { get; set; }
+        public int? BillingCycleSequence { get => _explicitNullValueBillingCycleSequence; set { _explicitNullValueBillingCycleSequence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_sequence"); else _explicitNullProperties?.Remove("billing_cycle_sequence"); } }
+        private int? _explicitNullValueBillingCycleSequence = default!;
         /// <summary>The pricing scheme details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme? PricingScheme { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme? PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme? _explicitNullValuePricingScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme PricingScheme { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme PricingScheme { get => _explicitNullValuePricingScheme; set { _explicitNullValuePricingScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_scheme"); else _explicitNullProperties?.Remove("pricing_scheme"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme _explicitNullValuePricingScheme = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.UpdatePricingSchemeRequest"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.UpdatePricingSchemeRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.UpdatePricingSchemeRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.UpdatePricingSchemeRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("billing_cycle_sequence", BillingCycleSequence);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>("pricing_scheme", PricingScheme);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

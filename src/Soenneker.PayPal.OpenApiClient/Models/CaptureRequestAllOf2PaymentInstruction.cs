@@ -11,34 +11,52 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CaptureRequestAllOf2PaymentInstruction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("disbursement_mode") is { } nullNodeDisbursementMode && nullNodeDisbursementMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisbursementMode = null;
+            if (parseNode.GetChildNode("payee_pricing_tier_id") is { } nullNodePayeePricingTierId && nullNodePayeePricingTierId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeePricingTierId = null;
+            if (parseNode.GetChildNode("payee_receivable_fx_rate_id") is { } nullNodePayeeReceivableFxRateId && nullNodePayeeReceivableFxRateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayeeReceivableFxRateId = null;
+            if (parseNode.GetChildNode("platform_fees") is { } nullNodePlatformFees && nullNodePlatformFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformFees = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The funds that are held on behalf of the merchant.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode? DisbursementMode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode? DisbursementMode { get => _explicitNullValueDisbursementMode; set { _explicitNullValueDisbursementMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disbursement_mode"); else _explicitNullProperties?.Remove("disbursement_mode"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode? _explicitNullValueDisbursementMode = default!;
         /// <summary>This field is only enabled for selected merchants/partners to use and provides the ability to trigger a specific pricing rate/plan for a payment transaction. The list of eligible &apos;payee_pricing_tier_id&apos; would be provided to you by your Account Manager. Specifying values other than the one provided to you by your account manager would result in an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayeePricingTierId { get; set; }
+        public string? PayeePricingTierId { get => _explicitNullValuePayeePricingTierId; set { _explicitNullValuePayeePricingTierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_pricing_tier_id"); else _explicitNullProperties?.Remove("payee_pricing_tier_id"); } }
+        private string? _explicitNullValuePayeePricingTierId = default!;
 #nullable restore
 #else
-        public string PayeePricingTierId { get; set; }
+        public string PayeePricingTierId { get => _explicitNullValuePayeePricingTierId; set { _explicitNullValuePayeePricingTierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_pricing_tier_id"); else _explicitNullProperties?.Remove("payee_pricing_tier_id"); } }
+        private string _explicitNullValuePayeePricingTierId = default!;
 #endif
         /// <summary>FX identifier generated returned by PayPal to be used for payment processing in order to honor FX rate (for eligible integrations) to be used when amount is settled/received into the payee account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayeeReceivableFxRateId { get; set; }
+        public string? PayeeReceivableFxRateId { get => _explicitNullValuePayeeReceivableFxRateId; set { _explicitNullValuePayeeReceivableFxRateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_receivable_fx_rate_id"); else _explicitNullProperties?.Remove("payee_receivable_fx_rate_id"); } }
+        private string? _explicitNullValuePayeeReceivableFxRateId = default!;
 #nullable restore
 #else
-        public string PayeeReceivableFxRateId { get; set; }
+        public string PayeeReceivableFxRateId { get => _explicitNullValuePayeeReceivableFxRateId; set { _explicitNullValuePayeeReceivableFxRateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee_receivable_fx_rate_id"); else _explicitNullProperties?.Remove("payee_receivable_fx_rate_id"); } }
+        private string _explicitNullValuePayeeReceivableFxRateId = default!;
 #endif
         /// <summary>An array of various fees, commissions, tips, or donations. This field is only applicable to merchants that been enabled for PayPal Complete Payments Platform for Marketplaces and Platforms capability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>? PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>? PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>? _explicitNullValuePlatformFees = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem> PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem> PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem> _explicitNullValuePlatformFees = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.CaptureRequestAllOf2PaymentInstruction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("payee_pricing_tier_id", PayeePricingTierId);
             writer.WriteStringValue("payee_receivable_fx_rate_id", PayeeReceivableFxRateId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionPlatformFeesItem>("platform_fees", PlatformFees);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

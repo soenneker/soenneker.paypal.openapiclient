@@ -12,48 +12,70 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingAgreement : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approval_url") is { } nullNodeApprovalUrl && nullNodeApprovalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalUrl = null;
+            if (parseNode.GetChildNode("billing_experience_preference") is { } nullNodeBillingExperiencePreference && nullNodeBillingExperiencePreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingExperiencePreference = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("ec_token") is { } nullNodeEcToken && nullNodeEcToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EcToken = null;
+            if (parseNode.GetChildNode("merchant_custom_data") is { } nullNodeMerchantCustomData && nullNodeMerchantCustomData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantCustomData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL to which to redirect seller to accept the billing agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApprovalUrl { get; set; }
+        public string? ApprovalUrl { get => _explicitNullValueApprovalUrl; set { _explicitNullValueApprovalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_url"); else _explicitNullProperties?.Remove("approval_url"); } }
+        private string? _explicitNullValueApprovalUrl = default!;
 #nullable restore
 #else
-        public string ApprovalUrl { get; set; }
+        public string ApprovalUrl { get => _explicitNullValueApprovalUrl; set { _explicitNullValueApprovalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_url"); else _explicitNullProperties?.Remove("approval_url"); } }
+        private string _explicitNullValueApprovalUrl = default!;
 #endif
         /// <summary>The preference that customizes the billing experience of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference? BillingExperiencePreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference? BillingExperiencePreference { get => _explicitNullValueBillingExperiencePreference; set { _explicitNullValueBillingExperiencePreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_experience_preference"); else _explicitNullProperties?.Remove("billing_experience_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference? _explicitNullValueBillingExperiencePreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference BillingExperiencePreference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference BillingExperiencePreference { get => _explicitNullValueBillingExperiencePreference; set { _explicitNullValueBillingExperiencePreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_experience_preference"); else _explicitNullProperties?.Remove("billing_experience_preference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference _explicitNullValueBillingExperiencePreference = default!;
 #endif
         /// <summary>The billing agreement description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The billing agreement token for the agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EcToken { get; set; }
+        public string? EcToken { get => _explicitNullValueEcToken; set { _explicitNullValueEcToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec_token"); else _explicitNullProperties?.Remove("ec_token"); } }
+        private string? _explicitNullValueEcToken = default!;
 #nullable restore
 #else
-        public string EcToken { get; set; }
+        public string EcToken { get => _explicitNullValueEcToken; set { _explicitNullValueEcToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec_token"); else _explicitNullProperties?.Remove("ec_token"); } }
+        private string _explicitNullValueEcToken = default!;
 #endif
         /// <summary>The custom data for the billing agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantCustomData { get; set; }
+        public string? MerchantCustomData { get => _explicitNullValueMerchantCustomData; set { _explicitNullValueMerchantCustomData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_custom_data"); else _explicitNullProperties?.Remove("merchant_custom_data"); } }
+        private string? _explicitNullValueMerchantCustomData = default!;
 #nullable restore
 #else
-        public string MerchantCustomData { get; set; }
+        public string MerchantCustomData { get => _explicitNullValueMerchantCustomData; set { _explicitNullValueMerchantCustomData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_custom_data"); else _explicitNullProperties?.Remove("merchant_custom_data"); } }
+        private string _explicitNullValueMerchantCustomData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.BillingAgreement(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("ec_token", EcToken);
             writer.WriteStringValue("merchant_custom_data", MerchantCustomData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

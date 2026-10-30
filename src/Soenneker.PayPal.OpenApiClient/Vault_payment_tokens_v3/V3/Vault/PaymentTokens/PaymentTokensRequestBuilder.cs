@@ -70,6 +70,8 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
                 { "400", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.CustomerVaultPaymentTokensResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.CustomerVaultPaymentTokensResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -103,6 +105,8 @@ namespace Soenneker.PayPal.OpenApiClient.Vault_payment_tokens_v3.V3.Vault.Paymen
                 { "404", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.PaymentTokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,57 +12,87 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Extensions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_dispute_properties") is { } nullNodeBillingDisputeProperties && nullNodeBillingDisputeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingDisputeProperties = null;
+            if (parseNode.GetChildNode("buyer_contacted_channel") is { } nullNodeBuyerContactedChannel && nullNodeBuyerContactedChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerContactedChannel = null;
+            if (parseNode.GetChildNode("buyer_contacted_time") is { } nullNodeBuyerContactedTime && nullNodeBuyerContactedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerContactedTime = null;
+            if (parseNode.GetChildNode("merchandize_dispute_properties") is { } nullNodeMerchandizeDisputeProperties && nullNodeMerchandizeDisputeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchandizeDisputeProperties = null;
+            if (parseNode.GetChildNode("merchant_contacted") is { } nullNodeMerchantContacted && nullNodeMerchantContacted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantContacted = null;
+            if (parseNode.GetChildNode("merchant_contacted_mode") is { } nullNodeMerchantContactedMode && nullNodeMerchantContactedMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantContactedMode = null;
+            if (parseNode.GetChildNode("merchant_contacted_outcome") is { } nullNodeMerchantContactedOutcome && nullNodeMerchantContactedOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantContactedOutcome = null;
+            if (parseNode.GetChildNode("merchant_contacted_time") is { } nullNodeMerchantContactedTime && nullNodeMerchantContactedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantContactedTime = null;
+            if (parseNode.GetChildNode("reported_source") is { } nullNodeReportedSource && nullNodeReportedSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedSource = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing issue details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties? BillingDisputeProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties? BillingDisputeProperties { get => _explicitNullValueBillingDisputeProperties; set { _explicitNullValueBillingDisputeProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_dispute_properties"); else _explicitNullProperties?.Remove("billing_dispute_properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties? _explicitNullValueBillingDisputeProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties BillingDisputeProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties BillingDisputeProperties { get => _explicitNullValueBillingDisputeProperties; set { _explicitNullValueBillingDisputeProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_dispute_properties"); else _explicitNullProperties?.Remove("billing_dispute_properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BillingDisputesProperties _explicitNullValueBillingDisputeProperties = default!;
 #endif
         /// <summary>The channel through which the buyer contacted the partner to file a dispute. Partners that allow buyers to create dispute from multiple channels can use this field to help identify which channel was used for each individual dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerContactedChannel { get; set; }
+        public string? BuyerContactedChannel { get => _explicitNullValueBuyerContactedChannel; set { _explicitNullValueBuyerContactedChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_contacted_channel"); else _explicitNullProperties?.Remove("buyer_contacted_channel"); } }
+        private string? _explicitNullValueBuyerContactedChannel = default!;
 #nullable restore
 #else
-        public string BuyerContactedChannel { get; set; }
+        public string BuyerContactedChannel { get => _explicitNullValueBuyerContactedChannel; set { _explicitNullValueBuyerContactedChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_contacted_channel"); else _explicitNullProperties?.Remove("buyer_contacted_channel"); } }
+        private string _explicitNullValueBuyerContactedChannel = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerContactedTime { get; set; }
+        public string? BuyerContactedTime { get => _explicitNullValueBuyerContactedTime; set { _explicitNullValueBuyerContactedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_contacted_time"); else _explicitNullProperties?.Remove("buyer_contacted_time"); } }
+        private string? _explicitNullValueBuyerContactedTime = default!;
 #nullable restore
 #else
-        public string BuyerContactedTime { get; set; }
+        public string BuyerContactedTime { get => _explicitNullValueBuyerContactedTime; set { _explicitNullValueBuyerContactedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_contacted_time"); else _explicitNullProperties?.Remove("buyer_contacted_time"); } }
+        private string _explicitNullValueBuyerContactedTime = default!;
 #endif
         /// <summary>The customer-provided merchandise issue details for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties? MerchandizeDisputeProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties? MerchandizeDisputeProperties { get => _explicitNullValueMerchandizeDisputeProperties; set { _explicitNullValueMerchandizeDisputeProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandize_dispute_properties"); else _explicitNullProperties?.Remove("merchandize_dispute_properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties? _explicitNullValueMerchandizeDisputeProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties MerchandizeDisputeProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties MerchandizeDisputeProperties { get => _explicitNullValueMerchandizeDisputeProperties; set { _explicitNullValueMerchandizeDisputeProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandize_dispute_properties"); else _explicitNullProperties?.Remove("merchandize_dispute_properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputeProperties _explicitNullValueMerchandizeDisputeProperties = default!;
 #endif
         /// <summary>Indicates that the merchant was contacted.</summary>
-        public bool? MerchantContacted { get; set; }
+        public bool? MerchantContacted { get => _explicitNullValueMerchantContacted; set { _explicitNullValueMerchantContacted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_contacted"); else _explicitNullProperties?.Remove("merchant_contacted"); } }
+        private bool? _explicitNullValueMerchantContacted = default!;
         /// <summary>The method used to contact the merchant.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedMode? MerchantContactedMode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedMode? MerchantContactedMode { get => _explicitNullValueMerchantContactedMode; set { _explicitNullValueMerchantContactedMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_contacted_mode"); else _explicitNullProperties?.Remove("merchant_contacted_mode"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedMode? _explicitNullValueMerchantContactedMode = default!;
         /// <summary>The outcome when the customer has contacted the merchant.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedOutcome? MerchantContactedOutcome { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedOutcome? MerchantContactedOutcome { get => _explicitNullValueMerchantContactedOutcome; set { _explicitNullValueMerchantContactedOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_contacted_outcome"); else _explicitNullProperties?.Remove("merchant_contacted_outcome"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedOutcome? _explicitNullValueMerchantContactedOutcome = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantContactedTime { get; set; }
+        public string? MerchantContactedTime { get => _explicitNullValueMerchantContactedTime; set { _explicitNullValueMerchantContactedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_contacted_time"); else _explicitNullProperties?.Remove("merchant_contacted_time"); } }
+        private string? _explicitNullValueMerchantContactedTime = default!;
 #nullable restore
 #else
-        public string MerchantContactedTime { get; set; }
+        public string MerchantContactedTime { get => _explicitNullValueMerchantContactedTime; set { _explicitNullValueMerchantContactedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_contacted_time"); else _explicitNullProperties?.Remove("merchant_contacted_time"); } }
+        private string _explicitNullValueMerchantContactedTime = default!;
 #endif
         /// <summary>The dispute source through which customer initiated the dispute.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeSource? ReportedSource { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeSource? ReportedSource { get => _explicitNullValueReportedSource; set { _explicitNullValueReportedSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_source"); else _explicitNullProperties?.Remove("reported_source"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.DisputeSource? _explicitNullValueReportedSource = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Extensions"/> and sets the default values.
         /// </summary>
@@ -78,7 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Extensions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Extensions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Extensions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -115,6 +145,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchantContactedOutcome>("merchant_contacted_outcome", MerchantContactedOutcome);
             writer.WriteStringValue("merchant_contacted_time", MerchantContactedTime);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeSource>("reported_source", ReportedSource);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,45 +13,68 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CardRequest : global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf1, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("experience_context") is { } nullNodeExperienceContext && nullNodeExperienceContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperienceContext = null;
+            if (parseNode.GetChildNode("network_token") is { } nullNodeNetworkToken && nullNodeNetworkToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkToken = null;
+            if (parseNode.GetChildNode("single_use_token") is { } nullNodeSingleUseToken && nullNodeSingleUseToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleUseToken = null;
+            if (parseNode.GetChildNode("stored_credential") is { } nullNodeStoredCredential && nullNodeStoredCredential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoredCredential = null;
+            if (parseNode.GetChildNode("vault_id") is { } nullNodeVaultId && nullNodeVaultId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VaultId = null;
+        }
+
         /// <summary>The experience_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext? ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext? ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext? _explicitNullValueExperienceContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext ExperienceContext { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext ExperienceContext { get => _explicitNullValueExperienceContext; set { _explicitNullValueExperienceContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experience_context"); else _explicitNullProperties?.Remove("experience_context"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2ExperienceContext _explicitNullValueExperienceContext = default!;
 #endif
         /// <summary>A 3rd party network token refers to a network token that the merchant provisions from and vaults with an external TSP (Token Service Provider) other than PayPal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken? NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken? NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken? _explicitNullValueNetworkToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken NetworkToken { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken _explicitNullValueNetworkToken = default!;
 #endif
         /// <summary>The PayPal-generated, short-lived, one-time-use token, used to communicate payment information to PayPal for transaction processing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SingleUseToken { get; set; }
+        public string? SingleUseToken { get => _explicitNullValueSingleUseToken; set { _explicitNullValueSingleUseToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("single_use_token"); else _explicitNullProperties?.Remove("single_use_token"); } }
+        private string? _explicitNullValueSingleUseToken = default!;
 #nullable restore
 #else
-        public string SingleUseToken { get; set; }
+        public string SingleUseToken { get => _explicitNullValueSingleUseToken; set { _explicitNullValueSingleUseToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("single_use_token"); else _explicitNullProperties?.Remove("single_use_token"); } }
+        private string _explicitNullValueSingleUseToken = default!;
 #endif
         /// <summary>Provides additional details to process a payment using a `card` that has been stored or is intended to be stored (also referred to as stored_credential or card-on-file).&lt;br/&gt;Parameter compatibility:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;`payment_type=ONE_TIME` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`usage=FIRST` is compatible only with `payment_initiator=CUSTOMER`.&lt;/li&gt;&lt;li&gt;`previous_transaction_reference` or `previous_network_transaction_reference` is compatible only with `payment_initiator=MERCHANT`.&lt;/li&gt;&lt;li&gt;Only one of the parameters - `previous_transaction_reference` and `previous_network_transaction_reference` - can be present in the request.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? StoredCredential { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential? _explicitNullValueStoredCredential = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential StoredCredential { get => _explicitNullValueStoredCredential; set { _explicitNullValueStoredCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored_credential"); else _explicitNullProperties?.Remove("stored_credential"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential _explicitNullValueStoredCredential = default!;
 #endif
         /// <summary>The PayPal-generated ID for the vaulted payment source. This ID should be stored on the merchant&apos;s server so the saved payment source can be used for future transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VaultId { get; set; }
+        public string? VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
+        private string? _explicitNullValueVaultId = default!;
 #nullable restore
 #else
-        public string VaultId { get; set; }
+        public string VaultId { get => _explicitNullValueVaultId; set { _explicitNullValueVaultId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vault_id"); else _explicitNullProperties?.Remove("vault_id"); } }
+        private string _explicitNullValueVaultId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +84,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static new global::Soenneker.PayPal.OpenApiClient.Models.CardRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.CardRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.CardRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,7 +113,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardRequestAllOf2NetworkToken>("network_token", NetworkToken);
             writer.WriteStringValue("single_use_token", SingleUseToken);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardStoredCredential>("stored_credential", StoredCredential);
-            writer.WriteStringValue("vault_id", VaultId);
+            writer.WriteStringValue("vault_id", VaultId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

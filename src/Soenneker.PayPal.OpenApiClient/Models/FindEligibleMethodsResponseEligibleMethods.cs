@@ -12,40 +12,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FindEligibleMethodsResponseEligibleMethods : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("paypal") is { } nullNodePaypal && nullNodePaypal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypal = null;
+            if (parseNode.GetChildNode("paypal_credit") is { } nullNodePaypalCredit && nullNodePaypalCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalCredit = null;
+            if (parseNode.GetChildNode("paypal_pay_later") is { } nullNodePaypalPayLater && nullNodePaypalPayLater.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalPayLater = null;
+            if (parseNode.GetChildNode("venmo") is { } nullNodeVenmo && nullNodeVenmo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Venmo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>PayPal payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal? Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal? Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal? _explicitNullValuePaypal = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal Paypal { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypal _explicitNullValuePaypal = default!;
 #endif
         /// <summary>PayPal Credit payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit? PaypalCredit { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit? PaypalCredit { get => _explicitNullValuePaypalCredit; set { _explicitNullValuePaypalCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_credit"); else _explicitNullProperties?.Remove("paypal_credit"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit? _explicitNullValuePaypalCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit PaypalCredit { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit PaypalCredit { get => _explicitNullValuePaypalCredit; set { _explicitNullValuePaypalCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_credit"); else _explicitNullProperties?.Remove("paypal_credit"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit _explicitNullValuePaypalCredit = default!;
 #endif
         /// <summary>PayPal Pay Later payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater? PaypalPayLater { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater? PaypalPayLater { get => _explicitNullValuePaypalPayLater; set { _explicitNullValuePaypalPayLater = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_pay_later"); else _explicitNullProperties?.Remove("paypal_pay_later"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater? _explicitNullValuePaypalPayLater = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater PaypalPayLater { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater PaypalPayLater { get => _explicitNullValuePaypalPayLater; set { _explicitNullValuePaypalPayLater = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_pay_later"); else _explicitNullProperties?.Remove("paypal_pay_later"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater _explicitNullValuePaypalPayLater = default!;
 #endif
         /// <summary>Venmo payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo? Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo? Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo? _explicitNullValueVenmo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo Venmo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo _explicitNullValueVenmo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalCredit>("paypal_credit", PaypalCredit);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsPaypalPayLater>("paypal_pay_later", PaypalPayLater);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethodsVenmo>("venmo", Venmo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

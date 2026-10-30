@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IntegrationDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("classic_api_integration") is { } nullNodeClassicApiIntegration && nullNodeClassicApiIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassicApiIntegration = null;
+            if (parseNode.GetChildNode("rest_api_integration") is { } nullNodeRestApiIntegration && nullNodeRestApiIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestApiIntegration = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The integration details for PayPal CLASSIC endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration? ClassicApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration? ClassicApiIntegration { get => _explicitNullValueClassicApiIntegration; set { _explicitNullValueClassicApiIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classic_api_integration"); else _explicitNullProperties?.Remove("classic_api_integration"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration? _explicitNullValueClassicApiIntegration = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration ClassicApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration ClassicApiIntegration { get => _explicitNullValueClassicApiIntegration; set { _explicitNullValueClassicApiIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classic_api_integration"); else _explicitNullProperties?.Remove("classic_api_integration"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration _explicitNullValueClassicApiIntegration = default!;
 #endif
         /// <summary>The integration details for PayPal REST endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration? RestApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration? RestApiIntegration { get => _explicitNullValueRestApiIntegration; set { _explicitNullValueRestApiIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rest_api_integration"); else _explicitNullProperties?.Remove("rest_api_integration"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration? _explicitNullValueRestApiIntegration = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration RestApiIntegration { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration RestApiIntegration { get => _explicitNullValueRestApiIntegration; set { _explicitNullValueRestApiIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rest_api_integration"); else _explicitNullProperties?.Remove("rest_api_integration"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration _explicitNullValueRestApiIntegration = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.IntegrationDetailsClassicApiIntegration>("classic_api_integration", ClassicApiIntegration);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegration>("rest_api_integration", RestApiIntegration);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

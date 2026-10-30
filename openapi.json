@@ -36209,13 +36209,6 @@
           ]
         }
       },
-      "PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
-      },
       "catalogs_products_v1_InvalidParameterValueIssue": {
         "enum": [
           "INVALID_PARAMETER_VALUE"
@@ -101094,13 +101087,6 @@
           ]
         }
       },
-      "notifications_webhooks_v1_PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
-      },
       "AnchorType": {
         "enum": [
           "APPLICATION",
@@ -102295,13 +102281,6 @@
             }
           ]
         }
-      },
-      "payment_experience_web_experience_profiles_v1_PatchValueAnyOf5": {
-        "enum": [
-          null
-        ],
-        "type": "string",
-        "nullable": true
       },
       "payments_payment_v2_StandardHeaderSchema": {
         "title": "Schema Object for standard headers",

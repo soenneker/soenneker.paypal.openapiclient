@@ -12,16 +12,29 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transaction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_with_breakdown") is { } nullNodeAmountWithBreakdown && nullNodeAmountWithBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountWithBreakdown = null;
+            if (parseNode.GetChildNode("payer_email") is { } nullNodePayerEmail && nullNodePayerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerEmail = null;
+            if (parseNode.GetChildNode("payer_name") is { } nullNodePayerName && nullNodePayerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerName = null;
+            if (parseNode.GetChildNode("time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breakdown details for the amount. Includes the gross, tax, fee, and shipping amounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown? AmountWithBreakdown { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown? AmountWithBreakdown { get => _explicitNullValueAmountWithBreakdown; set { _explicitNullValueAmountWithBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_with_breakdown"); else _explicitNullProperties?.Remove("amount_with_breakdown"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown? _explicitNullValueAmountWithBreakdown = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown AmountWithBreakdown { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown AmountWithBreakdown { get => _explicitNullValueAmountWithBreakdown; set { _explicitNullValueAmountWithBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_with_breakdown"); else _explicitNullProperties?.Remove("amount_with_breakdown"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AmountWithBreakdown _explicitNullValueAmountWithBreakdown = default!;
 #endif
         /// <summary>The PayPal-generated transaction ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,28 +47,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The internationalized email address.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; Up to 64 characters are allowed before and 255 characters are allowed after the &lt;code&gt;@&lt;/code&gt; sign. However, the generally accepted maximum length for an email address is 254 characters. The pattern verifies that an unquoted &lt;code&gt;@&lt;/code&gt; sign exists.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerEmail { get; set; }
+        public string? PayerEmail { get => _explicitNullValuePayerEmail; set { _explicitNullValuePayerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_email"); else _explicitNullProperties?.Remove("payer_email"); } }
+        private string? _explicitNullValuePayerEmail = default!;
 #nullable restore
 #else
-        public string PayerEmail { get; set; }
+        public string PayerEmail { get => _explicitNullValuePayerEmail; set { _explicitNullValuePayerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_email"); else _explicitNullProperties?.Remove("payer_email"); } }
+        private string _explicitNullValuePayerEmail = default!;
 #endif
         /// <summary>The name of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Name? PayerName { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Name? PayerName { get => _explicitNullValuePayerName; set { _explicitNullValuePayerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_name"); else _explicitNullProperties?.Remove("payer_name"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Name? _explicitNullValuePayerName = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Name PayerName { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Name PayerName { get => _explicitNullValuePayerName; set { _explicitNullValuePayerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_name"); else _explicitNullProperties?.Remove("payer_name"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Name _explicitNullValuePayerName = default!;
 #endif
         /// <summary>The status of the captured payment.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.TransactionStatus? Status { get; private set; }
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get; set; }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get; set; }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string _explicitNullValueTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Transaction"/> and sets the default values.
@@ -72,7 +91,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Transaction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Transaction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Transaction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +120,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("payer_email", PayerEmail);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Name>("payer_name", PayerName);
             writer.WriteStringValue("time", Time);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

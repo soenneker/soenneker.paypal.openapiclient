@@ -12,23 +12,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StoredPaymentSource : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payment_initiator") is { } nullNodePaymentInitiator && nullNodePaymentInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInitiator = null;
+            if (parseNode.GetChildNode("payment_type") is { } nullNodePaymentType && nullNodePaymentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentType = null;
+            if (parseNode.GetChildNode("previous_network_transaction_reference") is { } nullNodePreviousNetworkTransactionReference && nullNodePreviousNetworkTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousNetworkTransactionReference = null;
+            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The person or party who initiated or triggered the payment.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? PaymentInitiator { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? PaymentInitiator { get => _explicitNullValuePaymentInitiator; set { _explicitNullValuePaymentInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_initiator"); else _explicitNullProperties?.Remove("payment_initiator"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? _explicitNullValuePaymentInitiator = default!;
         /// <summary>Indicates the type of the stored payment_source payment.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourcePaymentType? PaymentType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourcePaymentType? PaymentType { get => _explicitNullValuePaymentType; set { _explicitNullValuePaymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_type"); else _explicitNullProperties?.Remove("payment_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourcePaymentType? _explicitNullValuePaymentType = default!;
         /// <summary>Reference values used by the card network to identify a transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference? PreviousNetworkTransactionReference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference? PreviousNetworkTransactionReference { get => _explicitNullValuePreviousNetworkTransactionReference; set { _explicitNullValuePreviousNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_network_transaction_reference"); else _explicitNullProperties?.Remove("previous_network_transaction_reference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference? _explicitNullValuePreviousNetworkTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference PreviousNetworkTransactionReference { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference PreviousNetworkTransactionReference { get => _explicitNullValuePreviousNetworkTransactionReference; set { _explicitNullValuePreviousNetworkTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_network_transaction_reference"); else _explicitNullProperties?.Remove("previous_network_transaction_reference"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference _explicitNullValuePreviousNetworkTransactionReference = default!;
 #endif
         /// <summary>Indicates if this is a `first` or `subsequent` payment using a stored payment source (also referred to as stored credential or card on file).</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? Usage { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? _explicitNullValueUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource"/> and sets the default values.
         /// </summary>
@@ -44,7 +60,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,6 +87,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourcePaymentType>("payment_type", PaymentType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NetworkTransactionReference>("previous_network_transaction_reference", PreviousNetworkTransactionReference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType>("usage", Usage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

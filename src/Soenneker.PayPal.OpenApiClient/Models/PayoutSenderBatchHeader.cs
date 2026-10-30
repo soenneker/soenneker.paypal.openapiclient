@@ -12,34 +12,52 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PayoutSenderBatchHeader : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email_message") is { } nullNodeEmailMessage && nullNodeEmailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessage = null;
+            if (parseNode.GetChildNode("email_subject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
+            if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
+            if (parseNode.GetChildNode("sender_batch_id") is { } nullNodeSenderBatchId && nullNodeSenderBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email message that PayPal sends when the payout item completes. The message is the same for all recipients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessage { get; set; }
+        public string? EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        private string? _explicitNullValueEmailMessage = default!;
 #nullable restore
 #else
-        public string EmailMessage { get; set; }
+        public string EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        private string _explicitNullValueEmailMessage = default!;
 #endif
         /// <summary>The subject line for the email that PayPal sends when payment for a payout item completes. The subject line is the same for all recipients. Value is an alphanumeric string with a maximum length of 255 single-byte characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSubject { get; set; }
+        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        private string? _explicitNullValueEmailSubject = default!;
 #nullable restore
 #else
-        public string EmailSubject { get; set; }
+        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        private string _explicitNullValueEmailSubject = default!;
 #endif
         /// <summary>The ID type that identifies the payment receiver.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? RecipientType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum? _explicitNullValueRecipientType = default!;
         /// <summary>The sender-specified ID number. Tracks the payout in an accounting system.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;p&gt;PayPal does not process duplicate payouts. If you specify a &lt;code&gt;sender_batch_id&lt;/code&gt; that was used in the last 30 days, the API rejects the request with an error message that shows the duplicate &lt;code&gt;sender_batch_id&lt;/code&gt; and includes a HATEOAS link to the original payout with the same &lt;code&gt;sender_batch_id&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you receive an HTTP &lt;code&gt;5&lt;i&gt;nn&lt;/i&gt;&lt;/code&gt; status code, you can safely retry the request with the same &lt;code&gt;sender_batch_id&lt;/code&gt;. The API completes a payment only once for a &lt;code&gt;sender_batch_id&lt;/code&gt; that is used within 30 days.&lt;/p&gt;&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderBatchId { get; set; }
+        public string? SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
+        private string? _explicitNullValueSenderBatchId = default!;
 #nullable restore
 #else
-        public string SenderBatchId { get; set; }
+        public string SenderBatchId { get => _explicitNullValueSenderBatchId; set { _explicitNullValueSenderBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_id"); else _explicitNullProperties?.Remove("sender_batch_id"); } }
+        private string _explicitNullValueSenderBatchId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("email_subject", EmailSubject);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RecipientEnum>("recipient_type", RecipientType);
             writer.WriteStringValue("sender_batch_id", SenderBatchId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

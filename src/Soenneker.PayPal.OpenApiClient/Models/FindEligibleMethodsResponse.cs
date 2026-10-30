@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FindEligibleMethodsResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eligible_methods") is { } nullNodeEligibleMethods && nullNodeEligibleMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleMethods = null;
+            if (parseNode.GetChildNode("payment_tokens") is { } nullNodePaymentTokens && nullNodePaymentTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTokens = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of payment methods that are eligible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods? EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods? EligibleMethods { get => _explicitNullValueEligibleMethods; set { _explicitNullValueEligibleMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_methods"); else _explicitNullProperties?.Remove("eligible_methods"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods? _explicitNullValueEligibleMethods = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods EligibleMethods { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods EligibleMethods { get => _explicitNullValueEligibleMethods; set { _explicitNullValueEligibleMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_methods"); else _explicitNullProperties?.Remove("eligible_methods"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods _explicitNullValueEligibleMethods = default!;
 #endif
         /// <summary>Payment tokens for vaulted instruments, if available. This object will be included only if include_vault_tokens is set to true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>? PaymentTokens { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>? PaymentTokens { get => _explicitNullValuePaymentTokens; set { _explicitNullValuePaymentTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_tokens"); else _explicitNullProperties?.Remove("payment_tokens"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>? _explicitNullValuePaymentTokens = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem> PaymentTokens { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem> PaymentTokens { get => _explicitNullValuePaymentTokens; set { _explicitNullValuePaymentTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_tokens"); else _explicitNullProperties?.Remove("payment_tokens"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem> _explicitNullValuePaymentTokens = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponseEligibleMethods>("eligible_methods", EligibleMethods);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsResponsePaymentTokensItem>("payment_tokens", PaymentTokens);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

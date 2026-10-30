@@ -12,40 +12,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VaultPaymentTokensV3Plan : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycles") is { } nullNodeBillingCycles && nullNodeBillingCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycles = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("one_time_charges") is { } nullNodeOneTimeCharges && nullNodeOneTimeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTimeCharges = null;
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of billing cycles for trial billing and regular billing. A plan can have at most two trial cycles and only one regular cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle>? BillingCycles { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle>? BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle>? _explicitNullValueBillingCycles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle> BillingCycles { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle> BillingCycles { get => _explicitNullValueBillingCycles; set { _explicitNullValueBillingCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycles"); else _explicitNullProperties?.Remove("billing_cycles"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3BillingCycle> _explicitNullValueBillingCycles = default!;
 #endif
         /// <summary>Name of the recurring plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The one-time charge info at the time of checkout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges? OneTimeCharges { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges? OneTimeCharges { get => _explicitNullValueOneTimeCharges; set { _explicitNullValueOneTimeCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_charges"); else _explicitNullProperties?.Remove("one_time_charges"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges? _explicitNullValueOneTimeCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges OneTimeCharges { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges OneTimeCharges { get => _explicitNullValueOneTimeCharges; set { _explicitNullValueOneTimeCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_charges"); else _explicitNullProperties?.Remove("one_time_charges"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges _explicitNullValueOneTimeCharges = default!;
 #endif
         /// <summary>The product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Product { get; set; }
+        public UntypedNode? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private UntypedNode? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public UntypedNode Product { get; set; }
+        public UntypedNode Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private UntypedNode _explicitNullValueProduct = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.OneTimeCharges>("one_time_charges", OneTimeCharges);
             writer.WriteObjectValue<UntypedNode>("product", Product);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

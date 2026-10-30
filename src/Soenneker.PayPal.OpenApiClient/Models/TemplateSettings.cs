@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("template_item_settings") is { } nullNodeTemplateItemSettings && nullNodeTemplateItemSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateItemSettings = null;
+            if (parseNode.GetChildNode("template_subtotal_settings") is { } nullNodeTemplateSubtotalSettings && nullNodeTemplateSubtotalSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSubtotalSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The template item headers display preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? TemplateItemSettings { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>? _explicitNullValueTemplateItemSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> TemplateItemSettings { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> TemplateItemSettings { get => _explicitNullValueTemplateItemSettings; set { _explicitNullValueTemplateItemSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_item_settings"); else _explicitNullProperties?.Remove("template_item_settings"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting> _explicitNullValueTemplateItemSettings = default!;
 #endif
         /// <summary>The template subtotal headers display preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? TemplateSubtotalSettings { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>? _explicitNullValueTemplateSubtotalSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> TemplateSubtotalSettings { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> TemplateSubtotalSettings { get => _explicitNullValueTemplateSubtotalSettings; set { _explicitNullValueTemplateSubtotalSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_subtotal_settings"); else _explicitNullProperties?.Remove("template_subtotal_settings"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting> _explicitNullValueTemplateSubtotalSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TemplateItemSetting>("template_item_settings", TemplateItemSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSubtotalSetting>("template_subtotal_settings", TemplateSubtotalSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

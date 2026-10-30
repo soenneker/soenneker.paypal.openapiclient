@@ -12,11 +12,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Template : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("default_template") is { } nullNodeDefaultTemplate && nullNodeDefaultTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTemplate = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("settings") is { } nullNodeSettings && nullNodeSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Settings = null;
+            if (parseNode.GetChildNode("template_info") is { } nullNodeTemplateInfo && nullNodeTemplateInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateInfo = null;
+            if (parseNode.GetChildNode("unit_of_measure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether this template is the default template. A invoicer can have one default template.</summary>
-        public bool? DefaultTemplate { get; set; }
+        public bool? DefaultTemplate { get => _explicitNullValueDefaultTemplate; set { _explicitNullValueDefaultTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_template"); else _explicitNullProperties?.Remove("default_template"); } }
+        private bool? _explicitNullValueDefaultTemplate = default!;
         /// <summary>The ID of the template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,31 +49,38 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The template name.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The template name must be unique.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The template settings. Sets a template as the default template or edit template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings? Settings { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings Settings { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings _explicitNullValueSettings = default!;
 #endif
         /// <summary>Indicates whether this template is a invoicer-created custom template. The system generates non-custom templates.</summary>
         public bool? StandardTemplate { get; private set; }
         /// <summary>The template details. Includes invoicer business information, invoice recipients, items, and configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo? TemplateInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo? TemplateInfo { get => _explicitNullValueTemplateInfo; set { _explicitNullValueTemplateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_info"); else _explicitNullProperties?.Remove("template_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo? _explicitNullValueTemplateInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo TemplateInfo { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo TemplateInfo { get => _explicitNullValueTemplateInfo; set { _explicitNullValueTemplateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_info"); else _explicitNullProperties?.Remove("template_info"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo _explicitNullValueTemplateInfo = default!;
 #endif
         /// <summary>The unit of measure for the invoiced item.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? UnitOfMeasure { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_of_measure"); else _explicitNullProperties?.Remove("unit_of_measure"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure? _explicitNullValueUnitOfMeasure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Template"/> and sets the default values.
         /// </summary>
@@ -76,7 +96,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Template CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Template();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Template(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +128,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateSettings>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.TemplateInfo>("template_info", TemplateInfo);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.UnitOfMeasure>("unit_of_measure", UnitOfMeasure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

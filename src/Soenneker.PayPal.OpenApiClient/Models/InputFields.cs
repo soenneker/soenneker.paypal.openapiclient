@@ -12,13 +12,24 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InputFields : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_override") is { } nullNodeAddressOverride && nullNodeAddressOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressOverride = null;
+            if (parseNode.GetChildNode("no_shipping") is { } nullNodeNoShipping && nullNodeNoShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoShipping = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether to display the shipping address that is passed to this call rather than the one on file for this buyer on the PayPal experience pages. Value is:&lt;ul&gt;&lt;li&gt;&lt;code&gt;0&lt;/code&gt;. Displays the shipping address on file.&lt;/li&gt;&lt;li&gt;&lt;code&gt;1&lt;/code&gt;. Displays the shipping address specified in this call. the customer cannot edit this shipping address.&lt;/li&gt;&lt;/ul&gt;</summary>
-        public int? AddressOverride { get; set; }
+        public int? AddressOverride { get => _explicitNullValueAddressOverride; set { _explicitNullValueAddressOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_override"); else _explicitNullProperties?.Remove("address_override"); } }
+        private int? _explicitNullValueAddressOverride = default!;
         /// <summary>Indicates whether PayPal displays shipping address fields on the experience pages. Value is:&lt;ul&gt;&lt;li&gt;&lt;code&gt;0&lt;/code&gt;. Displays the shipping address on the PayPal pages.&lt;/li&gt;&lt;li&gt;&lt;code&gt;1&lt;/code&gt;. Redacts shipping address fields from the PayPal pages. For digital goods, this field is required and must be &lt;code&gt;1&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;code&gt;2&lt;/code&gt;. Gets the shipping address from the customer&apos;s account profile.&lt;/li&gt;&lt;/ul&gt;</summary>
-        public int? NoShipping { get; set; }
+        public int? NoShipping { get => _explicitNullValueNoShipping; set { _explicitNullValueNoShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no_shipping"); else _explicitNullProperties?.Remove("no_shipping"); } }
+        private int? _explicitNullValueNoShipping = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.InputFields"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.InputFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.InputFields();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.InputFields(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("address_override", AddressOverride);
             writer.WriteIntValue("no_shipping", NoShipping);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,23 +12,39 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentByOtherMeans : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charge_different_from_original") is { } nullNodeChargeDifferentFromOriginal && nullNodeChargeDifferentFromOriginal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeDifferentFromOriginal = null;
+            if (parseNode.GetChildNode("payment_instrument_suffix") is { } nullNodePaymentInstrumentSuffix && nullNodePaymentInstrumentSuffix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInstrumentSuffix = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("received_duplicate") is { } nullNodeReceivedDuplicate && nullNodeReceivedDuplicate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDuplicate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, indicates that a charge was made that is different from the original charge.</summary>
-        public bool? ChargeDifferentFromOriginal { get; set; }
+        public bool? ChargeDifferentFromOriginal { get => _explicitNullValueChargeDifferentFromOriginal; set { _explicitNullValueChargeDifferentFromOriginal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_different_from_original"); else _explicitNullProperties?.Remove("charge_different_from_original"); } }
+        private bool? _explicitNullValueChargeDifferentFromOriginal = default!;
         /// <summary>Last 2-4 characters of the payment instrument. For payment_method CHECK, payment_instrument_suffix entered must be of minimum length 2-4 characters. For payment_method CREDIT_CARD, DEBIT_CARD, GIFT_CARD, BANK_TRANSFER, payment_instrument_suffix entered must be of length 4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentInstrumentSuffix { get; set; }
+        public string? PaymentInstrumentSuffix { get => _explicitNullValuePaymentInstrumentSuffix; set { _explicitNullValuePaymentInstrumentSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_instrument_suffix"); else _explicitNullProperties?.Remove("payment_instrument_suffix"); } }
+        private string? _explicitNullValuePaymentInstrumentSuffix = default!;
 #nullable restore
 #else
-        public string PaymentInstrumentSuffix { get; set; }
+        public string PaymentInstrumentSuffix { get => _explicitNullValuePaymentInstrumentSuffix; set { _explicitNullValuePaymentInstrumentSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_instrument_suffix"); else _explicitNullProperties?.Remove("payment_instrument_suffix"); } }
+        private string _explicitNullValuePaymentInstrumentSuffix = default!;
 #endif
         /// <summary>The payment method.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod? _explicitNullValuePaymentMethod = default!;
         /// <summary>If `true`, indicates that a duplicate transaction was received.</summary>
-        public bool? ReceivedDuplicate { get; set; }
+        public bool? ReceivedDuplicate { get => _explicitNullValueReceivedDuplicate; set { _explicitNullValueReceivedDuplicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_duplicate"); else _explicitNullProperties?.Remove("received_duplicate"); } }
+        private bool? _explicitNullValueReceivedDuplicate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans"/> and sets the default values.
         /// </summary>
@@ -44,7 +60,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeans(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,6 +87,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("payment_instrument_suffix", PaymentInstrumentSuffix);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentByOtherMeansPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteBoolValue("received_duplicate", ReceivedDuplicate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

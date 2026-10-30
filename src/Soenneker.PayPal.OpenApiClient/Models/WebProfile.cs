@@ -12,16 +12,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebProfile : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("flow_config") is { } nullNodeFlowConfig && nullNodeFlowConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowConfig = null;
+            if (parseNode.GetChildNode("input_fields") is { } nullNodeInputFields && nullNodeInputFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputFields = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("presentation") is { } nullNodePresentation && nullNodePresentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Presentation = null;
+            if (parseNode.GetChildNode("temporary") is { } nullNodeTemporary && nullNodeTemporary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temporary = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flow configuration parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig? FlowConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig? FlowConfig { get => _explicitNullValueFlowConfig; set { _explicitNullValueFlowConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_config"); else _explicitNullProperties?.Remove("flow_config"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig? _explicitNullValueFlowConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig FlowConfig { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig FlowConfig { get => _explicitNullValueFlowConfig; set { _explicitNullValueFlowConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_config"); else _explicitNullProperties?.Remove("flow_config"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FlowConfig _explicitNullValueFlowConfig = default!;
 #endif
         /// <summary>The ID of the web experience profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,29 +48,36 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The input field customization parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.InputFields? InputFields { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InputFields? InputFields { get => _explicitNullValueInputFields; set { _explicitNullValueInputFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_fields"); else _explicitNullProperties?.Remove("input_fields"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.InputFields? _explicitNullValueInputFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.InputFields InputFields { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.InputFields InputFields { get => _explicitNullValueInputFields; set { _explicitNullValueInputFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_fields"); else _explicitNullProperties?.Remove("input_fields"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.InputFields _explicitNullValueInputFields = default!;
 #endif
         /// <summary>The web experience profile name. Must be unique for a set of profiles for a merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The style and presentation parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation? Presentation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation? Presentation { get => _explicitNullValuePresentation; set { _explicitNullValuePresentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentation"); else _explicitNullProperties?.Remove("presentation"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Presentation? _explicitNullValuePresentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation Presentation { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Presentation Presentation { get => _explicitNullValuePresentation; set { _explicitNullValuePresentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentation"); else _explicitNullProperties?.Remove("presentation"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Presentation _explicitNullValuePresentation = default!;
 #endif
         /// <summary>Indicates whether the profile persists for three hours or permanently. To persist the profile permanently, set to `false`. To persist the profile for three hours, set to `true`.</summary>
-        public bool? Temporary { get; set; }
+        public bool? Temporary { get => _explicitNullValueTemporary; set { _explicitNullValueTemporary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary"); else _explicitNullProperties?.Remove("temporary"); } }
+        private bool? _explicitNullValueTemporary = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.WebProfile"/> and sets the default values.
         /// </summary>
@@ -72,7 +93,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.WebProfile CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.WebProfile();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.WebProfile(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +123,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Presentation>("presentation", Presentation);
             writer.WriteBoolValue("temporary", Temporary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

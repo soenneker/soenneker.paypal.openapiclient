@@ -12,116 +12,166 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agreed_refund_details") is { } nullNodeAgreedRefundDetails && nullNodeAgreedRefundDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgreedRefundDetails = null;
+            if (parseNode.GetChildNode("booking_details") is { } nullNodeBookingDetails && nullNodeBookingDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookingDetails = null;
+            if (parseNode.GetChildNode("cancellation_details") is { } nullNodeCancellationDetails && nullNodeCancellationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDetails = null;
+            if (parseNode.GetChildNode("digital_download_details") is { } nullNodeDigitalDownloadDetails && nullNodeDigitalDownloadDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DigitalDownloadDetails = null;
+            if (parseNode.GetChildNode("dispute_amount") is { } nullNodeDisputeAmount && nullNodeDisputeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeAmount = null;
+            if (parseNode.GetChildNode("item_description") is { } nullNodeItemDescription && nullNodeItemDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDescription = null;
+            if (parseNode.GetChildNode("item_id") is { } nullNodeItemId && nullNodeItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemId = null;
+            if (parseNode.GetChildNode("item_name") is { } nullNodeItemName && nullNodeItemName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemName = null;
+            if (parseNode.GetChildNode("item_quantity") is { } nullNodeItemQuantity && nullNodeItemQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemQuantity = null;
+            if (parseNode.GetChildNode("item_type") is { } nullNodeItemType && nullNodeItemType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemType = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("partner_transaction_id") is { } nullNodePartnerTransactionId && nullNodePartnerTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerTransactionId = null;
+            if (parseNode.GetChildNode("product_details") is { } nullNodeProductDetails && nullNodeProductDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDetails = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("service_details") is { } nullNodeServiceDetails && nullNodeServiceDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The agreed_refund_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AgreedRefundDetails { get; set; }
+        public UntypedNode? AgreedRefundDetails { get => _explicitNullValueAgreedRefundDetails; set { _explicitNullValueAgreedRefundDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agreed_refund_details"); else _explicitNullProperties?.Remove("agreed_refund_details"); } }
+        private UntypedNode? _explicitNullValueAgreedRefundDetails = default!;
 #nullable restore
 #else
-        public UntypedNode AgreedRefundDetails { get; set; }
+        public UntypedNode AgreedRefundDetails { get => _explicitNullValueAgreedRefundDetails; set { _explicitNullValueAgreedRefundDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agreed_refund_details"); else _explicitNullProperties?.Remove("agreed_refund_details"); } }
+        private UntypedNode _explicitNullValueAgreedRefundDetails = default!;
 #endif
         /// <summary>The booking_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? BookingDetails { get; set; }
+        public UntypedNode? BookingDetails { get => _explicitNullValueBookingDetails; set { _explicitNullValueBookingDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("booking_details"); else _explicitNullProperties?.Remove("booking_details"); } }
+        private UntypedNode? _explicitNullValueBookingDetails = default!;
 #nullable restore
 #else
-        public UntypedNode BookingDetails { get; set; }
+        public UntypedNode BookingDetails { get => _explicitNullValueBookingDetails; set { _explicitNullValueBookingDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("booking_details"); else _explicitNullProperties?.Remove("booking_details"); } }
+        private UntypedNode _explicitNullValueBookingDetails = default!;
 #endif
         /// <summary>The cancellation_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CancellationDetails { get; set; }
+        public UntypedNode? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private UntypedNode? _explicitNullValueCancellationDetails = default!;
 #nullable restore
 #else
-        public UntypedNode CancellationDetails { get; set; }
+        public UntypedNode CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private UntypedNode _explicitNullValueCancellationDetails = default!;
 #endif
         /// <summary>The digital_download_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DigitalDownloadDetails { get; set; }
+        public UntypedNode? DigitalDownloadDetails { get => _explicitNullValueDigitalDownloadDetails; set { _explicitNullValueDigitalDownloadDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digital_download_details"); else _explicitNullProperties?.Remove("digital_download_details"); } }
+        private UntypedNode? _explicitNullValueDigitalDownloadDetails = default!;
 #nullable restore
 #else
-        public UntypedNode DigitalDownloadDetails { get; set; }
+        public UntypedNode DigitalDownloadDetails { get => _explicitNullValueDigitalDownloadDetails; set { _explicitNullValueDigitalDownloadDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digital_download_details"); else _explicitNullProperties?.Remove("digital_download_details"); } }
+        private UntypedNode _explicitNullValueDigitalDownloadDetails = default!;
 #endif
         /// <summary>The currency and amount for a financial transaction, such as a balance or payment due.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? DisputeAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? DisputeAmount { get => _explicitNullValueDisputeAmount; set { _explicitNullValueDisputeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_amount"); else _explicitNullProperties?.Remove("dispute_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money? _explicitNullValueDisputeAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money DisputeAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money DisputeAmount { get => _explicitNullValueDisputeAmount; set { _explicitNullValueDisputeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_amount"); else _explicitNullProperties?.Remove("dispute_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money _explicitNullValueDisputeAmount = default!;
 #endif
         /// <summary>The item description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemDescription { get; set; }
+        public string? ItemDescription { get => _explicitNullValueItemDescription; set { _explicitNullValueItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_description"); else _explicitNullProperties?.Remove("item_description"); } }
+        private string? _explicitNullValueItemDescription = default!;
 #nullable restore
 #else
-        public string ItemDescription { get; set; }
+        public string ItemDescription { get => _explicitNullValueItemDescription; set { _explicitNullValueItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_description"); else _explicitNullProperties?.Remove("item_description"); } }
+        private string _explicitNullValueItemDescription = default!;
 #endif
         /// <summary>The item ID. If the merchant provides multiple pieces of evidence and the transaction has multiple item IDs, the merchant can use this value to associate a piece of evidence with an item ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemId { get; set; }
+        public string? ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        private string? _explicitNullValueItemId = default!;
 #nullable restore
 #else
-        public string ItemId { get; set; }
+        public string ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        private string _explicitNullValueItemId = default!;
 #endif
         /// <summary>The item name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemName { get; set; }
+        public string? ItemName { get => _explicitNullValueItemName; set { _explicitNullValueItemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_name"); else _explicitNullProperties?.Remove("item_name"); } }
+        private string? _explicitNullValueItemName = default!;
 #nullable restore
 #else
-        public string ItemName { get; set; }
+        public string ItemName { get => _explicitNullValueItemName; set { _explicitNullValueItemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_name"); else _explicitNullProperties?.Remove("item_name"); } }
+        private string _explicitNullValueItemName = default!;
 #endif
         /// <summary>The count of the item in the dispute. Must be a whole number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemQuantity { get; set; }
+        public string? ItemQuantity { get => _explicitNullValueItemQuantity; set { _explicitNullValueItemQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_quantity"); else _explicitNullProperties?.Remove("item_quantity"); } }
+        private string? _explicitNullValueItemQuantity = default!;
 #nullable restore
 #else
-        public string ItemQuantity { get; set; }
+        public string ItemQuantity { get => _explicitNullValueItemQuantity; set { _explicitNullValueItemQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_quantity"); else _explicitNullProperties?.Remove("item_quantity"); } }
+        private string _explicitNullValueItemQuantity = default!;
 #endif
         /// <summary>The type of the item which has the issue.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ItemType? ItemType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ItemType? ItemType { get => _explicitNullValueItemType; set { _explicitNullValueItemType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_type"); else _explicitNullProperties?.Remove("item_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ItemType? _explicitNullValueItemType = default!;
         /// <summary>Any notes provided with the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The ID of the transaction in the partner system. The partner transaction ID is returned at an item level because the partner might show different transactions for different items in the cart.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerTransactionId { get; set; }
+        public string? PartnerTransactionId { get => _explicitNullValuePartnerTransactionId; set { _explicitNullValuePartnerTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_transaction_id"); else _explicitNullProperties?.Remove("partner_transaction_id"); } }
+        private string? _explicitNullValuePartnerTransactionId = default!;
 #nullable restore
 #else
-        public string PartnerTransactionId { get; set; }
+        public string PartnerTransactionId { get => _explicitNullValuePartnerTransactionId; set { _explicitNullValuePartnerTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_transaction_id"); else _explicitNullProperties?.Remove("partner_transaction_id"); } }
+        private string _explicitNullValuePartnerTransactionId = default!;
 #endif
         /// <summary>The product_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ProductDetails { get; set; }
+        public UntypedNode? ProductDetails { get => _explicitNullValueProductDetails; set { _explicitNullValueProductDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_details"); else _explicitNullProperties?.Remove("product_details"); } }
+        private UntypedNode? _explicitNullValueProductDetails = default!;
 #nullable restore
 #else
-        public UntypedNode ProductDetails { get; set; }
+        public UntypedNode ProductDetails { get => _explicitNullValueProductDetails; set { _explicitNullValueProductDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_details"); else _explicitNullProperties?.Remove("product_details"); } }
+        private UntypedNode _explicitNullValueProductDetails = default!;
 #endif
         /// <summary>The reason for the item-level dispute. For information about the required information for each dispute reason and associated evidence type, see &lt;a href=&quot;/docs/integration/direct/customer-disputes/integration-guide/#dispute-reasons&quot;&gt;dispute reasons&lt;/a&gt;.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason? Reason { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason? _explicitNullValueReason = default!;
         /// <summary>The service_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ServiceDetails { get; set; }
+        public UntypedNode? ServiceDetails { get => _explicitNullValueServiceDetails; set { _explicitNullValueServiceDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_details"); else _explicitNullProperties?.Remove("service_details"); } }
+        private UntypedNode? _explicitNullValueServiceDetails = default!;
 #nullable restore
 #else
-        public UntypedNode ServiceDetails { get; set; }
+        public UntypedNode ServiceDetails { get => _explicitNullValueServiceDetails; set { _explicitNullValueServiceDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_details"); else _explicitNullProperties?.Remove("service_details"); } }
+        private UntypedNode _explicitNullValueServiceDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo"/> and sets the default values.
@@ -138,7 +188,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ItemInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -187,6 +237,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("product_details", ProductDetails);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.DisputeReason>("reason", Reason);
             writer.WriteObjectValue<UntypedNode>("service_details", ServiceDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

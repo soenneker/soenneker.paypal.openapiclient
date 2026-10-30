@@ -12,24 +12,37 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaypalWalletExperienceContextAppSwitchContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mobile_web") is { } nullNodeMobileWeb && nullNodeMobileWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileWeb = null;
+            if (parseNode.GetChildNode("native_app") is { } nullNodeNativeApp && nullNodeNativeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeApp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Buyer&apos;s mobile web browser context to app switch to the PayPal consumer app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? MobileWeb { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext? _explicitNullValueMobileWeb = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext MobileWeb { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext MobileWeb { get => _explicitNullValueMobileWeb; set { _explicitNullValueMobileWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_web"); else _explicitNullProperties?.Remove("mobile_web"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext _explicitNullValueMobileWeb = default!;
 #endif
         /// <summary>Merchant provided, buyer&apos;s native app preferences to app switch to the PayPal consumer app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? NativeApp { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext? _explicitNullValueNativeApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext NativeApp { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext NativeApp { get => _explicitNullValueNativeApp; set { _explicitNullValueNativeApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_app"); else _explicitNullProperties?.Remove("native_app"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext _explicitNullValueNativeApp = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.MobileWebContext>("mobile_web", MobileWeb);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NativeAppContext>("native_app", NativeApp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

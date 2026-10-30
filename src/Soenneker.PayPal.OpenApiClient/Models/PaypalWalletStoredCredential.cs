@@ -12,18 +12,33 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaypalWalletStoredCredential : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charge_pattern") is { } nullNodeChargePattern && nullNodeChargePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargePattern = null;
+            if (parseNode.GetChildNode("payment_initiator") is { } nullNodePaymentInitiator && nullNodePaymentInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInitiator = null;
+            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+            if (parseNode.GetChildNode("usage_pattern") is { } nullNodeUsagePattern && nullNodeUsagePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsagePattern = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Expected business/pricing model for the billing agreement.</summary>
         [Obsolete("")]
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern? ChargePattern { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern? ChargePattern { get => _explicitNullValueChargePattern; set { _explicitNullValueChargePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_pattern"); else _explicitNullProperties?.Remove("charge_pattern"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern? _explicitNullValueChargePattern = default!;
         /// <summary>The person or party who initiated or triggered the payment.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? PaymentInitiator { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? PaymentInitiator { get => _explicitNullValuePaymentInitiator; set { _explicitNullValuePaymentInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_initiator"); else _explicitNullProperties?.Remove("payment_initiator"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator? _explicitNullValuePaymentInitiator = default!;
         /// <summary>Indicates if this is a `first` or `subsequent` payment using a stored payment source (also referred to as stored credential or card on file).</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? Usage { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType? _explicitNullValueUsage = default!;
         /// <summary>Expected business/pricing model for the billing agreement.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern? UsagePattern { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern? UsagePattern { get => _explicitNullValueUsagePattern; set { _explicitNullValueUsagePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_pattern"); else _explicitNullProperties?.Remove("usage_pattern"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern? _explicitNullValueUsagePattern = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential"/> and sets the default values.
         /// </summary>
@@ -39,7 +54,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredential(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator>("payment_initiator", PaymentInitiator);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.StoredPaymentSourceUsageType>("usage", Usage);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ChargePattern>("usage_pattern", UsagePattern);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

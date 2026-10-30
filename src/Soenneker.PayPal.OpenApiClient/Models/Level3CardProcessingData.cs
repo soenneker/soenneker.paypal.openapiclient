@@ -12,56 +12,81 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Level3CardProcessingData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discount_amount") is { } nullNodeDiscountAmount && nullNodeDiscountAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmount = null;
+            if (parseNode.GetChildNode("duty_amount") is { } nullNodeDutyAmount && nullNodeDutyAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DutyAmount = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("shipping_amount") is { } nullNodeShippingAmount && nullNodeShippingAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAmount = null;
+            if (parseNode.GetChildNode("ships_from_postal_code") is { } nullNodeShipsFromPostalCode && nullNodeShipsFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipsFromPostalCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Use this field to break down the discount amount included in the total purchase amount. The value provided here will not add to the total purchase amount. The value cannot be negative.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount? DiscountAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount? DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amount"); else _explicitNullProperties?.Remove("discount_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount? _explicitNullValueDiscountAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount DiscountAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amount"); else _explicitNullProperties?.Remove("discount_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDiscountAmount _explicitNullValueDiscountAmount = default!;
 #endif
         /// <summary>Use this field to break down the duty amount included in the total purchase amount. The value provided here will not add to the total purchase amount. The value cannot be negative.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount? DutyAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount? DutyAmount { get => _explicitNullValueDutyAmount; set { _explicitNullValueDutyAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duty_amount"); else _explicitNullProperties?.Remove("duty_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount? _explicitNullValueDutyAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount DutyAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount DutyAmount { get => _explicitNullValueDutyAmount; set { _explicitNullValueDutyAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duty_amount"); else _explicitNullProperties?.Remove("duty_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataDutyAmount _explicitNullValueDutyAmount = default!;
 #endif
         /// <summary>A list of the items that were purchased with this payment. If your merchant account has been configured for Level 3 processing this field will be passed to the processor on your behalf.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem>? LineItems { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem>? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem>? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem> LineItems { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem> LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataLineItemsItem> _explicitNullValueLineItems = default!;
 #endif
         /// <summary>The address of the person to whom to ship the items. Supports only the `address_line_1`, `address_line_2`, `admin_area_1`, `admin_area_2`, `postal_code`, and `country_code` properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>Use this field to break down the shipping cost included in the total purchase amount. The value provided here will not add to the total purchase amount. The value cannot be negative.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount? ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount? ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount? _explicitNullValueShippingAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount ShippingAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount ShippingAmount { get => _explicitNullValueShippingAmount; set { _explicitNullValueShippingAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_amount"); else _explicitNullProperties?.Remove("shipping_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount _explicitNullValueShippingAmount = default!;
 #endif
         /// <summary>Use this field to specify the postal code of the shipping location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipsFromPostalCode { get; set; }
+        public string? ShipsFromPostalCode { get => _explicitNullValueShipsFromPostalCode; set { _explicitNullValueShipsFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ships_from_postal_code"); else _explicitNullProperties?.Remove("ships_from_postal_code"); } }
+        private string? _explicitNullValueShipsFromPostalCode = default!;
 #nullable restore
 #else
-        public string ShipsFromPostalCode { get; set; }
+        public string ShipsFromPostalCode { get => _explicitNullValueShipsFromPostalCode; set { _explicitNullValueShipsFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ships_from_postal_code"); else _explicitNullProperties?.Remove("ships_from_postal_code"); } }
+        private string _explicitNullValueShipsFromPostalCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAddress>("shipping_address", ShippingAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Level3CardProcessingDataShippingAmount>("shipping_amount", ShippingAmount);
             writer.WriteStringValue("ships_from_postal_code", ShipsFromPostalCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

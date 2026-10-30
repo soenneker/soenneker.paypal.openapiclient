@@ -12,32 +12,48 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AllowedResponseOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accept_claim") is { } nullNodeAcceptClaim && nullNodeAcceptClaim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptClaim = null;
+            if (parseNode.GetChildNode("acknowledge_return_item") is { } nullNodeAcknowledgeReturnItem && nullNodeAcknowledgeReturnItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcknowledgeReturnItem = null;
+            if (parseNode.GetChildNode("make_offer") is { } nullNodeMakeOffer && nullNodeMakeOffer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MakeOffer = null;
+        }
+
         /// <summary>The allowed response options when the merchant is accepting the claim.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions? AcceptClaim { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions? AcceptClaim { get => _explicitNullValueAcceptClaim; set { _explicitNullValueAcceptClaim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim"); else _explicitNullProperties?.Remove("accept_claim"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions? _explicitNullValueAcceptClaim = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions AcceptClaim { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions AcceptClaim { get => _explicitNullValueAcceptClaim; set { _explicitNullValueAcceptClaim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_claim"); else _explicitNullProperties?.Remove("accept_claim"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions _explicitNullValueAcceptClaim = default!;
 #endif
         /// <summary>The allowed response options when the seller acknowledges that the buyer has returned an item for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions? AcknowledgeReturnItem { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions? AcknowledgeReturnItem { get => _explicitNullValueAcknowledgeReturnItem; set { _explicitNullValueAcknowledgeReturnItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledge_return_item"); else _explicitNullProperties?.Remove("acknowledge_return_item"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions? _explicitNullValueAcknowledgeReturnItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions AcknowledgeReturnItem { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions AcknowledgeReturnItem { get => _explicitNullValueAcknowledgeReturnItem; set { _explicitNullValueAcknowledgeReturnItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledge_return_item"); else _explicitNullProperties?.Remove("acknowledge_return_item"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions _explicitNullValueAcknowledgeReturnItem = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowed response options when the merchant makes offer to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions? MakeOffer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions? MakeOffer { get => _explicitNullValueMakeOffer; set { _explicitNullValueMakeOffer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("make_offer"); else _explicitNullProperties?.Remove("make_offer"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions? _explicitNullValueMakeOffer = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions MakeOffer { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions MakeOffer { get => _explicitNullValueMakeOffer; set { _explicitNullValueMakeOffer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("make_offer"); else _explicitNullProperties?.Remove("make_offer"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions _explicitNullValueMakeOffer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AllowedResponseOptions"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.AllowedResponseOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.AllowedResponseOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.AllowedResponseOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AcceptClaimResponseOptions>("accept_claim", AcceptClaim);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AcknowledgeReturnItemResponseOptions>("acknowledge_return_item", AcknowledgeReturnItem);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.MakeOfferResponseOptions>("make_offer", MakeOffer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,39 +12,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PartnerReferralsCreate400Response : ApiException, IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("debug_id") is { } nullNodeDebugId && nullNodeDebugId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebugId = null;
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessageEscaped && nullNodeMessageEscaped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageEscaped = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PayPal internal ID. Used for correlation purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DebugId { get; set; }
+        public string? DebugId { get => _explicitNullValueDebugId; set { _explicitNullValueDebugId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debug_id"); else _explicitNullProperties?.Remove("debug_id"); } }
+        private string? _explicitNullValueDebugId = default!;
 #nullable restore
 #else
-        public string DebugId { get; set; }
+        public string DebugId { get => _explicitNullValueDebugId; set { _explicitNullValueDebugId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debug_id"); else _explicitNullProperties?.Remove("debug_id"); } }
+        private string _explicitNullValueDebugId = default!;
 #endif
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails? Details { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails Details { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400ResponseDetails _explicitNullValueDetails = default!;
 #endif
         /// <summary>An array of request-related [HATEOAS links](https://en.wikipedia.org/wiki/HATEOAS).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>? Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription> Links { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The message property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage? MessageEscaped { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage? _explicitNullValueMessageEscaped = default!;
         /// <summary>The name property</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName? Name { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName? _explicitNullValueName = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400Response"/> and sets the default values.
         /// </summary>
@@ -60,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsCreate400Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +109,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2ErrorLinkDescription>("links", Links);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2RequestIsNotWellFormedCommaSyntacticallyIncorrectCommaOrViolatesSchemaDotMessage>("message", MessageEscaped);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2InvalidRequestName>("name", Name);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

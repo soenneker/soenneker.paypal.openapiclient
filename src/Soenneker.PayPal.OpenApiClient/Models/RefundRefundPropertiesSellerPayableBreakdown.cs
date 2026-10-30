@@ -12,7 +12,16 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RefundRefundPropertiesSellerPayableBreakdown : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("platform_fees") is { } nullNodePlatformFees && nullNodePlatformFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformFees = null;
+            if (parseNode.GetChildNode("total_refunded_amount") is { } nullNodeTotalRefundedAmount && nullNodeTotalRefundedAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRefundedAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount that the payee refunded to the payer.</summary>
@@ -66,18 +75,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of platform or partner fees, commissions, or brokerage fees for the refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem>? PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem>? PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem>? _explicitNullValuePlatformFees = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem> PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem> PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem> _explicitNullValuePlatformFees = default!;
 #endif
         /// <summary>The total amount refunded from the original capture to date. For example, if a payer makes a $100 purchase and was refunded $20 a week ago and was refunded $30 in this refund, the `gross_amount` is $30 for this refund and the `total_refunded_amount` is $50.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount? TotalRefundedAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount? TotalRefundedAmount { get => _explicitNullValueTotalRefundedAmount; set { _explicitNullValueTotalRefundedAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_refunded_amount"); else _explicitNullProperties?.Remove("total_refunded_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount? _explicitNullValueTotalRefundedAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount TotalRefundedAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount TotalRefundedAmount { get => _explicitNullValueTotalRefundedAmount; set { _explicitNullValueTotalRefundedAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_refunded_amount"); else _explicitNullProperties?.Remove("total_refunded_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount _explicitNullValueTotalRefundedAmount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdown"/> and sets the default values.
@@ -94,7 +107,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdown CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdown();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdown(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,6 +136,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownPlatformFeesItem>("platform_fees", PlatformFees);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.RefundRefundPropertiesSellerPayableBreakdownTotalRefundedAmount>("total_refunded_amount", TotalRefundedAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

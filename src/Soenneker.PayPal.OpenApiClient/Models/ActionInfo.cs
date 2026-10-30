@@ -12,20 +12,34 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActionInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("mandatory") is { } nullNodeMandatory && nullNodeMandatory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mandatory = null;
+            if (parseNode.GetChildNode("response_option") is { } nullNodeResponseOption && nullNodeResponseOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseOption = null;
+        }
+
         /// <summary>The action for which the evidence was requested or submitted.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction? Action { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the evidence is mandatory for the corresponding action and response option.</summary>
-        public bool? Mandatory { get; set; }
+        public bool? Mandatory { get => _explicitNullValueMandatory; set { _explicitNullValueMandatory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandatory"); else _explicitNullProperties?.Remove("mandatory"); } }
+        private bool? _explicitNullValueMandatory = default!;
         /// <summary>The response option for the corresponding action. Possible values:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/docs/api/customer-disputes/v1/#definition-acknowledgement_type&quot;&gt;Acknowledgement Types&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/docs/api/customer-disputes/v1/#definition-response-accept_claim_type&quot;&gt;Accept Claim types&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResponseOption { get; set; }
+        public string? ResponseOption { get => _explicitNullValueResponseOption; set { _explicitNullValueResponseOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_option"); else _explicitNullProperties?.Remove("response_option"); } }
+        private string? _explicitNullValueResponseOption = default!;
 #nullable restore
 #else
-        public string ResponseOption { get; set; }
+        public string ResponseOption { get => _explicitNullValueResponseOption; set { _explicitNullValueResponseOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_option"); else _explicitNullProperties?.Remove("response_option"); } }
+        private string _explicitNullValueResponseOption = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ActionInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ActionInfoAction>("action", Action);
             writer.WriteBoolValue("mandatory", Mandatory);
             writer.WriteStringValue("response_option", ResponseOption);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

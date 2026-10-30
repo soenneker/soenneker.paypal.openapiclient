@@ -12,30 +12,49 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReturnDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("receipt") is { } nullNodeReceipt && nullNodeReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receipt = null;
+            if (parseNode.GetChildNode("return_confirmation_number") is { } nullNodeReturnConfirmationNumber && nullNodeReturnConfirmationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnConfirmationNumber = null;
+            if (parseNode.GetChildNode("returned") is { } nullNodeReturned && nullNodeReturned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Returned = null;
+            if (parseNode.GetChildNode("return_time") is { } nullNodeReturnTime && nullNodeReturnTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method that the customer used to return the product.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? Mode { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetailsMode? _explicitNullValueMode = default!;
         /// <summary>Indicates whether customer has the return receipt.</summary>
-        public bool? Receipt { get; set; }
+        public bool? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        private bool? _explicitNullValueReceipt = default!;
         /// <summary>The confirmation number for the item return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnConfirmationNumber { get; set; }
+        public string? ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
+        private string? _explicitNullValueReturnConfirmationNumber = default!;
 #nullable restore
 #else
-        public string ReturnConfirmationNumber { get; set; }
+        public string ReturnConfirmationNumber { get => _explicitNullValueReturnConfirmationNumber; set { _explicitNullValueReturnConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_confirmation_number"); else _explicitNullProperties?.Remove("return_confirmation_number"); } }
+        private string _explicitNullValueReturnConfirmationNumber = default!;
 #endif
         /// <summary>If `true`, indicates that the item was returned but the seller refused to accept the return and if `false`, indicates the item was not attempted to return.</summary>
-        public bool? Returned { get; set; }
+        public bool? Returned { get => _explicitNullValueReturned; set { _explicitNullValueReturned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned"); else _explicitNullProperties?.Remove("returned"); } }
+        private bool? _explicitNullValueReturned = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnTime { get; set; }
+        public string? ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
+        private string? _explicitNullValueReturnTime = default!;
 #nullable restore
 #else
-        public string ReturnTime { get; set; }
+        public string ReturnTime { get => _explicitNullValueReturnTime; set { _explicitNullValueReturnTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_time"); else _explicitNullProperties?.Remove("return_time"); } }
+        private string _explicitNullValueReturnTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails"/> and sets the default values.
@@ -52,7 +71,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ReturnDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,6 +100,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("return_confirmation_number", ReturnConfirmationNumber);
             writer.WriteBoolValue("returned", Returned);
             writer.WriteStringValue("return_time", ReturnTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

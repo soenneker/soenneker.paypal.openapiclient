@@ -49,7 +49,7 @@ namespace Soenneker.PayPal.OpenApiClient.Reporting_transactions_v1.V1.Reporting.
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.SearchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists transactions. Specify one or more query parameters to filter the transaction that appear in the response.&lt;blockquote&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;ul&gt;&lt;li&gt;If you specify one or more optional query parameters, the &lt;code&gt;ending_balance&lt;/code&gt; response field is empty.&lt;/li&gt;&lt;li&gt;It takes a maximum of three hours for executed transactions to appear in the list transactions call.&lt;/li&gt;&lt;li&gt;This call lists transaction for the previous three years.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;

@@ -12,29 +12,46 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PayoutHeader : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("batch_status") is { } nullNodeBatchStatus && nullNodeBatchStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchStatus = null;
+            if (parseNode.GetChildNode("payout_batch_id") is { } nullNodePayoutBatchId && nullNodePayoutBatchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutBatchId = null;
+            if (parseNode.GetChildNode("sender_batch_header") is { } nullNodeSenderBatchHeader && nullNodeSenderBatchHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBatchHeader = null;
+            if (parseNode.GetChildNode("time_created") is { } nullNodeTimeCreated && nullNodeTimeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeCreated = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The payouts status.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? BatchStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? BatchStatus { get => _explicitNullValueBatchStatus; set { _explicitNullValueBatchStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_status"); else _explicitNullProperties?.Remove("batch_status"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum? _explicitNullValueBatchStatus = default!;
         /// <summary>The PayPal-generated ID for a payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayoutBatchId { get; set; }
+        public string? PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
+        private string? _explicitNullValuePayoutBatchId = default!;
 #nullable restore
 #else
-        public string PayoutBatchId { get; set; }
+        public string PayoutBatchId { get => _explicitNullValuePayoutBatchId; set { _explicitNullValuePayoutBatchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_batch_id"); else _explicitNullProperties?.Remove("payout_batch_id"); } }
+        private string _explicitNullValuePayoutBatchId = default!;
 #endif
         /// <summary>The sender-provided header for a payout request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? SenderBatchHeader { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader? _explicitNullValueSenderBatchHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader SenderBatchHeader { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader SenderBatchHeader { get => _explicitNullValueSenderBatchHeader; set { _explicitNullValueSenderBatchHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_batch_header"); else _explicitNullProperties?.Remove("sender_batch_header"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader _explicitNullValueSenderBatchHeader = default!;
 #endif
         /// <summary>The date and time when processing for the payout began, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).</summary>
-        public DateTimeOffset? TimeCreated { get; set; }
+        public DateTimeOffset? TimeCreated { get => _explicitNullValueTimeCreated; set { _explicitNullValueTimeCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_created"); else _explicitNullProperties?.Remove("time_created"); } }
+        private DateTimeOffset? _explicitNullValueTimeCreated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader"/> and sets the default values.
         /// </summary>
@@ -50,7 +67,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PayoutHeader(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("payout_batch_id", PayoutBatchId);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PayoutSenderBatchHeader>("sender_batch_header", SenderBatchHeader);
             writer.WriteDateTimeOffsetValue("time_created", TimeCreated);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

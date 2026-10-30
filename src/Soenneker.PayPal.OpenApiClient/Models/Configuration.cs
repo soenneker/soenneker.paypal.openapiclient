@@ -12,32 +12,53 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Configuration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_tip") is { } nullNodeAllowTip && nullNodeAllowTip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowTip = null;
+            if (parseNode.GetChildNode("has_conditional_rule") is { } nullNodeHasConditionalRule && nullNodeHasConditionalRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasConditionalRule = null;
+            if (parseNode.GetChildNode("partial_payment") is { } nullNodePartialPayment && nullNodePartialPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartialPayment = null;
+            if (parseNode.GetChildNode("tax_calculated_after_discount") is { } nullNodeTaxCalculatedAfterDiscount && nullNodeTaxCalculatedAfterDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCalculatedAfterDiscount = null;
+            if (parseNode.GetChildNode("tax_inclusive") is { } nullNodeTaxInclusive && nullNodeTaxInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInclusive = null;
+            if (parseNode.GetChildNode("template_id") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the invoice enables the customer to enter a tip amount during payment. If `true`, the invoice shows a tip amount field so that the customer can enter a tip amount. If `false`, the invoice does not show a tip amount field.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature is not available for users in `Hong Kong`, `Taiwan`, `India`, or `Japan`.&lt;/blockquote&gt;</summary>
-        public bool? AllowTip { get; set; }
+        public bool? AllowTip { get => _explicitNullValueAllowTip; set { _explicitNullValueAllowTip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_tip"); else _explicitNullProperties?.Remove("allow_tip"); } }
+        private bool? _explicitNullValueAllowTip = default!;
         /// <summary>Indicates whether conditional pricing rules are applied to the invoice. If `true`, pricing rules (such as discounts or surcharges based on specific conditions) are applied. If `false`, no conditional pricing rules are applied.</summary>
-        public bool? HasConditionalRule { get; set; }
+        public bool? HasConditionalRule { get => _explicitNullValueHasConditionalRule; set { _explicitNullValueHasConditionalRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_conditional_rule"); else _explicitNullProperties?.Remove("has_conditional_rule"); } }
+        private bool? _explicitNullValueHasConditionalRule = default!;
         /// <summary>The partial payment details. Includes the minimum amount that the invoicer expects from the payer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment? PartialPayment { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment? PartialPayment { get => _explicitNullValuePartialPayment; set { _explicitNullValuePartialPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partial_payment"); else _explicitNullProperties?.Remove("partial_payment"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment? _explicitNullValuePartialPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment PartialPayment { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment PartialPayment { get => _explicitNullValuePartialPayment; set { _explicitNullValuePartialPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partial_payment"); else _explicitNullProperties?.Remove("partial_payment"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PartialPayment _explicitNullValuePartialPayment = default!;
 #endif
         /// <summary>Indicates whether the tax is calculated before or after a discount. If `false`, the tax is calculated before a discount. If `true`, the tax is calculated after a discount.</summary>
-        public bool? TaxCalculatedAfterDiscount { get; set; }
+        public bool? TaxCalculatedAfterDiscount { get => _explicitNullValueTaxCalculatedAfterDiscount; set { _explicitNullValueTaxCalculatedAfterDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_calculated_after_discount"); else _explicitNullProperties?.Remove("tax_calculated_after_discount"); } }
+        private bool? _explicitNullValueTaxCalculatedAfterDiscount = default!;
         /// <summary>Indicates whether the unit price includes tax.</summary>
-        public bool? TaxInclusive { get; set; }
+        public bool? TaxInclusive { get => _explicitNullValueTaxInclusive; set { _explicitNullValueTaxInclusive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_inclusive"); else _explicitNullProperties?.Remove("tax_inclusive"); } }
+        private bool? _explicitNullValueTaxInclusive = default!;
         /// <summary>The template ID. The template determines the layout of the invoice. Includes which fields to show and hide.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is an optional field. If you wish to customize the invoice layout using a specific template, provide a valid template ID here. You can either use an existing template ID or create a new template via the create template API and then use the newly created template&apos;s ID.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get; set; }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get; set; }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Configuration"/> and sets the default values.
@@ -59,7 +80,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Configuration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Configuration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +111,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteBoolValue("tax_calculated_after_discount", TaxCalculatedAfterDiscount);
             writer.WriteBoolValue("tax_inclusive", TaxInclusive);
             writer.WriteStringValue("template_id", TemplateId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

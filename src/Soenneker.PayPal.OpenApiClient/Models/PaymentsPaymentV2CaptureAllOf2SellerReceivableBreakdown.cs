@@ -11,64 +11,92 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentsPaymentV2CaptureAllOf2SellerReceivableBreakdown : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exchange_rate") is { } nullNodeExchangeRate && nullNodeExchangeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExchangeRate = null;
+            if (parseNode.GetChildNode("gross_amount") is { } nullNodeGrossAmount && nullNodeGrossAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossAmount = null;
+            if (parseNode.GetChildNode("net_amount") is { } nullNodeNetAmount && nullNodeNetAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetAmount = null;
+            if (parseNode.GetChildNode("paypal_fee") is { } nullNodePaypalFee && nullNodePaypalFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalFee = null;
+            if (parseNode.GetChildNode("paypal_fee_in_receivable_currency") is { } nullNodePaypalFeeInReceivableCurrency && nullNodePaypalFeeInReceivableCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalFeeInReceivableCurrency = null;
+            if (parseNode.GetChildNode("platform_fees") is { } nullNodePlatformFees && nullNodePlatformFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformFees = null;
+            if (parseNode.GetChildNode("receivable_amount") is { } nullNodeReceivableAmount && nullNodeReceivableAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivableAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exchange rate that determines the amount that is credited to the payee&apos;s PayPal account. Returned when the currency of the captured payment is different from the currency of the PayPal account where the payee wants to credit the funds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate? ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate? ExchangeRate { get => _explicitNullValueExchangeRate; set { _explicitNullValueExchangeRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exchange_rate"); else _explicitNullProperties?.Remove("exchange_rate"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate? _explicitNullValueExchangeRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate ExchangeRate { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate ExchangeRate { get => _explicitNullValueExchangeRate; set { _explicitNullValueExchangeRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exchange_rate"); else _explicitNullProperties?.Remove("exchange_rate"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownExchangeRate _explicitNullValueExchangeRate = default!;
 #endif
         /// <summary>The amount for this captured payment in the currency of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount? GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount? GrossAmount { get => _explicitNullValueGrossAmount; set { _explicitNullValueGrossAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount"); else _explicitNullProperties?.Remove("gross_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount? _explicitNullValueGrossAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount GrossAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount GrossAmount { get => _explicitNullValueGrossAmount; set { _explicitNullValueGrossAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount"); else _explicitNullProperties?.Remove("gross_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownGrossAmount _explicitNullValueGrossAmount = default!;
 #endif
         /// <summary>The net amount that the payee receives for this captured payment in their PayPal account. The net amount is computed as &lt;code&gt;gross_amount&lt;/code&gt; minus the &lt;code&gt;paypal_fee&lt;/code&gt; minus the &lt;code&gt;platform_fees&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount? NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount? NetAmount { get => _explicitNullValueNetAmount; set { _explicitNullValueNetAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_amount"); else _explicitNullProperties?.Remove("net_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount? _explicitNullValueNetAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount NetAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount NetAmount { get => _explicitNullValueNetAmount; set { _explicitNullValueNetAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_amount"); else _explicitNullProperties?.Remove("net_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownNetAmount _explicitNullValueNetAmount = default!;
 #endif
         /// <summary>The applicable fee for this captured payment in the currency of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee? PaypalFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee? PaypalFee { get => _explicitNullValuePaypalFee; set { _explicitNullValuePaypalFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_fee"); else _explicitNullProperties?.Remove("paypal_fee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee? _explicitNullValuePaypalFee = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee PaypalFee { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee PaypalFee { get => _explicitNullValuePaypalFee; set { _explicitNullValuePaypalFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_fee"); else _explicitNullProperties?.Remove("paypal_fee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFee _explicitNullValuePaypalFee = default!;
 #endif
         /// <summary>The applicable fee for this captured payment in the receivable currency. Returned only in cases the fee is charged in the receivable currency. Example &apos;CNY&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency? PaypalFeeInReceivableCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency? PaypalFeeInReceivableCurrency { get => _explicitNullValuePaypalFeeInReceivableCurrency; set { _explicitNullValuePaypalFeeInReceivableCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_fee_in_receivable_currency"); else _explicitNullProperties?.Remove("paypal_fee_in_receivable_currency"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency? _explicitNullValuePaypalFeeInReceivableCurrency = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency PaypalFeeInReceivableCurrency { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency PaypalFeeInReceivableCurrency { get => _explicitNullValuePaypalFeeInReceivableCurrency; set { _explicitNullValuePaypalFeeInReceivableCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal_fee_in_receivable_currency"); else _explicitNullProperties?.Remove("paypal_fee_in_receivable_currency"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency _explicitNullValuePaypalFeeInReceivableCurrency = default!;
 #endif
         /// <summary>An array of platform or partner fees, commissions, or brokerage fees that associated with the captured payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem>? PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem>? PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem>? _explicitNullValuePlatformFees = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem> PlatformFees { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem> PlatformFees { get => _explicitNullValuePlatformFees; set { _explicitNullValuePlatformFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_fees"); else _explicitNullProperties?.Remove("platform_fees"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem> _explicitNullValuePlatformFees = default!;
 #endif
         /// <summary>The net amount that is credited to the payee&apos;s PayPal account. Returned only when the currency of the captured payment is different from the currency of the PayPal account where the payee wants to credit the funds. The amount is computed as &lt;code&gt;net_amount&lt;/code&gt; times &lt;code&gt;exchange_rate&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount? ReceivableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount? ReceivableAmount { get => _explicitNullValueReceivableAmount; set { _explicitNullValueReceivableAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivable_amount"); else _explicitNullProperties?.Remove("receivable_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount? _explicitNullValueReceivableAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount ReceivableAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount ReceivableAmount { get => _explicitNullValueReceivableAmount; set { _explicitNullValueReceivableAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivable_amount"); else _explicitNullProperties?.Remove("receivable_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount _explicitNullValueReceivableAmount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2SellerReceivableBreakdown"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2SellerReceivableBreakdown CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2SellerReceivableBreakdown();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2CaptureAllOf2SellerReceivableBreakdown(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPaypalFeeInReceivableCurrency>("paypal_fee_in_receivable_currency", PaypalFeeInReceivableCurrency);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownPlatformFeesItem>("platform_fees", PlatformFees);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2SellerReceivableBreakdownReceivableAmount>("receivable_amount", ReceivableAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

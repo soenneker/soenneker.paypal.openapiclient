@@ -12,64 +12,98 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LinkDescription2Schema : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additionalItems") is { } nullNodeAdditionalItems && nullNodeAdditionalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalItems = null;
+            if (parseNode.GetChildNode("allOf") is { } nullNodeAllOf && nullNodeAllOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllOf = null;
+            if (parseNode.GetChildNode("anyOf") is { } nullNodeAnyOf && nullNodeAnyOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnyOf = null;
+            if (parseNode.GetChildNode("definitions") is { } nullNodeDefinitions && nullNodeDefinitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Definitions = null;
+            if (parseNode.GetChildNode("dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("fragmentResolution") is { } nullNodeFragmentResolution && nullNodeFragmentResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FragmentResolution = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("media") is { } nullNodeMedia && nullNodeMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Media = null;
+            if (parseNode.GetChildNode("not") is { } nullNodeNot && nullNodeNot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Not = null;
+            if (parseNode.GetChildNode("oneOf") is { } nullNodeOneOf && nullNodeOneOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneOf = null;
+            if (parseNode.GetChildNode("pathStart") is { } nullNodePathStart && nullNodePathStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PathStart = null;
+            if (parseNode.GetChildNode("patternProperties") is { } nullNodePatternProperties && nullNodePatternProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatternProperties = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Any additional items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty? AdditionalItems { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty? AdditionalItems { get => _explicitNullValueAdditionalItems; set { _explicitNullValueAdditionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalItems"); else _explicitNullProperties?.Remove("additionalItems"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty? _explicitNullValueAdditionalItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty AdditionalItems { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty AdditionalItems { get => _explicitNullValueAdditionalItems; set { _explicitNullValueAdditionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalItems"); else _explicitNullProperties?.Remove("additionalItems"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAdditionalItemsProperty _explicitNullValueAdditionalItems = default!;
 #endif
         /// <summary>An array of sub-schemas. The data must validate against all sub-schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem>? AllOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem>? AllOf { get => _explicitNullValueAllOf; set { _explicitNullValueAllOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allOf"); else _explicitNullProperties?.Remove("allOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem>? _explicitNullValueAllOf = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem> AllOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem> AllOf { get => _explicitNullValueAllOf; set { _explicitNullValueAllOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allOf"); else _explicitNullProperties?.Remove("allOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAllOfItem> _explicitNullValueAllOf = default!;
 #endif
         /// <summary>An array of sub-schemas. The data must validate against one or more sub-schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem>? AnyOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem>? AnyOf { get => _explicitNullValueAnyOf; set { _explicitNullValueAnyOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anyOf"); else _explicitNullProperties?.Remove("anyOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem>? _explicitNullValueAnyOf = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem> AnyOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem> AnyOf { get => _explicitNullValueAnyOf; set { _explicitNullValueAnyOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anyOf"); else _explicitNullProperties?.Remove("anyOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaAnyOfItem> _explicitNullValueAnyOf = default!;
 #endif
         /// <summary>Definitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty? Definitions { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty? Definitions { get => _explicitNullValueDefinitions; set { _explicitNullValueDefinitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("definitions"); else _explicitNullProperties?.Remove("definitions"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty? _explicitNullValueDefinitions = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty Definitions { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty Definitions { get => _explicitNullValueDefinitions; set { _explicitNullValueDefinitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("definitions"); else _explicitNullProperties?.Remove("definitions"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDefinitionsProperty _explicitNullValueDefinitions = default!;
 #endif
         /// <summary>Any Dependencies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty? Dependencies { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty? _explicitNullValueDependencies = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty Dependencies { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaDependenciesProperty _explicitNullValueDependencies = default!;
 #endif
         /// <summary>The fragment resolution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FragmentResolution { get; set; }
+        public string? FragmentResolution { get => _explicitNullValueFragmentResolution; set { _explicitNullValueFragmentResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentResolution"); else _explicitNullProperties?.Remove("fragmentResolution"); } }
+        private string? _explicitNullValueFragmentResolution = default!;
 #nullable restore
 #else
-        public string FragmentResolution { get; set; }
+        public string FragmentResolution { get => _explicitNullValueFragmentResolution; set { _explicitNullValueFragmentResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentResolution"); else _explicitNullProperties?.Remove("fragmentResolution"); } }
+        private string _explicitNullValueFragmentResolution = default!;
 #endif
         /// <summary>An item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty? Items { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty Items { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaItemsProperty _explicitNullValueItems = default!;
 #endif
         /// <summary>An array of links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,50 +116,62 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The media type and context-encoding scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media? Media { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media? Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media? _explicitNullValueMedia = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media Media { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkSchema2Media _explicitNullValueMedia = default!;
 #endif
         /// <summary>Not.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty? Not { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty? Not { get => _explicitNullValueNot; set { _explicitNullValueNot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not"); else _explicitNullProperties?.Remove("not"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty? _explicitNullValueNot = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty Not { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty Not { get => _explicitNullValueNot; set { _explicitNullValueNot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not"); else _explicitNullProperties?.Remove("not"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaNotProperty _explicitNullValueNot = default!;
 #endif
         /// <summary>An array of sub-schemas. The data must validate against one sub-schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem>? OneOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem>? OneOf { get => _explicitNullValueOneOf; set { _explicitNullValueOneOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oneOf"); else _explicitNullProperties?.Remove("oneOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem>? _explicitNullValueOneOf = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem> OneOf { get; set; }
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem> OneOf { get => _explicitNullValueOneOf; set { _explicitNullValueOneOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oneOf"); else _explicitNullProperties?.Remove("oneOf"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaOneOfItem> _explicitNullValueOneOf = default!;
 #endif
         /// <summary>To apply this schema to the instances&apos; URIs, start the URIs with this value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PathStart { get; set; }
+        public string? PathStart { get => _explicitNullValuePathStart; set { _explicitNullValuePathStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pathStart"); else _explicitNullProperties?.Remove("pathStart"); } }
+        private string? _explicitNullValuePathStart = default!;
 #nullable restore
 #else
-        public string PathStart { get; set; }
+        public string PathStart { get => _explicitNullValuePathStart; set { _explicitNullValuePathStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pathStart"); else _explicitNullProperties?.Remove("pathStart"); } }
+        private string _explicitNullValuePathStart = default!;
 #endif
         /// <summary>The pattern properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty? PatternProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty? PatternProperties { get => _explicitNullValuePatternProperties; set { _explicitNullValuePatternProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patternProperties"); else _explicitNullProperties?.Remove("patternProperties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty? _explicitNullValuePatternProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty PatternProperties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty PatternProperties { get => _explicitNullValuePatternProperties; set { _explicitNullValuePatternProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patternProperties"); else _explicitNullProperties?.Remove("patternProperties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty _explicitNullValuePatternProperties = default!;
 #endif
         /// <summary>Properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty Properties { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2Schema"/> and sets the default values.
@@ -142,7 +188,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2Schema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2Schema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2Schema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -188,6 +234,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("pathStart", PathStart);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPatternPropertiesProperty>("patternProperties", PatternProperties);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.LinkDescription2SchemaPropertiesProperty>("properties", Properties);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

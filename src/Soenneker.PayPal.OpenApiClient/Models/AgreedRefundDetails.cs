@@ -12,18 +12,30 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgreedRefundDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("merchant_agreed_refund") is { } nullNodeMerchantAgreedRefund && nullNodeMerchantAgreedRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefund = null;
+            if (parseNode.GetChildNode("merchant_agreed_refund_time") is { } nullNodeMerchantAgreedRefundTime && nullNodeMerchantAgreedRefundTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAgreedRefundTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether merchant has agreed to refund the buyer or not.</summary>
-        public bool? MerchantAgreedRefund { get; set; }
+        public bool? MerchantAgreedRefund { get => _explicitNullValueMerchantAgreedRefund; set { _explicitNullValueMerchantAgreedRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund"); else _explicitNullProperties?.Remove("merchant_agreed_refund"); } }
+        private bool? _explicitNullValueMerchantAgreedRefund = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantAgreedRefundTime { get; set; }
+        public string? MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
+        private string? _explicitNullValueMerchantAgreedRefundTime = default!;
 #nullable restore
 #else
-        public string MerchantAgreedRefundTime { get; set; }
+        public string MerchantAgreedRefundTime { get => _explicitNullValueMerchantAgreedRefundTime; set { _explicitNullValueMerchantAgreedRefundTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_agreed_refund_time"); else _explicitNullProperties?.Remove("merchant_agreed_refund_time"); } }
+        private string _explicitNullValueMerchantAgreedRefundTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.AgreedRefundDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("merchant_agreed_refund", MerchantAgreedRefund);
             writer.WriteStringValue("merchant_agreed_refund_time", MerchantAgreedRefundTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

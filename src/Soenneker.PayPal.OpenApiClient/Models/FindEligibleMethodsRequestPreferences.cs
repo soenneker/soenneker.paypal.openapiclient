@@ -12,22 +12,38 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FindEligibleMethodsRequestPreferences : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("include_account_details") is { } nullNodeIncludeAccountDetails && nullNodeIncludeAccountDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeAccountDetails = null;
+            if (parseNode.GetChildNode("include_vault_tokens") is { } nullNodeIncludeVaultTokens && nullNodeIncludeVaultTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeVaultTokens = null;
+            if (parseNode.GetChildNode("payment_flow") is { } nullNodePaymentFlow && nullNodePaymentFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFlow = null;
+            if (parseNode.GetChildNode("payment_source_constraint") is { } nullNodePaymentSourceConstraint && nullNodePaymentSourceConstraint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSourceConstraint = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If this value is set to true, response will include confirmation if the customer has PayPal and/or Venmo accounts if they are eligible payment methods. Value defaults to false.</summary>
-        public bool? IncludeAccountDetails { get; set; }
+        public bool? IncludeAccountDetails { get => _explicitNullValueIncludeAccountDetails; set { _explicitNullValueIncludeAccountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_account_details"); else _explicitNullProperties?.Remove("include_account_details"); } }
+        private bool? _explicitNullValueIncludeAccountDetails = default!;
         /// <summary>If this value is set to true, response will include vaulted token information if the eligible funding source has any instrument vaulted for the customer. Value defaults to false.</summary>
-        public bool? IncludeVaultTokens { get; set; }
+        public bool? IncludeVaultTokens { get => _explicitNullValueIncludeVaultTokens; set { _explicitNullValueIncludeVaultTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_vault_tokens"); else _explicitNullProperties?.Remove("include_vault_tokens"); } }
+        private bool? _explicitNullValueIncludeVaultTokens = default!;
         /// <summary>This field specifies the payment flow, expected to provide a hint about which payment action the customer is intending to perform.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow? PaymentFlow { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow? PaymentFlow { get => _explicitNullValuePaymentFlow; set { _explicitNullValuePaymentFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_flow"); else _explicitNullProperties?.Remove("payment_flow"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow? _explicitNullValuePaymentFlow = default!;
         /// <summary>Payment source constraint defines the payment methods that needs to be included/excluded for eligibility assessment. If not passed, all payment methods will be assessed for eligibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint? PaymentSourceConstraint { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint? PaymentSourceConstraint { get => _explicitNullValuePaymentSourceConstraint; set { _explicitNullValuePaymentSourceConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source_constraint"); else _explicitNullProperties?.Remove("payment_source_constraint"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint? _explicitNullValuePaymentSourceConstraint = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint PaymentSourceConstraint { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint PaymentSourceConstraint { get => _explicitNullValuePaymentSourceConstraint; set { _explicitNullValuePaymentSourceConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_source_constraint"); else _explicitNullProperties?.Remove("payment_source_constraint"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint _explicitNullValuePaymentSourceConstraint = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences"/> and sets the default values.
@@ -46,7 +62,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferences(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +89,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteBoolValue("include_vault_tokens", IncludeVaultTokens);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentFlow>("payment_flow", PaymentFlow);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FindEligibleMethodsRequestPreferencesPaymentSourceConstraint>("payment_source_constraint", PaymentSourceConstraint);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

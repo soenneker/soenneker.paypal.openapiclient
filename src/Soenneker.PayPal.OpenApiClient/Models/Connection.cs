@@ -12,26 +12,41 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Connection : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("last_sync_status") is { } nullNodeLastSyncStatus && nullNodeLastSyncStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncStatus = null;
+            if (parseNode.GetChildNode("last_sync_time") is { } nullNodeLastSyncTime && nullNodeLastSyncTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncTime = null;
+            if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the last sync. This property supports Unicode.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? LastSyncStatus { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? LastSyncStatus { get => _explicitNullValueLastSyncStatus; set { _explicitNullValueLastSyncStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_status"); else _explicitNullProperties?.Remove("last_sync_status"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus? _explicitNullValueLastSyncStatus = default!;
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastSyncTime { get; set; }
+        public string? LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
+        private string? _explicitNullValueLastSyncTime = default!;
 #nullable restore
 #else
-        public string LastSyncTime { get; set; }
+        public string LastSyncTime { get => _explicitNullValueLastSyncTime; set { _explicitNullValueLastSyncTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sync_time"); else _explicitNullProperties?.Remove("last_sync_time"); } }
+        private string _explicitNullValueLastSyncTime = default!;
 #endif
         /// <summary>The name of the platform. This property supports Unicode. The pattern is not provided because the value is defined by an external party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformName { get; set; }
+        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        private string? _explicitNullValuePlatformName = default!;
 #nullable restore
 #else
-        public string PlatformName { get; set; }
+        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        private string _explicitNullValuePlatformName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Connection"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.Connection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.Connection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Connection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ConnectionLastSyncStatus>("last_sync_status", LastSyncStatus);
             writer.WriteStringValue("last_sync_time", LastSyncTime);
             writer.WriteStringValue("platform_name", PlatformName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

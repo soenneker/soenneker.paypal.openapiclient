@@ -12,33 +12,49 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentsPayoutsBatchV1ApplicationContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("holler_url") is { } nullNodeHollerUrl && nullNodeHollerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HollerUrl = null;
+            if (parseNode.GetChildNode("logo_url") is { } nullNodeLogoUrl && nullNodeLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoUrl = null;
+            if (parseNode.GetChildNode("social_feed_privacy") is { } nullNodeSocialFeedPrivacy && nullNodeSocialFeedPrivacy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialFeedPrivacy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Link to a Holler sticker. For Venmo recipients, the sticker displays with the payout message. The maximum URL length is 151.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HollerUrl { get; set; }
+        public string? HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
+        private string? _explicitNullValueHollerUrl = default!;
 #nullable restore
 #else
-        public string HollerUrl { get; set; }
+        public string HollerUrl { get => _explicitNullValueHollerUrl; set { _explicitNullValueHollerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holler_url"); else _explicitNullProperties?.Remove("holler_url"); } }
+        private string _explicitNullValueHollerUrl = default!;
 #endif
         /// <summary>Link to a logo that displays as the sender&apos;s profile image in the recipient&apos;s Venmo feed. Used to add or update the business profile image. Max image size: 1024 x 1024 pixels. The image should be square and maximum URL length is 2000.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogoUrl { get; set; }
+        public string? LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        private string? _explicitNullValueLogoUrl = default!;
 #nullable restore
 #else
-        public string LogoUrl { get; set; }
+        public string LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        private string _explicitNullValueLogoUrl = default!;
 #endif
         /// <summary>This attribute controls the privacy of a payout transaction in recipient’s feed. PUBLIC, FRIENDS_ONLY &amp; PRIVATE are the values that can be used. PUBLIC - The payment displays on the recipient&apos;s public Venmo feed. FRIENDS_ONLY - The payment displays only to the recipient&apos;s Venmo friends. PRIVATE - The payment displays only on the recipient&apos;s personal feed. Defaults to `PRIVATE` if left blank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SocialFeedPrivacy { get; set; }
+        public string? SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
+        private string? _explicitNullValueSocialFeedPrivacy = default!;
 #nullable restore
 #else
-        public string SocialFeedPrivacy { get; set; }
+        public string SocialFeedPrivacy { get => _explicitNullValueSocialFeedPrivacy; set { _explicitNullValueSocialFeedPrivacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_feed_privacy"); else _explicitNullProperties?.Remove("social_feed_privacy"); } }
+        private string _explicitNullValueSocialFeedPrivacy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext"/> and sets the default values.
@@ -56,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1ApplicationContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,6 +97,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("holler_url", HollerUrl);
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteStringValue("social_feed_privacy", SocialFeedPrivacy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

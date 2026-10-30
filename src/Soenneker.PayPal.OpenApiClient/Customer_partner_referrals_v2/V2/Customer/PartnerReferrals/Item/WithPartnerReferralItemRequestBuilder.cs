@@ -57,6 +57,8 @@ namespace Soenneker.PayPal.OpenApiClient.Customer_partner_referrals_v2.V2.Custom
                 { "401", global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.PayPal.OpenApiClient.Models.PartnerReferralsRead403Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Error500.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse>(requestInfo, global::Soenneker.PayPal.OpenApiClient.Models.ReferralDataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

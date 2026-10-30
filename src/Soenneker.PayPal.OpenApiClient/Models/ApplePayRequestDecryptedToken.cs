@@ -12,42 +12,63 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApplePayRequestDecryptedToken : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("device_manufacturer_id") is { } nullNodeDeviceManufacturerId && nullNodeDeviceManufacturerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceManufacturerId = null;
+            if (parseNode.GetChildNode("payment_data") is { } nullNodePaymentData && nullNodePaymentData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentData = null;
+            if (parseNode.GetChildNode("payment_data_type") is { } nullNodePaymentDataType && nullNodePaymentDataType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentDataType = null;
+            if (parseNode.GetChildNode("tokenized_card") is { } nullNodeTokenizedCard && nullNodeTokenizedCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenizedCard = null;
+            if (parseNode.GetChildNode("transaction_amount") is { } nullNodeTransactionAmount && nullNodeTransactionAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Apple Pay Hex-encoded device manufacturer identifier. The pattern is defined by an external party and supports Unicode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceManufacturerId { get; set; }
+        public string? DeviceManufacturerId { get => _explicitNullValueDeviceManufacturerId; set { _explicitNullValueDeviceManufacturerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_manufacturer_id"); else _explicitNullProperties?.Remove("device_manufacturer_id"); } }
+        private string? _explicitNullValueDeviceManufacturerId = default!;
 #nullable restore
 #else
-        public string DeviceManufacturerId { get; set; }
+        public string DeviceManufacturerId { get => _explicitNullValueDeviceManufacturerId; set { _explicitNullValueDeviceManufacturerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_manufacturer_id"); else _explicitNullProperties?.Remove("device_manufacturer_id"); } }
+        private string _explicitNullValueDeviceManufacturerId = default!;
 #endif
         /// <summary>Apple Pay payment data object which contains the cryptogram, eci_indicator and other data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData? PaymentData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData? PaymentData { get => _explicitNullValuePaymentData; set { _explicitNullValuePaymentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_data"); else _explicitNullProperties?.Remove("payment_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData? _explicitNullValuePaymentData = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData PaymentData { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData PaymentData { get => _explicitNullValuePaymentData; set { _explicitNullValuePaymentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_data"); else _explicitNullProperties?.Remove("payment_data"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentData _explicitNullValuePaymentData = default!;
 #endif
         /// <summary>Indicates the type of payment data passed, in case of Non China the payment data is 3DSECURE and for China it is EMV.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentDataType? PaymentDataType { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentDataType? PaymentDataType { get => _explicitNullValuePaymentDataType; set { _explicitNullValuePaymentDataType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_data_type"); else _explicitNullProperties?.Remove("payment_data_type"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentDataType? _explicitNullValuePaymentDataType = default!;
         /// <summary>Apple Pay tokenized credit card used to pay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard? TokenizedCard { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard? TokenizedCard { get => _explicitNullValueTokenizedCard; set { _explicitNullValueTokenizedCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokenized_card"); else _explicitNullProperties?.Remove("tokenized_card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard? _explicitNullValueTokenizedCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard TokenizedCard { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard TokenizedCard { get => _explicitNullValueTokenizedCard; set { _explicitNullValueTokenizedCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokenized_card"); else _explicitNullProperties?.Remove("tokenized_card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard _explicitNullValueTokenizedCard = default!;
 #endif
         /// <summary>The transaction amount for the payment that the payer has approved on apple platform.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount? TransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount? TransactionAmount { get => _explicitNullValueTransactionAmount; set { _explicitNullValueTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_amount"); else _explicitNullProperties?.Remove("transaction_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount? _explicitNullValueTransactionAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount TransactionAmount { get; set; }
+        public global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount TransactionAmount { get => _explicitNullValueTransactionAmount; set { _explicitNullValueTransactionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_amount"); else _explicitNullProperties?.Remove("transaction_amount"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount _explicitNullValueTransactionAmount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataPaymentDataType>("payment_data_type", PaymentDataType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTokenizedCard>("tokenized_card", TokenizedCard);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayDecryptedTokenDataTransactionAmount>("transaction_amount", TransactionAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

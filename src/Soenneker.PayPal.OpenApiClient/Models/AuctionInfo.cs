@@ -12,40 +12,59 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AuctionInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auction_buyer_id") is { } nullNodeAuctionBuyerId && nullNodeAuctionBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionBuyerId = null;
+            if (parseNode.GetChildNode("auction_closing_date") is { } nullNodeAuctionClosingDate && nullNodeAuctionClosingDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionClosingDate = null;
+            if (parseNode.GetChildNode("auction_item_site") is { } nullNodeAuctionItemSite && nullNodeAuctionItemSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionItemSite = null;
+            if (parseNode.GetChildNode("auction_site") is { } nullNodeAuctionSite && nullNodeAuctionSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuctionSite = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the buyer who makes the purchase in the auction. This ID might be different from the payer ID provided for the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionBuyerId { get; set; }
+        public string? AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
+        private string? _explicitNullValueAuctionBuyerId = default!;
 #nullable restore
 #else
-        public string AuctionBuyerId { get; set; }
+        public string AuctionBuyerId { get => _explicitNullValueAuctionBuyerId; set { _explicitNullValueAuctionBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_buyer_id"); else _explicitNullProperties?.Remove("auction_buyer_id"); } }
+        private string _explicitNullValueAuctionBuyerId = default!;
 #endif
         /// <summary>The date and time, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Seconds are required while fractional seconds are optional.&lt;blockquote&gt;&lt;strong&gt;Note:&lt;/strong&gt; The regular expression provides guidance but does not reject all invalid dates.&lt;/blockquote&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionClosingDate { get; set; }
+        public string? AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
+        private string? _explicitNullValueAuctionClosingDate = default!;
 #nullable restore
 #else
-        public string AuctionClosingDate { get; set; }
+        public string AuctionClosingDate { get => _explicitNullValueAuctionClosingDate; set { _explicitNullValueAuctionClosingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_closing_date"); else _explicitNullProperties?.Remove("auction_closing_date"); } }
+        private string _explicitNullValueAuctionClosingDate = default!;
 #endif
         /// <summary>The auction site URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionItemSite { get; set; }
+        public string? AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
+        private string? _explicitNullValueAuctionItemSite = default!;
 #nullable restore
 #else
-        public string AuctionItemSite { get; set; }
+        public string AuctionItemSite { get => _explicitNullValueAuctionItemSite; set { _explicitNullValueAuctionItemSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_item_site"); else _explicitNullProperties?.Remove("auction_item_site"); } }
+        private string _explicitNullValueAuctionItemSite = default!;
 #endif
         /// <summary>The name of the auction site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuctionSite { get; set; }
+        public string? AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
+        private string? _explicitNullValueAuctionSite = default!;
 #nullable restore
 #else
-        public string AuctionSite { get; set; }
+        public string AuctionSite { get => _explicitNullValueAuctionSite; set { _explicitNullValueAuctionSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auction_site"); else _explicitNullProperties?.Remove("auction_site"); } }
+        private string _explicitNullValueAuctionSite = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public static global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.AuctionInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteStringValue("auction_closing_date", AuctionClosingDate);
             writer.WriteStringValue("auction_item_site", AuctionItemSite);
             writer.WriteStringValue("auction_site", AuctionSite);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
