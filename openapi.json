@@ -7225,6 +7225,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successfully accepted request returns the HTTP `202 Accepted` status code and a JSON response body that includes a [HATEOAS link](/docs/api/reference/api-responses/#hateoas-links) to the ID of the request. The Clients can choose webhook option as well to receive dispute update notification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubsequentAction"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -8686,6 +8697,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `201 Created` status code and a JSON response body that contains a [HATEOAS link](/docs/api/overview/#hateoas-links) to show the referral data and an `action_url` to which you redirect the customer in a browser to complete the signup process. The `partner_referral_id` token is appended to the URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateReferralDataResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -9112,7 +9134,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Invoice"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Invoice"
@@ -9189,6 +9213,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `201 Created` status code. A JSON response body that shows invoice details is returned if you set <code>prefer=return=representation</code>.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Invoice"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "multipart/mixed": {
+                "schema": {
+                  "$ref": "#/components/schemas/Invoice"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -9238,7 +9280,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Invoices"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Invoices"
@@ -9361,10 +9405,12 @@
                 "schema": {
                   "$ref": "#/components/schemas/invoicing_v2_LinkDescription"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/invoicing_v2_LinkDescription"
+                  "$ref": "#/components/schemas/LinkDescription"
                 }
               }
             }
@@ -9376,10 +9422,12 @@
                 "schema": {
                   "$ref": "#/components/schemas/invoicing_v2_LinkDescription"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
-                  "$ref": "#/components/schemas/invoicing_v2_LinkDescription"
+                  "$ref": "#/components/schemas/LinkDescription"
                 }
               }
             }
@@ -9788,7 +9836,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/PaymentReference"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/PaymentReference"
@@ -10060,7 +10110,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/RefundReference"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/RefundReference"
@@ -10644,7 +10696,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Invoice"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Invoice"
@@ -10888,7 +10942,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Invoices"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Invoices"
@@ -10998,7 +11054,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Templates"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Templates"
@@ -11105,7 +11163,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Template"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Template"
@@ -11182,6 +11242,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `201 Created` status code. A JSON response body that shows template details is returned if you set <code>prefer=return=representation</code>.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Template"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "multipart/mixed": {
+                "schema": {
+                  "$ref": "#/components/schemas/Template"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -11233,7 +11311,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/Template"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "multipart/mixed": {
                 "schema": {
                   "$ref": "#/components/schemas/Template"
@@ -11775,6 +11855,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `201 Created` status code and a JSON response body with a [`webhook`](/docs/api/webhooks/v1/#definition-webhook) object that includes the webhook ID for later use.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -12114,6 +12205,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `201 Created` status code and a JSON response body that shows webhook lookup details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhooksLookup"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -12629,6 +12731,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `202 Accepted` status code and a JSON response body that shows webhook event notification details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventType"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -12696,6 +12809,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP `202 Accepted` status code and a JSON response body that shows details for the mock event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventType"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -16059,6 +16183,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A successful request returns the HTTP <code>201 Created</code> status code and a JSON response body that shows the ID for the payout and payout details. To show payout status, use the <code>payout_batch_id</code> value that appears in the response. If the initial scan that checks for syntax errors, missing or duplicated keywords, and more succeeds, the <code>batch_status</code> is <code>PENDING</code>. The initial scan checks for syntax errors and missing or duplicated keywords. The API does not immediately validate some payout item values, such as the receiver phone numbers.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payout"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
