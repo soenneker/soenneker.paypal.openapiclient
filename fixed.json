@@ -18327,15 +18327,15 @@
         "discriminator": {
           "propertyName": "name",
           "mapping": {
-            "INVALID_REQUEST": "#/components/schemas/ErrorDefaultErrorDefaultOneOf1",
-            "AUTHENTICATION_FAILURE": "#/components/schemas/ErrorDefaultErrorDefaultOneOf2",
-            "NOT_AUTHORIZED": "#/components/schemas/ErrorDefaultErrorDefaultOneOf3",
-            "RESOURCE_NOT_FOUND": "#/components/schemas/ErrorDefaultErrorDefaultOneOf4",
-            "RESOURCE_CONFLICT": "#/components/schemas/ErrorDefaultErrorDefaultOneOf5",
-            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/ErrorDefaultErrorDefaultOneOf6",
-            "UNPROCESSABLE_ENTITY": "#/components/schemas/ErrorDefaultErrorDefaultOneOf7",
-            "INTERNAL_SERVER_ERROR": "#/components/schemas/ErrorDefaultErrorDefaultOneOf8",
-            "SERVICE_UNAVAILABLE": "#/components/schemas/ErrorDefaultErrorDefaultOneOf9"
+            "INVALID_REQUEST": "#/components/schemas/ErrorDefaultOneOf1Variant",
+            "AUTHENTICATION_FAILURE": "#/components/schemas/ErrorDefaultOneOf2Variant",
+            "NOT_AUTHORIZED": "#/components/schemas/ErrorDefaultOneOf3Variant",
+            "RESOURCE_NOT_FOUND": "#/components/schemas/ErrorDefaultOneOf4Variant",
+            "RESOURCE_CONFLICT": "#/components/schemas/ErrorDefaultOneOf5Variant",
+            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/ErrorDefaultOneOf6Variant",
+            "UNPROCESSABLE_ENTITY": "#/components/schemas/ErrorDefaultOneOf7Variant",
+            "INTERNAL_SERVER_ERROR": "#/components/schemas/ErrorDefaultOneOf8Variant",
+            "SERVICE_UNAVAILABLE": "#/components/schemas/ErrorDefaultOneOf9Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -28832,15 +28832,15 @@
         "discriminator": {
           "propertyName": "name",
           "mapping": {
-            "INVALID_REQUEST": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf1",
-            "AUTHENTICATION_FAILURE": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf2",
-            "NOT_AUTHORIZED": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf3",
-            "RESOURCE_NOT_FOUND": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf4",
-            "RESOURCE_CONFLICT": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf5",
-            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf6",
-            "UNPROCESSABLE_ENTITY": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf7",
-            "INTERNAL_SERVER_ERROR": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf8",
-            "SERVICE_UNAVAILABLE": "#/components/schemas/CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf9"
+            "INVALID_REQUEST": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf1Variant",
+            "AUTHENTICATION_FAILURE": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf2Variant",
+            "NOT_AUTHORIZED": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf3Variant",
+            "RESOURCE_NOT_FOUND": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf4Variant",
+            "RESOURCE_CONFLICT": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf5Variant",
+            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf6Variant",
+            "UNPROCESSABLE_ENTITY": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf7Variant",
+            "INTERNAL_SERVER_ERROR": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf8Variant",
+            "SERVICE_UNAVAILABLE": "#/components/schemas/CatalogsProductsV1ErrorDefaultOneOf9Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -75859,15 +75859,15 @@
         "discriminator": {
           "propertyName": "name",
           "mapping": {
-            "INVALID_REQUEST": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf1",
-            "AUTHENTICATION_FAILURE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf2",
-            "NOT_AUTHORIZED": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf3",
-            "RESOURCE_NOT_FOUND": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf4",
-            "RESOURCE_CONFLICT": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf5",
-            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf6",
-            "UNPROCESSABLE_ENTITY": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf7",
-            "INTERNAL_SERVER_ERROR": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf8",
-            "SERVICE_UNAVAILABLE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf9"
+            "INVALID_REQUEST": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf1Variant",
+            "AUTHENTICATION_FAILURE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf2Variant",
+            "NOT_AUTHORIZED": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf3Variant",
+            "RESOURCE_NOT_FOUND": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf4Variant",
+            "RESOURCE_CONFLICT": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf5Variant",
+            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf6Variant",
+            "UNPROCESSABLE_ENTITY": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf7Variant",
+            "INTERNAL_SERVER_ERROR": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf8Variant",
+            "SERVICE_UNAVAILABLE": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefaultOneOf9Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -79789,15 +79789,15 @@
         "discriminator": {
           "propertyName": "name",
           "mapping": {
-            "INVALID_REQUEST": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf1",
-            "AUTHENTICATION_FAILURE": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf2",
-            "NOT_AUTHORIZED": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf3",
-            "RESOURCE_NOT_FOUND": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf4",
-            "RESOURCE_CONFLICT": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf5",
-            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf6",
-            "UNPROCESSABLE_ENTITY": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf7",
-            "INTERNAL_SERVER_ERROR": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf8",
-            "SERVICE_UNAVAILABLE": "#/components/schemas/InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf9"
+            "INVALID_REQUEST": "#/components/schemas/InvoicingV2ErrorDefaultOneOf1Variant",
+            "AUTHENTICATION_FAILURE": "#/components/schemas/InvoicingV2ErrorDefaultOneOf2Variant",
+            "NOT_AUTHORIZED": "#/components/schemas/InvoicingV2ErrorDefaultOneOf3Variant",
+            "RESOURCE_NOT_FOUND": "#/components/schemas/InvoicingV2ErrorDefaultOneOf4Variant",
+            "RESOURCE_CONFLICT": "#/components/schemas/InvoicingV2ErrorDefaultOneOf5Variant",
+            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/InvoicingV2ErrorDefaultOneOf6Variant",
+            "UNPROCESSABLE_ENTITY": "#/components/schemas/InvoicingV2ErrorDefaultOneOf7Variant",
+            "INTERNAL_SERVER_ERROR": "#/components/schemas/InvoicingV2ErrorDefaultOneOf8Variant",
+            "SERVICE_UNAVAILABLE": "#/components/schemas/InvoicingV2ErrorDefaultOneOf9Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -96082,15 +96082,15 @@
         "discriminator": {
           "propertyName": "name",
           "mapping": {
-            "INVALID_REQUEST": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf1",
-            "AUTHENTICATION_FAILURE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf2",
-            "NOT_AUTHORIZED": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf3",
-            "RESOURCE_NOT_FOUND": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf4",
-            "RESOURCE_CONFLICT": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf5",
-            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf6",
-            "UNPROCESSABLE_ENTITY": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf7",
-            "INTERNAL_SERVER_ERROR": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf8",
-            "SERVICE_UNAVAILABLE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf9"
+            "INVALID_REQUEST": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf1Variant",
+            "AUTHENTICATION_FAILURE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf2Variant",
+            "NOT_AUTHORIZED": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf3Variant",
+            "RESOURCE_NOT_FOUND": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf4Variant",
+            "RESOURCE_CONFLICT": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf5Variant",
+            "UNSUPPORTED_MEDIA_TYPE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf6Variant",
+            "UNPROCESSABLE_ENTITY": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf7Variant",
+            "INTERNAL_SERVER_ERROR": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf8Variant",
+            "SERVICE_UNAVAILABLE": "#/components/schemas/ReportingTransactionsV1ErrorDefaultOneOf9Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -109645,7 +109645,7 @@
           ]
         }
       },
-      "ErrorDefaultErrorDefaultOneOf1": {
+      "ErrorDefaultOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109698,7 +109698,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf2": {
+      "ErrorDefaultOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109751,7 +109751,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf3": {
+      "ErrorDefaultOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109804,7 +109804,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf4": {
+      "ErrorDefaultOneOf4Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109857,7 +109857,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf5": {
+      "ErrorDefaultOneOf5Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109910,7 +109910,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf6": {
+      "ErrorDefaultOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -109963,7 +109963,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf7": {
+      "ErrorDefaultOneOf7Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -110016,7 +110016,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf8": {
+      "ErrorDefaultOneOf8Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -110063,7 +110063,7 @@
           }
         ]
       },
-      "ErrorDefaultErrorDefaultOneOf9": {
+      "ErrorDefaultOneOf9Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorDefault"
@@ -110110,7 +110110,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf1": {
+      "CatalogsProductsV1ErrorDefaultOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110163,7 +110163,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf2": {
+      "CatalogsProductsV1ErrorDefaultOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110216,7 +110216,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf3": {
+      "CatalogsProductsV1ErrorDefaultOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110269,7 +110269,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf4": {
+      "CatalogsProductsV1ErrorDefaultOneOf4Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110322,7 +110322,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf5": {
+      "CatalogsProductsV1ErrorDefaultOneOf5Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110375,7 +110375,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf6": {
+      "CatalogsProductsV1ErrorDefaultOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110428,7 +110428,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf7": {
+      "CatalogsProductsV1ErrorDefaultOneOf7Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110481,7 +110481,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf8": {
+      "CatalogsProductsV1ErrorDefaultOneOf8Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110528,7 +110528,7 @@
           }
         ]
       },
-      "CatalogsProductsV1ErrorDefaultCatalogsProductsV1ErrorDefaultOneOf9": {
+      "CatalogsProductsV1ErrorDefaultOneOf9Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CatalogsProductsV1ErrorDefault"
@@ -110575,7 +110575,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf1": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110628,7 +110628,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf2": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110681,7 +110681,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf3": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110734,7 +110734,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf4": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf4Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110787,7 +110787,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf5": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf5Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110840,7 +110840,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf6": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110893,7 +110893,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf7": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf7Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110946,7 +110946,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf8": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf8Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -110993,7 +110993,7 @@
           }
         ]
       },
-      "CustomerPartnerReferralsV2ErrorDefaultCustomerPartnerReferralsV2ErrorDefaultOneOf9": {
+      "CustomerPartnerReferralsV2ErrorDefaultOneOf9Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CustomerPartnerReferralsV2ErrorDefault"
@@ -111040,7 +111040,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf1": {
+      "InvoicingV2ErrorDefaultOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111093,7 +111093,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf2": {
+      "InvoicingV2ErrorDefaultOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111146,7 +111146,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf3": {
+      "InvoicingV2ErrorDefaultOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111199,7 +111199,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf4": {
+      "InvoicingV2ErrorDefaultOneOf4Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111252,7 +111252,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf5": {
+      "InvoicingV2ErrorDefaultOneOf5Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111305,7 +111305,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf6": {
+      "InvoicingV2ErrorDefaultOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111358,7 +111358,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf7": {
+      "InvoicingV2ErrorDefaultOneOf7Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111411,7 +111411,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf8": {
+      "InvoicingV2ErrorDefaultOneOf8Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111458,7 +111458,7 @@
           }
         ]
       },
-      "InvoicingV2ErrorDefaultInvoicingV2ErrorDefaultOneOf9": {
+      "InvoicingV2ErrorDefaultOneOf9Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/InvoicingV2ErrorDefault"
@@ -111505,7 +111505,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf1": {
+      "ReportingTransactionsV1ErrorDefaultOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111558,7 +111558,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf2": {
+      "ReportingTransactionsV1ErrorDefaultOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111611,7 +111611,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf3": {
+      "ReportingTransactionsV1ErrorDefaultOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111664,7 +111664,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf4": {
+      "ReportingTransactionsV1ErrorDefaultOneOf4Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111717,7 +111717,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf5": {
+      "ReportingTransactionsV1ErrorDefaultOneOf5Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111770,7 +111770,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf6": {
+      "ReportingTransactionsV1ErrorDefaultOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111823,7 +111823,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf7": {
+      "ReportingTransactionsV1ErrorDefaultOneOf7Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111876,7 +111876,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf8": {
+      "ReportingTransactionsV1ErrorDefaultOneOf8Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
@@ -111923,7 +111923,7 @@
           }
         ]
       },
-      "ReportingTransactionsV1ErrorDefaultReportingTransactionsV1ErrorDefaultOneOf9": {
+      "ReportingTransactionsV1ErrorDefaultOneOf9Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ReportingTransactionsV1ErrorDefault"
