@@ -73,6 +73,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
+            if (matchesUnionBranch1 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.NotificationsWebhooksV1PatchValueMember1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.NotificationsWebhooksV1PatchValueMember2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2(), parseNode);
             if (result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
