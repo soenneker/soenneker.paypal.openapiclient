@@ -127,12 +127,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>An array of invoice line item information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>? _explicitNullValueItems = default!;
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue> _explicitNullValueItems = default!;
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue> _explicitNullValueItems = default!;
 #endif
         /// <summary>An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -216,7 +216,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "gratuity", n => { Gratuity = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoicer", n => { Invoicer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo.CreateFromDiscriminatorValue); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue>(global::Soenneker.PayPal.OpenApiClient.Models.ItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2LinkDescription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Payments>(global::Soenneker.PayPal.OpenApiClient.Models.Payments.CreateFromDiscriminatorValue); } },
@@ -239,7 +239,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("due_amount", DueAmount);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("gratuity", Gratuity);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicerInfo>("invoicer", Invoicer);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2ItemValue>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.ItemValue>("items", Items);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Payments>("payments", Payments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.RecipientInfo>("primary_recipients", PrimaryRecipients);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Refunds>("refunds", Refunds);

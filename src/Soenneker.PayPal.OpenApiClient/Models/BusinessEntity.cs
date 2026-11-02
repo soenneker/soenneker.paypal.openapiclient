@@ -143,12 +143,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Email addresses of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
-        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>? _explicitNullValueEmails = default!;
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Email>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Email>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
-        private List<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email> _explicitNullValueEmails = default!;
+        public List<global::Soenneker.PayPal.OpenApiClient.Models.Email> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.PayPal.OpenApiClient.Models.Email> _explicitNullValueEmails = default!;
 #endif
         /// <summary>Name of the business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -224,7 +224,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "business_industry", n => { BusinessIndustry = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry.CreateFromDiscriminatorValue); } },
                 { "business_type", n => { BusinessType = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo.CreateFromDiscriminatorValue); } },
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Email>(global::Soenneker.PayPal.OpenApiClient.Models.Email.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "names", n => { Names = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>(global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "purpose_code", n => { PurposeCode = n.GetCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum>()?.AsList(); } },
@@ -247,7 +247,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessIndustry>("business_industry", BusinessIndustry);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BusinessTypeInfo>("business_type", BusinessType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessDocument>("documents", Documents);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CustomerPartnerReferralsV2Email>("emails", Emails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.Email>("emails", Emails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessNameDetail>("names", Names);
             writer.WriteCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.BusinessPhoneDetail>("phones", Phones);
             writer.WriteCollectionOfEnumValues<global::Soenneker.PayPal.OpenApiClient.Models.PurposeCodeEnum>("purpose_code", PurposeCode);

@@ -84,12 +84,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The payment card to use to fund a payment. Card can be a credit or debit card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse? _explicitNullValueCard = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponse? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardResponse? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse _explicitNullValueCard = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.CardResponse Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.CardResponse _explicitNullValueCard = default!;
 #endif
         /// <summary>Pay With Crypto details response object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -229,7 +229,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePay.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact>(global::Soenneker.PayPal.OpenApiClient.Models.Bancontact.CreateFromDiscriminatorValue); } },
                 { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik>(global::Soenneker.PayPal.OpenApiClient.Models.Blik.CreateFromDiscriminatorValue); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponse>(global::Soenneker.PayPal.OpenApiClient.Models.CardResponse.CreateFromDiscriminatorValue); } },
                 { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto>(global::Soenneker.PayPal.OpenApiClient.Models.Crypto.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps>(global::Soenneker.PayPal.OpenApiClient.Models.Eps.CreateFromDiscriminatorValue); } },
                 { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Giropay>(global::Soenneker.PayPal.OpenApiClient.Models.Giropay.CreateFromDiscriminatorValue); } },
@@ -253,7 +253,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePay>("apple_pay", ApplePay);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Bancontact>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Blik>("blik", Blik);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CheckoutOrdersV2CardResponse>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CardResponse>("card", Card);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Crypto>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Eps>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Giropay>("giropay", Giropay);

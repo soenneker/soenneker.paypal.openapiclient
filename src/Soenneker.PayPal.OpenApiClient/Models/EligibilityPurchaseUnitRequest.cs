@@ -39,12 +39,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The merchant who receives the funds and fulfills the order. The merchant is also known as the payee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee? Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee? _explicitNullValuePayee = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.Payee? Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Payee? _explicitNullValuePayee = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee _explicitNullValuePayee = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.Payee Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payee"); else _explicitNullProperties?.Remove("payee"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Payee _explicitNullValuePayee = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.EligibilityPurchaseUnitRequest"/> and sets the default values.
@@ -72,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown.CreateFromDiscriminatorValue); } },
-                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee.CreateFromDiscriminatorValue); } },
+                { "payee", n => { Payee = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Payee>(global::Soenneker.PayPal.OpenApiClient.Models.Payee.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2AmountWithBreakdown>("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee>("payee", Payee);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Payee>("payee", Payee);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

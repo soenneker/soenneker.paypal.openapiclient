@@ -58,12 +58,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable? ReturnShippingAddress { get => _explicitNullValueReturnShippingAddress; set { _explicitNullValueReturnShippingAddress = value; AdditionalData?.Remove("return_shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_shipping_address"); else _explicitNullProperties?.Remove("return_shipping_address"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable? _explicitNullValueReturnShippingAddress = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable? ReturnShippingAddress { get => _explicitNullValueReturnShippingAddress; set { _explicitNullValueReturnShippingAddress = value; AdditionalData?.Remove("return_shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_shipping_address"); else _explicitNullProperties?.Remove("return_shipping_address"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable? _explicitNullValueReturnShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable ReturnShippingAddress { get => _explicitNullValueReturnShippingAddress; set { _explicitNullValueReturnShippingAddress = value; AdditionalData?.Remove("return_shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_shipping_address"); else _explicitNullProperties?.Remove("return_shipping_address"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable _explicitNullValueReturnShippingAddress = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable ReturnShippingAddress { get => _explicitNullValueReturnShippingAddress; set { _explicitNullValueReturnShippingAddress = value; AdditionalData?.Remove("return_shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_shipping_address"); else _explicitNullProperties?.Remove("return_shipping_address"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable _explicitNullValueReturnShippingAddress = default!;
 #endif
         /// <summary>The service details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
                 { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>(global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails.CreateFromDiscriminatorValue); } },
                 { "issue_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputePropertiesIssueType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIssueType = default; _explicitNullProperties?.Remove("issue_type"); AdditionalData["issue_type"] = unknown; } else { IssueType = parsed; AdditionalData.Remove("issue_type"); } } },
                 { "product_details", n => { ProductDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails.CreateFromDiscriminatorValue); } },
-                { "return_shipping_address", n => { ReturnShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable.CreateFromDiscriminatorValue); } },
+                { "return_shipping_address", n => { ReturnShippingAddress = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable>(global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable.CreateFromDiscriminatorValue); } },
                 { "service_details", n => { ServiceDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>(global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -117,7 +117,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CancellationDetails>("cancellation_details", CancellationDetails);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MerchandizeDisputePropertiesIssueType>("issue_type", IssueType);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ProductDetails>("product_details", ProductDetails);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable>("return_shipping_address", ReturnShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable>("return_shipping_address", ReturnShippingAddress);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ServiceDetails>("service_details", ServiceDetails);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

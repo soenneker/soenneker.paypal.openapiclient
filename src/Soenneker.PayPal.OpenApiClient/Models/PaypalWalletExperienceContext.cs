@@ -64,15 +64,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string _explicitNullValueBrandName = default!;
 #endif
-        /// <summary>The cancel_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl? _explicitNullValueCancelUrl = default!;
+        public string? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl _explicitNullValueCancelUrl = default!;
+        public string CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>The preference to display the contact information (buyer’s shipping email &amp; phone number) on PayPal&apos;s checkout for easy merchant-buyer communication.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextContactPreference? ContactPreference { get => _explicitNullValueContactPreference; set { _explicitNullValueContactPreference = value; AdditionalData?.Remove("contact_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_preference"); else _explicitNullProperties?.Remove("contact_preference"); } }
@@ -103,15 +103,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The merchant-preferred payment methods.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextPaymentMethodPreference? PaymentMethodPreference { get => _explicitNullValuePaymentMethodPreference; set { _explicitNullValuePaymentMethodPreference = value; AdditionalData?.Remove("payment_method_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_preference"); else _explicitNullProperties?.Remove("payment_method_preference"); } }
         private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextPaymentMethodPreference? _explicitNullValuePaymentMethodPreference = default!;
-        /// <summary>The return_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl? _explicitNullValueReturnUrl = default!;
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl _explicitNullValueReturnUrl = default!;
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; AdditionalData?.Remove("shipping_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
@@ -146,13 +146,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             {
                 { "app_switch_context", n => { AppSwitchContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext.CreateFromDiscriminatorValue); } },
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl.CreateFromDiscriminatorValue); } },
+                { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "contact_preference", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextContactPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueContactPreference = default; _explicitNullProperties?.Remove("contact_preference"); AdditionalData["contact_preference"] = unknown; } else { ContactPreference = parsed; AdditionalData.Remove("contact_preference"); } } },
                 { "landing_page", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLandingPage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLandingPage = default; _explicitNullProperties?.Remove("landing_page"); AdditionalData["landing_page"] = unknown; } else { LandingPage = parsed; AdditionalData.Remove("landing_page"); } } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "order_update_callback_config", n => { OrderUpdateCallbackConfig = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig.CreateFromDiscriminatorValue); } },
                 { "payment_method_preference", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextPaymentMethodPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentMethodPreference = default; _explicitNullProperties?.Remove("payment_method_preference"); AdditionalData["payment_method_preference"] = unknown; } else { PaymentMethodPreference = parsed; AdditionalData.Remove("payment_method_preference"); } } },
-                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl.CreateFromDiscriminatorValue); } },
+                { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "shipping_preference", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextShippingPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueShippingPreference = default; _explicitNullProperties?.Remove("shipping_preference"); AdditionalData["shipping_preference"] = unknown; } else { ShippingPreference = parsed; AdditionalData.Remove("shipping_preference"); } } },
                 { "user_action", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextUserAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUserAction = default; _explicitNullProperties?.Remove("user_action"); AdditionalData["user_action"] = unknown; } else { UserAction = parsed; AdditionalData.Remove("user_action"); } } },
             };
@@ -166,13 +166,13 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextAppSwitchContext>("app_switch_context", AppSwitchContext);
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextCancelUrl>("cancel_url", CancelUrl);
+            writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextContactPreference>("contact_preference", ContactPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextLandingPage>("landing_page", LandingPage);
             writer.WriteStringValue("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextOrderUpdateCallbackConfig>("order_update_callback_config", OrderUpdateCallbackConfig);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextPaymentMethodPreference>("payment_method_preference", PaymentMethodPreference);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextReturnUrl>("return_url", ReturnUrl);
+            writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextShippingPreference>("shipping_preference", ShippingPreference);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletExperienceContextUserAction>("user_action", UserAction);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

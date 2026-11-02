@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2"/>, <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember3"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NotificationsWebhooksV1PatchValue : IComposedTypeWrapper, IParsable
@@ -37,6 +37,14 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2 NotificationsWebhooksV1PatchValueMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember3? NotificationsWebhooksV1PatchValueMember3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember3 NotificationsWebhooksV1PatchValueMember3 { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,18 +78,22 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             else {
                 
                 
+                
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
             bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
             bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
             int matchingUnionBranches = 0;
             if (matchesUnionBranch0 != false) matchingUnionBranches++;
             if (matchesUnionBranch1 != false) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null;
+            if (matchesUnionBranch2 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.NotificationsWebhooksV1PatchValueMember3 == null && result.String == null;
             if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.NotificationsWebhooksV1PatchValueMember1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1(), parseNode);
             if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.NotificationsWebhooksV1PatchValueMember2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember2(), parseNode);
-            if (result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.String == null) result.UnrecognizedValue = unionPayload;
+            if (noSelectedUnionBranch && matchesUnionBranch2 == true && matchingUnionBranches == 1) result.NotificationsWebhooksV1PatchValueMember3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember3(), parseNode);
+            if (result.Boolean == null && result.Double == null && result.NotificationsWebhooksV1PatchValueMember1 == null && result.NotificationsWebhooksV1PatchValueMember2 == null && result.NotificationsWebhooksV1PatchValueMember3 == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -92,9 +104,9 @@ return result;
         {
             if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
 
-            if(NotificationsWebhooksV1PatchValueMember1 != null || NotificationsWebhooksV1PatchValueMember2 != null)
+            if(NotificationsWebhooksV1PatchValueMember1 != null || NotificationsWebhooksV1PatchValueMember2 != null || NotificationsWebhooksV1PatchValueMember3 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2, NotificationsWebhooksV1PatchValueMember3);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -105,15 +117,17 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (Boolean == null && Double == null && NotificationsWebhooksV1PatchValueMember1 == null && NotificationsWebhooksV1PatchValueMember2 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (Boolean == null && Double == null && NotificationsWebhooksV1PatchValueMember1 == null && NotificationsWebhooksV1PatchValueMember2 == null && NotificationsWebhooksV1PatchValueMember3 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
             int selectedUnionBranches = 0;
             if (Boolean != null) selectedUnionBranches++;
             if (Double != null) selectedUnionBranches++;
             if (NotificationsWebhooksV1PatchValueMember1 != null) selectedUnionBranches++;
             if (NotificationsWebhooksV1PatchValueMember2 != null) selectedUnionBranches++;
+            if (NotificationsWebhooksV1PatchValueMember3 != null) selectedUnionBranches++;
             if (String != null) selectedUnionBranches++;
             if (NotificationsWebhooksV1PatchValueMember1 != null && selectedUnionBranches == 1) { if (NotificationsWebhooksV1PatchValueMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember1); return; }
             if (NotificationsWebhooksV1PatchValueMember2 != null && selectedUnionBranches == 1) { if (NotificationsWebhooksV1PatchValueMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember2); return; }
+            if (NotificationsWebhooksV1PatchValueMember3 != null && selectedUnionBranches == 1) { if (NotificationsWebhooksV1PatchValueMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, NotificationsWebhooksV1PatchValueMember3); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Boolean != null)
@@ -129,7 +143,7 @@ return result;
                 writer.WriteStringValue(null, String);
             }
             else {
-                writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1>(null, NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2);
+                writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.NotificationsWebhooksV1PatchValueMember1>(null, NotificationsWebhooksV1PatchValueMember1, NotificationsWebhooksV1PatchValueMember2, NotificationsWebhooksV1PatchValueMember3);
             }
         }
     }

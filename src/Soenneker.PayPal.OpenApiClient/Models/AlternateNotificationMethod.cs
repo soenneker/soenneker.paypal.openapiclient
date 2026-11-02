@@ -27,12 +27,12 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>The phone number in its canonical international [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164/en).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone? _explicitNullValuePhone = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.Phone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Phone? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone _explicitNullValuePhone = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.Phone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.Phone _explicitNullValuePhone = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AlternateNotificationMethod"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Phone>(global::Soenneker.PayPal.OpenApiClient.Models.Phone.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPayoutsBatchV1Phone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Phone>("phone", Phone);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

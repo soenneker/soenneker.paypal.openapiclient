@@ -22,10 +22,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             else if (parseNode.GetChildNode("apple_pay") is { } nullNodeApplePay && nullNodeApplePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePay = null;
             if (parseNode.GetChildNode("card") is null) { _explicitNullValueCard = default!; _explicitNullProperties?.Remove("card"); }
             else if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
-            if (parseNode.GetChildNode("paypal") is null) { _explicitNullValuePaypal = default!; _explicitNullProperties?.Remove("paypal"); }
-            else if (parseNode.GetChildNode("paypal") is { } nullNodePaypal && nullNodePaypal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypal = null;
-            if (parseNode.GetChildNode("venmo") is null) { _explicitNullValueVenmo = default!; _explicitNullProperties?.Remove("venmo"); }
-            else if (parseNode.GetChildNode("venmo") is { } nullNodeVenmo && nullNodeVenmo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Venmo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -53,22 +49,18 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <summary>Resource consolidating common request and response attributes for vaulting a Digital Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse? Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; AdditionalData?.Remove("paypal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse? _explicitNullValuePaypal = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse? Paypal { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; AdditionalData?.Remove("paypal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse _explicitNullValuePaypal = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse Paypal { get; private set; }
 #endif
         /// <summary>Resource consolidating common request and response attributes for vaulting a Digital Wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse? Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; AdditionalData?.Remove("venmo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse? _explicitNullValueVenmo = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse? Venmo { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse Venmo { get => _explicitNullValueVenmo; set { _explicitNullValueVenmo = value; AdditionalData?.Remove("venmo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("venmo"); else _explicitNullProperties?.Remove("venmo"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse _explicitNullValueVenmo = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse Venmo { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaymentSource"/> and sets the default values.
@@ -110,8 +102,6 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayPaymentTokenResponse>("apple_pay", ApplePay);
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3CardResponse>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3PaypalWalletResponse>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VenmoResponse>("venmo", Venmo);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

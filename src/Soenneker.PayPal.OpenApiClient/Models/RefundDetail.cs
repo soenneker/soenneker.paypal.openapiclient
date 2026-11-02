@@ -41,8 +41,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValueAmount = default!;
 #endif
         /// <summary>The payment mode or method through which the invoicer can accept the payments.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod? _explicitNullValueMethod = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod? _explicitNullValueMethod = default!;
         /// <summary>The stand-alone date, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). To represent special legal values, such as a date of birth, you should use dates with no associated time or time-zone data. Whenever possible, use the standard `date_time` type. This regular expression does not validate all dates. For example, February 31 is valid and nothing is known about leap years.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
-                { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },
+                { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },
                 { "refund_date", n => { RefundDate = n.GetStringValue(); } },
                 { "refund_id", n => { RefundId = n.GetStringValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
@@ -104,7 +104,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod>("method", Method);
             writer.WriteStringValue("refund_date", RefundDate);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -47,8 +47,8 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money _explicitNullValueAmount = default!;
 #endif
         /// <summary>The payment mode or method through which the invoicer can accept the payments.</summary>
-        public global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod? _explicitNullValueMethod = default!;
+        public global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        private global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod? _explicitNullValueMethod = default!;
         /// <summary>A note associated with an external cash or check payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,7 +118,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money.CreateFromDiscriminatorValue); } },
-                { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },
+                { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "payment_date", n => { PaymentDate = n.GetStringValue(); } },
                 { "payment_id", n => { PaymentId = n.GetStringValue(); } },
@@ -134,7 +134,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2Money>("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2PaymentMethod>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentMethod>("method", Method);
             writer.WriteStringValue("note", Note);
             writer.WriteStringValue("payment_date", PaymentDate);
             writer.WriteStringValue("payment_id", PaymentId);

@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CustomerDisputesV1AddressPortable : IAdditionalDataHolder, IParsable
+    public partial class AddressPortable : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -143,21 +143,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         private string _explicitNullValuePostalCode = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable"/> and sets the default values.
         /// </summary>
-        public CustomerDisputesV1AddressPortable()
+        public AddressPortable()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1AddressPortable(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.AddressPortable(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -5,7 +5,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
 {
     /// <summary>The payment mode or method through which the invoicer can accept the payments.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum InvoicingV2PaymentMethod
+    public enum PaymentMethod
     {
         [EnumMember(Value = "BANK_TRANSFER")]
         #pragma warning disable CS1591

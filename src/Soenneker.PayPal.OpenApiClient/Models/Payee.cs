@@ -11,7 +11,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
     /// The merchant who receives the funds and fulfills the order. The merchant is also known as the payee.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaymentsPaymentV2Payee : IAdditionalDataHolder, IParsable
+    public partial class Payee : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -47,21 +47,21 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         private string _explicitNullValueMerchantId = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payee"/> and sets the default values.
         /// </summary>
-        public PaymentsPaymentV2Payee()
+        public Payee()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee"/></returns>
+        /// <returns>A <see cref="global::Soenneker.PayPal.OpenApiClient.Models.Payee"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.PayPal.OpenApiClient.Models.Payee CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2Payee(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.PayPal.OpenApiClient.Models.Payee(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

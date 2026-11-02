@@ -42,15 +42,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string BrandName { get => _explicitNullValueBrandName; set { _explicitNullValueBrandName = value; AdditionalData?.Remove("brand_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_name"); else _explicitNullProperties?.Remove("brand_name"); } }
         private string _explicitNullValueBrandName = default!;
 #endif
-        /// <summary>The cancel_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl? _explicitNullValueCancelUrl = default!;
+        public string? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl _explicitNullValueCancelUrl = default!;
+        public string CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; AdditionalData?.Remove("cancel_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>The [language tag](https://tools.ietf.org/html/bcp47#section-2) for the language in which to localize the error-related strings, such as messages, issues, and suggested actions. The tag is made up of the [ISO 639-2 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php), the optional [ISO-15924 script tag](https://www.unicode.org/iso15924/codelists.html), and the [ISO-3166 alpha-2 country code](/api/rest/reference/country-codes/) or [M49 region code](https://unstats.un.org/unsd/methodology/m49/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,15 +62,15 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
-        /// <summary>The return_url property</summary>
+        /// <summary>Describes the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl? _explicitNullValueReturnUrl = default!;
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
-        private global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl _explicitNullValueReturnUrl = default!;
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>The location from which the shipping address is derived.</summary>
         public global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference? ShippingPreference { get => _explicitNullValueShippingPreference; set { _explicitNullValueShippingPreference = value; AdditionalData?.Remove("shipping_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_preference"); else _explicitNullProperties?.Remove("shipping_preference"); } }
@@ -101,9 +101,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand_name", n => { BrandName = n.GetStringValue(); } },
-                { "cancel_url", n => { CancelUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl.CreateFromDiscriminatorValue); } },
+                { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "return_url", n => { ReturnUrl = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>(global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl.CreateFromDiscriminatorValue); } },
+                { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "shipping_preference", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueShippingPreference = default; _explicitNullProperties?.Remove("shipping_preference"); AdditionalData["shipping_preference"] = unknown; } else { ShippingPreference = parsed; AdditionalData.Remove("shipping_preference"); } } },
             };
         }
@@ -115,9 +115,9 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand_name", BrandName);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseCancelUrl>("cancel_url", CancelUrl);
+            writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteStringValue("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseReturnUrl>("return_url", ReturnUrl);
+            writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.ExperienceContextBaseShippingPreference>("shipping_preference", ShippingPreference);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
