@@ -118,7 +118,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Currency>(global::Soenneker.PayPal.OpenApiClient.Models.Currency.CreateFromDiscriminatorValue); } },
                 { "batch_status", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.BatchEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBatchStatus = default; _explicitNullProperties?.Remove("batch_status"); AdditionalData["batch_status"] = unknown; } else { BatchStatus = parsed; AdditionalData.Remove("batch_status"); } } },

@@ -66,7 +66,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "charge_pattern", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletStoredCredentialChargePattern>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChargePattern = default; _explicitNullProperties?.Remove("charge_pattern"); AdditionalData["charge_pattern"] = unknown; } else { ChargePattern = parsed; AdditionalData.Remove("charge_pattern"); } } },
                 { "payment_initiator", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentInitiator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentInitiator = default; _explicitNullProperties?.Remove("payment_initiator"); AdditionalData["payment_initiator"] = unknown; } else { PaymentInitiator = parsed; AdditionalData.Remove("payment_initiator"); } } },

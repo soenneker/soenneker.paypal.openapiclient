@@ -115,7 +115,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "cycle_executions", n => { CycleExecutions = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution>(global::Soenneker.PayPal.OpenApiClient.Models.CycleExecution.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "failed_payments_count", n => { FailedPaymentsCount = n.GetIntValue(); } },

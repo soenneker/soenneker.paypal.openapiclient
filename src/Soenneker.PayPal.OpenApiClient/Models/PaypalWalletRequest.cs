@@ -114,7 +114,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "billing_plan", n => { BillingPlan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan>(global::Soenneker.PayPal.OpenApiClient.Models.VaultPaymentTokensV3Plan.CreateFromDiscriminatorValue); } },
                 { "customer_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaypalWalletRequestCustomerType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCustomerType = default; _explicitNullProperties?.Remove("customer_type"); AdditionalData["customer_type"] = unknown; } else { CustomerType = parsed; AdditionalData.Remove("customer_type"); } } },

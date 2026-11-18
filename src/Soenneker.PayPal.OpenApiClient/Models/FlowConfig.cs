@@ -72,7 +72,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "bank_txn_pending_url", n => { BankTxnPendingUrl = n.GetStringValue(); } },
                 { "landing_page_type", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.FlowConfigLandingPageType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLandingPageType = default; _explicitNullProperties?.Remove("landing_page_type"); AdditionalData["landing_page_type"] = unknown; } else { LandingPageType = parsed; AdditionalData.Remove("landing_page_type"); } } },

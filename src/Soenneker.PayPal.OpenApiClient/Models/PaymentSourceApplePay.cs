@@ -153,7 +153,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayAttributes.CreateFromDiscriminatorValue); } },
                 { "decrypted_token", n => { DecryptedToken = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken>(global::Soenneker.PayPal.OpenApiClient.Models.ApplePayRequestDecryptedToken.CreateFromDiscriminatorValue); } },

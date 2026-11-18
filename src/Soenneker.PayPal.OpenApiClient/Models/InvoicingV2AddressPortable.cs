@@ -165,7 +165,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "address_details", n => { AddressDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressDetails>(global::Soenneker.PayPal.OpenApiClient.Models.InvoicingV2AddressDetails.CreateFromDiscriminatorValue); } },
                 { "address_line_1", n => { AddressLine1 = n.GetStringValue(); } },

@@ -117,7 +117,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "gross_amount", n => { GrossAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundRefundPropertiesSellerPayableBreakdownGrossAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundRefundPropertiesSellerPayableBreakdownGrossAmount.CreateFromDiscriminatorValue); } },
                 { "net_amount", n => { NetAmount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundRefundPropertiesSellerPayableBreakdownNetAmount>(global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2RefundRefundPropertiesSellerPayableBreakdownNetAmount.CreateFromDiscriminatorValue); } },

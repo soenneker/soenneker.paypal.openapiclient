@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "first_party_details", n => { FirstPartyDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails>(global::Soenneker.PayPal.OpenApiClient.Models.FirstPartyDetails.CreateFromDiscriminatorValue); } },
                 { "integration_method", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.RestApiIntegrationIntegrationMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntegrationMethod = default; _explicitNullProperties?.Remove("integration_method"); AdditionalData["integration_method"] = unknown; } else { IntegrationMethod = parsed; AdditionalData.Remove("integration_method"); } } },

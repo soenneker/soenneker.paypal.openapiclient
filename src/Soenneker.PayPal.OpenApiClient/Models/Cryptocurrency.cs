@@ -79,7 +79,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "asset_symbol", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.CryptocurrencySymbol>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAssetSymbol = default; _explicitNullProperties?.Remove("asset_symbol"); AdditionalData["asset_symbol"] = unknown; } else { AssetSymbol = parsed; AdditionalData.Remove("asset_symbol"); } } },
                 { "decimals", n => { Decimals = n.GetIntValue(); } },

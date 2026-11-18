@@ -190,7 +190,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "buyer", n => { Buyer = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Buyer>(global::Soenneker.PayPal.OpenApiClient.Models.Buyer.CreateFromDiscriminatorValue); } },
                 { "buyer_transaction_id", n => { BuyerTransactionId = n.GetStringValue(); } },

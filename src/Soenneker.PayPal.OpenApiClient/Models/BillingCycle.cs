@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.Frequency>(global::Soenneker.PayPal.OpenApiClient.Models.Frequency.CreateFromDiscriminatorValue); } },
                 { "pricing_scheme", n => { PricingScheme = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme>(global::Soenneker.PayPal.OpenApiClient.Models.PricingScheme.CreateFromDiscriminatorValue); } },

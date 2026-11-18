@@ -85,7 +85,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "disbursement_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.PaymentsPaymentV2PaymentInstructionDisbursementMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisbursementMode = default; _explicitNullProperties?.Remove("disbursement_mode"); AdditionalData["disbursement_mode"] = unknown; } else { DisbursementMode = parsed; AdditionalData.Remove("disbursement_mode"); } } },
                 { "payee_pricing_tier_id", n => { PayeePricingTierId = n.GetStringValue(); } },

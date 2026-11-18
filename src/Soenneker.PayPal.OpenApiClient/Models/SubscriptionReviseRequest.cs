@@ -117,7 +117,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "application_context", n => { ApplicationContext = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseRequestApplicationContext>(global::Soenneker.PayPal.OpenApiClient.Models.SubscriptionReviseRequestApplicationContext.CreateFromDiscriminatorValue); } },
                 { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride>(global::Soenneker.PayPal.OpenApiClient.Models.PlanOverride.CreateFromDiscriminatorValue); } },

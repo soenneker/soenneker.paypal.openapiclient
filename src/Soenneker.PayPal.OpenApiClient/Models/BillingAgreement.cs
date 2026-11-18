@@ -105,7 +105,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "approval_url", n => { ApprovalUrl = n.GetStringValue(); } },
                 { "billing_experience_preference", n => { BillingExperiencePreference = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference>(global::Soenneker.PayPal.OpenApiClient.Models.BillingExperiencePreference.CreateFromDiscriminatorValue); } },

@@ -130,7 +130,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "addresses", n => { Addresses = n.GetCollectionOfObjectValues<global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail>(global::Soenneker.PayPal.OpenApiClient.Models.PersonAddressDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "birth_details", n => { BirthDetails = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.BirthDetails>(global::Soenneker.PayPal.OpenApiClient.Models.BirthDetails.CreateFromDiscriminatorValue); } },

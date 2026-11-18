@@ -98,7 +98,7 @@ namespace Soenneker.PayPal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "affected_party", n => { var parsed = n.GetEnumValue<global::Soenneker.PayPal.OpenApiClient.Models.MoneyMovementAffectedParty>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAffectedParty = default; _explicitNullProperties?.Remove("affected_party"); AdditionalData["affected_party"] = unknown; } else { AffectedParty = parsed; AdditionalData.Remove("affected_party"); } } },
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money>(global::Soenneker.PayPal.OpenApiClient.Models.CustomerDisputesV1Money.CreateFromDiscriminatorValue); } },
